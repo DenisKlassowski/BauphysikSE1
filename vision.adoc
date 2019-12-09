@@ -1,6 +1,6 @@
-= Vision -Projektthema-
-Vorname Nachname <email@domain.org>; Vorname2 Nachname2 <email2@domain.org>; Vorname3 Nachname3 <email3@domain.org>
-0.1, 01.11.2019 
+= Vision -Berechnungen für Bauphysik in der Lehre-
+Lukas Grambole <lukas.grambole@htw-dresden.de>; Michael Däbler <michael.daebler@htw-dresden.de>
+0.1, 09.12.2019 
 :toc: 
 :toc-title: Inhaltsverzeichnis
 :sectnums:
@@ -9,32 +9,38 @@ Vorname Nachname <email@domain.org>; Vorname2 Nachname2 <email2@domain.org>; Vor
 
 
 == Einführung
-Der Zweck dieses Dokuments ist es, die wesentlichen Bedarfe und Funktionalitäten des <Projektname-Systems> zu sammeln, zu analysieren und zu definieren. Der Fokus liegt auf den Fähigkeiten, die von Stakeholdern und adressierten Nutzern benötigt werden, und der Begründung dieser Bedarfe. Die  Details, wie das <Projektname-System> diese Bedarfe erfüllt, werden in der Use-Case und Supplementary Specification beschrieben.
+Der Zweck dieses Dokuments ist es, die wesentlichen Bedarfe und Funktionalitäten des Wärmedurchgangsrechner-Systems zu sammeln, zu analysieren und zu definieren. Der Fokus liegt auf den Fähigkeiten, die von Stakeholdern und adressierten Nutzern benötigt werden, und der Begründung dieser Bedarfe. Die  Details, wie das Wärmedurchgangsrechner-System diese Bedarfe erfüllt, werden in der Use-Case und Supplementary Specification beschrieben.
 
 === Zweck
 Der Zweck dieses Dokuments ist es, die wesentlichen Anforderungen an das System aus Sicht und mit den Begriffen der künftigen Anwender zu beschreiben.
 
 === Gültigkeitsbereich (Scope)
-Dieses Visions-Dokument bezieht sich auf das <Projektthema-System>, das von <Team> entwickelt wird. Das System wird es <Zielkunde/Auftraggeber> erlauben, <Hauptfunktionen> zu nutzen, um damit <Vorteile> zu erreichen / <Aufgabe> zu erleichtern / <Problem> zu lösen.
+Dieses Visions-Dokument bezieht sich auf das Wärmedurchgangsrechner-System, das von Team 14 entwickelt wird. Das System wird es der Professorin Rhena Krawietz erlauben, bauphysikalische Berechnungen zum Wärmedurchgangskoeffizienten durchführen zu können, um den Arbeitsaufwand bei der Erstellung und Korrektur von Aufgaben zu minimieren.
 
 === Definitionen, Akronyme und Abkürzungen
 siehe Glossar (Verweis hier einfügen).
 
 === Referenzen
-(hier externe Verweise zu anderen Dokumenten, Quellen, Standards etc. einfügen, sofern notwendig)
+Aufgabenstellung
+Beispielberechnung
+DIN-Tabelle
+
+//(hier externe Verweise zu anderen Dokumenten, Quellen, Standards etc. einfügen, sofern notwendig)
 
 == Positionierung
 === Fachliche Motivation
+Auf eine hochschulinterne Anfrage von Professor Jürgen Anke, dem Verantwortlichen des Moduls Software Engineering, antwortete die Professorin Rhena Krawietz mit dem Wunsch nach einer Softwarelösung zur Berechnung des Wärmedurchgangskoeffizienten. Infolge eines Projektzuordnungsverfahrens hat Professor Jürgen Anke das Team 14 mit der Projektbearbeitung beauftragt. Da die Kundin derzeit bei der Erstellung und Kontrolle von Aufgaben zum Wärmedurchgangskoeffizienten nur unter Verwendung von Microfoft Excel oder eines Taschenrechners arbeiten kann, sind diese Aufgaben mit einem hohen Zeit- und Arbeitsaufwand verbunden. Die Auftraggeberin erhofft sich, diese Aufwände mithilfe eines Softwaresystems verringern zu können.
 //Erläutern Sie kurz den Hintergrund, in dem das Projekt angesiedelt ist. Welches Problem soll gelöst werden, wie ist es entstanden? Welche Verbesserung wird angestrebt. Achten Sie darauf, eine fachliche (organisatorische, betriebswirtschaftliche) Perspektive einzunehmen.
 
 === Problem Statement
 //Stellen Sie zusammenfassend das Problem dar, das mit diesem Projekt gelöst werden soll. Das folgende Format kann dazu verwendet werden:
 
 |===
-|Das Problem |	[beschreiben Sie das Problem]
-|betrifft |	[die Stakeholder, die vom Problem betroffen sind]
-|die Auswirkung davon ist |	[welche Auswirkungen hat das Problem?]
-|eine erfolgreiche Lösung wäre |	[Führen Sie einige wesentliche Vorteile einer erfolgreichen Lösung auf]
+|Das Problem |	Die Erstellung und die Kontrolle von Aufgaben zum Wärmedurchgangskoeffizienten sind für die Auftraggeberin mit einem hohen Aufwand verbunden.
+|betrifft |	die Auftraggeberin
+|die Auswirkung davon ist |
+ein hoher Zeitbedarf bei der Erstellung und der Kontrolle von Aufgaben zum Wärmedurchgangskoeffizienten, welcher mit der erhöhten Gefahr von Rechenfehlern infolge vieler manueller Eingaben einhergeht
+|eine erfolgreiche Lösung wäre | Ein Softwaresystem, welches alle notwendigen Berechnungen durchführt und Zwischen- und Endergebnisse ausgibt.
 |===
 
 ////
@@ -53,12 +59,12 @@ Beispiel
 //Geben Sie in knapper Form übersichtsartig die Positionierung der angestrebten Lösung im Vergleich zu verfügbaren Alternativen dar. Das folgende Format kann dazu verwendet werden:
 
 |===
-|Für|	[Zielkunde / Nutzer]
-|der / die|	[Angabe des Bedarfs oder Chance]
-|Das Produkt / die Lösung ist ein | [Produktkategorie]
-|Die / Das	|[Aussage zum Hauptvorteil / Alleinstellungsmerkmal]
-|Im Gegensatz zu	|[wesentliche Lösungsalternative]
-|Unser Produkt|	[Aussage zum Hauptunterschied]
+|Für|	Lehrende und Studierende der HTW Dresden
+|die|	Berechnungen zum Wärmedurchgangskoeffizienten durchführen möchten
+|Das Produkt ist ein | Softwaresystem, welches Berechnungen zum Wärmedurchgangskoeffizienten ermöglicht
+|das	|selbstständig und schnell alle notwendigen Berechnungen durchführt
+|Im Gegensatz zu	|einer Berechnung mithilfe von Microsoft Excel oder einem Taschenrechner
+|Unser Produkt|	bietet die Möglichkeit, ohne eigenen Berechnungsaufwand direkt von den Materialdaten zu den Wärmewiderstandsdaten zu kommen
 |===
 
 
@@ -78,20 +84,33 @@ Beispiel
 [%header]
 |===
 |Name|	Beschreibung	| Verantwortlichkeiten
-|[Benennung des Stakeholder-Typs.]	|[Kurze Beschreibung des Stakeholders.]	|[Fassen Sie die wesentlichen Verantwortlichkeiten des Stakeholder mit Bezug auf das zu entwickelnde System kurz zusammen, d.h. ihr besonderen Interessen. Beispiele: Dieser Stakeholder sorgt dafür, dass das System gewartet wird / dass die angezeigten Daten aktuell sind / überwacht den Projektfortschritt / usw.]
+//|[Benennung des Stakeholder-Typs.]	|[Kurze Beschreibung des Stakeholders.]	|[Fassen Sie die wesentlichen Verantwortlichkeiten des Stakeholder mit Bezug auf das zu entwickelnde System kurz zusammen, d.h. ihr besonderen Interessen. Beispiele: Dieser Stakeholder sorgt dafür, dass das System gewartet wird / dass die angezeigten Daten aktuell sind / überwacht den Projektfortschritt / usw.]
+|Auftraggeberin |	Prof. Dr.-Ing. Rhena Krawietz, Professorin für Technische Physik an der HTW Dresden	| erstellt und kontrolliert Aufgaben zum Wärmedurchgangskoeffizienten
+|Lehrende| Professor*innen, Laboringenieur*innen und studentische Hilfskräfte der HTW Dresden 	| erhalten auf Nachfrage Softwaresystem, um Aufgaben zum Wärmedurchgangskoeffizienten erstellen und kontrollieren zu können
+|Studierende|	Studierende des Bauingenieurwesens und anderer Studiengänge mit Vertiefung im Bereich Baubetrieb	| kontrollieren eigene Übungsaufgaben 
+|OPAL - Bildungsportal Sachsen|	Lernplattform, welche von der HTW Dresden genutzt wird	| dient der Verbreitung des Softwaresystems
+|Projektteam|	Team 14	| Realisierung des Projektes
+|Team-Coach|	Prof. Dr.-Ing. Jürgen Anke, Professor für Softwaretechnologie und Informationssysteme an der HTW Dresden	| Unterstützung und Bewertung der Arbeit des Projektteams
 |===
-
+//Prüfungsamt? Hacker? Gesetzgeber eher nicht
 === Benutzerumgebung
-Beschreiben Sie die Arbeitsumgebung des Nutzers. Hier sind einige Anregungen:
+//Beschreiben Sie die Arbeitsumgebung des Nutzers. Hier sind einige Anregungen:
+
+==== Auftraggeberin
+* Die Auftraggeberin möchte das Softwaresystem auf Laptops und Desktop-PCs verwenden.
+* Derzeit arbeitet die Auftraggeberin mit dem Betriebssystem Windows 7.
+* Eine Umstellung des Betriebssystems auf Windows 10 ist absehbar.
+
+//potenzielle Benutzer auch?
 
 //Zutreffendes angeben, nicht zutreffendes streichen oder auskommentieren
-. Anzahl der Personen, die an der Erfüllung der Aufgabe beteiligt sind. Ändert sich das?
-. Wie lange dauert die Bearbeitung der Aufgabe? Wie viel Zeit wird für jeden Arbeitsschritt benötigt? Ändert sich das?
-. Gibt es besondere Umgebungsbedingungen, z.B. mobil, offline, Außeneinsatz, Touchbedienung, Nutzung durch seh- oder hörbeeinträchtigte Personen?
-. Welche Systemplattformen werden heute eingesetzt? Welche sind es ggf. zukünftig?
-. Welche anderen Anwendungen sind im Einsatz? Muss ihre Anwendung mit diesen integriert werden?
+//. Anzahl der Personen, die an der Erfüllung der Aufgabe beteiligt sind. Ändert sich das?
+//. Wie lange dauert die Bearbeitung der Aufgabe? Wie viel Zeit wird für jeden Arbeitsschritt benötigt? Ändert sich das?
+//. Gibt es besondere Umgebungsbedingungen, z.B. mobil, offline, Außeneinsatz, Touchbedienung, Nutzung durch seh- oder hörbeeinträchtigte Personen?
+//. Welche Systemplattformen werden heute eingesetzt? Welche sind es ggf. zukünftig?
+//. Welche anderen Anwendungen sind im Einsatz? Muss ihre Anwendung mit diesen integriert werden?
 
-Hier können zudem bei Bedarf Teile des Unternehmensmodells (Prozesse, Organigramme, IT-Landschaft, ...) eingefügt werden, um die beteiligten Aufgaben und Rollen zu skizzieren.
+//Hier können zudem bei Bedarf Teile des Unternehmensmodells (Prozesse, Organigramme, IT-Landschaft, ...) eingefügt werden, um die beteiligten Aufgaben und Rollen zu skizzieren.
 
 == Produkt-/Lösungsüberblick
 === Bedarfe und Hauptfunktionen
@@ -100,7 +119,16 @@ Hier können zudem bei Bedarf Teile des Unternehmensmodells (Prozesse, Organigra
 [%header]
 |===
 |Bedarf|	Priorität|	Features|	Geplantes Release
-|xx|xx|xx|xx
+|Materialdaten eingeben|hoch|Ermöglichung der Eingabe der Daten von bis zu 10 Wandschichten (Anzahl der parallelen Schichten, Wärmeübergangswiderstände, Dicken, Wärmeleitfähigkeiten)|xx
+|Luftschichten eingeben|hoch|Ermöglichung der direkten Eingabe des Wärmedurchlasswiderstandes bei Luftschichten zwischen den Wandschichten|xx
+|Berechnungsergebnisse ausgeben|hoch|Ausgabe des Wärmedurchgangskoeffizienten, des Wärmedurchgangswiderstandes, der Wärmedurchlasswiderstände und der Summe aller Wärmedurchlasswiderstände|xx
+|Temperaturverlauf ausgeben|mittel|Ausgabe des Temperaturverlaufs über die verschiedenenen Wandschichten|xx
+|Eingabedaten veranschaulichen|niedrig|Darstellung der verschiedenen Wandschichten|xx
+|Materialdaten vormerken|niedrig|Möglichkeit der Speicherung von Wärmeübergangswiderständen|xx
+|Ein- und Ausgabedaten erklären|mittel|Erklärung der Bedeutung der Ein- und Ausgabedaten|xx
+|Einheiten ändern|mittel|Möglichkeit der Änderung der Einheit von Eingabedaten|xx
+|Berechnungsdaten drucken|hoch|Druck der wesentlichen Berechnungsdaten|xx
+
 |===
 			
 
@@ -117,7 +145,16 @@ Hinweise:
 [%header]
 |===
 |Anforderung|	Priorität|	Geplantes Release
-|xx|xx|xx|
-|===
-		
+|schnelle Berechnung und Datenausgabe (<2 Sekunden)|hoch|xx
+|Verfügbarkeit von Eingabedaten nach System-Absturz|niedrig|xx
+|Ausgabe von Zwischenergebnissen mit 4 Nachkommastellen|hoch|xx
+|Ausgabe von Rt und U gerundet auf 2 Nachkommastellen|hoch|xx
+|einfache Bedienbarkeit|mittel|xx
+|System kann offline genutzt werden|niedrig|xx
+|Sprache umstellen|niedrig|xx
+|System muss auf Windows 7 und Windows 10 lauffähig sein|hoch|xx
+|Fehleingaben verhindern|hoch|xx
 
+|===
+//Unterschied zu Hauptfunktionen
+		
