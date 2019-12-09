@@ -27,14 +27,34 @@ In diesem Dokument werden die wesentlichen Begriffe des Wärmedurchgangsrechner-
 |Abkürzung|	Bedeutung|Einheit|	Erläuterung
 //|UP|Unified Process|Vorgehensmodell für die Softwareentwicklung|
 |d~i~|Dicke des Materials i|m|Beschreibung der Dicke der jeweiligen Wandschicht
+
+|j|Wärmestromdichte|W⋅m^-2^|physikalische Größe zur Beschreibung der Änderung der thermischen Energie eines Bauteils, Produkt aus U und Δϑ
+
 |n|Anzahl paralleler Schichten|1|Angabe der Anzahl paralleler Schichten einer Wand
+
 |R~ges~|Summe aller Wärmedurchlasswiderstände|m^2^⋅K⋅W^-1^|Zwischenwert, Summe aus R~1~, R~2~, ..., R~n~
+
 |R~i~|Wärmedurchlasswiderstand des Materials i |m^2^⋅K⋅W^-1^|Widerstand, den eine Materialschicht dem Wärmestrom entgegensetzt, Quotient aus Materialdicke und Wärmeleitfähigkeit
+
 |R~se~|Wärmeübergangswiderstand außen|m^2^⋅K⋅W^-1^|Wärmeübergangswiderstand des Materials an der äußeren Oberfläche
+
 |R~si~|Wärmeübergangswiderstand innen|m^2^⋅K⋅W^-1^|Wärmeübergangswiderstand des Materials an der inneren Oberfläche
+
 |R~T~|Wärmedurchgangswiderstand|m^2^⋅K⋅W^-1^|Widerstand, welcher dem Wärmestrom vom gesamten Bauteil inklusive der Oberflächen entgegengesetzt wird, Summe aus R~si~, R~se~ und R~ges~
+
 |U|Wärmedurchgangskoeffizient|W⋅m^-2^⋅K^-1^|Maß für die Wärmedurchlässigkeit eines Bauteils, Kehrwert von R~T~
+
+|Δϑ|Temperaturunterschied|K|Temperaturunterschied zwischen Innen- und Außentemperatur, Betrag der Differenz aus ϑ~i~ und ϑ~e~
+
+|Δϑ~k~|Temperaturunterschied an einer Schichtgrenze k|°C|Produkt aus j und dem überwundenen Wärmewiderstand (R~si~, R~i~ *oder* R~se~)
+
 |λ~i~|Wärmeleitfähigkeit des Materials i |W⋅m^-1^⋅K^-1^|Stoffeigenschaft, welche den Wärmestrom durch ein Material bestimmt
+
+|ϑ~e~|Außentemperatur|°C|Temperatur an der Wandaußenseite
+
+|ϑ~i~|Innentemperatur|°C|Temperatur an der Wandinnenseite
+
+|ϑ~k~|Temperatur an der Schichtgrenze k |°C|Berechnung von Lage der wärmeren Seite abhängig (vgl. Beispielrechnung der Auftraggeberin)
 |===
 
 
@@ -43,7 +63,7 @@ In diesem Dokument werden die wesentlichen Begriffe des Wärmedurchgangsrechner-
 |===
 |Bezeichnung|	Definition |	Format | Gültigkeitsregeln | Aliase
 |Materialdaten|d~i~, R~i~ und λ~i~ aller Materialschichten sowie R~se~ und R~si~|Double|Materialdaten müssen aus Zahlen bestehen und größer oder gleich Null sein|
-|Ergebnisdaten|	R~ges~, R~T~ und U |	Double |  | 
+|Ergebnisdaten|	R~ges~, R~T~ und U,R~i~ , ϑ~k~, j |	Double |  | 
 
 |===
 
