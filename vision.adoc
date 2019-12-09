@@ -18,18 +18,16 @@ Der Zweck dieses Dokuments ist es, die wesentlichen Anforderungen an das System 
 Dieses Visions-Dokument bezieht sich auf das Wärmedurchgangsrechner-System, das von Team 14 entwickelt wird. Das System wird es der Professorin Rhena Krawietz erlauben, bauphysikalische Berechnungen zum Wärmedurchgangskoeffizienten durchführen zu können, um den Arbeitsaufwand bei der Erstellung und Korrektur von Aufgaben zu minimieren.
 
 === Definitionen, Akronyme und Abkürzungen
-siehe Glossar (Verweis hier einfügen).
+siehe <<glossary.adoc#,Glossar>>
 
 === Referenzen
-Aufgabenstellung
-Beispielberechnung
-DIN-Tabelle
+//Gesprächsprotokoll vom 06.12.2019
 
 //(hier externe Verweise zu anderen Dokumenten, Quellen, Standards etc. einfügen, sofern notwendig)
 
 == Positionierung
 === Fachliche Motivation
-Auf eine hochschulinterne Anfrage von Professor Jürgen Anke, dem Verantwortlichen des Moduls Software Engineering, antwortete die Professorin Rhena Krawietz mit dem Wunsch nach einer Softwarelösung zur Berechnung des Wärmedurchgangskoeffizienten. Infolge eines Projektzuordnungsverfahrens hat Professor Jürgen Anke das Team 14 mit der Projektbearbeitung beauftragt. Da die Kundin derzeit bei der Erstellung und Kontrolle von Aufgaben zum Wärmedurchgangskoeffizienten nur unter Verwendung von Microfoft Excel oder eines Taschenrechners arbeiten kann, sind diese Aufgaben mit einem hohen Zeit- und Arbeitsaufwand verbunden. Die Auftraggeberin erhofft sich, diese Aufwände mithilfe eines Softwaresystems verringern zu können.
+Auf eine hochschulinterne Anfrage von Professor Jürgen Anke, dem Verantwortlichen des Moduls Software Engineering, antwortete die Professorin Rhena Krawietz mit dem Wunsch nach einer Softwarelösung zur Berechnung des Wärmedurchgangskoeffizienten. Infolge eines Projektzuordnungsverfahrens hat Professor Jürgen Anke das Team 14 mit der Projektbearbeitung im Rahmen des vorgenannten Moduls beauftragt. Da die Kundin derzeit bei der Erstellung und Kontrolle von Aufgaben zum Wärmedurchgangskoeffizienten nur unter Verwendung von Microfoft Excel oder eines Taschenrechners arbeiten kann, sind diese Aufgaben mit einem hohen Zeit- und Arbeitsaufwand verbunden. Die Auftraggeberin erhofft sich, diese Aufwände mithilfe eines Softwaresystems verringern zu können.
 //Erläutern Sie kurz den Hintergrund, in dem das Projekt angesiedelt ist. Welches Problem soll gelöst werden, wie ist es entstanden? Welche Verbesserung wird angestrebt. Achten Sie darauf, eine fachliche (organisatorische, betriebswirtschaftliche) Perspektive einzunehmen.
 
 === Problem Statement
@@ -39,7 +37,7 @@ Auf eine hochschulinterne Anfrage von Professor Jürgen Anke, dem Verantwortlich
 |Das Problem |	Die Erstellung und die Kontrolle von Aufgaben zum Wärmedurchgangskoeffizienten sind für die Auftraggeberin mit einem hohen Aufwand verbunden.
 |betrifft |	die Auftraggeberin
 |die Auswirkung davon ist |
-ein hoher Zeitbedarf bei der Erstellung und der Kontrolle von Aufgaben zum Wärmedurchgangskoeffizienten, welcher mit der erhöhten Gefahr von Rechenfehlern infolge vieler manueller Eingaben einhergeht
+ein hoher Zeitbedarf bei der Erstellung und der Kontrolle von Aufgaben zum Wärmedurchgangskoeffizienten, welcher mit der erhöhten Gefahr von Rechenfehlern infolge von vielen manuellen Eingaben einhergeht
 |eine erfolgreiche Lösung wäre | Ein Softwaresystem, welches alle notwendigen Berechnungen durchführt und Zwischen- und Endergebnisse ausgibt.
 |===
 
@@ -87,12 +85,13 @@ Beispiel
 //|[Benennung des Stakeholder-Typs.]	|[Kurze Beschreibung des Stakeholders.]	|[Fassen Sie die wesentlichen Verantwortlichkeiten des Stakeholder mit Bezug auf das zu entwickelnde System kurz zusammen, d.h. ihr besonderen Interessen. Beispiele: Dieser Stakeholder sorgt dafür, dass das System gewartet wird / dass die angezeigten Daten aktuell sind / überwacht den Projektfortschritt / usw.]
 |Auftraggeberin |	Prof. Dr.-Ing. Rhena Krawietz, Professorin für Technische Physik an der HTW Dresden	| erstellt und kontrolliert Aufgaben zum Wärmedurchgangskoeffizienten
 |Lehrende| Professor*innen, Laboringenieur*innen und studentische Hilfskräfte der HTW Dresden 	| erhalten auf Nachfrage Softwaresystem, um Aufgaben zum Wärmedurchgangskoeffizienten erstellen und kontrollieren zu können
-|Studierende|	Studierende des Bauingenieurwesens und anderer Studiengänge mit Vertiefung im Bereich Baubetrieb	| kontrollieren eigene Übungsaufgaben 
-|OPAL - Bildungsportal Sachsen|	Lernplattform, welche von der HTW Dresden genutzt wird	| dient der Verbreitung des Softwaresystems
-|Projektteam|	Team 14	| Realisierung des Projektes
-|Team-Coach|	Prof. Dr.-Ing. Jürgen Anke, Professor für Softwaretechnologie und Informationssysteme an der HTW Dresden	| Unterstützung und Bewertung der Arbeit des Projektteams
+|Studierende|	Studierende des Bauingenieurwesens und anderer Studiengänge mit Vertiefung im Bereich Baubetrieb	| kontrollieren eigene Übungsaufgaben, erhalten von Softwaresystem unterstützte Prüfungsbewertungen
+|OPAL - Bildungsportal Sachsen|	Lernplattform, welche von der HTW Dresden genutzt wird	| soll für die Verbreitung des Softwaresystems genutzt werden
+|Projektteam|	Team 14	| versucht Kundenwünsche bei der Entwicklung des Softwaresystems umzusetzen
+|Team-Coach|	Prof. Dr.-Ing. Jürgen Anke, Professor für Softwaretechnologie und Informationssysteme an der HTW Dresden	| unterstützt und bewertet die Arbeit des Projektteams 
+|Weiterentwickler|	Studierende eines zukünftigen Jahrgangs im Modul Software Engineering	| entwickeln Softwaresystem weiter und ergänzen es um weitere Funktionen
+|Hacker|	IT-Spezialisten mit negativen Absichten	| versuchen in das Softwaresystem einzudringen und dem Endanwender zu schaden
 |===
-//Prüfungsamt? Hacker? Gesetzgeber eher nicht
 === Benutzerumgebung
 //Beschreiben Sie die Arbeitsumgebung des Nutzers. Hier sind einige Anregungen:
 
@@ -100,6 +99,16 @@ Beispiel
 * Die Auftraggeberin möchte das Softwaresystem auf Laptops und Desktop-PCs verwenden.
 * Derzeit arbeitet die Auftraggeberin mit dem Betriebssystem Windows 7.
 * Eine Umstellung des Betriebssystems auf Windows 10 ist absehbar.
+* Die Dateneingabe über eine Tastatur soll möglich sein.
+* Das Softwaresystem ist gemäß Anweisung der Auftraggeberin primär an ihrer Benutzerumgebung auszurichten.
+
+==== Lehrende und Studierende
+* Lehrende und Studierende der HTW Dresden sind lediglich potenzielle Nutzer des Softwaresystems.
+* Die Mitglieder der Benutzergruppe Lehrende und Studierende verändern sich ständig.
+* Die Benutzerumgebungen der Lehrenden und Studierenden sind in allen Aspekten sehr unterschiedlich.
+* Die Benutzerumgebungen von Lehrenden und Studierenden sind von sekundärer Bedeutung.
+
+
 
 //potenzielle Benutzer auch?
 
@@ -119,9 +128,9 @@ Beispiel
 [%header]
 |===
 |Bedarf|	Priorität|	Features|	Geplantes Release
-|Materialdaten eingeben|hoch|Ermöglichung der Eingabe der Daten von bis zu 10 Wandschichten (Anzahl der parallelen Schichten, Wärmeübergangswiderstände, Dicken, Wärmeleitfähigkeiten)|xx
-|Luftschichten eingeben|hoch|Ermöglichung der direkten Eingabe des Wärmedurchlasswiderstandes bei Luftschichten zwischen den Wandschichten|xx
-|Berechnungsergebnisse ausgeben|hoch|Ausgabe des Wärmedurchgangskoeffizienten, des Wärmedurchgangswiderstandes, der Wärmedurchlasswiderstände und der Summe aller Wärmedurchlasswiderstände|xx
+|Materialdaten eingeben|hoch|Ermöglichung der Eingabe der Daten von bis zu 10 Wandschichten (n, R~se~, R~si~, d, λ)|xx
+|Luftschichten eingeben|hoch|Ermöglichung der direkten Eingabe von R~i~ bei Luftschichten zwischen den Wandschichten|xx
+|Berechnungsergebnisse ausgeben|hoch|Ausgabe von U, R~T~, R~ges~, R~i~ |xx
 |Temperaturverlauf ausgeben|mittel|Ausgabe des Temperaturverlaufs über die verschiedenenen Wandschichten|xx
 |Eingabedaten veranschaulichen|niedrig|Darstellung der verschiedenen Wandschichten|xx
 |Materialdaten vormerken|niedrig|Möglichkeit der Speicherung von Wärmeübergangswiderständen|xx
@@ -134,13 +143,13 @@ Beispiel
 
 == Zusätzliche Produktanforderungen
 //Zutreffendes angeben, nicht zutreffendes streichen oder auskommentieren
-Hinweise:
 
-. Führen Sie die wesentlichen anzuwendenden Standards, Hardware oder andere Plattformanforderungen, Leistungsanforderungen und Umgebungsanforderungen auf
-. Definieren Sie grob die Qualitätsanforderungen für Leistung, Robustheit, Ausfalltoleranz, Benutzbarkeit und ähnliche Merkmale, die nicht von den genannten Features erfasst werden.
-. Notieren Sie alle Entwurfseinschränkungen, externe Einschränkungen, Annahmen oder andere Abhängigkeiten, die wenn Sie geändert werden, das Visions-Dokument beeinflussen. Ein Beispiel wäre die Annahme, dass ein bestimmtes Betriebssystem für die vom System erforderliche Hardware verfügbar ist. Ist das Betriebssystem nicht verfügbar, muss das Visions-Dokument angepasst werden.
-. Definieren Sie alle Dokumentationsanforderugen, inkl. Benutzerhandbücher, Onlinehilfe, Installations-, Kennzeichnungs- und Auslieferungsanforderungen-
-. Definieren Sie die Priorität für diese zusätzlichen Produktanforderungen. Ergänzen Sie, falls sinnvoll, Angaben zu Stabilität, Nutzen, Aufwand und Risiko für diese Anforderungen.
+//Hinweise:
+//. Führen Sie die wesentlichen anzuwendenden Standards, Hardware oder andere Plattformanforderungen, Leistungsanforderungen und Umgebungsanforderungen auf
+//. Definieren Sie grob die Qualitätsanforderungen für Leistung, Robustheit, Ausfalltoleranz, Benutzbarkeit und ähnliche Merkmale, die nicht von den genannten Features erfasst werden.
+//. Notieren Sie alle Entwurfseinschränkungen, externe Einschränkungen, Annahmen oder andere Abhängigkeiten, die wenn Sie geändert werden, das Visions-Dokument beeinflussen. Ein Beispiel wäre die Annahme, dass ein bestimmtes Betriebssystem für die vom System erforderliche Hardware verfügbar ist. Ist das Betriebssystem nicht verfügbar, muss das Visions-Dokument angepasst werden.
+//. Definieren Sie alle Dokumentationsanforderugen, inkl. Benutzerhandbücher, Onlinehilfe, Installations-, Kennzeichnungs- und Auslieferungsanforderungen-
+//. Definieren Sie die Priorität für diese zusätzlichen Produktanforderungen. Ergänzen Sie, falls sinnvoll, Angaben zu Stabilität, Nutzen, Aufwand und Risiko für diese Anforderungen.
 
 [%header]
 |===
