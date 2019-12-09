@@ -1,6 +1,6 @@
-= Glossar -Projektthema-
-Vorname Nachname <email@domain.org>; Vorname2 Nachname2 <email2@domain.org>; Vorname3 Nachname3 <email3@domain.org>
-0.1, 01.11.2019 
+= Glossar -Berechnungen für Bauphysik in der Lehre-
+Lukas Grambole <lukas.grambole@htw-dresden.de>; Michael Däbler <daebler.michael@htw-dresden.de>
+0.1, 09.12.2019 
 :toc: 
 :toc-title: Inhaltsverzeichnis
 //:sectnums:
@@ -9,31 +9,43 @@ Vorname Nachname <email@domain.org>; Vorname2 Nachname2 <email2@domain.org>; Vor
 
 
 == Einführung
-In diesem Dokument werden die wesentlichen Begriffe aus dem Anwendungsgebiet (Fachdomäne) der <Projektthema-Systems> definiert. Zur besseren Übersichtlichkeit sind Begriffe, Abkürzungen und Datendefinitionen gesondert aufgeführt.
+In diesem Dokument werden die wesentlichen Begriffe des Wärmedurchgangsrechner-Systems aus dem Anwendungsgebiet der Bauphysik definiert. Zur besseren Übersichtlichkeit sind Begriffe, Abkürzungen und Datendefinitionen gesondert aufgeführt.
 
 == Begriffe
 [%header]
 |===
 |Begriff|	Definition und Erläuterung|	Synonyme
 //|Kommissionierung|Bereitstellung von Waren aus einem Lager entsprechend eines Kundenauftrags|(keine))|
-|xx|xx|xx|
+|Wärmestrom|gibt die übertragene Wärmemenge pro Zeiteinheit an|Wärmefluss
 |===
 		
 
 == Abkürzungen und Akronyme
+//Formelzeichen?
 [%header]
 |===
-|Abkürzung|	Bedeutung|	Erläuterung
+|Abkürzung|	Bedeutung|Einheit|	Erläuterung
 //|UP|Unified Process|Vorgehensmodell für die Softwareentwicklung|
-|xx|xx|xx|
+|d~i~|Dicke des Materials i|m|Beschreibung der Dicke der jeweiligen Wandschicht
+|n|Anzahl paralleler Schichten|1|Angabe der Anzahl paralleler Schichten einer Wand
+|R~ges~|Summe aller Wärmedurchlasswiderstände|m^2^⋅K⋅W^-1^|Zwischenwert, Summe aus R~1~, R~2~, ..., R~n~
+|R~i~|Wärmedurchlasswiderstand des Materials i |m^2^⋅K⋅W^-1^|Widerstand, den eine Materialschicht dem Wärmestrom entgegensetzt, Quotient aus Materialdicke und Wärmeleitfähigkeit
+|R~se~|Wärmeübergangswiderstand außen|m^2^⋅K⋅W^-1^|Wärmeübergangswiderstand des Materials an der äußeren Oberfläche
+|R~si~|Wärmeübergangswiderstand innen|m^2^⋅K⋅W^-1^|Wärmeübergangswiderstand des Materials an der inneren Oberfläche
+|R~T~|Wärmedurchgangswiderstand|m^2^⋅K⋅W^-1^|Widerstand, welcher dem Wärmestrom vom gesamten Bauteil inklusive der Oberflächen entgegengesetzt wird, Summe aus R~si~, R~se~ und R~ges~
+|U|Wärmedurchgangskoeffizient|W⋅m^-2^⋅K^-1^|Maß für die Wärmedurchlässigkeit eines Bauteils, Kehrwert von R~T~
+|λ~i~|Wärmeleitfähigkeit des Materials i |W⋅m^-1^⋅K^-1^|Stoffeigenschaft, welche den Wärmestrom durch ein Material bestimmt
 |===
+
 
 == Verzeichnis der Datenstrukturen
 [%header]
 |===
 |Bezeichnung|	Definition |	Format | Gültigkeitsregeln | Aliase
-|Anmeldedaten|Zusammensetzung von Benutzername und Passwort.|String|Emailadresse muss @-Zeichen und Punkt enthalten.|Login
-|xx|xx|xx|xx|xx|
+|Materialdaten|d~i~, R~i~ und λ~i~ aller Materialschichten sowie R~se~ und R~si~|Double|Materialdaten müssen aus Zahlen bestehen und größer oder gleich Null sein|
+|Ergebnisdaten|	R~ges~, R~T~ und U |	Double |  | 
+
 |===
+
 
 
