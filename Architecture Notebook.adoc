@@ -18,10 +18,10 @@ Dieses Dokument beschreibt die Philosophie, Entscheidungen, Nebenbedingungen, Be
 
 == Architectural goals and philosophy
 
-What is the expected lifespan of the system?+
-Will the system need to respond to technological changes over that time, such as new versions of middleware or other products?+
-How frequently is the system expected to adapt to change?+
-What changes can we anticipate in the future, and how can we make them easier to accommodate?+
+What is the expected lifespan of the system? +
+Will the system need to respond to technological changes over that time, such as new versions of middleware or other products? +
+How frequently is the system expected to adapt to change? +
+What changes can we anticipate in the future, and how can we make them easier to accommodate? +
 
 //Hinweise: Beschreiben Sie die Philosophie der Architektur, d.h. den zentralen Ansatz für ihre Architektur. Identifizieren Sie alle Aspekte, die die Philosophie beeinflussen, z.B. komplexe Auslieferung Aspekte, Anpassung von Altsystemen oder besondere Geschwindigkeitsanforderungen. Muss es besonders robust sein, um eine langfristige Wartung und Pflege zu ermöglichen?
 
@@ -36,12 +36,12 @@ What changes can we anticipate in the future, and how can we make them easier to
 
 == Decisions, constraints, and justifications 
 
-Network topology+
-Use of a given database vendor or an existing database+
-Web environment (server configurations, firewall, DMZs, and so forth)+
-Servers (hardware model, operating system)+
-Use of third-party software or a particular technology+
-Compliance with existing standards+
+Network topology +
+Use of a given database vendor or an existing database +
+Web environment (server configurations, firewall, DMZs, and so forth) +
+Servers (hardware model, operating system) +
+Use of third-party software or a particular technology +
+Compliance with existing standards +
 
 
 //[List the decisions that have been made regarding architectural approaches and the constraints being placed on the way that the developers build the system. These will serve as guidelines for defining architecturally significant parts of the system. Justify each decision or constraint so that developers understand the importance of building the system according to the context created by those decisions and constraints. This may include a list of DOs and DON’Ts to guide the developers in building the system.] 
