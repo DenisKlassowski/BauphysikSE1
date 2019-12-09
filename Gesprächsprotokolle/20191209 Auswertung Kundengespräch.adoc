@@ -1,0 +1,37 @@
+= Kurzprotokoll -Auswertung Kundengespräch-
+Lukas Grambole <lukas.grambole@htw-dresden.de>
+09.12.2019 
+:toc: 
+:toc-title: Inhaltsverzeichnis
+:sectnums:
+// Platzhalter für weitere Dokumenten-Attribute 
+
+
+
+== Organisatorische Angaben
+|===
+|Datum / Uhrzeit|	Ort|Gesprächsteilnehmer
+
+|09.12.2019 / 11:00 Uhr|HTW Dresden, S 528|Michael Däbler (Analyst), Lukas Grambole (Analyst)
+
+|===
+
+
+== Gesprächsinhalte
+* Austausch über Hauptproblem der Kundin
+* Diskussion über mögliche, nicht offensichtliche Stakeholder (z.B. Gesetzgeber, Hacker, Prüfungsamt der HTW Dresden)
+* Zusammentragung der wesentlichen Erkenntnisse vom Kundengespräch
+* Bearbeitung von Vision und Glossar, Fertigstellung erster Entwürfe für diese Dokumente
+
+== Offene Fragen
+Während des Treffens haben sich folgende Fragen ergeben:
+
+* Wie nennen wir unser Softwaresystem? Unsere provisorische Bezeichnung lautet Wärmedurchgangsrechner.
+* Hat unser Team einen Namen? In Anlehnung an unsere Themennummer haben wir uns vorerst Team 14 genannt.
+* Müssen wir Releasedaten festlegen?
+* Stimmen die Datenstrukturen aus Sicht des Architekten?
+* Gibt es Umstrukturierungsbedarf zwischen den Hauptfunktionen und den zusätzlichen Produktanforderungen in der Vision?
+* Gibt es aus Sicht der anderen Teammitglieder unklare Begriffe, welche wir noch erklären müssen?
+* Kommt unser Softwaresystem mit dem Gesetzgeber in Berührung?
+
+Wir werden hierzu weiter diskutieren und und die entsprechenden Personen (Coach, Projektmanager, ...) konsultieren. Die Ergebnisse daraus werden wir in die Vision und das Glossar einarbeiten.
