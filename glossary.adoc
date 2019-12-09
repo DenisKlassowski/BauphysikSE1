@@ -63,7 +63,7 @@ In diesem Dokument werden die wesentlichen Begriffe des Wärmedurchgangsrechner-
 |===
 |Bezeichnung|	Definition |	Format | Gültigkeitsregeln | Aliase
 |Materialdaten|d~i~, R~i~ und λ~i~ aller Materialschichten sowie R~se~ und R~si~|Double|Materialdaten müssen aus Zahlen bestehen und größer oder gleich Null sein|
-|Ergebnisdaten|	R~ges~, R~T~ und U,R~i~ , ϑ~k~, j |	Double |  | 
+|Ergebnisdaten|	j, R~ges~, R~i~, R~T~, U, Δϑ~k~, ϑ~k~ |	Double |  | 
 
 |===
 
