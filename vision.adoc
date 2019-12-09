@@ -100,7 +100,7 @@ Beispiel
 * Derzeit arbeitet die Auftraggeberin mit dem Betriebssystem Windows 7.
 * Eine Umstellung des Betriebssystems auf Windows 10 ist absehbar.
 * Die Dateneingabe über eine Tastatur soll möglich sein.
-* Das Softwaresystem ist gemäß Anweisung der Auftraggeberin primär an ihrer Benutzerumgebung auszurichten.
+* Das Softwaresystem ist primär an ihrer Benutzerumgebung auszurichten.
 
 ==== Lehrende und Studierende
 * Lehrende und Studierende der HTW Dresden sind lediglich potenzielle Nutzer des Softwaresystems.
@@ -128,19 +128,30 @@ Beispiel
 [%header]
 |===
 |Bedarf|	Priorität|	Features|	Geplantes Release
-|Materialdaten eingeben|hoch|Ermöglichung der Eingabe der Daten von bis zu 10 Wandschichten (n, R~se~, R~si~, d, λ)|xx
+
+
+
+
+|Berechnungen durchführen|hoch|Berechnung und Ausgabe von j, R~ges~, R~i~, R~T~, U, Δϑ~k~ und ϑ~k~ |xx
+
+|Daten drucken|hoch|Druck der wesentlichen Eingabe- und Ergebnisdaten|xx
+
 |Luftschichten eingeben|hoch|Ermöglichung der direkten Eingabe von R~i~ bei Luftschichten zwischen den Wandschichten|xx
-|Berechnungsergebnisse ausgeben|hoch|Ausgabe von U, R~T~, R~ges~, R~i~ |xx
+
+|Materialdaten eingeben|hoch|Ermöglichung der Eingabe der Daten von bis zu 10 Wandschichten (n, R~se~, R~si~, d, λ)|xx
+
+|Einheiten ändern|mittel|Möglichkeit der Änderung der Einheiten von Eingabedaten|xx
+
+|Materialdaten vormerken|mittel|Möglichkeit der Speicherung von Wärmeübergangswiderständen|xx
+
 |Temperaturverlauf ausgeben|mittel|Ausgabe des Temperaturverlaufs über die verschiedenenen Wandschichten|xx
+
 |Eingabedaten veranschaulichen|niedrig|Darstellung der verschiedenen Wandschichten|xx
-|Materialdaten vormerken|niedrig|Möglichkeit der Speicherung von Wärmeübergangswiderständen|xx
-|Ein- und Ausgabedaten erklären|mittel|Erklärung der Bedeutung der Ein- und Ausgabedaten|xx
-|Einheiten ändern|mittel|Möglichkeit der Änderung der Einheit von Eingabedaten|xx
-|Berechnungsdaten drucken|hoch|Druck der wesentlichen Berechnungsdaten|xx
+
+|PDF erstellen|niedrig|Ausgabe eines PDF-Dokumentes mit allen wesentlichen Eingabe- und Ergebnisdaten|xx
 
 |===
 			
-
 == Zusätzliche Produktanforderungen
 //Zutreffendes angeben, nicht zutreffendes streichen oder auskommentieren
 
@@ -154,16 +165,25 @@ Beispiel
 [%header]
 |===
 |Anforderung|	Priorität|	Geplantes Release
-|schnelle Berechnung und Datenausgabe (<2 Sekunden)|hoch|xx
-|Verfügbarkeit von Eingabedaten nach System-Absturz|niedrig|xx
-|Ausgabe von Zwischenergebnissen mit 4 Nachkommastellen|hoch|xx
-|Ausgabe von Rt und U gerundet auf 2 Nachkommastellen|hoch|xx
+
+|Ausgabe von j, R~ges~, R~i~, R~T~, U, Δϑ~k~ und ϑ~k~ mit vier Nachkommastellen|hoch|xx
+
+|Ausgabe von R~T~ und U gerundet auf zwei Nachkommastellen (zusätzlich)|hoch|xx
+
+|System auf Windows 7 und auf Windows 10 lauffähig|hoch|xx
+
+|Verhinderung von Fehleingaben|hoch|xx
+
 |einfache Bedienbarkeit|mittel|xx
-|System kann offline genutzt werden|niedrig|xx
-|Sprache umstellen|niedrig|xx
-|System muss auf Windows 7 und Windows 10 lauffähig sein|hoch|xx
-|Fehleingaben verhindern|hoch|xx
+
+|gute Verständlichkeit (Erklärungen)|mittel|xx
+
+|schnelle Berechnung und Datenausgabe|mittel|xx
+
+|Sprache umstellbar auf Englisch|niedrig|xx
+
+|Verfügbarkeit von Eingabedaten nach System-Absturz|niedrig|xx
 
 |===
-//Unterschied zu Hauptfunktionen
+
 		
