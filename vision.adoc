@@ -83,6 +83,7 @@ Beispiel
 |===
 |Name|	Beschreibung	| Verantwortlichkeiten
 //|[Benennung des Stakeholder-Typs.]	|[Kurze Beschreibung des Stakeholders.]	|[Fassen Sie die wesentlichen Verantwortlichkeiten des Stakeholder mit Bezug auf das zu entwickelnde System kurz zusammen, d.h. ihr besonderen Interessen. Beispiele: Dieser Stakeholder sorgt dafür, dass das System gewartet wird / dass die angezeigten Daten aktuell sind / überwacht den Projektfortschritt / usw.]
+
 |Auftraggeberin |	Prof. Dr.-Ing. Rhena Krawietz, Professorin für Technische Physik an der HTW Dresden	| erstellt und kontrolliert Aufgaben zum Wärmedurchgangskoeffizienten
 |Lehrende| Professor*innen, Laboringenieur*innen und studentische Hilfskräfte der HTW Dresden 	| erhalten auf Nachfrage Softwaresystem, um Aufgaben zum Wärmedurchgangskoeffizienten erstellen und kontrollieren zu können
 |Studierende|	Studierende des Bauingenieurwesens und anderer Studiengänge mit Vertiefung im Bereich Baubetrieb	| kontrollieren eigene Übungsaufgaben, erhalten von Softwaresystem unterstützte Prüfungsbewertungen
@@ -90,8 +91,24 @@ Beispiel
 |Projektteam|	Team 14	| versucht Kundenwünsche bei der Entwicklung des Softwaresystems umzusetzen
 |Team-Coach|	Prof. Dr.-Ing. Jürgen Anke, Professor für Softwaretechnologie und Informationssysteme an der HTW Dresden	| unterstützt und bewertet die Arbeit des Projektteams 
 |Weiterentwickler|	Studierende eines zukünftigen Jahrgangs im Modul Software Engineering	| entwickeln Softwaresystem weiter und ergänzen es um weitere Funktionen
-|Hacker|	IT-Spezialisten mit negativen Absichten	| versuchen in das Softwaresystem einzudringen und dem Endanwender zu schaden
+
 |===
+
+
+
+
+{empty} +
+Potenzielle Stakeholder, wenn das Softwaresystem Daten online speichern oder verarbeiten soll:
+[%header]
+|===
+|Name|	Beschreibung	| Verantwortlichkeiten
+
+|Gesetzgeber|Vorgabe von rechtlichen Rahmenbedingungen (z.B. Datenschutzgesetz, IT-Sicherheitsgesetz) und Überprüfung ihrer Einhaltung|überwacht Gesetze, prüft korrekten Umgang mit Daten und macht Vorgaben zu Sicherheitsanforderungen
+
+|Hacker|	IT-Spezialisten mit negativen Absichten	| versuchen in das Softwaresystem einzudringen, um Daten missbräuchlich verwenden zu können
+|===
+
+
 === Benutzerumgebung
 //Beschreiben Sie die Arbeitsumgebung des Nutzers. Hier sind einige Anregungen:
 
@@ -180,7 +197,7 @@ Beispiel
 
 |schnelle Berechnung und Datenausgabe|mittel|xx
 
-|Sprache umstellbar auf Englisch|niedrig|xx
+|Mehrsprachigkeit (Deutsch und Englisch)|niedrig|xx
 
 |Verfügbarkeit von Eingabedaten nach System-Absturz|niedrig|xx
 
