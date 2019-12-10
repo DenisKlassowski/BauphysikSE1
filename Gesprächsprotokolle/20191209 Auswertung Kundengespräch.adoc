@@ -29,7 +29,7 @@ Während des Treffens haben sich folgende Fragen ergeben:
 * Wie nennen wir unser Softwaresystem? Unsere provisorische Bezeichnung lautet Wärmedurchgangsrechner.
 * Hat unser Team einen Namen? In Anlehnung an unsere Themennummer haben wir uns vorerst Team 14 genannt.
 * Müssen wir Releasedaten festlegen?
-* Stimmen die Datenstrukturen aus Sicht des Architekten?
+* Stimmen die Datenstrukturen?
 * Gibt es Umstrukturierungsbedarf zwischen den Hauptfunktionen und den zusätzlichen Produktanforderungen in der Vision?
 * Gibt es aus Sicht der anderen Teammitglieder unklare Begriffe, welche wir noch erklären müssen?
 * Kommt unser Softwaresystem mit dem Gesetzgeber in Berührung?
