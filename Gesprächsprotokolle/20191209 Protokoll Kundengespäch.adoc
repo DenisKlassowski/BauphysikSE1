@@ -27,3 +27,36 @@ Yewgenij Baburkin <yewgenij.baburkin@htw-dresden.de>
 
 . Ist eine Verbreitung des Systems geplant? Wenn ja: Auf welchen Plattformen soll das System zur Verfügung gestellt werden (OPAL, HTW Dresden-Webseite, Dropbox, ...)?
 - wenn, dann über Opal
+
+== Themenkomplex Funktionalität
+
+. Soll das System fähig sein, andere Parameter, als den Wärmedurchgangskoeffizienten U (bei entsprechenden Eingangsdaten) berechnen zu können?
+- WICHTIG: Temperaturverlauf mehrschichtiges Bauteil -> ein paar Formeln mehr
+
+
+. Soll das Softwaresystem in der Lage sein, selbst Aufgaben generieren zu können, oder soll es nur zur Lösung von vorgegebenen Problemen dienen?
+- nein
+
+. Wie viele verschiedene Schichten sollen angegeben werden können? 
+- realistische Obergrenze ist 10
+
+. Welche Ergebnisse sollen ausgegeben werden (nur U, Rt und Ri?)? 
+- R_t, R_i, R_ges, U (, Temperaturverlauf)
+
+. Welche Veranschaulichung ist durch das Programm gewünscht / Darstellung?
+- keine Anforderung, soll jedoch schön aussehen
+- Handout wird ausgeteilt (beinhaltet grafische Darstellung der Schichten)
+
+. Sollen Ergebnisse oder Aufgaben irgendwo gespeichert werden? Lokal/Online 
+- zwischenspeichern wäre gut: Eingangsdaten, Zwischenergebnis, Ergebnis
+
+. Soll Ergebnis druckbar bzw. in ein PDF umformbar sein?
+- wäre gut, Daten Ergebnisse(tabellarische Form)
+- Rechenweg nicht, ist den Studenten eigentlich bekannt
+
+. Sollen Daten aus anderen Programmen (z.B. Excel) importiert werden können? Sollen Daten aus dem Softwaresystem in andere Programme exportiert werden können? Welche Programme? (Lukas, Analyst)
+- eigentlich nicht
+
+gegebenes R (gegebende Konstruktion z.B. Mauer)
+hinzufügen einer neuen Schicht soll möglich sein
+
