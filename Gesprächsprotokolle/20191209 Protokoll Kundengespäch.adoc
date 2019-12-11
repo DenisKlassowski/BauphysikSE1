@@ -54,9 +54,87 @@ Yewgenij Baburkin <yewgenij.baburkin@htw-dresden.de>
 - wäre gut, Daten Ergebnisse(tabellarische Form)
 - Rechenweg nicht, ist den Studenten eigentlich bekannt
 
-. Sollen Daten aus anderen Programmen (z.B. Excel) importiert werden können? Sollen Daten aus dem Softwaresystem in andere Programme exportiert werden können? Welche Programme? (Lukas, Analyst)
+. Sollen Daten aus anderen Programmen (z.B. Excel) importiert werden können? Sollen Daten aus dem Softwaresystem in andere Programme exportiert werden können? Welche Programme? 
 - eigentlich nicht
 
-gegebenes R (gegebende Konstruktion z.B. Mauer)
-hinzufügen einer neuen Schicht soll möglich sein
+. Wird eine Rückwärtsrechnung (z.B. gegebenes U, gesuchte Stärke einer spezifischen Schicht) gebraucht?
+- nicht gebraucht
 
+. weitere Anforderungen:
+- gegebenes R (gegebende Konstruktion z.B. Mauer) soll eingegeben werden könnenn
+- hinzufügen einer neuen Schicht soll möglich sein
+
+== Themenkomplex Benutzbarkeit / Zuverlässigkeit
+. Sollen alle Ein- und Ausgaben in SI-Basiseinheiten erfolgen (keine Vorsätze für Maßeinheiten wie z.B. Milli, Kilo, ...)? Soll hierzu eine Änderungsmöglichkeit bestehen?  
+- Grundsätzlich ja
+- Dicke in meter
+- Keine Primäranforderung: Button Einheit m, cm, mm
+
+. Sollen Eingabedaten für die Wärmeübergangswiderstände Rsi und Rse und die Wärmeleitfähigkeit λ für bestimmte Materialien vorgemerkt sein? (Lukas, Analyst) Sollen diese Vormerkungen durch den Nutzer anpassbar sein? 
+- Extra-Problem: Aufwand zu groß? Sehr viel Unterschiede je nach Dichte
+- Option: Standardwerte Rsi Rse vorgemerkt, aber änderbar
+- Standard: Rsi Rse eingeben
+
+. Sollen gespeicherte Daten nach einem Absturz des Softwaresystems verfügbar / wiederherstellbar sein?
+- wäre nicht so schlimm
+- keine Anforderung
+
+. Soll das Softwaresystem mehrsprachig sein?
+- Optional: nicht vorgesehen, wäre aber schön
+
+. Soll das Softwaresystem Erklärungen zu den Ein- und Ausgabedaten enthalten?
+- Erklärungen wären gut
+- z.B.: was ist rsi, rse?
+
+. Soll das Softwaresystem von "Laien" ohne Kenntnisse in der Bauphysik bedient werden können? Es kann vorkommen, dass der Benutzer fehlerhafte Daten eingibt (negative Zahlen oder Buchstaben). Wie soll das Softwaresystem mit solchen Situationen umgehen?
+- irgendwas sollte schon passieren: falsche Werte (negativ, Buchstaben) blocken
+- Dicke, Wärmeleitfähigkeit kann nicht negativ werden nur Zahlenwerte (keine Buchstaben)
+
+. Ablauf einer Erstellung beschreiben. Was soll beim Erstellen gesehen werden, was soll nach dem erstellen passieren?
+- keine speziellen Anforderungen
+- (techn Lösungs würde sich in unserer Positoon vorstellen: Hauptseite: wv Schichten, Temp in aussen, ...)
+- man braucht tatsächlich alle Eingabedaten
+- eine Eingabemaske -> Berechnung des Ergebnisses
+- Rechnen -> wieder zurück -> nur einen Wert ändern -> wieder rechnen
+- eingaben der vorherigen Berchnung bleiben erhalten
+
+== Themenkomplex Leistung
+
+. Mit wie vielen Nachkommastellen ist maximal bei den Eingabedaten zu rechnen?
+- Putz z.B. 12,5 mm (4 Nachkommastellen bei Metern)
+- rsi rse Standard 2 Nachkommastellen
+- Temp?
+
+. Wie genau soll die Angabe des Wärmedurchgangskoeffizienten U erfolgen? Wie viele Nachkommastellen sind erwünscht? (Lukas, Analyst)
+- DIN: Runden auf 2 Nachkommastellen Rt und U,
+- die Zwischenergebnisse auf 4 Nachkommastellen (beide Ergebnisse: errechnetes Ergebnis und sinnvoll Gerundetes)
+
+. Muss die Berechnung des Wärmeübergangskoeffizienten U innerhalb einer bestimmten Zeit erfolgen?
+- keine Einschränkung, aber auch kein Problem
+
+== Themenkomplex Unterstützbarkeit
+
+. Auf welchen Gerätetypen soll das System verwendet werden (Tablet-PC, Notebook, Smartphone, ...)?
+- eigentlich Rechner von der Htw
+- BS: im Moment Windows 7
+
+
+. Welche Betriebssysteme werden auf den genannten Geräten verwendet?
+win7
+- Windows als BS reicht, keine weiteren BS
+
+. Soll das Softwaresystem nach seiner Fertigstellung um weitere Funktionen ergänzt werden können?
+- eher nicht
+
+== Ohne Zuordnung
+. Wie haben Sie bisher Aufgaben zur Berechnung des Wärmedurchgangskoeffizienten U kreiert und kontrolliert (z.B. von Hand mit Taschenrechner)? Und wo sehen sie entweder das Problem in der bisherigen Lösung oder welche Möglichkeit auf Verbesserung?
+- Excel-Tabellen sind Aufwand, per Hand ebenso
+- Klausurkorrektur: ein Fehler, immer wieder neu nachrechnen, Folgefehlererkennung
+- Primär: Zeit sparen
+
+. Sollen bei der Berechnung und Ausgabe spezifische DIN-Normen beachtet werden (z.B. besondere Rundungsregeln)?
+- unsinnige Wärmeleitfähigkeit z.B., muss nicht sein
+- WICHTIG: geschlossene Luftschicht: Wärmedurchlassfähigkeit bei doppelmauerwerk wird tabelle entnommen (DIN) -> Widerstand sollte einfach eingetragen werden können 
+
+. Wie läuft Kommunikation ab? Email, Termin, Telefon, ...
+- wir kommen auf kunden zu, wenn Fragen oder Vorstellung. Kunde kann auch auf uns zukommen, wenn gewünscht
