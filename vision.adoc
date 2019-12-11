@@ -146,12 +146,11 @@ Potenzielle Stakeholder, wenn das Softwaresystem Daten online speichern oder ver
 |===
 |Bedarf|	Priorität|	Features|	Geplantes Release
 
-
-
-
 |Berechnungen durchführen|hoch|Berechnung und Ausgabe von j, R~ges~, R~i~, R~T~, U, Δϑ~k~ und ϑ~k~ |xx
 
 |Daten drucken|hoch|Druck der wesentlichen Eingabe- und Ergebnisdaten|xx
+
+|Fehleingaben verhindern|hoch|Verhinderung der Eingabe von offensichtlich falschen Werten (negative Zahlen, Buchstaben, Sonderzeichen, ...)|xx
 
 |Luftschichten eingeben|hoch|Ermöglichung der direkten Eingabe von R~i~ bei Luftschichten zwischen den Wandschichten|xx
 
@@ -166,6 +165,7 @@ Potenzielle Stakeholder, wenn das Softwaresystem Daten online speichern oder ver
 |Eingabedaten veranschaulichen|niedrig|Darstellung der verschiedenen Wandschichten|xx
 
 |PDF erstellen|niedrig|Ausgabe eines PDF-Dokumentes mit allen wesentlichen Eingabe- und Ergebnisdaten|xx
+
 
 |===
 			
@@ -185,11 +185,9 @@ Potenzielle Stakeholder, wenn das Softwaresystem Daten online speichern oder ver
 
 |Ausgabe von j, R~ges~, R~i~, R~T~, U, Δϑ~k~ und ϑ~k~ mit vier Nachkommastellen|hoch|xx
 
-|Ausgabe von R~T~ und U gerundet auf zwei Nachkommastellen (zusätzlich)|hoch|xx
+|zusätzlich Ausgabe von R~T~ und U gerundet auf zwei Nachkommastellen |hoch|xx
 
 |System auf Windows 7 und auf Windows 10 lauffähig|hoch|xx
-
-|Verhinderung von Fehleingaben|hoch|xx
 
 |einfache Bedienbarkeit|mittel|xx
 
