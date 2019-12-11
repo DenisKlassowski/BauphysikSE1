@@ -1,0 +1,29 @@
+= Protokoll Kundengespräch 2019-12-09
+Yewgenij Baburkin <yewgenij.baburkin@htw-dresden.de>
+11.12.2019 
+:toc: 
+:toc-title: Inhaltsverzeichnis
+:sectnums:
+// Platzhalter für weitere Dokumenten-Attribute 
+
+
+
+== Themenkomplex Stakeholder
+
+.  Wie viele Personen waren bisher an der Erstellung der Aufgaben zum Wärmedurchgangskoeffizienten beteiligt? Wer war daran beteiligt?
+- im Wesentlichen der Kunde
+- Kollegen haben ähnliche Themengebiete
+
+. Werden Sie das System anderen Lehrenden der HTW Dresden zur Verfügung stellen?
+- vorerst nur für Kunden
+- Kollegen könnten evtl. auch nutzen
+
+. Werden Sie das System Personen zur Verfügung stellen, welche nicht zur HTW Dresden gehören? Wenn ja: Wem?
+- nicht geplant
+
+. Soll das System durch Studierende bedient werden? Wenn ja: Sollen neben den Studierenden des Bauingenieurwesens auch Studierende anderer Fachrichtungen mit dem System arbeiten?
+- Studierendenbeteiligung ist erwünscht
+- von anderen Fakultäten auch vorstellbar
+
+. Ist eine Verbreitung des Systems geplant? Wenn ja: Auf welchen Plattformen soll das System zur Verfügung gestellt werden (OPAL, HTW Dresden-Webseite, Dropbox, ...)?
+- wenn, dann über Opal
