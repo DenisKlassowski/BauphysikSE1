@@ -7,7 +7,7 @@ Christian Grieß <christian.Griess@htw-dresden.de>; Vorname2 Nachname2 <email2@d
 // Platzhalter für weitere Dokumenten-Attribute 
 
 
-== Purpose
+== Zweck
 Dieses Dokument beschreibt die Philosophie, Entscheidungen, Nebenbedingungen, Begründungen, wesentliche Elemente und andere übergreifende Aspekte des Systems, die Einfluss auf Entwurf und Implementierung haben.
 
 //Hinweise: Bearbeiten Sie immer die Abschnitte 2-6 dieser Vorlage. Nachfolgende Abschnitte sind empfohlen, aber optional und sollten je nach Umfang der künftigen Wartungsarbeiten, Fähigkeiten des Entwicklungsteams und Bedeutung anderer architektureller Belange. 
@@ -16,7 +16,8 @@ Dieses Dokument beschreibt die Philosophie, Entscheidungen, Nebenbedingungen, Be
 
 
 
-== Architectural goals and philosophy
+== Architektonische Ziele und Philosophie
+
 
 What is the expected lifespan of the system? +
 Will the system need to respond to technological changes over that time, such as new versions of middleware or other products? +
@@ -27,31 +28,35 @@ What changes can we anticipate in the future, and how can we make them easier to
 
 //Formulieren Sie eine Reihe von Zielen, die die Architektur in ihrer Struktur un ihrem Verhalten erfüllen muss. Identifizieren Sie kritische Fragen, die von der Architektur adressiert werden müssen, z.B. besondere Hardware-Abhängigkeiten, die vom Rest des Systems isoliert werden sollten oder Sicherstellung der Funktionsfähigkeit unter besonderen Bedingungen (z.B. Offline-Nutzung).
 
-== Assumptions and dependencies
+== Annahmen und Abhängigkeiten
+
+. Lauffähigkeit unter folgenden Betriebssystemen:
+.. Windows 7
+//eventuelle Umstellung vor auslieferung?
+.. Windows 10 
+// .. Linux? (eventuell Studierende und Lehrende) +
+. Distribution über Opal + 
+//(https://bildungsportal.sachsen.de/opal) +
++
+
 //[List the assumptions and dependencies that drive architectural decisions. This could include sensitive or critical areas, dependencies on legacy interfaces, the skill and experience of the team, the availability of important resources, and so forth]
 
-== Architecturally significant requirements
+== Architektonisch wichtige Vorraussetzungen
 //Fügen Sie eine Referenz / Link zu den Anforderungen ein, die implementiert werden müssen, um die Architektur zu erzeugen.
 
 
-== Decisions, constraints, and justifications 
-
-Network topology +
-Use of a given database vendor or an existing database +
-Web environment (server configurations, firewall, DMZs, and so forth) +
-Servers (hardware model, operating system) +
-Use of third-party software or a particular technology +
-Compliance with existing standards +
-
+== Entscheidungen, Einschränkungen, Begründungen 
 
 //[List the decisions that have been made regarding architectural approaches and the constraints being placed on the way that the developers build the system. These will serve as guidelines for defining architecturally significant parts of the system. Justify each decision or constraint so that developers understand the importance of building the system according to the context created by those decisions and constraints. This may include a list of DOs and DON’Ts to guide the developers in building the system.] 
 
-. Entscheidung oder Einschränkung oder Begründung 1
+. Software wird in Python geschrieben. 
+. Python ist eine einfach zu lesende Programmiersprache die, die eventuelle spätere Erweiterung/Einarbeitung unseres Softwareprojektes erleichtert. +
+Außerdem ist nicht auszuschließen das die Softwarelösung and Studenten und andere Lehrkörper weitergegeben wird, was die Portabilität auf Linux- und MacOS-Betriebssysteme gewährleistet.
+. Software < XXX MB. 
+. Größenbeschränkung aufgrund von Opal (Distributionsplattform der Auftraggeberin.
 
-. Entscheidung oder Einschränkung oder Begründung 2
 
-
-== Architectural Mechanisms
+== Architektonische Mechanismen 
 https://www2.htw-dresden.de/~anke/openup/core.tech.common.extend_supp/guidances/concepts/arch_mechanism_2932DFB6.html[Doku "Concept: Architectural Mechanism"]
 //[List the architectural mechanisms and describe the current state of each one. Initially, each mechanism may be only name and a brief description. They will evolve until the mechanism is a collaboration or pattern that can be directly applied to some aspect of the design.]
 
@@ -64,13 +69,13 @@ https://www2.htw-dresden.de/~anke/openup/core.tech.common.extend_supp/guidances/
 . Architekturmechanismus 2
 
 
-== Key abstractions
+== Schlüssel Abstraktionen 
 //[List and briefly describe the key abstractions of the system. This should be a relatively short list of the critical concepts that define the system. The key abstractions will usually translate to the initial analysis classes and important patterns.]
 
-== Layers or architectural framework
+== Schichten oder Architektonisches Framework
 //[Describe the architectural pattern that you will use or how the architecture will be consistent and uniform. This could be a simple reference to an existing or well-known architectural pattern, such as the Layer framework, a reference to a high-level model of the framework, or a description of how the major system components should be put together.]
 
-== Architectural views
+== Architektonische Sichten 
 //[Describe the architectural views that you will use to describe the software architecture. This illustrates the different perspectives that you will make available to review and to document architectural decisions.]
 
 Folgende Sichten werden empfohlen:
