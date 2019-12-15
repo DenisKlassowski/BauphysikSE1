@@ -1,0 +1,30 @@
+= Test Log
+
+This artifact collects the raw output that is captured during a unique run of one or more tests for a single test cycle run.
+
+== Purpose
+
+- to provide verification that a set of tests was run
+- to provide information that relates to the success of those tests
+
+== Main Description
+
+This artifact provides a detailed, typically time-based record that both verifies that a set of tests were run, and provides information that relates to the success of those tests. The focus is typically on providing an accurate audit trail, which enables you to undertake a post-run diagnosis of failures. This raw data is subsequently analyzed to determine the results of an aspect of the test effort.
+
+== Impact of not having
+
+Without this or similar documentation, there is no record of which tests were run, what variances were discovered, and what action was taken. If this information is not available:
+
+- there is no way to know which tests passed and which failed.
+- there is no way to assess the status of testing and the quality of the product at that level of testing.
+- it is difficult to know how many tests remain outstanding.
+- there can be contractual and legal issues.
+
+== Representation Options
+
+Because this is a collection of raw data for subsequent analysis, it can be represented in a number of ways:
+
+- for manual tests, log the actual results on a copy of the manual Test Script
+- for automated tests, direct the output to log files that you can trace back to the automated Test Script
+- track raw results data in a test management tool
+

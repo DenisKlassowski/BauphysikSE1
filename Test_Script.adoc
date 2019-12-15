@@ -1,0 +1,49 @@
+= Test Script
+
+This artifact contains the step-by-step instructions that compose a test, enabling its run. Text scripts can take the form of either documented textual instructions that are manually followed, or computer-readable instructions that enable automated testing.
+
+== Purpose
+
+Test scripts implement a subset of required tests in an efficient and effective manner.
+
+== Impact of not having
+
+Without this artifact, it is difficult to ensure that tests are run consistently so that results are repeatable and errors can be recreated. If you do not use a test script, it is more difficult to verify that errors were not caused because of the way tests were run.
+
+== Checklist: Test Script
+
+This checklist provides questions to verify that tests are created in a consistent and complete manner.
+
+=== The test script conforms to the related test case
+
+Ensure that the test script conforms to the specification established in the test case if one is associated with the test script.  The test case captures the intent of the test; the test script must conform to this intent.
+
+=== The test script is testable
+
+=== The test script is reusable
+
+Ensure that your test scripts can be reused by designing your test scripts to maximize reuse.  Promoting reuse takes different forms depending on whether you are generating, programming, or recording test scripts.
+
+=== The test script is presriptive and unambiguous
+
+Ensure that the test script represents clear instructions on how the test must be run and how the results should be analyzed.  While non-automated tests can be written in such a way that the tester can have leeway in how the test is precisely run, there is no room for creativity in how the test results are to be analyzed for success or failure.
+
+=== The test script is named consistently with the other test work products
+
+Ensure that the naming of your test scripts is consistent with other test-related work products.  For example, if you are creating test classes for each of your test cases, ensure that the naming represents this relationship.  Alternatively, if you are building test scripts inside of a library, use a consistent naming convention to reflect the library or libraries.
+
+=== The test script provides appropriate test coverage
+
+Ensure that your test scripts provide test coverage consistent with the system under test.
+
+== Checklist: Test Data
+
+This checklist provides questions to verify that test data is created in a consistent and complete manner.
+
+- Test data has been provided for the test cases to be implemented  
+- The test data supports boundary testing  
+- The system under test has been tested under conditions with sufficient data, insufficient data, and the wrong type of data  
+- The test data is organized into production and generated data  
+- The test data has been updated to apply to the appropriate iteration  
+- The test data is complete for the given test effort  
+- Data has been identified for input numeric variables, output numeric variables, arrays, and vectors  

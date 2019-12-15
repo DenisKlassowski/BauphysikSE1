@@ -1,0 +1,34 @@
+|===
+| Test Script |
+| <Test Name> | Date: <dd/mm/yyyy>
+|===
+
+== Test spezification
+
+|===
+| Test Name | <test name>
+| Use Case Tested | <use case name>
+| Test Description | [Provide a concise description of the procedure used by this test script.]
+| Pre-conditions | [Detail any of pre-conditions for execution of this test script]
+| Post Conditions | [Detail the post-conditions of executing this test script]
+| Notes |
+| Result | <Pass/Fail/Warning/Incomplete>
+|===
+
+== Test Steps
+
+|===
+|    | Test Step | Expected Test Result
+| 1. | | 
+| 2. | |
+| 3. | |
+|===
+
+== Test Data Table
+
+|===
+| | 1 | 2 | 3 | 4 | 5
+| [Data field 1] | [data set 1 input value for field 1] | | | |
+| [Data field 2] | [data set 1 input value for field 2] | | | |
+| [Data field 3] | [data set 1 input value for field 3] | | | |
+|===

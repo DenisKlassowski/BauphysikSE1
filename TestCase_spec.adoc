@@ -1,0 +1,46 @@
+= Projekt Bauphysik Test Cases: <optional: use-case name>
+
+//This is a informal template for represeting test cases
+
+== Test Case <ID> - <Test Case Name>:
+
+//The Test Case ID should be unique. In addition, the name of each Test Case should reflect the intent of the test case, ideally expressed as a Boolean condition.
+
+=== Description
+//Describe the logical condition that the Test Case evaluates. 
+//Include the expected result.
+
+=== Pre-conditions
+//List conditions that must be true before this Test Case can start.
+
+=== Post-conditions
+//List conditions that should be true when this Test Case ends.
+
+=== Data required
+//Identify the type of data required for this Test Case.
+
+
+=== Checklist
+
+==== General
+
+- does the Test Case identify the requirement it evaluates?  This linking might be informal through a naming convention or formalized through a requirements traceability matrix.
+- does the Test Case reference the preconditions and postconditions that apply to it?
+
+==== Name
+
+- is the Test Case name unique?
+- does the name express a test condition or an expected result?
+- is it unambiguous to a stakeholder?
+
+==== Brief Description
+
+- is the logical test condition clearly identified in the description?
+- does the description clearly state the expected result?
+- is the expected result stated as a concrete outcome?
+- can a casual reader distinguish this Test Case from a similar one?
+
+==== Test Data Needs
+
+- does the Test Case note the kinds of test data required to implement a detailed Test Script?
+- are the test data type, uniqueness, and quality sufficiently explained?
