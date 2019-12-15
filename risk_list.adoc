@@ -1,5 +1,5 @@
-= Risikoliste -Projektthema-
-Vorname Nachname <email@domain.org>; Vorname2 Nachname2 <email2@domain.org>; Vorname3 Nachname3 <email3@domain.org>
+= Risikoliste Bauphysik
+Gruppe 14
 0.1, 01.11.2019 
 :sectnums:
 // Platzhalter für weitere Dokumenten-Attribute 
