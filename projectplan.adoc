@@ -1,5 +1,5 @@
-= Projektplan <Project Name>
-Vorname Nachname <email@domain.org>; Vorname2 Nachname2 <email2@domain.org>; Vorname3 Nachname3 <email3@domain.org>
+= Projektplan BauphysikSE1
+Gruppe 14
 0.1, 01.11.2019 
 :toc: 
 :toc-title: Inhaltsverzeichnis
@@ -8,17 +8,46 @@ Vorname Nachname <email@domain.org>; Vorname2 Nachname2 <email2@domain.org>; Vor
 
 == Einführung
 //Briefly describe the content of the project plan.
+Der Projektplan für die SE1 Projekt: Bauphysik. 
 
 == Projektorganisation
 //Introduce the project team, team members, and roles that they play during this project. If applicable, introduce work areas, domains, or technical work packages that are assigned to team members. Introduce neighboring projects, relationships, and communication channels. If the project is introduced somewhere else, reference that location with a link.
+Die Arbeit ist nach Rollen und Gebieten aufgeteilt. Es gibt eine klare Rollenverteilung. Eine Rolle bedeutet das diese Person in diesem Themenbereich eine Verantwortung trägt und eigeninitiativ Entscheidungen treffen, protokollieren (work item list) und Berichten muss. Dies Erfolgt nach Iteration Plan. +
+Die Rollenverteilung sieht wie folgt aus: 
+[cols=",3"]
+|===
+|Name
+|Rolle
+|Denis Klasowski
+|Project Manager
+|Däbler Michael
+|Analyst
+|Grambole Lukas
+|Analyst
+|Grieß Christian
+|Architect
+|Baburkin Yewgenji
+|Developer
+|Ullmann Max
+|Developer
+|Lehmann Christian
+|Tester
+|Fritzsche Felix
+|Deployment Eng
+|===
 
 == Praktiken und Bewertung 
 //Describe or reference which management and technical practices will be used in the project, such as iterative development, continuous integration, independent testing and list any changes or particular configuration to the project. Specify how you will track progress in each practice. As an example, for iterative development the team may decide to use iteration assessments and iteration burndown reports and collect metrics such as velocity (completed work item points/ iteration).
 
+Die Lösung für das Projekt wird iterativ Entwickelt. +
+Die Aufgaben werden in einer Tabelle (im iteration_plan) festgehalten und mithilfe einee Punktesystems bemessen. +
+Ergebnis dieser Messung ist die Velocity (die Geschwindigkeit) einer Phase. +
+Alle Dokumente zum Projekt befinden sich im Github-Repository.
+
 == Meilesteine und Ziele
 //Define and describe the high-level objectives for the iterations and define milestones. For example, use the following table to lay out the schedule. If needed you may group the iterations into phases and use a separate table for each phase
 
-
+Größere Ziele die wir einnerhalb einer Iteration erreichen möchten.
 [%header, cols="1,3a,2,1"]
 |===
 |Iteration
@@ -26,17 +55,20 @@ Vorname Nachname <email@domain.org>; Vorname2 Nachname2 <email2@domain.org>; Vor
 (risks and use case scenarios)
 |Scheduled start or milestone
 |Target velocity
-|I1
+|It. 0
 |
-* Mitigate Risk1
-* Develop Use Case 3, Scenario 2 
-|Date from/Date to
-|15
-|I2
+* Vertraut Machen mit OpenUP 
+* Kennenlernnen des Teams
+|02.12.2019 bis 16.12.2019
+|-
+|It1
 |	
-* Mitigate Risk 2
-* Develop Use Case 1, Scenario 2
-|	Date from/Date to|	16
+* Kundengespräch analysieren 
+* Elementare Projektdateien erarbeiten (ver.1)
+* Technische Vision erarbeiten
+* Risiko: Missverständnisse
+|	16.12.2019
+|	16
 |===
 
 == Deployment
