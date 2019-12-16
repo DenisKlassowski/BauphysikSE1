@@ -53,7 +53,7 @@ What changes can we anticipate in the future, and how can we make them easier to
 .. Python ist eine einfach zu lesende Programmiersprache die, die eventuelle spätere Erweiterung/Einarbeitung unseres Softwareprojektes erleichtert. +
 .. Es ist nicht auszuschließen das die Softwarelösung an andere Endnutzer weitergegeben wird, was die Portabilität auf Linux- und MacOS-Betriebssysteme gewährleistet.
 . Software < XXX MB. 
-. Größenbeschränkung aufgrund von Opal (Distributionsplattform der Auftraggeberin).
+.. Größenbeschränkung aufgrund von Opal (Distributionsplattform der Auftraggeberin).
 
 
 == Architektonische Mechanismen 
