@@ -49,7 +49,34 @@ What changes can we anticipate in the future, and how can we make them easier to
 //[List the decisions that have been made regarding architectural approaches and the constraints being placed on the way that the developers build the system. These will serve as guidelines for defining architecturally significant parts of the system. Justify each decision or constraint so that developers understand the importance of building the system according to the context created by those decisions and constraints. This may include a list of DOs and DON’Ts to guide the developers in building the system.] 
 
 . Software wird mit dem GUI tool PyQT in Python geschrieben (GNU / GPL License). 
-.. (Für unsere Developer PyQT: https://www.qt.io/blog/2018/12/18/qt-python-5-12-released GNU / GPL License) Neuer Stakeholder QT
+.. Für unsere Developer PyQT: https://www.qt.io/blog/2018/12/18/qt-python-5-12-released GNU / GPL License) 
+.. Für unsere Analysten Text auskommentiert in dieser Datei 
+
+// Contribution via Open Source
+
+//When selecting an open source license for your project, you contribute to free and open source software development by using //Qt under any of the following licenses: LGPL version 3, GPL version 2 and GPL version 3.
+
+//Basic Premises of the Qt Open Source Model
+
+//GPL – All users have the rights to obtain, modify and redistribute the full source code of your application. Your users are //granted rights founded on the four freedoms of the GNU General Public License.
+
+//LGPL – Any modification to a Qt component covered by the GNU Lesser General Public License must be contributed back to the //community. This is the primary open source Qt license, which covers the majority of Qt modules.
+
+//Please note that there are parts of Qt that are only provided under GPL for open source users that will require you to license //your application under a GPL compatible license. Qt also ships with third party open source components that might require //respective licensing compliancy, if used. See details of other licenses inside Qt .
+
+//icon_resources_infographicCheck out which components are available under the different open source models in the Qt Product //Map.
+//Open Source Usage Obligations  
+
+//The majority of the Qt modules are available under the LGPL v3 and GPL v3 open source license. When developing under this //license your obligations are to:
+
+    //Provide a re-linking mechanism for Qt libraries
+    //Provide a license copy & explicitly acknowledge Qt use
+    //Make a Qt source code copy available for customers
+    //Accept that Qt source code modifications are non-proprietary
+    //Make “open” consumer devices
+    //Accept Digital Rights Management terms, please see the GPL FAQ
+    //Take special consideration when attempting to enforce software patents FAQ
+
 .. Python ist eine einfach zu lesende/schreibende Programmiersprache die, die eventuelle spätere Erweiterung/Einarbeitung unseres Softwareprojektes erleichtert. +
 .. Es ist nicht auszuschließen das die Softwarelösung an andere Endnutzer weitergegeben wird, was die Portabilität auf Linux- und MacOS-Betriebssysteme gewährleistet.
 . Software(fragmente) < XXX MB. 
