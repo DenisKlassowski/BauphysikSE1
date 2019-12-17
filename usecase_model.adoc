@@ -1,6 +1,6 @@
 = Use-Case Model <Projektthema>
-Vorname Nachname <email@domain.org>; Vorname2 Nachname2 <email2@domain.org>; Vorname3 Nachname3 <email3@domain.org>
-0.1, 01.11.2019 
+Michael Daebler <michael.daebler@htw-dresden.de>; Lukas Grambole <lukas.grambole@htw-dresden.de>
+0.1, 17.12.2019 
 :toc: 
 :toc-title: Inhaltsverzeichnis
 :sectnums:
