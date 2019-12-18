@@ -16,8 +16,14 @@ Standardablauf (Basic Flow)
 == Alternative Abläufe
 
 <Alternativer Ablauf 1>
-Wenn Anwender im Schritt 'Daten eingeben‘ des Standardablauf falsche oder unvollständige Daten eingibt, dann wird die Berechnung nicht ausgeführt und eine Fehlermeldung ausgegeben. Der Use Case wird nicht abgeschlossen.
+Wenn der Anwender im Schritt 'Daten eingeben‘ des Standardablauf falsche oder unvollständige Daten eingibt, dann wird die Berechnung nicht ausgeführt und eine Fehlermeldung ausgegeben. Der Use Case wird nicht abgeschlossen.
+
+<Alternativer Ablauf 2>
+Wenn der Anwender im Schritt 'Daten eingeben' des Standablauf auf 'Clear/ Zurücksetzen' geht, werden die Eingangsdaten gelöscht.
+
+
 == Unterabläufe 
+
 <Unterablauf 1>
 2.	<Unterablauf 1, Bei Aufruf des Programmes nach den Anmeldedaten fragen> 
 // Ja/ Nein/ Vielleicht?
@@ -28,14 +34,16 @@ Wenn Anwender im Schritt 'Daten eingeben‘ des Standardablauf falsche oder unvo
 <Szenario 1, Eingabe von negativen Zahlen > 
 Ausgabe einer Fehlermeldung: 
 Bitte Eingaben prüfen / Eingabe falsch/ unvollständig/ fehlerhaft>
-Nachbedingungen
+
+== Nachbedingungen
+
 <Nachbedingung 1, Eingaben umwandeln>
 Daten werden in die Grundeinheiten umgewandelt
 
 <Nachbedingung 2, Daten runden >
 Daten werden auf eine bestimmte Stelle von Nachkommazahlen gerundet
 
-Besondere Anforderungen
+== Besondere Anforderungen
 <Besondere Anforderung 1>
 2.	Daten sind korrekt -> Berechnung kann ausgeführt werden
 
