@@ -1,0 +1,60 @@
+//Nutzen Sie dieses Template als Grundlage für die Spezifikation *einzelner* Use-Cases. Diese lassen sich dann per Include in das Use-Case Model Dokument einbinden (siehe Beispiel dort).
+== Use-Case: Daten berechnen
+===	Kurzbeschreibung
+
+Das Softwaresystem übernimmt die Berechnung der manuell eingegebenen Daten des Benuutzers. 
+
+===	Kurzbeschreibung der Akteure
+Softwaresystem
+
+=== Vorbedingungen
+//Vorbedingungen müssen erfüllt, damit der Use Case beginnen kann, z.B. Benutzer ist angemeldet, Warenkorb ist nicht leer...
+<Vorbedingung 1>
+(Nutzer muss angemeldet sein)
+<Vorbedingung 2>
+Daten müssen korrekt und plausibel sein.
+
+=== Standardablauf (Basic Flow)
+//Der Standardablauf definiert die Schritte für den Erfolgsfall ("Happy Path")
+
+. Der Use Case beginnt, wenn der Benutzer nach der Eingabe die Berechnung ausführt.
+
+. <Standardablauf Schritt 1>
+. Der Use Case wird fehlerfrei ausgeführt und berechnet
+. Der Use Case ist abgeschlossen.
+
+=== Alternative Abläufe
+//Nutzen Sie alternative Abläufe für Fehlerfälle, Ausnahmen und Erweiterungen zum Standardablauf
+==== <Alternativer Ablauf 1>
+Wenn der Benutzer im Schritt 'Daten eingeben' des Standardablauf falsche Eingaben macht, dann 
+wird eine Fehlermeldung ausgegeben, bei Korrektur wird der Use Case fortgesetzt. 
+
+==== <Alternativer Ablauf 2>
+Wenn der Benutzer im Schritt 'Daten bearbeiten' des Standardablauf eine Änderung macht, dann wird der Use Case mit den neuen Daten fortgesetzt.
+
+=== Unterabläufe (subflows)
+//Nutzen Sie Unterabläufe, um wiederkehrende Schritte auszulagern
+
+==== <Unterablauf 1>
+. <Unterablauf 1, Vordefinierte Daten>
+. Die Daten 'xy' sind immer mit dem gleichen Wert belegt.
+
+
+=== Wesentliche Szenarios
+//Szenarios sind konkrete Instanzen eines Use Case, d.h. mit einem konkreten Akteur und einem konkreten Durchlauf der o.g. Flows. Szenarios können als Vorstufe für die Entwicklung von Flows und/oder zu deren Validierung verwendet werden.
+==== <Szenario 1>
+. Benutzer gibt Eingangsdaten ein
+. Benutzer bestätigt die Berechnung
+. Softwaresystem prüft die Eingangsdaten, wenn korrekt:
+. Softwaresystem führt die Berechnung aus
+
+===	Nachbedingungen
+//Nachbedingungen beschreiben das Ergebnis des Use Case, z.B. einen bestimmten Systemzustand.
+==== <Nachbedingung 1>
+Die Daten werden gerundet ausgegeben.
+
+=== Besondere Anforderungen
+//Besondere Anforderungen können sich auf nicht-funktionale Anforderungen wie z.B. einzuhaltende Standards, Qualitätsanforderungen oder Anforderungen an die Benutzeroberfläche beziehen.
+==== <Besondere Anforderung 1>
+DIN EN ISO 6946 (Bauteile - Wärmedurchlasswiderstand und Wärmedurchgangskoeffizient - Berechnungsverfahren)
+Benutzeroberfläche (Konsole, Pdf, etc. )
