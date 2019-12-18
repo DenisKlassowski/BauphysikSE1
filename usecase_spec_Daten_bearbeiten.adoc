@@ -1,0 +1,41 @@
+== Use-Case: Daten bearbeiten
+
+==Kurzbeschreibung
+Daten können nach der Berechnung bearbeitet und erweitert(bspw. Sicht) werden.
+Kurzbeschreibung der Akteure
+Professor*innen, Studierende
+
+== Vorbedingungen
+
+Eine Berechnung sollte erfolgt sein
+Standardablauf (Basic Flow)
+1.	Der Use Case beginnt, wenn der Anwender Daten bearbeiten möchte
+2.	Eingabe seiner veränderten Daten
+3.	Prüfung der Daten nach Korrektheit 
+
+== Alternative Abläufe
+
+<Alternativer Ablauf 1>
+Wenn Anwender im Schritt 'Daten eingeben‘ des Standardablauf falsche oder unvollständige Daten eingibt, dann wird die Berechnung nicht ausgeführt und eine Fehlermeldung ausgegeben. Der Use Case wird nicht abgeschlossen.
+== Unterabläufe 
+<Unterablauf 1>
+2.	<Unterablauf 1, Bei Aufruf des Programmes nach den Anmeldedaten fragen> 
+// Ja/ Nein/ Vielleicht?
+
+== Wesentliche Szenarios
+
+< Eingabe von negativen Zahlen  >
+<Szenario 1, Eingabe von negativen Zahlen > 
+Ausgabe einer Fehlermeldung: 
+Bitte Eingaben prüfen / Eingabe falsch/ unvollständig/ fehlerhaft>
+Nachbedingungen
+<Nachbedingung 1, Eingaben umwandeln>
+Daten werden in die Grundeinheiten umgewandelt
+
+<Nachbedingung 2, Daten runden >
+Daten werden auf eine bestimmte Stelle von Nachkommazahlen gerundet
+
+Besondere Anforderungen
+<Besondere Anforderung 1>
+2.	Daten sind korrekt -> Berechnung kann ausgeführt werden
+
