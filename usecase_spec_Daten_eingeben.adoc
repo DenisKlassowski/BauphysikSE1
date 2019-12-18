@@ -1,0 +1,46 @@
+== Use Case: Daten eingeben
+==Kurzbeschreibung
+
+Eine Berechnung setzt die Eingabe von Daten voraus, in diesem Schritt, wird von dem Anwender eine korrekte Dateneingabe gefordert um eine Berechnung auszuführen.
+
+==Kurzbeschreibung der Akteure
+Professor*innen, Studierende
+
+== Vorbedingungen
+
+Programm muss installiert sein.
+Standardablauf (Basic Flow)
+1.	Der Use Case beginnt, wenn der Anwender Daten eingeben möchte
+2.	Eingabe seiner Daten
+3.	Prüfung der Daten nach Korrektheit 
+
+== Alternative Abläufe
+
+<Alternativer Ablauf 1>
+Wenn Anwender im Schritt 'Daten eingeben‘ des Standardablauf falsche oder unvollständige Daten eingibt, dann wird die Berechnung nicht ausgeführt und eine Fehlermeldung ausgegeben. Der Use Case wird nicht abgeschlossen.
+
+== Unterabläufe 
+
+<Unterablauf 1>
+1.	<Unterablauf 1, Bei Aufruf des Programmes nach den Anmeldedaten fragen> 
+// Ja/ Nein/ Vielleicht?
+
+== Wesentliche Szenarios
+
+< Eingabe von negativen Zahlen  >
+<Szenario 1, Eingabe von negativen Zahlen > 
+Ausgabe einer Fehlermeldung: 
+Bitte Eingaben prüfen / Eingabe falsch/ unvollständig/ fehlerhaft>
+
+== Nachbedingungen
+
+<Nachbedingung 1, Eingaben umwandeln>
+Daten werden in die Grundeinheiten umgewandelt
+
+<Nachbedingung 2, Daten runden >
+Daten werden auf eine bestimmte Stelle von Nachkommazahlen gerundet
+
+== Besondere Anforderungen
+<Besondere Anforderung 1>
+1.	Daten sind korrekt -> Berechnung kann ausgeführt werden
+

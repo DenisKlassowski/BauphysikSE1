@@ -9,3 +9,16 @@ Michael Daebler <michael.daebler@htw-dresden.de>; Lukas Grambole <lukas.grambole
 //Fügen Sie nachfolgend eine Liste aller Use-Cases per Include ein.
 //Dafür sollten Sie pro Use-Case eine Datei anlegen, die auf dem usecase_spec.adoc Template basiert.
 include::usecase_spec.adoc[]
+
+•	Daten eingeben -> Professor*innen, (Studierende)
+•	Daten bearbeiten -> Professor*innen, (Studierende)
+•	Berechnungen Ansehen / Zwischenspeichern -> Professor*innen, (Studierende)
+•   (Berechnung drucken -> Professor*innen, (Studierende )) 
+
+•	Daten umwandeln (Einheiten) -> Softwaresystem
+•	Daten berechnen & runden -> Softwaresystem
+•	Daten visualisieren -> Softwaresystem 
+
+•	Formeln verwalten  -> Administration
+•	Grundwerte – Import (Tabelle) -> Administration
+
