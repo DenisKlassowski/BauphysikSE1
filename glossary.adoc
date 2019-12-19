@@ -1,4 +1,4 @@
-= Glossar -Berechnungen für Bauphysik in der Lehre-
+= Glossar BauphysikSE1
 Lukas Grambole <lukas.grambole@htw-dresden.de>; Michael Däbler <daebler.michael@htw-dresden.de>
 0.1, 09.12.2019 
 :toc: 
