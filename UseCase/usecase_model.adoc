@@ -38,7 +38,6 @@ Michael Daebler <michael.daebler@htw-dresden.de>; Lukas Grambole <lukas.grambole
 //Dafür sollten Sie pro Use-Case eine Datei anlegen, die auf dem usecase_spec.adoc Template basiert.
 include::usecase_spec.adoc[]
 
-<<<<<<< HEAD
 •	Daten berechnen  -> Softwaresystem
 
 •	Berechnungen ausgeben -> Softwaresystemnutzer
@@ -46,9 +45,4 @@ include::usecase_spec.adoc[]
 
 •	Formeln verwalten     -> Administration
 •	Grundwerte – Import (Tabelle) -> Administration
-=======
-
-
-
->>>>>>> 2e997e86ce2d470e341150de672a0c42d5847048
 
