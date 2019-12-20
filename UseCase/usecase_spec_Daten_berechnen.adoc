@@ -10,17 +10,21 @@ Softwaresystem
 === Vorbedingungen
 //Vorbedingungen müssen erfüllt, damit der Use Case beginnen kann, z.B. Benutzer ist angemeldet, Warenkorb ist nicht leer...
 <Vorbedingung 1>
-(Nutzer muss angemeldet sein)
+Softwaresystem muss gestartet sein
 <Vorbedingung 2>
-Daten müssen korrekt und plausibel sein.
+Daten müssen eingegeben werden
 
 === Standardablauf (Basic Flow)
 //Der Standardablauf definiert die Schritte für den Erfolgsfall ("Happy Path")
 
-. Der Use Case beginnt, wenn der Benutzer nach der Eingabe die Berechnung ausführt.
+. Der Use Case beginnt, wenn der Benutzer die Eingaben zur Berechnung durchführt.
 
 . <Standardablauf Schritt 1>
-. Der Use Case wird fehlerfrei ausgeführt und berechnet
+. Daten werden vom Benutzer eingegeben
+. Benutzer startet Berechnung
+. Softwaresystem prüft die Eingabedaten nach Plausibilität
+. Softwaresystem berechnet die Eingabedaten
+. Softwaresystem gibt die berechneten Daten aus
 . Der Use Case ist abgeschlossen.
 
 === Alternative Abläufe
@@ -57,4 +61,5 @@ Die Daten werden gerundet ausgegeben.
 //Besondere Anforderungen können sich auf nicht-funktionale Anforderungen wie z.B. einzuhaltende Standards, Qualitätsanforderungen oder Anforderungen an die Benutzeroberfläche beziehen.
 ==== <Besondere Anforderung 1>
 DIN EN ISO 6946 (Bauteile - Wärmedurchlasswiderstand und Wärmedurchgangskoeffizient - Berechnungsverfahren)
-Benutzeroberfläche (Konsole, Pdf, etc. )
+Schnelle Berechnung
+Daten runden
