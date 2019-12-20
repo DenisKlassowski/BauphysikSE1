@@ -4,17 +4,16 @@
 //<Kurze Beschreibung des Use Case>
 
 ===	Kurzbeschreibung der Akteure
-    ====Drucker
-    ===Softwaresystemnutzer 
+    == Drucker
+    == Softwaresystemnutzer 
 
 === Vorbedingungen
 //Vorbedingungen müssen erfüllt, damit der Use Case beginnen kann, z.B. Benutzer ist angemeldet, Warenkorb ist nicht leer...
 <Vorbedingung 1>
 berechnete Daten liegen vor
+
 <Vorbedingung 2>
 Verbindung zum Drucker besteht
-<Vorbedingung 3>
-Der Drucker ist betriebsbereit (Tinte, Papier, Strom)
 
 === Standardablauf (Basic Flow)
 //Der Standardablauf definiert die Schritte für den Erfolgsfall ("Happy Path")
