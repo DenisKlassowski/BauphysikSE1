@@ -16,16 +16,29 @@ Lukas Grambole <lukas.grambole@htw-dresden.de>
 a| 
 * Michael Däbler (Analyst)
 * Lukas Grambole (Analyst)
+* Prof.  Jürgen Anke (Coach)
 
 |===
 
 
 == Gesprächsinhalte
-* 
+* Ein großer Use-Case (Ergebnisse berechnen) und kleinere Use-Cases (z.B. Daten drucken) sollen ausgearbeitet werden.
+* Kleine Funktionen, wie z.B. das Umstellen der Sprache, erfordern keinen Use-Case.
+* Use-Cases sind stets akteuerbezogen zu formulieren.
+* Use-Cases haben ein Ziel aus der Sicht des Akteuers.
+* Use-Cases konzentrieren sich im Wesentlichen auf unser Softwaresystem. Das bedeutet, dass z.B. beim Drucken die Verfügbarkeit des Druckers ausreicht. Es ist dabei nicht von Interesse, ob sich Tinte und Papier im Drucker befinden.
+* Beim Kundengespräch Anfang 2020 sollten wir die Vorstellungen der Auftraggeberin zu den potenziellen Stakeholdern (Lehrende & Studierende) und zur Erweiterungs- und Updatemöglichkeit genauer erfragen. Die dabei einholbaren Informationen haben einen großen Einfluss auf die Anforderungen und die Architektur (Desktopapplikation vs. Webapplikation).
+* Gegebenenfalls kann es Sinn machen, andere Lehrende und Studierende des Bauingenieurwesens zu befragen.
+* Unser Coach hat uns darauf aufmerksam gemacht, dass die Auftraggeberin möglicherweise weitere umfangreiche Funktionalitäten wünscht. Wir sollten auch das ins nächste Kundengespräch aufnehmen.
+* Die Funktionen in der Vision benötigen Releaseangaben. Wichtige Funktionen sollten wir bereits zum 1. Release (ca. Ende März 2020) fertigstellen. Andere Funktionen können zu einem späteren Release fertiggestellt werden.
+* Die Angaben zum Release können in der Tabelle in der Vision laut Coach in der Form "1. Release", "2. Release", ... angegeben werden. Die Erläuterung dazu erfolgt an anderer Stelle.
+
+
 
 == Offene Fragen
 Während des Treffens haben sich folgende Fragen ergeben:
 
-* Soll der Temperaturverlauf nur in Form von Zahlenwerten oder durch eine grafische Darstellung angegeben werden?
+* Soll der Temperaturverlauf nur in Form von Zahlenwerten oder durch eine grafische Darstellung angegeben werden? Für eine Darstellung in Form eines stetigen Graphen wäre der Aufwand sehr groß.
 * Genügt die Möglichkeit der PDF-Erzeugung über einen Drucker?
 * Ist es mit geringem Aufwand technisch möglich, eine Druckvorschau zu erstellen?
+* Wann wollen wir wichtige und weniger wichtige Funktionen releasen?
