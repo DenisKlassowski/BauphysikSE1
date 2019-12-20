@@ -26,3 +26,5 @@ a|
 == Offene Fragen
 Während des Treffens haben sich folgende Fragen ergeben:
 
+* Soll der Temperaturverlauf nur in Form von Zahlenwerten oder durch eine grafische Darstellung angegeben werden?
+
