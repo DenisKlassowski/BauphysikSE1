@@ -1,0 +1,31 @@
+= Kurzprotokoll: Use-Cases
+Lukas Grambole <lukas.grambole@htw-dresden.de>
+20.12.2019 
+:toc: 
+:toc-title: Inhaltsverzeichnis
+:sectnums:
+// Platzhalter für weitere Dokumenten-Attribute 
+
+
+
+== Organisatorische Angaben
+|===
+|Datum / Uhrzeit|	Ort|Gesprächsteilnehmer
+
+|20.12.2019 / 09:20 Uhr|HTW Dresden, Z 136b
+a| 
+* Michael Däbler (Analyst)
+* Lukas Grambole (Analyst)
+
+|===
+
+
+== Gesprächsinhalte
+* 
+
+== Offene Fragen
+Während des Treffens haben sich folgende Fragen ergeben:
+
+* Soll der Temperaturverlauf nur in Form von Zahlenwerten oder durch eine grafische Darstellung angegeben werden?
+* Genügt die Möglichkeit der PDF-Erzeugung über einen Drucker?
+* Ist es mit geringem Aufwand technisch möglich, eine Druckvorschau zu erstellen?

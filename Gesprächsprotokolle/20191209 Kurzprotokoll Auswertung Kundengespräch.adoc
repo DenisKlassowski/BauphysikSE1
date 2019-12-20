@@ -1,4 +1,4 @@
-= Kurzprotokoll -Auswertung Kundengespräch-
+= Kurzprotokoll: Auswertung Kundengespräch
 Lukas Grambole <lukas.grambole@htw-dresden.de>
 09.12.2019 
 :toc: 
@@ -13,7 +13,8 @@ Lukas Grambole <lukas.grambole@htw-dresden.de>
 |Datum / Uhrzeit|	Ort|Gesprächsteilnehmer
 
 |09.12.2019 / 11:00 Uhr|HTW Dresden, S 528
-a| 
+a|
+
 * Michael Däbler (Analyst)
 * Lukas Grambole (Analyst)
 
