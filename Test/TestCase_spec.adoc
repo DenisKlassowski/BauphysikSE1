@@ -1,6 +1,6 @@
 = Projekt Bauphysik Test Cases: <optional: use-case name>
 
-//This is a informal template for represeting test cases
+//This is a informal template for representing test cases
 
 == Test Case <ID> - <Test Case Name>:
 

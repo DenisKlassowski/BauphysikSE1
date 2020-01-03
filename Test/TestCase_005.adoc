@@ -1,0 +1,43 @@
+= Projekt Bauphysik Test Case: [Use Case: Daten berechnen]
+
+//This is a informal template for represeting test cases
+
+== Test Case ID: 005 - Berechnung mit "leerer Schicht":
+
+//The Test Case ID should be unique. In addition, the name of each Test Case should reflect the intent of the test case, ideally expressed as a Boolean condition.
+
+=== Description
+//Describe the logical condition that the Test Case evaluates. 
+//Include the expected result.
+Dieser Test Case evaluiert, wie das entworfene Softwaresystem bei einer Eingabe durch den Benutzer reagiert, bei der die Eingabefelder, die eine einzige Wandschicht repräsentieren, gänzlich unbefüllt bleiben.
+
+Das erwartete Ergebnis ist eine Berechnung des Wärmeübergangs ohne die "leere Schicht" oder die Ausgabe eines Fehlers durch die Software. Idealerweise mit einer genaueren Beschreibung der Art des Eingabefehlers.
+
+=== Pre-conditions
+//List conditions that must be true before this Test Case can start.
+<Vorbedingung 1> Die Software ist gestartet und einsatzbereit
+
+<Vorbedingung 2> Der Benutzer hat alle Eingabefelder, bis auf alle Felder für eine spezielle Schicht, befüllt
+
+<Vorbedingung 3> Der Benutzer löst die Berechnung aus
+
+=== Post-conditions
+//List conditions that should be true when this Test Case ends.
+Variante mit Fehler, ohne Berechnung:
+
+<Nachbedingung 1.1> Die Software meldet einen Fehler bei der Überprüfung der eingegebenen Werte
+
+<Nachbedingung 2.1> Berechnung wird nicht durchgeführt und keine Ergebnisse angezeigt
+
+Variante ohne Fehler, mit Berechnung:
+
+<Nachbedingung 1.2> Die Software hat keinen Fehler gemeldet
+
+<Nachbedingung 2.2> Die Software zeigt die berechneten Ergebnisse an
+
+<Nachbedingung 3> Die Eingabefelder sind nach der versuchten Berechnung und dem ausgegebenen Fehler nach wie vor mit den Werten befüllt
+
+=== Data required
+//Identify the type of data required for this Test Case.
+Als Testdaten werden Werte benötigt, die idealerweise aus realen Aufgaben zur Berechnung des Wärmeübergangs stammen.
+

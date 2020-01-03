@@ -1,0 +1,35 @@
+= Projekt Bauphysik Test Case: [Use Case: Daten berechnen]
+
+//This is a informal template for represeting test cases
+
+== Test Case ID: 009 - alle Felder "Null":
+
+//The Test Case ID should be unique. In addition, the name of each Test Case should reflect the intent of the test case, ideally expressed as a Boolean condition.
+
+=== Description
+//Describe the logical condition that the Test Case evaluates. 
+//Include the expected result.
+Dieser Test Case evaluiert, wie das Softwaresystem reagiert, wenn alle Eingabefelder eine Null enthalten.
+
+Das erwartete Ergebnis ist die Ausgabe...t.b.d 
+
+=== Pre-conditions
+//List conditions that must be true before this Test Case can start.
+<Vorbedingung 1> Die Software ist gestartet und einsatzbereit
+
+<Vorbedingung 2> Alle Eingabefelder sind mit Nullen befüllt
+
+<Vorbedingung 3> Der Benutzer löst die Berechnung aus
+
+=== Post-conditions
+//List conditions that should be true when this Test Case ends.
+<Nachbedingung 1> t.b.d.
+
+<Nachbedingung 2> t.b.d.
+
+<Nachbedingung 3> Die Eingabefelder sind nach der Berechnung nach wie vor mit den Werten befüllt
+
+=== Data required
+//Identify the type of data required for this Test Case.
+Keine Daten benötigt.
+

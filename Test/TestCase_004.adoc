@@ -1,0 +1,36 @@
+= Projekt Bauphysik Test Case: [Use Case: Daten berechnen]
+
+//This is a informal template for represeting test cases
+
+== Test Case ID: 004 - Berechnung nach unvollständiger Eingabe:
+
+//The Test Case ID should be unique. In addition, the name of each Test Case should reflect the intent of the test case, ideally expressed as a Boolean condition.
+
+=== Description
+//Describe the logical condition that the Test Case evaluates. 
+//Include the expected result.
+Dieser Test Case evaluiert, wie das entworfene Softwaresystem bei unvollständiger Eingabe von Werten in die Eingabefelder durch den Benutzer reagiert. Zum Beispiel in dem Fall, dass die Eingabe von einzelnen oder auch mehreren Werten vergessen wird.
+
+Das erwartete Ergebnis ist die Ausgabe eines Fehlers durch die Software. Idealerweise mit einer genaueren Beschreibung der Art des Eingabefehlers.
+
+=== Pre-conditions
+//List conditions that must be true before this Test Case can start.
+<Vorbedingung 1> Die Software ist gestartet und einsatzbereit
+
+<Vorbedingung 2> Der Benutzer hat nicht alle Eingabefelder mit Werten befüllt
+
+<Vorbedingung 3> Der Benutzer löst die Berechnung aus
+
+=== Post-conditions
+//List conditions that should be true when this Test Case ends.
+<Nachbedingung 1> Die Software meldet einen Fehler bei der Überprüfung der eingegebenen Werte, da unbefüllte Felder vorhanden
+
+<Nachbedingung 2> Berechnung wird nicht durchgeführt und keine Ergebnisse angezeigt
+
+<Nachbedingung 3> Die Eingabefelder sind nach der versuchten Berechnung und dem ausgegebenen Fehler nach wie vor mit den Werten befüllt
+
+=== Data required
+//Identify the type of data required for this Test Case.
+Als Testdaten werden Werte benötigt, die idealerweise aus realen Aufgaben zur Berechnung des Wärmeübergangs stammen.
+Diese werden dann partiell weggelassen.
+

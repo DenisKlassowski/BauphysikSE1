@@ -1,0 +1,36 @@
+= Projekt Bauphysik Test Case: [Use Case: Daten berechnen]
+
+//This is a informal template for represeting test cases
+
+== Test Case ID: 007 - verschiedene Einheitendimensionen:
+
+//The Test Case ID should be unique. In addition, the name of each Test Case should reflect the intent of the test case, ideally expressed as a Boolean condition.
+
+=== Description
+//Describe the logical condition that the Test Case evaluates. 
+//Include the expected result.
+Dieser Test Case evaluiert, ob das entworfene Softwaresystem damit umgehen kann, wenn der Benutzer die Daten mit verschiedenen Einheitendimensionen eingibt.
+
+Das erwartete Ergebnis ist die Ausgabe der erwarteten Ergebnisse mit einheitlichen vordefinierten SI-Einheiten durch die Software. 
+
+=== Pre-conditions
+//List conditions that must be true before this Test Case can start.
+<Vorbedingung 1> Die Software ist gestartet und einsatzbereit
+
+<Vorbedingung 2> Der Benutzer hat alle Eingabefelder mit korrekten Werten befüllt, welche sich teilweise in ihren Einheitendimensionen unterscheiden
+
+<Vorbedingung 3> Der Benutzer löst die Berechnung aus
+
+=== Post-conditions
+//List conditions that should be true when this Test Case ends.
+<Nachbedingung 1> Die Software hat keinen Fehler gemeldet
+
+<Nachbedingung 2> Die Software zeigt die berechneten Ergebnisse mit vordefinierten SI-Einheiten an
+
+<Nachbedingung 3> Die Eingabefelder sind nach der Berechnung nach wie vor mit den Werten befüllt
+
+=== Data required
+//Identify the type of data required for this Test Case.
+Als Testdaten werden Werte benötigt, die idealerweise aus realen Aufgaben zur Berechnung des Wärmeübergangs stammen.
+Bestenfalls liegen die gegebenen Werte schon mit unterschiedlichen Einheitendimensionen vor.
+

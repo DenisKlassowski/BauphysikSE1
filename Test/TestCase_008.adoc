@@ -1,0 +1,50 @@
+= Projekt Bauphysik Test Case: [Use Case: Daten berechnen]
+
+//This is a informal template for represeting test cases
+
+== Test Case ID: 008 - Partielle Nullen:
+
+//The Test Case ID should be unique. In addition, the name of each Test Case should reflect the intent of the test case, ideally expressed as a Boolean condition.
+
+=== Description
+//Describe the logical condition that the Test Case evaluates. 
+//Include the expected result.
+Dieser Test Case evaluiert, wie das Softwaresystem reagiert, wenn alle Felder vom Benutzer befüllt wurden, einzelne oder mehrere eine Null enthalten.
+Beispielsweise das Verhalten, wenn 
+
+008.1 Wanddicke gleich Null oder
+
+008.2 Übertragungskoeffizient gleich Null ist.
+
+Das erwartete Ergebnis ist die Ausgabe 
+
+008.1 t.b.d
+
+008.2 eines Fehlers und idealerweise Beschreibung des Fehlers.
+
+=== Pre-conditions
+//List conditions that must be true before this Test Case can start.
+<Vorbedingung 1> Die Software ist gestartet und einsatzbereit
+
+<Vorbedingung 2.1> Der Benutzer hat alle Eingabefelder befüllt, bei einer Wanddicke steht der Wert Null
+
+<Vorbedingung 2.2> Der Benutzer hat alle Eingabefelder befüllt, bei einem Übertragungskoeffizient steht der Wert Null
+
+<Vorbedingung 3> Der Benutzer löst die Berechnung aus
+
+=== Post-conditions
+//List conditions that should be true when this Test Case ends.
+<Nachbedingung 1.1> t.b.d
+
+<Nachbedingung 2.1> t.b.d
+
+<Nachbedingung 1.2> Das Softwaresystem hat einen Fehler bei den eingegebenen Daten gemeldet
+
+<NAchbedingung 2.2> Die Berechnung der Werte wurde nicht durchgeführt, es sind keine Ergebnisse vorhanden
+
+<Nachbedingung 3> Die Eingabefelder sind nach der Berechnung nach wie vor mit den Werten befüllt
+
+=== Data required
+//Identify the type of data required for this Test Case.
+Als Testdaten werden Werte benötigt, die idealerweise aus realen Aufgaben zur Berechnung des Wärmeübergangs stammen.
+
