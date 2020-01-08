@@ -16,15 +16,19 @@ In diesem Dokument werden die systemweiten Anforderungen für das Projekt Bauphy
 NOTE: Die funktionalen Anforderungen, die sich aus der Interaktion von Nutzern mit dem System ergeben, sind als Use Cases in einem https://github.com/fowado/BauphysikSE1/blob/master/UseCase/usecase_model.adoc[separaten Dokument] festgehalten.
 
 == Systemweite funktionale Anforderungen
+F1: Das System muss Erklärungen zu allen physikalischen Größen beinhalten.
 //Angabe von system-weiten funktionalen Anforderungen, die nicht als Use Cases ausgedrückt werden können. Beispiele sind Drucken, Berichte, Authentifizierung, Änderungsverfolgung (Auditing), zeitgesteuerte Aktivitäten (Scheduling), Sicherheit / Maßnahmen zum Datenschutz
 
 == Qualitätsanforderungen für das Gesamtsystem
+
 //Qualitätsanforderungen repräsentieren das "URPS" im FURPS+ zu Klassifikation von Anforderungen
  
 === Benutzbarkeit (Usability)
+U1: Das System muss Fehlermeldungen in einer verständlichen Sprache ausgeben können.
 //Beschreiben Sie Anforderungen für Eigenschaften wie einfache Bedienung, einfaches Erlenern, Standards für die Benutzerfreunlichkeit, Lokalisierung (landesspezifische Anpassungen von Sprache, Datumsformaten, Währungen usw.) 
 
 === Zuverlässigkeit (Reliability)
+R1: Das System prüft alle Benutzereingaben auf Plausibilität.
 //Reliability includes the product and/or system's ability to keep running under stress and adverse conditions. Specify requirements for reliability acceptance levels, and how they will be measured and evaluated. Suggested topics are availability, frequency of severity of failures and recoverability.
 
 === Effizienz (Performance)
