@@ -17,7 +17,11 @@ Dieses Dokument beschreibt die Philosophie, Entscheidungen, Nebenbedingungen, Be
 
 
 == Architektonische Ziele und Philosophie
+Architektonische Ziele werden oft von Softwareanforderungen beeinflusst und beinhalten die Motivation und die Gründe für Entscheidungen.
+Hier wird Definiert, wie das System auf Änderungen reagieren wird.
 
+.Die Softwarelösung soll unabhängig, nach Download, vom Internet funktionieren.           //Erweitern
+.Regelmäßige Prüfung, über einen Server im Internet, auf Updates.                         //Erweitern
 
 What is the expected lifespan of the system? +
 Will the system need to respond to technological changes over that time, such as new versions of middleware or other products? +
@@ -29,14 +33,16 @@ What changes can we anticipate in the future, and how can we make them easier to
 //Formulieren Sie eine Reihe von Zielen, die die Architektur in ihrer Struktur un ihrem Verhalten erfüllen muss. Identifizieren Sie kritische Fragen, die von der Architektur adressiert werden müssen, z.B. besondere Hardware-Abhängigkeiten, die vom Rest des Systems isoliert werden sollten oder Sicherstellung der Funktionsfähigkeit unter besonderen Bedingungen (z.B. Offline-Nutzung).
 
 == Annahmen und Abhängigkeiten
+. Aufgrund der Dimension des Projektes und der Verteilung auf das Entwicklerteam, sind die zu benutzenden Technologien relativ frei wählbar, aber die Programmierung muss transparent für alle folgenden Entwicklungsteams sein.
+. Die zu benutzenden Technologien werden im Team besprochen und gewählt. Eine angemessende Anzahl von verschiedenen Technologien ist wünschenswert.
+. Es wird regelmäßige Treffen  zwischen den involvierten Teams und der auftragstellenden Person geben.
 
 . Lauffähigkeit unter folgenden Betriebssystemen:
 .. Windows 7
 //eventuelle Umstellung vor auslieferung?
 .. Windows 10 
 . Distribution über Opal + 
-. Team hat wenig Projekt Erfahrung.
-. Entwickler haben wenig Erfahrung.
+. Team/Entwickler hat/haben wenig Erfahrung.
 
 //[List the assumptions and dependencies that drive architectural decisions. This could include sensitive or critical areas, dependencies on legacy interfaces, the skill and experience of the team, the availability of important resources, and so forth]
 
@@ -86,6 +92,9 @@ What changes can we anticipate in the future, and how can we make them easier to
 
 
 == Architektonische Mechanismen 
+Lokalisation +
+The Software wird nur in deutsch gehalten, auf jeden fall bezüglich der ersten Verion. +
+Aber, jede der Individuellen Komponenten sollte technisch auch die Englische Sprache unterstützen. +
 https://www2.htw-dresden.de/~anke/openup/core.tech.common.extend_supp/guidances/concepts/arch_mechanism_2932DFB6.html[Doku "Concept: Architectural Mechanism"]
 //[List the architectural mechanisms and describe the current state of each one. Initially, each mechanism may be only name and a brief description. They will evolve until the mechanism is a collaboration or pattern that can be directly applied to some aspect of the design.]
 
