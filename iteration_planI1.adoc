@@ -41,7 +41,7 @@ _alternativ:_ Die folgenden Aufgaben werden in dieser Iteration bearbeitet:
 |Aufgabe bzw. Beschreibung	|Priorität  	|Schätzung der Größe (Punkte)	|Status|	Referenzen	|geplante Iteration| Zugewiesen (Name) |	Gearbeitete Stunden | Schätzung der verbleibenden Stunden
 | Vision erstellen | hoch   | 3 | DONE | x | I1 | Grambole Lukas Däbler Michael | 5 | 6
 | Glossar erstellen | mittel   | 2 | DONE | x | I1 | Grambole Lukas Däbler Michael | 1 | 1
-| Nichtfunktionale Anforderungen erfassen | hoch   | 1 | DONE | x | I1 | Grambole Lukas Däbler Michael | 1 | 2
+| Use-Cases identifizieren | hoch   | 4 | DONE | x | I1 | Grambole Lukas Däbler Michael | 2 | 6
 | x | x | x | x | x | x | x | x | x 
 |===
 								
