@@ -59,6 +59,7 @@ Größere Ziele die wir einnerhalb einer Iteration erreichen möchten.
 |
 * Vertraut Machen mit OpenUP 
 * Kennenlernnen des Teams
+* Kundengespräch
 |02.12.2019 bis 16.12.2019
 |-
 |It1
@@ -66,8 +67,19 @@ Größere Ziele die wir einnerhalb einer Iteration erreichen möchten.
 * Kundengespräch analysieren 
 * Elementare Projektdateien erarbeiten (ver.1)
 * Technische Vision erarbeiten
+* erste USE_CASES
+* erste TEST_CASES
+* Architecture (ver.1)
 * Risiko: Missverständnisse
 |	16.12.2019
+|	16
+|It2
+|	
+* Scope erweitern 
+* Projektdateien aktualisieren
+* Technische Lösung anpassen
+* Risiko: scope zu weit erweitert
+|	05.01.2020
 |	16
 |===
 
@@ -75,4 +87,6 @@ Größere Ziele die wir einnerhalb einer Iteration erreichen möchten.
 //Outline the strategy for deploying the software (and its updates) into the production environment.
 
 == Erkenntnisse (Lessons learned)
+Es wurde in der It1 festgestellt das der Umfang des Projektes, im Rahmen der Lehrveranstalung SE1, nicht angemessen ist. +
+Erkenntniss: Fehleinschätzung des Umfangs bei Gespräch.
 //List lessons learned from the retrospective, with special emphasis on actions to be taken to improve, for example: the development environment, the process, or team collaboration.
