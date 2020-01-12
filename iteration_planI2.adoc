@@ -46,6 +46,7 @@ _alternativ:_ Die folgenden Aufgaben werden in dieser Iteration bearbeitet:
 |Architecture Notebook und Tech. Vision aktualisieren| hoch |2|NOT DONE|x|I2| Grieß Christian |BITTE EINTRAGEN| 2
 |Gesprächsprotokoll erfassen und nachbearbeiten|hoch|2|NOT DONE|x|I2|Baburkin Yewgenji Fritzsche Felix|BITTE EINTRAGEN!|?
 |UI Entwurf Wireframe erstellen|hoch|2|NOT DONE|x|I2|Fritzsche Felix|BITTE EINTRAGEN|2
+|Rikst List aktualisieren|hoch|2|NOT DONE|x|I2|Denis Klassowski|BITTE EINTAGEN|2
 |===
 								
 								
