@@ -1,6 +1,6 @@
 = Glossar BauphysikSE1
 Lukas Grambole <lukas.grambole@htw-dresden.de>; Michael Däbler <daebler.michael@htw-dresden.de>
-0.1, 09.12.2019 
+0.2, 14.01.2019 
 :toc: 
 :toc-title: Inhaltsverzeichnis
 //:sectnums:
@@ -16,7 +16,6 @@ In diesem Dokument werden die wesentlichen Begriffe des Wärmedurchgangsrechner-
 |===
 |Begriff|	Definition und Erläuterung|	Synonyme
 //|Kommissionierung|Bereitstellung von Waren aus einem Lager entsprechend eines Kundenauftrags|(keine))|
-|Systemnutzer|Anwender des Softwaresystems (Auftraggeberin, Lehrende und Studierende)|
 |Wärmestrom|gibt die übertragene Wärmemenge pro Zeiteinheit an|Wärmefluss
 |===
 		
