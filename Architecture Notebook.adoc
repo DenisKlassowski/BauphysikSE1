@@ -27,12 +27,12 @@ Außerdem wird nicht erwartet, dass sich in Zukunft etwas an der Systemumgebung 
 Das Programm soll auf einem USB-Speichermedium ausführbar sein.
 
 
-Architektonische Ziele werden oft von Softwareanforderungen beeinflusst und beinhalten die Motivation und die Gründe für Entscheidungen.
+//Architektonische Ziele werden oft von Softwareanforderungen beeinflusst und beinhalten die Motivation und die Gründe für Entscheidungen.
 
-What is the expected lifespan of the system? +
-Will the system need to respond to technological changes over that time, such as new versions of middleware or other products? +
-How frequently is the system expected to adapt to change? +
-What changes can we anticipate in the future, and how can we make them easier to accommodate? +
+//What is the expected lifespan of the system? +
+//Will the system need to respond to technological changes over that time, such as new versions of middleware or other products? +
+//How frequently is the system expected to adapt to change? +
+//What changes can we anticipate in the future, and how can we make them easier to accommodate? +
 
 //Hinweise: Beschreiben Sie die Philosophie der Architektur, d.h. den zentralen Ansatz für ihre Architektur. Identifizieren Sie alle Aspekte, die die Philosophie beeinflussen, z.B. komplexe Auslieferung Aspekte, Anpassung von Altsystemen oder besondere Geschwindigkeitsanforderungen. Muss es besonders robust sein, um eine langfristige Wartung und Pflege zu ermöglichen?
 
