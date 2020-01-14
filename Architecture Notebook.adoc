@@ -21,10 +21,10 @@ Dieses Dokument beschreibt die Philosophie, Entscheidungen, Nebenbedingungen, Be
 
 == Architektonische Ziele und Philosophie
 
-Unsere Kundin wünscht sich ein, vom Internet, unabhängiges Programm. +
+Die Auftraggeberin wünscht sich ein, vom Internet, unabhängiges Programm. +
 Sie möchte so wenig Wartungsaufwand wie irgendmöglich nach Auslieferung der Software. +
 Außerdem wird nicht erwartet, dass sich in Zukunft etwas an der Systemumgebung ändern wird. +
-Das Programm soll auf einem USB-Speichermedium ausführbar sein.
+Das Programm soll auf einem USB-Speichermedium ausführbar sein und ist nur für die Eigenbenutzung gedacht.
 
 
 //Architektonische Ziele werden oft von Softwareanforderungen beeinflusst und beinhalten die Motivation und die Gründe für Entscheidungen.
