@@ -21,7 +21,7 @@ Dieses Dokument beschreibt die Philosophie, Entscheidungen, Nebenbedingungen, Be
 
 == Architektonische Ziele und Philosophie
 
-Die Auftraggeberin wünscht sich ein, vom Internet, unabhängiges Programm. +
+Die Auftraggebende Person wünscht sich ein, vom Internet, unabhängiges Programm. +
 Sie möchte so wenig Wartungsaufwand wie irgendmöglich nach Auslieferung der Software. +
 Außerdem wird nicht erwartet, dass sich in Zukunft etwas an der Systemumgebung ändern wird. +
 Das Programm soll auf einem USB-Speichermedium ausführbar sein und ist nur für die Eigenbenutzung gedacht.
@@ -57,8 +57,7 @@ Das Programm soll auf einem USB-Speichermedium ausführbar sein und ist nur für
 //[List the decisions that have been made regarding architectural approaches and the constraints being placed on the way that the developers build the system. These will serve as guidelines for defining architecturally significant parts of the system. Justify each decision or constraint so that developers understand the importance of building the system according to the context created by those decisions and constraints. This may include a list of DOs and DON’Ts to guide the developers in building the system.] 
 
 . Software wird mit dem GUI tool PyQT in Python geschrieben (GNU / GPL License). 
-.. Für unsere Developer PyQT: https://www.qt.io/blog/2018/12/18/qt-python-5-12-released GNU / GPL License) +
-.. Für unsere Analysten Text auskommentiert in dieser Datei +
+// Für unsere Developer PyQT: https://www.qt.io/blog/2018/12/18/qt-python-5-12-released GNU / GPL License) +
 .. Python ist eine einfach zu lesende/schreibende Programmiersprache die, die eventuelle spätere Erweiterung/Einarbeitung unseres Softwareprojektes erleichtert. +
 .. Es ist nicht auszuschließen das die Softwarelösung an andere Endnutzer weitergegeben wird, was die Portabilität auf Linux- und MacOS-Betriebssysteme gewährleistet.
 
@@ -88,10 +87,6 @@ Das Programm soll auf einem USB-Speichermedium ausführbar sein und ist nur für
 //Make “open” consumer devices
 //Accept Digital Rights Management terms, please see the GPL FAQ
 //Take special consideration when attempting to enforce software patents FAQ
-
-. Software(fragmente) < XXX MB. 
-.. Größenbeschränkung aufgrund von Opal (Distributionsplattform der Auftraggeberin).
-
 
 == Architektonische Mechanismen 
 Lokalisation +
