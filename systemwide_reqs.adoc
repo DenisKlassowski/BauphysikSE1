@@ -39,7 +39,9 @@ P2: Das System soll die Speicherung der Daten von 200 Materialien ermöglichen.
 //The performance characteristics of the system should be outlined in this section. Examples are response time, throughput, capacity and startup or shutdown times.
 
 === Wartbarkeit (Supportability)
-S1: Das System soll wartbar sein.
+S1: Das System soll im Hinblick auf Materialdaten wartbar sein.
+
+S2: Das System soll eine portable Software sein.
 //This section indicates any requirements that will enhance the supportability or maintainability of the system being built, including adaptability and upgrading, compatibility, configurability, scalability and requirements regarding system installation, level of support and maintenance.
 
 == Zusätzliche Anforderungen
@@ -55,4 +57,4 @@ S1: Das System soll wartbar sein.
 
 === Rechtliche Anforderungen
 //Angaben ergänzen, nicht relevante Unterpunkte streichen oder auskommentieren
-* Lizensierung der Anwendung
+* Team 14 soll das Softwaresystem unter Verwendung einer Open Source Lizenz entwickeln.
