@@ -27,7 +27,7 @@ siehe <<glossary.adoc#,Glossar>>
 
 == Positionierung
 === Fachliche Motivation
-Auf eine hochschulinterne Anfrage von Professor Jürgen Anke, dem Verantwortlichen des Moduls Software Engineering, antwortete die Professorin Rhena Krawietz mit dem Wunsch nach einer Softwarelösung zur Berechnung des Wärmedurchgangskoeffizienten. Infolge eines Projektzuordnungsverfahrens hat Professor Jürgen Anke das Team 14 mit der Projektbearbeitung im Rahmen des vorgenannten Moduls beauftragt. Da die Kundin derzeit bei der Erstellung und Kontrolle von Aufgaben zum Wärmedurchgangskoeffizienten nur unter Verwendung von Microfoft Excel oder eines Taschenrechners arbeiten kann, sind diese Aufgaben mit einem hohen Zeit- und Arbeitsaufwand verbunden. Die Auftraggeberin erhofft sich, diese Aufwände mithilfe eines Softwaresystems verringern zu können.
+Auf eine hochschulinterne Anfrage von Professor Jürgen Anke, dem Verantwortlichen des Moduls Software Engineering, antwortete die Professorin Rhena Krawietz mit dem Wunsch nach einer Softwarelösung zur Berechnung des Wärmedurchgangskoeffizienten. Infolge eines Projektzuordnungsverfahrens hat Professor Jürgen Anke das Team 14 mit der Projektbearbeitung im Rahmen des vorgenannten Moduls beauftragt. Da die Kundin derzeit bei der Erstellung und Kontrolle von Aufgaben zum Wärmedurchgangskoeffizienten nur unter Verwendung von Microfoft Excel oder eines Taschenrechners arbeiten kann, sind diese Aufgaben mit einem hohen Zeit- und Arbeitsaufwand verbunden. Ebenfalls zeitaufwändig ist für sie auch das Zusammensuchen der notwendigen Materialdaten. Die Auftraggeberin erhofft sich, diese Aufwände mithilfe eines Softwaresystems verringern zu können.
 //Erläutern Sie kurz den Hintergrund, in dem das Projekt angesiedelt ist. Welches Problem soll gelöst werden, wie ist es entstanden? Welche Verbesserung wird angestrebt. Achten Sie darauf, eine fachliche (organisatorische, betriebswirtschaftliche) Perspektive einzunehmen.
 
 === Problem Statement
@@ -38,7 +38,7 @@ Auf eine hochschulinterne Anfrage von Professor Jürgen Anke, dem Verantwortlich
 |betrifft |	die Auftraggeberin
 |die Auswirkung davon ist |
 ein hoher Zeitbedarf bei der Erstellung und der Kontrolle von Aufgaben zum Wärmedurchgangskoeffizienten, welcher mit der erhöhten Gefahr von Rechenfehlern infolge von vielen manuellen Eingaben einhergeht
-|eine erfolgreiche Lösung wäre | Ein Softwaresystem, welches alle notwendigen Berechnungen durchführt und Zwischen- und Endergebnisse ausgibt.
+|eine erfolgreiche Lösung wäre | Ein Softwaresystem, welches häufig verwendete Materialdaten enthält, alle notwendigen Berechnungen durchführt und Zwischen- und Endergebnisse ausgibt.
 |===
 
 ////
@@ -57,10 +57,10 @@ Beispiel
 //Geben Sie in knapper Form übersichtsartig die Positionierung der angestrebten Lösung im Vergleich zu verfügbaren Alternativen dar. Das folgende Format kann dazu verwendet werden:
 
 |===
-|Für|	Lehrende und Studierende der HTW Dresden
-|die|	Berechnungen zum Wärmedurchgangskoeffizienten durchführen möchten
+|Für|	die Auftraggeberin
+|die|	Berechnungen zum Wärmedurchgangskoeffizienten durchführen möchte
 |Das Produkt ist ein | Softwaresystem, welches Berechnungen zum Wärmedurchgangskoeffizienten ermöglicht
-|das	|selbstständig und schnell alle notwendigen Berechnungen durchführt
+|das	|selbstständig und schnell alle notwendigen Berechnungen durchführt und bei Bedarf Zugriff auf häufig verwendete Materialdaten bietet
 |Im Gegensatz zu	|einer Berechnung mithilfe von Microsoft Excel oder einem Taschenrechner
 |Unser Produkt|	bietet die Möglichkeit, ohne eigenen Berechnungsaufwand direkt von den Materialdaten zu den Wärmewiderstandsdaten zu kommen
 |===
@@ -84,11 +84,11 @@ Beispiel
 |Name|	Beschreibung	| Verantwortlichkeiten
 //|[Benennung des Stakeholder-Typs.]	|[Kurze Beschreibung des Stakeholders.]	|[Fassen Sie die wesentlichen Verantwortlichkeiten des Stakeholder mit Bezug auf das zu entwickelnde System kurz zusammen, d.h. ihr besonderen Interessen. Beispiele: Dieser Stakeholder sorgt dafür, dass das System gewartet wird / dass die angezeigten Daten aktuell sind / überwacht den Projektfortschritt / usw.]
 
-|Auftraggeberin |	Prof. Dr.-Ing. Rhena Krawietz, Professorin für Technische Physik an der HTW Dresden	| erstellt und kontrolliert Aufgaben zum Wärmedurchgangskoeffizienten
- genutzt wir
+|Auftraggeberin |	Prof. Dr.-Ing. Rhena Krawietz, Professorin für Technische Physik an der HTW Dresden	| führt Berechnungen mit dem Softwaresystem aus, um Aufgaben erstellen und kontrollieren zu können
 |Projektteam|	Team 14	| versucht Kundenwünsche bei der Entwicklung des Softwaresystems umzusetzen
 |Team-Coach|	Prof. Dr.-Ing. Jürgen Anke, Professor für Softwaretechnologie und Informationssysteme an der HTW Dresden	| unterstützt und bewertet die Arbeit des Projektteams 
-|Weiterentwickler|	Studierende eines zukünftigen Jahrgangs im Modul Software Engineering	| entwickeln Softwaresystem weiter und ergänzen es um weitere Funktionen
+|Weiterentwickler|	Studierende eines zukünftigen Jahrgangs im Modul Software Engineering	| entwickeln Softwaresystem weiter und ergänzen es um zusätzliche Funktionen
+|Qt|Ist das auch ein Stakeholder?|Ist das auch ein Stakeholder?
 |Gesetzgeber|Vorgabe von rechtlichen Rahmenbedingungen | gibt Gesetze vor und überwacht deren Einhaltung, insbesondere im Hinblick auf die Lizenzierung
 
 |===
@@ -100,9 +100,9 @@ Beispiel
 ==== Auftraggeberin
 * Die Auftraggeberin möchte das Softwaresystem auf Laptops und Desktop-PCs verwenden.
 * Derzeit arbeitet die Auftraggeberin mit dem Betriebssystem Windows 7.
-* Eine Umstellung des Betriebssystems auf Windows 10 ist absehbar.
+* Bis zum Zeitpunkt der Auslieferung wird vorausssichtlich eine Umstellung des Betriebssystems auf Windows 10 erfolgen.
 * Die Dateneingabe über eine Tastatur soll möglich sein.
-* Das Softwaresystem ist primär an ihrer Benutzerumgebung auszurichten.
+* Die Auftraggeberin möchte das Softwaresystem offline nutzen können.
 
 
 
@@ -133,9 +133,9 @@ Beispiel
 
 |Materialdaten eingeben|hoch|Ermöglichung der Eingabe der Daten von bis zu 10 Wandschichten (n, R~se~, R~si~, d, λ)|xx
 
-|Einheiten ändern|mittel|Möglichkeit der Änderung der Einheiten von Eingabedaten|xx
-
 |Materialdaten vormerken|mittel|Möglichkeit der Speicherung von Wärmeübergangswiderständen|xx
+
+|Einheiten ändern|mittel|Möglichkeit der Änderung der Einheiten von Eingabedaten|xx
 
 |Temperaturverlauf ausgeben|mittel|Ausgabe des Temperaturverlaufs über die verschiedenenen Wandschichten|xx
 
