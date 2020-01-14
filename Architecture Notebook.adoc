@@ -50,6 +50,7 @@ Die Software ist für Speziallisten in dem Gebiet der Bauphysik gedacht und soll
 //[List the assumptions and dependencies that drive architectural decisions. This could include sensitive or critical areas, dependencies on legacy interfaces, the skill and experience of the team, the availability of important resources, and so forth]
 
 == Architektonisch wichtige Vorraussetzungen
+Es gibt keine wichtigen Vorraussetzungen.
 //Fügen Sie eine Referenz / Link zu den Anforderungen ein, die implementiert werden müssen, um die Architektur zu erzeugen.
 
 
