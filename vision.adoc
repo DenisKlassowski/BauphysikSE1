@@ -104,13 +104,6 @@ Beispiel
 * Die Dateneingabe über eine Tastatur soll möglich sein.
 * Das Softwaresystem ist primär an ihrer Benutzerumgebung auszurichten.
 
-==== Lehrende und Studierende
-* Lehrende und Studierende der HTW Dresden sind lediglich potenzielle Nutzer des Softwaresystems.
-* Die Mitglieder der Benutzergruppe Lehrende und Studierende verändern sich ständig.
-* Die Benutzerumgebungen der Lehrenden und Studierenden sind in allen Aspekten sehr unterschiedlich.
-* Die Benutzerumgebungen von Lehrenden und Studierenden sind von sekundärer Bedeutung.
-
-
 
 
 //Zutreffendes angeben, nicht zutreffendes streichen oder auskommentieren
