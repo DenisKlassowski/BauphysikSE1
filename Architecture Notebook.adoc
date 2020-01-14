@@ -24,7 +24,8 @@ Dieses Dokument beschreibt die Philosophie, Entscheidungen, Nebenbedingungen, Be
 Die Auftraggebende Person wünscht sich ein, vom Internet, unabhängiges Programm. +
 Sie möchte so wenig Wartungsaufwand wie irgendmöglich nach Auslieferung der Software. +
 Außerdem wird nicht erwartet, dass sich in Zukunft etwas an der Systemumgebung ändern wird. +
-Das Programm soll auf einem USB-Speichermedium ausführbar sein und ist nur für die Eigenbenutzung gedacht.
+Das Programm soll auf einem USB-Speichermedium ausführbar sein und ist nur für die Eigenbenutzung gedacht. +
+Die Software ist für Speziallisten in dem Gebiet der Bauphysik gedacht und soll für diese einfach zu benutzen sein.
 
 
 //Architektonische Ziele werden oft von Softwareanforderungen beeinflusst und beinhalten die Motivation und die Gründe für Entscheidungen.
