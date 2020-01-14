@@ -24,7 +24,7 @@ Dieses Dokument beschreibt die Philosophie, Entscheidungen, Nebenbedingungen, Be
 Die Auftraggebende Person wünscht sich ein, vom Internet, unabhängiges Programm. +
 Sie möchte ein Wartungsfreies Produkt. +
 Außerdem wird nicht erwartet, dass sich in Zukunft etwas an der Systemumgebung ändern wird. +
-Das Programm soll auf einem USB-Speichermedium ausführbar sein und ist nur für die Eigenbenutzung gedacht. +
+Das Programm soll auf einem USB-Speichermedium ausführbar sein und ist nur für die Eigenbenutzung gedacht(kurzfristige Nutzung durch andere möglich). +
 Die Software ist für Speziallisten in dem Gebiet der Bauphysik gedacht und soll für diese einfach zu benutzen sein.
 
 
