@@ -37,11 +37,7 @@ What changes can we anticipate in the future, and how can we make them easier to
 . Die zu benutzenden Technologien werden im Team besprochen und gewählt. Eine angemessende Anzahl von verschiedenen Technologien ist wünschenswert.
 . Es wird regelmäßige Treffen  zwischen den involvierten Teams und der auftragstellenden Person geben.
 
-. Lauffähigkeit unter folgenden Betriebssystemen:
-.. Windows 7
-//eventuelle Umstellung vor auslieferung?
-.. Windows 10 
-. Distribution über Opal + 
+. Lauffähigkeit unter Windows 10 
 . Team/Entwickler hat/haben wenig Erfahrung.
 
 //[List the assumptions and dependencies that drive architectural decisions. This could include sensitive or critical areas, dependencies on legacy interfaces, the skill and experience of the team, the availability of important resources, and so forth]
