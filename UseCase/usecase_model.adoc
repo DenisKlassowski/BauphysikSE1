@@ -22,17 +22,9 @@ Michael Daebler <michael.daebler@htw-dresden.de>; Lukas Grambole <lukas.grambole
 
 == Use Case Diagramm
 
-
 //Fügen Sie nachfolgend eine Liste aller Use-Cases per Include ein.
 //Dafür sollten Sie pro Use-Case eine Datei anlegen, die auf dem usecase_spec.adoc Template basiert.
+
 == Ausgearbeitete Use Cases
-include::usecase_spec.adoc[]
-
-•	Daten berechnen  -> Softwaresystem
-
-•	Berechnungen ausgeben -> Softwaresystemnutzer
-•   Berechnung drucken    -> Softwaresystemnutzer 
-
-•	Formeln verwalten     -> Administration
-•	Grundwerte – Import (Tabelle) -> Administration
+include::usecase_spec_Daten_berechnen.adoc[]
 

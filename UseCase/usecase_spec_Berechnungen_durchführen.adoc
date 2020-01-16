@@ -1,33 +1,48 @@
 //Nutzen Sie dieses Template als Grundlage für die Spezifikation *einzelner* Use-Cases. Diese lassen sich dann per Include in das Use-Case Model Dokument einbinden (siehe Beispiel dort).
-== Use-Case: Daten berechnen
-===	Kurzbeschreibung
 
-Das Softwaresystem übernimmt die Berechnung der manuell eingegebenen Daten des Benuutzers. 
+== Use-Case: Berechnungen durchführen
 
-===	Kurzbeschreibung der Akteure
-Softwaresystem
+=== Kurzbeschreibung
 
-=== Vorbedingungen
+Der Use Case beschreibt einen Berechnungsvorgang für die Wärmewiderstandsdaten von in Reihe geschalteten Wandschichten.
+
+=== Kurzbeschreibung der Akteure
+
+*Auftraggeberin*
+
+will Berechnungen zum Wärmedurchgangskoeffizienten durchführen. 
+
+*Softwaresystem*
+
+führt notwendige Berechnungen durch und gibt Ergebnisse aus.
+
+==== Vorbedingungen
 //Vorbedingungen müssen erfüllt, damit der Use Case beginnen kann, z.B. Benutzer ist angemeldet, Warenkorb ist nicht leer...
-<Vorbedingung 1>
-Softwaresystem muss gestartet sein
-<Vorbedingung 2>
-Daten müssen eingegeben werden
+Die Auftragnehmerin hat das Softwaresystem gestartet.
 
-=== Standardablauf (Basic Flow)
+==== Standardablauf (Basic Flow)
 //Der Standardablauf definiert die Schritte für den Erfolgsfall ("Happy Path")
 
-. Der Use Case beginnt, wenn der Benutzer die Eingaben zur Berechnung durchführt.
+. Der Use Case beginnt, wenn die Auftraggeberin die Funktion der Wärmewiderstandsberechnung ausgewählt hat.
+. IF Auftraggeberin gibt Außentemperatur ein
+.. Softwaresystem überprüft die Plausibilität der Eingaben
+.. IF Eingaben sind ungültig
+... Softwaresystem weist Auftraggeberin auf fehlerhafte Eingabe hin
+. Die Auftraggeberin die Innentemperatur an.
+.. Softwaresystem überprüft die Plausibilität der Eingaben
+.. IF Eingaben sind ungültig
+... Softwaresystem weist Auftraggeberin auf fehlerhafte Eingabe hin
+. Die Auftraggeberin gibt R~se~ und R~si~ an.
 
-. <Standardablauf Schritt 1>
-. Daten werden vom Benutzer eingegeben
-. Benutzer startet Berechnung
-. Softwaresystem prüft die Eingabedaten nach Plausibilität
-. Softwaresystem berechnet die Eingabedaten
-. Softwaresystem gibt die berechneten Daten aus
+. Die Auftraggeberin gibt die Dicke der ersten Schicht an.
+. Die Auftraggeberin gibt die Wärmeleitfähigkeit der ersten Schicht an.
+. Die Auftraggeberin startet die Berechnung.
+. Das Softwaresytem berechnet ...
+. Das Softwaresytem ermittelt die Diagrammdaten.
+. Das Softwaresystem gibt die Berechnungsergebnisse und das Diagramm aus.
 . Der Use Case ist abgeschlossen.
 
-=== Alternative Abläufe
+==== Alternative Abläufe
 //Nutzen Sie alternative Abläufe für Fehlerfälle, Ausnahmen und Erweiterungen zum Standardablauf
 ==== <Alternativer Ablauf 1>
 Wenn der Benutzer im Schritt 'Daten eingeben' des Standardablauf falsche Eingaben macht, dann 
@@ -36,7 +51,7 @@ wird eine Fehlermeldung ausgegeben, bei Korrektur wird der Use Case fortgesetzt.
 ==== <Alternativer Ablauf 2>
 Wenn der Benutzer im Schritt 'Daten bearbeiten' des Standardablauf eine Änderung macht, dann wird der Use Case mit den neuen Daten fortgesetzt.
 
-=== Unterabläufe (subflows)
+==== Unterabläufe (subflows)
 //Nutzen Sie Unterabläufe, um wiederkehrende Schritte auszulagern
 
 ==== <Unterablauf 1>
@@ -44,7 +59,7 @@ Wenn der Benutzer im Schritt 'Daten bearbeiten' des Standardablauf eine Änderun
 . Die Daten 'xy' sind immer mit dem gleichen Wert belegt.
 
 
-=== Wesentliche Szenarios
+==== Wesentliche Szenarios
 //Szenarios sind konkrete Instanzen eines Use Case, d.h. mit einem konkreten Akteur und einem konkreten Durchlauf der o.g. Flows. Szenarios können als Vorstufe für die Entwicklung von Flows und/oder zu deren Validierung verwendet werden.
 ==== <Szenario 1>
 . Benutzer gibt Eingangsdaten ein
@@ -57,7 +72,7 @@ Wenn der Benutzer im Schritt 'Daten bearbeiten' des Standardablauf eine Änderun
 ==== <Nachbedingung 1>
 Die Daten werden gerundet ausgegeben.
 
-=== Besondere Anforderungen
+==== Besondere Anforderungen
 //Besondere Anforderungen können sich auf nicht-funktionale Anforderungen wie z.B. einzuhaltende Standards, Qualitätsanforderungen oder Anforderungen an die Benutzeroberfläche beziehen.
 ==== <Besondere Anforderung 1>
 DIN EN ISO 6946 (Bauteile - Wärmedurchlasswiderstand und Wärmedurchgangskoeffizient - Berechnungsverfahren)
