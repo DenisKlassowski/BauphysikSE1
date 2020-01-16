@@ -27,7 +27,7 @@ siehe <<glossary.adoc#,Glossar>>
 
 == Positionierung
 === Fachliche Motivation
-Auf eine hochschulinterne Anfrage von Professor Jürgen Anke, dem Verantwortlichen des Moduls Software Engineering, antwortete die Professorin Rhena Krawietz mit dem Wunsch nach einer Softwarelösung zur Berechnung des Wärmedurchgangskoeffizienten. Infolge eines Projektzuordnungsverfahrens hat Professor Jürgen Anke das Team 14 mit der Projektbearbeitung im Rahmen des vorgenannten Moduls beauftragt. Da die Kundin derzeit bei der Erstellung und Kontrolle von Aufgaben zum Wärmedurchgangskoeffizienten nur unter Verwendung von Microfoft Excel oder eines Taschenrechners arbeiten kann, sind diese Aufgaben mit einem hohen Zeit- und Arbeitsaufwand verbunden. Ebenfalls zeitaufwändig ist für sie auch das Zusammensuchen der notwendigen Materialdaten. Die Auftraggeberin erhofft sich, diese Aufwände mithilfe eines Softwaresystems verringern zu können.
+Auf eine hochschulinterne Anfrage von Professor Jürgen Anke, dem Verantwortlichen des Moduls Software Engineering, antwortete die Professorin Rhena Krawietz mit dem Wunsch nach einer Softwarelösung zur Berechnung des Wärmedurchgangskoeffizienten. Infolge eines Projektzuordnungsverfahrens hat Professor Jürgen Anke das Team 14 mit der Projektbearbeitung im Rahmen des vorgenannten Moduls beauftragt. Da die Kundin derzeit bei der Erstellung und Kontrolle von Aufgaben zum Wärmedurchgangskoeffizienten nur unter Verwendung von Microsoft Excel oder eines Taschenrechners arbeiten kann, sind diese Aufgaben mit einem hohen Zeit- und Arbeitsaufwand verbunden. Ebenfalls zeitaufwändig ist für sie auch das Zusammensuchen der notwendigen Materialdaten. Die Auftraggeberin erhofft sich, diese Aufwände mithilfe eines Softwaresystems verringern zu können.
 //Erläutern Sie kurz den Hintergrund, in dem das Projekt angesiedelt ist. Welches Problem soll gelöst werden, wie ist es entstanden? Welche Verbesserung wird angestrebt. Achten Sie darauf, eine fachliche (organisatorische, betriebswirtschaftliche) Perspektive einzunehmen.
 
 === Problem Statement
@@ -36,9 +36,13 @@ Auf eine hochschulinterne Anfrage von Professor Jürgen Anke, dem Verantwortlich
 |===
 |Das Problem |	Die Erstellung und die Kontrolle von Aufgaben zum Wärmedurchgangskoeffizienten sind für die Auftraggeberin mit einem hohen Aufwand verbunden.
 |betrifft |	die Auftraggeberin
-|die Auswirkung davon ist |
-ein hoher Zeitbedarf bei der Erstellung und der Kontrolle von Aufgaben zum Wärmedurchgangskoeffizienten, welcher mit der erhöhten Gefahr von Rechenfehlern infolge von vielen manuellen Eingaben einhergeht
-|eine erfolgreiche Lösung wäre | Ein Softwaresystem, welches häufig verwendete Materialdaten enthält, alle notwendigen Berechnungen durchführt und Zwischen- und Endergebnisse ausgibt.
+|die Auswirkung davon ist
+a| 
+* hoher Zeitbedarf bei der Erstellung und Kontrolle von Aufgaben zum Wärmedurchgangskoeffizienten
+* Notwendigkeit der Erarbeitung von individuellen Rechenwegen für jede Problemstellung
+* erhöhte Gefahr von Rechenfehlern durch viele manuelle Eingaben
+* erhöhtes Risiko von fehlerhaften Prüfungsbewertungen
+|eine erfolgreiche Lösung wäre | Ein Softwaresystem, welches häufig verwendete Materialdaten enthält, alle notwendigen Berechnungen durchführt, Zwischen- und Endergebnisse ausgibt und Ausgaben visualisiert.
 |===
 
 ////
@@ -87,8 +91,8 @@ Beispiel
 |Auftraggeberin |	Prof. Dr.-Ing. Rhena Krawietz, Professorin für Technische Physik an der HTW Dresden	| führt Berechnungen mit dem Softwaresystem aus, um Aufgaben erstellen und kontrollieren zu können
 |Projektteam|	Team 14	| versucht Kundenwünsche bei der Entwicklung des Softwaresystems umzusetzen
 |Team-Coach|	Prof. Dr.-Ing. Jürgen Anke, Professor für Softwaretechnologie und Informationssysteme an der HTW Dresden	| unterstützt und bewertet die Arbeit des Projektteams 
-|Weiterentwickler|	Studierende eines zukünftigen Jahrgangs im Modul Software Engineering	| entwickeln Softwaresystem weiter und ergänzen es um zusätzliche Funktionen
-|Qt|Ist das auch ein Stakeholder?|Ist das auch ein Stakeholder?
+|Wartungspersonal|	Personen mit Wissen und Fähigkeiten im Bereich der Informatik	| aktualisieren Softwaresystem bei veränderten Berechnungsvorschriften 
+|Qt|Lizenzgeber|legt Grundlagen für die Lizenzierung des Softwaresystems fest
 |Gesetzgeber|Vorgabe von rechtlichen Rahmenbedingungen | gibt Gesetze vor und überwacht deren Einhaltung, insbesondere im Hinblick auf die Lizenzierung
 
 |===
@@ -97,11 +101,13 @@ Beispiel
 === Benutzerumgebung
 //Beschreiben Sie die Arbeitsumgebung des Nutzers. Hier sind einige Anregungen:
 
-==== Auftraggeberin
+*Benutzerumgebung der Auftraggeberin*
+
+* Die Auftraggeberin wünscht, dass das Softwaresystem ausschließlich an ihrer Benutzerumgebung ausgerichtet wird.
+* Die Auftraggeberin möchte das Softwaresystem alleine benutzen.
 * Die Auftraggeberin möchte das Softwaresystem auf Laptops und Desktop-PCs verwenden.
-* Derzeit arbeitet die Auftraggeberin mit dem Betriebssystem Windows 7.
-* Bis zum Zeitpunkt der Auslieferung wird vorausssichtlich eine Umstellung des Betriebssystems auf Windows 10 erfolgen.
-* Die Dateneingabe über eine Tastatur soll möglich sein.
+* Zum Zeitpunkt der Auslieferung wird die Auftraggeberin das Betriebssystem Windows 10 nutzen.
+* Das Softwaresystem soll von einem USB-Speichermedium aus lauffähig sein.
 * Die Auftraggeberin möchte das Softwaresystem offline nutzen können.
 
 
@@ -123,26 +129,29 @@ Beispiel
 |===
 |Bedarf|	Priorität|	Features|	Geplantes Release
 
-|Berechnungen durchführen|hoch|Berechnung und Ausgabe von j, R~ges~, R~i~, R~T~, U, Δϑ~k~ und ϑ~k~ |xx
+|Berechnungen durchführen|hoch|Berechnung und Ausgabe von j, R~ges~, R~i~, R~T~, U, Δϑ~k~ und ϑ~k~ für in Reihe angeordnete Wandschichten|xx
 
-|Daten drucken|hoch|Druck auswählbarer Eingabe- und Ergebnisdaten|xx
+|Daten drucken|hoch|Druck auswählbarer Eingabedaten, Ergebnisdaten und grafischen Darstellungen|xx
 
 |Fehleingaben verhindern|hoch|Verhinderung der Eingabe von offensichtlich falschen Werten (negative Zahlen, Buchstaben, Sonderzeichen, ...)|xx
 
-|Luftschichten eingeben|hoch|Ermöglichung der direkten Eingabe von R~i~ bei Luftschichten zwischen den Wandschichten|xx
+|Luftschichten eingeben|hoch|Ermöglichung der direkten Eingabe von R~i~ bei Luftschichten zwischen Wandschichten|xx
 
 |Materialdaten eingeben|hoch|Ermöglichung der Eingabe der Daten von bis zu 10 Wandschichten (n, R~se~, R~si~, d, λ)|xx
 
-|Materialdaten vormerken|mittel|Möglichkeit der Speicherung von Wärmeübergangswiderständen|xx
+|Eingabedaten veranschaulichen|mittel|Darstellung der verschiedenen Wandschichten|xx
 
-|Einheiten ändern|mittel|Möglichkeit der Änderung der Einheiten von Eingabedaten|xx
+|Einheit ändern|mittel|Möglichkeit der Änderung der Einheit von d~i~ |xx
 
-|Temperaturverlauf ausgeben|mittel|Ausgabe des Temperaturverlaufs über die verschiedenenen Wandschichten|xx
+|Materialdaten vormerken|mittel|Möglichkeit der Speicherung von Materialdaten von bis zu 200 Werkstoffen|xx
 
-|Eingabedaten veranschaulichen|niedrig|Darstellung der verschiedenen Wandschichten|xx
+|PDF erstellen|mittel|Ausgabe eines PDF-Dokumentes mit auswählbaren Eingabedaten, Ergebnisdaten und grafischen Darstellungen |xx
 
-|PDF erstellen|niedrig|Ausgabe eines PDF-Dokumentes mit allen wesentlichen Eingabe- und Ergebnisdaten|xx
+|Temperaturverlauf ausgeben|mittel|Ausgabe des grafisch visualisierten Temperaturverlaufs über die verschiedenenen Wandschichten|xx
 
+|Komplexberechnungen durchführen| niedrig |Berechnung und Ausgabe von j, R~ges~, R~i~, R~T~, U, Δϑ~k~ und ϑ~k~ für in Reihe und parallel angeordnete Wandschichten |xxx
+
+|Tauwasserfreiheit berechnen|niedrig|Berechnung der Tauwasserfreiheit auf der Innenoberfläche einer Außenwand|xx
 
 |===
 			
@@ -164,17 +173,17 @@ Beispiel
 
 |Ausgabe von R~T~ und U gerundet auf zwei Nachkommastellen (zusätzlich)|hoch|xx
 
-|System auf Windows 7 und auf Windows 10 lauffähig|hoch|xx
+|Deutsche Benutzeroberfläche |hoch|xx
+
+|System auf Windows 10 lauffähig|hoch|xx
+
+|System kann offline genutzt werden |hoch|xx
 
 |einfache Bedienbarkeit|mittel|xx
 
 |gute Verständlichkeit (Erklärungen)|mittel|xx
 
 |schnelle Berechnung und Datenausgabe|mittel|xx
-
-|Mehrsprachigkeit (Deutsch und Englisch)|niedrig|xx
-
-|Verfügbarkeit von Eingabedaten nach System-Absturz|niedrig|xx
 
 |===
 

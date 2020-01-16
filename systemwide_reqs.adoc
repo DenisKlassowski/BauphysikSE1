@@ -75,12 +75,12 @@ Zur Überprüfung wird getestet, ob gespeicherte Materialdaten verändert werden
 * Das System muss offline nutzbar sein.
 * Das System soll auf einem handelsüblichen Computer benutzbar sein.
 * Das System muss mit dem Betriebssystem Windows 10 nutzbar sein.
-* Das System muss von einem handelsüblichen USB-Speicherstick aus lauffähig sein.
+* Das System muss von einem handelsüblichen USB-Speichermedium aus lauffähig sein.
 * Es muss eine Open-Source-Anwendung entwickelt werden.
 
 === Interface Requirements
 //Angaben ergänzen, nicht relevante Unterpunkte streichen oder auskommentieren
-* Das System soll bekannte Symbole, wie einen Drucker für die Druckfunktion enthalten.
+* Das System soll bekannte Symbole verwenden. Das bedeutet, dass zum Beispiel, ein Drucker als Symbol für die Druckfunktion verwendet werden soll.
 * Das System soll für verschiedene Bildschirmgrößen nutzbar sein.
 * Hinweistexte zu Eingabefeldern sollen ausgeblendet werden können.
 
