@@ -1,6 +1,6 @@
 = BauphysikSE1 System-Wide Requirements Specification
 Lukas Grambole <lukas.grambole@htw-dresden.de>; Michael Däbler <michael.daebler@htw-dresden.de>
-0.2, 14.01.2020
+0.3, 16.01.2020
 :toc: 
 :toc-title: Inhaltsverzeichnis
 :sectnums:
@@ -15,9 +15,7 @@ In diesem Dokument werden die systemweiten Anforderungen für das Projekt Bauphy
 
 NOTE: Die funktionalen Anforderungen, die sich aus der Interaktion von Nutzern mit dem System ergeben, sind als Use Cases in einem https://github.com/fowado/BauphysikSE1/blob/master/UseCase/usecase_model.adoc[separaten Dokument] festgehalten.
 
-== Systemweite funktionale Anforderungen
-F1: Das System muss Erklärungen zu allen physikalischen Größen beinhalten.
-F2: Das System soll die Druckausgabe von auswählbaren Komponenten ermöglichen.
+//== Systemweite funktionale Anforderungen
 //Angabe von system-weiten funktionalen Anforderungen, die nicht als Use Cases ausgedrückt werden können. Beispiele sind Drucken, Berichte, Authentifizierung, Änderungsverfolgung (Auditing), zeitgesteuerte Aktivitäten (Scheduling), Sicherheit / Maßnahmen zum Datenschutz
 
 == Qualitätsanforderungen für das Gesamtsystem
@@ -25,34 +23,67 @@ F2: Das System soll die Druckausgabe von auswählbaren Komponenten ermöglichen.
 //Qualitätsanforderungen repräsentieren das "URPS" im FURPS+ zu Klassifikation von Anforderungen
  
 === Benutzbarkeit (Usability)
-U1: Das System muss Fehlermeldungen in einer verständlichen Sprache ausgeben.
+*NFAU-1: Das System muss Fehlermeldungen in einer Sprache ausgeben können, welche für die Auftraggeberin verständlich ist.*
+
+Zur Überprüfung werden durch einen Testnutzer fehlerhafte Eingaben in mehrere Felder getätigt.
+
+*NFAU-2: Das System soll Hilfestellungen zu Eingabefeldern beinhalten.*
+
+Zur Überprüfung wird durch einen Testnutzer eine Beispielaufgabe mit dem Softwaresystem gelöst.
+
+*NFAU-3: Die Sprache für die Benutzeroberfläche ist deutsch.*
+
 //Beschreiben Sie Anforderungen für Eigenschaften wie einfache Bedienung, einfaches Erlenern, Standards für die Benutzerfreunlichkeit, Lokalisierung (landesspezifische Anpassungen von Sprache, Datumsformaten, Währungen usw.) 
 
 === Zuverlässigkeit (Reliability)
-R1: Das System prüft alle Benutzereingaben auf Plausibilität.
+
+*NFAR-1: Das System soll korrekte Ergebnisdaten ausgeben.*
+
+Zur Überprüfung wird mithilfe von mindestens zwei Beispielaufgaben der Auftraggeberin getestet, ob die Berechnungsergebnisse des Systems stimmen.
+
+*NFAR-2: Das System soll die Eingabe unplausibler Daten verhindern.*
+
+Zur Überprüfung wird getestet, ob die Eingabe von negativen Zahlenwerten, Buchstaben, oder Sonderzeichen in Eingabefelder verhindert wird. 
+
+*NFAR-3: Das System soll bei Eingabe von unplausiblen Daten eine Hinweismeldung ausgeben.*
+
+Zur Überprüfung wird getestet, ob bei Eingabe von negativen Zahlenwerten, Buchstaben, oder Sonderzeichen in Eingabefelder ein Hinweistext ausgegeben wird. 
+
 //Reliability includes the product and/or system's ability to keep running under stress and adverse conditions. Specify requirements for reliability acceptance levels, and how they will be measured and evaluated. Suggested topics are availability, frequency of severity of failures and recoverability.
 
 === Effizienz (Performance)
-P1: Das System soll Berechnungen mit bis zu 10 Materialschichten unterstützen.
+*NFAP-1: Das System soll Berechnungen mit bis zu 10 Materialschichten unterstützen.*
 
-P2: Das System soll die Speicherung der Daten von 200 Materialien ermöglichen.
+Zur Überprüfung wird getestet, ob eine Beispielaufgabe mit 10 Wandschichten korrekt gelöst werden kann.
+
+*NFAP-2: Das System soll die Speicherung der Materialdaten von 200 Materialien ermöglichen.*
+
+Zur Überprüfung wird getestet, ob die Materialdaten von 200 Materialien eingegeben werden können.
 //The performance characteristics of the system should be outlined in this section. Examples are response time, throughput, capacity and startup or shutdown times.
 
 === Wartbarkeit (Supportability)
-S1: Das System soll eine portable Software sein.
+*NFAS-1: Das System soll eine portable Software sein.*
+Zur Überprüfung wird getestet, ob die Software ohne Installation genutzt werden kann.
+
+*NFAS-2: Das System soll im Hinblick auf Materialdaten aktualisierbar sein.*
+Zur Überprüfung wird getestet, ob gespeicherte Materialdaten verändert werden können.
 //This section indicates any requirements that will enhance the supportability or maintainability of the system being built, including adaptability and upgrading, compatibility, configurability, scalability and requirements regarding system installation, level of support and maintenance.
 
 == Zusätzliche Anforderungen
-=== Einschränkungen
+=== Einschränkungen / Constraints
 //Angaben ergänzen, nicht relevante Unterpunkte streichen oder auskommentieren
-* Das System muss mit den Betriebssystemen Windows 7 und Windows 10 nutzbar sein.
 * Das System muss offline nutzbar sein.
+* Das System soll auf einem handelsüblichen Computer benutzbar sein.
+* Das System muss mit dem Betriebssystem Windows 10 nutzbar sein.
+* Das System muss von einem handelsüblichen USB-Speicherstick aus lauffähig sein.
+* Es muss eine Open-Source-Anwendung entwickelt werden.
 
-=== Organisatorische Randbedingungen
+=== Interface Requirements
 //Angaben ergänzen, nicht relevante Unterpunkte streichen oder auskommentieren
-* Das System muss für verschiedene Bildschirmgrößen nutzbar sein.
+* Das System soll bekannte Symbole, wie einen Drucker für die Druckfunktion enthalten.
+* Das System soll für verschiedene Bildschirmgrößen nutzbar sein.
+* Hinweistexte zu Eingabefeldern sollen ausgeblendet werden können.
 
-
-=== Rechtliche Anforderungen
+//=== Rechtliche Anforderungen
 //Angaben ergänzen, nicht relevante Unterpunkte streichen oder auskommentieren
-* Team 14 soll das Softwaresystem unter Verwendung einer Open Source Lizenz entwickeln.
+

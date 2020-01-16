@@ -125,7 +125,7 @@ Beispiel
 
 |Berechnungen durchführen|hoch|Berechnung und Ausgabe von j, R~ges~, R~i~, R~T~, U, Δϑ~k~ und ϑ~k~ |xx
 
-|Daten drucken|hoch|Druck der wesentlichen Eingabe- und Ergebnisdaten|xx
+|Daten drucken|hoch|Druck auswählbarer Eingabe- und Ergebnisdaten|xx
 
 |Fehleingaben verhindern|hoch|Verhinderung der Eingabe von offensichtlich falschen Werten (negative Zahlen, Buchstaben, Sonderzeichen, ...)|xx
 
