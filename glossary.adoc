@@ -1,6 +1,6 @@
 = Glossar BauphysikSE1
 Lukas Grambole <lukas.grambole@htw-dresden.de>; Michael Däbler <daebler.michael@htw-dresden.de>
-0.2, 14.01.2019 
+0.3, 16.01.2019 
 :toc: 
 :toc-title: Inhaltsverzeichnis
 //:sectnums:
@@ -19,8 +19,18 @@ In diesem Dokument werden die wesentlichen Begriffe des Wärmedurchgangsrechner-
 |Wärmestrom|gibt die übertragene Wärmemenge pro Zeiteinheit an|Wärmefluss
 |===
 		
+== Akronyme & Abkürzungen
+|===
+|Abkürzung|	Bedeutung|	Erläuterung
 
-== Abkürzungen und Akronyme
+|NFAP|Nichtfunktionale Anforderung Performance|Nichtfunktionale Anforderung in Bezug auf die Leistung des Softwaresystems
+|NFAR|Nichtfunktionale Anforderung Reliability|Nichtfunktionale Anforderung in Bezug auf die Zuverlässigkeit des Softwaresystems
+|NFAS|Nichtfunktionale Anforderung Supportability|Nichtfunktionale Anforderung in Bezug auf die Wartbarkeit des Softwaresystems
+|NFAU|Nichtfunktionale Anforderung Usability|Nichtfunktionale Anforderung in Bezug auf die Benutzbarkeit des Softwaresystems
+
+|===
+
+== Physikalische Größen
 //Formelzeichen?
 [%header]
 |===
