@@ -8,25 +8,24 @@ Michael Daebler <michael.daebler@htw-dresden.de>; Lukas Grambole <lukas.grambole
 
 == Identifizierte Use Cases
 
-*für die Akteurin Auftragnehmerin:*
+*für die Akteurin Auftraggeberin:*
 [%header]
 |===
-|Use Case| Beschreibung 
-|UC1 Berechnungen durchführen| Berechnung und Ausgabe von j, R~ges~, R~i~, R~T~, U, Δϑ~k~ und ϑ~k~ für in Reihe angeordnete Wandschichten
-|UC2 Daten drucken|Druck auswählbarer Informationen
-|UC3 PDF ausgeben |Ausgabe auswählbarer Informationen in einem PDF-Dokument
-|UC4 Materialdaten ändern |
-||
-||
-||
-||
+|Kurzbezeichnung |Name| Beschreibung 
+|UC1 |Berechnungen durchführen| Berechnung und Ausgabe von j, R~ges~, R~i~, R~T~, U, Δϑ~k~ und ϑ~k~ für in Reihe angeordnete Wandschichten
+|UC2 |Daten drucken|Druck auswählbarer Informationen
+|UC3 |PDF ausgeben |Ausgabe auswählbarer Informationen in einem PDF-Dokument
+|UC4 |Materialdaten ändern |
+|UC5 |Komplexberechnung durchführen|
+|UC6 |Tauwasserfreiheit berechnen|
 |===
 
-
+== Use Case Diagramm
 
 
 //Fügen Sie nachfolgend eine Liste aller Use-Cases per Include ein.
 //Dafür sollten Sie pro Use-Case eine Datei anlegen, die auf dem usecase_spec.adoc Template basiert.
+== Ausgearbeitete Use Cases
 include::usecase_spec.adoc[]
 
 •	Daten berechnen  -> Softwaresystem
