@@ -1,35 +1,26 @@
 = Use-Case Model BauphysikSE1
 Michael Daebler <michael.daebler@htw-dresden.de>; Lukas Grambole <lukas.grambole@htw-dresden.de>
-0.2, 19.12.2019 
+0.3, 16.01.2019 
 :toc: 
 :toc-title: Inhaltsverzeichnis
 :sectnums:
 // Platzhalter für weitere Dokumenten-Attribute 
 
+== Identifizierte Use Cases
+
+*für die Akteurin Auftragnehmerin:*
 [%header]
 |===
-|Use-Case| Akteur(e) 
-|Daten eingeben| Professor*innen, (Studierende)
-|Berechnungen Ansehen / Zwischenspeichern |Professor*innen, (Studierende)
-|Berechnung drucken |Professor*innen, (Studierende)
-|Daten umwandeln (Einheiten) |Professor*innen, (Studierende)
-|Daten berechnen & runden|Softwaresystem
-|Daten visualisieren|Softwaresystem
-|Formeln verwalten|Administration
-|Grundwerte – Import (Tabelle)|Administration
+|Use Case| Beschreibung 
+|UC1 Berechnungen durchführen| Berechnung und Ausgabe von j, R~ges~, R~i~, R~T~, U, Δϑ~k~ und ϑ~k~ für in Reihe angeordnete Wandschichten
+|UC2 Daten drucken|Druck auswählbarer Informationen
+|UC3 PDF ausgeben |Ausgabe auswählbarer Informationen in einem PDF-Dokument
+|UC4 Materialdaten ändern |
+||
+||
+||
+||
 |===
-
-
-//HINWEISE/IDEEN:
-//Akteure sollten entweder Stakeholder oder Personengruppen aus dem Glossar sein
-//Wer Akteur ist, ist im Moment unklar. Das nächste Kundengespräch soll das klären.
-//Sind Tätigkeiten, wie z.B. Daten umwandeln, auch Use-Cases, oder ggf. zu kurz?
-//Weitere Ideen: Sprache umstellen, PDF erstellen, ...
-//Es bietet sich eventuell an, die Hauptfunktionen aus der Vision 1:1 zu übernehmen.
-
-
-
-
 
 
 

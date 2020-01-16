@@ -25,10 +25,11 @@ In diesem Dokument werden die wesentlichen Begriffe des Wärmedurchgangsrechner-
 |===
 |Abkürzung|	Bedeutung|	Erläuterung
 
-|NFAP|Nichtfunktionale Anforderung Performance|Nichtfunktionale Anforderung in Bezug auf die Leistung des Softwaresystems
-|NFAR|Nichtfunktionale Anforderung Reliability|Nichtfunktionale Anforderung in Bezug auf die Zuverlässigkeit des Softwaresystems
-|NFAS|Nichtfunktionale Anforderung Supportability|Nichtfunktionale Anforderung in Bezug auf die Wartbarkeit des Softwaresystems
-|NFAU|Nichtfunktionale Anforderung Usability|Nichtfunktionale Anforderung in Bezug auf die Benutzbarkeit des Softwaresystems
+|NFAP|Nichtfunktionale Anforderung Performance|Nichtfunktionale Anforderung in Bezug auf die Leistung eines Softwaresystems
+|NFAR|Nichtfunktionale Anforderung Reliability|Nichtfunktionale Anforderung in Bezug auf die Zuverlässigkeit eines Softwaresystems
+|NFAS|Nichtfunktionale Anforderung Supportability|Nichtfunktionale Anforderung in Bezug auf die Wartbarkeit eines Softwaresystems
+|NFAU|Nichtfunktionale Anforderung Usability|Nichtfunktionale Anforderung in Bezug auf die Benutzbarkeit eines Softwaresystems
+|UC|Use Case|Funktionale Anforderung eines Systems
 
 |===
 
