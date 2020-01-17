@@ -46,9 +46,9 @@ Wenn die Auftraggeberin im Schritt 4b des Standardablaufs keine Daten auswählt,
 * *SC1:* Die Auftraggeberin wählt die Berechnung des Wärmewiderstandsberechnung aus. Anschließend gibt die Auftraggeberin die Eingabedaten d~1~ = 2 cm; d~2~ = 24 cm; d~3~ = 5 cm; d~4~ = 1 cm; λ~1~ = 0,35 W⋅m^-1^⋅K^-1^; λ~2~ = 0,56 W⋅m^-1^⋅K^-1^; λ~3~ = 0,045 W⋅m^-1^⋅K^-1^; λ~4~ = 0,7 W⋅m^-1^⋅K^-1; ϑ~e~ = 4°C und ϑ~i~ = 21 °C ein. Die Auftraggeberin startet die Berechnung der Wärmedurchgangsdaten. Die Berechnung wurde erfolgreich abgeschlossen.
 
 
-===	Nachbedingungen
+=== Nachbedingungen
 //Nachbedingungen beschreiben das Ergebnis des Use Case, z.B. einen bestimmten Systemzustand.
-==== <Nachbedingung 1>
+
 Die Berechnungsergebnisse werden ausgegeben. 
 
 ==== Besondere Anforderungen

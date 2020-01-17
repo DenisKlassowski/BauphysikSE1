@@ -29,7 +29,7 @@ Die Auftraggeberin hat einen Use Case gestartet, der eine Dateneingabe erfordert
 
 * *SC2:* Die Auftraggeberin gibt d~i~ ein. Sie versucht 1o einzugeben. Das Softwaresystem verhindert die Eingabe des Buchstaben o und weist die Auftraggeberin auf eine ungültige Eingabe hin. Der Use Case ist abgeschlossen.
 
-===	Nachbedingungen
+=== Nachbedingungen
 //Nachbedingungen beschreiben das Ergebnis des Use Case, z.B. einen bestimmten Systemzustand.
 Bei erfolgreicher Durchführung des Use Case muss folgende Nachbedingungen erfüllt sein:
 
