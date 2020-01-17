@@ -21,23 +21,12 @@ Dieses Dokument beschreibt die Philosophie, Entscheidungen, Nebenbedingungen, Be
 
 == Architektonische Ziele und Philosophie
 
+Folgende Architektur bezieht sich auf eine Softwarelösung die ohne Installation über ein USB-Speichermedium auszuführen sein soll. +
 Die Auftraggebende Person wünscht sich ein, vom Internet, unabhängiges Programm. +
 Sie möchte ein Wartungsfreies Produkt. +
 Außerdem wird nicht erwartet, dass sich in Zukunft etwas an der Systemumgebung ändern wird. +
-Das Programm soll auf einem USB-Speichermedium ausführbar sein und ist nur für die Eigenbenutzung gedacht(kurzfristige Nutzung durch andere möglich). +
-Die Software ist für Speziallisten in dem Gebiet der Bauphysik gedacht und soll für diese einfach zu benutzen sein.
-
-
-//Architektonische Ziele werden oft von Softwareanforderungen beeinflusst und beinhalten die Motivation und die Gründe für Entscheidungen.
-
-//What is the expected lifespan of the system? +
-//Will the system need to respond to technological changes over that time, such as new versions of middleware or other products? +
-//How frequently is the system expected to adapt to change? +
-//What changes can we anticipate in the future, and how can we make them easier to accommodate? +
-
-//Hinweise: Beschreiben Sie die Philosophie der Architektur, d.h. den zentralen Ansatz für ihre Architektur. Identifizieren Sie alle Aspekte, die die Philosophie beeinflussen, z.B. komplexe Auslieferung Aspekte, Anpassung von Altsystemen oder besondere Geschwindigkeitsanforderungen. Muss es besonders robust sein, um eine langfristige Wartung und Pflege zu ermöglichen?
-
-//Formulieren Sie eine Reihe von Zielen, die die Architektur in ihrer Struktur un ihrem Verhalten erfüllen muss. Identifizieren Sie kritische Fragen, die von der Architektur adressiert werden müssen, z.B. besondere Hardware-Abhängigkeiten, die vom Rest des Systems isoliert werden sollten oder Sicherstellung der Funktionsfähigkeit unter besonderen Bedingungen (z.B. Offline-Nutzung).
+Es ist nur für die Eigenbenutzung gedacht (kurzfristige Nutzung durch andere möglich). +
+Die Software ist für Speziallisten in dem Gebiet der Bauphysik und soll für diese einfach zu bedienen sein. +
 
 == Annahmen und Abhängigkeiten
 . Nutzer verwenden Dekstop-PC oder Laptop.
