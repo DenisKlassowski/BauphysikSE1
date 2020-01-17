@@ -1,6 +1,6 @@
 = Glossar BauphysikSE1
 Lukas Grambole <lukas.grambole@htw-dresden.de>; Michael Däbler <daebler.michael@htw-dresden.de>
-0.3, 16.01.2019 
+1.0, 17.01.2019 
 :toc: 
 :toc-title: Inhaltsverzeichnis
 //:sectnums:
@@ -16,6 +16,8 @@ In diesem Dokument werden die wesentlichen Begriffe des Wärmedurchgangsrechner-
 |===
 |Begriff|	Definition und Erläuterung|	Synonyme
 //|Kommissionierung|Bereitstellung von Waren aus einem Lager entsprechend eines Kundenauftrags|(keine))|
+|Celsiusskala|Temperaturskala, bei der der Abstand zwischen dem Gefrier- und dem Siedepunkt des Wassers 100 Einheiten entspricht|
+|Kelvinskala|Temperaturskala, deren Nullpunkt der absolute Nullpunkt ist (-275,15°C)|
 |Tauwasser|Wasser, welches aus Wasserdampf kondensiert ist|
 |Tauwasserfreiheit|bezeichnet den Zustand einer tauwasserfreien Wand|
 |Temperaturdiagramm|Diagramm mit der Wanddicke auf der x-Achse und der Temperatur auf der y-Achse|Temperaturverlauf
@@ -82,6 +84,7 @@ In diesem Dokument werden die wesentlichen Begriffe des Wärmedurchgangsrechner-
 |Ergebnisdaten|	j, R~ges~, R~i~, R~T~, U, Δϑ~k~, ϑ~k~ |	Double |  | 
 |Materialdaten|d~i~, R~i~ und λ~i~ aller Materialschichten sowie R~se~ und R~si~|Double|Materialdaten müssen aus Zahlen bestehen und größer oder gleich Null sein|
 
+|Temperaturdaten|Δϑ~k~, ϑ~k~, Δϑ~e~, ϑ~i~|Double|≥ 0 (bei Kelvinskala), beziehungsweise ≥ -273,15 (bei Celsiusskala)|
 
 |===
 

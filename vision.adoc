@@ -1,6 +1,6 @@
 = Vision BauphysikSE1
 Lukas Grambole <lukas.grambole@htw-dresden.de>; Michael Däbler <michael.daebler@htw-dresden.de>
-0.3, 16.01.2020 
+1.0, 17.01.2020 
 :toc: 
 :toc-title: Inhaltsverzeichnis
 :sectnums:
