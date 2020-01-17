@@ -1,6 +1,6 @@
 //Nutzen Sie dieses Template als Grundlage für die Spezifikation *einzelner* Use-Cases. Diese lassen sich dann per Include in das Use-Case Model Dokument einbinden (siehe Beispiel dort).
 
-== Use-Case: Berechnungen durchführen
+== Use Case: Berechnungen durchführen
 
 === Kurzbeschreibung
 
@@ -10,11 +10,7 @@ Der Use Case beschreibt einen Berechnungsvorgang für die Wärmewiderstandsdaten
 
 *Auftraggeberin*
 
-will Berechnungen zum Wärmedurchgangskoeffizienten durchführen. 
-
-*Softwaresystem*
-
-führt notwendige Berechnungen durch und gibt Ergebnisse aus.
+will Berechnungen zum Wärmedurchgangskoeffizienten durchführen.
 
 ==== Vorbedingungen
 //Vorbedingungen müssen erfüllt, damit der Use Case beginnen kann, z.B. Benutzer ist angemeldet, Warenkorb ist nicht leer...
@@ -24,42 +20,38 @@ Die Auftraggeberin hat das Softwaresystem gestartet.
 //Der Standardablauf definiert die Schritte für den Erfolgsfall ("Happy Path")
 
 . Der Use Case beginnt, wenn die Auftraggeberin die Funktion der Wärmewiderstandsberechnung ausgewählt hat.
-. Auftraggeberin gibt Daten in die Eingabefelder ein
-.. IF Auftraggeberin möchte vorgemerkte Daten verwenden 
-. Softwaresystem überprüft die Plausibilität der Eingaben
-.. IF Eingaben sind ungültig
-... Softwaresystem weist Auftraggeberin auf fehlerhafte Eingabe hin
-. Die Auftraggeberin startet die Berechnung.
-. Das Softwaresytem berechnet ...
-. Das Softwaresytem ermittelt die Diagrammdaten.
-. Das Softwaresystem gibt die Berechnungsergebnisse und das Diagramm aus.
+. Auftraggeberin gibt Materialdaten in die dazugehörigen Eingabefelder ein.
+. _INCLUDE_ Plausibilität prüfen
+. _IF_ Auftraggeberin möchte gespeicherte Materialdaten verwenden
+.. Das Softwaresystem stellt der Auftraggeberin gespeicherte Materialdaten zur Verfügung.
+.. Die Auftraggeberin wählt gespeicherte Materialdaten aus.
+. _IF_ Auftraggeberin will einen Temperaturverlauf ermitteln
+.. Die Auftraggeberin gibt Temperaturdaten ein.
+.. _INCLUDE_ Plausibilität prüfen
+. Die Auftraggeberin startet die Berechnung durch das Softwaresystem.
+. Das Softwaresystem berechnet die Ergebnisdaten.
+. Das Softwaresystem gibt die gerundeten Ergebnisdaten aus.
 . Der Use Case ist abgeschlossen.
 
 ==== Alternative Abläufe
 //Nutzen Sie alternative Abläufe für Fehlerfälle, Ausnahmen und Erweiterungen zum Standardablauf
-==== <Alternativer Ablauf 1>
-Wenn das Softwaresystem im Schritt '3' des Standardablauf ungültige Eingaben erkennt, dann 
-wird eine Fehlermeldung ausgegeben, die Auftraggeberin wird aufgefordert eine  Korrektur vorzunehmen. Das Softwaresystem überprüft die Eingabe erneut und wenn diese korrekt ist, wird der Use Case im Schritt '4' fortgesetzt. 
+*Alternativer Ablauf 1*
 
-==== Unterabläufe (subflows)
-//Nutzen Sie Unterabläufe, um wiederkehrende Schritte auszulagern
-
-==== <Unterablauf 1>
-. siehe Standartablauf
+Wenn die Auftraggeberin im Schritt 4b des Standardablaufs keine Daten auswählt, dann
+. Der Use Case wird im Schritt 5 fortgesetzt.
 
 ==== Wesentliche Szenarios
 //Szenarios sind konkrete Instanzen eines Use Case, d.h. mit einem konkreten Akteur und einem konkreten Durchlauf der o.g. Flows. Szenarios können als Vorstufe für die Entwicklung von Flows und/oder zu deren Validierung verwendet werden.
-==== <Szenario 1>
-. Die Auftraggeberin wählt die Berechnung des Wärmewiderstandsberechnung aus. Im Anschluss gibt die Auftraggeberin Eingangsdaten ein und bestätigt die Eingabe. Die Berechnung ist erfolgreich abgeschlossen. 
+
+* *SC1:* Die Auftraggeberin wählt die Berechnung des Wärmewiderstandsberechnung aus. Anschließend gibt die Auftraggeberin die Eingabedaten d~1~ = 2 cm; d~2~ = 24 cm; d~3~ = 5 cm; d~4~ = 1 cm; λ~1~ = 0,35 W⋅m^-1^⋅K^-1^; λ~2~ = 0,56 W⋅m^-1^⋅K^-1^; λ~3~ = 0,045 W⋅m^-1^⋅K^-1^; λ~4~ = 0,7 W⋅m^-1^⋅K^-1; ϑ~e~ = 4°C und ϑ~i~ = 21 °C ein. Die Auftraggeberin startet die Berechnung der Wärmedurchgangsdaten. Die Berechnung wurde erfolgreich abgeschlossen.
+
 
 ===	Nachbedingungen
 //Nachbedingungen beschreiben das Ergebnis des Use Case, z.B. einen bestimmten Systemzustand.
 ==== <Nachbedingung 1>
-Die Daten werden gerundet ausgegeben. 
+Die Berechnungsergebnisse werden ausgegeben. 
 
 ==== Besondere Anforderungen
 //Besondere Anforderungen können sich auf nicht-funktionale Anforderungen wie z.B. einzuhaltende Standards, Qualitätsanforderungen oder Anforderungen an die Benutzeroberfläche beziehen.
 ==== <Besondere Anforderung 1>
-. DIN EN ISO 6946 (Bauteile - Wärmedurchlasswiderstand und Wärmedurchgangskoeffizient - Berechnungsverfahren)
-. Schnelle Berechnung
-. Daten runden
+

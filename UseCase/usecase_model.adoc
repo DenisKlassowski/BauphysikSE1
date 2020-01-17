@@ -1,6 +1,6 @@
 = Use-Case Model BauphysikSE1
 Michael Daebler <michael.daebler@htw-dresden.de>; Lukas Grambole <lukas.grambole@htw-dresden.de>
-0.3, 16.01.2019 
+0.4, 17.01.2019 
 :toc: 
 :toc-title: Inhaltsverzeichnis
 :sectnums:
@@ -26,5 +26,9 @@ Michael Daebler <michael.daebler@htw-dresden.de>; Lukas Grambole <lukas.grambole
 //Dafür sollten Sie pro Use-Case eine Datei anlegen, die auf dem usecase_spec.adoc Template basiert.
 
 == Ausgearbeitete Use Cases
-include::usecase_spec_Daten_berechnen.adoc[]
+include::usecase_spec_Berechnungen_durchführen.adoc[]
+
+include::usecase_spec_Plausibilität_prüfen.adoc[]
+
+include::usecase_spec_Daten_drucken.adoc[]
 

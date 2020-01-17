@@ -18,6 +18,7 @@ In diesem Dokument werden die wesentlichen Begriffe des Wärmedurchgangsrechner-
 //|Kommissionierung|Bereitstellung von Waren aus einem Lager entsprechend eines Kundenauftrags|(keine))|
 |Tauwasser|Wasser, welches aus Wasserdampf kondensiert ist|
 |Tauwasserfreiheit|bezeichnet den Zustand einer tauwasserfreien Wand|
+|Temperaturdiagramm|Diagramm mit der Wanddicke auf der x-Achse und der Temperatur auf der y-Achse|Temperaturverlauf
 |Wärmestrom|gibt die übertragene Wärmemenge pro Zeiteinheit an|Wärmefluss
 |===
 		
@@ -41,6 +42,8 @@ In diesem Dokument werden die wesentlichen Begriffe des Wärmedurchgangsrechner-
 |Abkürzung|	Bedeutung|Einheit|	Erläuterung
 //|UP|Unified Process|Vorgehensmodell für die Softwareentwicklung|
 |d~i~|Dicke des Materials i|mm, cm, dm, m |Beschreibung der Dicke der jeweiligen Wandschicht
+
+|i|Index-Nummer des Materials|1|Bezeichnung eines Materials innerhalb einer Rechenaufgabe
 
 |j|Wärmestromdichte|W⋅m^-2^|physikalische Größe zur Beschreibung der Änderung der thermischen Energie eines Bauteils, Produkt aus U und Δϑ
 
