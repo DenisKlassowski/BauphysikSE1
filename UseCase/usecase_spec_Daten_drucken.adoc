@@ -4,6 +4,8 @@
 === Kurzbeschreibung
 //<Kurze Beschreibung des Use Case>
 
+Der Use Case beschreibt die Vorbereitung des Drucks von ausgewählten Daten.
+
 === Kurzbeschreibung der Akteure
 *Auftraggeberin*
 
@@ -28,19 +30,27 @@ empfängt Daten aus dem Softwaresystem und druckt diese aus.
 //Der Standardablauf definiert die Schritte für den Erfolgsfall ("Happy Path")
 
 . Der Use Case beginnt, wenn der Benutzer die Funktionalität zum Drucken startet.
-. 
-. Drucker auswählen
+. Das Softwaresystem gibt eine Auswahl von auswählbaren Druckdaten aus.
+. IF Auftraggeberin möchte eine andere Auswahl
+.. Auftraggeberin ändert Auswahl
+. Die Auftraggeberin bestätigt die Auswahl    
+. Das Software  erstellt eine Druckervorschau.
+. Die Auftraggeberin bestätigt Druckvorschau.
+. Das Softwaresystem erstellt eine Liste von auswählbaren Druckern.
+. Auftraggeberin wählt Drucker aus
+. Auftraggeberin bestätigt den Druck 
+. Softwaresystem sendet Daten an den Drucker 
 // Druckvorschau erstellen (technisch umsetzbar?)
-. auf Druckereinstellung zugreifen 
-. Druckauftrag senden
 . Der Use Case ist abgeschlossen.
 
 === Alternative Abläufe
 //Nutzen Sie alternative Abläufe für Fehlerfälle, Ausnahmen und Erweiterungen zum Standardablauf
 ==== <Alternativer Ablauf 1>
-Wenn <Akteur> im Schritt <x> des Standardablauf <etwas macht>, dann 
-. <Ablauf beschreiben>  
-. Der Use Case wird im Schritt <y> fortgesetzt.
+Wenn das Softwaresystem im Schritt 7 des Standardablauf keinen Drucker finden kann, dann wird eine Fehlermeldung ausgegeben, dass keine Druckerverbindung besteht. Die Auftraggeberin bestätigt die Meldung. Der Use Case wird beendet. 
+
+==== <Alternativer Ablauf 2>
+Wenn die Auftraggeberin im Schritt 4 des Standartablaufes keine auswählbaren Druckdaten gewählt hat, dann wird eine Fehlermeldung ausgegeben, dass keine Auswahl getätigt wurde. Der Use Case wird im Schritt 2 fortgesetzt. 
+
 
 === Unterabläufe (subflows)
 //Nutzen Sie Unterabläufe, um wiederkehrende Schritte auszulagern
@@ -61,9 +71,11 @@ Wenn <Akteur> im Schritt <x> des Standardablauf <etwas macht>, dann
 ===	Nachbedingungen
 //Nachbedingungen beschreiben das Ergebnis des Use Case, z.B. einen bestimmten Systemzustand.
 ==== <Nachbedingung 1>
-. Ergebnis wird auf Papier gedruckt
+. Druckauftrag wird an den Drucker gesendet
+
 
 === Besondere Anforderungen
 //Besondere Anforderungen können sich auf nicht-funktionale Anforderungen wie z.B. einzuhaltende Standards, Qualitätsanforderungen oder Anforderungen an die Benutzeroberfläche beziehen.
 ==== <Besondere Anforderung 1>
 // Was soll alles ausgegeben werden? (Rechenweg, Ergebnisse, Grafik etc.?)
+
