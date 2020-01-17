@@ -91,7 +91,7 @@ Beispiel
 |Auftraggeberin |	Prof. Dr.-Ing. Rhena Krawietz, Professorin für Technische Physik an der HTW Dresden	| führt Berechnungen mit dem Softwaresystem aus, um Aufgaben erstellen und kontrollieren zu können
 |Projektteam|	Team 14	| versucht Kundenwünsche bei der Entwicklung des Softwaresystems umzusetzen
 |Team-Coach|	Prof. Dr.-Ing. Jürgen Anke, Professor für Softwaretechnologie und Informationssysteme an der HTW Dresden	| unterstützt und bewertet die Arbeit des Projektteams
-|Drucker|Software von handelsüblichen Druckern|verarbeitet Druckauftrag aus dem Softwaresystem
+|Druckersoftware|Software von handelsüblichen Druckern|verarbeitet Druckauftrag aus dem Softwaresystem und führt diesen aus
 |Wartungspersonal|	Personen mit Wissen und Fähigkeiten im Bereich der Informatik	| aktualisieren Softwaresystem bei veränderten Berechnungsvorschriften 
 |Qt|Lizenzgeber|legt Grundlagen für die Lizenzierung des Softwaresystems fest
 |Gesetzgeber|Vorgabe von rechtlichen Rahmenbedingungen | gibt Gesetze vor und überwacht deren Einhaltung, insbesondere im Hinblick auf die Lizenzierung
@@ -132,6 +132,8 @@ Beispiel
 
 |Berechnungen durchführen|hoch|Berechnung und Ausgabe von j, R~ges~, R~i~, R~T~, U, Δϑ~k~ und ϑ~k~ für in Reihe angeordnete Wandschichten|xx
 
+|Berechnung speichern|hoch|Speicherung von Eingabedaten und Berechnungsergebnissen|xx
+
 |Daten drucken|hoch|Druck auswählbarer Eingabedaten, Ergebnisdaten und grafischen Darstellungen|xx
 
 |Fehleingaben verhindern|hoch|Verhinderung der Eingabe von offensichtlich falschen Werten (negative Zahlen, Buchstaben, Sonderzeichen, ...)|xx
@@ -139,8 +141,6 @@ Beispiel
 |Luftschichten eingeben|hoch|Ermöglichung der direkten Eingabe von R~i~ bei Luftschichten zwischen Wandschichten|xx
 
 |Materialdaten eingeben|hoch|Ermöglichung der Eingabe der Daten von bis zu 10 Wandschichten (n, R~se~, R~si~, d, λ)|xx
-
-|Eingabedaten veranschaulichen|mittel|Darstellung der verschiedenen Wandschichten|xx
 
 |Einheit ändern|mittel|Möglichkeit der Änderung der Einheit von d~i~ |xx
 
