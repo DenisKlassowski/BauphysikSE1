@@ -29,7 +29,7 @@ Es ist nur f체r die Eigenbenutzung gedacht (kurzfristige Nutzung durch andere m�
 Die Software ist f체r Speziallisten in dem Gebiet der Bauphysik und soll f체r diese einfach zu bedienen sein. +
 
 == Annahmen und Abh채ngigkeiten
-. Nutzer verwenden Dekstop-PC oder Laptop.
+. Nutzer verwenden Dekstop-PC oder Laptop mit USB-Port.
 . Endger채te laufen unter Windows 10.
 . Eingabeger채te sind Maus(Touchpad) und Tastatur.
 
