@@ -1,25 +1,34 @@
 //Nutzen Sie dieses Template als Grundlage für die Spezifikation *einzelner* Use-Cases. Diese lassen sich dann per Include in das Use-Case Model Dokument einbinden (siehe Beispiel dort).
 == Use-Case: <Daten drucken
-===	Kurzbeschreibung
+
+=== Kurzbeschreibung
 //<Kurze Beschreibung des Use Case>
 
-===	Kurzbeschreibung der Akteure
-    == Drucker
-    == Softwaresystemnutzer 
+=== Kurzbeschreibung der Akteure
+*Auftraggeberin*
+
+will auswählbare Eingabedaten und Berechnungsergebnisse drucken.
+
+*Softwaresystem*
+
+stellt Druckfunktionalität mit Auswahlmöglichkeiten zur Verfügung und übermittelt Druckdaten an Drucker.
+
+*Drucker*
+
+empfängt Daten aus dem Softwaresystem und druckt diese aus.
+
 
 === Vorbedingungen
 //Vorbedingungen müssen erfüllt, damit der Use Case beginnen kann, z.B. Benutzer ist angemeldet, Warenkorb ist nicht leer...
-<Vorbedingung 1>
-berechnete Daten liegen vor
+* Es besteht eine Verbindung zum Drucker.
 
-<Vorbedingung 2>
-Verbindung zum Drucker besteht
+* Der Drucker ist betriebsbereit.
 
 === Standardablauf (Basic Flow)
 //Der Standardablauf definiert die Schritte für den Erfolgsfall ("Happy Path")
 
-. Der Use Case beginnt, wenn der Benutzer die Funktionalität zum Drucken ausführt.
-. <Standardablauf Schritt 1>
+. Der Use Case beginnt, wenn der Benutzer die Funktionalität zum Drucken startet.
+. 
 . Drucker auswählen
 // Druckvorschau erstellen (technisch umsetzbar?)
 . auf Druckereinstellung zugreifen 

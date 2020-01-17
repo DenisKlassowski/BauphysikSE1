@@ -8,7 +8,7 @@ Michael Daebler <michael.daebler@htw-dresden.de>; Lukas Grambole <lukas.grambole
 
 == Identifizierte Use Cases
 
-*für die Akteurin Auftraggeberin:*
+*für die Akteure Softwaresystem und Auftraggeberin:*
 [%header]
 |===
 |Kurzbezeichnung |Name| Beschreibung 

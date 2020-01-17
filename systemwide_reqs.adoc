@@ -87,3 +87,4 @@ Zur Überprüfung wird getestet, ob gespeicherte Materialdaten verändert werden
 //=== Rechtliche Anforderungen
 //Angaben ergänzen, nicht relevante Unterpunkte streichen oder auskommentieren
 
+// Hinweis: zum Beispiel "diese Anforderung bezieht sich auf den UC 12"

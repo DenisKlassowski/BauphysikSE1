@@ -18,7 +18,7 @@ führt notwendige Berechnungen durch und gibt Ergebnisse aus.
 
 ==== Vorbedingungen
 //Vorbedingungen müssen erfüllt, damit der Use Case beginnen kann, z.B. Benutzer ist angemeldet, Warenkorb ist nicht leer...
-Die Auftragnehmerin hat das Softwaresystem gestartet.
+Die Auftraggeberin hat das Softwaresystem gestartet.
 
 ==== Standardablauf (Basic Flow)
 //Der Standardablauf definiert die Schritte für den Erfolgsfall ("Happy Path")
