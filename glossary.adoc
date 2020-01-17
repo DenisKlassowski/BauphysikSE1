@@ -29,6 +29,7 @@ In diesem Dokument werden die wesentlichen Begriffe des Wärmedurchgangsrechner-
 |NFAR|Nichtfunktionale Anforderung Reliability|Nichtfunktionale Anforderung in Bezug auf die Zuverlässigkeit eines Softwaresystems
 |NFAS|Nichtfunktionale Anforderung Supportability|Nichtfunktionale Anforderung in Bezug auf die Wartbarkeit eines Softwaresystems
 |NFAU|Nichtfunktionale Anforderung Usability|Nichtfunktionale Anforderung in Bezug auf die Benutzbarkeit eines Softwaresystems
+|SC|Szenario|Konkrete Instanz eines Use Case
 |UC|Use Case|Funktionale Anforderung eines Systems
 
 |===

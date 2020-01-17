@@ -8,16 +8,16 @@ Michael Daebler <michael.daebler@htw-dresden.de>; Lukas Grambole <lukas.grambole
 
 == Identifizierte Use Cases
 
-*für die Akteure Softwaresystem und Auftraggeberin:*
 [%header]
 |===
-|Kurzbezeichnung |Name| Beschreibung 
-|UC1 |Berechnungen durchführen| Berechnung und Ausgabe von j, R~ges~, R~i~, R~T~, U, Δϑ~k~ und ϑ~k~ für in Reihe angeordnete Wandschichten
-|UC2 |Daten drucken|Druck auswählbarer Informationen
-|UC3 |PDF ausgeben |Ausgabe auswählbarer Informationen in einem PDF-Dokument
-|UC4 |Materialdaten ändern |
-|UC5 |Komplexberechnung durchführen|
-|UC6 |Tauwasserfreiheit berechnen|
+|Kurzbezeichnung |Name|Akteur(e)| Beschreibung 
+|UC1 |Berechnungen durchführen|Auftraggeberin|Berechnung und Ausgabe von j, R~ges~, R~i~, R~T~, U, Δϑ~k~ und ϑ~k~ für in Reihe angeordnete Wandschichten
+|UC2|Plausibilität prüfen|Auftraggeberin|Überprüfung der Gültigkeit von Eingabedaten
+|UC3 |Daten drucken|Auftraggeberin, Drucker|Druck auswählbarer Informationen
+|UC4 |PDF ausgeben |Auftraggeberin|Ausgabe auswählbarer Informationen in einem PDF-Dokument
+|UC5 |Materialdaten ändern |Auftraggeberin|
+|UC6 |Komplexberechnung durchführen|Auftraggeberin|
+|UC7 |Tauwasserfreiheit berechnen|Auftraggeberin|
 |===
 
 == Use Case Diagramm

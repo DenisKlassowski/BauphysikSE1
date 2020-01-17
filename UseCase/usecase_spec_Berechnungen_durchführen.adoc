@@ -24,7 +24,7 @@ Die Auftraggeberin hat das Softwaresystem gestartet.
 //Der Standardablauf definiert die Schritte für den Erfolgsfall ("Happy Path")
 
 . Der Use Case beginnt, wenn die Auftraggeberin die Funktion der Wärmewiderstandsberechnung ausgewählt hat.
-. Auftraggeberin gibt Datein in die Eingabefelder ein
+. Auftraggeberin gibt Daten in die Eingabefelder ein
 .. IF Auftraggeberin möchte vorgemerkte Daten verwenden 
 . Softwaresystem überprüft die Plausibilität der Eingaben
 .. IF Eingaben sind ungültig
