@@ -47,8 +47,7 @@ Es gibt keine wichtigen Vorraussetzungen.
 
 . Software wird mit dem GUI tool PyQT in Python geschrieben (GNU / GPL License). 
 // Für unsere Developer PyQT: https://www.qt.io/blog/2018/12/18/qt-python-5-12-released GNU / GPL License) +
-.. Python ist eine einfach zu lesende/schreibende Programmiersprache die, die eventuelle spätere Erweiterung/Einarbeitung unseres Softwareprojektes erleichtert. +
-.. Es ist nicht auszuschließen das die Softwarelösung an andere Endnutzer weitergegeben wird, was die Portabilität auf Linux- und MacOS-Betriebssysteme gewährleistet.
+.. Obwohl unsere Developer keine Erfahrung mit Python/QT haben, wollen wir dieses Projekt nutzen uns Grundkenntnisse anzueignen.
 
 //ANALYSTEN TEXT
 
