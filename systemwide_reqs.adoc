@@ -1,6 +1,6 @@
 = BauphysikSE1 System-Wide Requirements Specification
 Lukas Grambole <lukas.grambole@htw-dresden.de>; Michael Däbler <michael.daebler@htw-dresden.de>
-0.3, 16.01.2020
+0.4, 17.01.2020
 :toc: 
 :toc-title: Inhaltsverzeichnis
 :sectnums:
@@ -90,3 +90,4 @@ Zur Überprüfung wird getestet, ob gespeicherte Materialdaten verändert werden
 //Angaben ergänzen, nicht relevante Unterpunkte streichen oder auskommentieren
 
 // Hinweis: zum Beispiel "diese Anforderung bezieht sich auf den UC 12"
+// Ergänzungen folgen
