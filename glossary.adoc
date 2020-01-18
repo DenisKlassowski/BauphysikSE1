@@ -16,6 +16,9 @@ In diesem Dokument werden die wesentlichen Begriffe des Wärmedurchgangsrechner-
 |===
 |Begriff|	Definition und Erläuterung|	Synonyme
 
+|Berechnete Elemente|Physikalische Größen und Diagramme, welche im Rahmen eines Berechnungsvorgangs ermittelt wurden|
+|Eingabedaten|Daten, welche ein Systemnutzer in ein Softwaresystem eingibt|
+|Ergebnisdaten|Daten, welche infolge einer Berechnung ausgegeben werden, abhängig von Eingabedaten und Art der Berechnung|
 |Celsiusskala|Temperaturskala, bei der der Abstand zwischen dem Gefrier- und dem Siedepunkt des Wassers 100 Einheiten entspricht|
 |Kelvinskala|Temperaturskala, deren Nullpunkt der absolute Nullpunkt ist (-275,15°C)|
 |Systemnutzer|Bezeichnung für einen Akteur, der Berechnungen mit dem Softwaresystem durchführen möchte. Neben der Auftraggeberin sind auch Studierende und Lehrende potenzielle Systemnutzer.|
@@ -49,6 +52,7 @@ In diesem Dokument werden die wesentlichen Begriffe des Wärmedurchgangsrechner-
 
 |j|Wärmestromdichte|W⋅m^-2^|physikalische Größe zur Beschreibung der Änderung der thermischen Energie eines Bauteils, Produkt aus U und Δϑ
 
+|n|Schichtanzahl|1|Anzahl der in Reihe geschalteten Wandschichten
 |R~ges~|Summe aller Wärmedurchlasswiderstände|m^2^⋅K⋅W^-1^|Zwischenwert, Summe aus R~1~, R~2~, ..., R~n~
 
 |R~i~|Wärmedurchlasswiderstand des Materials i |m^2^⋅K⋅W^-1^|Widerstand, den eine Materialschicht dem Wärmestrom entgegensetzt, Quotient aus Materialdicke und Wärmeleitfähigkeit

@@ -19,69 +19,55 @@ verarbeitet Druckauftrag aus dem Softwaresystem.
 
 === Vorbedingungen
 //Vorbedingungen müssen erfüllt, damit der Use Case beginnen kann, z.B. Benutzer ist angemeldet, Warenkorb ist nicht leer...
-* Es besteht eine Verbindung zum Drucker.
-
-* Der Drucker ist betriebsbereit.
+* Es liegen Berechnungsergebnisse vor.
 
 === Standardablauf (Basic Flow)
 //Der Standardablauf definiert die Schritte für den Erfolgsfall ("Happy Path")
 
 . Der Use Case beginnt, wenn der Systemnutzer die Druckfunktion auswählt.
-. Das Softwaresystem gibt eine Vorauswahl von wählbaren Elementen für den Druck aus.
+. Das Softwaresystem gibt eine Vorauswahl von berechneten Elementen für den Druck aus.
 . _IF_ Systemnutzer möchte andere Elemente drucken
 .. Der Systemnutzer ändert die Auswahl.
 .. _IF_ Systemnutzer möchte ausgewählte Elemente als Standard für zukünftige Vorauswahl setzen
 ... Der Systemnutzer ordnet die Speicherung der getroffenen Auswahl als Standard an.
 ... Das Softwaresystem übernimmt die getroffene Auswahl als Standard für die Vorauswahl.
-. Der Systemnutzer bestätigt die Auswahl    
-. Das Software erstellt eine Druckvorschau.
-. Der Systemnutzer bestätigt die Druckvorschau.
-. Das Softwaresystem erstellt eine Liste von auswählbaren Druckern.
-. Der Systemnutzer wählt einen Drucker aus.
-. Der Systemnutzer erteilt den Druckauftrag. 
-. Das Softwaresystem sendet den Druckauftrag an den Drucker.
+. Der Systemnutzer bestätigt die Auswahl 
+. Das Softwaresystem erstellt eine Druckvorschau.
+. Der Systemnutzer löst den Druckauftrag aus.
+. Das Softwaresystem sendet den Druckauftrag an das Betriebssystem.
 . Der Use Case ist abgeschlossen.
 
 === Alternative Abläufe
 //Nutzen Sie alternative Abläufe für Fehlerfälle, Ausnahmen und Erweiterungen zum Standardablauf
+
 *Alternativer Ablauf 1*
-
-Wenn das Softwaresystem im Schritt 7 des Standardablauf keinen Drucker finden kann, dann 
-
-. Das Softwaresystem gibt eine Fehlermeldung aus.
-. _IF_ Systemnutzer erneute Suche nach Drucker fordert
-.. Das Softwaresystem sucht nach verfügbaren Druckern
-.. _IF_ Softwaresystem mindestens einen verfügbaren Drucker findet
-... Der Use Case wird im Schritt 7 fortgesetzt.
-. Der Systemnutzer bestätigt die Kenntnisnahme des Fehlers.
-. Der Use Case wird abgebrochen.
-
-*Alternativer Ablauf 2*
 
 Wenn der Systemnutzer im Schritt 4 des Standardablaufes keine Elemente für den Druck ausgewählt hat, dann
 
-. Das Softwaresystem gibt eine Fehlermeldung aus.
-. Der Systemnutzer bestätigt die Kenntnisnahme der Fehlermeldung.
-. Der Use Case wird im Schritt 2 fortgesetzt. 
+... Das Softwaresystem gibt eine Fehlermeldung aus.
+... Der Systemnutzer bestätigt die Kenntnisnahme der Fehlermeldung.
+... Der Standardablauf wird im Schritt 2 fortgesetzt. 
 
 
 === Wesentliche Szenarios
 //Szenarios sind konkrete Instanzen eines Use Case, d.h. mit einem konkreten Akteur und einem konkreten Durchlauf der o.g. Flows. Szenarios können als Vorstufe für die Entwicklung von Flows und/oder zu deren Validierung verwendet werden.
-* *SC1:* Der Systemnutzer wählt die Druckfunktion aus. Er bestätigt die Vorauswahl und die Druckvorschau. Anschließend wählt er einen Drucker aus der Liste und löst den Druckauftrag aus. Der Druckauftrag wurde erfolgreich erteilt.
+* *SC1:* Der Systemnutzer wählt die Druckfunktion aus. Er bestätigt die Vorauswahl. Das System gibt eine Druckvorschau aus. Der Systemnutzer löst den Druckauftrag aus. Das Softwaresystem übermittelt den Druckauftrag an das Betriebssystem. Der Druckauftrag wurde erfolgreich erteilt.
 
-* *SC2:*
+* *SC2:* Der Systemnutzer wählt die Druckfunktion aus. Er möchte andere Elemente drucken und wählt kein Element für den Druck aus. Der Systemnutzer bestätigt die Auswahl. Das Softwaresystem weist den Systemnutzer darauf hin, dass kein Element für den Druck ausgewählt wurde. Der Systemnutzer ändert seine Auswahl und fügt das Element R~se~ zur Auswahl hinzu. Er bestätigt die Auswahl. Das System gibt eine Druckvorschau aus. Der Systemnutzer löst den Druckauftrag aus. Das Softwaresystem übermittelt den Druckauftrag an das Betriebssystem. Der Druckauftrag wurde erfolgreich erteilt.
 
 
 === Nachbedingungen
 //Nachbedingungen beschreiben das Ergebnis des Use Case, z.B. einen bestimmten Systemzustand.
 Bei erfolgreicher Durchführung des Use Case muss folgende Nachbdingung erfüllt sein:
 
-* Der Druckauftrag wurde erteilt.
-* Die Druckdaten werden an den Drucker gesendet.
+* Der Druckauftrag wurde an das Betriebssystem gesendet.
 
 
-//=== Besondere Anforderungen
+=== Besondere Anforderungen
 //Besondere Anforderungen können sich auf nicht-funktionale Anforderungen wie z.B. einzuhaltende Standards, Qualitätsanforderungen oder Anforderungen an die Benutzeroberfläche beziehen.
 //==== <Besondere Anforderung 1>
 // Was soll alles ausgegeben werden? (Rechenweg, Ergebnisse, Grafik etc.?)
-
+* NFAU-1
+* NFAU-2
+* NFAU-3
+* Das System soll bekannte Symbole verwenden. Das bedeutet, dass zum Beispiel ein Drucker als Symbol für die Druckfunktion verwendet werden soll.

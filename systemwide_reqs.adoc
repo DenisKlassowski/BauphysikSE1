@@ -13,7 +13,7 @@ In diesem Dokument werden die systemweiten Anforderungen für das Projekt Bauphy
 * Qualitätsanforderungen für Benutzbarkeit, Zuverlässigkeit, Effizienz und Wartbarkeit (URPS) sowie 
 * zusätzliche Anforderungen (+) für technische, rechtliche, organisatorische Randbedingungen
 
-NOTE: Die funktionalen Anforderungen, die sich aus der Interaktion von Nutzern mit dem System ergeben, sind als Use Cases in einem https://github.com/fowado/BauphysikSE1/blob/master/UseCase/usecase_model.adoc[separaten Dokument] festgehalten.
+NOTE: Die funktionalen Anforderungen, die sich aus der Interaktion von Nutzern mit dem System ergeben, sind als Use Cases in einem separaten Dokument festgehalten.
 
 //== Systemweite funktionale Anforderungen
 //Angabe von system-weiten funktionalen Anforderungen, die nicht als Use Cases ausgedrückt werden können. Beispiele sind Drucken, Berichte, Authentifizierung, Änderungsverfolgung (Auditing), zeitgesteuerte Aktivitäten (Scheduling), Sicherheit / Maßnahmen zum Datenschutz
@@ -27,7 +27,7 @@ NOTE: Die funktionalen Anforderungen, die sich aus der Interaktion von Nutzern m
 
 Zur Überprüfung werden durch einen Testnutzer fehlerhafte Eingaben in mehrere Felder getätigt.
 
-*NFAU-2: Das System soll Hilfestellungen zu Eingabefeldern beinhalten.*
+*NFAU-2: Das System soll Hilfestellungen zu Eingabemöglichkeiten beinhalten.*
 
 Zur Überprüfung wird durch einen Testnutzer eine Beispielaufgabe mit dem Softwaresystem gelöst.
 
@@ -39,15 +39,13 @@ Zur Überprüfung wird durch einen Testnutzer eine Beispielaufgabe mit dem Softw
 
 *NFAR-1: Das System soll korrekte Ergebnisdaten ausgeben.*
 
-Zur Überprüfung wird mithilfe von mindestens zwei Beispielaufgaben der Auftraggeberin getestet, ob die Berechnungsergebnisse des Systems stimmen.
+Zur Überprüfung wird mithilfe von mehreren Beispielaufgaben getestet, ob die Berechnungsergebnisse des Systems stimmen.
 
-*NFAR-2: Das System soll die Eingabe unplausibler Daten verhindern.*
+*NFAR-2: Das System soll die Eingabe von unblausiblen Werten verhindern.*
 
 Zur Überprüfung wird getestet, ob die Eingabe von negativen Zahlenwerten, Buchstaben, oder Sonderzeichen in Eingabefelder verhindert wird. 
 
-*NFAR-3: Das System soll bei Eingabe von unplausiblen Daten eine Hinweismeldung ausgeben.*
 
-Zur Überprüfung wird getestet, ob bei Eingabe von negativen Zahlenwerten, Buchstaben, oder Sonderzeichen in Eingabefelder ein Hinweistext ausgegeben wird. 
 
 //Reliability includes the product and/or system's ability to keep running under stress and adverse conditions. Specify requirements for reliability acceptance levels, and how they will be measured and evaluated. Suggested topics are availability, frequency of severity of failures and recoverability.
 
@@ -59,6 +57,7 @@ Zur Überprüfung wird getestet, ob eine Beispielaufgabe mit 10 Wandschichten ko
 *NFAP-2: Das System soll die Speicherung der Materialdaten von 200 Materialien ermöglichen.*
 
 Zur Überprüfung wird getestet, ob die Materialdaten von 200 Materialien eingegeben werden können.
+
 //The performance characteristics of the system should be outlined in this section. Examples are response time, throughput, capacity and startup or shutdown times.
 
 === Wartbarkeit (Supportability)
@@ -82,7 +81,7 @@ Zur Überprüfung wird getestet, ob gespeicherte Materialdaten verändert werden
 
 === Interface Requirements
 //Angaben ergänzen, nicht relevante Unterpunkte streichen oder auskommentieren
-* Das System soll bekannte Symbole verwenden. Das bedeutet, dass zum Beispiel, ein Drucker als Symbol für die Druckfunktion verwendet werden soll.
+* Das System soll bekannte Symbole verwenden. Das bedeutet, dass zum Beispiel ein Drucker als Symbol für die Druckfunktion verwendet werden soll.
 * Das System soll für verschiedene Bildschirmgrößen nutzbar sein.
 * Hinweistexte zu Eingabefeldern sollen ausgeblendet werden können.
 

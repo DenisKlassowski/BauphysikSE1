@@ -35,3 +35,8 @@ Bei erfolgreicher Durchführung des Use Case muss folgende Nachbedingungen erfü
 
 * Die eingegebenen Daten wurden im Hinblick auf ihre Plausibilität validiert.
 
+=== Besondere Anforderungen
+* NFAU-1
+* NFAU-3
+* NFAR-2
+

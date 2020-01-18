@@ -34,3 +34,5 @@ include::usecase_spec_Plausibilität_prüfen.adoc[]
 
 include::usecase_spec_Daten_drucken.adoc[]
 
+include::usecase_spec_Materialdaten_ändern.adoc[]
+
