@@ -31,6 +31,7 @@ a|
 * Projektteam soll das machen, was die Auftraggeberin fordert
 * übergeordnetee Ziele: Prozesse des iterativen Vorgehens lernen, regelmäßiges Arbeiten am Projekt, Iterationstakt einhalten, immer alles aktuell halten
 * untergeordnetes Ziel: vollständige Lösung des Kundenproblems, in unserem Fall aber durchaus machbar
+* zur Abgabe Vorlage von Herrn Zirkelbach verwenden
 
 
 === Analystenbezogene Gesprächsinhalte

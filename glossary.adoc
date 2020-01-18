@@ -15,7 +15,7 @@ In diesem Dokument werden die wesentlichen Begriffe des Wärmedurchgangsrechner-
 [%header]
 |===
 |Begriff|	Definition und Erläuterung|	Synonyme
-//|Kommissionierung|Bereitstellung von Waren aus einem Lager entsprechend eines Kundenauftrags|(keine))|
+
 |Celsiusskala|Temperaturskala, bei der der Abstand zwischen dem Gefrier- und dem Siedepunkt des Wassers 100 Einheiten entspricht|
 |Kelvinskala|Temperaturskala, deren Nullpunkt der absolute Nullpunkt ist (-275,15°C)|
 |Systemnutzer|Bezeichnung für einen Akteur, der Berechnungen mit dem Softwaresystem durchführen möchte. Neben der Auftraggeberin sind auch Studierende und Lehrende potenzielle Systemnutzer.|
@@ -39,7 +39,6 @@ In diesem Dokument werden die wesentlichen Begriffe des Wärmedurchgangsrechner-
 |===
 
 == Physikalische Größen
-//Formelzeichen?
 [%header]
 |===
 |Abkürzung|	Bedeutung|Einheit|	Erläuterung
@@ -88,7 +87,6 @@ In diesem Dokument werden die wesentlichen Begriffe des Wärmedurchgangsrechner-
 |Temperaturdaten|Δϑ~k~, ϑ~k~, Δϑ~e~, ϑ~i~|Double|aus Zahlen, ≥ 0 (bei Kelvinskala), beziehungsweise ≥ -273,15 (bei Celsiusskala)|
 
 |Wärmewiderstandsdaten|	j, R~ges~, R~i~, R~T~, U|	Double | aus Zahlen, ≥0 | 
-
 
 |===
 
