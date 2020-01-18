@@ -9,13 +9,13 @@ Lukas Grambole <lukas.grambole@htw-dresden.de>; Michael Däbler <michael.daebler
 
 
 == Einführung
-Der Zweck dieses Dokuments ist es, die wesentlichen Bedarfe und Funktionalitäten des Wärmedurchgangsrechner-Systems zu sammeln, zu analysieren und zu definieren. Der Fokus liegt auf den Fähigkeiten, die von Stakeholdern und adressierten Nutzern benötigt werden, und der Begründung dieser Bedarfe. Die  Details, wie das Wärmedurchgangsrechner-System diese Bedarfe erfüllt, werden in der Use-Case und Supplementary Specification beschrieben.
+Der Zweck dieses Dokuments ist es, die wesentlichen Bedarfe und Funktionalitäten des Bauphysikrechner-Systems zu sammeln, zu analysieren und zu definieren. Der Fokus liegt auf den Fähigkeiten, die von Stakeholdern und adressierten Nutzern benötigt werden, und der Begründung dieser Bedarfe. Die  Details, wie das Bauphysikrechner-System diese Bedarfe erfüllt, werden in der Use-Case und Supplementary Specification beschrieben.
 
 === Zweck
 Der Zweck dieses Dokuments ist es, die wesentlichen Anforderungen an das System aus Sicht und mit den Begriffen der künftigen Anwender zu beschreiben.
 
 === Gültigkeitsbereich (Scope)
-Dieses Visions-Dokument bezieht sich auf das Wärmedurchgangsrechner-System, das von Team 14 entwickelt wird. Das System wird es der Professorin Rhena Krawietz erlauben, bauphysikalische Berechnungen zum Wärmedurchgangskoeffizienten durchführen zu können, um den Arbeitsaufwand bei der Erstellung und Korrektur von Aufgaben zu minimieren.
+Dieses Visions-Dokument bezieht sich auf das Bauphysikrechner-System, das von Team 14 entwickelt wird. Das System wird es der Professorin Rhena Krawietz erlauben, bauphysikalische Berechnungen zum Wärmedurchgangskoeffizienten durchführen zu können, um den Arbeitsaufwand bei der Erstellung und Korrektur von Aufgaben zu minimieren.
 
 === Definitionen, Akronyme und Abkürzungen
 siehe <<glossary.adoc#,Glossar>>

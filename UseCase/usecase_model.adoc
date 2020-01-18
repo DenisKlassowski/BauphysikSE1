@@ -17,18 +17,18 @@ Michael Daebler <michael.daebler@htw-dresden.de>; Lukas Grambole <lukas.grambole
 |UC4 |Materialdaten ändern |Systemnutzer|Änderung von Materialdaten
 |UC5|Berechnungsdaten speichern|Systemnutzer|Speicherung von Eingabe- und Ergebnisdaten
 |UC6|Berechnungsdaten laden|Systemnutzer|Laden von gespeicherten Eingabe- und Ergebnisdaten
-|UC7 |PDF ausgeben |Systemnutzer|Ausgabe auswählbarer Informationen in einem PDF-Dokument
-|UC8 |Parallelberechnung durchführen|Systemnutzer| Berechnung und Ausgabe von j, R~ges~, R~i~, R~T~, U, Δϑ~k~ und ϑ~k~ für Bauteile mit parallelen Wandschichten
-|UC9 |Tauwasserfreiheit ermitteln|Systemnutzer|Berechnung der Kondenswasserbildung an Bauteilen|
+|UC7 |Parallelberechnung durchführen|Systemnutzer| Berechnung und Ausgabe von j, R~ges~, R~i~, R~T~, U, Δϑ~k~ und ϑ~k~ für Bauteile mit parallelen Wandschichten
+|UC8 |Tauwasserfreiheit ermitteln|Systemnutzer|Berechnung der Kondenswasserbildung an Bauteilen|
 |===
 
 == Use Case Diagramm
-
+image::usecase_diagramm.jpg[]
 //Fügen Sie nachfolgend eine Liste aller Use-Cases per Include ein.
 //Dafür sollten Sie pro Use-Case eine Datei anlegen, die auf dem usecase_spec.adoc Template basiert.
 
 == Ausgearbeitete Use Cases
-include::usecase_spec_Berechnungen_durchführen.adoc[]
+
+include::usecase_spec_Reihenberechnung_durchführen.adoc[]
 
 include::usecase_spec_Plausibilität_prüfen.adoc[]
 
