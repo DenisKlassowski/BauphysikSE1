@@ -67,7 +67,7 @@ In diesem Dokument werden die wesentlichen Begriffe des Wärmedurchgangsrechner-
 
 |Δϑ|Temperaturunterschied|K|Temperaturunterschied zwischen Innen- und Außentemperatur, Betrag der Differenz aus ϑ~i~ und ϑ~e~
 
-|Δϑ~k~|Temperaturunterschied an einer Schichtgrenze k|°C|Produkt aus j und dem überwundenen Wärmewiderstand (R~si~, R~i~ *oder* R~se~)
+|Δϑ~k~|Temperaturunterschied an einer Schichtgrenze k|K|Produkt aus j und dem überwundenen Wärmewiderstand (R~si~, R~i~ *oder* R~se~)
 
 |λ~i~|Wärmeleitfähigkeit des Materials i |W⋅m^-1^⋅K^-1^|Stoffeigenschaft, welche den Wärmestrom durch ein Material bestimmt
 
