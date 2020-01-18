@@ -46,7 +46,7 @@ In diesem Dokument werden die wesentlichen Begriffe des Wärmedurchgangsrechner-
 //|UP|Unified Process|Vorgehensmodell für die Softwareentwicklung|
 |d~i~|Dicke des Materials i|mm, cm, dm, m |Beschreibung der Dicke der jeweiligen Wandschicht
 
-|i|Index-Nummer des Materials|1|Bezeichnung eines Materials innerhalb einer Rechenaufgabe
+|i|Index-Nummer des Materials|1|Nummerierung eines Materials innerhalb einer Rechenaufgabe
 
 |j|Wärmestromdichte|W⋅m^-2^|physikalische Größe zur Beschreibung der Änderung der thermischen Energie eines Bauteils, Produkt aus U und Δϑ
 
@@ -82,10 +82,13 @@ In diesem Dokument werden die wesentlichen Begriffe des Wärmedurchgangsrechner-
 [%header]
 |===
 |Bezeichnung|	Definition |	Format | Gültigkeitsregeln | Aliase
-|Ergebnisdaten|	j, R~ges~, R~i~, R~T~, U, Δϑ~k~, ϑ~k~ |	Double |  | 
-|Materialdaten|d~i~, R~i~ und λ~i~ aller Materialschichten sowie R~se~ und R~si~|Double|Materialdaten müssen aus Zahlen bestehen und größer oder gleich Null sein|
 
-|Temperaturdaten|Δϑ~k~, ϑ~k~, Δϑ~e~, ϑ~i~|Double|≥ 0 (bei Kelvinskala), beziehungsweise ≥ -273,15 (bei Celsiusskala)|
+|Materialdaten|d~i~, R~i~ und λ~i~ aller Materialschichten sowie R~se~ und R~si~|Double|aus Zahlen, ≥0|
+
+|Temperaturdaten|Δϑ~k~, ϑ~k~, Δϑ~e~, ϑ~i~|Double|aus Zahlen, ≥ 0 (bei Kelvinskala), beziehungsweise ≥ -273,15 (bei Celsiusskala)|
+
+|Wärmewiderstandsdaten|	j, R~ges~, R~i~, R~T~, U|	Double | aus Zahlen, ≥0 | 
+
 
 |===
 

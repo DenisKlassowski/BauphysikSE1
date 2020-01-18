@@ -11,15 +11,15 @@ Michael Daebler <michael.daebler@htw-dresden.de>; Lukas Grambole <lukas.grambole
 [%header]
 |===
 |Kurzbezeichnung |Name|Akteur(e)| Beschreibung 
-|UC1 |Berechnungen durchführen|Systemnutzer|Berechnung und Ausgabe von j, R~ges~, R~i~, R~T~, U, Δϑ~k~ und ϑ~k~ für in Reihe angeordnete Wandschichten
+|UC1 |Reihenberechnung durchführen|Systemnutzer|Berechnung und Ausgabe von j, R~ges~, R~i~, R~T~, U, Δϑ~k~ und ϑ~k~ für in Reihe angeordnete Wandschichten
 |UC2|Plausibilität prüfen|Systemnutzer|Überprüfung der Gültigkeit von Eingabedaten
 |UC3 |Daten drucken|Systemnutzer, Betriebssystem|Druck auswählbarer Informationen
 |UC4 |Materialdaten ändern |Systemnutzer|Änderung von Materialdaten
 |UC5|Berechnungsdaten speichern|Systemnutzer|Speicherung von Eingabe- und Ergebnisdaten
 |UC6|Berechnungsdaten laden|Systemnutzer|Laden von gespeicherten Eingabe- und Ergebnisdaten
 |UC7 |PDF ausgeben |Systemnutzer|Ausgabe auswählbarer Informationen in einem PDF-Dokument
-|UC8 |Komplexberechnung durchführen|Systemnutzer| Berechnung und Ausgabe von j, R~ges~, R~i~, R~T~, U, Δϑ~k~ und ϑ~k~ für Bauteile mit Wandschichten in Reihen- und Parallelanordnung
-|UC9 |Tauwasserfreiheit berechnen|Systemnutzer|Berechnung der Kondenswasserbildung an Bauteilen|
+|UC8 |Parallelberechnung durchführen|Systemnutzer| Berechnung und Ausgabe von j, R~ges~, R~i~, R~T~, U, Δϑ~k~ und ϑ~k~ für Bauteile mit parallelen Wandschichten
+|UC9 |Tauwasserfreiheit ermitteln|Systemnutzer|Berechnung der Kondenswasserbildung an Bauteilen|
 |===
 
 == Use Case Diagramm
