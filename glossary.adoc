@@ -84,7 +84,7 @@ In diesem Dokument werden die wesentlichen Begriffe des Wärmedurchgangsrechner-
 |===
 |Bezeichnung|	Definition |	Format | Gültigkeitsregeln | Aliase
 
-|Materialdaten|d~i~, R~i~ und λ~i~ aller Materialschichten sowie R~se~ und R~si~|Double|aus Zahlen, ≥0|
+|Materialdaten|d~i~, λ~i~, R~se~, R~si~|Double|aus Zahlen, ≥0|
 
 |Temperaturdaten|Δϑ~k~, ϑ~k~, Δϑ~e~, ϑ~i~|Double|aus Zahlen, ≥ 0 (bei Kelvinskala), beziehungsweise ≥ -273,15 (bei Celsiusskala)|
 
