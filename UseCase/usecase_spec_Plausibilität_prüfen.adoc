@@ -4,30 +4,30 @@
 Der Use Case beschreibt einen Vorgang zur Prüfung der Gültigkeit von Daten.
 
 === Kurzbeschreibung der Akteure
-*Auftraggeberin*
+*Systemnutzer*
 
 will korrekte Daten in Eingabefelder eingeben.
 
 === Vorbedingungen
 //Vorbedingungen müssen erfüllt, damit der Use Case beginnen kann, z.B. Benutzer ist angemeldet, Warenkorb ist nicht leer...
-Die Auftraggeberin hat einen Use Case gestartet, der eine Dateneingabe erfordert.
+Der Systemnutzer hat einen Use Case gestartet, der eine Dateneingabe erfordert.
 
 === Standardablauf (Basic Flow)
 //Der Standardablauf definiert die Schritte für den Erfolgsfall ("Happy Path")
 
-. Der Use Case beginnt, wenn die Auftraggeberin Daten eingibt.
-. _WHILE_ Auftraggeberin gibt Daten ein
+. Der Use Case beginnt, wenn der Systemnutzer Daten eingibt.
+. _WHILE_ Systemnutzer gibt Daten ein
 .. Das Softwaresystem prüft die Gültigkeit der Eingabedaten.
 .. _IF_ Softwaresystem erkennt eine ungültige Eingabe
 ... Das Softwaresystem verhindert die Eingabe.
-... Das Softwaresystem weist die Auftraggeberin auf eine Fehleingabe hin.
+... Das Softwaresystem weist den Systemnutzer auf eine Fehleingabe hin.
 . Der Use Case ist abgeschlossen.
 
 === Wesentliche Szenarios
 //Szenarios sind konkrete Instanzen eines Use Case, d.h. mit einem konkreten Akteur und einem konkreten Durchlauf der o.g. Flows. Szenarios können als Vorstufe für die Entwicklung von Flows und/oder zu deren Validierung verwendet werden.
-* *SC1:* Die Auftraggeberin gibt d~i~ ein. Der Eingabewert beträgt 260. Es wird keine ungültige Eingabe erkannt. Der Use Case ist abgeschlossen.
+* *SC1:* Der Systemnutzer gibt d~i~ ein. Der Eingabewert beträgt 260. Es wird keine ungültige Eingabe erkannt. Der Use Case ist abgeschlossen.
 
-* *SC2:* Die Auftraggeberin gibt d~i~ ein. Sie versucht 1o einzugeben. Das Softwaresystem verhindert die Eingabe des Buchstaben o und weist die Auftraggeberin auf eine ungültige Eingabe hin. Der Use Case ist abgeschlossen.
+* *SC2:* Der Systemnutzer gibt d~i~ ein. Sie versucht 1o einzugeben. Das Softwaresystem verhindert die Eingabe des Buchstaben o und weist den Systemnutzer auf eine ungültige Eingabe hin. Der Use Case ist abgeschlossen.
 
 === Nachbedingungen
 //Nachbedingungen beschreiben das Ergebnis des Use Case, z.B. einen bestimmten Systemzustand.

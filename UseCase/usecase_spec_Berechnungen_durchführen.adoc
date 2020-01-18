@@ -8,27 +8,27 @@ Der Use Case beschreibt einen Berechnungsvorgang für die Wärmewiderstandsdaten
 
 === Kurzbeschreibung der Akteure
 
-*Auftraggeberin*
+*Systemnutzer*
 
 will Berechnungen zum Wärmedurchgangskoeffizienten durchführen.
 
 ==== Vorbedingungen
 //Vorbedingungen müssen erfüllt, damit der Use Case beginnen kann, z.B. Benutzer ist angemeldet, Warenkorb ist nicht leer...
-Die Auftraggeberin hat das Softwaresystem gestartet.
+Der Systemnutzer hat das Softwaresystem gestartet.
 
 ==== Standardablauf (Basic Flow)
 //Der Standardablauf definiert die Schritte für den Erfolgsfall ("Happy Path")
 
-. Der Use Case beginnt, wenn die Auftraggeberin die Funktion der Wärmewiderstandsberechnung ausgewählt hat.
-. Auftraggeberin gibt Materialdaten in die dazugehörigen Eingabefelder ein.
+. Der Use Case beginnt, wenn der Systemnutzer die Funktion der Wärmewiderstandsberechnung ausgewählt hat.
+. Systemnutzer gibt Materialdaten in die dazugehörigen Eingabefelder ein.
 . _INCLUDE_ Plausibilität prüfen
-. _IF_ Auftraggeberin möchte gespeicherte Materialdaten verwenden
-.. Das Softwaresystem stellt der Auftraggeberin gespeicherte Materialdaten zur Verfügung.
-.. Die Auftraggeberin wählt gespeicherte Materialdaten aus.
-. _IF_ Auftraggeberin will einen Temperaturverlauf ermitteln
-.. Die Auftraggeberin gibt Temperaturdaten ein.
+. _IF_ Systemnutzer möchte gespeicherte Materialdaten verwenden
+.. Das Softwaresystem stellt dem Systemnutzer gespeicherte Materialdaten zur Verfügung.
+.. Die Systemnutzer wählt gespeicherte Materialdaten aus.
+. _IF_ Systemnutzer will einen Temperaturverlauf ermitteln
+.. Der Systemnutzer gibt Temperaturdaten ein.
 .. _INCLUDE_ Plausibilität prüfen
-. Die Auftraggeberin startet die Berechnung durch das Softwaresystem.
+. Der Systemnutzer startet die Berechnung durch das Softwaresystem.
 . Das Softwaresystem berechnet die Ergebnisdaten.
 . Das Softwaresystem gibt die gerundeten Ergebnisdaten aus.
 . Der Use Case ist abgeschlossen.
@@ -37,13 +37,13 @@ Die Auftraggeberin hat das Softwaresystem gestartet.
 //Nutzen Sie alternative Abläufe für Fehlerfälle, Ausnahmen und Erweiterungen zum Standardablauf
 *Alternativer Ablauf 1*
 
-Wenn die Auftraggeberin im Schritt 4b des Standardablaufs keine Daten auswählt, dann
+Wenn der Systemnutzer im Schritt 4b des Standardablaufs keine Daten auswählt, dann
 . Der Use Case wird im Schritt 5 fortgesetzt.
 
 ==== Wesentliche Szenarios
 //Szenarios sind konkrete Instanzen eines Use Case, d.h. mit einem konkreten Akteur und einem konkreten Durchlauf der o.g. Flows. Szenarios können als Vorstufe für die Entwicklung von Flows und/oder zu deren Validierung verwendet werden.
 
-* *SC1:* Die Auftraggeberin wählt die Berechnung des Wärmewiderstandsberechnung aus. Anschließend gibt die Auftraggeberin die Eingabedaten d~1~ = 2 cm; d~2~ = 24 cm; d~3~ = 5 cm; d~4~ = 1 cm; λ~1~ = 0,35 W⋅m^-1^⋅K^-1^; λ~2~ = 0,56 W⋅m^-1^⋅K^-1^; λ~3~ = 0,045 W⋅m^-1^⋅K^-1^; λ~4~ = 0,7 W⋅m^-1^⋅K^-1; ϑ~e~ = 4°C und ϑ~i~ = 21 °C ein. Die Auftraggeberin startet die Berechnung der Wärmedurchgangsdaten. Die Berechnung wurde erfolgreich abgeschlossen.
+* *SC1:* Der Systemnutzer wählt die Berechnung des Wärmewiderstandsberechnung aus. Anschließend gibt der Systemnutzer die Eingabedaten d~1~ = 2 cm; d~2~ = 24 cm; d~3~ = 5 cm; d~4~ = 1 cm; λ~1~ = 0,35 W⋅m^-1^⋅K^-1^; λ~2~ = 0,56 W⋅m^-1^⋅K^-1^; λ~3~ = 0,045 W⋅m^-1^⋅K^-1^; λ~4~ = 0,7 W⋅m^-1^⋅K^-1; ϑ~e~ = 4°C und ϑ~i~ = 21 °C ein. Der Systemnutzer startet die Berechnung der Wärmedurchgangsdaten. Die Berechnung wurde erfolgreich abgeschlossen.
 
 
 === Nachbedingungen

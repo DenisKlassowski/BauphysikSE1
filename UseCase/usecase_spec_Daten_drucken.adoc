@@ -7,14 +7,14 @@
 Der Use Case beschreibt die Vorbereitung des Drucks von ausgewählten Daten.
 
 === Kurzbeschreibung der Akteure
-*Auftraggeberin*
+*Systemnutzer*
 
 will auswählbare Eingabedaten und Berechnungsergebnisse drucken.
 
 
-*Druckersoftware*
+*Betriebssystem*
 
-verarbeitet Druckauftrag aus dem Softwaresystem und führt diesen aus.
+verarbeitet Druckauftrag aus dem Softwaresystem.
 
 
 === Vorbedingungen
@@ -26,19 +26,19 @@ verarbeitet Druckauftrag aus dem Softwaresystem und führt diesen aus.
 === Standardablauf (Basic Flow)
 //Der Standardablauf definiert die Schritte für den Erfolgsfall ("Happy Path")
 
-. Der Use Case beginnt, wenn die Auftraggeberin die Druckfunktion auswählt.
+. Der Use Case beginnt, wenn der Systemnutzer die Druckfunktion auswählt.
 . Das Softwaresystem gibt eine Vorauswahl von wählbaren Elementen für den Druck aus.
-. _IF_ Auftraggeberin möchte andere Elemente drucken
-.. Die Auftraggeberin ändert die Auswahl.
-.. _IF_ Auftraggeberin möchte ausgewählte Elemente als Standard für zukünftige Vorauswahl setzen
-... Die Auftraggeberin ordnet die Speicherung der getroffenen Auswahl als Standard an.
+. _IF_ Systemnutzer möchte andere Elemente drucken
+.. Der Systemnutzer ändert die Auswahl.
+.. _IF_ Systemnutzer möchte ausgewählte Elemente als Standard für zukünftige Vorauswahl setzen
+... Der Systemnutzer ordnet die Speicherung der getroffenen Auswahl als Standard an.
 ... Das Softwaresystem übernimmt die getroffene Auswahl als Standard für die Vorauswahl.
-. Die Auftraggeberin bestätigt die Auswahl    
+. Der Systemnutzer bestätigt die Auswahl    
 . Das Software erstellt eine Druckvorschau.
-. Die Auftraggeberin bestätigt die Druckvorschau.
+. Der Systemnutzer bestätigt die Druckvorschau.
 . Das Softwaresystem erstellt eine Liste von auswählbaren Druckern.
-. Die Auftraggeberin wählt einen Drucker aus.
-. Die Auftraggeberin erteilt den Druckauftrag. 
+. Der Systemnutzer wählt einen Drucker aus.
+. Der Systemnutzer erteilt den Druckauftrag. 
 . Das Softwaresystem sendet den Druckauftrag an den Drucker.
 . Der Use Case ist abgeschlossen.
 
@@ -49,25 +49,25 @@ verarbeitet Druckauftrag aus dem Softwaresystem und führt diesen aus.
 Wenn das Softwaresystem im Schritt 7 des Standardablauf keinen Drucker finden kann, dann 
 
 . Das Softwaresystem gibt eine Fehlermeldung aus.
-. _IF_ Auftraggeberin erneute Suche nach Drucker fordert
+. _IF_ Systemnutzer erneute Suche nach Drucker fordert
 .. Das Softwaresystem sucht nach verfügbaren Druckern
 .. _IF_ Softwaresystem mindestens einen verfügbaren Drucker findet
 ... Der Use Case wird im Schritt 7 fortgesetzt.
-. Die Auftraggeberin bestätigt die Kenntnisnahme des Fehlers.
+. Der Systemnutzer bestätigt die Kenntnisnahme des Fehlers.
 . Der Use Case wird abgebrochen.
 
 *Alternativer Ablauf 2*
 
-Wenn die Auftraggeberin im Schritt 4 des Standardablaufes keine Elemente für den Druck ausgewählt hat, dann
+Wenn der Systemnutzer im Schritt 4 des Standardablaufes keine Elemente für den Druck ausgewählt hat, dann
 
 . Das Softwaresystem gibt eine Fehlermeldung aus.
-. Die Auftraggeberin bestätigt die Kenntnisnahme der Fehlermeldung.
+. Der Systemnutzer bestätigt die Kenntnisnahme der Fehlermeldung.
 . Der Use Case wird im Schritt 2 fortgesetzt. 
 
 
 === Wesentliche Szenarios
 //Szenarios sind konkrete Instanzen eines Use Case, d.h. mit einem konkreten Akteur und einem konkreten Durchlauf der o.g. Flows. Szenarios können als Vorstufe für die Entwicklung von Flows und/oder zu deren Validierung verwendet werden.
-* *SC1:* Die Auftraggeberin wählt die Druckfunktion aus. Sie bestätigt die Vorauswahl und die Druckvorschau. Anschließend wählt sie einen Drucker aus der Liste und löst den Druckauftrag aus. Der Druckauftrag wurde erfolgreich erteilt.
+* *SC1:* Der Systemnutzer wählt die Druckfunktion aus. Er bestätigt die Vorauswahl und die Druckvorschau. Anschließend wählt er einen Drucker aus der Liste und löst den Druckauftrag aus. Der Druckauftrag wurde erfolgreich erteilt.
 
 * *SC2:*
 

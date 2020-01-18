@@ -18,6 +18,7 @@ In diesem Dokument werden die wesentlichen Begriffe des Wärmedurchgangsrechner-
 //|Kommissionierung|Bereitstellung von Waren aus einem Lager entsprechend eines Kundenauftrags|(keine))|
 |Celsiusskala|Temperaturskala, bei der der Abstand zwischen dem Gefrier- und dem Siedepunkt des Wassers 100 Einheiten entspricht|
 |Kelvinskala|Temperaturskala, deren Nullpunkt der absolute Nullpunkt ist (-275,15°C)|
+|Systemnutzer|Bezeichnung für einen Akteur, der Berechnungen mit dem Softwaresystem durchführen möchte. Neben der Auftraggeberin sind auch Studierende und Lehrende potenzielle Systemnutzer.|
 |Tauwasser|Wasser, welches aus Wasserdampf kondensiert ist|
 |Tauwasserfreiheit|bezeichnet den Zustand einer tauwasserfreien Wand|
 |Temperaturdiagramm|Diagramm mit der Wanddicke auf der x-Achse und der Temperatur auf der y-Achse|Temperaturverlauf

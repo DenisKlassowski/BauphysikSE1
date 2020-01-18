@@ -1,6 +1,6 @@
 = Vision BauphysikSE1
 Lukas Grambole <lukas.grambole@htw-dresden.de>; Michael Däbler <michael.daebler@htw-dresden.de>
-1.0, 17.01.2020 
+1.0, 18.01.2020 
 :toc: 
 :toc-title: Inhaltsverzeichnis
 :sectnums:
@@ -89,12 +89,14 @@ Beispiel
 //|[Benennung des Stakeholder-Typs.]	|[Kurze Beschreibung des Stakeholders.]	|[Fassen Sie die wesentlichen Verantwortlichkeiten des Stakeholder mit Bezug auf das zu entwickelnde System kurz zusammen, d.h. ihr besonderen Interessen. Beispiele: Dieser Stakeholder sorgt dafür, dass das System gewartet wird / dass die angezeigten Daten aktuell sind / überwacht den Projektfortschritt / usw.]
 
 |Auftraggeberin |	Prof. Dr.-Ing. Rhena Krawietz, Professorin für Technische Physik an der HTW Dresden	| führt Berechnungen mit dem Softwaresystem aus, um Aufgaben erstellen und kontrollieren zu können
-|Projektteam|	Team 14	| versucht Kundenwünsche bei der Entwicklung des Softwaresystems umzusetzen
-|Team-Coach|	Prof. Dr.-Ing. Jürgen Anke, Professor für Softwaretechnologie und Informationssysteme an der HTW Dresden	| unterstützt und bewertet die Arbeit des Projektteams
-|Druckersoftware|Software von handelsüblichen Druckern|verarbeitet Druckauftrag aus dem Softwaresystem und führt diesen aus
-|Wartungspersonal|	Personen mit Wissen und Fähigkeiten im Bereich der Informatik	| aktualisieren Softwaresystem bei veränderten Berechnungsvorschriften 
-|Qt|Lizenzgeber|legt Grundlagen für die Lizenzierung des Softwaresystems fest
+|Betriebssystem|Betriebssystem des verwendeten Computers|verarbeitet Druckaufträge aus dem Softwaresystem
 |Gesetzgeber|Vorgabe von rechtlichen Rahmenbedingungen | gibt Gesetze vor und überwacht deren Einhaltung, insbesondere im Hinblick auf die Lizenzierung
+|Lehrende|Lehrende der Hochschule für Technik und Wirtschaft Dresden mit Bezug zum Bauwesen|führen möglicherweise in Zukunft Berechnungen mit dem Softwaresystem aus
+|Projektteam|	Team 14	| versucht Kundenwünsche bei der Entwicklung des Softwaresystems umzusetzen
+|Qt|Lizenzgeber|legt Grundlagen für die Lizenzierung des Softwaresystems fest
+|Studierende|Studierende des Bauingenieurwesens oder anderer Studiengänge mit Studienschwerpunkt im Bauwesen|erhalten Prüfungsbewertungen auf Grundlage der Berechnungen des Softwaresystems, führen möglicherweise in Zukunft Berechnungen mit dem Softwaresystem aus
+|Team-Coach|	Prof. Dr.-Ing. Jürgen Anke, Professor für Softwaretechnologie und Informationssysteme an der HTW Dresden	| unterstützt und bewertet die Arbeit des Projektteams
+|Wartungspersonal|	Personen mit Wissen und Fähigkeiten im Bereich der Informatik	| aktualisieren Softwaresystem bei veränderten Berechnungsvorschriften 
 
 |===
 
@@ -104,12 +106,13 @@ Beispiel
 
 *Benutzerumgebung der Auftraggeberin*
 
-* Die Auftraggeberin wünscht, dass das Softwaresystem ausschließlich an ihrer Benutzerumgebung ausgerichtet wird.
+* Die Auftraggeberin wünscht, dass das Softwaresystem ausschließlich an ihrer Benutzerumgebung ausgerichtet wird. Die Anforderungen potenzieller zukünftiger Systemnutzer an die Benutzerumgebung sollen vernachlässigt werden.
 * Die Auftraggeberin möchte das Softwaresystem alleine benutzen.
 * Die Auftraggeberin möchte das Softwaresystem auf Laptops und Desktop-PCs verwenden.
 * Zum Zeitpunkt der Auslieferung wird die Auftraggeberin das Betriebssystem Windows 10 nutzen.
 * Das Softwaresystem soll von einem USB-Speichermedium aus lauffähig sein.
 * Die Auftraggeberin möchte das Softwaresystem offline nutzen können.
+* Das Softwaresystem soll mit einer handelsüblichen Computermaus und einer handelsüblichen Tastatur bedient werden können.
 
 
 
