@@ -42,9 +42,10 @@ _alternativ:_ Die folgenden Aufgaben werden in dieser Iteration bearbeitet:
 [%header, cols="3,1,1,1,2,1,1,1,1"]
 |===
 |Aufgabe bzw. Beschreibung	|Priorität  	|Schätzung der Größe (Punkte)	|Status|	Referenzen	|geplante Iteration| Zugewiesen (Name) |	Gearbeitete Stunden | Schätzung der verbleibenden Stunden
-| Vision und Glossar aktualisieren | hoch   | 3 | NOT DONE | x | I2 | Grambole Lukas Däbler Michael | BITTE EINTRAGEN | 3
-| Use-Cases ausarbeiten und vertiefen | hoch   | 4 | NOT DONE | x | I2 | Grambole Lukas Däbler Michael | BITTE EINTRAGEN | 3
-| Nichtfunktionale Anforderungen erfassen | hoch   | 2 | NOT DONE | x | I2 | Grambole Lukas Däbler Michael | BITTE EINTRAGEN | 1
+| Vision und Glossar aktualisieren | hoch   | 3 | DONE | x | I2 |Grambole Lukas 
+Däbler Michael | 2 | 2
+| Use-Cases ausarbeiten und vertiefen | hoch   | 4 | DONE | x | I2 | Grambole Lukas Däbler Michael | 5 | 3
+| Nichtfunktionale Anforderungen erfassen | hoch   | 2 | DONE | x | I2 | Grambole Lukas Däbler Michael | 2 | 2
 |Architecture Notebook und Tech. Vision aktualisieren| hoch |2|NOT DONE|x|I2| Grieß Christian |BITTE EINTRAGEN| 2
 |Gesprächsprotokoll erfassen und nachbearbeiten|hoch|2|NOT DONE|x|I2|Baburkin Yewgenji Fritzsche Felix|BITTE EINTRAGEN!|?
 |UI Entwurf Wireframe erstellen|hoch|2|NOT DONE|x|I2|Fritzsche Felix|BITTE EINTRAGEN|2
