@@ -10,7 +10,7 @@ Der Use Case beschreibt einen Berechnungsvorgang für die Wärmewiderstandsdaten
 
 *Systemnutzer*
 
-will Berechnungen zum Wärmedurchgangskoeffizienten durchführen.
+will Wärmewiderstandsberechnungen durchführen.
 
 ==== Vorbedingungen
 //Vorbedingungen müssen erfüllt, damit der Use Case beginnen kann, z.B. Benutzer ist angemeldet, Warenkorb ist nicht leer...
@@ -20,7 +20,7 @@ Der Systemnutzer hat das Softwaresystem gestartet.
 //Der Standardablauf definiert die Schritte für den Erfolgsfall ("Happy Path")
 
 . Der Use Case beginnt, wenn der Systemnutzer die Funktion der Wärmewiderstandsberechnung ausgewählt hat.
-. Systemnutzer gibt Materialdaten in die dazugehörigen Eingabefelder ein.
+. Der Systemnutzer gibt Materialdaten ein.
 . _INCLUDE_ Plausibilität prüfen
 . _IF_ Systemnutzer möchte gespeicherte Materialdaten verwenden
 .. Das Softwaresystem stellt dem Systemnutzer gespeicherte Materialdaten zur Verfügung.
@@ -29,8 +29,14 @@ Der Systemnutzer hat das Softwaresystem gestartet.
 .. Der Systemnutzer gibt Temperaturdaten ein.
 .. _INCLUDE_ Plausibilität prüfen
 . Der Systemnutzer startet die Berechnung durch das Softwaresystem.
-. Das Softwaresystem berechnet die Ergebnisdaten.
-. Das Softwaresystem gibt die gerundeten Ergebnisdaten aus.
+. Das Softwaresystem berechnet die Wärmewiderstandsdaten.
+. Das Softwaresystem gibt die Wärmewiderstandsdaten aus.
+. _IF_ Systemnutzer will einen Temperaturverlauf ermitteln
+.. Der Systemnutzer gibt Temperaturdaten ein.
+.. _INCLUDE_ Plausibilität prüfen
+.. Der Systemnutzer bestätigt seine Eingaben.
+.. Das Softwaresystem ermittelt den Temperaturverlauf.
+.. Das Softwaresystem gibt den Temperaturverlauf aus.
 . Der Use Case ist abgeschlossen.
 
 ==== Alternative Abläufe
@@ -43,7 +49,7 @@ Wenn der Systemnutzer im Schritt 4b des Standardablaufs keine Daten auswählt, d
 ==== Wesentliche Szenarios
 //Szenarios sind konkrete Instanzen eines Use Case, d.h. mit einem konkreten Akteur und einem konkreten Durchlauf der o.g. Flows. Szenarios können als Vorstufe für die Entwicklung von Flows und/oder zu deren Validierung verwendet werden.
 
-* *SC1:* Der Systemnutzer wählt die Berechnung des Wärmewiderstandsberechnung aus. Anschließend gibt der Systemnutzer die Eingabedaten d~1~ = 2 cm; d~2~ = 24 cm; d~3~ = 5 cm; d~4~ = 1 cm; λ~1~ = 0,35 W⋅m^-1^⋅K^-1^; λ~2~ = 0,56 W⋅m^-1^⋅K^-1^; λ~3~ = 0,045 W⋅m^-1^⋅K^-1^; λ~4~ = 0,7 W⋅m^-1^⋅K^-1; ϑ~e~ = 4°C und ϑ~i~ = 21 °C ein. Der Systemnutzer startet die Berechnung der Wärmedurchgangsdaten. Die Berechnung wurde erfolgreich abgeschlossen.
+* *SC1:* Der Systemnutzer wählt die Funktion der Wärmewiderstandsberechnung aus. Anschließend gibt der Systemnutzer die Eingabedaten d~1~ = 2 cm; d~2~ = 24 cm; d~3~ = 5 cm; d~4~ = 1 cm; λ~1~ = 0,35 W⋅m^-1^⋅K^-1^; λ~2~ = 0,56 W⋅m^-1^⋅K^-1^; λ~3~ = 0,045 W⋅m^-1^⋅K^-1^; λ~4~ = 0,7 W⋅m^-1^⋅K^-1; ϑ~e~ = 4°C und ϑ~i~ = 21 °C ein. Der Systemnutzer startet die Berechnung der Wärmedurchgangsdaten. Das Softwaresystem berechnet die Wärmewiderstandsdaten und gibt R~a~ = 0,0571 m^2^⋅K⋅W^-1^, R~b~ = 0,4286 m^2^⋅K⋅W^-1^, R~c~ = 1,1111 m^2^⋅K⋅W^-1^, R~d~ = 0,0143 m^2^⋅K⋅W^-1^, R~ges~ = 1,6111 m^2^⋅K⋅W^-1^, R~T~ = 1,7811 m^2^⋅K⋅W^-1^, U~W~ = 0,56 W⋅m^-2^⋅K^-1^, j = 9,54 W⋅m^-2^ aus. Die Berechnung wurde erfolgreich abgeschlossen.
 
 
 === Nachbedingungen

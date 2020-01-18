@@ -49,8 +49,6 @@ In diesem Dokument werden die wesentlichen Begriffe des Wärmedurchgangsrechner-
 
 |j|Wärmestromdichte|W⋅m^-2^|physikalische Größe zur Beschreibung der Änderung der thermischen Energie eines Bauteils, Produkt aus U und Δϑ
 
-|n|Anzahl paralleler Schichten|1|Angabe der Anzahl paralleler Schichten einer Wand
-
 |R~ges~|Summe aller Wärmedurchlasswiderstände|m^2^⋅K⋅W^-1^|Zwischenwert, Summe aus R~1~, R~2~, ..., R~n~
 
 |R~i~|Wärmedurchlasswiderstand des Materials i |m^2^⋅K⋅W^-1^|Widerstand, den eine Materialschicht dem Wärmestrom entgegensetzt, Quotient aus Materialdicke und Wärmeleitfähigkeit
