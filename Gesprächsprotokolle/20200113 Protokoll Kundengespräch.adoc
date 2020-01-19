@@ -1,0 +1,36 @@
+= Protokoll: Kundengespräch 2019-12-06
+Yewgenij Baburkin <yewgenij.baburkin@htw-dresden.de>
+17.01.2019 
+:toc: 
+:toc-title: Inhaltsverzeichnis
+:sectnums:
+// Platzhalter für weitere Dokumenten-Attribute 
+
+
+
+== Fragen zur inhaltlicher Erweiterung
+
+. Was könnte man für Sie noch weiteres machen?
+- Kunde beschreibt das bereits bestehende Problem
+- erweiterbare Datenbank, wo man Materialdaten vorspeichert
+
+_Anm. der Redaktion: folgende Punkte wurden aus Leseflussgründen hierhin verschoben_
+
+- Möglichkeit Wärmeübergangswiderstände zu berechnen, im Voraus zu wählen bzw. frei einzugeben
+- (optional) Berechnung von komplexen Bauteilen (spez. Berechnungsverfahren mit unteren und oberen Grenzwerten), Kunde lässt Beispielaufgaben mit Lösung zukommen
+- Temperaturverlaufberechnung
+** Angabe Innen- und Außentemperatur
+** Annahme: Verlauf innerhalb der Schichten linear
+** Annahme: Grenzfläche zw-. den Schichten haben die gleiche Temperatur
+** Berechnung an jeder Grenzfläche -> in jeder Schicht
+- Untersuchung der parallelen Schichten auf Tauwasserkondensation
+** dafür nötig:
+*** Temperaturverlauf
+*** Wasserdampfpartialdruck
+*** Dampfdurchgang (Glaser-Verfahren)
+*** Dampfdiffusionswiderstandszahl
+*** Sättigungsdampfdrucktabelle
+- neues Verfahren: Schrittweise abarbeiten (rechnerisch)
+- vereinfachstes Berechnungsverfahren (abh. von Windgeschwindigkeit, Temp, ...)
+
+
