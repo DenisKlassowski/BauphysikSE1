@@ -14,7 +14,7 @@ Gruppe 14
 |Meilenstein
 |Datum
 |Beginn der Iteration | 05.01.2020
-|zweites Kundengespräch abhalten|
+|zweites Kundengespräch abhalten| 13.01.2020
 |Vision erweitern |
 |Mögliche Risiken notieren|
 |Architecture und Technical Vision anpassen|
@@ -47,9 +47,9 @@ Däbler Michael | 2 | 2
 | Use-Cases ausarbeiten und vertiefen | hoch   | 4 | DONE | x | I2 | Grambole Lukas Däbler Michael | 5 | 3
 | Nichtfunktionale Anforderungen erfassen | hoch   | 2 | DONE | x | I2 | Grambole Lukas Däbler Michael | 2 | 2
 |Architecture Notebook und Tech. Vision aktualisieren| hoch |2|NOT DONE|x|I2| Grieß Christian |BITTE EINTRAGEN| 2
-|Gesprächsprotokoll erfassen und nachbearbeiten|hoch|2|NOT DONE|x|I2|Baburkin Yewgenji Fritzsche Felix|BITTE EINTRAGEN!|?
+|Gesprächsprotokoll erfassen und nachbearbeiten|hoch|2|DONE|x|I2|Baburkin Yewgenji Fritzsche Felix|3|0
 |UI Entwurf Wireframe erstellen|hoch|2|NOT DONE|x|I2|Fritzsche Felix|BITTE EINTRAGEN|2
-|Rikst List aktualisieren|hoch|2|NOT DONE|x|I2|Denis Klassowski|BITTE EINTAGEN|2
+|Risk List aktualisieren|hoch|2|NOT DONE|x|I2|Denis Klassowski|BITTE EINTAGEN|2
 |===
 								
 								
@@ -59,7 +59,7 @@ Däbler Michael | 2 | 2
 [%header, cols="2,1,3"]
 |===
 |Problem	| Status |	Notizen
-|x	| x |	x
+|Frage zu Aktualisierungsschnittstellen nicht protokollisiert | PENDING |	Diese Frage wurde im Rahmen des 2. Kundengesprächs gestellt, jedoch nicht ausreichend protokolliert. Entweder können mir (Protokollant, Yewgenij) diese Infos zugespielt werden oder wir fragen beim nächsen Kundengespräch einfach ein weiteres Mal.
 |===
 		
 
