@@ -31,6 +31,7 @@ Die Software ist für Speziallisten in dem Gebiet der Bauphysik und soll für di
 == Annahmen und Abhängigkeiten
 . Nutzer verwenden Dekstop-PC oder Laptop mit USB-Port.
 . Endgeräte laufen unter Windows 10.
+. Deutsche Lokalisation
 . Eingabegeräte sind Maus(Touchpad) und Tastatur.
 . Keine Maßnahmen zur Barrierefreiheit nötig.
 . Nutzung ausschließlich durch Speziallisten der Bauphysik.
