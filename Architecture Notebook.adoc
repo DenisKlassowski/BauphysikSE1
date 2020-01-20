@@ -147,5 +147,4 @@ Folgende Sichten werden empfohlen:
 
 === Use cases
 = Reference Documentation
-Use cases
 include::https://github.com/fowado/BauphysikSE1/blob/master/UseCase/usecase_model.adoc
