@@ -19,7 +19,7 @@ Dieses Dokument beschreibt die Philosophie, Entscheidungen, Nebenbedingungen, Be
 
 
 
-== Architektonische Ziele und Philosophie
+== Architekturziele und Philosophie
 
 Folgende Architektur bezieht sich auf eine Softwarelösung die ohne Installation über ein USB-Speichermedium auszuführen sein soll. +
 Die Auftraggebende Person wünscht sich ein, vom Internet, unabhängiges Programm. +
@@ -38,7 +38,7 @@ Die Software ist für Speziallisten in dem Gebiet der Bauphysik und soll für di
 
 //[List the assumptions and dependencies that drive architectural decisions. This could include sensitive or critical areas, dependencies on legacy interfaces, the skill and experience of the team, the availability of important resources, and so forth]
 
-== Architektonisch wichtige Voraussetzungen
+== Architektur-relevante Anforderungen
  Architecturally significant requirements are those requirements that play an important role in determining the architecture of the system.  Such requirements require special attention. Not all requirements have equal significance with regards to the architecture.
 
 Architecturally significant requirements are a subset of the requirements that need to be satisfied before the architecture can be considered "stable". Typically, these are requirements that are technically challenging, technically constraining, or central to the system's purpose. Furthermore, the system will generally be more sensitive to changes against architecturally significant requirements, so identifying and communicating this subset will help others understand the potential implications of change.
@@ -70,7 +70,7 @@ Es gibt keine wichtigen Vorraussetzungen.
 //Fügen Sie eine Referenz / Link zu den Anforderungen ein, die implementiert werden müssen, um die Architektur zu erzeugen.
 
 
-== Entscheidungen, Einschränkungen, Begründungen 
+== Entscheidungen, Nebenbedingungen und Begründungen
 
 //[List the decisions that have been made regarding architectural approaches and the constraints being placed on the way that the developers build the system. These will serve as guidelines for defining architecturally significant parts of the system. Justify each decision or constraint so that developers understand the importance of building the system according to the context created by those decisions and constraints. This may include a list of DOs and DON’Ts to guide the developers in building the system.] 
 
@@ -105,7 +105,7 @@ Es gibt keine wichtigen Vorraussetzungen.
 //Accept Digital Rights Management terms, please see the GPL FAQ
 //Take special consideration when attempting to enforce software patents FAQ
 
-== Architektonische Mechanismen 
+== Architekturmechanismen
 Persistenz ? +
 https://de.wikipedia.org/wiki/Persistenz_(Informatik) +
 
