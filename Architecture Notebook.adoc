@@ -146,4 +146,4 @@ Folgende Sichten werden empfohlen:
 //Beschreibt die physischen Knoten (Rechner) des Systems, der Prozesse, Threads und Komponenten, die in diesen Knoten ausgeführt werden. Diese Sicht wird nicht benötigt, wenn das System in einem einzelnen Prozess oder Thread ausgeführt wird.
 
 === Use cases
-include::usecase_spec_Reihenberechnung_durchführen.adoc[]
+include::BauphysikSE1/UseCase/usecase_spec_Reihenberechnung_durchführen.adoc[]
