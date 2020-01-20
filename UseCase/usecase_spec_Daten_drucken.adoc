@@ -70,4 +70,5 @@ Bei erfolgreicher Durchführung des Use Case muss folgende Nachbdingung erfüllt
 * NFAU-1
 * NFAU-2
 * NFAU-3
+* NFAU-4
 * Das System soll bekannte Symbole verwenden. Das bedeutet, dass zum Beispiel ein Drucker als Symbol für die Druckfunktion verwendet werden soll.

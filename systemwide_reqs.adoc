@@ -33,6 +33,10 @@ Zur Überprüfung wird durch einen Testnutzer eine Beispielaufgabe mit dem Softw
 
 *NFAU-3: Die Sprache für die Benutzeroberfläche ist deutsch.*
 
+*NFAU-4: Das System muss von einem Nutzer mit Fachwissen im Bereich der Bauphysik bedient werden können.* 
+
+Zur Überprüfung wird ein Testnutzer mit Fachwissen im Bereich der Bauphysik eine Beispielaufgabe mit dem System lösen.
+
 //Beschreiben Sie Anforderungen für Eigenschaften wie einfache Bedienung, einfaches Erlenern, Standards für die Benutzerfreunlichkeit, Lokalisierung (landesspezifische Anpassungen von Sprache, Datumsformaten, Währungen usw.) 
 
 === Zuverlässigkeit (Reliability)
@@ -77,6 +81,7 @@ Zur Überprüfung wird getestet, ob gespeicherte Materialdaten verändert werden
 * Das System soll auf einem handelsüblichen Computer benutzbar sein.
 * Das System muss mit dem Betriebssystem Windows 10 nutzbar sein.
 * Das System muss von einem handelsüblichen USB-Speichermedium aus lauffähig sein.
+* Eingaben in das System sollen mit einer handelsüblichen Maus und einer handelsüblichen Tastatur möglich sein.
 * Es muss eine Open-Source-Anwendung entwickelt werden.
 
 === Interface Requirements

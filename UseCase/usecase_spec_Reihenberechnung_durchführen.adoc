@@ -80,6 +80,7 @@ Bei erfolgreicher Durchführung des Use Case muss folgende Nachbedingungen erfü
 //Besondere Anforderungen können sich auf nicht-funktionale Anforderungen wie z.B. einzuhaltende Standards, Qualitätsanforderungen oder Anforderungen an die Benutzeroberfläche beziehen.
 * NFAU-2
 * NFAU-3
+* NFAU 4
 * NFAR-1
 * NFAP-1
 
