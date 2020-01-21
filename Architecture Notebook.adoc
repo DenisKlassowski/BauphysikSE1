@@ -76,7 +76,7 @@ Es gibt keine wichtigen Vorraussetzungen.
 
 . Software wird mit dem GUI tool PyQT in Python geschrieben (GNU / GPL License). 
 // Für unsere Developer PyQT: https://www.qt.io/blog/2018/12/18/qt-python-5-12-released GNU / GPL License) +
-.. Obwohl unsere Developer keine Erfahrung mit Python/QT haben, wollen wir dieses Projekt nutzen uns Grundkenntnisse anzueignen.
+.. Obwohl unsere Developer keine Erfahrung mit Python/QT haben, wollen wir dieses Projekt nutzen um uns Grundkenntnisse anzueignen.
 
 //ANALYSTEN TEXT
 
