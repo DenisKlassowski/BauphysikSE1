@@ -19,7 +19,7 @@ will Materialdaten hinzufügen, verändern, oder löschen.
 === Standardablauf (Basic Flow)
 //Der Standardablauf definiert die Schritte für den Erfolgsfall ("Happy Path")
 
-. Der Use Case beginnt, wenn der Systemnutzer die Funktion zur Editierung von Materialdaten öffnet.
+. Der Use Case beginnt, wenn der Systemnutzer die Funktion zur Änderung von Materialdaten öffnet.
 . Das Softwaresystem erstellt eine Übersicht mit allen gespeicherten Materialdaten.
 . _IF_ Systemnutzer möchte ein Material hinzufügen
 .. Der Systemnutzer öffnet die Funktion zum Hinzufügen eines Materials

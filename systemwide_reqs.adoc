@@ -80,6 +80,12 @@ NOTE: Die funktionalen Anforderungen, die sich aus der Interaktion von Nutzern m
 
 * Zur Überprüfung wird getestet, ob die Materialdaten von 200 Materialien eingegeben werden können.
 
+*NFAP-3 Das System soll Ergebnisdaten mit vier Nachkommastellen ausgeben.*
+
+* Diese NFA bezieht sich auf UC1, UC7 und UC8.
+
+* Zur Überprüfung löst ein Testnutzer eine Beispielaufgabe und prüft die Anzahl der Nachkommastellen bei den Ergebnisdaten.
+
 //The performance characteristics of the system should be outlined in this section. Examples are response time, throughput, capacity and startup or shutdown times.
 
 === Wartbarkeit (Supportability)

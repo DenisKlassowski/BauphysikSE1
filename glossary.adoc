@@ -25,6 +25,7 @@ In diesem Dokument werden die wesentlichen Begriffe des Wärmedurchgangsrechner-
 |Tauwasser|Wasser, welches aus Wasserdampf kondensiert ist|
 |Tauwasserfreiheit|bezeichnet den Zustand einer tauwasserfreien Wand|
 |Temperaturdiagramm|Diagramm mit der Wanddicke auf der x-Achse und der Temperatur auf der y-Achse|Temperaturverlauf
+|Vorauswahl|Gruppe von vorab ausgewählten Elementen|
 |Wärmestrom|gibt die übertragene Wärmemenge pro Zeiteinheit an|Wärmefluss
 |===
 		

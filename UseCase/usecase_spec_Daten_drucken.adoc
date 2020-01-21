@@ -21,7 +21,7 @@ will auswählbare Eingabedaten und Berechnungsergebnisse drucken.
 //Der Standardablauf definiert die Schritte für den Erfolgsfall ("Happy Path")
 
 . Der Use Case beginnt, wenn der Systemnutzer die Druckfunktion auswählt.
-. Das Softwaresystem gibt eine Vorauswahl von berechneten Elementen für den Druck aus.
+. Das Softwaresystem gibt eine Vorauswahl von Elementen für den Druck aus.
 . _IF_ Systemnutzer möchte andere Elemente drucken
 .. Der Systemnutzer ändert die Auswahl.
 .. _IF_ Systemnutzer möchte ausgewählte Elemente als Standard für zukünftige Vorauswahl setzen
@@ -57,3 +57,7 @@ Wenn der Systemnutzer im Schritt 4 des Standardablaufes keine Elemente für den 
 Bei erfolgreicher Durchführung des Use Case muss folgende Nachbdingung erfüllt sein:
 
 * Der Druckauftrag wurde an das Betriebssystem gesendet.
+
+=== Use Case Diagramm
+
+image::usecase_Daten_drucken.jpg[]
