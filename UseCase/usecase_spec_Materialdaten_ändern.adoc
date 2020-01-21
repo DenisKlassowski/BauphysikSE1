@@ -1,10 +1,10 @@
 //Nutzen Sie dieses Template als Grundlage für die Spezifikation *einzelner* Use-Cases. Diese lassen sich dann per Include in das Use-Case Model Dokument einbinden (siehe Beispiel dort).
-== Use Case: Materialdaten editieren
+== Use Case: Materialdaten ändern
 
 === Kurzbeschreibung
 //<Kurze Beschreibung des Use Case>
 
-Der Use Case beschreibt einen Vorgang zur Editierung von Materialdaten.
+Der Use Case beschreibt einen Vorgang zur Änderung, Löschung, oder Erstellung von Materialdaten.
 
 === Kurzbeschreibung der Akteure
 *Systemnutzer*
