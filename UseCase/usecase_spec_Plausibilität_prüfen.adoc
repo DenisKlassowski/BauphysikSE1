@@ -27,7 +27,7 @@ Der Systemnutzer hat einen Use Case gestartet, der eine Dateneingabe erfordert.
 //Szenarios sind konkrete Instanzen eines Use Case, d.h. mit einem konkreten Akteur und einem konkreten Durchlauf der o.g. Flows. Szenarios können als Vorstufe für die Entwicklung von Flows und/oder zu deren Validierung verwendet werden.
 * *SC1:* Der Systemnutzer gibt d~i~ ein. Der Eingabewert beträgt 260. Es wird keine ungültige Eingabe erkannt. Der Use Case ist abgeschlossen.
 
-* *SC2:* Der Systemnutzer gibt d~i~ ein. Sie versucht 1o einzugeben. Das Softwaresystem verhindert die Eingabe des Buchstaben o und weist den Systemnutzer auf eine ungültige Eingabe hin. Der Use Case ist abgeschlossen.
+* *SC2:* Der Systemnutzer gibt d~i~ ein. Er versucht 1o einzugeben. Das Softwaresystem verhindert die Eingabe des Buchstaben o und weist den Systemnutzer auf eine ungültige Eingabe hin. Der Use Case ist abgeschlossen.
 
 === Nachbedingungen
 //Nachbedingungen beschreiben das Ergebnis des Use Case, z.B. einen bestimmten Systemzustand.
