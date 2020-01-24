@@ -1,6 +1,6 @@
 = Glossar BauphysikSE1
 Lukas Grambole <lukas.grambole@htw-dresden.de>; Michael Däbler <daebler.michael@htw-dresden.de>
-1.0, 17.01.2019 
+1.0, 24.01.2019 
 :toc: 
 :toc-title: Inhaltsverzeichnis
 //:sectnums:
@@ -16,6 +16,7 @@ In diesem Dokument werden die wesentlichen Begriffe des Wärmedurchgangsrechner-
 |===
 |Begriff|	Definition und Erläuterung|	Synonyme
 
+|Auswahl|Gruppe von Elementen, welche für eine nachfolgende Aktivität ausgewählt wurden|
 |Berechnete Elemente|Physikalische Größen und Diagramme, welche im Rahmen eines Berechnungsvorgangs ermittelt wurden|
 |Eingabedaten|Daten, welche ein Systemnutzer in ein Softwaresystem eingibt|
 |Ergebnisdaten|Daten, welche infolge einer Berechnung ausgegeben werden, abhängig von Eingabedaten und Art der Berechnung|
@@ -25,7 +26,7 @@ In diesem Dokument werden die wesentlichen Begriffe des Wärmedurchgangsrechner-
 |Tauwasser|Wasser, welches aus Wasserdampf kondensiert ist|
 |Tauwasserfreiheit|bezeichnet den Zustand einer tauwasserfreien Wand|
 |Temperaturdiagramm|Diagramm mit der Wanddicke auf der x-Achse und der Temperatur auf der y-Achse|Temperaturverlauf
-|Vorauswahl|Gruppe von vorab ausgewählten Elementen|
+|Vorauswahl|Gruppe von Elementen, welche vorab ausgewählt wurden|
 |Wärmestrom|gibt die übertragene Wärmemenge pro Zeiteinheit an|Wärmefluss
 |===
 		

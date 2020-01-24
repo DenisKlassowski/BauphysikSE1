@@ -17,6 +17,9 @@ will auswählbare Eingabedaten und Berechnungsergebnisse drucken.
 * Es liegen Berechnungsergebnisse vor.
 * Es ist ein Drucker oder ein PDF-Drucker verfügbar.
 
+=== Aktivitätsdiagramm
+image::usecase_Daten_drucken.jpg[]
+
 === Standardablauf (Basic Flow)
 //Der Standardablauf definiert die Schritte für den Erfolgsfall ("Happy Path")
 
@@ -57,7 +60,3 @@ Wenn der Systemnutzer im Schritt 4 des Standardablaufes keine Elemente für den 
 Bei erfolgreicher Durchführung des Use Case muss folgende Nachbdingung erfüllt sein:
 
 * Der Druckauftrag wurde an das Betriebssystem gesendet.
-
-=== Use Case Diagramm
-
-image::usecase_Daten_drucken.jpg[]

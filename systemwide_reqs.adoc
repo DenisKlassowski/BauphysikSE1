@@ -1,6 +1,6 @@
 = BauphysikSE1 System-Wide Requirements Specification
 Lukas Grambole <lukas.grambole@htw-dresden.de>; Michael Däbler <michael.daebler@htw-dresden.de>
-0.4, 17.01.2020
+1.0, 24.01.2020
 :toc: 
 :toc-title: Inhaltsverzeichnis
 :sectnums:
@@ -25,8 +25,6 @@ NOTE: Die funktionalen Anforderungen, die sich aus der Interaktion von Nutzern m
 === Benutzbarkeit (Usability)
 *NFAU-1: Das System muss Fehlermeldungen in einer Sprache ausgeben können, welche für die Auftraggeberin verständlich ist.*
 
-* Diese NFA bezieht sich auf UC1, UC2, UC3, UC4, UC5, UC6, UC7 und UC8.
-
 * Zur Überprüfung werden durch einen Testnutzer fehlerhafte Eingaben in mehrere Felder getätigt.
 
 *NFAU-2: Das System soll Hilfestellungen zu Eingabemöglichkeiten beinhalten.*
@@ -37,13 +35,9 @@ NOTE: Die funktionalen Anforderungen, die sich aus der Interaktion von Nutzern m
 
 *NFAU-3: Das System muss eine deutsche Benutzeroberfläche beinhalten.*
 
-* Diese NFA bezieht sich auf UC1, UC2, UC3, UC4, UC5, UC6, UC7 und UC8.
-
 * Zur Überprüfung wird eine Beispielberechnung durch einen Testnutzer mit der Muttersprache Deutsch durchgeführt.
 
 *NFAU-4: Das System muss von einem Nutzer mit Fachwissen im Bereich der Bauphysik bedient werden können.* 
-
-* Diese NFA bezieht sich auf UC1, UC2, UC3, UC4, UC5, UC6, UC7 und UC8.
 
 * Zur Überprüfung wird ein Testnutzer mit Fachwissen im Bereich der Bauphysik eine Beispielaufgabe mit dem System lösen.
 
@@ -91,8 +85,6 @@ NOTE: Die funktionalen Anforderungen, die sich aus der Interaktion von Nutzern m
 === Wartbarkeit (Supportability)
 *NFAS-1: Das System soll eine portable Software sein.*
 
-* Diese NFA bezieht sich auf das gesamte System und somit auf alle Use Cases.
-
 * Zur Überprüfung wird getestet, ob die Software ohne Installation genutzt werden kann.
 
 *NFAS-2: Das System soll im Hinblick auf Materialdaten aktualisierbar sein.*
@@ -105,7 +97,6 @@ NOTE: Die funktionalen Anforderungen, die sich aus der Interaktion von Nutzern m
 == Zusätzliche Anforderungen
 === Einschränkungen / Constraints
 //Angaben ergänzen, nicht relevante Unterpunkte streichen oder auskommentieren
-* *Die folgenden Einschränkungen beziehen sich auf das gesamte System und somit auf alle Use Cases.*
 * Das System muss offline nutzbar sein.
 * Das System soll auf einem handelsüblichen Computer benutzbar sein.
 * Das System muss mit dem Betriebssystem Windows 10 nutzbar sein.
@@ -115,7 +106,6 @@ NOTE: Die funktionalen Anforderungen, die sich aus der Interaktion von Nutzern m
 
 === Interface Requirements
 //Angaben ergänzen, nicht relevante Unterpunkte streichen oder auskommentieren
-* *Die folgenden Anforderungen beziehen sich auf das gesamte System und somit auf alle Use Cases.*
 * Das System soll bekannte Symbole verwenden. Das bedeutet, dass zum Beispiel ein Drucker als Symbol für die Druckfunktion verwendet werden soll.
 * Das System soll für verschiedene Bildschirmgrößen nutzbar sein.
 * Hinweistexte zu Eingabefeldern sollen ausgeblendet werden können.

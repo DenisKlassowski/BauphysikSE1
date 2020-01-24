@@ -7,7 +7,7 @@ Michael Daebler <michael.daebler@htw-dresden.de>; Lukas Grambole <lukas.grambole
 // Platzhalter für weitere Dokumenten-Attribute 
 // HIER KOMMEN NOCH WIREFRAMES REIN
 == Identifizierte Use Cases
-
+Hinweis: Die Use Cases wurden nach ihrer Priorität sortiert.
 [%header]
 |===
 |Kurzbezeichnung |Name|Akteur| Beschreibung 
