@@ -1,2 +1,11 @@
 ﻿ID;Datum;Name;Beschreibung;Typ; IMP; PRB;MAG;Owner;Gegenmaßnahme
-1;01.12.2019;Teammitglied fällt aus;Mitglied des Teams kann (dauerhaft oder zeitweise) nicht mehr am Projekt teilnehmen; z.B. wegen Krankheit oder Studiengangswechsel;4;20%;0,8;Max Müller;Backup-Rollen nutzen und Know-How zwischen diesen Personen kontinuierlich teilen
+5;13.01.2020;Projektumfang;Kunde wünscht sich nach den ersten Präsentationen zusätzliche Funktionalität;Geschäftlich;3;40%;1,2;Klassowski, Denis;Erweiterungen u.U. ablehnen
+1;01.12.2019;Teammitglied fällt aus;Mitglied des Teams kann (dauerhaft oder zeitweise) nicht mehr am Projekt teilnehmen;Ressourcen;4;20%;0,8;Klassowski, Denis;Backup-Rollen nutzen und Know-How zwischen diesen Personen kontinuierlich teilen
+3;03.12.2019;Einsatz unbekannter Technologien;Es werden neue Tools eingesetzt, zu denen die Projektmitglieder keine Erfahrungen haben;Technisch;1;60%;0,6;Baburkin, Yewgenij;
+4;01.12.2019;Terminfindung;Terminfindung mit dem Kunden gestaltet sich schwierig;Zeitlich, Geschäftlich;2;30%;0,6;Klassowski, Denis;alternative Kommunikation mit dem Kunden
+2;16.12.2019;Resourcenproblem;Es sind nicht genügend Entwickler vorhanden um die Programmierung im angestrebten Zeitraum umzusetzen;Zeitlich;2;10%;0,2;Baburkin, Yewgenij;Backup-Rollen
+;;;;;;;;;
+;;;;;;;;;
+;;;;;;;;;
+;;;;;;;;;
+;;;;;;;;;
