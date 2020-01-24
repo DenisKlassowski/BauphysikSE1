@@ -19,6 +19,7 @@ a|
 * Lukas Grambole (Analyst)
 * Christian Grieß (Architect)
 * Christian Lehmann (Tester)
+* Felix Fritzsche (Deployment)
 * Prof.  Jürgen Anke (Coach)
 
 |===
