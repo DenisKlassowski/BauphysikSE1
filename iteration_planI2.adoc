@@ -42,15 +42,25 @@ _alternativ:_ Die folgenden Aufgaben werden in dieser Iteration bearbeitet:
 [%header, cols="3,1,1,1,2,1,1,1,1"]
 |===
 |Aufgabe bzw. Beschreibung	|Priorität  	|Schätzung der Größe (Punkte)	|Status|	Referenzen	|geplante Iteration| Zugewiesen (Name) |	Gearbeitete Stunden | Schätzung der verbleibenden Stunden
-| Vision und Glossar aktualisieren | hoch   | 3 | DONE | x | I2 |Grambole Lukas 
-Däbler Michael | 2 | 2
-| Use-Cases ausarbeiten und vertiefen | hoch   | 4 | DONE | x | I2 | Grambole Lukas Däbler Michael | 5 | 3
-| Nichtfunktionale Anforderungen erfassen | hoch   | 2 | DONE | x | I2 | Grambole Lukas Däbler Michael | 2 | 2
-|Architecture Notebook und Tech. Vision aktualisieren| hoch |2|NOT DONE|x|I2| Grieß Christian |BITTE EINTRAGEN| 2
-|(Kunden-)Gesprächsprotokoll erfassen und nachbearbeiten|hoch|2|DONE|x|I2|Baburkin Yewgenji Fritzsche Felix|3|0
-|(Coach-)Gesprächsprotokoll erfassen und nachbearbeiten|hoch|2|DONE|x|I2| ?? | ?| ?
-|UI Entwurf Wireframe erstellen|hoch|2|NOT DONE|x|I2|Fritzsche Felix|BITTE EINTRAGEN|2
-|Risk List aktualisieren|hoch|2|NOT DONE|x|I2|Denis Klassowski|BITTE EINTAGEN|2
+| Vision und Glossar aktualisieren | hoch   | 5 | DONE | x | I2 a|
+* Grambole, Lukas
+* Däbler, Michael | 2 | 3
+| UC identifizieren und ausarbeiten | hoch   | 8 | DONE | x | I2 a| 
+* Grambole, Lukas 
+* Däbler, Michael| 5 | 3
+|NFA identifizieren|hoch|3|DONE|x|I2 a|
+* Grambole, Lukas
+* Däbler, Michael|2|1
+|Architecture Notebook und Tech. Vision aktualisieren| hoch |2|NOT DONE|x|I2 a|
+* Grieß, Christian |BITTE EINTRAGEN| 2
+|(Kunden-)Gesprächsprotokoll erfassen und nachbearbeiten|hoch|2|DONE|x|I2 a|
+* Baburkin, Yewgenji 
+* Fritzsche, Felix|3|0
+|(Coach-)Gesprächsprotokoll erfassen und nachbearbeiten|mittel|1|DONE|x|I2 a| * Grambole, Lukas | 1| 0
+|UI Entwurf Wireframe erstellen|hoch|2|NOT DONE|x|I2 a|
+* Fritzsche, Felix|BITTE EINTRAGEN|2
+|Risk List aktualisieren|hoch|2|NOT DONE|x|I2 a|
+* Klassowski, Denis|BITTE EINTAGEN|2
 |===
 								
 								
