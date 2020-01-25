@@ -63,4 +63,4 @@ Bei erfolgreicher Durchführung des Use Case muss folgende Nachbdingung erfüllt
 image::diagramm_Daten_drucken.jpg[]
 
 === Wireframe
-image::wireframe_Daten_drucken33.jpg[]
+image::wireframe_Daten_drucken.jpg[]

@@ -88,5 +88,5 @@ Bei erfolgreicher Durchführung des Use Case muss folgende Nachbedingungen erfü
 image::diagramm_Reihenberechnung_durchführen.jpg[]
 
 === Wireframes
-image::wireframe_Reihenberechnung_durchführen1.png[]
-image::wireframe_Reihenberechnung_durchführen2.png[]
+image::wireframe_Reihenberechnung_durchführen1.jpg[]
+image::wireframe_Reihenberechnung_durchführen2.jpg[]
