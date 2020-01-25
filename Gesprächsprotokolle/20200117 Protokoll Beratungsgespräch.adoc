@@ -30,7 +30,7 @@ a|
 * Kundengespräch vom Montag mit vielen inhaltlichen Erweiterungen, technischer Verkleinerung des Scopes und Änderung der Stakeholder
 * Coach sieht Verantwortung für Rahmenbedingungen des Projektes nicht beim Projektteam
 * Projektteam soll das machen, was die Auftraggeberin fordert
-* übergeordnetee Ziele: Prozesse des iterativen Vorgehens lernen, regelmäßiges Arbeiten am Projekt, Iterationstakt einhalten, immer alles aktuell halten
+* übergeordnete Ziele: Prozesse des iterativen Vorgehens lernen, regelmäßiges Arbeiten am Projekt, Iterationstakt einhalten, immer alles aktuell halten
 * untergeordnetes Ziel: vollständige Lösung des Kundenproblems, in unserem Fall aber durchaus machbar
 * zur Abgabe Vorlage von Herrn Zirkelbach verwenden
 
@@ -57,6 +57,6 @@ a|
 * Notizbuchcharakter
 * Was uns nicht betrifft ist wegzulassen? (z.B. Schlüssel/Abstraktion)
 * Wenn das Architecture Notebook länger als 6 A4 Seiten ist, dann ist es wahrscheinlich falsch.
-* keine Erklärugen (z.B. zum Thema: Was ist Python?)
+* keine Erklärungen (z.B. zum Thema: Was ist Python?)
 * Architektonische Mechanismen: Persistenz, Berechtigungsprüfung, grafische Benutzeroberfläche, ...
 
