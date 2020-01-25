@@ -21,8 +21,8 @@ Der Systemnutzer hat das Softwaresystem gestartet.
 
 . Der Use Case beginnt, wenn der Systemnutzer die Funktion der Wärmewiderstandsberechnung ausgewählt hat.
 . _WHILE_ Das System bietet eine Eingabemöglichkeit für die Materialdaten von einer Schicht.
-.. Der Systemnutzer gibt die Materialdaten der Schichten ein.
-.. _INCLUDE_ Plausibilität prüfen
+.. _WHILE_ Der Systemnutzer gibt die Materialdaten der Schichten ein.
+... _INCLUDE_ Plausibilität prüfen
 . Der Systemnutzer startet die Berechnung durch das Softwaresystem.
 . Das Softwaresystem berechnet die Wärmewiderstandsdaten.
 . Das Softwaresystem gibt die Wärmewiderstandsdaten aus.
@@ -83,3 +83,10 @@ Wenn der Systemnutzer im Schritt 3 des Standardablaufs die Berechnung der Wärme
 Bei erfolgreicher Durchführung des Use Case muss folgende Nachbedingungen erfüllt sein:
 
 * Die Berechnungsergebnisse werden ausgegeben. 
+
+=== Aktivitätsdiagramm
+image::diagramm_Reihenberechnung_durchführen.jpg[]
+
+=== Wireframes
+image::wireframe_Reihenberechnung_durchführen1.png[]
+image::wireframe_Reihenberechnung_durchführen2.png[]

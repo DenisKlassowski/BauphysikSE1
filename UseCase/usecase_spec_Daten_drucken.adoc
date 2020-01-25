@@ -17,14 +17,11 @@ will auswählbare Eingabedaten und Berechnungsergebnisse drucken.
 * Es liegen Berechnungsergebnisse vor.
 * Es ist ein Drucker oder ein PDF-Drucker verfügbar.
 
-=== Aktivitätsdiagramm
-image::usecase_Daten_drucken.jpg[]
-
 === Standardablauf (Basic Flow)
 //Der Standardablauf definiert die Schritte für den Erfolgsfall ("Happy Path")
 
 . Der Use Case beginnt, wenn der Systemnutzer die Druckfunktion auswählt.
-. Das Softwaresystem gibt eine Vorauswahl von Elementen für den Druck aus.
+. _WHILE_ Softwaresystem gibt eine Vorauswahl von Elementen für den Druck aus.
 . _IF_ Systemnutzer möchte andere Elemente drucken
 .. Der Systemnutzer ändert die Auswahl.
 .. _IF_ Systemnutzer möchte ausgewählte Elemente als Standard für zukünftige Vorauswahl setzen
@@ -38,6 +35,7 @@ image::usecase_Daten_drucken.jpg[]
 
 === Alternative Abläufe
 //Nutzen Sie alternative Abläufe für Fehlerfälle, Ausnahmen und Erweiterungen zum Standardablauf
+*Alternativer Ablauf #2
 
 *Alternativer Ablauf 1*
 
@@ -60,3 +58,9 @@ Wenn der Systemnutzer im Schritt 4 des Standardablaufes keine Elemente für den 
 Bei erfolgreicher Durchführung des Use Case muss folgende Nachbdingung erfüllt sein:
 
 * Der Druckauftrag wurde an das Betriebssystem gesendet.
+
+=== Aktivitätsdiagramm
+image::diagramm_Daten_drucken.jpg[]
+
+=== Wireframe
+image::wireframe_Daten_drucken.png[]
