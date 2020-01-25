@@ -57,6 +57,6 @@ a|
 * Notizbuchcharakter
 * Was uns nicht betrifft ist wegzulassen? (z.B. Schlüssel/Abstraktion)
 * Wenn das Architecture Notebook länger als 6 A4 Seiten ist, dann ist es wahrscheinlich falsch.
-* keine Erklärugen (z.B. zum Thema: Was ist Python?)
+* keine Erklärungen (z.B. zum Thema: Was ist Python?)
 * Architektonische Mechanismen: Persistenz, Berechtigungsprüfung, grafische Benutzeroberfläche, ...
 
