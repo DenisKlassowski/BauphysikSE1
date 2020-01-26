@@ -1,43 +1,47 @@
-= Projekt Bauphysik Test Case: [Use Case: Daten berechnen]
+= Projekt Bauphysik Test Case: [Use Case: Reichenberechnung_durchführen]
 
 //This is a informal template for represeting test cases
 
-== Test Case ID: 005 - Berechnung mit "leerer Schicht":
+== Test Case ID: 005 - Berechnung Wärmewiderstand für vier Schichten mit vorgespeicherten Werten:
 
 //The Test Case ID should be unique. In addition, the name of each Test Case should reflect the intent of the test case, ideally expressed as a Boolean condition.
 
-=== Description
+=== Beschreibung
 //Describe the logical condition that the Test Case evaluates. 
 //Include the expected result.
-Dieser Test Case evaluiert, wie das entworfene Softwaresystem bei einer Eingabe durch den Benutzer reagiert, bei der die Eingabefelder, die eine einzige Wandschicht repräsentieren, gänzlich unbefüllt bleiben.
+Dieser Test Case evaluiert das Verhalten des entworfenen Softwaresystems, nachdem der Systemnutzer die Funktion der Wärmewiderstandsberechnung ausgewählt, zwei Schichten hinzugefügt und die Materialdaten von dann vier Schichten eingegeben hat. Dabei wird für zwei der vier Schichten der Koeffizient für die Wärmeleitfähigkeit aus vorgespeicherten Materialdaten ausgewählt. Nachdem der Systemnutzer die Berechnung startet, berechnet das Softwaresystem die Wärmewiderstandsdaten und gibt diese aus.
 
-Das erwartete Ergebnis ist eine Berechnung des Wärmeübergangs ohne die "leere Schicht" oder die Ausgabe eines Fehlers durch die Software. Idealerweise mit einer genaueren Beschreibung der Art des Eingabefehlers.
+Ergebnis dieses Tests sind die korrekt berechneten Werte für den Wärmewiderstand. Die Berechnung wurde erfolgreich abgeschlossen.
 
-=== Pre-conditions
+=== Vorbedingungen
 //List conditions that must be true before this Test Case can start.
-<Vorbedingung 1> Die Software ist gestartet und einsatzbereit
+<Vorbedingung 1> Die Software ist gestartet und einsatzbereit.
 
-<Vorbedingung 2> Der Benutzer hat alle Eingabefelder, bis auf alle Felder für eine spezielle Schicht, befüllt
+<Vorbedingung 2> Der Systemnutzer hat zwei zusätzliche Schichten hinzugefügt.
 
-<Vorbedingung 3> Der Benutzer löst die Berechnung aus
+<Vorbedingung 3> Der Systemnutzer hat die Eingabefelder der Wärmewiderstandsberechnung für die vier Schichten mit folgenden Werten befüllt:
 
-=== Post-conditions
+* Wanddicke der ersten Schicht:  d~1~ =  2 cm
+* Wanddicke der zweiten Schicht: d~2~ = 24 cm
+* Wanddicke der dritten Schicht: d~3~ =  5 cm
+* Wanddicke der vierten Schicht: d~4~ =  1 cm
+* Wärmeleitfähigkeit der ersten Schicht:  λ~1~ = 0,350 W/(m*K)
+* Wärmeleitfähigkeit der zweiten Schicht: Nutzer wählt als Material Kalksandstein-Mauerwerk [ λ~2~ = 0,560 W/(m*K) ]
+* Wärmeleitfähigkeit der dritten Schicht: λ~3~ = 0,045 W/(m*K)
+* Wärmeleitfähigkeit der vierten Schicht: Nutzer wählt als Material Kunstharzputz [ λ~4~ = 0,700 W/(m*K) ]
+
+<Vorbedingung 3> Der Systemnutzer löst die Berechnung aus
+
+=== Nachbedingungen
 //List conditions that should be true when this Test Case ends.
-Variante mit Fehler, ohne Berechnung:
+<Nachbedingung 1> Die Software hat keinen Fehler gemeldet.
 
-<Nachbedingung 1.1> Die Software meldet einen Fehler bei der Überprüfung der eingegebenen Werte
+<Nachbedingung 2> Die Software zeigt die berechneten Ergebnisse an.
 
-<Nachbedingung 2.1> Berechnung wird nicht durchgeführt und keine Ergebnisse angezeigt
+//<Nachbedingung 3> Die Eingabefelder sind nach der Berechnung nach wie vor mit den Werten befüllt.
 
-Variante ohne Fehler, mit Berechnung:
 
-<Nachbedingung 1.2> Die Software hat keinen Fehler gemeldet
-
-<Nachbedingung 2.2> Die Software zeigt die berechneten Ergebnisse an
-
-<Nachbedingung 3> Die Eingabefelder sind nach der versuchten Berechnung und dem ausgegebenen Fehler nach wie vor mit den Werten befüllt
-
-=== Data required
+=== Benötigte Daten
 //Identify the type of data required for this Test Case.
 Als Testdaten werden Werte benötigt, die idealerweise aus realen Aufgaben zur Berechnung des Wärmeübergangs stammen.
-
+Bestenfalls Aufgaben mit geprüften selbst berechneten oder vorgegebenen korrekten Ergebnissen, um den Output der Software entsprechend validieren zu können.

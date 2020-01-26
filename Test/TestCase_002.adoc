@@ -1,36 +1,50 @@
-= Projekt Bauphysik Test Case: [Use Case: Daten berechnen]
+= Projekt Bauphysik Test Case: [Use Case: Reichenberechnung_durchführen]
 
 //This is a informal template for represeting test cases
 
-== Test Case ID: 002 - Berechnung nach fehlerhafter Eingabe der Daten:
+== Test Case ID: 002 - Berechnung Wärmewiderstand und Temperaturverlauf für zwei Schichten:
 
 //The Test Case ID should be unique. In addition, the name of each Test Case should reflect the intent of the test case, ideally expressed as a Boolean condition.
 
-=== Description
+=== Beschreibung
 //Describe the logical condition that the Test Case evaluates. 
 //Include the expected result.
-Dieser Test Case evaluiert, wie das entworfene Softwaresystem bei fehlerhafter Eingabe der Daten (unrealistische Werte außerhalb des gültigen Wertebereichs) durch den Benutzer reagiert. Vorstellbar wäre ein negativer Wärmeübergangskoeffizient oder negative Wanddicken.
+Dieser Test Case evaluiert das Verhalten des entworfenen Softwaresystems, nachdem der Systemnutzer die Funktion der Wärmewiderstandsberechnung ausgewählt und die Materialdaten von zwei Schichten eingegeben hat. Nachdem der Systemnutzer die Berechnung startet, berechnet das Softwaresystem die Wärmewiderstandsdaten und gibt diese aus. Anschließend gibt der Systemnutzer Temperaturdaten ein und lässt einen Temperaturverlauf ermitteln.
 
-Das erwartete Ergebnis ist die Ausgabe eines Fehlers durch die Software. Idealerweise mit einer genaueren Beschreibung der Art des Eingabefehlers.
+Ergebnis dieses Tests sind die korrekt berechneten Werte für den Wärmewiderstand und den Temperaturverlauf, sowie eine grafische Veranschaulichung des Temperaturverlaufs. Die Berechnung wurde erfolgreich abgeschlossen
 
-=== Pre-conditions
+=== Vorbedingungen
 //List conditions that must be true before this Test Case can start.
 <Vorbedingung 1> Die Software ist gestartet und einsatzbereit
 
-<Vorbedingung 2> Der Benutzer hat alle Eingabefelder mit Werten (teilweise fehlerhaft) befüllt
+<Vorbedingung 2> Der Systemnutzer hat die Eingabefelder der Wärmewiderstandsberechnung für zwei Schichten mit folgenden Werten befüllt:
 
-<Vorbedingung 3> Der Benutzer löst die Berechnung aus
+* Wanddicke der ersten Schicht: d~1~ = .. cm
+* Wanddicke der zweiten Schicht: d~2~ = .. cm
+* Wärmeleitfähigkeit der ersten Schicht: λ~1~ = ..,. W/(m*K)
+* Wärmeleitfähigkeit der zweiten Schicht: λ~2~ = ..,. W/(m*K)
 
-=== Post-conditions
+<Vorbedingung 3> Der Systemnutzer löst die Berechnung aus
+
+<Vorbedingung 4> Der Systemnutzer möchte den Temperaturverlauf ermitteln und gibt dafür folgende Werte ein:
+
+* Innentemperatur: T~i~ = .. °C
+* Außentemperatur: T~a~ = .. °C
+
+<Vorbedingung 5> Der Systemnutzer bestätigt die Eingabe der Temperaturdaten
+
+=== Nachbedingungen
 //List conditions that should be true when this Test Case ends.
-<Nachbedingung 1> Die Software meldet einen Fehler bei der Überprüfung der eingegebenen Werte
+<Nachbedingung 1> Die Software hat keinen Fehler gemeldet.
 
-<Nachbedingung 2> Berechnung wird nicht durchgeführt und keine Ergebnisse angezeigt
+<Nachbedingung 2> Die Software zeigt die berechneten Ergebnisse für den Wärmewiderstand und den Temperaturverlauf an.
 
-<Nachbedingung 3> Die Eingabefelder sind nach der versuchten Berechnung und dem ausgegebenen Fehler nach wie vor mit den Werten befüllt
+<Nachbedingung 3> Die Software zeigt eine grafische Veranschaulichung des Temperaturverlaufs an.
 
-=== Data required
+//<Nachbedingung 3> Die Eingabefelder sind nach der Berechnung nach wie vor mit den Werten befüllt.
+
+
+=== Benötigte Daten
 //Identify the type of data required for this Test Case.
 Als Testdaten werden Werte benötigt, die idealerweise aus realen Aufgaben zur Berechnung des Wärmeübergangs stammen.
-Diese werden dann partiell so verändert, damit sie außerhalb der Gültigkeitsbereiche liegen.
-
+Bestenfalls Aufgaben mit geprüften selbst berechneten oder vorgegebenen korrekten Ergebnissen, um den Output der Software entsprechend validieren zu können.

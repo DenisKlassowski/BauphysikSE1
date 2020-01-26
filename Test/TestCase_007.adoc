@@ -1,36 +1,46 @@
-= Projekt Bauphysik Test Case: [Use Case: Daten berechnen]
+= Projekt Bauphysik Test Case: [Use Case: Reichenberechnung_durchführen]
 
 //This is a informal template for represeting test cases
 
-== Test Case ID: 007 - verschiedene Einheitendimensionen:
+== Test Case ID: 007 - Berechnung mit "leerer Schicht":
 
 //The Test Case ID should be unique. In addition, the name of each Test Case should reflect the intent of the test case, ideally expressed as a Boolean condition.
 
 === Description
 //Describe the logical condition that the Test Case evaluates. 
 //Include the expected result.
-Dieser Test Case evaluiert, ob das entworfene Softwaresystem damit umgehen kann, wenn der Benutzer die Daten mit verschiedenen Einheitendimensionen eingibt.
+Dieser Test Case evaluiert, wie das entworfene Softwaresystem bei einer Eingabe durch den Benutzer reagiert, bei der die Eingabefelder, die eine einzige Wandschicht repräsentieren, gänzlich unbefüllt bleiben.
 
-Das erwartete Ergebnis ist die Ausgabe der erwarteten Ergebnisse mit einheitlichen vordefinierten SI-Einheiten durch die Software. 
+Das erwartete Ergebnis ist eine Berechnung des Wärmeübergangs ohne die "leere Schicht" oder die Ausgabe eines Fehlers durch die Software. Idealerweise mit einer genaueren Beschreibung der Art des Eingabefehlers.
 
 === Pre-conditions
 //List conditions that must be true before this Test Case can start.
 <Vorbedingung 1> Die Software ist gestartet und einsatzbereit
 
-<Vorbedingung 2> Der Benutzer hat alle Eingabefelder mit korrekten Werten befüllt, welche sich teilweise in ihren Einheitendimensionen unterscheiden
+<Vorbedingung 2> Der Systemnutzer hat eine dritte und vierte Schicht hinzugefügt.
 
-<Vorbedingung 3> Der Benutzer löst die Berechnung aus
+<Vorbedingung 2> Der Benutzer hat alle Eingabefelder, bis auf alle Felder für Schicht drei mit folgenden Werten befüllt:
+
+* Wanddicke der ersten Schicht:  d~1~ = .. cm
+* Wanddicke der zweiten Schicht: d~2~ = .. cm
+* Wanddicke der dritten Schicht: d~3~ *bleibt leer*
+* Wanddicke der vierten Schicht: d~4~ = .. cm
+* Wärmeleitfähigkeit der ersten Schicht:  λ~1~ = ..,. W/(m*K)
+* Wärmeleitfähigkeit der zweiten Schicht: λ~2~ = ..,. W/(m*K)
+* Wärmeleitfähigkeit der dritten Schicht: λ~3~ *bleibt leer*
+* Wärmeleitfähigkeit der vierten Schicht: λ~4~ = ..,. W/(m*K)
+
+<Vorbedingung 3> Der Benutzer löst die Berechnung aus.
 
 === Post-conditions
 //List conditions that should be true when this Test Case ends.
-<Nachbedingung 1> Die Software hat keinen Fehler gemeldet
+<Nachbedingung 1> Die Software meldet einen Fehler bei der Überprüfung der eingegebenen Werte.
 
-<Nachbedingung 2> Die Software zeigt die berechneten Ergebnisse mit vordefinierten SI-Einheiten an
+<Nachbedingung 2> Berechnung wird nicht durchgeführt und keine Ergebnisse angezeigt.
 
-<Nachbedingung 3> Die Eingabefelder sind nach der Berechnung nach wie vor mit den Werten befüllt
+<Nachbedingung 3> Die Eingabefelder sind nach der versuchten Berechnung und dem ausgegebenen Fehler nach wie vor mit den Werten befüllt.
 
 === Data required
 //Identify the type of data required for this Test Case.
 Als Testdaten werden Werte benötigt, die idealerweise aus realen Aufgaben zur Berechnung des Wärmeübergangs stammen.
-Bestenfalls liegen die gegebenen Werte schon mit unterschiedlichen Einheitendimensionen vor.
 

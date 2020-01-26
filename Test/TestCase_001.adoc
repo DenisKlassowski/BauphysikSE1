@@ -1,36 +1,41 @@
-= Projekt Bauphysik Test Case: [Use Case: Daten berechnen]
+= Projekt Bauphysik Test Case: [Use Case: Reichenberechnung_durchführen]
 
 //This is a informal template for represeting test cases
 
-== Test Case ID: 001 - Berechnung nach fehlerfreier Eingabe der Daten:
+== Test Case ID: 001 - Berechnung Wärmewiderstand für zwei Schichten:
 
 //The Test Case ID should be unique. In addition, the name of each Test Case should reflect the intent of the test case, ideally expressed as a Boolean condition.
 
-=== Description
+=== Beschreibung
 //Describe the logical condition that the Test Case evaluates. 
 //Include the expected result.
-Dieser Test Case evaluiert, ob das entworfene Softwaresystem bei fehlerfreier Eingabe der Daten durch den Benutzer eine korrekte Berechnung der gesuchten Werte liefert.
+Dieser Test Case evaluiert das Verhalten des entworfenen Softwaresystems, nachdem der Systemnutzer die Funktion der Wärmewiderstandsberechnung ausgewählt und die Materialdaten von zwei Schichten eingegeben hat. Nachdem der Systemnutzer die Berechnung startet, berechnet das Softwaresystem die Wärmewiderstandsdaten und gibt diese aus.
 
-Ergebnis dieses Tests sollen die korrekt berechneten Werte für den Wärmeübergang sein.
+Ergebnis dieses Tests sind die korrekt berechneten Werte für den Wärmewiderstand. Die Berechnung wurde erfolgreich abgeschlossen.
 
-=== Pre-conditions
+=== Vorbedingungen
 //List conditions that must be true before this Test Case can start.
-<Vorbedingung 1> Die Software ist gestartet und einsatzbereit
+<Vorbedingung 1> Die Software ist gestartet und einsatzbereit.
 
-<Vorbedingung 2> Der Benutzer hat alle Eingabefelder mit sinnvollen Werten befüllt
+<Vorbedingung 2> Der Systemnutzer hat die Eingabefelder der Wärmewiderstandsberechnung für zwei Schichten mit folgenden Werten befüllt:
 
-<Vorbedingung 3> Der Benutzer löst die Berechnung aus
+* Wanddicke der ersten Schicht: d~1~ = .. cm
+* Wanddicke der zweiten Schicht: d~2~ = .. cm
+* Wärmeleitfähigkeit der ersten Schicht: λ~1~ = ..,. W/(m*K)
+* Wärmeleitfähigkeit der zweiten Schicht: λ~2~ = ..,. W/(m*K)
 
-=== Post-conditions
+<Vorbedingung 3> Der Systemnutzer löst die Berechnung aus.
+
+=== Nachbedingungen
 //List conditions that should be true when this Test Case ends.
-<Nachbedingung 1> Die Software hat keinen Fehler gemeldet
+<Nachbedingung 1> Die Software hat keinen Fehler gemeldet.
 
-<Nachbedingung 2> Die Software zeigt die berechneten Ergebnisse an
+<Nachbedingung 2> Die Software zeigt die berechneten Ergebnisse an.
 
-<Nachbedingung 3> Die Eingabefelder sind nach der Berechnung nach wie vor mit den Werten befüllt
+//<Nachbedingung 3> Die Eingabefelder sind nach der Berechnung nach wie vor mit den Werten befüllt.
 
 
-=== Data required
+=== Benötigte Daten
 //Identify the type of data required for this Test Case.
 Als Testdaten werden Werte benötigt, die idealerweise aus realen Aufgaben zur Berechnung des Wärmeübergangs stammen.
-Bestenfalls Aufgaben mit geprüften korrekten Ergebnissen, um den Output der Software entsprechend validieren zu können.
+Bestenfalls Aufgaben mit geprüften selbst berechneten oder vorgegebenen korrekten Ergebnissen, um den Output der Software entsprechend validieren zu können.

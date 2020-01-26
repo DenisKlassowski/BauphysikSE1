@@ -1,0 +1,47 @@
+= Projekt Bauphysik Test Case: [Use Case: Daten berechnen]
+
+//This is a informal template for represeting test cases
+
+== Test Case ID: 006_2 - Berechnung nach unvollständiger Eingabe Wärmeleitfähigkeit:
+
+//The Test Case ID should be unique. In addition, the name of each Test Case should reflect the intent of the test case, ideally expressed as a Boolean condition.
+
+=== Description
+//Describe the logical condition that the Test Case evaluates. 
+//Include the expected result.
+Dieser Test Case evaluiert, wie das entworfene Softwaresystem bei unvollständiger Eingabe von Werten in die Eingabefelder durch den Benutzer reagiert. In diesem Fall wird für eine Schicht die Eingabe der Wärmeleitfähigkeit weggelassen.
+
+Das erwartete Ergebnis ist die Ausgabe eines Fehlers durch die Software.
+
+=== Pre-conditions
+//List conditions that must be true before this Test Case can start.
+<Vorbedingung 1> Die Software ist gestartet und einsatzbereit.
+
+<Vorbedingung 2> Der Systemnutzer hat eine dritte und eine vierte Schicht hinzugefügt.
+
+<Vorbedingung 3> Der Systemnutzer hat bis auf die Wanddicker der Schicht drei alle Eingabefelder der vorhandenen Schichten mit folgenden Werten befüllt:
+
+* Wanddicke der ersten Schicht:  d~1~ =  2 cm
+* Wanddicke der zweiten Schicht: d~2~ = 24 cm
+* Wanddicke der dritten Schicht: d~3~ =  5 cm
+* Wanddicke der vierten Schicht: d~4~ =  1 cm
+* Wärmeleitfähigkeit der ersten Schicht:  λ~1~ = 0,350 W/(m*K)
+* Wärmeleitfähigkeit der zweiten Schicht: λ~2~ = 0,560 W/(m*K)
+* Wärmeleitfähigkeit der dritten Schicht: λ~3~ *bleibt leer*
+* Wärmeleitfähigkeit der vierten Schicht: λ~4~ = 0,700 W/(m*K)
+
+<Vorbedingung 3> Der Benutzer löst die Berechnung aus.
+
+=== Post-conditions
+//List conditions that should be true when this Test Case ends.
+<Nachbedingung 1> Die Software meldet einen Fehler bei der Überprüfung der eingegebenen Werte, da ein unbefülltes Feld vorhanden ist.
+
+<Nachbedingung 2> Berechnung wird nicht durchgeführt und keine Ergebnisse angezeigt.
+
+<Nachbedingung 3> Die Eingabefelder sind nach der versuchten Berechnung und dem ausgegebenen Fehler nach wie vor mit den bisher eingegebenen Werten befüllt.
+
+=== Data required
+//Identify the type of data required for this Test Case.
+Als Testdaten werden Werte benötigt, die idealerweise aus realen Aufgaben zur Berechnung des Wärmeübergangs stammen.
+Diese werden dann zum Teil weggelassen.
+

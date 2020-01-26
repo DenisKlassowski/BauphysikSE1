@@ -1,0 +1,36 @@
+= Projekt Bauphysik Test Case: [Use Case: Plausibilität_prüfen]
+
+//This is a informal template for represeting test cases
+
+== Test Case ID: 021 - Plausibilität korrekter Daten:
+
+//The Test Case ID should be unique. In addition, the name of each Test Case should reflect the intent of the test case, ideally expressed as a Boolean condition.
+
+=== Beschreibung
+//Describe the logical condition that the Test Case evaluates. 
+//Include the expected result.
+Dieser Test Case evaluiert das Verhalten des entworfenen Softwaresystems, nachdem der Systemnutzer die Funktion Wärmewiderstandsberechnung ausgewählt hat. Diese Funktion erfordert die Eingabe von Daten. Während der Nutzer seine Daten in die vorgesehenen Felder eingibt, prüft das Softwaresystem diese auf Plausibilität.
+
+Ergebnis dieses Tests ist, dass bei Eingabe sinnvoller Zahlenwerte kein Fehler gemeldet wird. Damit wird die Plausibilitätsprüfung erfolgreich abgeschlossen.
+
+=== Vorbedingungen
+//List conditions that must be true before this Test Case can start.
+<Vorbedingung 1> Die Software ist gestartet und einsatzbereit.
+
+<Vorbedingung 2> Der Systemnutzer hat die Eingabefelder der Wärmewiderstandsberechnung für zwei Schichten mit folgenden Werten befüllt:
+
+* Wanddicke der ersten Schicht: d~1~ = 20 cm
+* Wanddicke der zweiten Schicht: d~2~ = 10,5 cm
+* Wärmeleitfähigkeit der ersten Schicht: λ~1~ = 0,454 W/(m*K)
+* Wärmeleitfähigkeit der zweiten Schicht: λ~2~ = 0,369 W/(m*K)
+
+=== Nachbedingungen
+//List conditions that should be true when this Test Case ends.
+<Nachbedingung 1> Die Software hat keinen Fehler gemeldet.
+
+<Nachbedingung 2> Die Software hat die Eingabedaten validiert.
+
+
+=== Benötigte Daten
+//Identify the type of data required for this Test Case.
+Als Testdaten werden Werte benötigt, die idealerweise aus realen Aufgaben zur Berechnung des Wärmeübergangs stammen. Generell eignen sich für diesen Fall auch zufällig gewählte Zahlenwerte.
