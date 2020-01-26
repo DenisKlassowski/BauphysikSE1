@@ -175,8 +175,6 @@ Beispiel
 
 |Ausgabe von j, R~ges~, R~i~, R~T~, U, Δϑ~k~ und ϑ~k~ mit vier Nachkommastellen|hoch|xx
 
-|Ausgabe von R~T~ und U gerundet auf zwei Nachkommastellen (zusätzlich)|hoch|xx
-
 |Deutsche Benutzeroberfläche |hoch|xx
 
 |System auf Windows 10 lauffähig|hoch|xx
