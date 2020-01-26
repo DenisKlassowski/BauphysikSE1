@@ -21,36 +21,55 @@ will auswählbare Eingabedaten und Berechnungsergebnisse drucken.
 //Der Standardablauf definiert die Schritte für den Erfolgsfall ("Happy Path")
 
 . Der Use Case beginnt, wenn der Systemnutzer die Druckfunktion auswählt.
-. _WHILE_ Softwaresystem gibt eine Vorauswahl von Elementen für den Druck aus.
-. _IF_ Systemnutzer möchte andere Elemente drucken
-.. Der Systemnutzer ändert die Auswahl.
-.. _IF_ Systemnutzer möchte ausgewählte Elemente als Standard für zukünftige Vorauswahl setzen
-... Der Systemnutzer ordnet die Speicherung der getroffenen Auswahl als Standard an.
-... Das Softwaresystem übernimmt die getroffene Auswahl als Standard für die Vorauswahl.
-. Der Systemnutzer bestätigt die Auswahl
-. Das Softwaresystem erstellt eine Druckvorschau.
+. Das Softwaresystem gibt eine Vorauswahl von druckbaren Elementen aus.
+. _WHILE_ Softwaresystem gibt eine Auswahl von Elementen für den Druck aus.
+.. _IF_ Systemnutzer möchte andere Elemente drucken
+... Der Systemnutzer ändert die Auswahl.
+.. _ELSE_
+... Der Systemnutzer belässt die Auswahl.
 . Der Systemnutzer löst den Druckauftrag aus.
 . Das Softwaresystem sendet den Druckauftrag an das Betriebssystem.
 . Der Use Case ist abgeschlossen.
 
 === Alternative Abläufe
 //Nutzen Sie alternative Abläufe für Fehlerfälle, Ausnahmen und Erweiterungen zum Standardablauf
-*Alternativer Ablauf #2
 
-*Alternativer Ablauf 1*
+*Alternativer Ablauf #3.1*
 
-Wenn der Systemnutzer im Schritt 4 des Standardablaufes keine Elemente für den Druck ausgewählt hat, dann
+Wenn der Systemnutzer im Schritt 3 des Standardablaufs seine Auswahl als Vorauswahl festlegen möchte, dann
+
+... Der Systemnutzer wählt die Funktionalität zur Festlegung der aktuellen Auswahl als Vorauswahl.
+... Das Softwaresystem speichert die aktuelle Auswahl als Vorauswahl.
+... Der Use Case wird im Schritt 3 des Standardablaufs fortgesetzt.
+
+*Alternativer Ablauf #3.2*
+
+Wenn der Systemnutzer im Schritt 3 des Standardablaufs eine Druckvorschau sehen möchte, dann
+
+... Der Systemnutzer wählt die Funktionalität zur Erzeugung einer Druckvorschau.
+... Das Softwaresystem erstellt eine Druckvorschau.
+... Der Systemnutzer schließt die Druckvorschau.
+... Der Use Case wird im Schritt 3 des Standardablaufs fortgesetzt.
+
+
+*Alternativer Ablauf 4a*
+
+Wenn der Systemnutzer im Schritt 4 des Standardablaufs keine Elemente für den Druck ausgewählt hat, dann
 
 ... Das Softwaresystem gibt eine Fehlermeldung aus.
 ... Der Systemnutzer bestätigt die Kenntnisnahme der Fehlermeldung.
-... Der Standardablauf wird im Schritt 2 fortgesetzt. 
+... Der Standardablauf wird im Schritt 2 des Standardablaufs fortgesetzt. 
 
 
 === Wesentliche Szenarios
 //Szenarios sind konkrete Instanzen eines Use Case, d.h. mit einem konkreten Akteur und einem konkreten Durchlauf der o.g. Flows. Szenarios können als Vorstufe für die Entwicklung von Flows und/oder zu deren Validierung verwendet werden.
-* *SC1:* Der Systemnutzer wählt die Druckfunktion aus. Er bestätigt die Vorauswahl. Das System gibt eine Druckvorschau aus. Der Systemnutzer löst den Druckauftrag aus. Das Softwaresystem übermittelt den Druckauftrag an das Betriebssystem. Der Druckauftrag wurde erfolgreich erteilt.
+* *SC1:* Der Systemnutzer wählt die Druckfunktion aus. Er löst den Druckauftrag aus. Das Softwaresystem übermittelt den Druckauftrag an das Betriebssystem. Der Druckauftrag wurde erfolgreich erteilt.
 
-* *SC2:* Der Systemnutzer wählt die Druckfunktion aus. Er möchte andere Elemente drucken und wählt anschließend kein Element für den Druck aus. Das Softwaresystem weist den Systemnutzer darauf hin, dass kein Element für den Druck ausgewählt wurde. Der Systemnutzer ändert seine Auswahl und fügt der Auswahl ein Element hinzu. Er bestätigt die Auswahl. Das System gibt eine Druckvorschau aus. Der Systemnutzer löst den Druckauftrag aus. Das Softwaresystem übermittelt den Druckauftrag an das Betriebssystem. Der Druckauftrag wurde erfolgreich erteilt.
+* *SC2:* Der Systemnutzer wählt die Druckfunktion aus. Er wählt zusätzliche Elemente für den Druck aus und speichert seine aktuelle Auswahl als Vorauswahl. Er löst den Druckauftrag aus. Das Softwaresystem übermittelt den Druckauftrag an das Betriebssystem. Der Druckauftrag wurde erfolgreich erteilt.
+
+* *SC3:* Der Systemnutzer wählt die Druckfunktion aus und lässt sich eine Druckvorschau anzeigen. Er löst den Druckauftrag aus. Das Softwaresystem übermittelt den Druckauftrag an das Betriebssystem. Der Druckauftrag wurde erfolgreich erteilt.
+
+* *SC4:* Der Systemnutzer wählt die Druckfunktion aus. Er möchte andere Elemente drucken und wählt anschließend kein Element für den Druck aus. Das Softwaresystem weist den Systemnutzer darauf hin, dass kein Element für den Druck ausgewählt wurde. Der Systemnutzer fügt der Auswahl ein Element hinzu. Der Systemnutzer löst den Druckauftrag aus. Das Softwaresystem übermittelt den Druckauftrag an das Betriebssystem. Der Druckauftrag wurde erfolgreich erteilt.
 
 
 === Nachbedingungen
