@@ -1,6 +1,6 @@
 = Use-Case Model BauphysikSE1
 Michael Daebler <michael.daebler@htw-dresden.de>; Lukas Grambole <lukas.grambole@htw-dresden.de>
-0.5, 17.01.2019 
+0.9, 26.01.2019 
 :toc: 
 :toc-title: Inhaltsverzeichnis
 :sectnums:
