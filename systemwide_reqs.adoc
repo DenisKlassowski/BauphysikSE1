@@ -87,11 +87,7 @@ NOTE: Die funktionalen Anforderungen, die sich aus der Interaktion von Nutzern m
 
 * Zur Überprüfung wird getestet, ob die Software ohne Installation genutzt werden kann.
 
-*NFAS-2: Das System soll im Hinblick auf Materialdaten aktualisierbar sein.*
 
-* Diese NFA bezieht sich auf UC4.
-
-* Zur Überprüfung wird getestet, ob gespeicherte Materialdaten verändert werden können.
 //This section indicates any requirements that will enhance the supportability or maintainability of the system being built, including adaptability and upgrading, compatibility, configurability, scalability and requirements regarding system installation, level of support and maintenance.
 
 == Zusätzliche Anforderungen

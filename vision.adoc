@@ -88,16 +88,13 @@ Beispiel
 |Name|	Beschreibung	| Verantwortlichkeiten
 //|[Benennung des Stakeholder-Typs.]	|[Kurze Beschreibung des Stakeholders.]	|[Fassen Sie die wesentlichen Verantwortlichkeiten des Stakeholder mit Bezug auf das zu entwickelnde System kurz zusammen, d.h. ihr besonderen Interessen. Beispiele: Dieser Stakeholder sorgt dafür, dass das System gewartet wird / dass die angezeigten Daten aktuell sind / überwacht den Projektfortschritt / usw.]
 
-|Auftraggeberin |	Prof. Dr.-Ing. Rhena Krawietz, Professorin für Technische Physik an der HTW Dresden	| führt Berechnungen mit dem Softwaresystem aus, um Aufgaben erstellen und kontrollieren zu können
-|Betriebssystem|Betriebssystem des verwendeten Computers|verarbeitet Druckaufträge aus dem Softwaresystem
+|Auftraggeberin (Kundin) |	Prof. Dr.-Ing. Rhena Krawietz, Professorin für Technische Physik an der HTW Dresden	| führt Berechnungen mit dem Softwaresystem aus, um Aufgaben erstellen und kontrollieren zu können
 |Gesetzgeber|Vorgabe von rechtlichen Rahmenbedingungen | gibt Gesetze vor und überwacht deren Einhaltung, insbesondere im Hinblick auf die Lizenzierung
 |Lehrende|Lehrende der Hochschule für Technik und Wirtschaft Dresden mit Bezug zum Bauwesen|führen möglicherweise in Zukunft Berechnungen mit dem Softwaresystem aus
 |Projektteam|	Team 14	| versucht Kundenwünsche bei der Entwicklung des Softwaresystems umzusetzen
 |Qt|Lizenzgeber|legt Grundlagen für die Lizenzierung des Softwaresystems fest
 |Studierende|Studierende des Bauingenieurwesens oder anderer Studiengänge mit Studienschwerpunkt im Bauwesen|erhalten Prüfungsbewertungen auf Grundlage der Berechnungen des Softwaresystems, führen möglicherweise in Zukunft Berechnungen mit dem Softwaresystem aus
 |Team-Coach|	Prof. Dr.-Ing. Jürgen Anke, Professor für Softwaretechnologie und Informationssysteme an der HTW Dresden	| unterstützt und bewertet die Arbeit des Projektteams
-|Wartungspersonal|	Personen mit Wissen und Fähigkeiten im Bereich der Informatik	| aktualisieren Softwaresystem bei veränderten Berechnungsvorschriften 
-
 |===
 
 
@@ -133,27 +130,25 @@ Beispiel
 |===
 |Bedarf|	Priorität|	Features|	Geplantes Release
 
-|Berechnungen durchführen|hoch|Berechnung und Ausgabe von j, R~ges~, R~i~, R~T~, U, Δϑ~k~ und ϑ~k~ für in Reihe angeordnete Wandschichten|xx
+|Reihenberechnung durchführen|hoch|Berechnung und Ausgabe von j, R~ges~, R~i~, R~T~, U, Δϑ~k~ und ϑ~k~ für in Reihe angeordnete Wandschichten|xx
 
-|Berechnung speichern|hoch|Speicherung von Eingabedaten und Berechnungsergebnissen|xx
+|Berechnungsdaten laden|hoch|Laden von gespeicherten Eingabedaten und Berechnungsergebnissen|xx
 
-|Daten drucken|hoch|Druck auswählbarer Eingabedaten, Ergebnisdaten und grafischen Darstellungen|xx
+|Berechnungsdaten speichern|hoch|Speicherung von Eingabedaten und Berechnungsergebnissen|xx
 
-|Fehleingaben verhindern|hoch|Verhinderung der Eingabe von offensichtlich falschen Werten (negative Zahlen, Buchstaben, Sonderzeichen, ...)|xx
+|Daten drucken|hoch|Druck auswählbarer Eingabedaten und Berechnungsergebnisse|xx
 
-|Luftschichten eingeben|hoch|Ermöglichung der direkten Eingabe von R~i~ bei Luftschichten zwischen Wandschichten|xx
+|Fehleingaben verhindern|hoch|Verhinderung der Eingabe von offensichtlich falschen Eingabedaten (negative Zahlen, Buchstaben, Sonderzeichen, ...)|xx
 
-|Materialdaten eingeben|hoch|Ermöglichung der Eingabe der Daten von bis zu 10 Wandschichten (n, R~se~, R~si~, d, λ)|xx
+|Materialdaten eingeben|hoch|Ermöglichung der Eingabe der Materialdaten von bis zu 10 Wandschichten|xx
 
 |Einheit ändern|mittel|Möglichkeit der Änderung der Einheit von d~i~ |xx
 
 |Materialdaten vormerken|mittel|Möglichkeit der Speicherung von Materialdaten von bis zu 200 Werkstoffen|xx
 
-|PDF erstellen|mittel|Ausgabe eines PDF-Dokumentes mit auswählbaren Eingabedaten, Ergebnisdaten und grafischen Darstellungen |xx
-
 |Temperaturverlauf ausgeben|mittel|Ausgabe des grafisch visualisierten Temperaturverlaufs über die verschiedenenen Wandschichten|xx
 
-|Komplexberechnungen durchführen| niedrig |Berechnung und Ausgabe von j, R~ges~, R~i~, R~T~, U, Δϑ~k~ und ϑ~k~ für in Reihe und parallel angeordnete Wandschichten |xxx
+|Parallelberechnung durchführen| niedrig |Berechnung und Ausgabe von Wärmewiderstandsdaten von parallel angeordnete Wandschichten |xxx
 
 |Tauwasserfreiheit berechnen|niedrig|Berechnung der Tauwasserfreiheit auf der Innenoberfläche einer Außenwand|xx
 
@@ -184,8 +179,6 @@ Beispiel
 |einfache Bedienbarkeit|mittel|xx
 
 |gute Verständlichkeit (Erklärungen)|mittel|xx
-
-|schnelle Berechnung und Datenausgabe|mittel|xx
 
 |===
 
