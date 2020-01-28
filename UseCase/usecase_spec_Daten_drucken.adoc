@@ -4,7 +4,7 @@
 === Kurzbeschreibung
 //<Kurze Beschreibung des Use Case>
 
-Der Use Case beschreibt die Vorbereitung des Drucks von ausgewählten Daten.
+Der Use Case beschreibt die Erteilung eines Druckauftrags für den Druck von ausgewählten Daten.
 
 === Kurzbeschreibung der Akteure
 *Systemnutzer*
@@ -22,7 +22,7 @@ will auswählbare Eingabedaten und Berechnungsergebnisse drucken.
 
 . Der Use Case beginnt, wenn der Systemnutzer die Druckfunktion auswählt.
 . Das Softwaresystem gibt eine Vorauswahl von druckbaren Elementen aus.
-. _WHILE_ Softwaresystem gibt eine Auswahl von Elementen für den Druck aus.
+. _WHILE_ Softwaresystem gibt eine Auswahl von Elementen für den Druck aus
 .. _IF_ Systemnutzer möchte andere Elemente drucken
 ... Der Systemnutzer ändert die Auswahl.
 .. _ELSE_
@@ -74,7 +74,7 @@ Wenn der Systemnutzer im Schritt 4 des Standardablaufs keine Elemente für den D
 
 === Nachbedingungen
 //Nachbedingungen beschreiben das Ergebnis des Use Case, z.B. einen bestimmten Systemzustand.
-Bei erfolgreicher Durchführung des Use Case muss folgende Nachbdingung erfüllt sein:
+Bei erfolgreicher Durchführung des Use Case muss folgende Nachbedingung erfüllt sein:
 
 * Der Druckauftrag wurde an das Betriebssystem gesendet.
 
