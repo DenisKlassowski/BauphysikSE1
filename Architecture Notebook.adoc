@@ -27,6 +27,8 @@ Sie möchte ein Wartungsfreies Produkt. +
 Außerdem wird nicht erwartet, dass sich in Zukunft etwas an der Systemumgebung ändern wird. +
 Es ist nur für die Eigenbenutzung gedacht (kurzfristige Nutzung durch andere möglich). +
 Die Software ist für Speziallisten in dem Gebiet der Bauphysik und soll für diese einfach zu bedienen sein. +
+Drucken von ausgeführten Rechnungen muss möglich sein(vorherige Erstellung einer PDF möglich). +
+
 
 == Annahmen und Abhängigkeiten
 . Nutzer verwenden Dekstop-PC oder Laptop mit USB-Port.
@@ -77,6 +79,8 @@ Es gibt keine wichtigen Vorraussetzungen.
 . Software wird mit dem GUI tool PyQT in Python geschrieben (GNU / GPL License). 
 // Für unsere Developer PyQT: https://www.qt.io/blog/2018/12/18/qt-python-5-12-released GNU / GPL License) +
 .. Obwohl unsere Developer keine Erfahrung mit Python/QT haben, wollen wir dieses Projekt nutzen um uns Grundkenntnisse anzueignen.
+. Python Bibliothek Pyfpdf zur Erstellung der PDF's.
+. PyInstaller oder Py2Exe um Standalone zu erzeugen.
 
 //ANALYSTEN TEXT
 
