@@ -85,8 +85,8 @@ Drucken von ausgeführten Rechnungen muss möglich sein(vorherige Erstellung ein
 
 == Architekturmechanismen
 Persistenz +
-Die Erstellten Rechnungen sollen, bei Wunsch des erstellens einer PDF, nicht bei Absturz des Systems Verloren gehen. +
-+
+Die Erstellten Rechnungen sollen, bei Wunsch des erstellens einer PDF, nicht bei Absturz des Systems Verloren gehen(Ausnahme: Aktuelle Rechnung). +
+
 
 
 
