@@ -2,7 +2,7 @@
 Christian Grieß <christian.Griess@htw-dresden.de>;
 0.8, 18.01.2020
 :toc: 
-:toc-title: Inhaltsverzeichnis
+:toc-title:
 :sectnums:
 // Platzhalter für weitere Dokumenten-Attribute 
 
