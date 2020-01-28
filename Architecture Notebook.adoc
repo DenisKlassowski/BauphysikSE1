@@ -56,59 +56,13 @@ Drucken von ausgeführten Rechnungen muss möglich sein(vorherige Erstellung ein
 . Python Bibliothek Pyfpdf zur Erstellung der PDF's.
 . PyInstaller oder Py2Exe um Standalone zu erzeugen.
 
-//ANALYSTEN TEXT
-
-// Contribution via Open Source
-
-//When selecting an open source license for your project, you contribute to free and open source software development by using //Qt under any of the following licenses: LGPL version 3, GPL version 2 and GPL version 3.
-
-//Basic Premises of the Qt Open Source Model
-
-//GPL – All users have the rights to obtain, modify and redistribute the full source code of your application. Your users are //granted rights founded on the four freedoms of the GNU General Public License.
-
-//LGPL – Any modification to a Qt component covered by the GNU Lesser General Public License must be contributed back to the //community. This is the primary open source Qt license, which covers the majority of Qt modules.
-
-//Please note that there are parts of Qt that are only provided under GPL for open source users that will require you to license //your application under a GPL compatible license. Qt also ships with third party open source components that might require //respective licensing compliancy, if used. See details of other licenses inside Qt .
-
-//icon_resources_infographicCheck out which components are available under the different open source models in the Qt Product //Map.
-//Open Source Usage Obligations  
-
-//The majority of the Qt modules are available under the LGPL v3 and GPL v3 open source license. When developing under this //license your obligations are to:
-
-//Provide a re-linking mechanism for Qt libraries
-//Provide a license copy & explicitly acknowledge Qt use
-//Make a Qt source code copy available for customers
-//Accept that Qt source code modifications are non-proprietary
-//Make “open” consumer devices
-//Accept Digital Rights Management terms, please see the GPL FAQ
-//Take special consideration when attempting to enforce software patents FAQ
-
 == Architekturmechanismen
-Persistenz +
-Die Erstellten Rechnungen sollen, bei Wunsch des erstellens einer PDF, nicht bei Absturz des Systems Verloren gehen(Ausnahme: Aktuelle Rechnung). +
+. Persistenz +
+Die erstellten Rechnungen sollen, bei Wunsch des erstellens einer PDF, bei Absturz des Systems nicht verloren gehen(Ausnahme: Aktuelle Rechnung). +
 
-
-
-
-
-
-Lokalisation +
+. Lokalisation +
 Die Software wird nur in deutsch gehalten, auf jeden fall bezüglich der ersten Verion. +
 Aber, jede der Individuellen Komponenten sollte technisch auch die Englische Sprache unterstützen. +
-https://www2.htw-dresden.de/~anke/openup/core.tech.common.extend_supp/guidances/concepts/arch_mechanism_2932DFB6.html[Doku "Concept: Architectural Mechanism"]
-//[List the architectural mechanisms and describe the current state of each one. Initially, each mechanism may be only name and a brief description. They will evolve until the mechanism is a collaboration or pattern that can be directly applied to some aspect of the design.]
-
-//Beispiele: relationales DBMS, Messaging-Dienste, Transaktionsserver, Webserver, Publish-Subscribe Mechanismus
-
-//Beschreiben Sie den Zweck, Eigenschaften und Funktion der Architekturmechanismen.
-
-. Architekturmechanismus 1
-
-. Architekturmechanismus 2
-
-
-== Schlüssel Abstraktionen 
-//[List and briefly describe the key abstractions of the system. This should be a relatively short list of the critical concepts that define the system. The key abstractions will usually translate to the initial analysis classes and important patterns.]
 
 == Schichten oder Architektonisches Framework
 //[Describe the architectural pattern that you will use or how the architecture will be consistent and uniform. This could be a simple reference to an existing or well-known architectural pattern, such as the Layer framework, a reference to a high-level model of the framework, or a description of how the major system components should be put together.]
@@ -116,14 +70,8 @@ https://www2.htw-dresden.de/~anke/openup/core.tech.common.extend_supp/guidances/
 == Architektursichten (Views) 
 //[Describe the architectural views that you will use to describe the software architecture. This illustrates the different perspectives that you will make available to review and to document architectural decisions.]
 
-Folgende Sichten werden empfohlen:
-
 === Logische Sicht
 //Beschreibt die Struktur und das Verhalten Systemteilen, die hohen Einfluss auf die Architektur haben. Dies kann die Paketstruktur, kritische Schnittstellen, wichtige Klassen und Subsysteme sowie die Beziehungen zwischen diesen Elementen enthalten. Zudem sollten die physische und logische Sicht persistenter Daten beschrieben werden, wenn es diesen Aspekt im System gibt. Dies ist ein hier dokumentierter Teilaspekt des Entwurfs.
-
-
-=== Physische Sicht (Betriebssicht)
-//Beschreibt die physischen Knoten (Rechner) des Systems, der Prozesse, Threads und Komponenten, die in diesen Knoten ausgeführt werden. Diese Sicht wird nicht benötigt, wenn das System in einem einzelnen Prozess oder Thread ausgeführt wird.
 
 === Use cases
 include::https://github.com/fowado/BauphysikSE1/blob/master/UseCase/usecase_model.adoc[Use Cases]
