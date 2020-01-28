@@ -1,6 +1,6 @@
 //Nutzen Sie dieses Template als Grundlage für die Spezifikation *einzelner* Use-Cases. Diese lassen sich dann per Include in das Use-Case Model Dokument einbinden (siehe Beispiel dort).
 
-== Use Case: Berechnungen durchführen
+== Use Case: Reihenberechnung durchführen
 
 === Kurzbeschreibung
 
@@ -21,7 +21,7 @@ Der Systemnutzer hat das Softwaresystem gestartet.
 
 . Der Use Case beginnt, wenn der Systemnutzer die Funktion der Reihenberechnung ausgewählt hat.
 . _WHILE_ Das System bietet eine Eingabemöglichkeit für die Materialdaten.
-.. _WHILE_ Der Systemnutzer gibt die Materialdaten der Schichten ein.
+.. _WHILE_ Der Systemnutzer gibt Materialdaten ein.
 ... _INCLUDE_ Plausibilität prüfen
 . Der Systemnutzer startet die Berechnung durch das Softwaresystem.
 . Das Softwaresystem berechnet die Wärmewiderstandsdaten.
@@ -63,7 +63,7 @@ Wenn der Systemnutzer im Schritt 2 des Standardablaufs eine Materialschicht entf
 
 *Alternativer Ablauf 3a*
 
-Wenn der Systemnutzer im Schritt 3 des Standardablaufs berechnungsnotwendige Daten fehlen, dann
+Wenn im Schritt 3 des Standardablaufs berechnungsnotwendige Daten fehlen, dann
 
 ... Das Softwaresystem weist den Systemnutzer auf fehlende Daten hin.
 ... Der Systemnutzer bestätigt die Kenntnisnahme der Information des Softwaresystems.
