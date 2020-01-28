@@ -42,6 +42,8 @@ _alternativ:_ Die folgenden Aufgaben werden in dieser Iteration bearbeitet:
 [%header, cols="3,1,1,1,2,1,1,1,1"]
 |===
 |Aufgabe bzw. Beschreibung	|Priorität  	|Schätzung der Größe (Punkte)	|Status|	Referenzen	|geplante Iteration| Zugewiesen (Name) |	Gearbeitete Stunden | Schätzung der verbleibenden Stunden
+| Architekten Notizbuch aktualisieren | hoch | 2 | DONE | x | I2 a|
+* Grieß, Christian | 2 | 0
 | Vision und Glossar aktualisieren | hoch   | 5 | DONE | x | I2 a|
 * Grambole, Lukas
 * Däbler, Michael | 2 | 3
