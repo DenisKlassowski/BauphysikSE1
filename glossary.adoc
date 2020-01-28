@@ -1,6 +1,6 @@
 = Glossar BauphysikSE1
 Lukas Grambole <lukas.grambole@htw-dresden.de>; Michael Däbler <daebler.michael@htw-dresden.de>
-1.0, 24.01.2019 
+1.2, 28.01.2019 
 :toc: 
 :toc-title: Inhaltsverzeichnis
 //:sectnums:
@@ -9,7 +9,7 @@ Lukas Grambole <lukas.grambole@htw-dresden.de>; Michael Däbler <daebler.michael
 
 
 == Einführung
-In diesem Dokument werden die wesentlichen Begriffe des Wärmedurchgangsrechner-Systems aus dem Anwendungsgebiet der Bauphysik definiert. Zur besseren Übersichtlichkeit sind Begriffe, Abkürzungen und Datendefinitionen gesondert aufgeführt.
+In diesem Dokument werden die wesentlichen Begriffe des Bauphysikrechner-Systems aus dem Anwendungsgebiet der Bauphysik definiert. Zur besseren Übersichtlichkeit sind Begriffe, Abkürzungen, physikalische Größen und Datendefinitionen gesondert aufgeführt.
 
 == Begriffe
 [%header]
@@ -17,8 +17,8 @@ In diesem Dokument werden die wesentlichen Begriffe des Wärmedurchgangsrechner-
 |Begriff|	Definition und Erläuterung|	Synonyme
 
 |Auswahl|Gruppe von Elementen, welche für eine nachfolgende Aktivität ausgewählt werden|
-|Berechnete Elemente|Physikalische Größen und Diagramme, welche im Rahmen eines Berechnungsvorgangs ermittelt wurden|Berechnungsergebnisse, Ergebnisdaten
-|Eingabedaten|Berechnungsabhängige Daten, welche ein Systemnutzer in ein Softwaresystem eingibt|
+|Berechnungsergebnisse|Physikalische Größen und Diagramme, welche im Rahmen eines Berechnungsvorgangs ermittelt wurden|Berechnete Elemente, Ergebnisdaten
+|Eingabedaten|Berechnungsabhängige Daten, welche ein Systemnutzer in das Softwaresystem eingibt|
 |Eingabeeinheit|Physikalische Einheit von Eingabedaten|
 |Celsiusskala|Temperaturskala, bei der der Abstand zwischen dem Gefrier- und dem Siedepunkt des Wassers 100 Einheiten entspricht|
 |Kelvinskala|Temperaturskala, deren Nullpunkt der absolute Nullpunkt ist (-275,15°C)|
@@ -37,7 +37,7 @@ In diesem Dokument werden die wesentlichen Begriffe des Wärmedurchgangsrechner-
 |NFA|Nichtfunktionale Anforderung|Beschränkung der vom System angebotenen Funktionalität
 |NFAP|Nichtfunktionale Anforderung Performance|Nichtfunktionale Anforderung in Bezug auf die Leistung eines Softwaresystems
 |NFAR|Nichtfunktionale Anforderung Reliability|Nichtfunktionale Anforderung in Bezug auf die Zuverlässigkeit eines Softwaresystems
-|NFAS|Nichtfunktionale Anforderung Supportability|Nichtfunktionale Anforderung in Bezug auf die Wartbarkeit eines Softwaresystems
+|NFAS|Nichtfunktionale Anforderung Supportability|Nichtfunktionale Anforderung in Bezug auf die Unterstützbarkeit eines Softwaresystems
 |NFAU|Nichtfunktionale Anforderung Usability|Nichtfunktionale Anforderung in Bezug auf die Benutzbarkeit eines Softwaresystems
 |SC|Szenario|Konkrete Instanz eines Use Case
 |UC|Use Case|Funktionale Anforderung eines Systems
