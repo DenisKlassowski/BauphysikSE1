@@ -6,7 +6,7 @@ Der Use Case beschreibt einen Vorgang zur Prüfung der Gültigkeit von Daten.
 === Kurzbeschreibung der Akteure
 *Systemnutzer*
 
-will korrekte Daten in Eingabefelder eingeben.
+will korrekte Eingabedaten eingeben.
 
 === Vorbedingungen
 //Vorbedingungen müssen erfüllt, damit der Use Case beginnen kann, z.B. Benutzer ist angemeldet, Warenkorb ist nicht leer...
@@ -15,8 +15,8 @@ Der Systemnutzer hat einen Use Case gestartet, der eine Dateneingabe erfordert.
 === Standardablauf (Basic Flow)
 //Der Standardablauf definiert die Schritte für den Erfolgsfall ("Happy Path")
 
-. Der Use Case beginnt, wenn der Systemnutzer Daten eingibt.
-. _WHILE_ Systemnutzer gibt Daten ein
+. Der Use Case beginnt, wenn der Systemnutzer Eingabedaten eingibt.
+. _WHILE_ Systemnutzer gibt Eingabedaten ein
 .. Das Softwaresystem prüft die Gültigkeit der Eingabedaten.
 .. _IF_ Softwaresystem erkennt eine ungültige Eingabe
 ... Das Softwaresystem verhindert die Eingabe.
