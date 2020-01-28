@@ -47,7 +47,7 @@ _alternativ:_ Die folgenden Aufgaben werden in dieser Iteration bearbeitet:
 * Michael Däbler
 * Lukas Grambole 
 | 2 | 2
-| Architekten Notizbuch erstellen| hoch | 4|DONE| I1 a | *Christian Grieß 
+| Architekten Notizbuch erstellen| hoch | 4 | DONE | x | I1  a| *Christian Grieß 
 | 2 | 0
 | x | x | x | x | x | x | x | x | x 
 |===
