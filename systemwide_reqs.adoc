@@ -1,13 +1,13 @@
 = BauphysikSE1 System-Wide Requirements Specification
 Lukas Grambole <lukas.grambole@htw-dresden.de>; Michael Däbler <michael.daebler@htw-dresden.de>
-1.0, 24.01.2020
+1.2, 28.01.2020
 :toc: 
 :toc-title: Inhaltsverzeichnis
 :sectnums:
 :icons: font
 
 == Einführung
-In diesem Dokument werden die systemweiten Anforderungen für das Projekt BauphysikSE1 spezifiziert. Die Gliederung erfolgt nach der FURPS+ Anforderungsklassifikation:
+In diesem Dokument werden die systemweiten Anforderungen für das Bauphysikrechner-System spezifiziert. Die Gliederung erfolgt nach der FURPS+ Anforderungsklassifikation:
 
 * Systemweite funktionale Anforderungen (F),
 * Qualitätsanforderungen für Benutzbarkeit, Zuverlässigkeit, Effizienz und Wartbarkeit (URPS) sowie 
@@ -15,7 +15,8 @@ In diesem Dokument werden die systemweiten Anforderungen für das Projekt Bauphy
 
 NOTE: Die funktionalen Anforderungen, die sich aus der Interaktion von Nutzern mit dem System ergeben, sind als Use Cases in einem separaten Dokument festgehalten.
 
-//== Systemweite funktionale Anforderungen
+== Systemweite funktionale Anforderungen
+Alle funktionalen Anforderungen wurden als Use Cases ausgedrückt.
 //Angabe von system-weiten funktionalen Anforderungen, die nicht als Use Cases ausgedrückt werden können. Beispiele sind Drucken, Berichte, Authentifizierung, Änderungsverfolgung (Auditing), zeitgesteuerte Aktivitäten (Scheduling), Sicherheit / Maßnahmen zum Datenschutz
 
 == Qualitätsanforderungen für das Gesamtsystem
@@ -23,9 +24,9 @@ NOTE: Die funktionalen Anforderungen, die sich aus der Interaktion von Nutzern m
 //Qualitätsanforderungen repräsentieren das "URPS" im FURPS+ zu Klassifikation von Anforderungen
  
 === Benutzbarkeit (Usability)
-*NFAU-1: Das System muss Fehlermeldungen in einer Sprache ausgeben können, welche für die Auftraggeberin verständlich ist.*
+*NFAU-1: Das System muss Fehlermeldungen in einer Sprache ausgeben können, welche für den Systemnutzer verständlich ist.*
 
-* Zur Überprüfung werden durch einen Testnutzer fehlerhafte Eingaben in mehrere Felder getätigt.
+* Zur Überprüfung werden durch einen Testnutzer fehlerhafte Eingaben getätigt.
 
 *NFAU-2: Das System soll Hilfestellungen zu Eingabemöglichkeiten beinhalten.*
 
