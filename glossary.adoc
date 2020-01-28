@@ -17,9 +17,9 @@ In diesem Dokument werden die wesentlichen Begriffe des Wärmedurchgangsrechner-
 |Begriff|	Definition und Erläuterung|	Synonyme
 
 |Auswahl|Gruppe von Elementen, welche für eine nachfolgende Aktivität ausgewählt werden|
-|Berechnete Elemente|Physikalische Größen und Diagramme, welche im Rahmen eines Berechnungsvorgangs ermittelt wurden|Berechnungsergebnisse
-|Eingabedaten|Daten, welche ein Systemnutzer in ein Softwaresystem eingibt, abhängig von Art der Berechnung|
-|Ergebnisdaten|Daten, welche infolge einer Berechnung ausgegeben werden, abhängig von Eingabedaten und Art der Berechnung|
+|Berechnete Elemente|Physikalische Größen und Diagramme, welche im Rahmen eines Berechnungsvorgangs ermittelt wurden|Berechnungsergebnisse, Ergebnisdaten
+|Eingabedaten|Berechnungsabhängige Daten, welche ein Systemnutzer in ein Softwaresystem eingibt|
+|Eingabeeinheit|Physikalische Einheit von Eingabedaten|
 |Celsiusskala|Temperaturskala, bei der der Abstand zwischen dem Gefrier- und dem Siedepunkt des Wassers 100 Einheiten entspricht|
 |Kelvinskala|Temperaturskala, deren Nullpunkt der absolute Nullpunkt ist (-275,15°C)|
 |Systemnutzer|Bezeichnung für einen Akteur, der Berechnungen mit dem Softwaresystem durchführen möchte. Neben der Auftraggeberin sind auch Studierende und Lehrende potenzielle Systemnutzer.|
