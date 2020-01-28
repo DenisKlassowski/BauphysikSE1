@@ -43,7 +43,7 @@ Drucken von ausgeführten Rechnungen muss möglich sein(vorherige Erstellung ein
 == Architektur-relevante Anforderungen
 
 . Das System muss auf Windows 10 Rechnern ausführbar sein.
-. Das System darf, wenn PDF's erstellt werden, höchstens die Aktuelle Aufgabe verlieren. 
+. Das System darf, wenn PDF's erstellt werden und der Computer/ das Programm abstürzt, höchstens die Aktuelle Aufgabe verlieren. 
 
 
 == Entscheidungen, Nebenbedingungen und Begründungen
