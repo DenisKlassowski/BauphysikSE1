@@ -41,35 +41,9 @@ Drucken von ausgeführten Rechnungen muss möglich sein(vorherige Erstellung ein
 //[List the assumptions and dependencies that drive architectural decisions. This could include sensitive or critical areas, dependencies on legacy interfaces, the skill and experience of the team, the availability of important resources, and so forth]
 
 == Architektur-relevante Anforderungen
- Architecturally significant requirements are those requirements that play an important role in determining the architecture of the system.  Such requirements require special attention. Not all requirements have equal significance with regards to the architecture.
 
-Architecturally significant requirements are a subset of the requirements that need to be satisfied before the architecture can be considered "stable". Typically, these are requirements that are technically challenging, technically constraining, or central to the system's purpose. Furthermore, the system will generally be more sensitive to changes against architecturally significant requirements, so identifying and communicating this subset will help others understand the potential implications of change.
-
-Requirements can be explicitly or implicitly architecturally significant. Explicitly significant requirements are often overtly technical in nature, such as performance targets; the need to interface to other systems; the number of users that must be supported; or security requirements. Implicitly significant requirements may define the essence of the functional behaviour of the system (for example, making a purchase from an on-line store).
-
-Deciding whether a specific requirement is architecturally significant is often a matter of judgment. The selection of requirements that are considered "architecturally significant" is driven by several key driving factors:
-
-    The benefit of the requirement to stakeholders: critical, important, or useful.
-    The architectural impact of the requirement: none, extends, or modifies. There may be critical requirements that have little or no impact on the architecture and low-benefit requirements that have a big impact. Low-benefit requirements with big architectural impacts should be reviewed by the project manager for possible removal from the scope of the project.
-    The risks to be mitigated: performance, availability of a product, and suitability of a component.
-    The completion of the coverage of the architecture.
-    Other tactical objectives or constraints, such as demonstration to the user, and so on.
-
-There may be two requirements that hit the same components and address similar risks. If you implement A first, then B is not architecturally significant. If you implement B first, then A is not architecturally significant. Thus these attributes can depend on the order the requirements are realized, and should be re-evaluated when the order changes, as well as when the requirements themselves change.
-
-The following are good examples of Architecturally Significant Requirements:
-
-    The system must record every modification to customer records for audit purposes.
-    The system must respond within 5 seconds.
-    The system must deploy on Microsoft Windows XP and Linux.
-    The system must encrypt all network traffic.
-    The ATM system must dispense cash on demand to validated account holders with sufficient cleared funds.
-
-Architecturally significant requirements also describe key behaviors that the system needs to perform.  Such scenarios represent the important interactions between key abstractions.and should be identified as architecturally significant requirements. For example, for an on-line book store describing the way the software handles the scenarios for ordering a book and checking out the shopping cart are often enough to communicate the essence of the architecture. 
-
-
-Es gibt keine wichtigen Vorraussetzungen.
-//Fügen Sie eine Referenz / Link zu den Anforderungen ein, die implementiert werden müssen, um die Architektur zu erzeugen.
+. Das System muss auf Windows 10 Rechnern ausführbar sein.
+. Das System darf, wenn PDF's erstellt werden, höchstens die Aktuelle Aufgabe verlieren. 
 
 
 == Entscheidungen, Nebenbedingungen und Begründungen
@@ -110,8 +84,10 @@ Es gibt keine wichtigen Vorraussetzungen.
 //Take special consideration when attempting to enforce software patents FAQ
 
 == Architekturmechanismen
-Persistenz ? +
-https://de.wikipedia.org/wiki/Persistenz_(Informatik) +
+Persistenz +
+Die Erstellten Rechnungen sollen, bei Wunsch des erstellens einer PDF, nicht bei Absturz des Systems Verloren gehen. +
++
+
 
 
 
