@@ -39,14 +39,14 @@ _alternativ:_ Die folgenden Aufgaben werden in dieser Iteration bearbeitet:
 [%header, cols="3,1,1,1,2,1,1,1,1"]
 |===
 |Aufgabe bzw. Beschreibung	|Priorität  	|Schätzung der Größe (Punkte)	|Status|	Referenzen	|geplante Iteration| Zugewiesen (Name) |	Gearbeitete Stunden | Schätzung der verbleibenden Stunden
-| Vision erarbeiten | hoch   | 7 | DONE | x | I1 a| 
+| Vision erarbeiten | hoch   | 4 | DONE | x | I1 a| 
 * Michael Däbler
 * Lukas Grambole 
-| 4 | 3
-| Glossar erarbeiten | mittel   | 4 | DONE | x | I1  a| 
+| 6 | 0
+| Glossar erarbeiten | mittel   | 1 | DONE | x | I1  a| 
 * Michael Däbler
 * Lukas Grambole 
-| 2 | 2
+| 2 | 0
 | Architekten Notizbuch erstellen| hoch | 4 | DONE | x | I1  a| 
 * Christian Grieß 
 | 2 | 0
