@@ -18,7 +18,7 @@ Der Zweck dieses Dokuments ist es, die wesentlichen Anforderungen an das System 
 Dieses Visions-Dokument bezieht sich auf das Bauphysikrechner-System, das von Team 14 entwickelt wird. Das System wird es der Professorin Rhena Krawietz erlauben, bauphysikalische Berechnungen zum Wärmedurchgangskoeffizienten durchführen zu können, um den Arbeitsaufwand bei der Erstellung und Korrektur von Aufgaben zu minimieren.
 
 === Definitionen, Akronyme und Abkürzungen
-siehe <<glossary.adoc#,Glossar>>
+Definitionen, Akronyme und Abkürzungen werden im Glossar beschrieben.
 
 //=== Referenzen
 //Gesprächsprotokoll vom 06.12.2019
@@ -138,7 +138,7 @@ Beispiel
 
 |Daten drucken|hoch|Druck auswählbarer Eingabedaten und Berechnungsergebnisse|xx
 
-|Fehleingaben verhindern|hoch|Verhinderung der Eingabe von offensichtlich falschen Eingabedaten (negative Zahlen, Buchstaben, Sonderzeichen, ...)|xx
+|Fehleingaben verhindern|hoch|Verhinderung der Eingabe von offensichtlich falschen Eingabedaten (Buchstaben, Sonderzeichen, ...)|xx
 
 |Materialdaten eingeben|hoch|Ermöglichung der Eingabe der Materialdaten von bis zu 10 Wandschichten|xx
 

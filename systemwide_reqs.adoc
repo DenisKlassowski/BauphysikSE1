@@ -26,13 +26,13 @@ Alle funktionalen Anforderungen wurden als Use Cases ausgedrückt.
 === Benutzbarkeit (Usability)
 *NFAU-1: Das System muss Fehlermeldungen in einer Sprache ausgeben können, welche für den Systemnutzer verständlich ist.*
 
-* Zur Überprüfung werden durch einen Testnutzer fehlerhafte Eingaben getätigt.
+* Zur Überprüfung werden durch einen Testnutzer fehlerhafte Eingaben getätigt, um anschließend zu testen, ob der Testnutzer durch Fehlermeldungen zu einem korrekten Vorgehen geleitet wird.
 
 *NFAU-2: Das System soll Hilfestellungen zu Eingabemöglichkeiten beinhalten.*
 
 * Diese NFA bezieht sich auf UC1, UC2, UC3, UC4, UC7 und UC8.
 
-* Zur Überprüfung wird durch einen Testnutzer eine Beispielaufgabe mit dem Softwaresystem gelöst.
+* Zur Überprüfung wird durch einen Testnutzer eine Beispielaufgabe mit dem Softwaresystem gelöst, um dabei zu testen, ob Hilfestellungen angezeigt werden.
 
 *NFAU-3: Das System muss eine deutsche Benutzeroberfläche beinhalten.*
 
