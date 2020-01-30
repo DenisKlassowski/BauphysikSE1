@@ -21,7 +21,7 @@ _Anm. der Redaktion: folgende Punkte wurden aus Leseflussgründen hierhin versch
 - Temperaturverlaufberechnung
 ** Angabe Innen- und Außentemperatur
 ** Annahme: Verlauf innerhalb der Schichten linear
-** Annahme: Grenzfläche zw-. den Schichten haben die gleiche Temperatur
+** Annahme: Grenzfläche zw. den Schichten haben die gleiche Temperatur
 ** Berechnung an jeder Grenzfläche -> in jeder Schicht
 ** graphische Darstellung gewünscht
 ** Option zur Ermittlung der Temperatur an gegebenem Punkt gewünscht
@@ -35,6 +35,7 @@ _Anm. der Redaktion: folgende Punkte wurden aus Leseflussgründen hierhin versch
 - neues Verfahren: Schrittweise abarbeiten (rechnerisch)
 - vereinfachstes Berechnungsverfahren (abh. von Windgeschwindigkeit, Temp, ...)
 - Erweiterung auf andere physikalische Probleme (z.B. Akustik nicht gewünscht)
+- sofern Berechnung für parallele Schichten und Tauwasserfreiheit implementiert, keine Erweiterungsmöglichkeiten im Themengebiett Wärmedurchgang ersichtlich
 
 == Fragen zur technischen Erweiterung
 
@@ -47,7 +48,8 @@ _Anm. der Redaktion: folgende Punkte wurden aus Leseflussgründen hierhin versch
 ** _Anm. der Redaktion: aus den folgenden Fragen zur Anwendung ergab sich für die Datenbank:_
 *** Datenbank soll lokal vorliegen
 *** da eine lokale Offline-Anwendung gewünscht ist: Offline-Datenbank
-* niedrige Priorität
+* ist niedrige Priorität
+
 . Anwendung
 * Was soll die Anwendung sein? (lokal, Webanwendung, usw.)
 ** lokal, damit auch ohne Internet benutzbar
@@ -63,6 +65,8 @@ _Anm. der Redaktion: folgende Punkte wurden aus Leseflussgründen hierhin versch
 ** portable
 * Konflikte bei versch. Systemen und Datenbankanpassungen
 ** aktuell halten bzw. Version einhalten nicht allzu wichtig
+* Wie lange soll die Software verwendet werden?
+** so lange wie möglich
 
 == Allgemeine Fragen zur Software
 * Für wen ist die Software gedacht?
@@ -71,11 +75,6 @@ _Anm. der Redaktion: folgende Punkte wurden aus Leseflussgründen hierhin versch
 ** Drucken bzw. Drucken als PDF: Ergebnisse und grafische Darstellung
 * Von welcher Umgebung ist auszugehen?
 ** Win10
-* Wie lange soll die Software verwendet werden?
-** so lange wie möglich
-
-== Nicht ersichtliche Fragen
-
-_Anm. der Redaktion: hier werden Fragen bzw. Antworten aufgelistet, die die Protokollführenden nicht verstanden bzw. nicht eindeutig niederschreiben konnten_
-
-* Frage bezüglich Aktualisierungsschnittstellen
+* Aktualiserung
+** Materialdaten müssen aktualisierbar sein
+** Berechnungsvorschriften nicht, bei ihnen ist von keiner Änderungs auszugehen
