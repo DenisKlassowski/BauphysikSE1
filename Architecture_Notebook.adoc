@@ -73,4 +73,3 @@ Aber, jede der Individuellen Komponenten sollte technisch auch die Englische Spr
 
 === Use cases
 include::UseCase/usecase_model.adoc[lines=1..1;4..-1,leveloffset=+1]
-include::https://github.com/fowado/BauphysikSE1/blob/master/UseCase/usecase_model.adoc[Use Cases]
