@@ -1,6 +1,6 @@
 = Projektplan BauphysikSE1
 Gruppe 14
-0.1, 01.11.2019 
+0.7, 01.11.2019 
 :toc: 
 :toc-title: Inhaltsverzeichnis
 :sectnums:
@@ -8,16 +8,16 @@ Gruppe 14
 
 == Einführung
 //Briefly describe the content of the project plan.
-Der Projektplan für die SE1 Projekt: Bauphysik. 
+Dieses Dokument ist der Projektplan für das SE1 Projekt Bauphysik. Ziel des Dokumentes ist es die Organisation und Methoden des Projektes im groben wieder zu geben. 
 
 == Projektorganisation
 //Introduce the project team, team members, and roles that they play during this project. If applicable, introduce work areas, domains, or technical work packages that are assigned to team members. Introduce neighboring projects, relationships, and communication channels. If the project is introduced somewhere else, reference that location with a link.
-Die Arbeit ist nach Rollen und Gebieten aufgeteilt. Es gibt eine klare Rollenverteilung. Eine Rolle bedeutet das diese Person in diesem Themenbereich eine Verantwortung trägt und eigeninitiativ Entscheidungen treffen, protokollieren (work item list) und Berichten muss. Dies Erfolgt nach Iteration Plan. +
+Die Tätigkeiten sind nach Rollen und Themengebiet aufgeteilt. Eine Person in Ihrer Rolle trägt Verantwortung in diesem Themenbereich und trifft hier nach eigenem ermessen Entscheidungen. Alle anstehenden und abgeschlossenen Tätigkeiten werden flexibel in einer work-item-list festgehalten und soweit einer Iteration zugeordnet, bearbeitet.  +
 Die Rollenverteilung sieht wie folgt aus: 
 [cols=",3"]
 |===
 |Name
-|Rolle
+|Primäre Rolle
 |Denis Klasowski
 |Project Manager
 |Däbler Michael
@@ -39,9 +39,9 @@ Die Rollenverteilung sieht wie folgt aus:
 == Praktiken und Bewertung 
 //Describe or reference which management and technical practices will be used in the project, such as iterative development, continuous integration, independent testing and list any changes or particular configuration to the project. Specify how you will track progress in each practice. As an example, for iterative development the team may decide to use iteration assessments and iteration burndown reports and collect metrics such as velocity (completed work item points/ iteration).
 
-Die Lösung für das Projekt wird iterativ Entwickelt. +
-Die Aufgaben werden in einer Tabelle (im iteration_plan) festgehalten und mithilfe einee Punktesystems bemessen. +
-Ergebnis dieser Messung ist die Velocity (die Geschwindigkeit) einer Phase. +
+Die Lösung für das Projekt wird iterativ entwickelt. Hierfür Orientiert sich das Team am Open-UP. Für wichtige Dokumente werden die vom Coach bereitgestellen Templates genutzt und ausgefüllt. +
+Alle Aufgaben und Probleme werden zunächst festgehalten und je nach Priorität einer Iteration zugeordnet. Ist eine Iteration abgeschlossen wird anhand der erledigten Aufgaben die Geschwindigkeit(Velocity) berechnet um zu überprüfen ob unser Ziel der Geschwindigkeit gehalten werden konnte. +
+Desweiteren finden sich in den Iteration-Plans die Assessments wo das Team die Iteration bewertet. +
 Alle Dokumente zum Projekt befinden sich im Github-Repository.
 
 == Meilesteine und Ziele
@@ -59,8 +59,8 @@ Größere Ziele die wir einnerhalb einer Iteration erreichen möchten.
 |
 * Vertraut Machen mit OpenUP 
 * Kennenlernnen des Teams
-* Kundengespräch
-|02.12.2019 bis 16.12.2019
+* Kundengespräch abhalten
+|02.12.2019
 |-
 |It1
 |	
@@ -75,18 +75,39 @@ Größere Ziele die wir einnerhalb einer Iteration erreichen möchten.
 |	16
 |It2
 |	
-* Scope erweitern 
-* Projektdateien aktualisieren
-* Technische Lösung anpassen
-* Risiko: scope zu weit erweitert
+* Zusammen mit dem Kunden den Scope erweitern 
+* Vision aktualisieren
+* Test-Cases aktualisieren
+* Use-Cases aktualisieren
+* Architecture Notebook aktualisieren
+* Technische Vision anpassen
+* Risiko: Scope zu weit erweitert
 |	05.01.2020
-|	16
+|	12
+|It3
+|	
+* Erweiterten Scope umsetzen und Projektdateien verfeinern
+* Vision und Scope im Meeting besprechen / alle auf einen Stand bringen
+* Wireframes erstellen
+* Vertikale Prototypen beginnen
+* Technische Vision finalisieren
+* Risiko: Zeit pro Iteration gekürzt -> Verlust der Übersicht 
+|	19.01.2020
+|	12
+|It4
+|	
+* Auf eine Präsentation für den Kunden vorbereiten
+* Clickdummy erstellen
+* Visuellen Prototyp optimieren
+* Technischen Prototyp anfangen (Berechnung)
+|	26.01.2020
+|	12
 |===
 
 == Deployment
 //Outline the strategy for deploying the software (and its updates) into the production environment.
+N/A 
 
 == Erkenntnisse (Lessons learned)
-Es wurde in der It1 festgestellt das der Umfang des Projektes, im Rahmen der Lehrveranstalung SE1, nicht angemessen ist. +
-Erkenntniss: Fehleinschätzung des Umfangs bei Gespräch.
+N/A (Einzelne Erkenntnisse und Bewertung der Iterationen befinden sich im Iteration_plan)
 //List lessons learned from the retrospective, with special emphasis on actions to be taken to improve, for example: the development environment, the process, or team collaboration.

@@ -1,0 +1,105 @@
+// --- 1. Projektthema -------------------------
+= SE I - Belegabgabe: Bauphysik
+// --- 2. Teammitglieder -----------------------
+Fritzsche Felix; Lehmann Christian; Ullmann Max; Baburkin Yewgenji; Grieß Christian; Grambole Lukas ; Däbler Michael ; Denis Klasowski
+// --- 3. Abgabedatum --------------------------
+31. Januar 2020
+// ---------------------------------------------
+:doctype: book
+:toc:
+:toclevels: 2
+:toc-title: Inhaltsverzeichnis
+:sectnums:
+:icons: font
+//:source-highlighter: highlightjs
+:source-highlighter: rouge
+:rouge-style: github
+:xrefstyle: full
+:experimental:
+:chapter-label: 
+:figure-caption: Abbildung
+:table-caption: Tabelle
+:listing-caption: Listing
+:nofooter:
+
+<<<
+
+// --- 4. include Pfade anpassen ---------------
+
+= Technische Spezifikation
+* Vision
+* Use Case Model (inkl. Wireframes, sofern vorhanden)
+* System-wide Requirements
+* Glossar
+* Domänenmodell
+
+// Vision
+include::vision.adoc[lines=1..1;4..-1,leveloffset=+1]
+<<<
+// Use Case Model (inkludiert selbst die einzelnen usecase_spec_x.adoc Dateien)
+include::UseCase/usecase_model.adoc[lines=1..1;4..-1,leveloffset=+1]
+<<<
+// System-wide Requirements
+include::systemwide_reqs.adoc[lines=1..1;4..-1,leveloffset=+1]
+<<<
+// Glossar
+include::glossary.adoc[lines=1..1;4..-1,leveloffset=+1]
+<<<
+
+
+= Projektdokumentation
+* Projektplan
+* Risikoliste
+* Iteration Plan (für zwei ausgewählte Iterationen)
+
+// Projektplan
+include::projectplan.adoc[lines=1..1;4..-1,leveloffset=+1]
+<<<
+// Risikoliste
+include::risk_list.adoc[lines=1..1;4..-1,leveloffset=+1]
+<<<
+// Iteration 1
+include::iteration_planI1.adoc[lines=1..1;4..-1,leveloffset=+1]
+<<<
+// Iteration 2
+include::iteration_planI2.adoc[lines=1..1;4..-1,leveloffset=+1]
+<<<
+
+= Entwurfsdokumentation
+* Architektur-Notizbuch
+* Test Cases
+* Design
+
+// Architektur-Notizbuch
+include::Architecture_Notebook.adoc[lines=1..1;4..-1,leveloffset=+1]
+<<<
+// Test Cases
+include::Test/TestCase_001.adoc[lines=1..1;4..-1,leveloffset=+1]
+<<<
+include::Test/TestCase_002.adoc[lines=1..1;4..-1,leveloffset=+1]
+<<<
+include::Test/TestCase_003.adoc[lines=1..1;4..-1,leveloffset=+1]
+<<<
+include::Test/TestCase_004.adoc[lines=1..1;4..-1,leveloffset=+1]
+<<<
+include::Test/TestCase_005.adoc[lines=1..1;4..-1,leveloffset=+1]
+<<<
+include::Test/TestCase_006_1.adoc[lines=1..1;4..-1,leveloffset=+1]
+<<<
+include::Test/TestCase_006_2.adoc[lines=1..1;4..-1,leveloffset=+1]
+<<<
+include::Test/TestCase_007.adoc[lines=1..1;4..-1,leveloffset=+1]
+<<<
+include::Test/TestCase_008.adoc[lines=1..1;4..-1,leveloffset=+1]
+<<<
+include::Test/TestCase_009.adoc[lines=1..1;4..-1,leveloffset=+1]
+<<<
+include::Test/TestCase_021.adoc[lines=1..1;4..-1,leveloffset=+1]
+<<<
+include::Test/TestCase_022.adoc[lines=1..1;4..-1,leveloffset=+1]
+<<<
+// Design
+== Design
+image::/user/data/ia18/s78993/Bauphysik/BauphysikSE1/dialog_interface.png[Design]
+
+// ---------------------------------------------

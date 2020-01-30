@@ -1,4 +1,4 @@
-= Iterationsplan BauphysikSE1
+= Iterationsplan 2 BauphysikSE1
 Gruppe 14
 0.1, 01.11.2019 
 :toc: 
@@ -14,55 +14,61 @@ Gruppe 14
 |Meilenstein
 |Datum
 |Beginn der Iteration | 05.01.2020
-|zweites Kundengespräch abhalten| 13.01.2020
-|Vision erweitern |
-|Mögliche Risiken notieren|
-|Architecture und Technical Vision anpassen|
-|Test und Use Cases erweitern|
+|*Der Scope muss erweitert werden*| 
+|Dokumente müssen an der neuen Scope angepasst werden|
+|Übersicht der Risiken erstellen|
 |Erste Idee der Visualisierung fertigstellen| 
-|Ende der Iteration	| 19.01.2020
+|Ende der Iteration	| 18.01.2020
 |===
 	
 
 == Wesentliche Ziele
 //Nennen Sie 1-5 wesentliche Ziele für die Iteration.
 
-Beispiele:
-
 * Kundengespräch analysieren
 * Inception Phase möglichst abschließen
+* Visueller Prototyp muss erstellt werden
+* Use-Cases müssen präsentierbar sein
+* Entscheidung bei der technischen Umsetzung treffen
 
 
 == Aufgabenzuordnung
 //Dieser Abschnitt sollte einen Verweis auf die Work Items List enthalten, die die für diese Iteration vorgesehenen Aufgaben dokumentiert sowie die Zuordnung dieser Aufgaben zu Teammitgliedern. Alternativ können die Aufgaben für die Iteration und die Zuordnung zu Teammitgliedern in nachfolgender Tabelle dokumentiert werden - je nach dem, was einfacher für die Projektbeteiligten einfacher zu finden ist.
 
-Die in dieser Iteration geplanten Aufgaben sind in der Work Items List dargestellt (hier Verweis einfügen).
-
-_alternativ:_ Die folgenden Aufgaben werden in dieser Iteration bearbeitet:
+Die folgenden Aufgaben werden in dieser Iteration bearbeitet:
 [%header, cols="3,1,1,1,2,1,1,1,1"]
 |===
 |Aufgabe bzw. Beschreibung	|Priorität  	|Schätzung der Größe (Punkte)	|Status|	Referenzen	|geplante Iteration| Zugewiesen (Name) |	Gearbeitete Stunden | Schätzung der verbleibenden Stunden
 | Architekten Notizbuch aktualisieren | hoch | 2 | DONE | x | I2 a|
 * Grieß, Christian | 2 | 0
-| Vision und Glossar aktualisieren | hoch   | 5 | DONE | x | I2 a|
+| Vision und Glossar aktualisieren | hoch   | 3 | DONE | x | I2 a|
 * Grambole, Lukas
 * Däbler, Michael | 2 | 3
-| UC identifizieren und ausarbeiten | hoch   | 8 | DONE | x | I2 a| 
+| Use-Case identifizieren und ausarbeiten | hoch   | 8 | DONE | x | I2 a| 
 * Grambole, Lukas 
-* Däbler, Michael| 5 | 3
+* Däbler, Michael| 7 | 0
 |NFA identifizieren|hoch|3|DONE|x|I2 a|
 * Grambole, Lukas
 * Däbler, Michael|2|1
-|Architecture Notebook und Tech. Vision aktualisieren| hoch |2|NOT DONE|x|I2 a|
-* Grieß, Christian |BITTE EINTRAGEN| 2
+|Architecture Notebook und Tech. Vision aktualisieren| hoch |2|DONE|x|I2 a|
+* Grieß, Christian |4| 0
 |(Kunden-)Gesprächsprotokoll erfassen und nachbearbeiten|hoch|2|DONE|x|I2 a|
-* Baburkin, Yewgenji 
+* Baburkin, Yewgenji
 * Fritzsche, Felix|3|0
 |(Coach-)Gesprächsprotokoll erfassen und nachbearbeiten|mittel|1|DONE|x|I2 a| * Grambole, Lukas | 1| 0
-|UI Entwurf Wireframe erstellen|hoch|2|NOT DONE|x|I2 a|
-* Fritzsche, Felix|BITTE EINTRAGEN|2
-|Risk List aktualisieren|hoch|2|NOT DONE|x|I2 a|
-* Klassowski, Denis|BITTE EINTAGEN|2
+|UI Entwurf Wireframe erstellen|hoch|4|DONE|x|I2 a|
+* Fritzsche, Felix, 
+* Baburkin, Yewgenji|4|0
+|Risk List aktualisieren|hoch|2|DONE|x|I2 a|
+* Klassowski, Denis|3|0
+|Clickdummy erstellen|hoch|5|NOT DONE|x|I2 a|
+* Ullmann, Max|0|5
+|Entscheiden welche Technologien verwendet werden|hoch|1|DONE|x|I2 a|
+* Ullmann Max,
+* Baburkin, Yewgenji,
+* Grieß, Christian
+|1|0
+| TEST-CASE anpassen | niedrig | 1 | DONE | x | I2 | Christian Lehmann | 2 | 0 
 |===
 								
 								
@@ -72,16 +78,18 @@ _alternativ:_ Die folgenden Aufgaben werden in dieser Iteration bearbeitet:
 [%header, cols="2,1,3"]
 |===
 |Problem	| Status |	Notizen
-|Frage zu Aktualisierungsschnittstellen nicht protokollisiert | PENDING |	Diese Frage wurde im Rahmen des 2. Kundengesprächs gestellt, jedoch nicht ausreichend protokolliert. Entweder können mir (Protokollant, Yewgenij) diese Infos zugespielt werden oder wir fragen beim nächsen Kundengespräch einfach ein weiteres Mal.
+|Frage zu Aktualisierungsschnittstellen nicht protokolliert | PENDING |	Diese Frage wurde im Rahmen des 2. Kundengesprächs gestellt, jedoch nicht ausreichend protokolliert.
+|Aufgrund der Neujahrspause muss die Iteration 3 verkürzt werden|NO LONGER A PROBLEM| Team ist einverstanden und mit dieser Maßnahme bleiben wir weiterhin im Zeitplan.
 |===
 		
 
 == Bewertungskriterien
 //Eine kurze Beschreibung, wie Erfüllung die o.g. Ziele bewertet werden sollen.
-Beispiele:
 
-* erstellte Dateien wurden im Team besprochen und gegengeprüft
-* Kunde ist mit Wireframe zufrieden
+* Ist der Scope ausreichend erweitert
+* Ist die Qualität der Use-Cases gut
+* Wurden die neuen Wünsche des Kunden erfolgreich in alten Dokumente eingearbeitet
+
 
 
 == Assessment
@@ -89,21 +97,29 @@ Beispiele:
 
 [header%, cols="1,3"]
 |===
-|Assessment Ziel	| Das kann die gesamte Iteration oder eine spezifische Komponente sein
-|Assessment Datum | ...	
-|Teilnehmer	| ...
-|Projektstatus	| Zum Beispiel ausgedrückt als rot, gelb oder grün.
+|Assessment Ziel	| Ist der neue Scope ausreichend
+|Assessment Datum | 13.01.2020	
+|Teilnehmer	| Alle bis auf Ullmann Max
+|Projektstatus	| Scope und damit das Projekt steht in Frage
 |===
 
-* Beurteilung im Vergleich zu den Zielen
+* Beurteilung im Vergleich zu den Zielen +
 //Dokumentieren Sie, ob die angestrebten Ziele des Iterationsplans erreicht wurden.
+Das Ziel des visuellen Prototyps wurde auf Iteration 3 verschoben. Alle anderen Ziele wurden größtenteils erreicht.
 
-* Geplante vs. erledigte Aufgaben
+* Geplante vs. erledigte Aufgaben +
 //Zusammenfassung, ob alle für die Iteration geplanten Aufgaben bearbeitet wurden und welche Aufgaben verschoben oder hinzugefügt wurden.
+Ziel und damit auch die Aufgabe des visuellen Prototyps verschoben. +
+Alle anderen Aufgaben wurden größtenteils erfüllt. +
 
-* Beurteilung im Vergleich zu den Bewertungskriterien
+* Beurteilung im Vergleich zu den Bewertungskriterien +
 //Document whether you met the evaluation criteria as specified in the Iteration Plan. 
 //Geben Sie an, ob Sie die o.g. Bewertungskriterien erfüllt haben. Das kann z.B. folgende Informationen enthalten: “Demo for Department X was well-received, with some concerns raised around usability,” or “495 test cases were automated with a 98% pass rate. 9 test cases were deferred because the corresponding Work Items were postponed.”
+Coach war mit dem neuen Scope einverstanden. +
+Bisherige Probleme des Kunden werden weiterhin, wie in Iteration 1 erarbeitet, Lösbar sein. Kunde wirkt damit zufrieden. +
+Use-Cases sind verfeinert worden. Qualitätsprüfung noch ausstehend.
 
-* Andere Belange und Abweichungen
+* Andere Belange und Abweichungen +
 //Führen Sie weitere Themen auf, für die eine Bewertung durchgeführt wurde. Beispiele sind Finanzen, Zeitabweichungen oder Feedback von Stakeholdern, die nicht bereits an anderer Stelle dokumentiert wurden.
+Leider fand das Kundengespräch aufgrund von oranisatorischen Problemen relativ spät statt.
+Um im Zeitplan zu bleiben haben wir als Team entschieden die Iteration 3 und 4 zu verkürzen. 
