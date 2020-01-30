@@ -56,7 +56,7 @@ Drucken von ausgeführten Rechnungen muss möglich sein(vorherige Erstellung ein
 
 == Architekturmechanismen
 . Persistenz +
-Die erstellten Rechnungen sollen, bei Wunsch des erstellens einer PDF, bei Absturz des Systems nicht verloren gehen(Ausnahme: Aktuelle Rechnung). +
+Die erstellten Rechnungen sollen bei Absturz des Systems nicht verloren gehen(Ausnahme: Aktuelle Rechnung). +
 
 . Lokalisation +
 Die Software wird nur in deutsch gehalten, auf jeden fall bezüglich der ersten Verion. +
