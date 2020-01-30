@@ -22,7 +22,7 @@ Dieses Dokument beschreibt die Philosophie, Entscheidungen, Nebenbedingungen, Be
 == Architekturziele und Philosophie
 
 Folgende Architektur bezieht sich auf eine Softwarelösung die ohne Installation über ein USB-Speichermedium auszuführen sein soll. +
-Die Auftraggebende Person wünscht sich ein, vom Internet, unabhängiges Programm. +
+Die Auftraggeberin wünscht sich ein, vom Internet, unabhängiges Programm. +
 Sie möchte ein Wartungsfreies Produkt. +
 Außerdem wird nicht erwartet, dass sich in Zukunft etwas an der Systemumgebung ändern wird. +
 Es ist nur für die Eigenbenutzung gedacht (kurzfristige Nutzung durch andere möglich). +
@@ -43,8 +43,7 @@ Drucken von ausgeführten Rechnungen muss möglich sein(vorherige Erstellung ein
 == Architektur-relevante Anforderungen
 
 . Das System muss auf Windows 10 Rechnern ausführbar sein.
-. Das System darf, wenn PDF's erstellt werden und der Computer/ das Programm abstürzt, höchstens die Aktuelle Aufgabe verlieren. 
-
+. Das System soll Dokumente, über das Betriebssystem (PDF-Drucker), erstellen. 
 
 == Entscheidungen, Nebenbedingungen und Begründungen
 
@@ -53,7 +52,6 @@ Drucken von ausgeführten Rechnungen muss möglich sein(vorherige Erstellung ein
 . Software wird mit dem GUI tool PyQT in Python geschrieben (GNU / GPL License). 
 // Für unsere Developer PyQT: https://www.qt.io/blog/2018/12/18/qt-python-5-12-released GNU / GPL License) +
 .. Obwohl unsere Developer keine Erfahrung mit Python/QT haben, wollen wir dieses Projekt nutzen um uns Grundkenntnisse anzueignen.
-. Python Bibliothek Pyfpdf zur Erstellung der PDF's.
 . PyInstaller oder Py2Exe um Standalone zu erzeugen.
 
 == Architekturmechanismen
