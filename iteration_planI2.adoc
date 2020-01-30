@@ -41,12 +41,12 @@ Die folgenden Aufgaben werden in dieser Iteration bearbeitet:
 |Aufgabe bzw. Beschreibung	|Priorität  	|Schätzung der Größe (Punkte)	|Status|	Referenzen	|geplante Iteration| Zugewiesen (Name) |	Gearbeitete Stunden | Schätzung der verbleibenden Stunden
 | Architekten Notizbuch aktualisieren | hoch | 2 | DONE | x | I2 a|
 * Grieß, Christian | 2 | 0
-| Vision und Glossar aktualisieren | hoch   | 5 | DONE | x | I2 a|
+| Vision und Glossar aktualisieren | hoch   | 3 | DONE | x | I2 a|
 * Grambole, Lukas
 * Däbler, Michael | 2 | 3
 | Use-Case identifizieren und ausarbeiten | hoch   | 8 | DONE | x | I2 a| 
 * Grambole, Lukas 
-* Däbler, Michael| 5 | 3
+* Däbler, Michael| 7 | 0
 |NFA identifizieren|hoch|3|DONE|x|I2 a|
 * Grambole, Lukas
 * Däbler, Michael|2|1
