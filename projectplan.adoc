@@ -39,7 +39,7 @@ Die Rollenverteilung sieht wie folgt aus:
 == Praktiken und Bewertung 
 //Describe or reference which management and technical practices will be used in the project, such as iterative development, continuous integration, independent testing and list any changes or particular configuration to the project. Specify how you will track progress in each practice. As an example, for iterative development the team may decide to use iteration assessments and iteration burndown reports and collect metrics such as velocity (completed work item points/ iteration).
 
-Die Lösung für das Projekt wird iterativ Entwickelt. Hierfür Orientiert sich das Team am Open-UP. Für wichtige Dokumente werden die vom Coach bereitgestellen Templates genutzt und ausgefüllt. +
+Die Lösung für das Projekt wird iterativ entwickelt. Hierfür Orientiert sich das Team am Open-UP. Für wichtige Dokumente werden die vom Coach bereitgestellen Templates genutzt und ausgefüllt. +
 Alle Aufgaben und Probleme werden zunächst festgehalten und je nach Priorität einer Iteration zugeordnet. Ist eine Iteration abgeschlossen wird anhand der erledigten Aufgaben die Geschwindigkeit(Velocity) berechnet um zu überprüfen ob unser Ziel der Geschwindigkeit gehalten werden konnte. +
 Desweiteren finden sich in den Iteration-Plans die Assessments wo das Team die Iteration bewertet. +
 Alle Dokumente zum Projekt befinden sich im Github-Repository.
@@ -92,7 +92,7 @@ Größere Ziele die wir einnerhalb einer Iteration erreichen möchten.
 * Vertikale Prototypen beginnen
 * Technische Vision finalisieren
 * Risiko: Zeit pro Iteration gekürzt -> Verlust der Übersicht 
-|	12.01.2020
+|	19.01.2020
 |	12
 |It4
 |	
@@ -100,7 +100,7 @@ Größere Ziele die wir einnerhalb einer Iteration erreichen möchten.
 * Clickdummy erstellen
 * Visuellen Prototyp optimieren
 * Technischen Prototyp anfangen (Berechnung)
-|	19.01.2020
+|	26.01.2020
 |	12
 |===
 

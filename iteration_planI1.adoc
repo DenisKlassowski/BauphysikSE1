@@ -1,4 +1,4 @@
-= Iterationsplan BauphysikSE1
+= Iterationsplan 1 BauphysikSE1
 Gruppe 14
 0.4, 01.11.2019 
 :toc: 
@@ -17,10 +17,7 @@ Gruppe 14
 |  Kundengespräch analysieren |
 | Elementare Projektdateien erarbeiten (ver.1)|
 | Technische Vision erarbeiten|
-| Erste USE_CASES|
-| Erste TEST_CASES|
-| Architecture (ver.1)|
-|Ende der Iteration	| 30.12.2019
+|Ende der Iteration	| 04.01.2020
 |===
 	
 
@@ -32,6 +29,7 @@ Gruppe 14
 * Arbeitsweise des Open-UP direkt auf Problemstellung anwenden
 * Besprechen des Problems und Vision im Team (möglichst gleiches Verständniss des Problems erarbeiten)
 * Erste Versionen der Templates erstellen
+* Mehrere mögliche Technische Optionen besprechen.
 
 
 == Aufgabenzuordnung
@@ -54,6 +52,7 @@ Christian Grieß
 | 2 | 0
 | Projektplan V0.1 ersttellen | hoch | 2 | DONE | x | I1 | Denis Klassowski | 2 | 0 
 | Erste USE-CASE | mittel | 2 | DONE | x | I1 | Christian Lehmann | 3 | 0 
+| Erste TEST-CASE | niedrig | 1 | NOT DONE | x | I1 | Christian Lehmann | 0 | 0 
 | Iteration Plan It1 erstellen | hoch | 1 | DONE | x | I1 | Denis Klassowski | 1 | 0
 | Iteration Plan It2 erstellen | niedrig | 1 | DONE | x | It1 | Denis Klassowski | 1 | 0 
 | Erste Technische Ideen intern vorstellen | mittel | 3 | DONE | x | I1 | Yewgenji Baburkin, Max Ullmann, Christian Grieß | 3 | 0  
@@ -66,18 +65,19 @@ Christian Grieß
 [%header, cols="2,1,3"]
 |===
 |Problem	| Status |	Notizen
-|Unterschiedliche Auffassung der Problemstellung	| NICHT LÄNGER EIN PROBLEM |	In mehreren Meetings wurde die Vision besprochen und im laufe der Iterationen verfeinert.
-| Kunde wirk unsicher bei Vorstellung der Idee / Kunde weiß nicht genau was er will| NICHT LÄNGER EIN PROBLEM | Unsicherheiten wurden in It3 beseitigt. 
+|Unterschiedliche Auffassung der Problemstellung	| NO LONGER A PROBLEM |	In mehreren Meetings wurde die Vision besprochen und im laufe der Iterationen verfeinert
+| Kunde wirk unsicher bei Vorstellung der Idee / Kunde weiß nicht genau was er will| NO LONGER A PROBLEM | Unsicherheiten wurden in It2 beseitigt 
 |===
 		
 
 == Bewertungskriterien
 //Eine kurze Beschreibung, wie Erfüllung die o.g. Ziele bewertet werden sollen.
 
-* Sind die Erstellten Dokumente abgestimmt
+* Sind die erstellten Dokumente abgestimmt
 * Gibt es negatives feedback bei Gruppenarbeiten
 * Postive Rückmeldung vom Kunden
 * Wird die Work-Item-List von jedem eingehalten
+* Wurde die geplante Velocity eingehaltem
 
 
 == Assessment
@@ -85,21 +85,28 @@ Christian Grieß
 
 [header%, cols="1,3"]
 |===
-|Assessment Ziel	| Das kann die gesamte Iteration oder eine spezifische Komponente sein
-|Assessment Datum | ...	
-|Teilnehmer	| ...
-|Projektstatus	| Zum Beispiel ausgedrückt als rot, gelb oder grün.
+|Assessment Ziel	| Iteration 1
+|Assessment Datum | 	23.12.2019
+|Teilnehmer	| Alle Teamteilnehmer
+|Projektstatus	| Ist angelaufen. Keine großen Probleme
 |===
 
-* Beurteilung im Vergleich zu den Zielen
+* Beurteilung im Vergleich zu den Zielen +
 //Dokumentieren Sie, ob die angestrebten Ziele des Iterationsplans erreicht wurden.
+Alle Ziele wurden erreicht.
 
-* Geplante vs. erledigte Aufgaben
+* Geplante vs. erledigte Aufgaben +
 //Zusammenfassung, ob alle für die Iteration geplanten Aufgaben bearbeitet wurden und welche Aufgaben verschoben oder hinzugefügt wurden.
+Fast alle für Iteration 1 geplanten Aufgaben wurden erfolgreich bearbeitet. Noch nicht viele geplanten Aufgaben für Iteration 2.
 
-* Beurteilung im Vergleich zu den Bewertungskriterien
+* Beurteilung im Vergleich zu den Bewertungskriterien +
 //Document whether you met the evaluation criteria as specified in the Iteration Plan. 
 //Geben Sie an, ob Sie die o.g. Bewertungskriterien erfüllt haben. Das kann z.B. folgende Informationen enthalten: “Demo for Department X was well-received, with some concerns raised around usability,” or “495 test cases were automated with a 98% pass rate. 9 test cases were deferred because the corresponding Work Items were postponed.”
+Gutes Feedback vom Kunden erhalten. Team war sehr gut vorbereitet und Kunde war positiv überrascht. +
+Teamarbeit erfolgte eigeninitiativ, reibungslos und lieferte gute Ergebnisse. +
+Das gesamte Team zieht an einem Strang. Alle sind sich über Projektziele im klaren und wollen ein gutes Ergebnis erzielen. +
+Geplante Velocity ist um 1 niedriger als tatsächliche Velocity
 
-* Andere Belange und Abweichungen
+* Andere Belange und Abweichungen +
 //Führen Sie weitere Themen auf, für die eine Bewertung durchgeführt wurde. Beispiele sind Finanzen, Zeitabweichungen oder Feedback von Stakeholdern, die nicht bereits an anderer Stelle dokumentiert wurden.
+N/A
