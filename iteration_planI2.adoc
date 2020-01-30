@@ -68,6 +68,7 @@ Die folgenden Aufgaben werden in dieser Iteration bearbeitet:
 * Baburkin, Yewgenji,
 * Grieß, Christian
 |1|0
+| TEST-CASE anpassen | niedrig | 1 | DONE | x | I2 | Christian Lehmann | 2 | 0 
 |===
 								
 								
