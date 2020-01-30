@@ -58,7 +58,7 @@ Wenn der Systemnutzer im Schritt 4 des Standardablaufs keine Elemente für den D
 
 ... Das Softwaresystem gibt eine Fehlermeldung aus.
 ... Der Systemnutzer bestätigt die Kenntnisnahme der Fehlermeldung.
-... Der Standardablauf wird im Schritt 2 des Standardablaufs fortgesetzt. 
+... Der Use Case wird im Schritt 2 des Standardablaufs fortgesetzt. 
 
 
 === Wesentliche Szenarios

@@ -43,7 +43,7 @@ Wenn der Systemnutzer im Schritt 2 des Standardablaufs vorgespeicherte Materiald
 
 ... Das Softwaresystem stellt dem Systemnutzer gespeicherte Materialdaten zur Verfügung.
 ... Der Systemnutzer wählt gespeicherte Materialdaten aus.
-... Der Standardablauf wird im Schritt 2 des Standardablaufs fortgesetzt.
+... Der Use Case wird im Schritt 2 des Standardablaufs fortgesetzt.
 
 *Alternativer Ablauf #2.2*
 
@@ -51,7 +51,7 @@ Wenn der Systemnutzer im Schritt 2 des Standardablaufs weitere Materialschichten
 
 ... Der Systemnutzer fügt eine Schicht hinzu.
 ... Das System schafft Eingabemöglichkeiten für die Daten einer zusätzlichen Materialschicht.
-... Der Standardablauf wird im Schritt 2 des Standardablaufs fortgesetzt.
+... Der Use Case wird im Schritt 2 des Standardablaufs fortgesetzt.
 
 *Alternativer Ablauf #2.3*
 
@@ -59,7 +59,7 @@ Wenn der Systemnutzer im Schritt 2 des Standardablaufs eine Materialschicht entf
 
 ... Der Systemnutzer entfernt eine Materialschicht.
 ... Das System entfernt die Eingabemöglichkeiten für die Daten einer Materialschicht.
-... Der Standardablauf wird im Schritt 2 des Standardablaufs fortgesetzt.
+... Der Use Case wird im Schritt 2 des Standardablaufs fortgesetzt.
 
 *Alternativer Ablauf 3a*
 
@@ -67,7 +67,7 @@ Wenn im Schritt 3 des Standardablaufs berechnungsnotwendige Daten fehlen, dann
 
 ... Das Softwaresystem weist den Systemnutzer auf fehlende Daten hin.
 ... Der Systemnutzer bestätigt die Kenntnisnahme der Information des Softwaresystems.
-... Der Standardablauf wird im Schritt 2 des Standardablaufs fortgesetzt.
+... Der Use Case wird im Schritt 2 des Standardablaufs fortgesetzt.
 
 ==== Wesentliche Szenarios
 //Szenarios sind konkrete Instanzen eines Use Case, d.h. mit einem konkreten Akteur und einem konkreten Durchlauf der o.g. Flows. Szenarios können als Vorstufe für die Entwicklung von Flows und/oder zu deren Validierung verwendet werden.
