@@ -37,13 +37,13 @@ Drucken von ausgeführten Rechnungen muss möglich sein(vorherige Erstellung ein
 . Keine Maßnahmen zur Barrierefreiheit nötig.
 . Nutzung ausschließlich durch Speziallisten der Bauphysik.
 . Keine Internetanbindung vorhanden.
+. Dokumente werden über das Betriebssystem gedruckt/erstellt.
 
 //[List the assumptions and dependencies that drive architectural decisions. This could include sensitive or critical areas, dependencies on legacy interfaces, the skill and experience of the team, the availability of important resources, and so forth]
 
 == Architektur-relevante Anforderungen
 
 . Das System muss auf Windows 10 Rechnern ausführbar sein.
-. Das System soll Dokumente, über das Betriebssystem (PDF-Drucker), erstellen. 
 
 == Entscheidungen, Nebenbedingungen und Begründungen
 
