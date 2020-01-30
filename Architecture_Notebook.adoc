@@ -21,7 +21,7 @@ Dieses Dokument beschreibt die Philosophie, Entscheidungen, Nebenbedingungen, Be
 
 == Architekturziele und Philosophie
 
-Folgende Architektur bezieht sich auf eine Softwarelösung die ohne Installation über ein USB-Speichermedium auszuführen sein soll. +
+Folgende Architektur bezieht sich auf eine Softwarelösung die ohne Installation, als Desktopanwendung, über ein USB-Speichermedium auszuführen sein soll. +
 Die Auftraggeberin wünscht sich ein, vom Internet, unabhängiges Programm. +
 Sie möchte ein Wartungsfreies Produkt. +
 Außerdem wird nicht erwartet, dass sich in Zukunft etwas an der Systemumgebung ändern wird. +
