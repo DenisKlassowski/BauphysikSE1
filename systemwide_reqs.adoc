@@ -56,7 +56,7 @@ Alle funktionalen Anforderungen wurden als Use Cases ausgedrückt.
 
 * Diese NFA bezieht sich auf UC2.
 
-* Zur Überprüfung wird getestet, ob die Eingabe von negativen Zahlenwerten, Buchstaben, oder Sonderzeichen in Eingabefelder verhindert wird. 
+* Zur Überprüfung wird getestet, ob die Eingabe von ungültigen Zahlen, Buchstaben, oder Sonderzeichen in Eingabefelder verhindert wird. 
 
 *NFAR-3: Das System soll gespeicherte Eingabe- und Ergebnisdaten nach einem Absturz wiederherstellen können.*
 
