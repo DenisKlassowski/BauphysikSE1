@@ -54,7 +54,7 @@ Christian Grieß
 | Erste USE-CASE | mittel | 2 | DONE | x | I1 | Christian Lehmann | 3 | 0 
 | Erste TEST-CASE | niedrig | 1 | DONE | x | I1 | Christian Lehmann | 2 | 0 
 | Iteration Plan It1 erstellen | hoch | 1 | DONE | x | I1 | Denis Klassowski | 1 | 0
-| Iteration Plan It2 erstellen | niedrig | 1 | DONE | x | It1 | Denis Klassowski | 1 | 0 
+| Iteration Plan It2 erstellen | niedrig | 1 | DONE | x | I1 | Denis Klassowski | 1 | 0 
 | Erste Technische Ideen intern vorstellen | mittel | 3 | DONE | x | I1 | Yewgenji Baburkin, Max Ullmann, Christian Grieß | 3 | 0  
 |===
 								
