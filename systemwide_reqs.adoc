@@ -58,7 +58,11 @@ Alle funktionalen Anforderungen wurden als Use Cases ausgedrückt.
 
 * Zur Überprüfung wird getestet, ob die Eingabe von negativen Zahlenwerten, Buchstaben, oder Sonderzeichen in Eingabefelder verhindert wird. 
 
+*NFAR-3: Das System soll gespeicherte Eingabe- und Ergebnisdaten nach einem Absturz wiederherstellen können.*
 
+* Diese NFA bezieht sich auf UC5 und UC6.
+
+* Zur Überprüfung provoziert ein Testnutzer einen Systemabsturz und überprüft anschließend die Verfügbarkeit gespeicherter Eingabe- und Ergebnisdaten.
 
 //Reliability includes the product and/or system's ability to keep running under stress and adverse conditions. Specify requirements for reliability acceptance levels, and how they will be measured and evaluated. Suggested topics are availability, frequency of severity of failures and recoverability.
 
