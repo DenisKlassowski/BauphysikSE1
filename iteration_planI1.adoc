@@ -27,7 +27,7 @@ Gruppe 14
 
 * Einen Überblick über das Projekt, Projektumfang und Möglichkeiten erarbeiten
 * Arbeitsweise des Open-UP direkt auf Problemstellung anwenden
-* Besprechen des Problems und Vision im Team (möglichst gleiches Verständniss des Problems erarbeiten)
+* Besprechen des Problems und Vision im Team (möglichst gleiches Verständnis des Problems erarbeiten)
 * Erste Versionen der Templates erstellen
 * Mehrere mögliche Technische Optionen besprechen.
 
@@ -65,8 +65,8 @@ Christian Grieß
 [%header, cols="2,1,3"]
 |===
 |Problem	| Status |	Notizen
-|Unterschiedliche Auffassung der Problemstellung	| NO LONGER A PROBLEM |	In mehreren Meetings wurde die Vision besprochen und im laufe der Iterationen verfeinert
-| Kunde wirk unsicher bei Vorstellung der Idee / Kunde weiß nicht genau was er will| NO LONGER A PROBLEM | Unsicherheiten wurden in It2 beseitigt 
+|Unterschiedliche Auffassung der Problemstellung	| NO LONGER A PROBLEM |	In mehreren Meetings wurde die Vision besprochen und im Laufe der Iterationen verfeinert
+| Kunde wirkt unsicher bei Vorstellung der Idee / Kunde weiß nicht genau was er will| NO LONGER A PROBLEM | Unsicherheiten wurden in It2 beseitigt 
 |===
 		
 
@@ -74,10 +74,10 @@ Christian Grieß
 //Eine kurze Beschreibung, wie Erfüllung die o.g. Ziele bewertet werden sollen.
 
 * Sind die erstellten Dokumente abgestimmt
-* Gibt es negatives feedback bei Gruppenarbeiten
+* Gibt es negatives Feedback bei Gruppenarbeiten
 * Postive Rückmeldung vom Kunden
 * Wird die Work-Item-List von jedem eingehalten
-* Wurde die geplante Velocity eingehaltem
+* Wurde die geplante Velocity eingehalten
 
 
 == Assessment
@@ -97,14 +97,14 @@ Alle Ziele wurden erreicht.
 
 * Geplante vs. erledigte Aufgaben +
 //Zusammenfassung, ob alle für die Iteration geplanten Aufgaben bearbeitet wurden und welche Aufgaben verschoben oder hinzugefügt wurden.
-Fast alle für Iteration 1 geplanten Aufgaben wurden erfolgreich bearbeitet. Noch nicht viele geplanten Aufgaben für Iteration 2.
+Fast alle für Iteration 1 geplanten Aufgaben wurden erfolgreich bearbeitet. Noch nicht viele geplante Aufgaben für Iteration 2.
 
 * Beurteilung im Vergleich zu den Bewertungskriterien +
 //Document whether you met the evaluation criteria as specified in the Iteration Plan. 
 //Geben Sie an, ob Sie die o.g. Bewertungskriterien erfüllt haben. Das kann z.B. folgende Informationen enthalten: “Demo for Department X was well-received, with some concerns raised around usability,” or “495 test cases were automated with a 98% pass rate. 9 test cases were deferred because the corresponding Work Items were postponed.”
 Gutes Feedback vom Kunden erhalten. Team war sehr gut vorbereitet und Kunde war positiv überrascht. +
 Teamarbeit erfolgte eigeninitiativ, reibungslos und lieferte gute Ergebnisse. +
-Das gesamte Team zieht an einem Strang. Alle sind sich über Projektziele im klaren und wollen ein gutes Ergebnis erzielen. +
+Das gesamte Team zieht an einem Strang. Alle sind sich über Projektziele im Klaren und wollen ein gutes Ergebnis erzielen. +
 Geplante Velocity ist um 1 niedriger als tatsächliche Velocity
 
 * Andere Belange und Abweichungen +

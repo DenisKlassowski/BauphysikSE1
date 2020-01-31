@@ -16,7 +16,7 @@ In diesem Dokument werden die wesentlichen Begriffe des Bauphysikrechner-Systems
 |===
 |Begriff|	Definition und Erläuterung|	Synonyme
 
-|Auswahl|Gruppe von Elementen, welche für eine nachfolgende Aktivität ausgewählt werden|
+|Auswahl|Gruppe von Elementen, welche für eine nachfolgende Aktivität ausgewählt werden können|
 |Berechnungsergebnisse|Physikalische Größen und Diagramme, welche im Rahmen eines Berechnungsvorgangs ermittelt wurden|Berechnete Elemente, Ergebnisdaten
 |Eingabedaten|Berechnungsabhängige Daten, welche ein Systemnutzer in das Softwaresystem eingibt|
 |Eingabeeinheit|Physikalische Einheit von Eingabedaten|
