@@ -1,4 +1,4 @@
-= Projekt Bauphysik Test Case: [Use Case: Daten berechnen]
+= Projekt Bauphysik Test Case: [Use Case: Reihenberechnung_durchführen]
 
 //This is a informal template for represeting test cases
 
