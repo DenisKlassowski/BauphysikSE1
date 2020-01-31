@@ -36,7 +36,7 @@ Gruppe 14
 //Dieser Abschnitt sollte einen Verweis auf die Work Items List enthalten, die die für diese Iteration vorgesehenen Aufgaben dokumentiert sowie die Zuordnung dieser Aufgaben zu Teammitgliedern. Alternativ können die Aufgaben für die Iteration und die Zuordnung zu Teammitgliedern in nachfolgender Tabelle dokumentiert werden - je nach dem, was einfacher für die Projektbeteiligten einfacher zu finden ist.
 
 Die folgenden Aufgaben werden in dieser Iteration bearbeitet:
-[%header, cols="3,1,1,1,2,1,1,1,1"]
+[%header]
 |===
 |Aufgabe bzw. Beschreibung	|Priorität  	|Schätzung der Größe (Punkte)	|Status|	Referenzen	|geplante Iteration| Zugewiesen (Name) |	Gearbeitete Stunden | Schätzung der verbleibenden Stunden
 | Vision V0.1 erstellen | hoch   | 7 | DONE | x | I1 a| 
@@ -62,7 +62,7 @@ Christian Grieß
 == Probleme (optional)
 //Optional: Führen Sie alle Probleme auf, die in dieser Iteration adressiert werden sollen. Aktualisieren Sie den Status, wenn neue Probleme bei den täglichen / regelmäßigen Abstimmungen berichtet werden.
 
-[%header, cols="2,1,3"]
+[%header]
 |===
 |Problem	| Status |	Notizen
 |Unterschiedliche Auffassung der Problemstellung	| NO LONGER A PROBLEM |	In mehreren Meetings wurde die Vision besprochen und im Laufe der Iterationen verfeinert
@@ -83,7 +83,7 @@ Christian Grieß
 == Assessment
 //In diesem Abschnitt werden die Ergebnisse und Maßnahmen der Bewertung erfasst und kommunziert. Die Bewertung wird üblicherweise am Ende jeder Iteration durchgeführt. Wenn Sie diese Bewertungen nicht machen, ist das Team möglicherweise nicht in der Lage,die eigene Arbeitsweise ("Way of Working") zu verbessern.
 
-[header%, cols="1,3"]
+[header%]
 |===
 |Assessment Ziel	| Iteration 1
 |Assessment Datum | 	23.12.2019

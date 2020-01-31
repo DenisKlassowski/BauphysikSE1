@@ -36,37 +36,38 @@ Gruppe 14
 //Dieser Abschnitt sollte einen Verweis auf die Work Items List enthalten, die die für diese Iteration vorgesehenen Aufgaben dokumentiert sowie die Zuordnung dieser Aufgaben zu Teammitgliedern. Alternativ können die Aufgaben für die Iteration und die Zuordnung zu Teammitgliedern in nachfolgender Tabelle dokumentiert werden - je nach dem, was einfacher für die Projektbeteiligten einfacher zu finden ist.
 
 Die folgenden Aufgaben werden in dieser Iteration bearbeitet:
-[%header, cols="3,1,1,1,2,1,1,1,1"]
+[%header]
+[%autofit]
 |===
 |Aufgabe bzw. Beschreibung	|Priorität  	|Schätzung der Größe (Punkte)	|Status|	Referenzen	|geplante Iteration| Zugewiesen (Name) |	Gearbeitete Stunden | Schätzung der verbleibenden Stunden
 | Architekten Notizbuch aktualisieren | hoch | 2 | DONE | x | I2 a|
-* Grieß, Christian | 2 | 0
+ Grieß, Christian | 2 | 0
 | Vision und Glossar aktualisieren | hoch   | 3 | DONE | x | I2 a|
-* Grambole, Lukas
-* Däbler, Michael | 2 | 3
+ Grambole, Lukas;
+ Däbler, Michael | 2 | 3
 | Use-Case identifizieren und ausarbeiten | hoch   | 8 | DONE | x | I2 a| 
-* Grambole, Lukas 
-* Däbler, Michael| 7 | 0
+Grambole, Lukas 
+Däbler, Michael| 7 | 0
 |NFA identifizieren|hoch|3|DONE|x|I2 a|
-* Grambole, Lukas
-* Däbler, Michael|2|1
+Grambole, Lukas;
+Däbler, Michael|2|1
 |Architecture Notebook und Tech. Vision aktualisieren| hoch |2|DONE|x|I2 a|
-* Grieß, Christian |4| 0
+Grieß, Christian |4| 0
 |(Kunden-)Gesprächsprotokoll erfassen und nachbearbeiten|hoch|2|DONE|x|I2 a|
-* Baburkin, Yewgenji
-* Fritzsche, Felix|3|0
-|(Coach-)Gesprächsprotokoll erfassen und nachbearbeiten|mittel|1|DONE|x|I2 a| * Grambole, Lukas | 1| 0
+Baburkin, Yewgenji;
+Fritzsche, Felix|3|0
+|(Coach-)Gesprächsprotokoll erfassen und nachbearbeiten|mittel|1|DONE|x|I2 a|Grambole, Lukas | 1| 0
 |UI Entwurf Wireframe erstellen|hoch|4|DONE|x|I2 a|
-* Fritzsche, Felix, 
-* Baburkin, Yewgenji|4|0
+ Fritzsche, Felix; 
+ Baburkin, Yewgenji|4|0
 |Risk List aktualisieren|hoch|2|DONE|x|I2 a|
-* Klassowski, Denis|3|0
+ Klassowski, Denis|3|0
 |Clickdummy erstellen|hoch|5|NOT DONE|x|I2 a|
-* Ullmann, Max|0|5
+ Ullmann, Max|0|5
 |Entscheiden welche Technologien verwendet werden|hoch|1|DONE|x|I2 a|
-* Ullmann Max,
-* Baburkin, Yewgenji,
-* Grieß, Christian
+Ullmann Max;
+Baburkin, Yewgenji;
+Grieß, Christian
 |1|0
 | TEST-CASE anpassen | niedrig | 1 | DONE | x | I2 | Christian Lehmann | 2 | 0 
 |===
@@ -75,7 +76,7 @@ Die folgenden Aufgaben werden in dieser Iteration bearbeitet:
 == Probleme (optional)
 //Optional: Führen Sie alle Probleme auf, die in dieser Iteration adressiert werden sollen. Aktualisieren Sie den Status, wenn neue Probleme bei den täglichen / regelmäßigen Abstimmungen berichtet werden.
 
-[%header, cols="2,1,3"]
+[%header]
 |===
 |Problem	| Status |	Notizen
 |Frage zu Aktualisierungsschnittstellen nicht protokolliert | PENDING |	Diese Frage wurde im Rahmen des 2. Kundengesprächs gestellt, jedoch nicht ausreichend protokolliert.
@@ -95,7 +96,7 @@ Die folgenden Aufgaben werden in dieser Iteration bearbeitet:
 == Assessment
 //In diesem Abschnitt werden die Ergebnisse und Maßnahmen der Bewertung erfasst und kommunziert. Die Bewertung wird üblicherweise am Ende jeder Iteration durchgeführt. Wenn Sie diese Bewertungen nicht machen, ist das Team möglicherweise nicht in der Lage,die eigene Arbeitsweise ("Way of Working") zu verbessern.
 
-[header%, cols="1,3"]
+[header%]
 |===
 |Assessment Ziel	| Ist der neue Scope ausreichend
 |Assessment Datum | 13.01.2020	

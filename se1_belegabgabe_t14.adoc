@@ -25,14 +25,6 @@ Fritzsche Felix; Lehmann Christian; Ullmann Max; Baburkin Yewgenij; Grieß Chris
 <<<
 
 // --- 4. include Pfade anpassen ---------------
-
-= Technische Spezifikation
-* Vision
-* Use Case Model (inkl. Wireframes, sofern vorhanden)
-* System-wide Requirements
-* Glossar
-* Domänenmodell
-
 // Vision
 include::vision.adoc[lines=1..1;4..-1,leveloffset=+1]
 <<<
