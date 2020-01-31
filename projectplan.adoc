@@ -14,27 +14,37 @@ Dieses Dokument ist der Projektplan für das SE1 Projekt Bauphysik. Ziel des Dok
 //Introduce the project team, team members, and roles that they play during this project. If applicable, introduce work areas, domains, or technical work packages that are assigned to team members. Introduce neighboring projects, relationships, and communication channels. If the project is introduced somewhere else, reference that location with a link.
 Die Tätigkeiten sind nach Rollen und Themengebiet aufgeteilt. Eine Person in Ihrer Rolle trägt Verantwortung in diesem Themenbereich und trifft hier nach eigenem Ermessen Entscheidungen. Alle anstehenden und abgeschlossenen Tätigkeiten werden flexibel in einer work-item-list festgehalten und soweit einer Iteration zugeordnet, bearbeitet.  +
 Die Rollenverteilung sieht wie folgt aus: 
-[cols=",3"]
+
+[%header]
 |===
-|Name
-|Primäre Rolle
-|Denis Klasowski
+|Name, Vorname |	Primäre Rolle|	Sekundäre Rolle
+|Klassowski, Denis
 |Project Manager
-|Däbler Michael
 |Analyst
-|Grambole Lukas
+|Däbler, Michael
 |Analyst
-|Grieß Christian
+|Technical Writer
+|Grambole, Lukas
+|Analyst
+|---
+|Grieß, Christian
 |Architect
-|Baburkin Yewgenji
 |Developer
-|Ullmann Max
+|Baburkin, Yewgenji
 |Developer
-|Lehmann Christian
+|Project Manager
+|Ullmann, Max
+|Developer
 |Tester
-|Fritzsche Felix
+|Lehmann, Christian
+|Tester
+|Architect
+|Fritzsche, Felix
 |Deployment Eng
+|Developer
+
 |===
+
 
 == Praktiken und Bewertung 
 //Describe or reference which management and technical practices will be used in the project, such as iterative development, continuous integration, independent testing and list any changes or particular configuration to the project. Specify how you will track progress in each practice. As an example, for iterative development the team may decide to use iteration assessments and iteration burndown reports and collect metrics such as velocity (completed work item points/ iteration).

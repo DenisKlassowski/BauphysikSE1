@@ -1,6 +1,6 @@
 = Iterationsplan 2 BauphysikSE1
 Gruppe 14
-0.1, 01.11.2019 
+0.4, 19.01.2020 
 :toc: 
 :toc-title: Inhaltsverzeichnis
 :sectnums:
