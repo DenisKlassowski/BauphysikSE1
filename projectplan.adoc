@@ -116,7 +116,7 @@ Größere Ziele die wir einnerhalb einer Iteration erreichen möchten.
 
 == Deployment
 //Outline the strategy for deploying the software (and its updates) into the production environment.
-N/A 
+Unsere Kundin ist Prof. Dr.-Ing. Rhena Krawietz. Wir werden ihr die fertig entwickelte Software gegen Ende des Sommersemesters 2020 präsentieren und zur Verfügung stellen.
 
 == Erkenntnisse (Lessons learned)
 N/A (Einzelne Erkenntnisse und Bewertung der Iterationen befinden sich im Iteration_plan)
