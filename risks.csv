@@ -1,11 +1,11 @@
 ﻿ID;Datum;Name;Beschreibung;Typ; IMP; PRB;MAG;Owner;Gegenmaßnahme
 1;01.12.2019;Teammitglied fällt aus;Mitglied des Teams kann (dauerhaft oder zeitweise) nicht mehr am Projekt teilnehmen;Ressourcen;4;20%;0,8;Klassowski, Denis;Backup-Rollen nutzen und Know-How zwischen diesen Personen kontinuierlich teilen
-2;01.12.2019;Rollenverteilung;Unklare Definition von Rollen im Projekt führen zu Verzögerungen;Ressourcen;X;X;X;Klassowski, Denis;Rollenverteilung gemäß Open Unified Process, regelmäßige Durchführung von Team-Meetings
+2;01.12.2019;Rollenverteilung;Unklare Definitionen von Rollen im Projekt führen zu Verzögerungen;Ressourcen;2;20%;0,4;Klassowski, Denis;Rollenverteilung gemäß Open Unified Process, regelmäßige Durchführung von Team-Meetings
 3;01.12.2019;Terminfindung;Terminfindung mit der Auftraggeberin gestaltet sich schwierig;Zeitlich, Geschäftlich;2;30%;0,6;Klassowski, Denis;alternative Kommunikation mit dem Kunden
 4;03.12.2019;Einsatz unbekannter Technologien;Es werden neue Tools eingesetzt, zu denen die Projektmitglieder keine Erfahrungen haben;Technisch;1;60%;0,6;Baburkin, Yewgenij;
-5;06.12.2019;Zieldefinition;Das Problem der Auftraggeberin wurde nicht verstanden;Geschäftlich;X;X;X;Däbler, Michael;Abnahme von Projektbestandteilen durch Auftraggeberin, regelmäßige Durchführung von Kundengesprächen
+5;06.12.2019;Zieldefinition;Das Problem der Auftraggeberin wurde nicht verstanden;Geschäftlich;5;20%;1;Däbler, Michael;Abnahme von Projektbestandteilen durch Auftraggeberin, regelmäßige Durchführung von Kundengesprächen
 6;16.12.2019;Resourcenproblem;Es sind nicht genügend Entwickler vorhanden um die Programmierung im angestrebten Zeitraum umzusetzen;Zeitlich;2;10%;0,2;Baburkin, Yewgenij;Backup-Rollen
-7;13.01.2020;Stakeholder;Veränderungen im Bereich der Stakeholder erzeugen veränderte Anforderungen;Geschäftlich;X;X;X;Däbler, Michael;iterative Vorgehensweise, regelmäßige Durchführung von Kundengesprächen
-8;13.01.2020;Benutzerumgebung;Änderungen der Benutzerumgebung gefährden die Nutzbarkeit des Softwaresystems;Technisch;X;X;X;Däbler, Michael;Kundenanforderungen zur Benutzerumgebung feststellen und abnehmen lassen 
+7;13.01.2020;Stakeholder;Veränderungen im Bereich der Stakeholder erzeugen veränderte Anforderungen;Geschäftlich;2;60%;1,2;Däbler, Michael;iterative Vorgehensweise, regelmäßige Durchführung von Kundengesprächen
+8;13.01.2020;Benutzerumgebung;Änderungen der Benutzerumgebung gefährden die Nutzbarkeit des Softwaresystems;Technisch;3;40%;1,2;Däbler, Michael;Kundenanforderungen zur Benutzerumgebung feststellen und abnehmen lassen 
 9;13.01.2020;Projektumfang;Auftraggeberin wünscht sich nach den ersten Präsentationen zusätzliche Funktionalität;Geschäftlich;3;40%;1,2;Klassowski, Denis;Erweiterungen u.U. ablehnen
-10;15.01.2020;Fehlinterpretationen;Fachbegriffe und projektspezifische Bezeichnungen werden falsch verstanden;Geschäftlich;X;X;X;Däbler, Michael;Erklärung von spezifischen Bezeichnungen im Glossar, regelmäßige Durchführung von Team-Meetings
+10;15.01.2020;Fehlinterpretationen;Fachbegriffe und projektspezifische Bezeichnungen werden falsch verstanden;Geschäftlich;4;50%;2;Däbler, Michael;Erklärung von spezifischen Bezeichnungen im Glossar, regelmäßige Durchführung von Team-Meetings
