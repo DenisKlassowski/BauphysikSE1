@@ -1,7 +1,7 @@
 // --- 1. Projektthema -------------------------
 = SE I - Belegabgabe: Bauphysik
 // --- 2. Teammitglieder -----------------------
-Fritzsche Felix; Lehmann Christian; Ullmann Max; Baburkin Yewgenji; Grieß Christian; Grambole Lukas ; Däbler Michael ; Denis Klasowski
+Fritzsche Felix; Lehmann Christian; Ullmann Max; Baburkin Yewgenij; Grieß Christian; Grambole Lukas ; Däbler Michael ; Denis Klasowski
 // --- 3. Abgabedatum --------------------------
 31. Januar 2020
 // ---------------------------------------------
