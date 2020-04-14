@@ -112,6 +112,14 @@ Größere Ziele die wir einnerhalb einer Iteration erreichen möchten.
 * Technischen Prototyp anfangen (Berechnung)
 |	26.01.2020
 |	12
+|It5
+|	
+* Planung und Ausführung der Aufgaben aufgrund der COVID-19 Situation neu organisieren
+* Programmierung der ersten Prototypen
+* Einbindung der ersten Prototypen in Gesamtsystem
+* Testen der erfoglreichen Erfüllung der Anforderungen
+|	04.04.2020
+|	12
 |===
 
 == Deployment

@@ -1,12 +1,14 @@
 # This Python file uses the following encoding: utf-8
 from PyQt5 import QtWidgets, uic
 import sys
-
+from master import Ui_MainWindow
 
 class windowmain(QtWidgets.QMainWindow):
     def __init__(self):
         super(windowmain,self).__init__()
-        uic.loadUi('master.ui', self) # Load the .ui file
+        self.ui = Ui_MainWindow()
+        self.ui.setupUi(self)
+        #uic.loadUi('master.ui', self) # Load the .ui file
         self.show() # show the GUI
 
 
