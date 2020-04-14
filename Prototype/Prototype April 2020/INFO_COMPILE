@@ -1,3 +1,5 @@
+Erstellt von Denis | bei fragen einfach mal melden :)
+
 INFOS ZUM COMPILEN
 
 UI FILES BITTE MIT PYUIC5 (im script ordner der python installation bzw venv ordner zu finden) zu python file umwandeln
@@ -13,4 +15,3 @@ pyinstaller meinscript.py
 pyinstaller wird ebenfalls in python/scripts installiert
 
 hier ebenfalls evtl pfadangabe notwendig 
-
