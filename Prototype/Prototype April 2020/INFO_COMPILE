@@ -1,0 +1,16 @@
+INFOS ZUM COMPILEN
+
+UI FILES BITTE MIT PYUIC5 (im script ordner der python installation bzw venv ordner zu finden) zu python file umwandeln
+
+-> pyuic5 input.ui -o output.py
+
+evtl müsst ihr bei euch noch den pfad angeben
+
+output.py einbinden als import (wie in windowmain.py) und dann per pyinstaller (pip install pyinstaller) compilieren
+
+pyinstaller meinscript.py 
+
+pyinstaller wird ebenfalls in python/scripts installiert
+
+hier ebenfalls evtl pfadangabe notwendig 
+
