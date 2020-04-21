@@ -14,7 +14,7 @@ class MainWindow(QMainWindow):
 
         self.show() # show the GUI
         #self.ui.AddLayerButton.clicked.connect(self.addLayer)
-        self.scrollLayout.addWidget(self.group_complete())
+        self.ui.scrollLayout.addWidget(self.group_complete())
 
     def addLayer(self):
         self.ui.AddLayerButton.setText('clicked')
@@ -26,7 +26,6 @@ class MainWindow(QMainWindow):
     def group_complete(self):
         self.groupBox= QGroupBox()
         self.label_first= QLabel()              
-        self.scrollLayout.addRow(self.table_widget)
         self.label_first.setText("Gruppe1")
         self.vbox=QVBoxLayout()
         self.vbox.addWidget(self.label_first)
