@@ -81,6 +81,17 @@ class Ui_MainWindow(object):
         self.ButtonGraph.setDefault(False)
         self.ButtonGraph.setFlat(False)
         self.ButtonGraph.setObjectName("ButtonGraph")
+
+        self.scrollLayout = QtWidgets.QFormLayout()
+        #self.scrollLayout = QtWidgets.QGridLayout()
+        self.scrollWidget = QtWidgets.QWidget()
+        self.scrollWidget.setLayout(self.scrollLayout)
+        self.scrollArea= QtWidgets.QScrollArea()
+        self.scrollArea.setWidgetResizable(True)
+        self.scrollArea.setWidget(self.scrollWidget)
+        self.widgetTabContent.addWidget(self.scrollArea)
+
+
         self.scrollArea = QtWidgets.QScrollArea(self.widgetTabContent)
         self.scrollArea.setGeometry(QtCore.QRect(10, 380, 1021, 351))
         self.scrollArea.setWidgetResizable(True)
