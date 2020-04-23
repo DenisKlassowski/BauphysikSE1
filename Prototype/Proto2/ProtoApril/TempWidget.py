@@ -34,7 +34,6 @@ class TempWidget(QtWidgets.QWidget):
 
         self.setLayout(tempLayout)
         self.retranslateUi()
-        self.show()
 
     def retranslateUi(self):
         _translate = QtCore.QCoreApplication.translate

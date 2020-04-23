@@ -1,10 +1,9 @@
 # This Python file uses the following encoding: utf-8
 from PyQt5 import QtCore, QtWidgets, QtGui
-from PyQt5.QtWidgets import QVBoxLayout,QWidget, QLabel, QMainWindow
 from Tab import Tab
 
 
-class MainWindow(QMainWindow):
+class MainWindow(QtWidgets.QMainWindow):
     def __init__(self):
         super(MainWindow,self).__init__()
 

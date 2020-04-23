@@ -50,7 +50,7 @@ class LayerWidget(QtWidgets.QWidget):
         self.setLayout(layerLayout)
         self.retranslateUi()
         self.layerTitleLabel.setText(self.layerTitleLabel.text() + str(self.position+1))
-        self.show()
+
 
     def retranslateUi(self):
         _translate = QtCore.QCoreApplication.translate
