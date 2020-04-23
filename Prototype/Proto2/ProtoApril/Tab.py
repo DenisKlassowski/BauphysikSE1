@@ -73,7 +73,7 @@ class Tab(QtWidgets.QWidget):
 
     def retranslateUi(self):
         _translate = QtCore.QCoreApplication.translate
-        self.buttonCalculate.setText(_translate("TabWidget", "Berechnen"))
+        self.buttonCalculate.setText(_translate("TabWidget", "Berechnen (Dummy)"))
 
 
     def addTempWidget(self):
