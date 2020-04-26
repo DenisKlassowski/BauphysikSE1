@@ -15,4 +15,3 @@ class VisualizeWidget(QtWidgets.QWidget):
 
         self.setLayout(layout)
 
-        self.show()

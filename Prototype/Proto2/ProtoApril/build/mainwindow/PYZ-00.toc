@@ -790,9 +790,17 @@
    'C:\\Users\\salzg\\Documents\\HTW\\3. '
    'Sem\\SE\\BauphysikSE1\\Prototype\\Proto2\\ProtoApril\\master.py',
    'PYMODULE'),
+  ('NewTab',
+   'C:\\Users\\salzg\\Documents\\HTW\\3. '
+   'Sem\\SE\\BauphysikSE1\\Prototype\\Proto2\\ProtoApril\\NewTab.py',
+   'PYMODULE'),
   ('Tab',
    'C:\\Users\\salzg\\Documents\\HTW\\3. '
    'Sem\\SE\\BauphysikSE1\\Prototype\\Proto2\\ProtoApril\\Tab.py',
+   'PYMODULE'),
+  ('RWidget',
+   'C:\\Users\\salzg\\Documents\\HTW\\3. '
+   'Sem\\SE\\BauphysikSE1\\Prototype\\Proto2\\ProtoApril\\RWidget.py',
    'PYMODULE'),
   ('LayerWidget',
    'C:\\Users\\salzg\\Documents\\HTW\\3. '

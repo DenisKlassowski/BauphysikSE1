@@ -1,3 +1,3 @@
 {
-    "files": ["TempWidget.py","master.py","VisualizeWidget.py","mainwindow.py","Tab.py","LayerWidget.py"]
+    "files": ["NewTab.py","master.py","TempWidget.py","VisualizeWidget.py","LayerWidget.py","mainwindow.py","Tab.py","RWidget.py"]
 }
