@@ -1,0 +1,37 @@
+|===
+| Test Script 004 |
+| Portabilität prüfen | Date: 17/04/2020
+|===
+
+== Test spezification
+
+|===
+| Test Name | Portabilität prüfen
+| Use Case Tested | -
+| Test Description | Wie in den nichtfunktionalen Anforderungen bezüglich Supportability festgeschrieben, wird manuell getestet, ob die Berechnungssoftware ohne Installation genutzt werden kann
+| Pre-conditions | Der zu verwendende Computer ist hochgefahren.
+
+Die Berechnungssoftware befindet sich auf einem angeschlossenen Speichermedium.
+| Post Conditions | Die Berechnungssoftware ist gestartet und einsatzbereit
+| Notes |
+| Result | Pass
+|===
+
+== Test Steps
+
+|===
+|    | Test Step | Expected Test Result
+| 1. | Den Ordner öffnen, in dem sich die ausführbare Datei der Berechnungssoftware befindet | Die Datei zum Start der Berechnungssoftware ist direkt anwählbar
+| 2. | Doppelklick mit der Maus auf die entsprechende ausführbare Datei der Berechnungssoftware | Die Berechnungssoftware startet und es öffnet sich das zugehörige Fenster im Vordergrund
+|===
+
+== Test Data Table
+
+Für diesen Test werden keine Daten benötigt.
+
+
+== Test Log
+
+18.04.2020 - Prototyp 1: Test wurde am Heim-PC erfolgreich durchgeführt.
+
+28.04.2020 - Prototyp 2: Test wurde am Heim-PC erfolgreich durchgeführt.
