@@ -15,11 +15,13 @@ class Tab(QtWidgets.QWidget):
         # overall layout of tab
         tabLayout = QtWidgets.QVBoxLayout()
         tabLayout.setContentsMargins(0,0,0,0)
-        tabLayout.setSpacing(0)
+        tabLayout.setSpacing(10)
 
         #upper layout of tab
         upperTab = QtWidgets.QWidget()
         tabUpperLayout = QtWidgets.QHBoxLayout()
+        tabUpperLayout.setContentsMargins(0,0,0,0)
+        tabUpperLayout.setSpacing(10)
         upperTab.setLayout(tabUpperLayout)
 
         #environment area
