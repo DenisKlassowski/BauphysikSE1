@@ -7,34 +7,71 @@ class LayerWidget(QtWidgets.QWidget):
     def __init__(self,position,modus):
         QtWidgets.QWidget.__init__(self)
 
+        #information from upper levels
         self.modus=modus
-
         self.position=position
 
-        self.layerLayout = QtWidgets.QGridLayout()
-        self.layerLayout.setContentsMargins(0,0,0,0)
-        self.layerLayout.setSpacing(10)
+        #layouts
+        #main layout
+        self.mainLayout = QtWidgets.QVBoxLayout()
+        self.mainLayout.setContentsMargins(0,0,0,0)
+        self.mainLayout.setSpacing(10)
 
+        #head layout
+        self.head = QtWidgets.QWidget()
+        self.headButtons = QtWidgets.QWidget()
+
+        self.headLayout = QtWidgets.QHBoxLayout()
+        self.headLayout.setContentsMargins(0,0,0,0)
+        self.headLayout.setSpacing(10)
+
+        self.headButtonLayout = QtWidgets.QHBoxLayout()
+        self.headButtonLayout.setContentsMargins(0,0,0,0)
+        self.headButtonLayout.setSpacing(0)
 
         self.layerTitleLabel = QtWidgets.QLabel()
-        self.layerWidthLabel = QtWidgets.QLabel()
-        self.layerResLabel = QtWidgets.QLabel()
-        self.layerResUnitLabel = QtWidgets.QLabel()
-
-        self.layerWidthDoubleSpinBox = QtWidgets.QDoubleSpinBox()
-        self.layerResDoubleSpinBox = QtWidgets.QDoubleSpinBox()
 
         self.layerDeleteButton = QtWidgets.QPushButton()
-        self.layerAddAfterButton = QtWidgets.QPushButton()
-
         self.layerDeleteButton.clicked.connect(self.deleteButtonPressed)
+        self.layerAddAfterButton = QtWidgets.QPushButton()
         self.layerAddAfterButton.clicked.connect(self.addAfterButtonPressed)
 
+        self.headButtonLayout.addWidget(self.layerAddAfterButton)
+        self.headButtonLayout.addWidget(self.layerDeleteButton)
+        self.headButtonLayout.setAlignment(QtCore.Qt.AlignRight)
+        self.headButtons.setLayout(self.headButtonLayout)
+
+        self.headLayout.addWidget(self.layerTitleLabel)
+        self.headLayout.addWidget(self.headButtons)
+
+
+        self.head.setLayout(self.headLayout)
+
+
+        #body layout
+        self.body = QtWidgets.QWidget()
+
+        self.bodyLayout = QtWidgets.QGridLayout()
+        self.bodyLayout.setContentsMargins(0,0,0,0)
+        self.bodyLayout.setSpacing(10)
+
+        self.layerWidthLabel = QtWidgets.QLabel()
+        self.layerWidthDoubleSpinBox = QtWidgets.QDoubleSpinBox()
         self.layerWidthComboBox = QtWidgets.QComboBox()
         self.layerWidthComboBox.addItems({"mm","cm","m"})
 
+        self.layerLambdaLabel = QtWidgets.QLabel()
+        self.layerLambdaDoubleSpinbox = QtWidgets.QDoubleSpinBox()
+        self.layerLambdaUnitLabel = QtWidgets.QLabel()
 
-        #temperature
+        self.layerResLabel = QtWidgets.QLabel()
+        self.layerResDoubleSpinBox = QtWidgets.QDoubleSpinBox()
+        self.layerResUnitLabel = QtWidgets.QLabel()
+
+        self.layerResGivenCheckbox = QtWidgets.QCheckBox(QtCore.QCoreApplication.translate("LayerWidget", "R gegeben "))
+        self.layerResGivenCheckbox.stateChanged.connect(self.resGivenCheckboxChanged)
+
+        #temperature soon to be depricated
         self.layerTempOutLabel = QtWidgets.QLabel()
         self.layerTempInLabel = QtWidgets.QLabel()
 
@@ -44,33 +81,48 @@ class LayerWidget(QtWidgets.QWidget):
         self.layerTempUnitLabel1 = QtWidgets.QLabel()
         self.layerTempUnitLabel2 = QtWidgets.QLabel()
 
+        self.bodyLayout.addWidget(self.layerWidthLabel,0,0)
+        self.bodyLayout.addWidget(self.layerWidthDoubleSpinBox,0,1)
+        self.bodyLayout.addWidget(self.layerWidthComboBox,0,2)
+        self.bodyLayout.addWidget(self.layerLambdaLabel,0,3)
+        self.bodyLayout.addWidget(self.layerLambdaDoubleSpinbox,0,4)
+        self.bodyLayout.addWidget(self.layerLambdaUnitLabel,0,5)
+        self.bodyLayout.addWidget(self.layerResLabel,0,6)
+        self.bodyLayout.addWidget(self.layerResDoubleSpinBox,0,7)
+        self.bodyLayout.addWidget(self.layerResUnitLabel,0,8)
+        self.bodyLayout.addWidget(self.layerResGivenCheckbox,0,9)
+
+        self.body.setLayout(self.bodyLayout)
+
+        #bottom layout
 
 
-        self.layerLayout.addWidget(self.layerTitleLabel,0,0)
-        self.layerLayout.addWidget(self.layerAddAfterButton, 0,10)
-        self.layerLayout.addWidget(self.layerDeleteButton, 0, 11)
-
-        self.layerLayout.addWidget(self.layerWidthLabel,1,0)
-        self.layerLayout.addWidget(self.layerWidthDoubleSpinBox,1,1)
-        self.layerLayout.addWidget(self.layerWidthComboBox,1,2)
-        self.layerLayout.addWidget(self.layerResLabel,1,3)
-        self.layerLayout.addWidget(self.layerResDoubleSpinBox,1,4)
-        self.layerLayout.addWidget(self.layerResUnitLabel,1,5)
-
+        #check for mode
         if (self.modus==1):
             self.addTemp()
 
-        self.setLayout(self.layerLayout)
+        self.mainLayout.addWidget(self.head)
+        self.mainLayout.addWidget(self.body)
+        self.setLayout(self.mainLayout)
+
         self.retranslateUi()
-        self.layerTitleLabel.setText(self.layerTitleLabel.text() + str(self.position+1))
+
+        #set position and text
+        self.updatePos(self.position)
 
 
     def retranslateUi(self):
         _translate = QtCore.QCoreApplication.translate
         self.layerTitleLabel.setText(_translate("LayerWidget", "Schicht "))
+
         self.layerWidthLabel.setText(_translate("LayerWidget", "Breite:"))
+
+        self.layerLambdaLabel.setText(_translate("LayerWidget", "λ:"))
+        self.layerLambdaUnitLabel.setText(_translate("LayerWidget", "Einheit"))
+
         self.layerResLabel.setText(_translate("LayerWidget", "R_i:"))
         self.layerResUnitLabel.setText(_translate("LayerWidget", "Einheit"))
+
         self.layerAddAfterButton.setText(_translate("LayerWidget", "+"))
         self.layerDeleteButton.setText(_translate("LayerWidget", "-"))
 
@@ -91,26 +143,34 @@ class LayerWidget(QtWidgets.QWidget):
 
     def setRemovable(self, flag):
         if flag == True:
-            self.layerDeleteButton.setEnabled(True)
+            self.layerDeleteButton.setEnabled(1)
         else:
-            self.layerDeleteButton.setEnabled(False)
+            self.layerDeleteButton.setEnabled(0)
+
+    def resGivenCheckboxChanged(self):
+        if self.layerResGivenCheckbox.checkState():
+            self.layerLambdaDoubleSpinbox.setEnabled(0)
+        else:
+            self.layerLambdaDoubleSpinbox.setEnabled(1)
+
 
     def addTemp(self):
-        row = self.layerLayout.rowCount()
-        self.layerLayout.addWidget(self.layerTempOutLabel, row,0)
-        self.layerLayout.addWidget(self.layerTempOutDoubleSpinBox , row,1)
-        self.layerLayout.addWidget(self.layerTempUnitLabel1 , row,2)
-        self.layerLayout.addWidget(self.layerTempInLabel, row,3)
-        self.layerLayout.addWidget(self.layerTempInDoubleSpinBox, row,4)
-        self.layerLayout.addWidget(self.layerTempUnitLabel2 , row,5)
+        row = self.bodyLayout.rowCount()
+        self.bodyLayout.addWidget(self.layerTempOutLabel, row,0)
+        self.bodyLayout.addWidget(self.layerTempOutDoubleSpinBox , row,1)
+        self.bodyLayout.addWidget(self.layerTempUnitLabel1 , row,2)
+        self.bodyLayout.addWidget(self.layerTempInLabel, row,3)
+        self.bodyLayout.addWidget(self.layerTempInDoubleSpinBox, row,4)
+        self.bodyLayout.addWidget(self.layerTempUnitLabel2 , row,5)
 
     def removeTemp(self):
-        self.layerLayout.removeWidget(self.layerTempOutLabel)
-        self.layerLayout.removeWidget(self.layerTempInLabel)
-        self.layerLayout.removeWidget(self.layerTempOutDoubleSpinBox)
-        self.layerLayout.removeWidget(self.layerTempInDoubleSpinBox)
-        self.layerLayout.removeWidget(self.layerTempUnitLabel1)
-        self.layerLayout.removeWidget(self.layerTempUnitLabel2)
+        self.bodyLayout.removeWidget(self.layerTempOutLabel)
+        self.bodyLayout.removeWidget(self.layerTempInLabel)
+        self.bodyLayout.removeWidget(self.layerTempOutDoubleSpinBox)
+        self.bodyLayout.removeWidget(self.layerTempInDoubleSpinBox)
+        self.bodyLayout.removeWidget(self.layerTempUnitLabel1)
+        self.bodyLayout.removeWidget(self.layerTempUnitLabel2)
+
 
 
 

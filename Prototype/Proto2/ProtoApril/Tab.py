@@ -15,7 +15,7 @@ class Tab(QtWidgets.QWidget):
         # overall layout of tab
         tabLayout = QtWidgets.QVBoxLayout()
         tabLayout.setContentsMargins(0,0,0,0)
-        tabLayout.setSpacing(10)
+        tabLayout.setSpacing(0)
 
         #upper layout of tab
         upperTab = QtWidgets.QWidget()
