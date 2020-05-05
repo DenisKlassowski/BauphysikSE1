@@ -10,29 +10,34 @@ class TempWidget(QtWidgets.QWidget):
         tempLayout = QtWidgets.QGridLayout()
         tempLayout.setContentsMargins(0,0,0,0)
         tempLayout.setSpacing(20)
+        #tempLayout.setAlignment(QtCore.Qt.IgnoreAspectRatio)
 
         self.tempTitleLabel = QtWidgets.QLabel()
         self.tempInsideLabel = QtWidgets.QLabel()
         self.tempOutsideLabel = QtWidgets.QLabel()
 
         self.tempOutsideDoubleSpinBox = QtWidgets.QDoubleSpinBox()
+        self.tempOutsideDoubleSpinBox.setMinimum(-273.15)
+
         self.tempInsideDoubleSpinBox = QtWidgets.QDoubleSpinBox()
+        self.tempInsideDoubleSpinBox.setMinimum(-273.15)
 
         self.tempCelsiusLabel1 = QtWidgets.QLabel()
         self.tempCelsiusLabel2 = QtWidgets.QLabel()
+
 
         tempLayout.addWidget(self.tempTitleLabel,0,0)
         tempLayout.addWidget(self.tempOutsideLabel,0,1)
         tempLayout.addWidget(self.tempInsideLabel,1,1)
 
-        tempLayout.addWidget(self.tempOutsideDoubleSpinBox, 0,2)
-        tempLayout.addWidget(self.tempInsideDoubleSpinBox, 1,2)
-
         tempLayout.addWidget(self.tempCelsiusLabel1,0,3)
         tempLayout.addWidget(self.tempCelsiusLabel2,1,3)
 
+        tempLayout.addWidget(self.tempOutsideDoubleSpinBox, 0,2)
+        tempLayout.addWidget(self.tempInsideDoubleSpinBox, 1,2)
 
         self.setLayout(tempLayout)
+
         self.retranslateUi()
 
     def retranslateUi(self):
