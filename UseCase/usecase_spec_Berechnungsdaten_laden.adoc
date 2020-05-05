@@ -1,0 +1,39 @@
+== Use Case: Berechnungsdaten laden
+=== Kurzbeschreibung
+Der Use Case beschreibt einen Vorgang zum hineinladen von gültigten Datensätze aus einer Datei.
+
+=== Kurzbeschreibung der Akteure
+*Systemnutzer*
+
+möchte Daten aus einer Datei in das Softwaresystem importieren.
+
+=== Vorbedingungen
+//Vorbedingungen müssen erfüllt, damit der Use Case beginnen kann, z.B. Benutzer ist angemeldet, Warenkorb ist nicht leer...
+Das Softwaresystem startet fehlerfrei.
+Der Systemnutzer hat den Use Case gestartet, wenn er seine Datei auswählen möchte.
+
+=== Standardablauf (Basic Flow)
+//Der Standardablauf definiert die Schritte für den Erfolgsfall ("Happy Path")
+
+. Der Use Case beginnt, wenn der Systemnutzer das System fehlerfrei gestartet hat.
+. Der Systemnutzer möchte eine Datei einbinden. 
+.. _WHILE_ Systemnutzer sucht Datei heraus
+.. Softwaresystem überprüft die Gültigkeit der Daten
+.. _INCLUDE_ Pausibilitätsprüfung
+... _IF_ Softwaresystem findet einen Fehler/ kann Daten nicht verarbeiten
+... Das Softwaresystem verhindert das Laden.
+... Das Softwaresystem weist den Systemnutzer auf eine Fehler hin.
+... _ELSE_ Daten werden übernommen.
+. Der Use Case ist abgeschlossen.
+
+=== Wesentliche Szenarios
+//Szenarios sind konkrete Instanzen eines Use Case, d.h. mit einem konkreten Akteur und einem konkreten Durchlauf der o.g. Flows. Szenarios können als Vorstufe für die Entwicklung von Flows und/oder zu deren Validierung verwendet werden.
+* *SC1:* Der Systemnutzer lädt eine Datei. Es wird keine ungültiges Argument erkannt. Der Use Case ist abgeschlossen.
+
+* *SC2:* Der Systemnutzer lädt eine Datei. Dabei wird eine ungültiges Argument erkannt. Das Softwaresystem verhindert das Laden der Datei und weist den Systemnutzer auf eine ungültiges Argument in der Datei hin. Der Use Case ist abgeschlossen.
+
+=== Nachbedingungen
+//Nachbedingungen beschreiben das Ergebnis des Use Case, z.B. einen bestimmten Systemzustand.
+Bei erfolgreicher Durchführung des Use Case muss folgende Nachbedingungen erfüllt sein:
+
+* Die eingegebenen Daten wurden im Hinblick auf ihre Plausibilität validiert.

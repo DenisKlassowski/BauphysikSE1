@@ -1,0 +1,34 @@
+|===
+| Test Script 006 |
+| Plausibilität | Date: 26/04/2020
+|===
+
+== Test spezification
+
+|===
+| Test Name | Plausibilität
+| Use Case Tested | Plausibilität prüfen
+| Test Description | Es wird manuell getestet, ob sich das Sofwaresystem bei der Eingabe in die entsprechenden Felder so verhält, wie in dem UseCase "Plausibilität prüfen" definiert. Dementsprechend soll bei Eingabe von Buchstaben in Zahlenfelder die Eingabe blockieren.
+| Pre-conditions | Die Berechnungssoftware ist gestartet
+
+Der Benutzer hat eine neue Widerstandsberechnung ausgewählt
+| Post Conditions | Die Berechnungssoftware ist gestartet, im Modus Widerstandsberechnung steht für die Dicke der ersten Schicht eine 1
+| Notes |
+| Result | Pass
+|===
+
+== Test Steps
+
+|===
+|    | Test Step | Expected Test Result
+| 1. | Auswahl des Eingabefeldes der Dicke von Schicht 1 per Maus-Doppelklick | Der Inhalt des Feldes ist markiert 
+| 2. | Eingabe von der Zahl 1 und dem Buchstaben "o" | Im Feld steht nur eine 1
+|===
+
+== Test Data Table
+
+Für diesen Test sind keine expliziten Testdaten notwendig
+
+== Test Log
+
+28.04.2020 - Prototyp2 : Der Test wurde erfolgreich abgeschlossen

@@ -1,0 +1,37 @@
+|===
+| Test Script 001 |
+| Berechnungssoftware starten [online] | Date: 17/04/2020
+|===
+
+== Test spezification
+
+|===
+| Test Name | Berechnungssoftware starten [online]
+| Use Case Tested | t.b.d.
+| Test Description | Manueller Test des Starts der Berechnungssoftware durch direkten Aufruf der ausführbaren Datei durch den Benutzer
+| Pre-conditions | Der Systemnutzer hat seinen PC/Laptop mit dem Betribessystem Windows 10 hochgefahren und ist online
+
+Die Software ist auf dem Computer oder einem angeschlossenen USB-Stick gespeichert
+| Post Conditions | Die Berechnungssoftware ist gestartet und bereit zur Nutzung
+| Notes |
+| Result | Pass
+|===
+
+== Test Steps
+
+|===
+|    | Test Step | Expected Test Result
+| 1. | Den Ordner öffnen, in dem sich die ausführbare Datei der Berechnungssoftware befindet | Die Datei zum Start der Berechnungssoftware ist direkt anwählbar
+| 2. | Doppelklick mit der Maus auf die entsprechende ausführbare Datei der Berechnungssoftware | Die Berechnungssoftware startet und es öffnet sich das zugehörige Fenster im Vordergrund
+|===
+
+== Test Data Table
+
+Bei diesem Test werden keine Testdaten benötigt.
+
+
+== Test Log
+
+18.04.2020 - Prototyp 1: Test wurde am Heim-PC erfolgreich durchgeführt.
+
+28.04.2020 - Prototyp 2: Test wurde am Heim-PC erfolgreich durchgeführt.
