@@ -1,0 +1,48 @@
+= Protokoll: Kundengespräch 2020-05-06
+Denis Klassowski <denis.klassowski@htw-dresden.de>
+11.05.2020
+:toc: 
+:toc-title: Inhaltsverzeichnis
+:sectnums:
+
+== Anwesend
+. Tester
+. Manager
+. Analyst
+. Dev (Yewgenij)
+. Kunde
+
+== Ziel des Meetings: Erklärung und Vorstellung des Prototypen / Feedback zu bisherigem Stand
+
+== Das wurde dem Kunden erklärt:
+. Tab System
+. Wo sind die Eingabemöglichkeiten
+. Überblick zum Schichtsystem (dynamisches einfügen und löschen)
+. Schichtemperatursystem 
+. Fuktion des Moduswechsels
+. Erhalt der Werte bei Moduswechsel
+. Verlauf des Projektes und die Zielstellung einen Prototypen zu bauen der an den Kunden übergeben wird
+
+=== Bemerkung des Kunden: 
+- Bezeichnung "Breite" ändern zu "Dicke"
+- Zweiteilung der Eingabemaske und Schichtsystem deutlich machen
+- U Wert Berechnung bei Temp Berechnung nicht notwendig
+- Werte sollen bei wechsel zu Temp Modus erhalten bleiben
+- Wichtige Werte bei Temp Berechnung sollen angezeigt werden: Rsi,Rse,U - Wert, Rt, R Gesamt
+- im Formlayout R{Nummer} statt Ri schreiben (Reihenfolge)
+- Programm soll entwas Farblicher und ansprechender sein
+
+== Fragen an den Kunden
+. Soll eine Fehleingabe durch ein Popup signalisiert werden?
+- Nein, Fehleingabe unterdrücken reicht aus.
+. Wie sollen die einzelnen Tabs gespeichert werden? 
+- Ein Tab (eine Berechnung) wird unter einem Namen als Datei gespeichert
+. Welches Layout soll der Druckauftrag einer Berechnung haben
+- Soll ähnlich aussehen wie das Layout im Programm, Mehrere Tabellen mit Materialdaten/Eingangsdaten/Allgemeine Daten/ Grenzwerttabelle 
+- Kunde wird noch eine Beispieltabelle als Vorlage anlegen
+. Soll das Programm rekursive Berechnung (Fehlender Parameter wird errechnet) bieten?
+- Wäre gut aber hat keine Priorität
+
+== Fazit
+- Kunde ist Grundsätzlich zufrieden, Anmerkungen waren überwiegend visuelle Wünsche
+- Es ist davon auszugehen das unsere Vorstellung des Prototypen das Problem des Kunden lösen kann
