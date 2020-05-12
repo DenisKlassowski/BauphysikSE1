@@ -10,6 +10,7 @@ Denis Klassowski <denis.klassowski@htw-dresden.de>
 . Manager
 . Analyst
 . Dev (Yewgenij)
+. Deployment
 . Kunde
 
 == Ziel des Meetings: Erklärung und Vorstellung des Prototypen / Feedback zu bisherigem Stand
