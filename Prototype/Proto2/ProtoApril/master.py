@@ -47,6 +47,7 @@ class MainWindow(QtWidgets.QMainWindow):
         self.menuModus.menuAction().setEnabled(False)
 
 
+
         #assemble menubar
         bar.addAction(menuFile.menuAction())
         bar.addAction(menuLanguage.menuAction())

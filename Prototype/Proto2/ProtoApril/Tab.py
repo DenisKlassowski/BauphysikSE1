@@ -3,14 +3,16 @@ from PyQt5 import QtWidgets, QtCore, QtGui
 from TempWidget import TempWidget
 from VisualizeWidget import VisualizeWidget
 from LayerWidget import LayerWidget
+from LayerDivider import LayerDivider
 from RWidget import RWidget
 
 
 class Tab(QtWidgets.QWidget):
-    def __init__(self,modus):
+    def __init__(self,mode):
         QtWidgets.QWidget.__init__(self)
 
-        self.modus=modus
+        self.mode=mode
+        self.layerCount = 0
 
         # overall layout of tab
         tabLayout = QtWidgets.QVBoxLayout()
@@ -53,7 +55,8 @@ class Tab(QtWidgets.QWidget):
         self.layerLayout = QtWidgets.QFormLayout()
         self.layerLayout.setSpacing(20)
 
-        self.addLayer(0,self.modus)
+        self.addEnvLayerDividers()
+        self.addLayer(0)
 
         layersWidget.setLayout(self.layerLayout)
 
@@ -75,7 +78,7 @@ class Tab(QtWidgets.QWidget):
         self.buttonCalculate.setText(_translate("TabWidget", "Berechnen (Dummy)"))
 
     def setEnvironment(self):
-        if self.modus == 0:
+        if self.mode == 0:
             self.addRWidget()
             self.removeTempWidget()
         else:
@@ -115,38 +118,69 @@ class Tab(QtWidgets.QWidget):
             if hasattr(self, 'tempWidget'):
                 print('RuntimeError: tempWidget was removed from layout, but not from object.')
 
+    def addEnvLayerDividers(self):
+        self.layerLayout.insertRow(0,LayerDivider(self.mode))
+        self.layerLayout.insertRow(1,LayerDivider(self.mode))
 
-    def addLayer(self, position,modus):
-        if(self.layerLayout.count()==1):
-            self.layerLayout.itemAt(0,2).widget().setRemovable(True)
-        self.layerLayout.insertRow(position, LayerWidget(position,modus))
-        self.updatePositionLayers(position+1)
-        if(self.layerLayout.count()==1):
-            self.layerLayout.itemAt(0,2).widget().setRemovable(False)
+    def addLayer(self, position):
+        #enable delete button on the former solitary layer
+        if(self.layerCount==1):
+            self.layerLayout.itemAt(1,2).widget().setRemovable(True)
 
+        if(self.layerCount==0):
+            #if first layer
+            self.layerLayout.insertRow(1,LayerWidget(position,self.mode))
+            self.layerLayout.itemAt(1,2).widget().setRemovable(False)
+        else:
+            #add seperator
+            self.layerLayout.insertRow(position*2, LayerDivider(self.mode))
+            #add layer
+            self.layerLayout.insertRow((position*2)+1, LayerWidget(position,self.mode))
 
+        self.layerCount+=1
+
+        self.updatePositionLayers(position)
 
     def deleteLayer(self, position):
-        self.layerLayout.removeRow(position)
+        if (position==0):
+            self.layerLayout.removeRow(1)
+            self.layerLayout.removeRow(1)
+        else:
+            self.layerLayout.removeRow((position*2))
+            self.layerLayout.removeRow((position*2))
+        self.layerCount-=1
         self.updatePositionLayers(position)
-        if(self.layerLayout.count()==1):
-            self.layerLayout.itemAt(0,2).widget().setRemovable(False)
+        if(self.layerCount==1):
+            self.layerLayout.itemAt(1,2).widget().setRemovable(False)
+
+        #unless this is done, a separator and an empty space will remain until minimizing and reopening the window. self.update() DOES NOT WORK
+        self.scrollAreaLayers.hide()
+        self.scrollAreaLayers.show()
+
 
     def updatePositionLayers(self, startPos):
-        for pos in range(startPos, self.layerLayout.count()):
-            self.layerLayout.itemAt(pos,2).widget().updatePos(pos)
+        for pos in range(startPos, self.layerCount):
+            self.layerLayout.itemAt((2*pos)+1,2).widget().updatePos(pos)
 
 
     def switchToTemp(self):
-        self.modus=1
+        self.mode=1
         self.setEnvironment()
         for i in range(self.layerLayout.count()):
-            self.layerLayout.itemAt(i,2).widget().modus=1
-            self.layerLayout.itemAt(i,2).widget().addTemp()
+            self.layerLayout.itemAt(i,2).widget().switchMode(self.mode)
+
+        #unless this is done, a separator and an empty space will remain or will be added until minimizing and reopening the window. self.update() DOES NOT WORK
+        self.scrollAreaLayers.hide()
+        self.scrollAreaLayers.show()
+
 
     def switchToU(self):
-        self.modus=0
+        self.mode=0
         self.setEnvironment()
         for i in range(self.layerLayout.count()):
-            self.layerLayout.itemAt(i,2).widget().modus=0
-            self.layerLayout.itemAt(i,2).widget().removeTemp()
+            self.layerLayout.itemAt(i,2).widget().switchMode(self.mode)
+        #unless this is done, a separator and an empty space will remain or will be added until minimizing and reopening the window. self.update() DOES NOT WORK
+        self.scrollAreaLayers.hide()
+        self.scrollAreaLayers.show()
+
+

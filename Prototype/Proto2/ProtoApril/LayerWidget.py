@@ -4,11 +4,11 @@ from PyQt5 import QtWidgets
 
 
 class LayerWidget(QtWidgets.QWidget):
-    def __init__(self,position,modus):
+    def __init__(self,position,mode):
         QtWidgets.QWidget.__init__(self)
 
         #information from upper levels
-        self.modus=modus
+        self.mode=mode
         self.position=position
 
         #layouts
@@ -72,14 +72,14 @@ class LayerWidget(QtWidgets.QWidget):
         self.layerResGivenCheckbox.stateChanged.connect(self.resGivenCheckboxChanged)
 
         #temperature soon to be depricated
-        self.layerTempOutLabel = QtWidgets.QLabel()
-        self.layerTempInLabel = QtWidgets.QLabel()
+        #self.layerTempOutLabel = QtWidgets.QLabel()
+        #self.layerTempInLabel = QtWidgets.QLabel()
 
-        self.layerTempOutDoubleSpinBox = QtWidgets.QDoubleSpinBox()
-        self.layerTempInDoubleSpinBox = QtWidgets.QDoubleSpinBox()
+        #self.layerTempOutDoubleSpinBox = QtWidgets.QDoubleSpinBox()
+        #self.layerTempInDoubleSpinBox = QtWidgets.QDoubleSpinBox()
 
-        self.layerTempUnitLabel1 = QtWidgets.QLabel()
-        self.layerTempUnitLabel2 = QtWidgets.QLabel()
+        #self.layerTempUnitLabel1 = QtWidgets.QLabel()
+        #self.layerTempUnitLabel2 = QtWidgets.QLabel()
 
         self.bodyLayout.addWidget(self.layerWidthLabel,0,0)
         self.bodyLayout.addWidget(self.layerWidthDoubleSpinBox,0,1)
@@ -98,7 +98,7 @@ class LayerWidget(QtWidgets.QWidget):
 
 
         #check for mode
-        if (self.modus==1):
+        if (self.mode==1):
             self.addTemp()
 
         self.mainLayout.addWidget(self.head)
@@ -115,7 +115,7 @@ class LayerWidget(QtWidgets.QWidget):
         _translate = QtCore.QCoreApplication.translate
         self.layerTitleLabel.setText(_translate("LayerWidget", "Schicht "))
 
-        self.layerWidthLabel.setText(_translate("LayerWidget", "Breite:"))
+        self.layerWidthLabel.setText(_translate("LayerWidget", "Dicke:"))
 
         self.layerLambdaLabel.setText(_translate("LayerWidget", "λ:"))
         self.layerLambdaUnitLabel.setText(_translate("LayerWidget", "Einheit"))
@@ -126,16 +126,16 @@ class LayerWidget(QtWidgets.QWidget):
         self.layerAddAfterButton.setText(_translate("LayerWidget", "+"))
         self.layerDeleteButton.setText(_translate("LayerWidget", "-"))
 
-        self.layerTempInLabel.setText(_translate("LayerWidget", "Temp innen:"))
-        self.layerTempOutLabel.setText(_translate("LayerWidget", "Temp außen"))
-        self.layerTempUnitLabel1.setText(_translate("LayerWidget", "°C"))
-        self.layerTempUnitLabel2.setText(_translate("LayerWidget", "°C"))
+        #self.layerTempInLabel.setText(_translate("LayerWidget", "Temp_in:"))
+        #self.layerTempOutLabel.setText(_translate("LayerWidget", "Temp_out"))
+        #self.layerTempUnitLabel1.setText(_translate("LayerWidget", "°C"))
+        #self.layerTempUnitLabel2.setText(_translate("LayerWidget", "°C"))
 
     def deleteButtonPressed(self):
         self.parent().parent().parent().parent().deleteLayer(self.position)
 
     def addAfterButtonPressed(self):
-        self.parent().parent().parent().parent().addLayer(self.position+1,self.modus)
+        self.parent().parent().parent().parent().addLayer(self.position+1)
 
     def updatePos(self, pos):
         self.position=pos
@@ -153,23 +153,33 @@ class LayerWidget(QtWidgets.QWidget):
         else:
             self.layerLambdaDoubleSpinbox.setEnabled(1)
 
+    def switchMode(self,mode):
+        self.mode = mode
+        #if (mode==0):
+        #    self.removeTemp()
+        #else:
+        #    self.addTemp()
 
     def addTemp(self):
-        row = self.bodyLayout.rowCount()
-        self.bodyLayout.addWidget(self.layerTempOutLabel, row,0)
-        self.bodyLayout.addWidget(self.layerTempOutDoubleSpinBox , row,1)
-        self.bodyLayout.addWidget(self.layerTempUnitLabel1 , row,2)
-        self.bodyLayout.addWidget(self.layerTempInLabel, row,3)
-        self.bodyLayout.addWidget(self.layerTempInDoubleSpinBox, row,4)
-        self.bodyLayout.addWidget(self.layerTempUnitLabel2 , row,5)
+        pass
+    #DEPRICATED
+        #row = self.bodyLayout.rowCount()
+        #self.bodyLayout.addWidget(self.layerTempOutLabel, row,0)
+        #self.bodyLayout.addWidget(self.layerTempOutDoubleSpinBox , row,1)
+        #self.bodyLayout.addWidget(self.layerTempUnitLabel1 , row,2)
+        #self.bodyLayout.addWidget(self.layerTempInLabel, row,3)
+        #self.bodyLayout.addWidget(self.layerTempInDoubleSpinBox, row,4)
+        #self.bodyLayout.addWidget(self.layerTempUnitLabel2 , row,5)
 
     def removeTemp(self):
-        self.bodyLayout.removeWidget(self.layerTempOutLabel)
-        self.bodyLayout.removeWidget(self.layerTempInLabel)
-        self.bodyLayout.removeWidget(self.layerTempOutDoubleSpinBox)
-        self.bodyLayout.removeWidget(self.layerTempInDoubleSpinBox)
-        self.bodyLayout.removeWidget(self.layerTempUnitLabel1)
-        self.bodyLayout.removeWidget(self.layerTempUnitLabel2)
+        pass
+        #DEPRICATED
+        #self.bodyLayout.removeWidget(self.layerTempOutLabel)
+        #self.bodyLayout.removeWidget(self.layerTempInLabel)
+        #self.bodyLayout.removeWidget(self.layerTempOutDoubleSpinBox)
+        #self.bodyLayout.removeWidget(self.layerTempInDoubleSpinBox)
+        #self.bodyLayout.removeWidget(self.layerTempUnitLabel1)
+        #self.bodyLayout.removeWidget(self.layerTempUnitLabel2)
 
 
 

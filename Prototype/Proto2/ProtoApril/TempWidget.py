@@ -18,14 +18,13 @@ class TempWidget(QtWidgets.QWidget):
 
         self.tempOutsideDoubleSpinBox = QtWidgets.QDoubleSpinBox()
         self.tempOutsideDoubleSpinBox.setMinimum(-273.15)
-        self.tempOutsideDoubleSpinBox.setMaximumWidth(195)
-        self.tempOutsideDoubleSpinBox.setMinimumWidth(195)
-
+        self.tempOutsideDoubleSpinBox.setMaximumWidth(193)
+        self.tempOutsideDoubleSpinBox.setMinimumWidth(193)
 
         self.tempInsideDoubleSpinBox = QtWidgets.QDoubleSpinBox()
         self.tempInsideDoubleSpinBox.setMinimum(-273.15)
-        self.tempInsideDoubleSpinBox.setMaximumWidth(195)
-        self.tempInsideDoubleSpinBox.setMinimumWidth(195)
+        self.tempInsideDoubleSpinBox.setMaximumWidth(193)
+        self.tempInsideDoubleSpinBox.setMinimumWidth(193)
 
         self.tempCelsiusLabel1 = QtWidgets.QLabel()
         self.tempCelsiusLabel2 = QtWidgets.QLabel()

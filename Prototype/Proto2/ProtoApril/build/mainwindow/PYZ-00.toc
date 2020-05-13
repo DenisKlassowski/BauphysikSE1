@@ -780,11 +780,11 @@
   ('stat',
    'C:\\Users\\salzg\\AppData\\Local\\Programs\\Python\\Python38\\lib\\stat.py',
    'PYMODULE'),
-  ('_py_abc',
-   'C:\\Users\\salzg\\AppData\\Local\\Programs\\Python\\Python38\\lib\\_py_abc.py',
-   'PYMODULE'),
   ('stringprep',
    'C:\\Users\\salzg\\AppData\\Local\\Programs\\Python\\Python38\\lib\\stringprep.py',
+   'PYMODULE'),
+  ('_py_abc',
+   'C:\\Users\\salzg\\AppData\\Local\\Programs\\Python\\Python38\\lib\\_py_abc.py',
    'PYMODULE'),
   ('master',
    'C:\\Users\\salzg\\Documents\\HTW\\3. '
@@ -801,6 +801,14 @@
   ('RWidget',
    'C:\\Users\\salzg\\Documents\\HTW\\3. '
    'Sem\\SE\\BauphysikSE1\\Prototype\\Proto2\\ProtoApril\\RWidget.py',
+   'PYMODULE'),
+  ('LayerDivider',
+   'C:\\Users\\salzg\\Documents\\HTW\\3. '
+   'Sem\\SE\\BauphysikSE1\\Prototype\\Proto2\\ProtoApril\\LayerDivider.py',
+   'PYMODULE'),
+  ('CustomMiniWidgets',
+   'C:\\Users\\salzg\\Documents\\HTW\\3. '
+   'Sem\\SE\\BauphysikSE1\\Prototype\\Proto2\\ProtoApril\\CustomMiniWidgets.py',
    'PYMODULE'),
   ('LayerWidget',
    'C:\\Users\\salzg\\Documents\\HTW\\3. '
