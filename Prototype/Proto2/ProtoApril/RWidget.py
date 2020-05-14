@@ -1,6 +1,7 @@
 # This Python file uses the following encoding: utf-8
 from PyQt5 import QtCore
 from PyQt5 import QtWidgets
+from CustomMiniWidgets import MyDoubleSpinBox
 
 
 class RWidget(QtWidgets.QWidget):
@@ -16,9 +17,9 @@ class RWidget(QtWidgets.QWidget):
         self.rOutsideLabel = QtWidgets.QLabel()
         self.rOverallLabel = QtWidgets.QLabel()
 
-        self.rOutsideDoubleSpinBox = QtWidgets.QDoubleSpinBox()
-        self.rInsideDoubleSpinBox = QtWidgets.QDoubleSpinBox()
-        self.rOverallDoubleSpinBox = QtWidgets.QDoubleSpinBox()
+        self.rOutsideDoubleSpinBox = MyDoubleSpinBox()
+        self.rInsideDoubleSpinBox = MyDoubleSpinBox()
+        self.rOverallDoubleSpinBox = MyDoubleSpinBox()
 
         self.rUnitLabel1 = QtWidgets.QLabel()
         self.rUnitLabel2 = QtWidgets.QLabel()

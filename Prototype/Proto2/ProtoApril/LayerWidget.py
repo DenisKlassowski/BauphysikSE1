@@ -1,6 +1,7 @@
 # This Python file uses the following encoding: utf-8
 from PyQt5 import QtCore
 from PyQt5 import QtWidgets
+from CustomMiniWidgets import MyDoubleSpinBox
 
 
 class LayerWidget(QtWidgets.QWidget):
@@ -56,16 +57,16 @@ class LayerWidget(QtWidgets.QWidget):
         self.bodyLayout.setSpacing(10)
 
         self.layerWidthLabel = QtWidgets.QLabel()
-        self.layerWidthDoubleSpinBox = QtWidgets.QDoubleSpinBox()
+        self.layerWidthDoubleSpinBox = MyDoubleSpinBox()
         self.layerWidthComboBox = QtWidgets.QComboBox()
         self.layerWidthComboBox.addItems({"mm","cm","m"})
 
         self.layerLambdaLabel = QtWidgets.QLabel()
-        self.layerLambdaDoubleSpinbox = QtWidgets.QDoubleSpinBox()
+        self.layerLambdaDoubleSpinbox = MyDoubleSpinBox()
         self.layerLambdaUnitLabel = QtWidgets.QLabel()
 
         self.layerResLabel = QtWidgets.QLabel()
-        self.layerResDoubleSpinBox = QtWidgets.QDoubleSpinBox()
+        self.layerResDoubleSpinBox = MyDoubleSpinBox()
         self.layerResUnitLabel = QtWidgets.QLabel()
 
         self.layerResGivenCheckbox = QtWidgets.QCheckBox(QtCore.QCoreApplication.translate("LayerWidget", "R gegeben "))
@@ -75,8 +76,8 @@ class LayerWidget(QtWidgets.QWidget):
         #self.layerTempOutLabel = QtWidgets.QLabel()
         #self.layerTempInLabel = QtWidgets.QLabel()
 
-        #self.layerTempOutDoubleSpinBox = QtWidgets.QDoubleSpinBox()
-        #self.layerTempInDoubleSpinBox = QtWidgets.QDoubleSpinBox()
+        #self.layerTempOutDoubleSpinBox = MyDoubleSpinBox()
+        #self.layerTempInDoubleSpinBox = MyDoubleSpinBox()
 
         #self.layerTempUnitLabel1 = QtWidgets.QLabel()
         #self.layerTempUnitLabel2 = QtWidgets.QLabel()

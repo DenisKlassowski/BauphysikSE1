@@ -1,6 +1,7 @@
 # This Python file uses the following encoding: utf-8
 from PyQt5 import QtCore
 from PyQt5 import QtWidgets
+from CustomMiniWidgets import MyDoubleSpinBox
 
 
 class TempWidget(QtWidgets.QWidget):
@@ -16,12 +17,12 @@ class TempWidget(QtWidgets.QWidget):
         self.tempInsideLabel = QtWidgets.QLabel()
         self.tempOutsideLabel = QtWidgets.QLabel()
 
-        self.tempOutsideDoubleSpinBox = QtWidgets.QDoubleSpinBox()
+        self.tempOutsideDoubleSpinBox = MyDoubleSpinBox()
         self.tempOutsideDoubleSpinBox.setMinimum(-273.15)
         self.tempOutsideDoubleSpinBox.setMaximumWidth(193)
         self.tempOutsideDoubleSpinBox.setMinimumWidth(193)
 
-        self.tempInsideDoubleSpinBox = QtWidgets.QDoubleSpinBox()
+        self.tempInsideDoubleSpinBox = MyDoubleSpinBox()
         self.tempInsideDoubleSpinBox.setMinimum(-273.15)
         self.tempInsideDoubleSpinBox.setMaximumWidth(193)
         self.tempInsideDoubleSpinBox.setMinimumWidth(193)
