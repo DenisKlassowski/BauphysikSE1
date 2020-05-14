@@ -8,20 +8,22 @@ class TempWidget(QtWidgets.QWidget):
     def __init__(self):
         QtWidgets.QWidget.__init__(self)
 
+        #layout
         tempLayout = QtWidgets.QGridLayout()
         tempLayout.setContentsMargins(0,0,0,0)
         tempLayout.setSpacing(20)
-        #tempLayout.setAlignment(QtCore.Qt.IgnoreAspectRatio)
 
         self.tempTitleLabel = QtWidgets.QLabel()
         self.tempInsideLabel = QtWidgets.QLabel()
         self.tempOutsideLabel = QtWidgets.QLabel()
 
+        #hard coded solution for spinbox size, could be done better?
         self.tempOutsideDoubleSpinBox = MyDoubleSpinBox()
         self.tempOutsideDoubleSpinBox.setMinimum(-273.15)
         self.tempOutsideDoubleSpinBox.setMaximumWidth(193)
         self.tempOutsideDoubleSpinBox.setMinimumWidth(193)
 
+        #hard coded solution for spinbox size, could be done better?
         self.tempInsideDoubleSpinBox = MyDoubleSpinBox()
         self.tempInsideDoubleSpinBox.setMinimum(-273.15)
         self.tempInsideDoubleSpinBox.setMaximumWidth(193)
@@ -30,7 +32,7 @@ class TempWidget(QtWidgets.QWidget):
         self.tempCelsiusLabel1 = QtWidgets.QLabel()
         self.tempCelsiusLabel2 = QtWidgets.QLabel()
 
-
+        #assemble layout
         tempLayout.addWidget(self.tempTitleLabel,0,0)
         tempLayout.addWidget(self.tempOutsideLabel,0,1)
         tempLayout.addWidget(self.tempInsideLabel,1,1)
