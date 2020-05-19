@@ -1,0 +1,49 @@
+|===
+| Test Script 015 |
+| Reihenberechnung 2 Schichten V2 | Date: <16/05/2020>
+|===
+
+== Test spezification
+
+|===
+| Test Name | Reihenberechnung 2 Schichten
+| Use Case Tested | Reihenberechnung durchführen
+| Test Description | Es wird eine Reihenberechnung für U über 2 Schichten durchgeführt und geprüft, ob die Ergebnisse den Erwartungen entsprechen.
+| Pre-conditions | Die Berechnungssoftware ist auf einem handelsüblichen PC/Laptop gestartet und einsatzbereit.
+
+Es ist die U-Berechnung ausgewählt und alle Felder unbefüllt.
+| Post Conditions | Die U-Berechnung wurde durchgeführt und die korrekten Ergebnisse werden angezeigt.
+| Notes | korrekte Ergebnisse: R_ges = 0,53, R_T= 0,70 , U = 1,43 
+| Result | Pass
+|===
+
+== Test Steps
+
+Für alle zu tätigenden Eingaben sind in den Testdaten weiter unten die festgelegten Werte zu nutzen. Im Folgenden wird darauf verzichtet, diesen Sachverhalt für jede Eingabe explizit zu erwähnen.
+
+Die korrekten Ergebnisse stehen in den Notes der Spezifikation.
+
+|===
+|    | Test Step | Expected Test Result
+| 1. | im oberen Teil des Fensters werden R_si und R_se eingegeben | Die Felder für R_si und R_se sind befüllt
+| 2. | Daten für Schicht 1 eingeben (Einheiten beachten) | Felder Dicke und Wärmeleitfähigkeit von Schicht 1 sind befüllt
+| 3. | Hinzufügen einer Schicht über den "+"-Button in Schicht 1 | Es steht eine zweite Schicht zur Verfügung
+| 4. | Daten für Schicht 2 eingeben (Einheiten beachten) | Felder Dicke und Wärmeleitfähigkeit von Schicht 2 sind befüllt
+| 5. | "Berechnen"-Button betätigen und damit Berechnung auslösen | Keine Fehler. Das System zeigt die korrekten Ergebnisse an
+|===
+
+== Test Data Table
+
+Die Testdaten basieren auf einer Aufgabe aus dem Bereich Bauphysik und wurden für Testzwecke von der Kundin an uns übergeben.
+
+Die Werte für den Wärmeübergangswiderstand an der Innenseite sowie an der Außenseite.
+
+R_si = 0,13
+
+R_se = 0,04
+
+|===
+|           | Dicke | Wärmeleitfähigkeit
+| Schicht 1 | 36,5 cm | 0,72
+| Schicht 2 | 2 cm  | 0,87 
+|===

@@ -1,0 +1,70 @@
+= Test-Log
+
+Dieses Dokument dient der Übersicht über die durchgeführten Tests sowie die entsprechenden Ergebnisse der Tests für die Berechnungssoftware Bauphysik.
+
+:toc: 
+:toc-title: Inhaltsverzeichnis
+:toc-placement!:
+
+== Testscripte
+
+An dieser Stelle wird eine Übersicht der verwendeten Testscripte gegeben, die über den entsprechenden Link direkt angesehen werden können.
+
+|===
+| *Testscript* | *Kurzbeschreibung* | *manuell/automatisch*
+| link:Test_Script/TestScript_001.adoc[001] | SW online starten | manuell
+| link:Test_Script/TestScript_002.adoc[002] | SW offline starten | manuell
+| link:Test_Script/TestScript_003.adoc[003] | Eingabegeräte prüfen | manuell
+| link:Test_Script/TestScript_004.adoc[004] | Portabilität prüfen | manuell
+| link:Test_Script/TestScript_005.adoc[005] | Systemsprache prüfen |
+manuell
+| link:Test_Script/TestScript_006.adoc[006] | Plausibilität prüfen |
+manuell
+| link:Test_Script/TestScript_007.adoc[007] | Schichten hinzufügen/löschen | manuell
+| link:Test_Script/TestScript_008.adoc[008] | Modus wechseln | manuell
+| link:Test_Script/TestScript_009.adoc[009] | Reihenberechnung 4 Schichten | manuell
+| link:Test_Script/TestScript_010.adoc[010] | Reihenberechnung 3 Schichten | manuell
+| link:Test_Script/TestScript_011.adoc[011] | Reihenberechnung 5 Schichten | manuell
+| link:Test_Script/TestScript_012.adoc[012] | Reihenberechnung 2 Schichten R_i bekannt | manuell
+| link:Test_Script/TestScript_013.adoc[013] | Reihenberechnung 2 Schichten R_i bekannt V2 | manuell
+| link:Test_Script/TestScript_014.adoc[014] | Reihenberechnung 2 Schichten | manuell
+| link:Test_Script/TestScript_015.adoc[015] | Reihenberechnung 2 Schichten V2 | manuell
+|===
+
+== Testergebnisse
+
+Es folgt eine Übersicht über die in der jeweiligen Testphase am jeweiligen Prototypen durchgeführten Testabläufe. Dabei gilt zu beachten, dass sich die Testabläufe ebenso wie der Prototyp iterativ entwickeln und folglich nur die Testscripte angewendet werden, die in der jeweiligen Iteration der Überprüfung der erreichten Ziele der jeweiligen Iteration dienen.
+
+=== Prototyp 1
+
+|===
+| *Datum* | *Version* | *Testscript* | *Ergebnis* | *Verantwortlich* |  *Kommentar*
+| 18.04.2020 |  0.1   | 001 | bestanden | CL | am Heim-PC durchgeführt
+| 18.04.2020 |  0.1   | 002 | bestanden | CL | am Heim-PC durchgeführt
+| 18.04.2020 |  0.1   | 003 | bestanden | CL | am Heim-PC durchgeführt
+| 18.04.2020 |  0.1   | 004 | bestanden | CL | am Heim-PC durchgeführt
+| 18.04.2020 |  0.1   | 005 | mit Ausnahme | CL | eine Beanstandung: Auswahlreiter für die Sprache war nicht auf deutsch ("Language")
+|===
+
+
+=== Prototyp 2
+
+|===
+| *Datum* | *Version* | *Testscript* | *Ergebnis* | *Verantwortlich* | *Kommentar*
+| 28.04.2020 |  0.2   | 001 | bestanden | CL |am Heim-PC durchgeführt
+| 28.04.2020 |  0.2   | 002 | bestanden | CL |am Heim-PC durchgeführt
+| 28.04.2020 |  0.2   | 003 | bestanden | CL |am Heim-PC durchgeführt
+| 28.04.2020 |  0.2   | 004 | bestanden | CL |am Heim-PC durchgeführt
+| 28.04.2020 |  0.2   | 005 | bestanden | CL |am Heim-PC durchgeführt
+| 28.04.2020 |  0.2   | 006 | bestanden | CL |am Heim-PC durchgeführt
+| 28.04.2020 |  0.2   | 007 | bestanden | CL |am Heim-PC durchgeführt
+| 28.04.2020 |  0.2   | 008 | bestanden | CL |am Heim-PC durchgeführt
+|===
+
+
+=== Prototyp 3
+
+|===
+| *Datum* | *Version* | *Testscript* | *Ergebnis* | *Kommentar*
+|   |   |   |   |
+|===
