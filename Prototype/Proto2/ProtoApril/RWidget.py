@@ -8,6 +8,7 @@ class RWidget(QtWidgets.QWidget):
     def __init__(self):
         QtWidgets.QWidget.__init__(self)
 
+        #layout of widget
         rLayout = QtWidgets.QGridLayout()
         rLayout.setContentsMargins(0,0,0,0)
         rLayout.setSpacing(20)
@@ -25,6 +26,7 @@ class RWidget(QtWidgets.QWidget):
         self.rUnitLabel2 = QtWidgets.QLabel()
         self.rUnitLabel3 = QtWidgets.QLabel()
 
+        #assemble layout
         rLayout.addWidget(self.rTitleLabel,0,0)
         rLayout.addWidget(self.rOutsideLabel,0,1)
         rLayout.addWidget(self.rInsideLabel,1,1)

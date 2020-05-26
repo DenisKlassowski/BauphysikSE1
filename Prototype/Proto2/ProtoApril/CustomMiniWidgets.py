@@ -12,6 +12,7 @@ class MyDoubleSpinBox(QtWidgets.QDoubleSpinBox):
     def __init__(self):
         QtWidgets.QDoubleSpinBox.__init__(self)
         self.setFocusPolicy(QtCore.Qt.StrongFocus)
+        self.setDecimals(3)
 
     #overriding scroll events to disable value changes when simply scrolling through e.g. scrollAreas
     def wheelEvent(self, e):

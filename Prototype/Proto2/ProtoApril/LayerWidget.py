@@ -132,28 +132,34 @@ class LayerWidget(QtWidgets.QWidget):
         #self.layerTempUnitLabel1.setText(_translate("LayerWidget", "°C"))
         #self.layerTempUnitLabel2.setText(_translate("LayerWidget", "°C"))
 
+    #delete this layer
     def deleteButtonPressed(self):
         self.parent().parent().parent().parent().deleteLayer(self.position)
 
+    #add layer beneath
     def addAfterButtonPressed(self):
         self.parent().parent().parent().parent().addLayer(self.position+1)
 
+    #update own position and modify text
     def updatePos(self, pos):
         self.position=pos
         self.layerTitleLabel.setText(QtCore.QCoreApplication.translate("LayerWidget", "Schicht ")+ str(pos+1))
 
+    #enable/disable delete button
     def setRemovable(self, flag):
         if flag == True:
             self.layerDeleteButton.setEnabled(1)
         else:
             self.layerDeleteButton.setEnabled(0)
 
+    #enable/disable lamba box
     def resGivenCheckboxChanged(self):
         if self.layerResGivenCheckbox.checkState():
             self.layerLambdaDoubleSpinbox.setEnabled(0)
         else:
             self.layerLambdaDoubleSpinbox.setEnabled(1)
 
+    #modify mode of layer
     def switchMode(self,mode):
         self.mode = mode
         #if (mode==0):
