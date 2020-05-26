@@ -47,9 +47,9 @@ class RWidget(QtWidgets.QWidget):
     def retranslateUi(self):
         _translate = QtCore.QCoreApplication.translate
         self.rTitleLabel.setText(_translate("RWidget", "R"))
-        self.rInsideLabel.setText(_translate("RWidget", "R_si:"))
-        self.rOutsideLabel.setText(_translate("RWidget", "R_se:"))
-        self.rOverallLabel.setText(_translate("RWidget", "R_ges:"))
+        self.rInsideLabel.setText(_translate("RWidget", "R<sub>si</sub>:"))
+        self.rOutsideLabel.setText(_translate("RWidget", "R<sub>se</sub>:"))
+        self.rOverallLabel.setText(_translate("RWidget", "R<sub>ges</sub>:"))
         self.rUnitLabel1.setText(_translate("RWidget", "Einheit"))
         self.rUnitLabel2.setText(_translate("RWidget", "Einheit"))
         self.rUnitLabel3.setText(_translate("RWidget", "Einheit"))

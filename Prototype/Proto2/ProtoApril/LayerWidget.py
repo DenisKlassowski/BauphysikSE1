@@ -143,7 +143,8 @@ class LayerWidget(QtWidgets.QWidget):
     #update own position and modify text
     def updatePos(self, pos):
         self.position=pos
-        self.layerTitleLabel.setText(QtCore.QCoreApplication.translate("LayerWidget", "Schicht ")+ str(pos+1))
+        self.layerTitleLabel.setText(QtCore.QCoreApplication.translate("LayerWidget", "Schicht ")+str(pos+1))
+        self.layerResLabel.setText(QtCore.QCoreApplication.translate("LayerWidget", "R")+"<sub>"+str(pos+1)+"</sub>"+":")
 
     #enable/disable delete button
     def setRemovable(self, flag):
@@ -162,30 +163,5 @@ class LayerWidget(QtWidgets.QWidget):
     #modify mode of layer
     def switchMode(self,mode):
         self.mode = mode
-        #if (mode==0):
-        #    self.removeTemp()
-        #else:
-        #    self.addTemp()
-
-    #DEPRICATED
-    #def addTemp(self):
-        #row = self.bodyLayout.rowCount()
-        #self.bodyLayout.addWidget(self.layerTempOutLabel, row,0)
-        #self.bodyLayout.addWidget(self.layerTempOutDoubleSpinBox , row,1)
-        #self.bodyLayout.addWidget(self.layerTempUnitLabel1 , row,2)
-        #self.bodyLayout.addWidget(self.layerTempInLabel, row,3)
-        #self.bodyLayout.addWidget(self.layerTempInDoubleSpinBox, row,4)
-        #self.bodyLayout.addWidget(self.layerTempUnitLabel2 , row,5)
-
-    #DEPRICATED
-    #def removeTemp(self):
-        #self.bodyLayout.removeWidget(self.layerTempOutLabel)
-        #self.bodyLayout.removeWidget(self.layerTempInLabel)
-        #self.bodyLayout.removeWidget(self.layerTempOutDoubleSpinBox)
-        #self.bodyLayout.removeWidget(self.layerTempInDoubleSpinBox)
-        #self.bodyLayout.removeWidget(self.layerTempUnitLabel1)
-        #self.bodyLayout.removeWidget(self.layerTempUnitLabel2)
-
-
 
 
