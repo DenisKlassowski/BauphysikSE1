@@ -1,5 +1,5 @@
-('C:\\Users\\salzg\\Documents\\HTW\\3. '
- 'Sem\\SE\\BauphysikSE1\\Prototype\\Proto2\\ProtoApril\\build\\mainwindow\\PYZ-00.pyz',
+('C:\\Users\\salzg\\Documents\\HTW\\3. Sem\\SE\\BauphysikSE1\\Prototype\\main '
+ 'prototype\\build\\mainwindow\\PYZ-00.pyz',
  [('os',
    'C:\\Users\\salzg\\AppData\\Local\\Programs\\Python\\Python38\\lib\\os.py',
    'PYMODULE'),
@@ -780,47 +780,47 @@
   ('stat',
    'C:\\Users\\salzg\\AppData\\Local\\Programs\\Python\\Python38\\lib\\stat.py',
    'PYMODULE'),
-  ('_py_abc',
-   'C:\\Users\\salzg\\AppData\\Local\\Programs\\Python\\Python38\\lib\\_py_abc.py',
-   'PYMODULE'),
   ('stringprep',
    'C:\\Users\\salzg\\AppData\\Local\\Programs\\Python\\Python38\\lib\\stringprep.py',
    'PYMODULE'),
+  ('_py_abc',
+   'C:\\Users\\salzg\\AppData\\Local\\Programs\\Python\\Python38\\lib\\_py_abc.py',
+   'PYMODULE'),
   ('master',
    'C:\\Users\\salzg\\Documents\\HTW\\3. '
-   'Sem\\SE\\BauphysikSE1\\Prototype\\Proto2\\ProtoApril\\master.py',
+   'Sem\\SE\\BauphysikSE1\\Prototype\\main prototype\\master.py',
    'PYMODULE'),
   ('NewTab',
    'C:\\Users\\salzg\\Documents\\HTW\\3. '
-   'Sem\\SE\\BauphysikSE1\\Prototype\\Proto2\\ProtoApril\\NewTab.py',
+   'Sem\\SE\\BauphysikSE1\\Prototype\\main prototype\\NewTab.py',
    'PYMODULE'),
   ('Tab',
    'C:\\Users\\salzg\\Documents\\HTW\\3. '
-   'Sem\\SE\\BauphysikSE1\\Prototype\\Proto2\\ProtoApril\\Tab.py',
+   'Sem\\SE\\BauphysikSE1\\Prototype\\main prototype\\Tab.py',
    'PYMODULE'),
   ('RWidget',
    'C:\\Users\\salzg\\Documents\\HTW\\3. '
-   'Sem\\SE\\BauphysikSE1\\Prototype\\Proto2\\ProtoApril\\RWidget.py',
+   'Sem\\SE\\BauphysikSE1\\Prototype\\main prototype\\RWidget.py',
    'PYMODULE'),
   ('CustomMiniWidgets',
    'C:\\Users\\salzg\\Documents\\HTW\\3. '
-   'Sem\\SE\\BauphysikSE1\\Prototype\\Proto2\\ProtoApril\\CustomMiniWidgets.py',
+   'Sem\\SE\\BauphysikSE1\\Prototype\\main prototype\\CustomMiniWidgets.py',
    'PYMODULE'),
   ('LayerDivider',
    'C:\\Users\\salzg\\Documents\\HTW\\3. '
-   'Sem\\SE\\BauphysikSE1\\Prototype\\Proto2\\ProtoApril\\LayerDivider.py',
+   'Sem\\SE\\BauphysikSE1\\Prototype\\main prototype\\LayerDivider.py',
    'PYMODULE'),
   ('LayerWidget',
    'C:\\Users\\salzg\\Documents\\HTW\\3. '
-   'Sem\\SE\\BauphysikSE1\\Prototype\\Proto2\\ProtoApril\\LayerWidget.py',
+   'Sem\\SE\\BauphysikSE1\\Prototype\\main prototype\\LayerWidget.py',
    'PYMODULE'),
   ('VisualizeWidget',
    'C:\\Users\\salzg\\Documents\\HTW\\3. '
-   'Sem\\SE\\BauphysikSE1\\Prototype\\Proto2\\ProtoApril\\VisualizeWidget.py',
+   'Sem\\SE\\BauphysikSE1\\Prototype\\main prototype\\VisualizeWidget.py',
    'PYMODULE'),
   ('TempWidget',
    'C:\\Users\\salzg\\Documents\\HTW\\3. '
-   'Sem\\SE\\BauphysikSE1\\Prototype\\Proto2\\ProtoApril\\TempWidget.py',
+   'Sem\\SE\\BauphysikSE1\\Prototype\\main prototype\\TempWidget.py',
    'PYMODULE'),
   ('PyQt5',
    'C:\\Users\\salzg\\AppData\\Local\\Programs\\Python\\Python38\\lib\\site-packages\\PyQt5\\__init__.py',

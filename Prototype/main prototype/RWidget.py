@@ -17,29 +17,34 @@ class RWidget(QtWidgets.QWidget):
         self.rInsideLabel = QtWidgets.QLabel()
         self.rOutsideLabel = QtWidgets.QLabel()
         self.rOverallLabel = QtWidgets.QLabel()
+        self.rInvertedLabel = QtWidgets.QLabel()
 
         self.rOutsideDoubleSpinBox = MyDoubleSpinBox()
         self.rInsideDoubleSpinBox = MyDoubleSpinBox()
         self.rOverallDoubleSpinBox = MyDoubleSpinBox()
+        self.rInvertedDoubleSpinBox = MyDoubleSpinBox()
 
         self.rUnitLabel1 = QtWidgets.QLabel()
         self.rUnitLabel2 = QtWidgets.QLabel()
         self.rUnitLabel3 = QtWidgets.QLabel()
+        self.rUnitLabel4 = QtWidgets.QLabel()
 
         #assemble layout
         rLayout.addWidget(self.rTitleLabel,0,0)
         rLayout.addWidget(self.rOutsideLabel,0,1)
         rLayout.addWidget(self.rInsideLabel,1,1)
         rLayout.addWidget(self.rOverallLabel, 2,1)
+        rLayout.addWidget(self.rInvertedLabel, 3,1)
 
         rLayout.addWidget(self.rOutsideDoubleSpinBox, 0,2)
         rLayout.addWidget(self.rInsideDoubleSpinBox, 1,2)
         rLayout.addWidget(self.rOverallDoubleSpinBox, 2,2)
+        rLayout.addWidget(self.rInvertedDoubleSpinBox, 3,2)
 
         rLayout.addWidget(self.rUnitLabel1,0,3)
         rLayout.addWidget(self.rUnitLabel2,1,3)
         rLayout.addWidget(self.rUnitLabel3,2,3)
-
+        rLayout.addWidget(self.rUnitLabel4,3,3)
 
         self.setLayout(rLayout)
         self.retranslateUi()
@@ -50,6 +55,8 @@ class RWidget(QtWidgets.QWidget):
         self.rInsideLabel.setText(_translate("RWidget", "R<sub>si</sub>:"))
         self.rOutsideLabel.setText(_translate("RWidget", "R<sub>se</sub>:"))
         self.rOverallLabel.setText(_translate("RWidget", "R<sub>ges</sub>:"))
+        self.rInvertedLabel.setText(_translate("RWidget", "U:"))
         self.rUnitLabel1.setText(_translate("RWidget", "Einheit"))
         self.rUnitLabel2.setText(_translate("RWidget", "Einheit"))
         self.rUnitLabel3.setText(_translate("RWidget", "Einheit"))
+        self.rUnitLabel4.setText(_translate("RWidget", "Einheit"))
