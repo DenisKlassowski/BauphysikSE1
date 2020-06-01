@@ -798,6 +798,10 @@
    'C:\\Users\\salzg\\Documents\\HTW\\3. '
    'Sem\\SE\\BauphysikSE1\\Prototype\\main prototype\\Tab.py',
    'PYMODULE'),
+  ('TabData',
+   'C:\\Users\\salzg\\Documents\\HTW\\3. '
+   'Sem\\SE\\BauphysikSE1\\Prototype\\main prototype\\TabData.py',
+   'PYMODULE'),
   ('RWidget',
    'C:\\Users\\salzg\\Documents\\HTW\\3. '
    'Sem\\SE\\BauphysikSE1\\Prototype\\main prototype\\RWidget.py',

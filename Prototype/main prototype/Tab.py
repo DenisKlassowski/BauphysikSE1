@@ -5,14 +5,16 @@ from VisualizeWidget import VisualizeWidget
 from LayerWidget import LayerWidget
 from LayerDivider import LayerDivider
 from RWidget import RWidget
+from TabData import TabData
 
 
 class Tab(QtWidgets.QWidget):
     def __init__(self,mode):
         QtWidgets.QWidget.__init__(self)
-
         self.mode=mode
         self.layerCount = 0
+        self.data = TabData.__init__(self)
+        self.data.mode=mode
 
         # overall layout of tab
         tabLayout = QtWidgets.QVBoxLayout()
