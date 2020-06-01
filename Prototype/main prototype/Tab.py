@@ -13,8 +13,6 @@ class Tab(QtWidgets.QWidget):
         QtWidgets.QWidget.__init__(self)
         self.mode=mode
         self.layerCount = 0
-        self.data = TabData.__init__(self)
-        self.data.mode=mode
 
         # overall layout of tab
         tabLayout = QtWidgets.QVBoxLayout()
