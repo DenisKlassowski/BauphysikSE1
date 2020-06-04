@@ -9,15 +9,47 @@ from TabData import TabData
 
 
 class Tab(QtWidgets.QWidget):
-    def __init__(self,mode):
+    def __init__(self,mode,name,data=None):
         QtWidgets.QWidget.__init__(self)
         self.mode=mode
         self.layerCount = 0
+        self.tabWidget=self.parent()
+        self.rWidget=RWidget()
+        self.tempWidget=TempWidget()
+        self.data = None
+
+        #event handling rWidget
+        self.rWidget.rInsideDoubleSpinBox.valueChanged.connect(self.rsiValueChanged)
+        self.rWidget.rOutsideDoubleSpinBox.valueChanged.connect(self.rseValueChanged)
+        self.rWidget.rOverallDoubleSpinBox.valueChanged.connect(self.roverallValueChanged)
+        self.rWidget.rInvertedDoubleSpinBox.valueChanged.connect(self.uValueChanged)
+
+        #event handling tempWidget
+        self.tempWidget.tempInsideDoubleSpinBox.valueChanged.connect(self.tinValueChanged)
+        self.tempWidget.tempOutsideDoubleSpinBox.valueChanged.connect(self.toutValueChanged)
+
+        #flag to check whether calculations should happen or not. used for loading/startup process
+        self.calculateFlag = 1
+
+        #data handling
+        if data is None:
+            self.data=TabData(self.mode,name)
+        else:
+            self.data=data
+
+        self.fillEnv()
 
         # overall layout of tab
-        tabLayout = QtWidgets.QVBoxLayout()
+        tabLayout = QtWidgets.QHBoxLayout()
         tabLayout.setContentsMargins(0,0,0,0)
         tabLayout.setSpacing(10)
+
+        #left side of tab
+        lTab=QtWidgets.QWidget()
+        lTabLayout = QtWidgets.QVBoxLayout()
+        lTabLayout.setContentsMargins(0,0,0,0)
+        lTabLayout.setSpacing(10)
+        lTab.setLayout(lTabLayout)
 
         #upper layout of tab
         upperTab = QtWidgets.QWidget()
@@ -33,9 +65,12 @@ class Tab(QtWidgets.QWidget):
         self.environmentLayout.setSpacing(20)
         environmentWidget.setLayout(self.environmentLayout)
 
+        self.environmentLayout.addRow(self.rWidget)
+        self.environmentLayout.addRow(self.tempWidget)
+
         self.scrollAreaEnvironment.setWidget(environmentWidget)
         self.scrollAreaEnvironment.setWidgetResizable(True)
-        self.scrollAreaEnvironment.setMaximumWidth(500)
+        self.scrollAreaEnvironment.setMaximumWidth(400)
 
         tabUpperLayout.addWidget(self.scrollAreaEnvironment)
 
@@ -48,6 +83,7 @@ class Tab(QtWidgets.QWidget):
 
         #calculate button (to be discontinued)
         self.buttonCalculate = QtWidgets.QPushButton()
+        self.buttonCalculate.clicked.connect(self.calculate)
 
         #lower layout of tab
         self.scrollAreaLayers = QtWidgets.QScrollArea()
@@ -56,7 +92,10 @@ class Tab(QtWidgets.QWidget):
         self.layerLayout.setSpacing(20)
 
         self.addEnvLayerDividers()
-        self.addLayer(0)
+        if self.data==None or self.data.layers == []:
+            self.addLayer(0)
+        else:
+            self.fillLayers()
 
         layersWidget.setLayout(self.layerLayout)
 
@@ -65,10 +104,12 @@ class Tab(QtWidgets.QWidget):
 
 
         #merge into general tab
-        tabLayout.addWidget(upperTab)
-        tabLayout.addWidget(self.buttonCalculate)
+        lTabLayout.addWidget(upperTab)
+        lTabLayout.addWidget(self.buttonCalculate)
 
-        tabLayout.addWidget(self.scrollAreaLayers)
+        lTabLayout.addWidget(self.scrollAreaLayers)
+
+        tabLayout.addWidget(lTab)
 
         self.setLayout(tabLayout)
         self.retranslateUi()
@@ -86,37 +127,16 @@ class Tab(QtWidgets.QWidget):
             self.addTempWidget()
 
     def addRWidget(self):
-        if hasattr(self, 'rWidget'):
-            pass
-        else:
-            self.rWidget=RWidget()
-            self.environmentLayout.addRow(self.rWidget)
+        self.rWidget.show()
 
     def removeRWidget(self):
-        try:
-            self.environmentLayout.removeRow(self.rWidget)
-        except AttributeError:
-            pass
-        except RuntimeError:
-            if hasattr(self, 'rWidget'):
-                print('RuntimeError: rWidget was removed from layout, but not from object.')
+        self.rWidget.hide()
 
     def addTempWidget(self):
-        if hasattr(self, 'tempWidget'):
-            pass
-        else:
-            self.tempWidget = TempWidget()
-            self.environmentLayout.addRow(self.tempWidget)
+        self.tempWidget.show()
 
     def removeTempWidget(self):
-        try:
-            self.environmentLayout.removeRow(self.tempWidget)
-            del self.tempWidget
-        except AttributeError:
-            pass
-        except RuntimeError:
-            if hasattr(self, 'tempWidget'):
-                print('RuntimeError: tempWidget was removed from layout, but not from object.')
+        self.tempWidget.hide()
 
     def addEnvLayerDividers(self):
         self.layerLayout.insertRow(0,LayerDivider(self.mode))
@@ -127,21 +147,24 @@ class Tab(QtWidgets.QWidget):
         if(self.layerCount==1):
             self.layerLayout.itemAt(1,2).widget().setRemovable(True)
 
+        l=LayerWidget(position,self.mode)
         if(self.layerCount==0):
             #if first layer
-            self.layerLayout.insertRow(1,LayerWidget(position,self.mode))
+            self.layerLayout.insertRow(1,l)
             self.layerLayout.itemAt(1,2).widget().setRemovable(False)
         else:
             #add seperator
             self.layerLayout.insertRow(position*2, LayerDivider(self.mode))
             #add layer
-            self.layerLayout.insertRow((position*2)+1, LayerWidget(position,self.mode))
+            self.layerLayout.insertRow((position*2)+1, l)
 
         self.layerCount+=1
 
         self.updatePositionLayers(position)
+        self.data.insert_layer(l.data,position)
 
     def deleteLayer(self, position):
+        self.data.remove_layer(position)
         if (position==0):
             self.layerLayout.removeRow(1)
             self.layerLayout.removeRow(1)
@@ -150,6 +173,8 @@ class Tab(QtWidgets.QWidget):
             self.layerLayout.removeRow((position*2))
         self.layerCount-=1
         self.updatePositionLayers(position)
+
+        #disable delete buttton for solitary layer
         if(self.layerCount==1):
             self.layerLayout.itemAt(1,2).widget().setRemovable(False)
 
@@ -165,6 +190,7 @@ class Tab(QtWidgets.QWidget):
 
     def switchToTemp(self):
         self.mode=1
+        self.data.mode=1
         self.setEnvironment()
         for i in range(self.layerLayout.count()):
             self.layerLayout.itemAt(i,2).widget().switchMode(self.mode)
@@ -176,6 +202,7 @@ class Tab(QtWidgets.QWidget):
 
     def switchToU(self):
         self.mode=0
+        self.data.mode=0
         self.setEnvironment()
         for i in range(self.layerLayout.count()):
             self.layerLayout.itemAt(i,2).widget().switchMode(self.mode)
@@ -183,4 +210,69 @@ class Tab(QtWidgets.QWidget):
         self.scrollAreaLayers.hide()
         self.scrollAreaLayers.show()
 
+    def getRWidgetData(self):
+        self.data.rsi=self.rWidget.rInsideDoubleSpinBox.value()
+        self.data.rse=self.rWidget.rOutsideDoubleSpinBox.value()
+        self.data.rges=self.rWidget.rOverallDoubleSpinBox.value()
+        self.data.u=self.rWidget.rInvertedDoubleSpinBox.value()
 
+    def getTempData(self):
+        self.data.tin=self.tempWidget.tempInsideDoubleSpinBox.value()
+        self.data.tout=self.tempWidget.tempOutsideDoubleSpinBox.value()
+
+    def generateData(self,name):
+        self.data=TabData(self.mode,name)
+        #self.getRWidgetData()
+        #self.getTempData()
+
+    def fillEnv(self):
+        self.calculateFlag=0
+        self.mode=self.data.mode
+        self.setEnvironment()
+        self.rWidget.setData(self.data.rsi,self.data.rse,self.data.rges,self.data.u)
+        self.tempWidget.setData(self.data.tin,self.data.tout)
+        self.calculateFlag=1
+
+    def fillLayers(self):
+        #to be continued
+        pass
+
+    def fillLayerDividers(self):
+        if self.mode == 1:
+            for i in range(self.layerCount):
+                if i != self.layerCount-1:
+                    self.layerLayout.itemAt(i*2,2).widget().tempLabel.setText(str(round(self.layerLayout.itemAt(i*2+1,2).widget().data.t_outside,2))+" °C")
+                    print(str(i)+" Layer: " + str(self.layerLayout.itemAt(i*2+1,2).widget().position))
+                    print(str(self.layerLayout.itemAt(i*2+1,2).widget().data.t_outside)+ " soll:" + str(self.data.layers[i].t_outside))
+                    print(str(self.layerLayout.itemAt(i*2+1,2).widget().data.t_inside)+" soll:" + str(self.data.layers[i].t_inside))
+                else:
+                    self.layerLayout.itemAt(i*2,2).widget().tempLabel.setText(str(round(self.layerLayout.itemAt(i*2+1,2).widget().data.t_outside,2))+" °C")
+                    self.layerLayout.itemAt(i*2+2,2).widget().tempLabel.setText(str(round(self.layerLayout.itemAt(i*2+1,2).widget().data.t_inside,2))+" °C")
+
+    def calculate(self):
+        if self.calculateFlag==1:
+            self.calculateFlag=0
+            self.data.calculate()
+            self.rWidget.setData(self.data.rsi,self.data.rse,self.data.rges,self.data.u)
+            self.tempWidget.setData(self.data.tin,self.data.tout)
+            self.fillLayerDividers()
+            self.calculateFlag=1
+
+    #value changes
+    def rsiValueChanged(self):
+        self.data.rsi=self.rWidget.rInsideDoubleSpinBox.value()
+
+    def rseValueChanged(self):
+        self.data.rse=self.rWidget.rOutsideDoubleSpinBox.value()
+
+    def roverallValueChanged(self):
+        self.data.rges=self.rWidget.rOverallDoubleSpinBox.value()
+
+    def uValueChanged(self):
+        self.data.u=self.rWidget.rInvertedDoubleSpinBox.value()
+
+    def tinValueChanged(self):
+        self.data.tin=self.tempWidget.tempInsideDoubleSpinBox.value()
+
+    def toutValueChanged(self):
+        self.data.tout=self.tempWidget.tempOutsideDoubleSpinBox.value()

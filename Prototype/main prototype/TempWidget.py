@@ -22,16 +22,16 @@ class TempWidget(QtWidgets.QWidget):
         self.tempOutsideDoubleSpinBox.setMaximum(1000)
         self.tempOutsideDoubleSpinBox.setMinimum(-273.15)
         self.tempOutsideDoubleSpinBox.setDecimals(2)
-        self.tempOutsideDoubleSpinBox.setMaximumWidth(200)
-        self.tempOutsideDoubleSpinBox.setMinimumWidth(200)
+        self.tempOutsideDoubleSpinBox.setMaximumWidth(92)
+        self.tempOutsideDoubleSpinBox.setMinimumWidth(92)
 
         #hard coded solution for spinbox size, could be done better?
         self.tempInsideDoubleSpinBox = MyDoubleSpinBox()
         self.tempInsideDoubleSpinBox.setMaximum(1000)
         self.tempInsideDoubleSpinBox.setMinimum(-273.15)
         self.tempInsideDoubleSpinBox.setDecimals(2)
-        self.tempInsideDoubleSpinBox.setMaximumWidth(200)
-        self.tempInsideDoubleSpinBox.setMinimumWidth(200)
+        self.tempInsideDoubleSpinBox.setMaximumWidth(92)
+        self.tempInsideDoubleSpinBox.setMinimumWidth(92)
 
         self.tempCelsiusLabel1 = QtWidgets.QLabel()
         self.tempCelsiusLabel2 = QtWidgets.QLabel()
@@ -53,8 +53,13 @@ class TempWidget(QtWidgets.QWidget):
 
     def retranslateUi(self):
         _translate = QtCore.QCoreApplication.translate
-        self.tempTitleLabel.setText(_translate("TempWidget", "Temperatur"))
+        self.tempTitleLabel.setText(_translate("TempWidget", "Temp"))
         self.tempInsideLabel.setText(_translate("TempWidget", "innen:"))
         self.tempOutsideLabel.setText(_translate("TempWidget", "außen:"))
         self.tempCelsiusLabel1.setText(_translate("TempWidget", "°C"))
         self.tempCelsiusLabel2.setText(_translate("TempWidget", "°C"))
+
+    def setData(self, tin, tout):
+        self.tempInsideDoubleSpinBox.setValue(tin)
+        self.tempOutsideDoubleSpinBox.setValue(tout)
+

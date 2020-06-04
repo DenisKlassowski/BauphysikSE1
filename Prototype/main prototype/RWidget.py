@@ -20,9 +20,15 @@ class RWidget(QtWidgets.QWidget):
         self.rInvertedLabel = QtWidgets.QLabel()
 
         self.rOutsideDoubleSpinBox = MyDoubleSpinBox()
+        self.rOutsideDoubleSpinBox.setDecimals(4)
         self.rInsideDoubleSpinBox = MyDoubleSpinBox()
+        self.rInsideDoubleSpinBox.setDecimals(4)
         self.rOverallDoubleSpinBox = MyDoubleSpinBox()
+        self.rOverallDoubleSpinBox.setDecimals(4)
+        self.rOverallDoubleSpinBox.setEditable(0)
         self.rInvertedDoubleSpinBox = MyDoubleSpinBox()
+        self.rInvertedDoubleSpinBox.setDecimals(4)
+        self.rInvertedDoubleSpinBox.setEditable(0)
 
         self.rUnitLabel1 = QtWidgets.QLabel()
         self.rUnitLabel2 = QtWidgets.QLabel()
@@ -56,7 +62,13 @@ class RWidget(QtWidgets.QWidget):
         self.rOutsideLabel.setText(_translate("RWidget", "R<sub>se</sub>:"))
         self.rOverallLabel.setText(_translate("RWidget", "R<sub>ges</sub>:"))
         self.rInvertedLabel.setText(_translate("RWidget", "U:"))
-        self.rUnitLabel1.setText(_translate("RWidget", "Einheit"))
-        self.rUnitLabel2.setText(_translate("RWidget", "Einheit"))
-        self.rUnitLabel3.setText(_translate("RWidget", "Einheit"))
-        self.rUnitLabel4.setText(_translate("RWidget", "Einheit"))
+        self.rUnitLabel1.setText(_translate("RWidget", "m<sup>2</sup>KW<sup>-1</sub>"))
+        self.rUnitLabel2.setText(_translate("RWidget", "m<sup>2</sup>KW<sup>-1</sub>"))
+        self.rUnitLabel3.setText(_translate("RWidget", "m<sup>2</sup>KW<sup>-1</sub>"))
+        self.rUnitLabel4.setText(_translate("RWidget", "Wm<sup>-2</sup>K<sup>-1</sub>"))
+
+    def setData(self, rsi, rse, roverall, rinverted):
+        self.rInsideDoubleSpinBox.setValue(rsi)
+        self.rOutsideDoubleSpinBox.setValue(rse)
+        self.rOverallDoubleSpinBox.setValue(roverall)
+        self.rInvertedDoubleSpinBox.setValue(rinverted)

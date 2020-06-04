@@ -53,7 +53,7 @@ class MainWindow(QtWidgets.QMainWindow):
         bar.addAction(menuLanguage.menuAction())
         bar.addAction(self.menuModus.menuAction())
 
-        bar.setMaximumHeight(20)
+        bar.setMaximumHeight(30)
 
         #mainLayout.addWidget(self.menuBar)
 
@@ -62,7 +62,7 @@ class MainWindow(QtWidgets.QMainWindow):
         self.tabWidget.setTabsClosable(True)
         self.tabWidget.setMovable(False)
         self.tabWidget.setMinimumHeight(600)
-        self.tabWidget.setMinimumWidth(1000)
+        self.tabWidget.setMinimumWidth(800)
 
         self.newTab = NewTab()
         self.tabWidget.addTab(self.newTab, "+")
@@ -86,8 +86,8 @@ class MainWindow(QtWidgets.QMainWindow):
             self.menuModus.menuAction().setEnabled(True)
 
     def addNewTab(self, modus):
-        tab = Tab (modus)
-        self.tabWidget.insertTab(self.tabWidget.count()-1,tab, "untitled")
+        tab = Tab (modus, QtCore.QCoreApplication.translate("MainWindow","Neuer Tab"))
+        self.tabWidget.insertTab(self.tabWidget.count()-1,tab, tab.data.name)
         self.tabWidget.setCurrentIndex(self.tabWidget.count()-2)
 
     def closeTab(self,index):

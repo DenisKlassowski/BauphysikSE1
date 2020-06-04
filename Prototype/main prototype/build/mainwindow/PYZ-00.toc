@@ -802,6 +802,10 @@
    'C:\\Users\\salzg\\Documents\\HTW\\3. '
    'Sem\\SE\\BauphysikSE1\\Prototype\\main prototype\\TabData.py',
    'PYMODULE'),
+  ('Calculation',
+   'C:\\Users\\salzg\\Documents\\HTW\\3. '
+   'Sem\\SE\\BauphysikSE1\\Prototype\\main prototype\\Calculation.py',
+   'PYMODULE'),
   ('RWidget',
    'C:\\Users\\salzg\\Documents\\HTW\\3. '
    'Sem\\SE\\BauphysikSE1\\Prototype\\main prototype\\RWidget.py',
@@ -817,6 +821,10 @@
   ('LayerWidget',
    'C:\\Users\\salzg\\Documents\\HTW\\3. '
    'Sem\\SE\\BauphysikSE1\\Prototype\\main prototype\\LayerWidget.py',
+   'PYMODULE'),
+  ('LayerData',
+   'C:\\Users\\salzg\\Documents\\HTW\\3. '
+   'Sem\\SE\\BauphysikSE1\\Prototype\\main prototype\\LayerData.py',
    'PYMODULE'),
   ('VisualizeWidget',
    'C:\\Users\\salzg\\Documents\\HTW\\3. '

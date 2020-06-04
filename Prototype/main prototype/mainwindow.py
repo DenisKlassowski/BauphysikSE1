@@ -6,6 +6,9 @@ from master import MainWindow
 
 def main():
     app=QApplication(sys.argv)
+    f = app.font()
+    f.setPointSize(12)
+    app.setFont(f)
     window = MainWindow()
     window.setWindowTitle("Bauphysik")
 

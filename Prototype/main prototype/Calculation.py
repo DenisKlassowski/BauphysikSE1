@@ -3,18 +3,21 @@ def layer_calc(l):
 
 
 def tab_calc(t):
-    if t.mode == 1:  # u calculation
+    if t.mode == 0:  # u calculation
         full_u_calc(t)
-    elif t.mode == 2:  # temp calculation
-        if t.u == 0.0:
-            full_u_calc(t)
+    elif t.mode == 1:  # temp calculation
+        #if t.u == 0.0:
+            #full_u_calc(t)
+        full_u_calc(t)
 
         j = t.u * (t.tin - t.tout)
         rho_inside = t.rsi * j
+        rho_outside = t.rse * j
 
-        for i in t.layers.length:
+        for i in range(len(t.layers)):
             t.layers[i].rho = t.layers[i].r * j
 
+            """
             if t.tout < t.tin:
                 if i == 0:
                     t.layers[i].t_inside = t.tin - rho_inside
@@ -22,7 +25,7 @@ def tab_calc(t):
                     t.layers[i].t_inside = t.layers[i - 1].t_outside
 
                 t.layers[i].t_outside = t.layers[i].t_inside - t.layers[i].rho
-            elif t.tin > t.tout:
+            elif t.tout > t.tin:
                 if i == 0:
                     t.layers[i].t_inside = t.tin + rho_inside
                 else:
@@ -32,6 +35,14 @@ def tab_calc(t):
             else:
                 t.layers[i].t_inside = t.tout
                 t.layers[i].t_outside = t.tout
+            """
+            if i == 0:
+                t.layers[i].t_outside = t.tout + rho_outside
+            else:
+                t.layers[i].t_outside = t.layers[i - 1].t_inside
+
+            t.layers[i].t_inside = t.layers[i].t_outside + t.layers[i].rho
+
     # elif t.mode == 3:  # ....
 
 
