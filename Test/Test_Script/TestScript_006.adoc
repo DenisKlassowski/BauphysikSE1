@@ -32,3 +32,5 @@ Für diesen Test sind keine expliziten Testdaten notwendig
 == Test Log
 
 28.04.2020 - Prototyp2 : Der Test wurde erfolgreich abgeschlossen
+
+20.05.2020 - Prototyp 3: Test wurde am Heim-PC erfolgreich durchgeführt.

@@ -1,0 +1,57 @@
+|===
+| Test Script 017 |
+| Temperaturverlauf 2 Schichten R_i bekannt | Date: <30/05/2020>
+|===
+
+== Test spezification
+
+|===
+| Test Name | Temperaturverlauf 2 Schichten
+| Use Case Tested | Reihenberechnung durchführen
+| Test Description | Es wird ein Temperaturverlaufsberechnung für U über 2 Schichten durchgeführt und geprüft, ob die Ergebnisse den Erwartungen entsprechen. Dabei ist für jede Schicht der Wärmedurchlasswiderstand R_i bereits bekannt.
+| Pre-conditions | Die Berechnungssoftware ist auf einem handelsüblichen PC/Laptop gestartet und einsatzbereit.
+
+Es ist die Tempereraturverlaufsberechnung ausgewählt und alle Felder unbefüllt.
+| Post Conditions | Die Temperaturverlaufsberechnung wurde durchgeführt und die korrekten Ergebnisse werden angezeigt.
+| Notes | korrekte Ergebnisse: R_ges = 3,11, R_T= 3,28 , U = 0,3049
+
+Temperatur zwischen Schicht 1 und Schicht 2: 16,8 °C
+| Result | Pass
+|===
+
+== Test Steps
+
+Für alle zu tätigenden Eingaben sind in den Testdaten weiter unten die festgelegten Werte zu nutzen. Im Folgenden wird darauf verzichtet, diesen Sachverhalt für jede Eingabe explizit zu erwähnen.
+
+Die korrekten Ergebnisse stehen in den Notes der Spezifikation.
+
+|===
+|    | Test Step | Expected Test Result
+| 1. | im oberen Teil des Fensters werden R_si und R_se eingegeben | Die Felder für R_si und R_se sind befüllt
+| 2. | im oberen Teil des Fensters werden die Innen- und Aussentemperatur eingegeben | Die Felder für Temperatur innen und aussen sind befüllt
+| 3. | Wärmedurchlasswiderstand für Schicht 1 eingeben| Felde Wärmedurchlasswiderstand von Schicht 1 ist befüllt
+| 4. | Hinzufügen einer Schicht über den "+"-Button in Schicht 1 | Es steht eine zweite Schicht zur Verfügung
+| 5. | Wärmedurchlasswiderstand für Schicht 2 eingeben| Felde Wärmedurchlasswiderstand von Schicht 2 ist befüllt
+| 6. | "Berechnen"-Button betätigen und damit Berechnung auslösen | Keine Fehler. Das System zeigt die korrekten Ergebnisse an
+|===
+
+== Test Data Table
+
+Die Testdaten basieren auf einer Aufgabe aus dem Bereich Bauphysik und wurden für Testzwecke von der Kundin an uns übergeben.
+
+Die Werte für den Wärmeübergangswiderstand an der Innenseite sowie an der Außenseite.
+
+R_si = 0,13
+
+R_se = 0,04
+
+Die Werte für die Temperaturen an der Innenseite, sowie der Außenseite der Wand:
+
+Innentemperatur: 20,0 °C
+Aussentemperatur: -7,5 °C
+
+|===
+|           | Wärmedurchlasswiderstand  λ
+| Schicht 1 | 0,25   
+| Schicht 2 | 2,86 
+|===

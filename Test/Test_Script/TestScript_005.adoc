@@ -31,3 +31,5 @@ Für diesen Test sind keine Testdaten notwendig.
 18.04.2020 - Prototyp 1: Test wurde am Heim-PC durchgeführt mit einer Beanstandung. Alle Beschriftungen bis auf den Auswahlreiter für die Sprache ("Language") waren auf deutsch.
 
 28.04.2020 - Prototyp 2: Test wurde am Heim-PC erfolgreich durchgeführt.
+
+20.05.2020 - Prototyp 3: Test wurde am Heim-PC erfolgreich durchgeführt.

@@ -29,6 +29,11 @@ manuell
 | link:Test_Script/TestScript_013.adoc[013] | Reihenberechnung 2 Schichten R_i bekannt V2 | manuell
 | link:Test_Script/TestScript_014.adoc[014] | Reihenberechnung 2 Schichten | manuell
 | link:Test_Script/TestScript_015.adoc[015] | Reihenberechnung 2 Schichten V2 | manuell
+| link:Test_Script/TestScript_016.adoc[016] | Temperaturverlauf 3 Schichten | manuell
+| link:Test_Script/TestScript_017.adoc[017] | Temperaturverlauf 2 Schichten R_i bekannt | manuell
+| link:Test_Script/TestScript_018.adoc[018] | Temperaturverlauf 2 Schichten R_i bekannt V2 | manuell
+| link:Test_Script/TestScript_019.adoc[019] | Temperaturverlauf 2 Schichten R_i bekannt V3 | manuell
+| link:Test_Script/TestScript_020.adoc[020] | Temperaturverlauf 4 Schichten | manuell
 |===
 
 == Testergebnisse
@@ -65,6 +70,14 @@ Es folgt eine Übersicht über die in der jeweiligen Testphase am jeweiligen Pro
 === Prototyp 3
 
 |===
-| *Datum* | *Version* | *Testscript* | *Ergebnis* | *Kommentar*
+| *Datum* | *Version* | *Testscript* | *Ergebnis* | *Verantwortlich* |*Kommentar*
+| 20.05.2020 |  0.3   | 001 | bestanden | CL |am Heim-PC durchgeführt
+| 20.05.2020 |  0.3   | 002 | bestanden | CL |am Heim-PC durchgeführt
+| 20.05.2020 |  0.3   | 003 | bestanden | CL |am Heim-PC durchgeführt
+| 20.05.2020 |  0.3   | 004 | bestanden | CL |am Heim-PC durchgeführt
+| 20.05.2020 |  0.3   | 005 | bestanden | CL |am Heim-PC durchgeführt
+| 20.05.2020 |  0.3   | 006 | bestanden | CL |am Heim-PC durchgeführt
+| 20.05.2020 |  0.3   | 007 | bestanden | CL |am Heim-PC durchgeführt
+| 20.05.2020 |  0.3   | 008 | bestanden | CL |am Heim-PC durchgeführt
 |   |   |   |   |
 |===
