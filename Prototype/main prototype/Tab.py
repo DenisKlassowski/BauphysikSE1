@@ -31,14 +31,6 @@ class Tab(QtWidgets.QWidget):
         #flag to check whether calculations should happen or not. used for loading/startup process
         self.calculateFlag = 1
 
-        #data handling
-        if data is None:
-            self.data=TabData(self.mode,name)
-        else:
-            self.data=data
-
-        self.fillEnv()
-
         # overall layout of tab
         tabLayout = QtWidgets.QHBoxLayout()
         tabLayout.setContentsMargins(0,0,0,0)
@@ -53,6 +45,7 @@ class Tab(QtWidgets.QWidget):
 
         #upper layout of tab
         upperTab = QtWidgets.QWidget()
+        upperTab.setMaximumHeight(350)
         tabUpperLayout = QtWidgets.QHBoxLayout()
         tabUpperLayout.setContentsMargins(0,0,0,0)
         tabUpperLayout.setSpacing(10)
@@ -70,16 +63,15 @@ class Tab(QtWidgets.QWidget):
 
         self.scrollAreaEnvironment.setWidget(environmentWidget)
         self.scrollAreaEnvironment.setWidgetResizable(True)
+        self.scrollAreaEnvironment.setMinimumWidth(400)
         self.scrollAreaEnvironment.setMaximumWidth(400)
 
         tabUpperLayout.addWidget(self.scrollAreaEnvironment)
 
-        self.setEnvironment()
-
-
         #visualization area (WIP)
         self.visualizeWidget = VisualizeWidget()
         tabUpperLayout.addWidget(self.visualizeWidget)
+
 
         #calculate button (to be discontinued)
         self.buttonCalculate = QtWidgets.QPushButton()
@@ -90,6 +82,14 @@ class Tab(QtWidgets.QWidget):
         layersWidget = QtWidgets.QWidget()
         self.layerLayout = QtWidgets.QFormLayout()
         self.layerLayout.setSpacing(20)
+
+        #data handling
+        if data is None:
+            self.data=TabData(self.mode,name)
+        else:
+            self.data=data
+
+        self.fillEnv()
 
         self.addEnvLayerDividers()
         if self.data==None or self.data.layers == []:
@@ -125,6 +125,7 @@ class Tab(QtWidgets.QWidget):
         else:
             self.addRWidget()
             self.addTempWidget()
+        self.visualizeWidget.switchMode(self.mode)
 
     def addRWidget(self):
         self.rWidget.show()
@@ -229,8 +230,8 @@ class Tab(QtWidgets.QWidget):
         self.calculateFlag=0
         self.mode=self.data.mode
         self.setEnvironment()
-        self.rWidget.setData(self.data.rsi,self.data.rse,self.data.rges,self.data.u)
-        self.tempWidget.setData(self.data.tin,self.data.tout)
+        self.rWidget.setData(self.data.rleft,self.data.rright,self.data.rsum,self.data.rt,self.data.u)
+        self.tempWidget.setData(self.data.tleft,self.data.tright)
         self.calculateFlag=1
 
     def fillLayers(self):
@@ -241,38 +242,39 @@ class Tab(QtWidgets.QWidget):
         if self.mode == 1:
             for i in range(self.layerCount):
                 if i != self.layerCount-1:
-                    self.layerLayout.itemAt(i*2,2).widget().tempLabel.setText(str(round(self.layerLayout.itemAt(i*2+1,2).widget().data.t_outside,2))+" °C")
-                    print(str(i)+" Layer: " + str(self.layerLayout.itemAt(i*2+1,2).widget().position))
-                    print(str(self.layerLayout.itemAt(i*2+1,2).widget().data.t_outside)+ " soll:" + str(self.data.layers[i].t_outside))
-                    print(str(self.layerLayout.itemAt(i*2+1,2).widget().data.t_inside)+" soll:" + str(self.data.layers[i].t_inside))
+                    self.layerLayout.itemAt(i*2,2).widget().tempLabel.setText(str(round(self.layerLayout.itemAt(i*2+1,2).widget().data.t_left,2))+" °C")
+                    #print(str(i)+" Layer: " + str(self.layerLayout.itemAt(i*2+1,2).widget().position))
+                    #print(str(self.layerLayout.itemAt(i*2+1,2).widget().data.t_left)+ " soll:" + str(self.data.layers[i].t_left))
+                    #print(str(self.layerLayout.itemAt(i*2+1,2).widget().data.t_right)+" soll:" + str(self.data.layers[i].t_right))
                 else:
-                    self.layerLayout.itemAt(i*2,2).widget().tempLabel.setText(str(round(self.layerLayout.itemAt(i*2+1,2).widget().data.t_outside,2))+" °C")
-                    self.layerLayout.itemAt(i*2+2,2).widget().tempLabel.setText(str(round(self.layerLayout.itemAt(i*2+1,2).widget().data.t_inside,2))+" °C")
+                    self.layerLayout.itemAt(i*2,2).widget().tempLabel.setText(str(round(self.layerLayout.itemAt(i*2+1,2).widget().data.t_left,2))+" °C")
+                    self.layerLayout.itemAt(i*2+2,2).widget().tempLabel.setText(str(round(self.layerLayout.itemAt(i*2+1,2).widget().data.t_right,2))+" °C")
 
     def calculate(self):
         if self.calculateFlag==1:
             self.calculateFlag=0
             self.data.calculate()
-            self.rWidget.setData(self.data.rsi,self.data.rse,self.data.rges,self.data.u)
-            self.tempWidget.setData(self.data.tin,self.data.tout)
+            self.rWidget.setData(self.data.rleft,self.data.rright,self.data.rsum,self.data.rt,self.data.u)
+            self.tempWidget.setData(self.data.tleft,self.data.tright)
             self.fillLayerDividers()
+            self.visualizeWidget.updateGraph(self.data)
             self.calculateFlag=1
 
     #value changes
     def rsiValueChanged(self):
-        self.data.rsi=self.rWidget.rInsideDoubleSpinBox.value()
+        self.data.rleft=self.rWidget.rInsideDoubleSpinBox.value()
 
     def rseValueChanged(self):
-        self.data.rse=self.rWidget.rOutsideDoubleSpinBox.value()
+        self.data.rright=self.rWidget.rOutsideDoubleSpinBox.value()
 
     def roverallValueChanged(self):
-        self.data.rges=self.rWidget.rOverallDoubleSpinBox.value()
+        self.data.rsum=self.rWidget.rOverallDoubleSpinBox.value()
 
     def uValueChanged(self):
         self.data.u=self.rWidget.rInvertedDoubleSpinBox.value()
 
     def tinValueChanged(self):
-        self.data.tin=self.tempWidget.tempInsideDoubleSpinBox.value()
+        self.data.tleft=self.tempWidget.tempInsideDoubleSpinBox.value()
 
     def toutValueChanged(self):
-        self.data.tout=self.tempWidget.tempOutsideDoubleSpinBox.value()
+        self.data.tright=self.tempWidget.tempOutsideDoubleSpinBox.value()

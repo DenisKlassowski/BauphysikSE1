@@ -11,8 +11,8 @@ def tab_calc(t):
         full_u_calc(t)
 
         j = t.u * (t.tright - t.tleft)
-        rho_inside = t.rright * j
-        rho_outside = t.rleft * j
+        rho_right = t.rright * j
+        rho_left = t.rleft * j
 
         for i in range(len(t.layers)):
             t.layers[i].rho = t.layers[i].r * j
@@ -37,11 +37,11 @@ def tab_calc(t):
                 t.layers[i].t_outside = t.tleft
             """
             if i == 0:
-                t.layers[i].t_outside = t.tleft + rho_outside
+                t.layers[i].t_left = t.tleft + rho_left
             else:
-                t.layers[i].t_outside = t.layers[i - 1].t_inside
+                t.layers[i].t_left = t.layers[i - 1].t_right
 
-            t.layers[i].t_inside = t.layers[i].t_outside + t.layers[i].rho
+            t.layers[i].t_right = t.layers[i].t_left + t.layers[i].rho
 
     # elif t.mode == 3:  # ....
 
