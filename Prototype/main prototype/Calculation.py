@@ -6,38 +6,38 @@ def tab_calc(t):
     if t.mode == 0:  # u calculation
         full_u_calc(t)
     elif t.mode == 1:  # temp calculation
-        #if t.u == 0.0:
-            #full_u_calc(t)
+        # if t.u == 0.0:
+        # full_u_calc(t)
         full_u_calc(t)
 
-        j = t.u * (t.tin - t.tout)
-        rho_inside = t.rsi * j
-        rho_outside = t.rse * j
+        j = t.u * (t.tright - t.tleft)
+        rho_inside = t.rright * j
+        rho_outside = t.rleft * j
 
         for i in range(len(t.layers)):
             t.layers[i].rho = t.layers[i].r * j
 
             """
-            if t.tout < t.tin:
+            if t.tleft < t.tright:
                 if i == 0:
-                    t.layers[i].t_inside = t.tin - rho_inside
+                    t.layers[i].t_inside = t.tright - rho_inside
                 else:
                     t.layers[i].t_inside = t.layers[i - 1].t_outside
 
                 t.layers[i].t_outside = t.layers[i].t_inside - t.layers[i].rho
-            elif t.tout > t.tin:
+            elif t.tleft > t.tright:
                 if i == 0:
-                    t.layers[i].t_inside = t.tin + rho_inside
+                    t.layers[i].t_inside = t.tright + rho_inside
                 else:
                     t.layers[i].t_inside = t.layers[i - 1].t_outside
 
                 t.layers[i].t_outside = t.layers[i].t_inside + t.layers[i].rho
             else:
-                t.layers[i].t_inside = t.tout
-                t.layers[i].t_outside = t.tout
+                t.layers[i].t_inside = t.tleft
+                t.layers[i].t_outside = t.tleft
             """
             if i == 0:
-                t.layers[i].t_outside = t.tout + rho_outside
+                t.layers[i].t_outside = t.tleft + rho_outside
             else:
                 t.layers[i].t_outside = t.layers[i - 1].t_inside
 
@@ -48,15 +48,15 @@ def tab_calc(t):
 
 def full_u_calc(t):
     r = calc_all_r(t.layers)
-    rt = calc_rt(t.rsi, t.rse, r)
+    rt = calc_rt(t.rright, t.rleft, r)
     u = calc_u(rt)
-    t.rges = r
+    t.rsum = r
     t.u = u
     t.rt = rt
 
 
-def calc_rt(rsi, rse, r):
-    return rsi + rse + r
+def calc_rt(rright, rleft, r):
+    return rright + rleft + r
 
 
 def calc_u(rt):
