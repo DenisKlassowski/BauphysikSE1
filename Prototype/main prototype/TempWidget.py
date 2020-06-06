@@ -38,14 +38,16 @@ class TempWidget(QtWidgets.QWidget):
 
         #assemble layout
         tempLayout.addWidget(self.tempTitleLabel,0,0)
-        tempLayout.addWidget(self.tempOutsideLabel,0,1)
-        tempLayout.addWidget(self.tempInsideLabel,1,1)
+        tempLayout.addWidget(self.tempInsideLabel,0,1)
+        tempLayout.addWidget(self.tempOutsideLabel,1,1)
+
 
         tempLayout.addWidget(self.tempCelsiusLabel1,0,3)
         tempLayout.addWidget(self.tempCelsiusLabel2,1,3)
 
-        tempLayout.addWidget(self.tempOutsideDoubleSpinBox, 0,2)
-        tempLayout.addWidget(self.tempInsideDoubleSpinBox, 1,2)
+        tempLayout.addWidget(self.tempInsideDoubleSpinBox, 0,2)
+        tempLayout.addWidget(self.tempOutsideDoubleSpinBox, 1,2)
+
 
         self.setLayout(tempLayout)
 
@@ -59,7 +61,7 @@ class TempWidget(QtWidgets.QWidget):
         self.tempCelsiusLabel1.setText(_translate("TempWidget", "°C"))
         self.tempCelsiusLabel2.setText(_translate("TempWidget", "°C"))
 
-    def setData(self, tin, tout):
-        self.tempInsideDoubleSpinBox.setValue(tin)
-        self.tempOutsideDoubleSpinBox.setValue(tout)
+    def setData(self, tleft, tright):
+        self.tempInsideDoubleSpinBox.setValue(tleft)
+        self.tempOutsideDoubleSpinBox.setValue(tright)
 

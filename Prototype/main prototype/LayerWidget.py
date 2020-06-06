@@ -188,9 +188,11 @@ class LayerWidget(QtWidgets.QWidget):
         if self.layerResGivenCheckBox.checkState():
             self.layerLambdaDoubleSpinBox.setEditable(0)
             self.layerResDoubleSpinBox.setEditable(1)
+            self.calculateFlag=0
         else:
             self.layerLambdaDoubleSpinBox.setEditable(1)
             self.layerResDoubleSpinBox.setEditable(0)
+            self.calculateFlag=1
 
     #modify mode of layer
     def switchMode(self,mode):
@@ -217,13 +219,16 @@ class LayerWidget(QtWidgets.QWidget):
         self.data.widthUnit=index
         if index == 0:
             self.widthFactor = 1
-            self.layerWidthDoubleSpinBox.setMaximum(9.999)
+            self.layerWidthDoubleSpinBox.setMaximum(9.9999)
+            self.layerWidthDoubleSpinBox.setDecimals(4)
         elif index == 1:
             self.widthFactor = 0.01
-            self.layerWidthDoubleSpinBox.setMaximum(999.999)
+            self.layerWidthDoubleSpinBox.setMaximum(999.99)
+            self.layerWidthDoubleSpinBox.setDecimals(2)
         elif index == 2:
             self.widthFactor = 0.001
-            self.layerWidthDoubleSpinBox.setMaximum(9999.999)
+            self.layerWidthDoubleSpinBox.setMaximum(9999.9)
+            self.layerWidthDoubleSpinBox.setDecimals(1)
         self.widthChanged()
         self.calculate_r()
 
@@ -233,7 +238,15 @@ class LayerWidget(QtWidgets.QWidget):
             self.layerResDoubleSpinBox.setValue(self.data.r)
 
     def updateValues(self):
-        self.layerWidthDoubleSpinBox.setValue(self.data.width)
+        self.calculateFlag=0
+        if self.data.widthUnit==0:
+            self.widthFactor(1)
+        elif self.data.widthUnit==1:
+            self.widthFactor(0.01)
+        else:
+            self.widthFactor(0.001)
+        self.layerWidthDoubleSpinBox.setValue(self.data.width*self.widthFactor)
         self.layerComboBox.setIndex(self.data.widthUnit)
         self.layerLambdaDoubleSpinBox.setValue(self.data.lamba_)
         self.layerResDoubleSpinBox.setValue(self.data.r)
+        self.calculateFlag=1

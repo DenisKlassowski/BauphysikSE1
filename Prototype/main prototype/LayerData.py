@@ -9,8 +9,8 @@ class LayerData:
         self.widthUnit = widthUnit
         self.lambda_ = lambda_
         self.r = r
-        self.t_inside = 0.0
-        self.t_outside = 0.0
+        self.t_left = 0.0
+        self.t_right = 0.0
         self.rho = 0.0
         self.mat = mat
 
