@@ -1,3 +1,3 @@
 {
-    "files": ["master.py","LayerDivider.py","TempWidget.py","DLinkedList.py","TabData.py","VisualizeWidget.py","mainwindow.py","LayerWidget.py","RWidget.py","CustomMiniWidgets.py","NewTab.py","__init__.py","Tab.py","Calculation.py","LayerData.py"]
+    "files": ["BauphysikLogo02.png","TabData.py","RWidget.py","NewTab.py","LayerData.py","TempWidget.py","master.py","CustomMiniWidgets.py","LayerDivider.py","mainwindow.py","DLinkedList.py","Tab.py","LayerWidget.py","VisualizeWidget.py","Calculation.py"]
 }

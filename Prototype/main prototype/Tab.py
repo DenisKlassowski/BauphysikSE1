@@ -48,8 +48,10 @@ class Tab(QtWidgets.QWidget):
         upperTab.setMaximumHeight(350)
         tabUpperLayout = QtWidgets.QHBoxLayout()
         tabUpperLayout.setContentsMargins(0,0,0,0)
-        tabUpperLayout.setSpacing(10)
+        tabUpperLayout.setSpacing(0)
         upperTab.setLayout(tabUpperLayout)
+
+
 
         #environment area
         self.scrollAreaEnvironment = QtWidgets.QScrollArea()
@@ -57,6 +59,20 @@ class Tab(QtWidgets.QWidget):
         self.environmentLayout = QtWidgets.QFormLayout()
         self.environmentLayout.setSpacing(20)
         environmentWidget.setLayout(self.environmentLayout)
+
+        """
+        environmentWidget.setStyleSheet("QWidget{"
+        "background-color: #FFFFFF;"
+        "border: 0px solid #000000;"
+        "color: rgb(0,0,0);"
+        "}"
+        "QLabel{"
+        "padding: 0px"
+        "}"
+        "QDoubleSpinBox{"
+        "border: 1px solid #000000;"
+        "};")
+        """
 
         self.environmentLayout.addRow(self.rWidget)
         self.environmentLayout.addRow(self.tempWidget)
@@ -72,10 +88,10 @@ class Tab(QtWidgets.QWidget):
         self.visualizeWidget = VisualizeWidget()
         tabUpperLayout.addWidget(self.visualizeWidget)
 
-
         #calculate button (to be discontinued)
         self.buttonCalculate = QtWidgets.QPushButton()
         self.buttonCalculate.clicked.connect(self.calculate)
+
 
         #lower layout of tab
         self.scrollAreaLayers = QtWidgets.QScrollArea()
@@ -83,12 +99,12 @@ class Tab(QtWidgets.QWidget):
         self.layerLayout = QtWidgets.QFormLayout()
         self.layerLayout.setSpacing(20)
 
+
         #data handling
         if data is None:
             self.data=TabData(self.mode,name)
         else:
             self.data=data
-
         self.fillEnv()
 
         self.addEnvLayerDividers()
@@ -101,6 +117,13 @@ class Tab(QtWidgets.QWidget):
 
         self.scrollAreaLayers.setWidget(layersWidget)
         self.scrollAreaLayers.setWidgetResizable(True)
+
+        #layers style
+        """
+        layersWidget.setStyleSheet("QWidget{"
+        "background-color: #f0f0f0"
+        "};")
+        """
 
 
         #merge into general tab
@@ -227,9 +250,12 @@ class Tab(QtWidgets.QWidget):
         #self.getTempData()
 
     def fillEnv(self):
-        self.calculateFlag=0
         self.mode=self.data.mode
         self.setEnvironment()
+        self.fillEnvData()
+
+    def fillEnvData(self):
+        self.calculateFlag=0
         self.rWidget.setData(self.data.rleft,self.data.rright,self.data.rsum,self.data.rt,self.data.u)
         self.tempWidget.setData(self.data.tleft,self.data.tright)
         self.calculateFlag=1
@@ -253,19 +279,24 @@ class Tab(QtWidgets.QWidget):
     def calculate(self):
         if self.calculateFlag==1:
             self.calculateFlag=0
-            self.data.calculate()
-            self.rWidget.setData(self.data.rleft,self.data.rright,self.data.rsum,self.data.rt,self.data.u)
-            self.tempWidget.setData(self.data.tleft,self.data.tright)
-            self.fillLayerDividers()
-            self.visualizeWidget.updateGraph(self.data)
+            try:
+                self.data.calculate()
+                self.fillEnvData()
+                self.fillLayerDividers()
+                self.visualizeWidget.updateGraph(self.data)
+            except ZeroDivisionError:
+                #think of something else here...
+                print("ZeroDivision ph")
             self.calculateFlag=1
 
     #value changes
     def rsiValueChanged(self):
         self.data.rleft=self.rWidget.rInsideDoubleSpinBox.value()
+        self.calculate()
 
     def rseValueChanged(self):
         self.data.rright=self.rWidget.rOutsideDoubleSpinBox.value()
+        self.calculate()
 
     def roverallValueChanged(self):
         self.data.rsum=self.rWidget.rOverallDoubleSpinBox.value()
@@ -275,6 +306,11 @@ class Tab(QtWidgets.QWidget):
 
     def tinValueChanged(self):
         self.data.tleft=self.tempWidget.tempInsideDoubleSpinBox.value()
+        self.calculate()
 
     def toutValueChanged(self):
         self.data.tright=self.tempWidget.tempOutsideDoubleSpinBox.value()
+        self.calculate()
+
+    def removeSelf(self):
+        del self

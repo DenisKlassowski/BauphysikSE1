@@ -22,16 +22,16 @@ class TempWidget(QtWidgets.QWidget):
         self.tempOutsideDoubleSpinBox.setMaximum(1000)
         self.tempOutsideDoubleSpinBox.setMinimum(-273.15)
         self.tempOutsideDoubleSpinBox.setDecimals(2)
-        self.tempOutsideDoubleSpinBox.setMaximumWidth(92)
-        self.tempOutsideDoubleSpinBox.setMinimumWidth(92)
+        self.tempOutsideDoubleSpinBox.setMaximumWidth(83)
+        self.tempOutsideDoubleSpinBox.setMinimumWidth(83)
 
         #hard coded solution for spinbox size, could be done better?
         self.tempInsideDoubleSpinBox = MyDoubleSpinBox()
         self.tempInsideDoubleSpinBox.setMaximum(1000)
         self.tempInsideDoubleSpinBox.setMinimum(-273.15)
         self.tempInsideDoubleSpinBox.setDecimals(2)
-        self.tempInsideDoubleSpinBox.setMaximumWidth(92)
-        self.tempInsideDoubleSpinBox.setMinimumWidth(92)
+        self.tempInsideDoubleSpinBox.setMaximumWidth(84)
+        self.tempInsideDoubleSpinBox.setMinimumWidth(84)
 
         self.tempCelsiusLabel1 = QtWidgets.QLabel()
         self.tempCelsiusLabel2 = QtWidgets.QLabel()

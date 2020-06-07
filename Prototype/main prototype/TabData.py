@@ -2,17 +2,18 @@ import Calculation
 
 
 class TabData:
-    def __init__(self, mode, name, layers=[], rright=0.0, rleft=0.0, rsum=0.0, rt=0.0, tright=0.0, tleft=0.0, u=0.0):
+    def __init__(self, mode, name, layers=None, rright=None, rleft=None, rsum=None, rt=None, tright=None, tleft=None, u=None):
+        #some trickery because default values in the constructor call kind of destroy the the possibility to have multiple instances of the same class. Why? Python, that's why. further information: https://stackoverflow.com/questions/4841782/python-constructor-and-default-value
         self.name = name
-        self.layers = layers
-        self.rright = rright
-        self.rleft = rleft
-        self.rsum = rsum
-        self.tright = tright
-        self.tleft = tleft
+        self.layers = layers if layers is not None else []
+        self.rright = rright if rright is not None else 0.0
+        self.rleft = rleft if rleft is not None else 0.0
+        self.rsum = rsum if rsum is not None else 0.0
+        self.tright = tright if tright is not None else 0.0
+        self.tleft = tleft if tleft is not None else 0.0
         self.mode = mode
-        self.u = u
-        self.rt = rt
+        self.u = u if u is not None else 0.0
+        self.rt = rt if rt is not None else 0.0
 
     def add_layer(self, layer):
         self.layers.append(layer)
@@ -37,4 +38,7 @@ class TabData:
         self.layers.reverse()
 
     def calculate(self):
-        Calculation.tab_calc(self)
+        try:
+            Calculation.tab_calc(self)
+        except ZeroDivisionError:
+            raise ZeroDivisionError
