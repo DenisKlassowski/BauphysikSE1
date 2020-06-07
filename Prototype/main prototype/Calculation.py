@@ -60,7 +60,10 @@ def calc_rt(rright, rleft, r):
 
 
 def calc_u(rt):
-    return 1 / rt
+    try:
+        return 1 / rt
+    except ZeroDivisionError:
+        return -444441
 
 
 def calc_all_r(layers):
@@ -74,7 +77,10 @@ def calc_all_r(layers):
 
 
 def calc_r(layer):
-    layer.r = layer.width / layer.lambda_
+    try:
+        layer.r = layer.width / layer.lambda_
+    except ZeroDivisionError:
+        layer.r = -444441
     return layer.r
 
 def calc_lambda(layer):

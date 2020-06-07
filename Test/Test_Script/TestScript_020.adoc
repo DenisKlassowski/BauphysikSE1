@@ -1,0 +1,67 @@
+|===
+| Test Script 020 |
+| Temperaturverlauf 4 Schichten | Date: <30/05/2020>
+|===
+
+== Test spezification
+
+|===
+| Test Name | Temperaturverlauf 4 Schichten
+| Use Case Tested | Reihenberechnung durchführen
+| Test Description | Es wird eine Temperaturverlaufsberechnung über 4 Schichten durchgeführt und geprüft, ob die Ergebnisse den Erwartungen entsprechen
+| Pre-conditions | Die Berechnungssoftware ist auf einem handelsüblichen PC/Laptop gestartet und einsatzbereit.
+
+Es ist die Temperaturverlaufsberechnung ausgewählt und alle Felder unbefüllt.
+| Post Conditions | Die Temperaturverlaufsberechnung wurde durchgeführt und die korrekten Ergebnisse werden angezeigt.
+| Notes | korrekte Ergebnisse: R_ges = 1,6111, R_T = 1,7811, U = 0,56
+
+Temperatur vor Schicht 1: 19,8 °C
+Temperatur zwischen Schicht 1 und Schicht 2: 19,2 °C
+Temperatur zwischen Schicht 2 und Schicht 3: 15,1 °C
+Temperatur zwischen Schicht 3 und Schicht 4: 4,5 °C
+Temperatur zwischen Schicht 4 und Schicht 5: 4,4 °C
+| Result | Pass
+|===
+
+== Test Steps
+
+Für alle zu tätigenden Eingaben sind in den Testdaten weiter unten die festgelegten Werte zu nutzen. Im Folgenden wird darauf verzichtet, diesen Sachverhalt für jede Eingabe explizit zu erwähnen.
+
+Die korrekten Ergebnisse stehen in den Notes der Spezifikation.
+
+|===
+|    | Test Step | Expected Test Result
+| 1. | im oberen Teil des Fensters werden R_si und R_se eingegeben | Die Felder für R_si und R_se sind befüllt
+| 2. | im oberen Teil des Fensters werden Innen- und Aussentemperatur eingegeben | Die Felder für Temperatur innen und aussen sind befüllt
+| 3. | Daten für Schicht 1 eingeben (Einheiten beachten) | Felder Dicke und Wärmeleitfähigkeit von Schicht 1 sind befüllt
+| 4. | Hinzufügen einer Schicht über den "+"-Button in Schicht 1 | Es steht eine zweite Schicht zur Verfügung
+| 5. | Daten für Schicht 2 eingeben (Einheiten beachten) | Felder Dicke und Wärmeleitfähigkeit von Schicht 2 sind befüllt
+| 6. | Hinzufügen einer Schicht über den "+"-Button in Schicht 2 | Es steht eine dritte Schicht zur Verfügung
+| 7. | Daten für Schicht 3 eingeben (Einheiten beachten) | Felder Dicke und Wärmeleitfähigkeit von Schicht 3 sind befüllt
+| 8. | Hinzufügen einer Schicht über den "+"-Button in Schicht 3 | Es steht eine vierte Schicht zur Verfügung
+| 9. | Daten für Schicht 4 eingeben (Einheiten beachten) | Felder Dicke und Wärmeleitfähigkeit von Schicht 4 sind befüllt
+| 10. | "Berechnen"-Button betätigen und damit Berechnung auslösen | Keine Fehler. Das System zeigt die korrekten Ergebnisse an
+|===
+
+== Test Data Table
+
+Die Testdaten basieren auf einer Aufgabe aus dem Bereich Bauphysik und wurden für Testzwecke von der Kundin an uns übergeben.
+
+Die Werte für den Wärmeübergangswiderstand an der Innenseite sowie an der Außenseite.
+
+R_si = 0,13
+
+R_se = 0,04
+
+Die Werte für die Temperaturen an der Innenseite, sowie der Außenseite der Wand:
+
+Innentemperatur: 21 °C
+Aussentemperatur: 4 °C
+
+|===
+|           | Dicke | Wärmeleitfähigkeit
+| Schicht 1 | 2 cm  | 0,350
+| Schicht 2 | 24 cm | 0,560
+| Schicht 3 | 5 cm  | 0,045
+| Schicht 4 | 1 cm  | 0,700
+|===

@@ -37,3 +37,5 @@ Für diesen Test werden keine Daten benötigt.
 == Test Log
 
 28.04.2020 Prototyp2 : Test wurde erfolgreich durchgeführt.
+
+20.05.2020 Prototyp3 : Test wurde erfolgreich durchgeführt.
