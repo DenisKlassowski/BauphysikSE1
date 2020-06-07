@@ -13,7 +13,7 @@
 
 Es ist die U-Berechnung ausgewählt und alle Felder unbefüllt.
 | Post Conditions | Die U-Berechnung wurde durchgeführt und die korrekten Ergebnisse werden angezeigt.
-| Notes | korrekte Ergebnisse: R_ges = 0,53, R_T= 0,70 , U = 1,43 
+| Notes | korrekte Ergebnisse: R_ges = 0,5299, R_T= 0,6999 , U = 1,4287 (1,43 in Lösung)
 | Result | Pass
 |===
 
@@ -47,3 +47,7 @@ R_se = 0,04
 | Schicht 1 | 36,5 cm | 0,72
 | Schicht 2 | 2 cm  | 0,87 
 |===
+
+== Test Log
+
+07.06.2020 - Prototyp 4: Test wurde am Heim-PC durchgeführt. Berechneten Ergebnisse für R_ges und R_T stimmten. Beanstandung: Für U kam 1,4288 statt 1,4287 heraus.

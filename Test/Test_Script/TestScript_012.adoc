@@ -26,9 +26,9 @@ Die korrekten Ergebnisse stehen in den Notes der Spezifikation.
 |===
 |    | Test Step | Expected Test Result
 | 1. | im oberen Teil des Fensters werden R_si und R_se eingegeben | Die Felder für R_si und R_se sind befüllt
-| 2. | Wärmedurchlasswiderstand für Schicht 1 eingeben| Felde Wärmedurchlasswiderstand von Schicht 1 ist befüllt
+| 2. | Wärmedurchlasswiderstand für Schicht 1 eingeben| Feld Wärmedurchlasswiderstand von Schicht 1 ist befüllt
 | 3. | Hinzufügen einer Schicht über den "+"-Button in Schicht 1 | Es steht eine zweite Schicht zur Verfügung
-| 4. | Wärmedurchlasswiderstand für Schicht 2 eingeben| Felde Wärmedurchlasswiderstand von Schicht 2 ist befüllt
+| 4. | Wärmedurchlasswiderstand für Schicht 2 eingeben| Feld Wärmedurchlasswiderstand von Schicht 2 ist befüllt
 | 5. | "Berechnen"-Button betätigen und damit Berechnung auslösen | Keine Fehler. Das System zeigt die korrekten Ergebnisse an
 |===
 
@@ -47,3 +47,7 @@ R_se = 0,04
 | Schicht 1 | 0,25   
 | Schicht 2 | 2,86 
 |===
+
+== Test Log
+
+07.06.2020 - Prototyp 4: Test wurde am Heim-PC erfolgreich durchgeführt.

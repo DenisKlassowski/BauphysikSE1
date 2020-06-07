@@ -65,3 +65,7 @@ Aussentemperatur: -4,0 °C
 | Schicht 2 | 0,150 m   | 0,03
 | Schicht 3 | 0,115 m   | 1,20
 |===
+
+== Test Log
+
+07.06.2020 - Prototyp 4: Test wurde am Heim-PC erfolgreich durchgeführt.

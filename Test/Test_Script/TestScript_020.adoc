@@ -19,7 +19,7 @@ Temperatur vor Schicht 1: 19,8 °C
 Temperatur zwischen Schicht 1 und Schicht 2: 19,2 °C
 Temperatur zwischen Schicht 2 und Schicht 3: 15,1 °C
 Temperatur zwischen Schicht 3 und Schicht 4: 4,5 °C
-Temperatur zwischen Schicht 4 und Schicht 5: 4,4 °C
+Temperatur nach Schicht 4: 4,4 °C
 | Result | Pass
 |===
 
@@ -65,3 +65,5 @@ Aussentemperatur: 4 °C
 | Schicht 3 | 5 cm  | 0,045
 | Schicht 4 | 1 cm  | 0,700
 |===
+
+07.06.2020 - Prototyp 4: Test wurde am Heim-PC erfolgreich durchgeführt.

@@ -39,3 +39,5 @@ Für diesen Test werden keine Daten benötigt.
 28.04.2020 Prototyp2 : Test wurde erfolgreich durchgeführt.
 
 20.05.2020 Prototyp3 : Test wurde erfolgreich durchgeführt.
+
+07.06.2020 - Prototyp 4: Test wurde am Heim-PC erfolgreich durchgeführt.

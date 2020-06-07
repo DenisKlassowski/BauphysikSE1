@@ -79,5 +79,31 @@ Es folgt eine Übersicht über die in der jeweiligen Testphase am jeweiligen Pro
 | 20.05.2020 |  0.3   | 006 | bestanden | CL |am Heim-PC durchgeführt
 | 20.05.2020 |  0.3   | 007 | bestanden | CL |am Heim-PC durchgeführt
 | 20.05.2020 |  0.3   | 008 | bestanden | CL |am Heim-PC durchgeführt
-|   |   |   |   |
+|===
+
+
+=== Prototyp 4
+
+|===
+| *Datum* | *Version* | *Testscript* | *Ergebnis* | *Verantwortlich* |*Kommentar*
+| 07.06.2020 |  0.4   | 001 | bestanden | CL |am Heim-PC durchgeführt
+| 07.06.2020 |  0.4   | 002 | bestanden | CL |am Heim-PC durchgeführt
+| 07.06.2020 |  0.4   | 003 | bestanden | CL |am Heim-PC durchgeführt
+| 07.06.2020 |  0.4   | 004 | bestanden | CL |am Heim-PC durchgeführt
+| 07.06.2020 |  0.4   | 005 | bestanden | CL |am Heim-PC durchgeführt
+| 07.06.2020 |  0.4   | 006 | bestanden | CL |am Heim-PC durchgeführt
+| 07.06.2020 |  0.4   | 007 | bestanden | CL |am Heim-PC durchgeführt
+| 07.06.2020 |  0.4   | 008 | bestanden | CL |am Heim-PC durchgeführt
+| 07.06.2020 |  0.4   | 009 | bestanden | CL |am Heim-PC durchgeführt
+| 07.06.2020 |  0.4   | 010 | bestanden | CL |am Heim-PC durchgeführt
+| 07.06.2020 |  0.4   | 011 | bestanden | CL |am Heim-PC durchgeführt
+| 07.06.2020 |  0.4   | 012 | bestanden | CL |am Heim-PC durchgeführt
+| 07.06.2020 |  0.4   | 013 | bestanden | CL |am Heim-PC durchgeführt
+| 07.06.2020 |  0.4   | 014 | bestanden | CL |am Heim-PC durchgeführt
+| 07.06.2020 |  0.4   | 015 | mit Ausnahme| CL | das Ergebnis für U weicht um 0,0001 vom erwarteten Wert ab
+| 07.06.2020 |  0.4   | 016 | bestanden | CL |am Heim-PC durchgeführt
+| 07.06.2020 |  0.4   | 017 | bestanden | CL |am Heim-PC durchgeführt
+| 07.06.2020 |  0.4   | 018 | Fehler    | CL | berechnete Temperatur zwischen Schicht 1 und 2 weicht erheblich von Erwartung ab
+| 07.06.2020 |  0.4   | 019 | Fehler    | CL | berechnete Temperatur zwischen Schicht 1 und 2 weicht erheblich von Erwartung ab
+| 07.06.2020 |  0.4   | 020 | bestanden | CL |am Heim-PC durchgeführt
 |===

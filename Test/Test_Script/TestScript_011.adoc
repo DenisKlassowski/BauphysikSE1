@@ -56,3 +56,7 @@ R_se = 0,04
 | Schicht 4 | 8,0 cm    | 0,04
 | Schicht 5 | 1,5 cm    | 0,70
 |===
+
+== Test Log
+
+07.06.2020 - Prototyp 4: Test wurde am Heim-PC erfolgreich durchgeführt.
