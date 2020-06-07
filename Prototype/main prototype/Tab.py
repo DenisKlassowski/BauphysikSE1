@@ -104,16 +104,13 @@ class Tab(QtWidgets.QWidget):
         if data is None:
             self.data=TabData(self.mode,name)
         else:
-            print("why the fuck are you here1")
             self.data=data
         self.fillEnv()
 
-        print(self.data)
         self.addEnvLayerDividers()
         if self.data==None or self.data.layers == []:
             self.addLayer(0)
         else:
-            print("why the fuck are you here2")
             self.fillLayers()
 
         layersWidget.setLayout(self.layerLayout)
