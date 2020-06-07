@@ -286,7 +286,7 @@ class Tab(QtWidgets.QWidget):
                 self.visualizeWidget.updateGraph(self.data)
             except ZeroDivisionError:
                 #think of something else here...
-                print("ZeroDivision scrub")
+                print("ZeroDivision ph")
             self.calculateFlag=1
 
     #value changes

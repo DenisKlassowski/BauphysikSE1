@@ -275,7 +275,6 @@ class LayerWidget(QtWidgets.QWidget):
                 self.layerResDoubleSpinBox.setValue(self.data.r)
             except ZeroDivisionError:
                 self.layerLambdaDoubleSpinBox.setBackGroundColor(QtGui.QColor(255,0,0))
-                print("ZeroDivision scrub")
             self.calculateFlag=1
 
     def calculate_lambda(self):
@@ -287,7 +286,6 @@ class LayerWidget(QtWidgets.QWidget):
                 self.layerLambdaDoubleSpinBox.setValue(self.data.lambda_)
             except ZeroDivisionError:
                 self.layerResDoubleSpinBox.setBackGroundColor(QtGui.QColor(255,0,0))
-                print("ZeroDivisionError scrub")
             self.calculateFlag=1
 
     def updateValues(self):
