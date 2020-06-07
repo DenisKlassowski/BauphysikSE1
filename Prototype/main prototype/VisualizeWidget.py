@@ -27,7 +27,7 @@ class VisualizeWidget(QtWidgets.QWidget):
 
         #layout.addWidget(self.placeholderLabel)
         layout.addWidget(self.graphWidget)
-        self.setMaximumHeight(350)
+        self.setMaximumHeight(600)
         #self.setMaximumWidth(400)
 
         self.setLayout(layout)

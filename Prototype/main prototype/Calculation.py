@@ -76,3 +76,7 @@ def calc_all_r(layers):
 def calc_r(layer):
     layer.r = layer.width / layer.lambda_
     return layer.r
+
+def calc_lambda(layer):
+    layer.lambda_ = layer.width/layer.r
+    return layer.lambda_

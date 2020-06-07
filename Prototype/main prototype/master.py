@@ -8,8 +8,29 @@ class MainWindow(QtWidgets.QMainWindow):
     def __init__(self):
         super(MainWindow,self).__init__()
 
+
         #menu bar
         bar=self.menuBar()
+        self.menuBar().setStyleSheet("QMenuBar{"
+        "color: rgb(255, 255, 255);"
+        "background-color: #4C7CC2;"
+        "}"
+        "QMenuBar:item:selected {"
+        "border: 1px solid #333333;"
+        "color: rgb(255, 255, 255);"
+        "background-color: #224579;"
+        "}"
+        "QMenuBar:disabled{"
+        "color: rgb(150, 150, 150);"
+        "}"
+        "QMenu{"
+        "background-color: #ffffff;"
+        "color: rgb(0,0,0);"
+        "}"
+        "QMenu:item:selected{"
+        "color: rgb(0, 0, 0);"
+        "background-color: #A0BEEA;"
+        "};")
 
         menuFile = bar.addMenu(QtCore.QCoreApplication.translate("MainWindow","Datei"))
         menuLanguage = bar.addMenu(QtCore.QCoreApplication.translate("MainWindow","Sprache"))
@@ -76,6 +97,60 @@ class MainWindow(QtWidgets.QMainWindow):
 
         self.retranslateUi()
 
+        """
+        self.setStyleSheet("QWidget{"
+        #"background-color: #A0BEEA;"
+        "background-color: #ffffff;"
+        "border: 0px solid #ff0000;"
+        "}"
+        "QLabel{"
+        "padding: 5px;"
+        "}"
+        "QPushButton{"
+        "border: 0px solid #ff0000;"
+        "color: rgb(255, 255, 255);"
+        "padding: 5px;"
+        "background-color: #7099D6;;"
+        "}"
+        "QPushButton:hover {"
+        "border: 1px solid #333333;"
+        "color: rgb(255, 255, 255);"
+        "background-color: #2F63AF;"
+        "}"
+        "QPushButton:pressed {"
+        "border: 1px solid #333333;"
+        "color: rgb(255, 255, 255);"
+        "background-color: #12499A;"
+        "}"
+        "QPushButton:disabled {"
+        "border: 0px solid #333333;"
+        "color: rgb(150, 150, 150);"
+        "background-color: #134078;"
+        "}"
+        "QDoubleSpinBox{"
+        "background-color: #ffffff;"
+        "}"
+        "QTabWidget:pane{"
+        "border: 0px solid #ffffff;"
+        "}"
+        "QTabBar:tab{"
+        "border: 0px solid #ffffff;"
+        "padding: 5px;"
+        "}"
+        "QTabBar:tab:!selected:hover{"
+        "background-color: #A0BEEA;"
+        "}"
+        "QTabBar:tab:selected{"
+        "background-color: #ffffff;"
+        "color: #000000;"
+        "}"
+        "QTabBar:tab:!selected{"
+        "background-color: #7099D6;"
+        "color: #ffffff;"
+        "margin-top: 5px;"
+        "};")
+        """
+
         self.move(0,0)
         self.show()
 
@@ -86,11 +161,12 @@ class MainWindow(QtWidgets.QMainWindow):
             self.menuModus.menuAction().setEnabled(True)
 
     def addNewTab(self, modus):
-        tab = Tab (modus, QtCore.QCoreApplication.translate("MainWindow","Neuer Tab"))
-        self.tabWidget.insertTab(self.tabWidget.count()-1,tab, tab.data.name)
+        tab = Tab (modus, QtCore.QCoreApplication.translate("MainWindow","Neuer Tab"), None)
+        self.tabWidget.insertTab(self.tabWidget.count()-1,tab, QtCore.QCoreApplication.translate("MainWindow","Neuer Tab"))
         self.tabWidget.setCurrentIndex(self.tabWidget.count()-2)
 
     def closeTab(self,index):
+        self.tabWidget.widget(index).removeSelf()
         self.tabWidget.removeTab(index)
 
     def modusSwitchToU(self):

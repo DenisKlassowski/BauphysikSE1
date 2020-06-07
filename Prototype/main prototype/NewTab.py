@@ -24,6 +24,26 @@ class NewTab(QtWidgets.QWidget):
         tabLayout.addWidget(self.buttonNewU)
         tabLayout.addWidget(self.buttonNewTemp)
 
+        #style
+        """
+        self.setStyleSheet("QPushButton{"
+        "border: 0px solid #ff0000;"
+        "color: rgb(255, 255, 255);"
+        "padding: 5px;"
+        "background-color: #A0BEEA;"
+        "}"
+        "QPushButton:hover {"
+        "border: 1px solid #333333;"
+        "color: rgb(255, 255, 255);"
+        "background-color: #2F63AF;"
+        "}"
+        "QPushButton:pressed {"
+        "border: 1px solid #333333;"
+        "color: rgb(255, 255, 255);"
+        "background-color: #12499A;"
+        "};")
+        """
+
         #generate Tab
         self.setLayout(tabLayout)
         self.retranslateUi()

@@ -8,6 +8,12 @@ class QHLine(QtWidgets.QFrame):
         self.setFrameShape(QtWidgets.QFrame.HLine)
         self.setFrameShadow(QtWidgets.QFrame.Sunken)
 
+        """
+        self.setStyleSheet("QFrame{"
+        "background-color: #12499A;"
+        "};")
+        """
+
 class MyDoubleSpinBox(QtWidgets.QDoubleSpinBox):
     def __init__(self):
         QtWidgets.QDoubleSpinBox.__init__(self)
@@ -15,6 +21,11 @@ class MyDoubleSpinBox(QtWidgets.QDoubleSpinBox):
         self.setFocusPolicy(QtCore.Qt.StrongFocus)
         self.setDecimals(3)
         self.setMaximumWidth(100)
+        """
+        self.setStyleSheet("QDoubleSpinBox{"
+        "border: 1px solid #000000"
+        "};")
+        """
 
     #overriding scroll events to disable value changes when simply scrolling through e.g. scrollAreas
     def wheelEvent(self, e):
@@ -38,3 +49,20 @@ class MyDoubleSpinBox(QtWidgets.QDoubleSpinBox):
             self.setAutoFillBackground(1)
             self.setButtonSymbols(self.UpDownArrows)
             self.lineEdit().setPalette(pal)
+
+class MyComboBox(QtWidgets.QComboBox):
+    def __init__(self):
+        QtWidgets.QComboBox.__init__(self)
+        self.setFocusPolicy(QtCore.Qt.StrongFocus)
+
+        """
+        self.setStyleSheet("QComboBox{"
+        "border: 1px solid #000000"
+        "};")
+        """
+
+    def wheelEvent(self, e):
+        if(self.hasFocus()):
+            QtWidgets.QComboBox.wheelEvent(self,e)
+        else:
+            pass

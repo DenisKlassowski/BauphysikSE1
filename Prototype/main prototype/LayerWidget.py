@@ -1,7 +1,7 @@
 # This Python file uses the following encoding: utf-8
 from PyQt5 import QtCore
 from PyQt5 import QtWidgets
-from CustomMiniWidgets import MyDoubleSpinBox
+from CustomMiniWidgets import MyDoubleSpinBox, MyComboBox
 from LayerData import LayerData
 
 class LayerWidget(QtWidgets.QWidget):
@@ -66,11 +66,11 @@ class LayerWidget(QtWidgets.QWidget):
         self.layerWidthLabel = QtWidgets.QLabel()
         self.layerWidthDoubleSpinBox = MyDoubleSpinBox()
         self.layerWidthDoubleSpinBox.setSingleStep(0.001)
-        self.layerWidthDoubleSpinBox.setMaximum(9.999)
+        self.layerWidthDoubleSpinBox.setMaximum(9.9999)
         self.layerWidthDoubleSpinBox.setMaximumWidth(100)
         self.layerWidthDoubleSpinBox.valueChanged.connect(self.widthChanged)
 
-        self.layerWidthComboBox = QtWidgets.QComboBox()
+        self.layerWidthComboBox = MyComboBox()
         self.layerWidthComboBox.addItems({"m"})
         self.layerWidthComboBox.addItems({"cm"})
         self.layerWidthComboBox.addItems({"mm"})
@@ -136,6 +136,34 @@ class LayerWidget(QtWidgets.QWidget):
         self.mainLayout.addWidget(self.body)
         self.setLayout(self.mainLayout)
 
+        """
+        self.setStyleSheet("QWidget {"
+        "background-color: #f0f0f0;"
+        "}"
+        "QPushButton{"
+        "border: 0px solid #ff0000;"
+        "color: rgb(255, 255, 255);"
+        "padding: 5px;"
+        "background-color: #7099D6;;"
+        "}"
+
+        "QPushButton:hover {"
+        "border: 1px solid #333333;"
+        "color: rgb(255, 255, 255);"
+        "background-color: #2F63AF;"
+        "}"
+        "QPushButton:pressed {"
+        "border: 1px solid #333333;"
+        "color: rgb(255, 255, 255);"
+        "background-color: #12499A;"
+        "}"
+        "QPushButton:disabled {"
+        "border: 0px solid #333333;"
+        "color: rgb(150, 150, 150);"
+        "background-color: #134078;"
+        "};")
+        """
+
         self.retranslateUi()
 
         #set position and text
@@ -155,7 +183,7 @@ class LayerWidget(QtWidgets.QWidget):
         self.layerResUnitLabel.setText(_translate("LayerWidget", "m<sup>2</sup>KW<sup>-1</sub>"))
 
         self.layerAddAfterButton.setText(_translate("LayerWidget", "+"))
-        self.layerDeleteButton.setText(_translate("LayerWidget", "-"))
+        self.layerDeleteButton.setText(_translate("LayerWidget", "–"))
 
         #self.layerTempInLabel.setText(_translate("LayerWidget", "Temp_in:"))
         #self.layerTempOutLabel.setText(_translate("LayerWidget", "Temp_out"))
