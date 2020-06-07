@@ -1,6 +1,6 @@
 # This Python file uses the following encoding: utf-8
 from PyQt5 import QtCore
-from PyQt5 import QtWidgets
+from PyQt5 import QtWidgets, QtGui
 from CustomMiniWidgets import MyDoubleSpinBox, MyComboBox
 from LayerData import LayerData
 
@@ -79,7 +79,7 @@ class LayerWidget(QtWidgets.QWidget):
 
         self.layerLambdaLabel = QtWidgets.QLabel()
         self.layerLambdaDoubleSpinBox = MyDoubleSpinBox()
-        self.layerLambdaDoubleSpinBox.setMinimum(0.001)
+        self.layerLambdaDoubleSpinBox.setMinimum(0.000)
         self.layerLambdaDoubleSpinBox.setValue(0.01)
         self.layerLambdaDoubleSpinBox.setSingleStep(0.01)
         self.layerLambdaDoubleSpinBox.setMaximumWidth(100)
@@ -216,11 +216,9 @@ class LayerWidget(QtWidgets.QWidget):
         if self.layerResGivenCheckBox.checkState():
             self.layerLambdaDoubleSpinBox.setEditable(0)
             self.layerResDoubleSpinBox.setEditable(1)
-            self.calculateFlag=0
         else:
             self.layerLambdaDoubleSpinBox.setEditable(1)
             self.layerResDoubleSpinBox.setEditable(0)
-            self.calculateFlag=1
 
     #modify mode of layer
     def switchMode(self,mode):
@@ -233,14 +231,15 @@ class LayerWidget(QtWidgets.QWidget):
 
     def widthChanged(self):
         self.data.width=self.layerWidthDoubleSpinBox.value()*self.widthFactor
-        self.calculate_r()
+        self.calculate()
 
     def lambdaChanged(self):
         self.data.lambda_=self.layerLambdaDoubleSpinBox.value()
-        self.calculate_r()
+        self.calculate()
 
     def rChanged(self):
         self.data.r=self.layerResDoubleSpinBox.value()
+        self.calculate()
 
     def widthFactorChanged(self):
         index = self.layerWidthComboBox.currentIndex()
@@ -258,12 +257,38 @@ class LayerWidget(QtWidgets.QWidget):
             self.layerWidthDoubleSpinBox.setMaximum(9999.9)
             self.layerWidthDoubleSpinBox.setDecimals(1)
         self.widthChanged()
-        self.calculate_r()
+        self.calculate()
+
+    def calculate(self):
+        if self.layerResGivenCheckBox.checkState():
+            self.calculate_lambda()
+        else:
+            self.calculate_r()
+        self.parent().parent().parent().parent().parent().calculate()
 
     def calculate_r(self):
         if(self.calculateFlag):
-            self.data.calculate()
-            self.layerResDoubleSpinBox.setValue(self.data.r)
+            self.calculateFlag=0
+            try:
+                self.data.calculate()
+                self.layerLambdaDoubleSpinBox.setBackGroundColor(QtGui.QColor(255,255,255))
+                self.layerResDoubleSpinBox.setValue(self.data.r)
+            except ZeroDivisionError:
+                self.layerLambdaDoubleSpinBox.setBackGroundColor(QtGui.QColor(255,0,0))
+                print("ZeroDivision scrub")
+            self.calculateFlag=1
+
+    def calculate_lambda(self):
+        if(self.calculateFlag):
+            self.calculateFlag=0
+            try:
+                self.data.calculate_lambda()
+                self.layerResDoubleSpinBox.setBackGroundColor(QtGui.QColor(255,255,255))
+                self.layerLambdaDoubleSpinBox.setValue(self.data.lambda_)
+            except ZeroDivisionError:
+                self.layerResDoubleSpinBox.setBackGroundColor(QtGui.QColor(255,0,0))
+                print("ZeroDivisionError scrub")
+            self.calculateFlag=1
 
     def updateValues(self):
         self.calculateFlag=0

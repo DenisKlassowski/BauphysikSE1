@@ -18,3 +18,6 @@ class LayerData:
 
     def calculate(self):
         Calculation.layer_calc(self)
+
+    def calculate_lambda(self):
+        Calculation.calc_lambda(self)

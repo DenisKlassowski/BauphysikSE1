@@ -38,4 +38,7 @@ class TabData:
         self.layers.reverse()
 
     def calculate(self):
-        Calculation.tab_calc(self)
+        try:
+            Calculation.tab_calc(self)
+        except ZeroDivisionError:
+            raise ZeroDivisionError

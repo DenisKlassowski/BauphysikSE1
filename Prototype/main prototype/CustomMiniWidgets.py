@@ -36,19 +36,22 @@ class MyDoubleSpinBox(QtWidgets.QDoubleSpinBox):
 
     def setEditable(self, bool):
         if bool == 0:
+
             self.setReadOnly(True)
-            pal = self.lineEdit().palette()
-            pal.setColor(self.lineEdit().backgroundRole(), QtGui.QColor(240,240,240))
-            self.setAutoFillBackground(1)
             self.setButtonSymbols(self.NoButtons)
-            self.lineEdit().setPalette(pal)
+            self.setBackGroundColor(QtGui.QColor(240,240,240))
         else:
             self.setReadOnly(False)
-            pal = self.lineEdit().palette()
-            pal.setColor(self.lineEdit().backgroundRole(), QtGui.QColor(255,255,255))
-            self.setAutoFillBackground(1)
             self.setButtonSymbols(self.UpDownArrows)
-            self.lineEdit().setPalette(pal)
+            self.setBackGroundColor(QtGui.QColor(255,255,255))
+
+    def setBackGroundColor(self, color):
+        self.setAutoFillBackground(1)
+        pal = self.lineEdit().palette()
+        pal.setColor(self.lineEdit().backgroundRole(), color)
+        self.lineEdit().setPalette(pal)
+
+
 
 class MyComboBox(QtWidgets.QComboBox):
     def __init__(self):

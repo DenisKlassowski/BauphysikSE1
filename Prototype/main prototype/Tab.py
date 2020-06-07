@@ -250,9 +250,12 @@ class Tab(QtWidgets.QWidget):
         #self.getTempData()
 
     def fillEnv(self):
-        self.calculateFlag=0
         self.mode=self.data.mode
         self.setEnvironment()
+        self.fillEnvData()
+
+    def fillEnvData(self):
+        self.calculateFlag=0
         self.rWidget.setData(self.data.rleft,self.data.rright,self.data.rsum,self.data.rt,self.data.u)
         self.tempWidget.setData(self.data.tleft,self.data.tright)
         self.calculateFlag=1
@@ -276,19 +279,24 @@ class Tab(QtWidgets.QWidget):
     def calculate(self):
         if self.calculateFlag==1:
             self.calculateFlag=0
-            self.data.calculate()
-            self.rWidget.setData(self.data.rleft,self.data.rright,self.data.rsum,self.data.rt,self.data.u)
-            self.tempWidget.setData(self.data.tleft,self.data.tright)
-            self.fillLayerDividers()
-            self.visualizeWidget.updateGraph(self.data)
+            try:
+                self.data.calculate()
+                self.fillEnvData()
+                self.fillLayerDividers()
+                self.visualizeWidget.updateGraph(self.data)
+            except ZeroDivisionError:
+                #think of something else here...
+                print("ZeroDivision scrub")
             self.calculateFlag=1
 
     #value changes
     def rsiValueChanged(self):
         self.data.rleft=self.rWidget.rInsideDoubleSpinBox.value()
+        self.calculate()
 
     def rseValueChanged(self):
         self.data.rright=self.rWidget.rOutsideDoubleSpinBox.value()
+        self.calculate()
 
     def roverallValueChanged(self):
         self.data.rsum=self.rWidget.rOverallDoubleSpinBox.value()
@@ -298,9 +306,11 @@ class Tab(QtWidgets.QWidget):
 
     def tinValueChanged(self):
         self.data.tleft=self.tempWidget.tempInsideDoubleSpinBox.value()
+        self.calculate()
 
     def toutValueChanged(self):
         self.data.tright=self.tempWidget.tempOutsideDoubleSpinBox.value()
+        self.calculate()
 
     def removeSelf(self):
         del self
