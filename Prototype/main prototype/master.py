@@ -2,6 +2,7 @@
 from PyQt5 import QtCore, QtWidgets, QtGui
 from Tab import Tab
 from NewTab import NewTab
+import Printing
 
 
 class MainWindow(QtWidgets.QMainWindow):
@@ -48,6 +49,8 @@ class MainWindow(QtWidgets.QMainWindow):
         self.actionSaveAs = QtWidgets.QAction()
         self.actionLoad = QtWidgets.QAction()
         self.actionPrint = QtWidgets.QAction()
+
+        self.actionPrint.triggered.connect(self.printing)
 
         menuFile.addAction(self.actionNew)
         menuFile.addAction(self.actionSave)
@@ -174,6 +177,9 @@ class MainWindow(QtWidgets.QMainWindow):
 
     def modusSwitchToTemp(self):
         self.tabWidget.currentWidget().switchToTemp()
+
+    def printing(self):
+        Printing.printing(self.tabWidget.currentWidget().data)
 
     def retranslateUi(self):
 

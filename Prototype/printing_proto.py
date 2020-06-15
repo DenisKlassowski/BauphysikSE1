@@ -38,7 +38,7 @@ class Window(QtWidgets.QWidget):
         document = QtGui.QTextDocument()
         cursor = QtGui.QTextCursor(document)
         cursor.MoveOperation(1)
-        cursor.insertHtml("<h1>Berechnung \"Name\"</h1><br><br>")
+        cursor.insertHtml("<h1>Bezeichnung der Konstruktion</h1><br><br>")
         cursor.insertHtml("<h2>Eingangsdaten</h2><br>")
         table = cursor.insertTable(
             self.table.rowCount(), self.table.columnCount(), table_format)
