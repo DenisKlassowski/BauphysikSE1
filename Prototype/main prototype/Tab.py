@@ -88,11 +88,6 @@ class Tab(QtWidgets.QWidget):
         self.visualizeWidget = VisualizeWidget()
         tabUpperLayout.addWidget(self.visualizeWidget)
 
-        #calculate button (to be discontinued)
-        self.buttonCalculate = QtWidgets.QPushButton()
-        self.buttonCalculate.clicked.connect(self.calculate)
-
-
         #lower layout of tab
         self.scrollAreaLayers = QtWidgets.QScrollArea()
         layersWidget = QtWidgets.QWidget()
@@ -128,8 +123,6 @@ class Tab(QtWidgets.QWidget):
 
         #merge into general tab
         lTabLayout.addWidget(upperTab)
-        lTabLayout.addWidget(self.buttonCalculate)
-
         lTabLayout.addWidget(self.scrollAreaLayers)
 
         tabLayout.addWidget(lTab)
@@ -139,7 +132,6 @@ class Tab(QtWidgets.QWidget):
 
     def retranslateUi(self):
         _translate = QtCore.QCoreApplication.translate
-        self.buttonCalculate.setText(_translate("TabWidget", "Berechnen (Dummy)"))
 
     def setEnvironment(self):
         if self.mode == 0:
@@ -260,28 +252,35 @@ class Tab(QtWidgets.QWidget):
         self.tempWidget.setData(self.data.tleft,self.data.tright)
         self.calculateFlag=1
 
+    def fillEnvDataLite(self):
+        self.calculateFlag=0
+        self.rWidget.setDataLite(self.data.rsum,self.data.rt,self.data.u)
+        self.calculateFlag=1
+
     def fillLayers(self):
         #to be continued
         pass
 
     def fillLayerDividers(self):
         if self.mode == 1:
+            #some localization for different decimalPoints
+            cLocale = QtCore.QLocale()
             for i in range(self.layerCount):
                 if i != self.layerCount-1:
-                    self.layerLayout.itemAt(i*2,2).widget().tempLabel.setText(str(round(self.layerLayout.itemAt(i*2+1,2).widget().data.t_left,2))+" °C")
-                    #print(str(i)+" Layer: " + str(self.layerLayout.itemAt(i*2+1,2).widget().position))
-                    #print(str(self.layerLayout.itemAt(i*2+1,2).widget().data.t_left)+ " soll:" + str(self.data.layers[i].t_left))
-                    #print(str(self.layerLayout.itemAt(i*2+1,2).widget().data.t_right)+" soll:" + str(self.data.layers[i].t_right))
+                    ss = cLocale.toString(round(self.layerLayout.itemAt(i*2+1,2).widget().data.t_left,2),'f',2) + " °C"
+                    self.layerLayout.itemAt(i*2,2).widget().tempLabel.setText(ss)
                 else:
-                    self.layerLayout.itemAt(i*2,2).widget().tempLabel.setText(str(round(self.layerLayout.itemAt(i*2+1,2).widget().data.t_left,2))+" °C")
-                    self.layerLayout.itemAt(i*2+2,2).widget().tempLabel.setText(str(round(self.layerLayout.itemAt(i*2+1,2).widget().data.t_right,2))+" °C")
+                    ss = cLocale.toString(round(self.layerLayout.itemAt(i*2+1,2).widget().data.t_left,2),'f',2)+ " °C"
+                    self.layerLayout.itemAt(i*2,2).widget().tempLabel.setText(ss)
+                    ss2 = cLocale.toString(round(self.layerLayout.itemAt(i*2+1,2).widget().data.t_right,2),'f',2)+ " °C"
+                    self.layerLayout.itemAt(i*2+2,2).widget().tempLabel.setText(ss2)
 
     def calculate(self):
         if self.calculateFlag==1:
             self.calculateFlag=0
             try:
                 self.data.calculate()
-                self.fillEnvData()
+                self.fillEnvDataLite()
                 self.fillLayerDividers()
                 self.visualizeWidget.updateGraph(self.data)
             except ZeroDivisionError:

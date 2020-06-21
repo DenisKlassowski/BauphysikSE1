@@ -78,6 +78,7 @@ class LayerWidget(QtWidgets.QWidget):
         self.layerWidthComboBox.currentIndexChanged.connect(self.widthFactorChanged)
 
         self.layerLambdaLabel = QtWidgets.QLabel()
+        self.layerLambdaLabel.setAlignment(QtCore.Qt.AlignCenter|QtCore.Qt.AlignRight)
         self.layerLambdaDoubleSpinBox = MyDoubleSpinBox()
         self.layerLambdaDoubleSpinBox.setMinimum(0.000)
         self.layerLambdaDoubleSpinBox.setValue(0.01)
@@ -87,8 +88,9 @@ class LayerWidget(QtWidgets.QWidget):
         self.layerLambdaUnitLabel = QtWidgets.QLabel()
 
         self.layerResLabel = QtWidgets.QLabel()
+        self.layerResLabel.setAlignment(QtCore.Qt.AlignCenter|QtCore.Qt.AlignRight)
         self.layerResDoubleSpinBox = MyDoubleSpinBox()
-        self.layerResDoubleSpinBox.setDecimals(4)
+        self.layerResDoubleSpinBox.setDecimals(5)
         self.layerResDoubleSpinBox.setSingleStep(0.0001)
         self.layerResDoubleSpinBox.setMaximum(999.9999)
         self.layerResDoubleSpinBox.setEditable(0)
@@ -102,17 +104,7 @@ class LayerWidget(QtWidgets.QWidget):
         #set data in data object
         self.initData()
 
-        #temperature soon to be depricated
-        #self.layerTempOutLabel = QtWidgets.QLabel()
-        #self.layerTempInLabel = QtWidgets.QLabel()
-
-        #self.layerTempOutDoubleSpinBox = MyDoubleSpinBox()
-        #self.layerTempInDoubleSpinBox = MyDoubleSpinBox()
-
-        #self.layerTempUnitLabel1 = QtWidgets.QLabel()
-        #self.layerTempUnitLabel2 = QtWidgets.QLabel()
-
-        #assemble body layou
+        #assemble body layout
         self.bodyLayout.addWidget(self.layerWidthLabel,0,0)
         self.bodyLayout.addWidget(self.layerWidthDoubleSpinBox,0,1)
         self.bodyLayout.addWidget(self.layerWidthComboBox,0,2)

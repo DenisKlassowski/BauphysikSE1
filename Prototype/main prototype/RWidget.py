@@ -21,17 +21,22 @@ class RWidget(QtWidgets.QWidget):
         self.rInvertedLabel = QtWidgets.QLabel()
 
         self.rOutsideDoubleSpinBox = MyDoubleSpinBox()
-        self.rOutsideDoubleSpinBox.setDecimals(4)
+        self.rOutsideDoubleSpinBox.setDecimals(5)
+        self.rOutsideDoubleSpinBox.setSingleStep(0.0001)
         self.rInsideDoubleSpinBox = MyDoubleSpinBox()
-        self.rInsideDoubleSpinBox.setDecimals(4)
+        self.rInsideDoubleSpinBox.setDecimals(5)
+        self.rInsideDoubleSpinBox.setSingleStep(0.0001)
         self.rOverallDoubleSpinBox = MyDoubleSpinBox()
-        self.rOverallDoubleSpinBox.setDecimals(4)
+        self.rOverallDoubleSpinBox.setDecimals(5)
+        self.rOverallDoubleSpinBox.setSingleStep(0.0001)
         self.rOverallDoubleSpinBox.setEditable(0)
         self.rTOverallDoubleSpinBox = MyDoubleSpinBox()
-        self.rTOverallDoubleSpinBox.setDecimals(4)
+        self.rTOverallDoubleSpinBox.setDecimals(5)
+        self.rTOverallDoubleSpinBox.setSingleStep(0.0001)
         self.rTOverallDoubleSpinBox.setEditable(0)
         self.rInvertedDoubleSpinBox = MyDoubleSpinBox()
-        self.rInvertedDoubleSpinBox.setDecimals(4)
+        self.rInvertedDoubleSpinBox.setDecimals(5)
+        self.rInvertedDoubleSpinBox.setSingleStep(0.0001)
         self.rInvertedDoubleSpinBox.setEditable(0)
 
         self.rUnitLabel1 = QtWidgets.QLabel()
@@ -80,6 +85,9 @@ class RWidget(QtWidgets.QWidget):
     def setData(self, rleft, rright, roverall, rt, rinverted):
         self.rInsideDoubleSpinBox.setValue(rleft)
         self.rOutsideDoubleSpinBox.setValue(rright)
+        self.setDataLite(roverall,rt,rinverted)
+
+    def setDataLite(self, roverall, rt, rinverted):
         self.rOverallDoubleSpinBox.setValue(roverall)
         self.rTOverallDoubleSpinBox.setValue(rt)
         self.rInvertedDoubleSpinBox.setValue(rinverted)
