@@ -50,7 +50,7 @@ class MainWindow(QtWidgets.QMainWindow):
         self.actionLoad = QtWidgets.QAction()
         self.actionPrint = QtWidgets.QAction()
 
-    self.actionPrint.triggered.connect(self.printing)
+        self.actionPrint.triggered.connect(self.printing)
 
         menuFile.addAction(self.actionNew)
         menuFile.addAction(self.actionSave)

@@ -290,6 +290,6 @@ class LayerWidget(QtWidgets.QWidget):
             self.widthFactor(0.001)
         self.layerWidthDoubleSpinBox.setValue(self.data.width*self.widthFactor)
         self.layerComboBox.setIndex(self.data.widthUnit)
-        self.layerLambdaDoubleSpinBox.setValue(self.data.lamba_)
+        self.layerLambdaDoubleSpinBox.setValue(self.data.lambda_)
         self.layerResDoubleSpinBox.setValue(self.data.r)
         self.calculateFlag=1
