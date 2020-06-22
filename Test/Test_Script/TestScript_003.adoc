@@ -45,3 +45,5 @@ Es ist eine handelsübliche Maus sowie eine handelsübliche Tastatur an den Comp
 20.05.2020 - Prototyp 3: Test wurde am Heim-PC erfolgreich durchgeführt.
 
 07.06.2020 - Prototyp 4: Test wurde am Heim-PC erfolgreich durchgeführt.
+
+22.06.2020 - Prototyp 4: Test wurde am Heim-PC erfolgreich durchgeführt.

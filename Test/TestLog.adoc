@@ -34,6 +34,13 @@ manuell
 | link:Test_Script/TestScript_018.adoc[018] | Temperaturverlauf 2 Schichten R_i bekannt V2 | manuell
 | link:Test_Script/TestScript_019.adoc[019] | Temperaturverlauf 2 Schichten R_i bekannt V3 | manuell
 | link:Test_Script/TestScript_020.adoc[020] | Temperaturverlauf 4 Schichten | manuell
+| link:Test_Script/TestScript_009.adoc[021] | Reihenberechnung 4 Schichten | automatisiert
+| link:Test_Script/TestScript_010.adoc[022] | Reihenberechnung 3 Schichten | automatisiert
+| link:Test_Script/TestScript_011.adoc[023] | Reihenberechnung 5 Schichten | automatisiert
+| link:Test_Script/TestScript_012.adoc[024] | Reihenberechnung 2 Schichten R_i bekannt | automatisiert
+| link:Test_Script/TestScript_013.adoc[025] | Reihenberechnung 2 Schichten R_i bekannt V2 | automatisiert
+| link:Test_Script/TestScript_014.adoc[026] | Reihenberechnung 2 Schichten | automatisiert
+| link:Test_Script/TestScript_015.adoc[027] | Reihenberechnung 2 Schichten V2 | automatisiert
 |===
 
 == Testergebnisse
@@ -106,4 +113,33 @@ Es folgt eine Übersicht über die in der jeweiligen Testphase am jeweiligen Pro
 | 07.06.2020 |  0.4   | 018 | Fehler    | CL | berechnete Temperatur zwischen Schicht 1 und 2 weicht erheblich von Erwartung ab
 | 07.06.2020 |  0.4   | 019 | Fehler    | CL | berechnete Temperatur zwischen Schicht 1 und 2 weicht erheblich von Erwartung ab
 | 07.06.2020 |  0.4   | 020 | bestanden | CL |am Heim-PC durchgeführt
+|===
+
+
+=== Prototyp 5
+
+|===
+| *Datum* | *Version* | *Testscript* | *Ergebnis* | *Verantwortlich* |*Kommentar*
+| 22.06.2020 |  0.5   | 001 | bestanden | CL |am Heim-PC durchgeführt
+| 22.06.2020 |  0.5   | 002 | bestanden | CL |am Heim-PC durchgeführt
+| 22.06.2020 |  0.5   | 003 | bestanden | CL |am Heim-PC durchgeführt
+| 22.06.2020 |  0.5   | 004 | bestanden | CL |am Heim-PC durchgeführt
+| 22.06.2020 |  0.5   | 005 | bestanden | CL |am Heim-PC durchgeführt
+| 22.06.2020 |  0.5   | 006 | bestanden | CL |am Heim-PC durchgeführt
+| 22.06.2020 |  0.5   | 007 | bestanden | CL |am Heim-PC durchgeführt
+| 22.06.2020 |  0.5   | 008 | bestanden | CL |am Heim-PC durchgeführt
+| 22.06.2020 |  0.5   | 009 | bestanden | CL |am Heim-PC durchgeführt
+| 22.06.2020 |  0.5   | 010 | bestanden | CL |am Heim-PC durchgeführt
+| 22.06.2020 |  0.5   | 011 | bestanden | CL |am Heim-PC durchgeführt
+| 22.06.2020 |  0.5   | 012 | bestanden | CL |am Heim-PC durchgeführt
+| 22.06.2020 |  0.5   | 013 | bestanden | CL |am Heim-PC durchgeführt
+| 22.06.2020 |  0.5   | 014 | bestanden | CL |am Heim-PC durchgeführt
+| 22.06.2020 |  0.5   | 015 | bestanden | CL |am Heim-PC durchgeführt
+| 22.06.2020 |  0.5   | 021 | bestanden | CL |am Heim-PC durchgeführt
+| 22.06.2020 |  0.5   | 022 | bestanden | CL |am Heim-PC durchgeführt
+| 22.06.2020 |  0.5   | 023 | bestanden | CL |am Heim-PC durchgeführt
+| 22.06.2020 |  0.5   | 024 | bestanden | CL |am Heim-PC durchgeführt
+| 22.06.2020 |  0.5   | 025 | bestanden | CL |am Heim-PC durchgeführt
+| 22.06.2020 |  0.5   | 026 | bestanden | CL |am Heim-PC durchgeführt
+| 22.06.2020 |  0.5   | 027 | bestanden | CL |am Heim-PC durchgeführt
 |===
