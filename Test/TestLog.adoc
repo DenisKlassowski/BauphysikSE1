@@ -41,6 +41,7 @@ manuell
 | link:Test_Script/TestScript_013.adoc[025] | Reihenberechnung 2 Schichten R_i bekannt V2 | automatisiert
 | link:Test_Script/TestScript_014.adoc[026] | Reihenberechnung 2 Schichten | automatisiert
 | link:Test_Script/TestScript_015.adoc[027] | Reihenberechnung 2 Schichten V2 | automatisiert
+| link:Test_Script/TestScript_015.adoc[033] | Export & Import | automatisiert
 |===
 
 == Testergebnisse
@@ -142,4 +143,5 @@ Es folgt eine Übersicht über die in der jeweiligen Testphase am jeweiligen Pro
 | 22.06.2020 |  0.5   | 025 | bestanden | CL |am Heim-PC durchgeführt
 | 22.06.2020 |  0.5   | 026 | bestanden | CL |am Heim-PC durchgeführt
 | 22.06.2020 |  0.5   | 027 | bestanden | CL |am Heim-PC durchgeführt
+| 25.06.2020 |  0.5   | 033 | bestanden | CL |am Heim-PC durchgeführt
 |===
