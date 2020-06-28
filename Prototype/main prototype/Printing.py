@@ -12,7 +12,7 @@ class Print(QtWidgets.QWidget):
         self.tab = tab
         self.tableinput = QtWidgets.QTableWidget(rows,5,self)
         self.tableoutput = QtWidgets.QTableWidget(rows,3,self)
-        self.printer = QtPrintSupport.QPrinter(QtPrintSupport.QPrinter.HighResolution)
+        self.printer = QtPrintSupport.QPrinter(QtPrintSupport.QPrinter.PrinterResolution)
         self.printer.setPageMargins(12,16,12,20, QtPrintSupport.QPrinter.Millimeter)
         self.printer.setFullPage(True)
         self.printer.setPageSize(QtPrintSupport.QPrinter.A4)
@@ -63,15 +63,18 @@ class Print(QtWidgets.QWidget):
 
     def handlePreview(self):
         dialog = QtPrintSupport.QPrintPreviewDialog()
+        rec = QApplication.desktop().screenGeometry()
+        dialog.resize(0.8*(rec.width()),0.8*(rec.height()))
         dialog.paintRequested.connect(self.handlePaintRequest)
         dialog.exec_()
 
     def handlePaintRequest(self,printer):
         table_format = QtGui.QTextTableFormat()
-        table_format.setWidth(700)
+        table_format.setWidth(int(printer.pageRect().width())-int(0.2*(printer.pageRect().width())))
         document = QtGui.QTextDocument()
-        #document.setPageSize(self.printer.PageSize().size())
-        #document.setFullPage(True)
+        #document.setDocumentMargin(100)
+        #document.setPageSize(QtCore.QSizeF(printer.pageRect().width))
+        print(printer.pageRect())
         dialog = QtPrintSupport.QPrintPreviewDialog()
         cursor = QtGui.QTextCursor(document)
         cursor.MoveOperation(1)
@@ -119,6 +122,8 @@ class Print(QtWidgets.QWidget):
         img = self.tab.visualizeWidget.getImage()
         if img is not None:
             cursor.insertImage(img)
+        else:
+            print("is none")
         document.print_(printer)
 
 

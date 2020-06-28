@@ -4,7 +4,7 @@ class Window(QtWidgets.QWidget):
     def __init__(self):
         QtWidgets.QWidget.__init__(self)
         self.setWindowTitle(self.tr('ProtoDrucken'))
-        self.table = QtWidgets.QTableWidget(5, 5, self)
+        self.table = QtWidgets.QTableWidget(5, 10, self)
 
         for row in range(self.table.rowCount()):
             for col in range(self.table.columnCount()):

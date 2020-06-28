@@ -56,6 +56,7 @@ class VisualizeWidget(QtWidgets.QWidget):
         try:
             exporter = exporters.ImageExporter(self.graphWidget.plotItem)
             img = exporter.export(None,True,False)
+            return img
         except:
             img = None
             return img

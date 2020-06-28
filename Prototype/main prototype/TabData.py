@@ -2,7 +2,7 @@ import Calculation
 
 
 class TabData:
-    def __init__(self, mode, name, layers=None, rright=None, rleft=None, rsum=None, rt=None, tright=None, tleft=None, u=None):
+    def __init__(self, mode, name, layers=None, rright=None, rleft=None, rsum=None, rt=None, tright=None, tleft=None, u=None, currentFileLocation=None):
         #some trickery because default values in the constructor call kind of destroy the the possibility to have multiple instances of the same class. Why? Python, that's why. further information: https://stackoverflow.com/questions/4841782/python-constructor-and-default-value
         self.name = name
         self.layers = layers if layers is not None else []
@@ -14,6 +14,7 @@ class TabData:
         self.mode = mode
         self.u = u if u is not None else 0.0
         self.rt = rt if rt is not None else 0.0
+        self.currentFileLocation = currentFileLocation if currentFileLocation is not None else None
 
     def add_layer(self, layer):
         self.layers.append(layer)

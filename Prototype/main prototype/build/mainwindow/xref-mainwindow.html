@@ -596,6 +596,17 @@ imported by:
 </div>
 
 <div class="node">
+  <a name="Exporter"></a>
+  <a target="code" href="///C:/Users/salzg/Documents/HTW/3.%20Sem/SE/BauphysikSE1/Prototype/main%20prototype/Exporter.py" type="text/plain"><tt>Exporter</tt></a>
+<span class="moduletype">SourceModule</span>  <div class="import">
+imported by:
+    <a href="#master">master</a>
+
+  </div>
+
+</div>
+
+<div class="node">
   <a name="GraphicsView"></a>
   <a target="code" href="" type="text/plain"><tt>GraphicsView</tt></a>
 <span class="moduletype">MissingModule</span>  <div class="import">
@@ -618,6 +629,7 @@ imports:
   <div class="import">
 imported by:
     <a href="#LayerWidget">LayerWidget</a>
+ &#8226;   <a href="#Parser">Parser</a>
 
   </div>
 
@@ -704,6 +716,23 @@ imported by:
 </div>
 
 <div class="node">
+  <a name="Parser"></a>
+  <a target="code" href="///C:/Users/salzg/Documents/HTW/3.%20Sem/SE/BauphysikSE1/Prototype/main%20prototype/Parser.py" type="text/plain"><tt>Parser</tt></a>
+<span class="moduletype">SourceModule</span>  <div class="import">
+imports:
+    <a href="#LayerData">LayerData</a>
+ &#8226;   <a href="#TabData">TabData</a>
+
+  </div>
+  <div class="import">
+imported by:
+    <a href="#master">master</a>
+
+  </div>
+
+</div>
+
+<div class="node">
   <a name="Printing"></a>
   <a target="code" href="///C:/Users/salzg/Documents/HTW/3.%20Sem/SE/BauphysikSE1/Prototype/main%20prototype/Printing.py" type="text/plain"><tt>Printing</tt></a>
 <span class="moduletype">SourceModule</span>  <div class="import">
@@ -713,6 +742,8 @@ imports:
  &#8226;   <a href="#PyQt5.QtGui">PyQt5.QtGui</a>
  &#8226;   <a href="#PyQt5.QtPrintSupport">PyQt5.QtPrintSupport</a>
  &#8226;   <a href="#PyQt5.QtWidgets">PyQt5.QtWidgets</a>
+ &#8226;   <a href="#Tab">Tab</a>
+ &#8226;   <a href="#sys">sys</a>
 
   </div>
   <div class="import">
@@ -1608,7 +1639,8 @@ imports:
   </div>
   <div class="import">
 imported by:
-    <a href="#master">master</a>
+    <a href="#Printing">Printing</a>
+ &#8226;   <a href="#master">master</a>
 
   </div>
 
@@ -1624,7 +1656,8 @@ imports:
   </div>
   <div class="import">
 imported by:
-    <a href="#Tab">Tab</a>
+    <a href="#Parser">Parser</a>
+ &#8226;   <a href="#Tab">Tab</a>
 
   </div>
 
@@ -1658,6 +1691,7 @@ imports:
  &#8226;   <a href="#PyQt5.QtCore">PyQt5.QtCore</a>
  &#8226;   <a href="#PyQt5.QtWidgets">PyQt5.QtWidgets</a>
  &#8226;   <a href="#pyqtgraph">pyqtgraph</a>
+ &#8226;   <a href="#pyqtgraph.exporters">pyqtgraph.exporters</a>
 
   </div>
   <div class="import">
@@ -11642,7 +11676,9 @@ imported by:
   <a target="code" href="///C:/Users/salzg/Documents/HTW/3.%20Sem/SE/BauphysikSE1/Prototype/main%20prototype/master.py" type="text/plain"><tt>master</tt></a>
 <span class="moduletype">SourceModule</span>  <div class="import">
 imports:
-    <a href="#NewTab">NewTab</a>
+    <a href="#Exporter">Exporter</a>
+ &#8226;   <a href="#NewTab">NewTab</a>
+ &#8226;   <a href="#Parser">Parser</a>
  &#8226;   <a href="#Printing">Printing</a>
  &#8226;   <a href="#PyQt5">PyQt5</a>
  &#8226;   <a href="#PyQt5.QtCore">PyQt5.QtCore</a>
@@ -20051,7 +20087,8 @@ imports:
   </div>
   <div class="import">
 imported by:
-    <a href="#pyqtgraph">pyqtgraph</a>
+    <a href="#VisualizeWidget">VisualizeWidget</a>
+ &#8226;   <a href="#pyqtgraph">pyqtgraph</a>
  &#8226;   <a href="#pyqtgraph.GraphicsScene.exportDialog">pyqtgraph.GraphicsScene.exportDialog</a>
  &#8226;   <a href="#pyqtgraph.exporters.CSVExporter">pyqtgraph.exporters.CSVExporter</a>
  &#8226;   <a href="#pyqtgraph.exporters.Exporter">pyqtgraph.exporters.Exporter</a>
@@ -25713,7 +25750,8 @@ imported by:
   <a name="sys"></a>
   <tt>sys</tt> <span class="moduletype"><i>(builtin module)</i></span>  <div class="import">
 imported by:
-    <a href="#PyInstaller">PyInstaller</a>
+    <a href="#Printing">Printing</a>
+ &#8226;   <a href="#PyInstaller">PyInstaller</a>
  &#8226;   <a href="#PyInstaller.archive.writers">PyInstaller.archive.writers</a>
  &#8226;   <a href="#PyInstaller.building.build_main">PyInstaller.building.build_main</a>
  &#8226;   <a href="#PyInstaller.building.makespec">PyInstaller.building.makespec</a>

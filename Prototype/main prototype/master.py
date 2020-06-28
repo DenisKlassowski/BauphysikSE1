@@ -4,6 +4,7 @@ from Tab import Tab
 from NewTab import NewTab
 from Printing import Print
 import Parser
+from Exporter import Exporter
 
 
 class MainWindow(QtWidgets.QMainWindow):
@@ -174,7 +175,6 @@ class MainWindow(QtWidgets.QMainWindow):
     def activateMenues(self):
         if(self.tabWidget.currentIndex()==(self.tabWidget.count()-1)):
             self.menuModus.menuAction().setEnabled(False)
-            print(self.menuFile.actions())
             self.menuFile.actions()[1].setEnabled(False)
             self.menuFile.actions()[2].setEnabled(False)
             self.menuFile.actions()[5].setEnabled(False)
@@ -206,16 +206,43 @@ class MainWindow(QtWidgets.QMainWindow):
 
     def saveAs(self):
         tr = QtCore.QCoreApplication.translate
-        fileName = QtWidgets.QFileDialog.getSaveFileName(self, tr("SaveDialog:", "Berechnung speichern"), "", tr("Bauphysikberechnung (*.baup);;Alle Dateien (*)"))
+        fileName = QtWidgets.QFileDialog.getSaveFileName(self, tr("SaveDialog:", "Berechnung speichern"), "", tr("SaveDialog:","Bauphysikberechnung (*.baup);;Alle Dateien (*)"))
+        if(not all(fileName)):
+            file = QtCore.QFile(fileName)
+            if(not file.open(QtCore.QIODevice.WriteOnly)):
+                QtWidgets.QMessageBox.Information(self, tr("SaveDialog:", "Datei kann nicht geöffnet werden"), file.errorString())
+                return
+        fileNameStringWithEnding= fileName[0].split("/")
+        fileNameStringWithEnding=fileNameStringWithEnding[len(fileNameStringWithEnding)-1]
+        fileNameStringWithEnding=fileNameStringWithEnding.split(".")
+        fileNameString=""
+        for x in range(len(fileNameStringWithEnding)-1):
+            if x == 0:
+                fileNameString+=fileNameStringWithEnding[x]
+            else:
+                fileNameString+="."+fileNameStringWithEnding[x]
+        self.tabWidget.currentWidget().data.name = fileNameString
+        self.tabWidget.currentWidget().data.currentFileLocation = fileName[0]
+        exp = Exporter(self.tabWidget.currentWidget().data)
+        exp.export(fileName[0])
+        self.updateName()
+
+    def updateName(self):
+        name = self.tabWidget.currentWidget().data.name
+        self.tabWidget.setTabText(self.tabWidget.currentIndex(), name)
 
     def quickSave(self):
-        pass
+        if self.tabWidget.currentWidget().data.currentFileLocation is None:
+            self.saveAs()
+        else:
+            exp = Exporter(self.tabWidget.currentWidget().data)
+            exp.export(self.tabWidget.currentWidget().data.currentFileLocation)
 
     def openFile(self):
         pass
 
     def switchToNewTab(self):
-        pass
+        self.tabWidget.setCurrentIndex(self.tabWidget.count()-1)
 
     def retranslateUi(self):
         _translate = QtCore.QCoreApplication.translate
@@ -226,11 +253,11 @@ class MainWindow(QtWidgets.QMainWindow):
         self.actionSave.setText(_translate("MainWindow", "Speichern"))
         self.actionSave.setShortcut(_translate("MainWindow", "Ctrl+S"))
         self.actionSaveAs.setText(_translate("MainWindow", "Speichern unter..."))
-        self.actionLoad.setText(_translate("MainWindow", "Laden"))
+        self.actionLoad.setText(_translate("MainWindow", "Öffnen"))
         self.actionPrint.setText(_translate("MainWindow", "Drucken"))
         self.actionPrint.setShortcut(_translate("MainWindow", "Ctrl+P"))
         self.actionNew.setText(_translate("MainWindow", "Neu"))
-        self.actionNew.setShortcut(_translate("MainWindow", "Ctrl+N, Ctrl+T"))
+        self.actionNew.setShortcut(_translate("MainWindow", "Ctrl+T"))
         #modus options
         self.actionModusU.setText(_translate("MainWindow","U berechnen"))
         self.actionModusTemp.setText(_translate("MainWindow","Temperaturkurve berechnen"))
