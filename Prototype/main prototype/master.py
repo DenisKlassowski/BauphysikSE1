@@ -178,7 +178,7 @@ class MainWindow(QtWidgets.QMainWindow):
     def modusSwitchToTemp(self):
         self.tabWidget.currentWidget().switchToTemp()
 
-    def printing(self):
+def printing(self):
         Printing.printing(self.tabWidget.currentWidget().data)
 
     def retranslateUi(self):
