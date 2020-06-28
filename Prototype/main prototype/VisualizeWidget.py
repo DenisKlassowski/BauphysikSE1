@@ -2,6 +2,7 @@
 from PyQt5 import QtCore
 from PyQt5 import QtWidgets
 import pyqtgraph as pg
+from pyqtgraph import exporters
 
 
 class VisualizeWidget(QtWidgets.QWidget):
@@ -50,3 +51,12 @@ class VisualizeWidget(QtWidgets.QWidget):
             self.graphWidget.hide()
         else:
             self.graphWidget.show()
+
+    def getImage(self):
+        try:
+            exporter = exporters.ImageExporter(self.graphWidget.plotItem)
+            img = exporter.export(None,True,False)
+        except:
+            img = None
+            return img
+
