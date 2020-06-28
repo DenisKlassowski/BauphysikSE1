@@ -14,7 +14,7 @@ class Parser:
         for line in f.readlines():
             data = line.split(": ")
 
-            if len(data) == 2:
+            if len(data) >= 2:
                 if data[0] == "name":
                     td.name = data[1]
                 elif data[0] == "rright":
@@ -33,8 +33,10 @@ class Parser:
                     td.rt = data[1]
                 elif data[0] == "mode":
                     td.mode = data[1]
-                elif data[0] == "layers":
+                elif data[0] == "\tlayer":
                     ld = data[1].split(", ")
-                    td.add_layer(LayerData.LayerData(ld[0], ld[1], ld[2], ld[3], ld[7]))
+                    td.add_layer(LayerData.LayerData(ld[7], ld[3], ld[2], ld[0], ld[1]))
+
+        f.close()
 
         return td

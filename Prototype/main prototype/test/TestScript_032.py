@@ -4,10 +4,10 @@ import Calculation
 from TabData import TabData
 from LayerData import LayerData
 
-class TestScript_021(unittest.TestCase):
+class TestScript_032(unittest.TestCase):
     """
-    U-Berechnung 4 Schichten
-    analog manuellem TestScript_009
+    Temperaturverlaufs-Berechnung 4 Schichten
+    analog manuellem TestScript_020
     """
     def setUp(self):
         #erstelle erste Schicht
@@ -35,9 +35,11 @@ class TestScript_021(unittest.TestCase):
         self.layer_4.lambda_ = 0.700
 
         #erstelle Tab
-        self.tab = TabData(0, "Test_021")
+        self.tab = TabData(1, "Test_032")
         self.tab.rright = 0.04
         self.tab.rleft = 0.13
+        self.tab.tright = 21
+        self.tab.tleft = 4
 
         #Schichten in Tab hinzufügen
         self.tab.add_layer(self.layer_1)
@@ -81,6 +83,20 @@ class TestScript_021(unittest.TestCase):
         self.assertTrue(round(self.tab.rsum,4) == 1.6111)
         self.assertTrue(round(self.tab.rt,4) == 1.7811)
         self.assertTrue(round(self.tab.u,4) == 0.5614)
+
+    def test_6(self):
+        """
+            Check calculated temperature
+        """
+        self.tab.calculate()
+        #self.assertEqual(float(round(self.tab.layers[0].t_left, 2)), 19.76)
+        #self.assertEqual(float(round(self.tab.layers[0].t_right, 2)), 19.21)
+        #self.assertEqual(float(round(self.tab.layers[1].t_left, 2)), 19.21)
+        self.assertEqual(float(round(self.tab.layers[1].t_right, 2)), 15.12)
+        self.assertEqual(float(round(self.tab.layers[2].t_left, 2)), 15.12)
+        self.assertEqual(float(round(self.tab.layers[2].t_right, 2)), 4.52)
+        self.assertEqual(float(round(self.tab.layers[3].t_left, 2)), 4.52)
+        self.assertEqual(float(round(self.tab.layers[3].t_right, 2)), 4.38)
 
 
 if __name__ == '__main__':

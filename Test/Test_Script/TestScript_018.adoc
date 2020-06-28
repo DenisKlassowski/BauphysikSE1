@@ -52,8 +52,8 @@ Aussentemperatur: -7 °C
 
 |===
 |           | Wärmedurchlasswiderstand  λ
-| Schicht 1 | 0,54   
-| Schicht 2 | 2,5 
+| Schicht 1 | 2,5   
+| Schicht 2 | 0,54 
 |===
 
-07.06.2020 - Prototyp 4: Test wurde am Heim-PC durchgeführt. Fehler aufgetreten im Vergleich zum erwarteten Ergebnis: Temperatur zwischen Schicht 1 und Schicht 2 ist 15,16 °C statt -1,9 °C. Vertauscht man die Werte der Wandschichten, erhält man erwartetes Ergebnis. Könnte an falscher Aufgabe/Vorlage der Rechnung liegen, das ähnliches Testscript (017) erfolgreich.
+07.06.2020 - Prototyp 4: Test wurde am Heim-PC durchgeführt. Fehler aufgetreten im Vergleich zum erwarteten Ergebnis: Temperatur zwischen Schicht 1 und Schicht 2 ist 15,16 °C statt -1,9 °C. Vertauscht man die Werte der Wandschichten, erhält man erwartetes Ergebnis. Könnte an falscher Aufgabe/Vorlage der Rechnung liegen, da ähnliches Testscript (017) erfolgreich.

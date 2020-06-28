@@ -51,3 +51,5 @@ R_se = 0,04
 == Test Log
 
 07.06.2020 - Prototyp 4: Test wurde am Heim-PC erfolgreich durchgeführt.
+
+22.06.2020 - Prototyp 4: Test wurde am Heim-PC erfolgreich durchgeführt.
