@@ -94,7 +94,6 @@ class Tab(QtWidgets.QWidget):
         self.layerLayout = QtWidgets.QFormLayout()
         self.layerLayout.setSpacing(20)
 
-
         #data handling
         if data is None:
             self.data=TabData(self.mode,name)
@@ -107,6 +106,9 @@ class Tab(QtWidgets.QWidget):
             self.addLayer(0)
         else:
             self.fillLayers()
+            self.fillLayerDividers()
+            self.calculate()
+            self.visualizeWidget.updateGraph(self.data)
 
         layersWidget.setLayout(self.layerLayout)
 
@@ -178,6 +180,27 @@ class Tab(QtWidgets.QWidget):
 
         self.updatePositionLayers(position)
         self.data.insert_layer(l.data,position)
+
+    def loadLayer(self,position, layerData):
+        #enable delete button on the former solitary layer
+        if(self.layerCount==1):
+            self.layerLayout.itemAt(1,2).widget().setRemovable(True)
+
+        l=LayerWidget(position,self.mode,layerData)
+        if(self.layerCount==0):
+            #if first layer
+            self.layerLayout.insertRow(1,l)
+            self.layerLayout.itemAt(1,2).widget().setRemovable(False)
+        else:
+            #add seperator
+            self.layerLayout.insertRow(position*2, LayerDivider(self.mode))
+            #add layer
+            self.layerLayout.insertRow((position*2)+1, l)
+
+
+        self.layerCount+=1
+
+        self.updatePositionLayers(position)
 
     def deleteLayer(self, position):
         self.data.remove_layer(position)
@@ -258,8 +281,8 @@ class Tab(QtWidgets.QWidget):
         self.calculateFlag=1
 
     def fillLayers(self):
-        #to be continued
-        pass
+        for x in range(len(self.data.layers)):
+            self.loadLayer(x,self.data.layers[x])
 
     def fillLayerDividers(self):
         if self.mode == 1:

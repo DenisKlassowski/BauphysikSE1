@@ -3,7 +3,7 @@ from PyQt5 import QtCore, QtWidgets, QtGui
 from Tab import Tab
 from NewTab import NewTab
 from Printing import Print
-import Parser
+from Parser import Parser
 from Exporter import Exporter
 
 
@@ -185,9 +185,13 @@ class MainWindow(QtWidgets.QMainWindow):
             self.menuFile.actions()[5].setEnabled(True)
 
 
-    def addNewTab(self, modus):
-        tab = Tab (modus, QtCore.QCoreApplication.translate("MainWindow","Neuer Tab"), None)
-        self.tabWidget.insertTab(self.tabWidget.count()-1,tab, QtCore.QCoreApplication.translate("MainWindow","Neuer Tab"))
+    def addNewTab(self, modus, tabData=None):
+        if(tabData is None):
+            tab = Tab (modus, QtCore.QCoreApplication.translate("MainWindow","Neuer Tab"))
+            self.tabWidget.insertTab(self.tabWidget.count()-1,tab, QtCore.QCoreApplication.translate("MainWindow","Neuer Tab"))
+        else:
+            tab = Tab (modus, tabData.name, tabData)
+            self.tabWidget.insertTab(self.tabWidget.count()-1,tab, QtCore.QCoreApplication.translate("MainWindow",tabData.name))
         self.tabWidget.setCurrentIndex(self.tabWidget.count()-2)
 
     def closeTab(self,index):
@@ -207,25 +211,27 @@ class MainWindow(QtWidgets.QMainWindow):
     def saveAs(self):
         tr = QtCore.QCoreApplication.translate
         fileName = QtWidgets.QFileDialog.getSaveFileName(self, tr("SaveDialog:", "Berechnung speichern"), "", tr("SaveDialog:","Bauphysikberechnung (*.baup);;Alle Dateien (*)"))
-        if(not all(fileName)):
-            file = QtCore.QFile(fileName)
+        if(all(fileName)):
+            file = QtCore.QFile(fileName[0])
             if(not file.open(QtCore.QIODevice.WriteOnly)):
                 QtWidgets.QMessageBox.Information(self, tr("SaveDialog:", "Datei kann nicht geöffnet werden"), file.errorString())
                 return
-        fileNameStringWithEnding= fileName[0].split("/")
-        fileNameStringWithEnding=fileNameStringWithEnding[len(fileNameStringWithEnding)-1]
-        fileNameStringWithEnding=fileNameStringWithEnding.split(".")
-        fileNameString=""
-        for x in range(len(fileNameStringWithEnding)-1):
-            if x == 0:
-                fileNameString+=fileNameStringWithEnding[x]
-            else:
-                fileNameString+="."+fileNameStringWithEnding[x]
-        self.tabWidget.currentWidget().data.name = fileNameString
-        self.tabWidget.currentWidget().data.currentFileLocation = fileName[0]
-        exp = Exporter(self.tabWidget.currentWidget().data)
-        exp.export(fileName[0])
-        self.updateName()
+            fileNameStringWithEnding= fileName[0].split("/")
+            fileNameStringWithEnding=fileNameStringWithEnding[len(fileNameStringWithEnding)-1]
+            fileNameStringWithEnding=fileNameStringWithEnding.split(".")
+            fileNameString=""
+            for x in range(len(fileNameStringWithEnding)-1):
+                if x == 0:
+                 fileNameString+=fileNameStringWithEnding[x]
+                else:
+                    fileNameString+="."+fileNameStringWithEnding[x]
+            self.tabWidget.currentWidget().data.name = fileNameString
+            self.tabWidget.currentWidget().data.currentFileLocation = fileName[0]
+            exp = Exporter(self.tabWidget.currentWidget().data)
+            exp.export(fileName[0])
+            self.updateName()
+        else:
+            return
 
     def updateName(self):
         name = self.tabWidget.currentWidget().data.name
@@ -239,7 +245,20 @@ class MainWindow(QtWidgets.QMainWindow):
             exp.export(self.tabWidget.currentWidget().data.currentFileLocation)
 
     def openFile(self):
-        pass
+        tr = QtCore.QCoreApplication.translate
+        fileName = QtWidgets.QFileDialog.getOpenFileName(self,tr("OpenDialog:", "Berechnung öffnen"), "", tr("OpenDialog:","Bauphysikberechnung (*.baup);;Alle Dateien (*)"))
+        if(all(fileName)):
+            file = QtCore.QFile(fileName[0])
+            if(not file.open(QtCore.QIODevice.ReadOnly)):
+                QtWidgets.QMessageBox.Information(self, tr("OpenDialog:", "Datei kann nicht geöffnet werden"), file.errorString())
+                return
+
+            parser = Parser(fileName[0])
+            tabdata = parser.parse()
+            self.addNewTab(tabdata.mode,tabdata)
+            self.tabWidget.currentWidget().data.currentFileLocation = fileName[0]
+
+
 
     def switchToNewTab(self):
         self.tabWidget.setCurrentIndex(self.tabWidget.count()-1)

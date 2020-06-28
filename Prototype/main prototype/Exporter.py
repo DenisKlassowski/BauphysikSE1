@@ -3,7 +3,6 @@ class Exporter:
         self.tab = tab
 
     def export(self, filename):
-        print("yee")
         data = ""
         data += "name: " + self.tab.name + "\n"
         data += "rright: " + str(self.tab.rright) + "\n"
@@ -31,5 +30,4 @@ class Exporter:
         full_string = data + layers
         f = open(filename, "w")
         f.write(full_string)
-        print(f)
         f.close()

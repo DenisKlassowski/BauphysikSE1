@@ -16,26 +16,26 @@ class Parser:
 
             if len(data) >= 2:
                 if data[0] == "name":
-                    td.name = data[1]
+                    td.name = data[1].split("\n")[0]
                 elif data[0] == "rright":
-                    td.rright = data[1]
+                    td.rright = float(data[1])
                 elif data[0] == "rleft":
-                    td.rleft = data[1]
+                    td.rleft = float(data[1])
                 elif data[0] == "rsum":
-                    td.rsum = data[1]
+                    td.rsum = float(data[1])
                 elif data[0] == "tright":
-                    td.tright = data[1]
+                    td.tright = float(data[1])
                 elif data[0] == "tleft":
-                    td.tleft = data[1]
+                    td.tleft = float(data[1])
                 elif data[0] == "u":
-                    td.u = data[1]
+                    td.u = float(data[1])
                 elif data[0] == "rt":
-                    td.rt = data[1]
+                    td.rt = float(data[1])
                 elif data[0] == "mode":
-                    td.mode = data[1]
+                    td.mode = int(data[1])
                 elif data[0] == "\tlayer":
                     ld = data[1].split(", ")
-                    td.add_layer(LayerData.LayerData(ld[7], ld[3], ld[2], ld[0], ld[1]))
+                    td.add_layer(LayerData.LayerData(int(ld[7]), float(ld[3]), float(ld[2]), float(ld[0]), int(ld[1])))
 
         f.close()
 

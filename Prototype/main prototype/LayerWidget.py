@@ -5,16 +5,13 @@ from CustomMiniWidgets import MyDoubleSpinBox, MyComboBox
 from LayerData import LayerData
 
 class LayerWidget(QtWidgets.QWidget):
-    def __init__(self,position,mode):
+    def __init__(self,position,mode,data=None):
         QtWidgets.QWidget.__init__(self)
 
         #information from upper levels
         self.mode=mode
         self.position=position
 
-        #data
-        self.data=LayerData()
-        self.widthFactor = 1
 
         #flag to check whether calculations should happen or not. used for loading/startup process
         self.calculateFlag = 1
@@ -101,8 +98,14 @@ class LayerWidget(QtWidgets.QWidget):
         self.layerResGivenCheckBox = QtWidgets.QCheckBox(QtCore.QCoreApplication.translate("LayerWidget", "R gegeben "))
         self.layerResGivenCheckBox.stateChanged.connect(self.resGivenCheckboxChanged)
 
-        #set data in data object
-        self.initData()
+        #data
+        if(data is None):
+            self.data=LayerData()
+            self.widthFactor = 1
+            self.initData()
+        else:
+            self.data=data
+            self.updateValues()
 
         #assemble body layout
         self.bodyLayout.addWidget(self.layerWidthLabel,0,0)
@@ -252,11 +255,12 @@ class LayerWidget(QtWidgets.QWidget):
         self.calculate()
 
     def calculate(self):
-        if self.layerResGivenCheckBox.checkState():
-            self.calculate_lambda()
-        else:
-            self.calculate_r()
-        self.parent().parent().parent().parent().parent().calculate()
+        if(self.calculateFlag):
+            if self.layerResGivenCheckBox.checkState():
+                self.calculate_lambda()
+            else:
+                self.calculate_r()
+            self.parent().parent().parent().parent().parent().calculate()
 
     def calculate_r(self):
         if(self.calculateFlag):
@@ -283,13 +287,13 @@ class LayerWidget(QtWidgets.QWidget):
     def updateValues(self):
         self.calculateFlag=0
         if self.data.widthUnit==0:
-            self.widthFactor(1)
+            self.widthFactor=1
         elif self.data.widthUnit==1:
-            self.widthFactor(0.01)
+            self.widthFactor=0.01
         else:
-            self.widthFactor(0.001)
+            self.widthFactor=0.001
         self.layerWidthDoubleSpinBox.setValue(self.data.width*self.widthFactor)
-        self.layerComboBox.setIndex(self.data.widthUnit)
+        self.layerWidthComboBox.setCurrentIndex(self.data.widthUnit)
         self.layerLambdaDoubleSpinBox.setValue(self.data.lambda_)
         self.layerResDoubleSpinBox.setValue(self.data.r)
         self.calculateFlag=1
