@@ -3,7 +3,7 @@ import sys
 from PyQt5 import QtGui
 from PyQt5.QtWidgets import  QApplication, QMainWindow, QDesktopWidget
 from master import MainWindow
-
+import pathlib
 
 def main():
     app=QApplication(sys.argv)
