@@ -1,6 +1,6 @@
 # This Python file uses the following encoding: utf-8
 from PyQt5 import QtCore, QtWidgets, QtGui, Qt
-
+import pathlib
 
 class NewTab(QtWidgets.QWidget):
     def __init__(self):
@@ -20,22 +20,23 @@ class NewTab(QtWidgets.QWidget):
         #self.image = QtGui.QPixmap()
         #self.image.load("UI_Design/thermopgrafie.jpg")
         #buttons
+        path = pathlib.Path(__file__).parent.absolute()
         self.buttonOpen = QtWidgets.QPushButton()
-        self.buttonOpen.setIcon(QtGui.QIcon("UI_Design/folder_open-blue18dp.svg"))
+        self.buttonOpen.setIcon(QtGui.QIcon(str(path)+"/folder_open-blue18dp.svg"))
         self.buttonOpen.setIconSize(QtCore.QSize(180,180))
         self.buttonOpenLabel = QtWidgets.QLabel("<b>Öffnen</b>")
         self.buttonOpenLabel.setAlignment(QtCore.Qt.AlignCenter)
         self.buttonOpenLabel.setFixedWidth(200)
         self.buttonOpenLabel.setTextFormat(QtCore.Qt.TextFormat(1))
         self.buttonNewU = QtWidgets.QPushButton()
-        self.buttonNewU.setIcon(QtGui.QIcon("UI_Design/U-blue-18dp.svg"))
+        self.buttonNewU.setIcon(QtGui.QIcon(str(path)+"/U-blue-18dp.svg"))
         self.buttonNewU.setIconSize(QtCore.QSize(180,180))
         self.buttonNewULabel = QtWidgets.QLabel("<b>U-Berechnung</b>")
         self.buttonNewULabel.setFixedWidth(200)
         self.buttonNewULabel.setAlignment(QtCore.Qt.AlignCenter)
         self.buttonNewULabel.setTextFormat(QtCore.Qt.TextFormat(1))
         self.buttonNewTemp = QtWidgets.QPushButton()
-        self.buttonNewTemp.setIcon(QtGui.QIcon("UI_Design/timeline-blue-18dp.svg"))
+        self.buttonNewTemp.setIcon(QtGui.QIcon(str(path)+"/timeline-blue-18dp.svg"))
         self.buttonNewTemp.setIconSize(QtCore.QSize(180,180))
         self.buttonNewTempLabel = QtWidgets.QLabel("<b>Temperaturkurven-<br>berechnung</b>")
         self.buttonNewTempLabel.setFixedWidth(200)
