@@ -10,9 +10,9 @@ def main():
     f = app.font()
     f.setPointSize(12)
     app.setFont(f)
-    dw = QDesktopWidget()
+    path = pathlib.Path(__file__).parent.absolute()
     window = MainWindow()
-    window.setWindowIcon(QtGui.QIcon("BauphysikLogo02.png"))
+    window.setWindowIcon(QtGui.QIcon(str(path)+"/BauphysikLogo02.png"))
     window.setWindowTitle("Bauphysik")
     window.resize(1000,600)
 
