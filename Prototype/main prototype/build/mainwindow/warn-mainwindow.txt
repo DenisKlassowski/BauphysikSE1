@@ -15,7 +15,7 @@ IMPORTANT: Do NOT post this list to the issue-tracker. Use it as a basis for
            yourself tracking down the missing module. Thanks!
 
 missing module named _posixsubprocess - imported by subprocess (optional), multiprocessing.util (delayed)
-missing module named org - imported by copy (optional)
+missing module named 'org.python' - imported by copy (optional), xml.sax (delayed, conditional), setuptools.sandbox (conditional)
 missing module named _frozen_importlib_external - imported by importlib._bootstrap (delayed), importlib (optional), importlib.abc (optional), zipimport (top-level)
 excluded module named _frozen_importlib - imported by importlib (optional), importlib.abc (optional), zipimport (top-level), PyInstaller.loader.pyimod02_archive (delayed, conditional)
 missing module named urllib.pathname2url - imported by urllib (conditional), PyInstaller.lib.modulegraph._compat (conditional)
@@ -35,7 +35,7 @@ missing module named multiprocessing.BufferTooShort - imported by multiprocessin
 missing module named multiprocessing.AuthenticationError - imported by multiprocessing (top-level), multiprocessing.connection (top-level)
 missing module named asyncio.DefaultEventLoopPolicy - imported by asyncio (delayed, conditional), asyncio.events (delayed, conditional)
 missing module named readline - imported by cmd (delayed, conditional, optional), code (delayed, conditional, optional), pdb (delayed, optional), pstats (conditional, optional)
-missing module named 'org.python' - imported by pickle (optional), xml.sax (delayed, conditional), setuptools.sandbox (conditional)
+missing module named org - imported by pickle (optional)
 missing module named grp - imported by shutil (optional), tarfile (optional), pathlib (delayed), distutils.archive_util (optional)
 missing module named pwd - imported by posixpath (delayed, conditional), shutil (optional), tarfile (optional), pathlib (delayed, conditional, optional), http.server (delayed, optional), webbrowser (delayed), netrc (delayed, conditional), getpass (delayed), distutils.util (delayed, conditional, optional), distutils.archive_util (optional)
 missing module named posix - imported by os (conditional, optional), shutil (conditional)
@@ -66,7 +66,7 @@ missing module named wincertstore - imported by setuptools.ssl_support (delayed,
 missing module named 'backports.ssl_match_hostname' - imported by setuptools.ssl_support (optional)
 missing module named backports - imported by setuptools.ssl_support (optional)
 missing module named 'setuptools._vendor.six.moves' - imported by 'setuptools._vendor.six.moves' (top-level)
-missing module named 'setuptools.extern.pyparsing' - imported by setuptools._vendor.packaging.requirements (top-level), setuptools._vendor.packaging.markers (top-level)
+missing module named 'setuptools.extern.pyparsing' - imported by setuptools._vendor.packaging.markers (top-level), setuptools._vendor.packaging.requirements (top-level)
 missing module named setuptools.extern.six.moves.map - imported by setuptools.extern.six.moves (top-level), setuptools.dist (top-level), setuptools.command.easy_install (top-level), setuptools.sandbox (top-level), setuptools.package_index (top-level), setuptools.ssl_support (top-level), setuptools.command.egg_info (top-level), setuptools.namespaces (top-level)
 runtime module named setuptools.extern.six.moves - imported by setuptools.dist (top-level), setuptools.py33compat (top-level), configparser (top-level), setuptools.command.easy_install (top-level), setuptools.sandbox (top-level), setuptools.command.setopt (top-level), setuptools.package_index (top-level), setuptools.ssl_support (top-level), setuptools.command.egg_info (top-level), setuptools.command.py36compat (top-level), setuptools.namespaces (top-level), setuptools.msvc (top-level), 'setuptools._vendor.six.moves' (top-level)
 missing module named setuptools.extern.six - imported by setuptools.extern (top-level), setuptools.monkey (top-level), setuptools.dist (top-level), setuptools.extern.six.moves (top-level), setuptools.py33compat (top-level), setuptools.config (top-level), setuptools.command.easy_install (top-level), setuptools.sandbox (top-level), setuptools.py27compat (top-level), setuptools.package_index (top-level), setuptools.wheel (top-level), setuptools.pep425tags (top-level), setuptools.command.egg_info (top-level), setuptools.command.sdist (top-level), setuptools.command.bdist_egg (top-level), setuptools.unicode_utils (top-level), setuptools.command.develop (top-level)

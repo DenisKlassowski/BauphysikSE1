@@ -56,7 +56,7 @@ class NewTab(QtWidgets.QWidget):
         buttonLayout.addWidget(self.buttonNewTemp)
         buttonLayout.addWidget(self.buttonNewTempLabel)
 
-        self.image = QtGui.QPixmap(QtGui.QPixmap("UI_Design/thermopgrafie.jpg").scaled(QtCore.QSize(self.imageWidget.rect().height(),self.imageWidget.rect().width())))
+        self.image = QtGui.QPixmap(QtGui.QPixmap("thermopgrafie.jpg").scaled(QtCore.QSize(self.imageWidget.rect().height(),self.imageWidget.rect().width())))
         #self.image.load("UI_Design/thermopgrafie.jpg")
         #self.image.scaled(QtCore.QSize(self.imageWidget.rect().height(),self.imageWidget.rect().width()))
         self.imageWidget.setPixmap(self.image)
