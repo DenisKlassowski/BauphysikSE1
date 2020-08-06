@@ -27,8 +27,8 @@ class TestScript_028(unittest.TestCase):
         self.tab = TabData(1, "Test_028")
         self.tab.rright = 0.04
         self.tab.rleft = 0.13
-        self.tab.tright = 19
-        self.tab.tleft = -4
+        self.tab.tright = -4
+        self.tab.tleft = 19
 
         self.tab.add_layer(self.layer_1)
         self.tab.add_layer(self.layer_2)
@@ -69,14 +69,12 @@ class TestScript_028(unittest.TestCase):
         """
         Check calculated temperature
         """
-        a = self.tab.layers[0].t_left
-        assert round(a, 2) == 18.48
-        #self.assertTrue(round(self.tab.layers[0].t_left, 2) == 18.48)
-        #self.assertTrue(round(self.tab.layers[0].t_right, 2) == 16.54)
-        #self.assertTrue(round(self.tab.layers[1].t_left, 2) == 16.54)
-        #self.assertTrue(round(self.tab.layers[1].t_right, 2) == -3.46)
-        #self.assertTrue(round(self.tab.layers[2].t_left, 2) == -3.46)
-        #self.assertTrue(round(self.tab.layers[2].t_right, 2) == -3.84)
+        self.assertEqual(round(self.tab.layers[0].t_left, 2), 18.48)
+        self.assertEqual(round(self.tab.layers[0].t_right, 2), 16.54)
+        self.assertEqual(round(self.tab.layers[1].t_left, 2), 16.54)
+        self.assertEqual(round(self.tab.layers[1].t_right, 2), -3.46)
+        self.assertEqual(round(self.tab.layers[2].t_left, 2), -3.46)
+        self.assertEqual(round(self.tab.layers[2].t_right, 2), -3.84)
 
 
 if __name__ == '__main__':

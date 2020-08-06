@@ -38,8 +38,8 @@ class TestScript_032(unittest.TestCase):
         self.tab = TabData(1, "Test_032")
         self.tab.rright = 0.04
         self.tab.rleft = 0.13
-        self.tab.tright = 21
-        self.tab.tleft = 4
+        self.tab.tright = 4
+        self.tab.tleft = 21
 
         #Schichten in Tab hinzufügen
         self.tab.add_layer(self.layer_1)
@@ -89,9 +89,9 @@ class TestScript_032(unittest.TestCase):
             Check calculated temperature
         """
         self.tab.calculate()
-        #self.assertEqual(float(round(self.tab.layers[0].t_left, 2)), 19.76)
-        #self.assertEqual(float(round(self.tab.layers[0].t_right, 2)), 19.21)
-        #self.assertEqual(float(round(self.tab.layers[1].t_left, 2)), 19.21)
+        self.assertEqual(float(round(self.tab.layers[0].t_left, 2)), 19.76)
+        self.assertEqual(float(round(self.tab.layers[0].t_right, 2)), 19.21)
+        self.assertEqual(float(round(self.tab.layers[1].t_left, 2)), 19.21)
         self.assertEqual(float(round(self.tab.layers[1].t_right, 2)), 15.12)
         self.assertEqual(float(round(self.tab.layers[2].t_left, 2)), 15.12)
         self.assertEqual(float(round(self.tab.layers[2].t_right, 2)), 4.52)

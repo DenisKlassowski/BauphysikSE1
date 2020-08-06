@@ -52,4 +52,8 @@ R_se = 0,04
 
 07.06.2020 - Prototyp 4: Test wurde am Heim-PC durchgeführt. Berechneten Ergebnisse für R_ges und R_T stimmten. Beanstandung: Für U kam 1,4288 statt 1,4287 heraus.
 
-22.06.2020 - Prototyp 4: Test wurde am Heim-PC erfolgreich durchgeführt.
+22.06.2020 - Prototyp 5: Test wurde am Heim-PC erfolgreich durchgeführt.
+
+01.07.2020 - Prototyp 6: Test wurde am Heim-PC erfolgreich durchgeführt.
+
+26.07.2020 - Prototyp 7: Test wurde am Heim-PC erfolgreich durchgeführt.

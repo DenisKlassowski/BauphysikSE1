@@ -1,0 +1,60 @@
+|===
+| Test Script 036 |
+| Import von Berechnungsdaten | Date: 30/06/2020
+|===
+
+== Test spezification
+
+|===
+| Test Name | Import von Berechnungsdaten
+| Use Case Tested | Berechnungsdaten laden
+| Test Description | Manueller Test der Importmöglichkeit von Daten der Berechnungssoftware
+| Pre-conditions | Der Systemnutzer hat die Berechnungssofware auf seinem PC/Laptop mit dem Betribessystem Windows 10 geöffnet
+
+Die Berechnungssoftware befindet sich im Startbildschirm
+
+Es liegt eine .baup-Datei mit gespeicherten Daten einer Berechnung vor (ideal die TestExport.baup aus TestScript_035)
+| Post Conditions | Die importierten Daten wurden vollständig übernommen und werden im aktuellen Tab der Berechnungssoftware angezeigt
+| Notes |
+| Result | Pass
+|===
+
+== Test Steps
+
+|===
+|    | Test Step | Expected Test Result
+| 1. | Auf dem Startbildschirm wird auf das Icon Öffnen geklickt | Es öffnet sich ein Auswahlmenü für die Datei
+| 2. | Man wählt den Pfad/den Ordner aus, in der die zu importierende Datei abgelegt ist | Es wird eine .baup-Datei angezeigt
+| 3. | Auswahl der .baup-Datei und Bestätigung durch Betätigung des Öffnen-Buttons | Das Auswahlfenster schließt sich und in der Berechnungssoftware ist ein mit Daten befüllter Tab zu sehen
+| 4. | Abgleich der Daten in der Software mit den Daten aus der Datei | Die importieren Daten stimmen mit den Daten aus der Datei überein (wird TestExport.baup aus TestScript_035 verwendet, siehe Test Data Table)
+|===
+
+== Test Data Table
+
+Wenn für den Test die Datei aus TestScript_035 verwendet wird, müssen die Felder in der Software wie folgt befüllt sein:
+
+R_si = 0,13
+
+R_se = 0,04
+
+R_ges = 5,58194
+
+R_T = 5,75194
+
+U = 0,17385
+
+Innentemperatur: 19 °C
+Aussentemperatur: -4,0 °C
+
+|===
+|           | Dicke     | Wärmeleitfähigkeit | Wärmedurchgangswiderstand
+| Schicht 1 | 0,175 m   | 0,36               | 0,48611
+| Schicht 2 | 0,150 m   | 0,03               | 5,00000
+| Schicht 3 | 0,115 m   | 1,20               | 0,09583
+|===
+
+== Test Log
+
+30.06.2020 - Prototyp 6: Test wurde erfolgreich durchgeführt.
+
+26.07.2020 - Prototyp 7: Test wurde am Heim-PC erfolgreich durchgeführt.

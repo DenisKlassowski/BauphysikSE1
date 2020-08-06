@@ -22,7 +22,7 @@ Es ist eine handelsübliche Maus sowie eine handelsübliche Tastatur an den Comp
 |===
 |    | Test Step | Expected Test Result
 | 1. | einmalige Betätigung der seitlichen nach oben zeigenden Pfeiltaste des Eingabefeldes für die Dicke von Schicht 1 | Das Feld beinhaltet einen um einen Schritt erhöhten den Wert (1,000 oder 0,001)
-| 2. | Wiederholung des ersten Schrittes oder durchgehende Betätigung der Schaltfläche bis Wert 25,000 oder 2,500 eingestellt ist | Das Feld beinhaltet den Wert 25,00 oder 2,500
+| 2. | Wiederholung des ersten Schrittes oder durchgehende Betätigung der Schaltfläche bis Wert 15,000 oder 1,500 eingestellt ist | Das Feld beinhaltet den Wert 15,00 oder 1,500
 | 3. | per Tabulator-Taste der Tastatur zum Eingabefeld der Wärmeleitfähigkeit von Schicht 1 navigieren | Das Eingabefeld für die Dicke von Schicht 1 ist ausgewählt
 | 4. | per Tastatur 3,50 eingeben | Das Eingabefeld beinhaltet den Wert 3,50
 | 5. | per Enter-Taste die Eingabe bestätigen | Das Eingabefeld beihnaltet den Wert 3,500
@@ -32,7 +32,7 @@ Es ist eine handelsübliche Maus sowie eine handelsübliche Tastatur an den Comp
 
 |===
 | | 1 | 2 
-| Schicht 1 - Dicke: |  25,00 oder 2,50  |
+| Schicht 1 - Dicke: |  15,00 oder 1,50  |
 | Schicht 1 - Wärmeleitfähigkeit: |  3,50  |
 |===
 
@@ -46,4 +46,8 @@ Es ist eine handelsübliche Maus sowie eine handelsübliche Tastatur an den Comp
 
 07.06.2020 - Prototyp 4: Test wurde am Heim-PC erfolgreich durchgeführt.
 
-22.06.2020 - Prototyp 4: Test wurde am Heim-PC erfolgreich durchgeführt.
+22.06.2020 - Prototyp 5: Test wurde am Heim-PC erfolgreich durchgeführt.
+
+01.07.2020 - Prototyp 6: Test wurde am Heim-PC erfolgreich durchgeführt.
+
+26.07.2020 - Prototyp 7: Test wurde am Heim-PC erfolgreich durchgeführt.

@@ -51,7 +51,7 @@ class TestScript_033(unittest.TestCase):
         self.tab.calculate()
 
         self.Export = Exporter(self.tab)
-        self.parser = Parser(str("TestExport.baup"))
+        self.parser = Parser(str("TestExport"))
 
     def test_1(self):
         """

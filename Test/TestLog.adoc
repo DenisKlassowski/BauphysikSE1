@@ -16,10 +16,8 @@ An dieser Stelle wird eine Übersicht der verwendeten Testscripte gegeben, die �
 | link:Test_Script/TestScript_002.adoc[002] | SW offline starten | manuell
 | link:Test_Script/TestScript_003.adoc[003] | Eingabegeräte prüfen | manuell
 | link:Test_Script/TestScript_004.adoc[004] | Portabilität prüfen | manuell
-| link:Test_Script/TestScript_005.adoc[005] | Systemsprache prüfen |
-manuell
-| link:Test_Script/TestScript_006.adoc[006] | Plausibilität prüfen |
-manuell
+| link:Test_Script/TestScript_005.adoc[005] | Systemsprache prüfen | manuell
+| link:Test_Script/TestScript_006.adoc[006] | Plausibilität prüfen | manuell
 | link:Test_Script/TestScript_007.adoc[007] | Schichten hinzufügen/löschen | manuell
 | link:Test_Script/TestScript_008.adoc[008] | Modus wechseln | manuell
 | link:Test_Script/TestScript_009.adoc[009] | Reihenberechnung 4 Schichten | manuell
@@ -42,6 +40,12 @@ manuell
 | link:Test_Script/TestScript_014.adoc[026] | Reihenberechnung 2 Schichten | automatisiert
 | link:Test_Script/TestScript_015.adoc[027] | Reihenberechnung 2 Schichten V2 | automatisiert
 | link:Test_Script/TestScript_015.adoc[033] | Export & Import | automatisiert
+| link:Test_Script/TestScript_015.adoc[034] | Druckauftrag erteilen | manuell
+| link:Test_Script/TestScript_015.adoc[035] | Export von Daten | manuell
+| link:Test_Script/TestScript_015.adoc[036] | Import von Daten | manuell
+| link:Test_Script/TestScript_015.adoc[037] | Export von Daten in cm | manuell
+| link:Test_Script/TestScript_015.adoc[038] | Import von Daten in cm | manuell
+| TestSuite | Testet alle automatisierten Tests | automatisiert
 |===
 
 == Testergebnisse
@@ -145,3 +149,91 @@ Es folgt eine Übersicht über die in der jeweiligen Testphase am jeweiligen Pro
 | 22.06.2020 |  0.5   | 027 | bestanden | CL |am Heim-PC durchgeführt
 | 25.06.2020 |  0.5   | 033 | bestanden | CL |am Heim-PC durchgeführt
 |===
+
+
+=== Prototyp 6
+
+|===
+| *Datum* | *Version* | *Testscript* | *Ergebnis* | *Verantwortlich* |*Kommentar*
+| 30.06.2020 |  0.6   | 034 | nicht bestanden | CL |Test ergab erhebliche Abweichungn vom Soll. Ausführlicher im TestScript_034 aufgeführt.
+| 30.06.2020 |  0.6   | 035 | bestanden | CL |am Heim-PC durchgeführt
+| 30.06.2020 |  0.6   | 036 | bestanden | CL |am Heim-PC durchgeführt
+| 01.07.2020 |  0.6   | 001 | bestanden | CL |am Heim-PC durchgeführt
+| 01.07.2020 |  0.6   | 002 | bestanden | CL |am Heim-PC durchgeführt
+| 01.07.2020 |  0.6   | 003 | bestanden | CL |am Heim-PC durchgeführt
+| 01.07.2020 |  0.6   | 004 | bestanden | CL |am Heim-PC durchgeführt
+| 01.07.2020 |  0.6   | 005 | bestanden | CL |am Heim-PC durchgeführt
+| 01.07.2020 |  0.6   | 006 | bestanden | CL |am Heim-PC durchgeführt
+| 01.07.2020 |  0.6   | 007 | bestanden | CL |am Heim-PC durchgeführt
+| 01.07.2020 |  0.6   | 008 | bestanden | CL |am Heim-PC durchgeführt
+| 01.07.2020 |  0.6   | 009 | bestanden | CL |am Heim-PC durchgeführt
+| 01.07.2020 |  0.6   | 010 | bestanden | CL |am Heim-PC durchgeführt
+| 01.07.2020 |  0.6   | 011 | bestanden | CL |am Heim-PC durchgeführt
+| 01.07.2020 |  0.6   | 012 | bestanden | CL |am Heim-PC durchgeführt
+| 01.07.2020 |  0.6   | 013 | bestanden | CL |am Heim-PC durchgeführt
+| 01.07.2020 |  0.6   | 014 | bestanden | CL |am Heim-PC durchgeführt
+| 01.07.2020 |  0.6   | 015 | bestanden | CL |am Heim-PC durchgeführt
+| 01.07.2020 |  0.6   | 016 | bestanden | CL |am Heim-PC durchgeführt
+| 01.07.2020 |  0.6   | 017 | bestanden | CL |am Heim-PC durchgeführt
+| 01.07.2020 |  0.6   | 018 | bestanden | CL |am Heim-PC durchgeführt
+| 01.07.2020 |  0.6   | 019 | bestanden | CL |am Heim-PC durchgeführt
+| 01.07.2020 |  0.6   | 020 | bestanden | CL |am Heim-PC durchgeführt
+| 01.07.2020 |  0.6   | 021 | bestanden | CL |am Heim-PC durchgeführt
+| 01.07.2020 |  0.6   | 022 | bestanden | CL |am Heim-PC durchgeführt
+| 01.07.2020 |  0.6   | 023 | bestanden | CL |am Heim-PC durchgeführt
+| 01.07.2020 |  0.6   | 024 | bestanden | CL |am Heim-PC durchgeführt
+| 01.07.2020 |  0.6   | 025 | bestanden | CL |am Heim-PC durchgeführt
+| 01.07.2020 |  0.6   | 026 | bestanden | CL |am Heim-PC durchgeführt
+| 01.07.2020 |  0.6   | 027 | bestanden | CL |am Heim-PC durchgeführt
+| 01.07.2020 |  0.6   | 028 | bestanden | CL |am Heim-PC durchgeführt
+| 01.07.2020 |  0.6   | 029 | bestanden | CL |am Heim-PC durchgeführt
+| 01.07.2020 |  0.6   | 030 | bestanden | CL |am Heim-PC durchgeführt
+| 01.07.2020 |  0.6   | 031 | bestanden | CL |am Heim-PC durchgeführt
+| 01.07.2020 |  0.6   | 032 | bestanden | CL |am Heim-PC durchgeführt
+| 01.07.2020 |  0.6   | 033 | bestanden | CL |am Heim-PC durchgeführt
+| 01.07.2020 |  0.6   | Testsuite | bestanden | CL |am Heim-PC durchgeführt
+
+
+=== Prototyp 7
+
+|===
+| *Datum* | *Version* | *Testscript* | *Ergebnis* | *Verantwortlich* |*Kommentar*
+| 26.07.2020 |  0.7   | 034 | bestanden | CL |am Heim-PC durchgeführt
+| 26.07.2020 |  0.7   | 035 | bestanden | CL |am Heim-PC durchgeführt
+| 26.07.2020 |  0.7   | 036 | bestanden | CL |am Heim-PC durchgeführt
+| 26.07.2020 |  0.7   | 001 | bestanden | CL |am Heim-PC durchgeführt
+| 26.07.2020 |  0.7   | 002 | bestanden | CL |am Heim-PC durchgeführt
+| 26.07.2020 |  0.7   | 003 | bestanden | CL |am Heim-PC durchgeführt
+| 26.07.2020 |  0.7   | 004 | bestanden | CL |am Heim-PC durchgeführt
+| 26.07.2020 |  0.7   | 005 | bestanden | CL |am Heim-PC durchgeführt
+| 26.07.2020 |  0.7   | 006 | bestanden | CL |am Heim-PC durchgeführt
+| 26.07.2020 |  0.7   | 007 | bestanden | CL |am Heim-PC durchgeführt
+| 26.07.2020 |  0.7   | 008 | bestanden | CL |am Heim-PC durchgeführt
+| 26.07.2020 |  0.7   | 009 | bestanden | CL |am Heim-PC durchgeführt
+| 26.07.2020 |  0.7   | 010 | bestanden | CL |am Heim-PC durchgeführt
+| 26.07.2020 |  0.7   | 011 | bestanden | CL |am Heim-PC durchgeführt
+| 26.07.2020 |  0.7   | 012 | bestanden | CL |am Heim-PC durchgeführt
+| 26.07.2020 |  0.7   | 013 | bestanden | CL |am Heim-PC durchgeführt
+| 26.07.2020 |  0.7   | 014 | bestanden | CL |am Heim-PC durchgeführt
+| 26.07.2020 |  0.7   | 015 | bestanden | CL |am Heim-PC durchgeführt
+| 26.07.2020 |  0.7   | 016 | bestanden | CL |am Heim-PC durchgeführt
+| 26.07.2020 |  0.7   | 017 | bestanden | CL |am Heim-PC durchgeführt
+| 26.07.2020 |  0.7   | 018 | bestanden | CL |am Heim-PC durchgeführt
+| 26.07.2020 |  0.7   | 019 | bestanden | CL |am Heim-PC durchgeführt
+| 26.07.2020 |  0.7   | 020 | bestanden | CL |am Heim-PC durchgeführt
+| 26.07.2020 |  0.7   | 021 | bestanden | CL |am Heim-PC durchgeführt
+| 26.07.2020 |  0.7   | 022 | bestanden | CL |am Heim-PC durchgeführt
+| 26.07.2020 |  0.7   | 023 | bestanden | CL |am Heim-PC durchgeführt
+| 26.07.2020 |  0.7   | 024 | bestanden | CL |am Heim-PC durchgeführt
+| 26.07.2020 |  0.7   | 025 | bestanden | CL |am Heim-PC durchgeführt
+| 26.07.2020 |  0.7   | 026 | bestanden | CL |am Heim-PC durchgeführt
+| 26.07.2020 |  0.7   | 027 | bestanden | CL |am Heim-PC durchgeführt
+| 26.07.2020 |  0.7   | 028 | bestanden | CL |am Heim-PC durchgeführt
+| 26.07.2020 |  0.7   | 029 | bestanden | CL |am Heim-PC durchgeführt
+| 26.07.2020 |  0.7   | 030 | bestanden | CL |am Heim-PC durchgeführt
+| 26.07.2020 |  0.7   | 031 | bestanden | CL |am Heim-PC durchgeführt
+| 26.07.2020 |  0.7   | 032 | bestanden | CL |am Heim-PC durchgeführt
+| 26.07.2020 |  0.7   | 033 | bestanden | CL |am Heim-PC durchgeführt
+| 26.07.2020 |  0.7   | Testsuite | bestanden | CL |am Heim-PC durchgeführt
+| 26.07.2020 |  0.7   | 037 | bestanden | CL |am Heim-PC durchgeführt
+| 26.07.2020 |  0.7   | 038 | nicht bestanden | CL | grober Fehler aufgetreten, da Felder der Schichtdicke nicht mit Werten befüllt sind

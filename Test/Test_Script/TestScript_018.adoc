@@ -56,4 +56,8 @@ Aussentemperatur: -7 °C
 | Schicht 2 | 0,54 
 |===
 
-07.06.2020 - Prototyp 4: Test wurde am Heim-PC durchgeführt. Fehler aufgetreten im Vergleich zum erwarteten Ergebnis: Temperatur zwischen Schicht 1 und Schicht 2 ist 15,16 °C statt -1,9 °C. Vertauscht man die Werte der Wandschichten, erhält man erwartetes Ergebnis. Könnte an falscher Aufgabe/Vorlage der Rechnung liegen, da ähnliches Testscript (017) erfolgreich.
+07.06.2020 - Prototyp 4: Test wurde am Heim-PC durchgeführt. Fehler aufgetreten im Vergleich zum erwarteten Ergebnis: Temperatur zwischen Schicht 1 und Schicht 2 ist 15,16 °C statt -1,9 °C. Vertauscht man die Werte der Wandschichten, erhält man erwartetes Ergebnis. Könnte an falscher Aufgabe/Vorlage der Rechnung liegen, da ähnliches Testscript (017) erfolgreich. Ergebnis in der alten Reihenfolge erscheint so auch nicht logisch -> deshalb R-Werte für Wandschicht getauscht.
+
+01.07.2020 - Prototyp 6: Test wurde am Heim-PC erfolgreich durchgeführt.
+
+26.07.2020 - Prototyp 7: Test wurde am Heim-PC erfolgreich durchgeführt.

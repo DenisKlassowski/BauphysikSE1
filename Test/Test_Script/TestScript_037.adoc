@@ -1,0 +1,80 @@
+|===
+| Test Script 037 |
+| Export von Berechnungsdaten (Dicke in cm) | Date: 25/07/2020
+|===
+
+== Test spezification
+
+|===
+| Test Name | Export von Berechnungsdaten (Dicke in cm)
+| Use Case Tested | Berechnungsdaten speichern
+| Test Description | Manueller Test der Exportmöglichkeit von berechneten Daten der Berechnungssoftware
+| Pre-conditions | Der Systemnutzer hat die Berechnungssofware auf seinem PC/Laptop mit dem Betribessystem Windows 10 geöffnet
+
+Es wurde der Modus für eine Berechnung des Temperaturverlaufs ausgewählt
+| Post Conditions | Die berechneten Ergebnisse liegen in einer gespeicherten Datei vor
+| Notes |
+| Result | Pass
+|===
+
+== Test Steps
+
+|===
+|    | Test Step | Expected Test Result
+| 1. | Es sind die in der Test Data Table hinterlegten Daten im geöffneten Tab einzugeben (analog TestScript_016.adoc) | Die Eingabefelder der 3 Schichten sind befüllt und die berechneten Ergebnisse sowie der Graph mit dem Temperaturverlauf werden angezeigt (vgl. TestScript_016.adoc)
+| 2. | Mit der Maus klickt man auf das Feld Datei in der oberen linken Ecke des Fensters | Es öffnet sich das Auswahlmenü mit den Einträgen Neu, Spechern, Speichern unter, Öffnen und Drucken
+| 3. | Es wird der Menüpunkt Speichern ausgewählt | Es öffnet sich ein Dialogfenster zur Auswahl des Pfades und Namens der zu speichernden Datei; als Dateityp ist Bauphysikberechnung (*.baup) vorausgewählt
+| 4. | Als Pfad wird der Desktop ausgewählt | Als Pfad wird der Desktoppfad angezeigt und in der Übersicht die darin befindlichen Dateien und Ordner
+| 5. | In das Eingabefeld für den Dateinamen wird "TestExport" eingegeben und auf speichern geklickt | Das Fenster schließt sich und es existiert eine "TestExport.baup"-Datei auf dem Desktop
+| 6. | Öffnen der TestExport.baup-Datei mittels Editor | Die Datei öffnet sich und ist nicht leer
+| 7. | Prüfen der eingetragenen Werte in der TestExport.baup-Datei auf Korrektheit gegenüber den Daten der aktuellen Berechnung der Berechnungssoftware | Die Daten in der Datei stimmen mit den Daten in der Berechnungssoftware überein (Übersicht der korrekten Daten unten)
+|===
+
+== Test Data Table
+
+Die Testdaten basieren auf einer Aufgabe aus dem Bereich Bauphysik und wurden für Testzwecke von der Kundin an uns übergeben.
+
+Die Werte für den Wärmeübergangswiderstand an der Innenseite sowie an der Außenseite.
+
+R_si = 0,13
+
+R_se = 0,04
+
+Die Werte für die Temperaturen an der Innenseite, sowie der Außenseite der Wand:
+
+Innentemperatur:  21 °C
+Aussentemperatur:  4 °C
+
+|===
+|           | Dicke     | Wärmeleitfähigkeit
+| Schicht 1 | 2  cm     | 0,350
+| Schicht 2 | 24 cm     | 0,560
+| Schicht 3 | 5  cm     | 0,045
+| Schicht 4 | 1  cm     | 0,700
+|===
+
+=== Daten in der Datei TestExport.baup
+
+rright = R_se; rleft = R_si, rsum = R_ges; tright = Temperatur außen; tleft = Temperatur innen;
+mode = Berechnungsmodus(1 für T/0 für U); u = U; rt = R_T
+layer setzt sich wie folgt zusammen: layer: Dicke, Einheit, Lambda, R, Temperatur links, Temperatur rechts, Rho
+
+name: Test
+rright: 0.04
+rleft: 0.13
+rsum: 1.61111
+tright: 0.0
+tleft: 0.0
+mode: 0
+u: 0.56145
+rt: 1.78111
+layers:
+	layer: 0.02, 1, 0.35, 0.05714, 0.0, 0.0, 0.0, Schicht 1
+	layer: 0.24, 1, 0.56, 0.42857, 0.0, 0.0, 0.0, Schicht 2
+	layer: 0.05, 1, 0.045, 1.11111, 0.0, 0.0, 0.0, Schicht 2
+	layer: 0.01, 1, 0.7, 0.01429, 0.0, 0.0, 0.0, Schicht 4
+
+
+== Test Log
+
+25.07.2020 - Prototyp 7: Test wurde erfolgreich durchgeführt.

@@ -7,7 +7,7 @@
 
 |===
 | Test Name | Berechnungssoftware starten [offline]
-| Use Case Tested | t.b.d.
+| Use Case Tested | Programmstart
 | Test Description | Manueller Test des Starts der Berechnungssoftware durch direkten Aufruf der ausführbaren Datei durch den Benutzer
 | Pre-conditions | Der Systemnutzer hat seinen PC/Laptop mit dem Betribessystem Windows 10 hochgefahren und ist offline
 
@@ -40,4 +40,8 @@ Bei diesem Test werden keine Testdaten benötigt.
 
 07.06.2020 - Prototyp 4: Test wurde am Heim-PC erfolgreich durchgeführt.
 
-22.06.2020 - Prototyp 4: Test wurde am Heim-PC erfolgreich durchgeführt.
+22.06.2020 - Prototyp 5: Test wurde am Heim-PC erfolgreich durchgeführt.
+
+01.07.2020 - Prototyp 6: Test wurde am Heim-PC erfolgreich durchgeführt.
+
+26.07.2020 - Prototyp 7: Test wurde am Heim-PC erfolgreich durchgeführt.

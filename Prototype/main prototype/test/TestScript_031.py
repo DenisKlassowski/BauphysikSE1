@@ -16,11 +16,11 @@ class TestScript_031(unittest.TestCase):
         self.layer_2 = LayerData()
         self.layer_2.r = 0.54
 
-        self.tab = TabData(0, "Test_031")
+        self.tab = TabData(1, "Test_031")
         self.tab.rright = 0.04
         self.tab.rleft = 0.13
-        self.tab.tright = 21
-        self.tab.tleft = 26
+        self.tab.tright = 26
+        self.tab.tleft = 21
 
         self.tab.add_layer(self.layer_1)
         self.tab.add_layer(self.layer_2)

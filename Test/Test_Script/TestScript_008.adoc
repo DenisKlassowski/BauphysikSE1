@@ -42,10 +42,14 @@ Die Felder für die Dicke der 3 Schichten sind noch immer mit den Testdaten bef�
 
 == Test Log
 
-28.04.2020 Prototyp2 : Test wurde erfolgreich durchgeführt.
+28.04.2020 - Prototyp 2: Test wurde erfolgreich durchgeführt.
 
-20.05.2020 Prototyp2 : Test wurde erfolgreich durchgeführt.
+20.05.2020 - Prototyp 3: Test wurde erfolgreich durchgeführt.
 
 07.06.2020 - Prototyp 4: Test wurde am Heim-PC erfolgreich durchgeführt.
 
-22.06.2020 - Prototyp 4: Test wurde am Heim-PC erfolgreich durchgeführt.
+22.06.2020 - Prototyp 5: Test wurde am Heim-PC erfolgreich durchgeführt.
+
+01.07.2020 - Prototyp 6: Test wurde am Heim-PC erfolgreich durchgeführt.
+
+26.07.2020 - Prototyp 7: Test wurde am Heim-PC erfolgreich durchgeführt.
