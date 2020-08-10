@@ -1,0 +1,35 @@
+= Deployment Plan
+
+== Überblick
+Die Software ist eine Desktop-Anwendung für einen Einzelnutzer. Es wird ein Executable (.exe) ausgeliefert, welches ohne weitere Abhängigkeiten auf dem Zielsystem (Windows 10) ausführbar ist.
+
+Das Executable wird der Kundin als Download über den HTW-Cloudspeicherplatz (Owncloud) zur Verfügung gestellt. Dafür wird auf dem Cloudspeicherplatz des Teammanagers (Denis Klassowski) ein neuer Ordner angelegt, in dem das aktuelle Release der Software liegt. 
+
+Die Kundin bekommt vom Teammanager einen Link zum Cloudspeicherplatz via E-Mail zugesendet. Über diesen Link erfolgt der Download auf das Zielsystem bei der Kundin. Die EXE kann in einem beliebigen Verzeichnis per Doppelklick ausgeführt werden. 
+
+== Risiken
+
+- Owncloud der HTW z.B. durch Wartungsarbeiten vorübergehend nicht erreichbar 
+- Kommunikation mit der Kundin nur asynchron
+
+== Freigabeberechtigte Personen
+Teammitglieder, welche berechtigt sind, ein Release als "fertig für den Produktiveinsatz" zu genehmigen.
+
+- Denis Klassowski
+- Yewgenij Baburkin
+
+== Erfolgskriterien
+Der Kundin werden vor dem Finalen Release bereits Beta-Versionen übergeben und Feedback eingeholt.
+
+Das Release gilt als Erfolgreich, wenn der Empfang und die Betriebsbereitschaft durch die Kundin bestätigt wurde. 
+
+Kritik und Verbesserungsvoschläge an den Beta-Versionen werden in die Planung der nachfolgenden Iterationen übernommen.
+
+== Kontaktinformationen
+Deployment Engineer
+
+Felix Fritzsche
+
+E-Mail: felix.fritzsche@htw-dresden.de
+
+
