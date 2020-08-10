@@ -1,0 +1,33 @@
+= Projekt Bauphysik Test Case: [Use Case: Berechnungsdaten speichern]
+
+== Test Case ID: 006 - Berechnung laden:
+
+=== Beschreibung
+Dieser Test Case evaluiert das Verhalten des entworfenen Softwaresystems, wenn der Systemnutzer die Daten einer Berechnung aus einer Datei laden möchte.
+
+Ergebnis dieses Tests ist, dass die Daten der abgespeicherten Berechnung korrekt in einem Tab der Berechnungssoftware angezeigt werden.
+
+=== Vorbedingungen
+<Vorbedingung 1> Die Berechnungssoftware ist gestartet.
+
+<Vorbedingung 2> Es ist ein neuer Tab geöffnet und befindet sich im Startbildschirm
+
+=== Nachbedingungen
+<Nachbedingung 1> Die Software hat keinen Fehler produziert.
+
+<Nachbedingung 2> Im aktuellen Tab werden vollständig und korrekt die Werte der abgespeicherten Berechnung angezeigt.
+
+=== Benötigte Daten
+
+Als Testdaten werden Werte verwendet, die aus realen Aufgaben zur Berechnung des Wärmeübergangs stammen. Konkret werden von der Kundin übermittelte Aufgaben mit vorgegebenen korrekten Ergebnissen genutzt, um den Output der Software entsprechend validieren zu können.
+
+=== Konkrete Tests zu diesem Test Case
+
+An dieser Stelle gibt es eine Auflistung der konkreten Testabläufe, die diesen Test Case repräsentieren. Der genaue Ablauf, sowie die expliziten Berechnungsdaten sind dem jeweiligen TestScript zu entnehmen.
+
+|===
+| *Testscript* | *Kurzbeschreibung* | *manuell/automatisch*
+| link:Test_Script/TestScript_015.adoc[033] | Export & Import | automatisiert
+| link:Test_Script/TestScript_015.adoc[036] | Import von Daten | manuell
+| link:Test_Script/TestScript_015.adoc[038] | Import von Daten in cm | manuell
+|===

@@ -1,0 +1,33 @@
+= Projekt Bauphysik Test Case: [Use Case: Berechnungsdaten speichern]
+
+== Test Case ID: 005 - Berechnung speichern:
+
+=== Beschreibung
+Dieser Test Case evaluiert das Verhalten des entworfenen Softwaresystems, wenn der Systemnutzer die Daten einer Berechnung in einer Datei speichern möchte.
+
+Ergebnis dieses Tests ist eine Datei mit dem Kürzel ".baup", in der alle Daten der Berechnung korrekt gesichert sind.
+
+=== Vorbedingungen
+<Vorbedingung 1> Die Berechnungssoftware ist gestartet und befindet sich im Modus U-Berechnung.
+
+<Vorbedingung 2> Der Systemnutzer hat bereits die vollständigen Daten für eine aus mehreren Schichten bestehende Wand eingegeben.
+
+<Vorbedingung 3> Die Software hat die gesuchten Werte berechnet.
+
+=== Nachbedingungen
+<Nachbedingung 1> Im gewählten Pfad existiert eine entsprechende Datei, die die Daten der Berechnung enthalten.
+
+=== Benötigte Daten
+
+Als Testdaten werden Werte verwendet, die aus realen Aufgaben zur Berechnung des Wärmeübergangs stammen. Konkret werden von der Kundin übermittelte Aufgaben mit vorgegebenen korrekten Ergebnissen genutzt, um den Output der Software entsprechend validieren zu können.
+
+=== Konkrete Tests zu diesem Test Case
+
+An dieser Stelle gibt es eine Auflistung der konkreten Testabläufe, die diesen Test Case repräsentieren. Der genaue Ablauf, sowie die expliziten Berechnungsdaten sind dem jeweiligen TestScript zu entnehmen.
+
+|===
+| *Testscript* | *Kurzbeschreibung* | *manuell/automatisch*
+| link:Test_Script/TestScript_015.adoc[033] | Export & Import | automatisiert
+| link:Test_Script/TestScript_015.adoc[035] | Export von Daten | manuell
+| link:Test_Script/TestScript_015.adoc[037] | Export von Daten in cm | manuell
+|===

@@ -1,0 +1,36 @@
+= Projekt Bauphysik Test Case:
+
+== Test Case ID: 007 - Nichtfunktionale Anforderungen:
+
+=== Beschreibung
+Dieser Test Case evaluiert das Verhalten und die Erscheinung des entworfenen Softwaresystems mit Blick auf die nichtfunktionalen Anforderungen. Dafür sind die entsprechenden Test-Scripte aufgelistet, die jeweils den Nachweis für die Erfüllung einer speziellen nichtfunktionalen Anforderung erbringen sollen.
+
+Ergebnis dieses Tests ist die nachweislich korrekte Umsetzung der nichtfunktionalen Anforderungen .
+
+=== Vorbedingungen
+<Vorbedingung 1> Die Berechnungssoftware ist gestartet.
+
+<Vorbedingung 2> Der aktuelle Tab der Berechnungssoftware befindet sich im Modus U-Berechnung.  
+
+=== Nachbedingungen
+<Nachbedingung 1> Das Ergebnis des Tests stimmt mit der Anforderung überein.
+
+<Nachbedingung 2> Die Software hat keinen Fehler gemeldet.
+
+=== Benötigte Daten
+
+Für diesen Test Case werden keine gesonderten Daten benötigt.
+
+=== Konkrete Tests zu diesem Test Case
+
+An dieser Stelle gibt es eine Auflistung der konkreten Testabläufe, die Tests zu diesem Test Case repräsentieren. Der genaue Ablauf ist dem jeweiligen TestScript zu entnehmen.
+
+|===
+| *Testscript* | *Kurzbeschreibung* | *manuell/automatisch*
+| link:Test_Script/TestScript_040.adoc[040] | Eingabegeräte prüfen | manuell
+| link:Test_Script/TestScript_041.adoc[041] | Systemsprache prüfen | manuell
+| link:Test_Script/TestScript_042.adoc[042] | Schichten hinzufügen/löschen | manuell
+| link:Test_Script/TestScript_044.adoc[044] | 4 Nachkommastellen | manuell
+| link:Test_Script/TestScript_045.adoc[045] | Wechsel Einheit Schichtdicke | manuell
+| link:Test_Script/TestScript_048.adoc[048] | Lambda mit 3 NAchkommastellen | manuell
+|===

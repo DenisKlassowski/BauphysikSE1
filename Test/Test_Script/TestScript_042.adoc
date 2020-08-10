@@ -1,0 +1,50 @@
+|===
+| Test Script 042 |
+| Schichten hinzufügen/löschen | Date: 28/04/2020
+|===
+
+== Test spezification
+
+|===
+| Test Name | Schichten hinzufügen/löschen
+| Use Case Tested | Reichenberechnung durchführen
+| Test Case ID | 007
+| Test Description | In diesem Test wird überprüft, ob sich, wie in den Anforderungen festgelegt, von der Defaultansicht ausgehend Schichten (mindestens 10) manuell hinzufügen lassen und ob sich Schichten auch wieder entfernen lassen
+| Pre-conditions | Die Berechnungssoftware ist gestartet
+
+Es wurde eine neue Widerstandberechnung ausgewählt.
+
+Es steht eine Schicht für die Eingabe von Daten zur Verfügung
+| Post Conditions | Die Software befindet sich wieder im Ausgangszustand zu Beginn des Tests
+| Notes | Zwischenzeitlich stehen 10 Schichten zur Verfügung
+| Result | Pass
+|===
+
+== Test Steps
+
+|===
+|    | Test Step | Expected Test Result
+| 1. | Es wird die "+"-Schaltfläche zum Hinzufügen einer Schicht betätigt | Es stehen 2 Schichten für die Eingabe von Daten zur Verfügung 
+| 2. | Es wird die "+"-Schaltfläche der Schicht 2 betätigt | Es stehen 3 Schichten für die Eingabe von Daten zur Verfügung
+| 3. | Es wird 7 mal die "+"-Schaltfläche der Schicht 1 betätigt | Es stehen 10 Schichten für die Eingabe von Daten zur Verfügung
+| 4. | Es wird die "-"-Schaltfläche der Schicht 2 betätigt | Es stehen 9 Schichten für die Eingabe von Daten zur Verfügung
+| 5. | Es wird 9 mal die "-"-Schaltfläche der Schicht 1 betätigt | Es steht 1 Schicht zur Eingabe von Daten zur Verfügung
+|===
+
+== Test Data Table
+
+Für diesen Test werden keine Daten benötigt.
+
+== Test Log
+
+28.04.2020 - Prototyp 2: Test wurde erfolgreich durchgeführt.
+
+20.05.2020 - Prototyp 3: Test wurde erfolgreich durchgeführt.
+
+07.06.2020 - Prototyp 4: Test wurde am Heim-PC erfolgreich durchgeführt.
+
+22.06.2020 - Prototyp 5: Test wurde am Heim-PC erfolgreich durchgeführt.
+
+01.07.2020 - Prototyp 6: Test wurde am Heim-PC erfolgreich durchgeführt.
+
+26.07.2020 - Prototyp 7: Test wurde am Heim-PC erfolgreich durchgeführt.

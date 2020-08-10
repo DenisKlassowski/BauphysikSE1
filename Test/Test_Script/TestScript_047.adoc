@@ -1,0 +1,54 @@
+|===
+| Test Script 047 |
+| Druckauftrag erteilen U-Modus | Date: 30/06/2020
+|===
+
+== Test spezification
+
+|===
+| Test Name | Druckauftrag erteilen U-Modus
+| Use Case Tested | Daten drucken
+| Test Case ID | 008
+| Test Description | Manueller Test der Druckfunktionalität der Berechnungssoftware
+| Pre-conditions | Der Systemnutzer hat die Berechnungssofware auf seinem PC/Laptop mit dem Betribssystem Windows 10 geöffnet
+
+Es wurde der Modus für eine Berechnung des Wärmedurchlasskoeffizienten U ausgewählt
+| Post Conditions | Die Druckauswahl wird angezeigt und es kann der Druckvorgang ausgelöst werden
+| Notes |
+| Result | Pass
+|===
+
+== Test Steps
+
+|===
+|    | Test Step | Expected Test Result
+| 1. | Es sind die in der Test Data Table hinterlegten Daten im geöffneten Tab einzugeben (analog TestScript_010.adoc) | Die Eingabefelder der 3 Schichten sind befüllt und die berechneten Ergebnisse sowie der Graph mit dem Temperaturverlauf werden angezeigt (vgl. TestScript_010.adoc)
+| 2. | Mit der Maus klickt man auf das Feld Datei in der oberen linken Ecke des Fensters | Es öffnet sich das Auswahlmenü mit den Einträgen Neu, Spechern, SPeichern unter, Öffnen und Drucken
+| 3. | Es wird der Menüpunkt Drucken ausgewählt | Es öffnet sich ein separates Fenster mit der Druckübersicht
+| 4. | Prüfen der Einträge in der Tabelle Material- und Konstruktionsdaten | Die Einträge in der Tabelle stimmen mit den Werten der Schichten in der geöffneten Berechnungssoftware überein
+| 5. | Prüfen der allgemeinen Angaben zur Berechnung | Die Werte auf dem Druckauftrag stimmen exakt mit den entsprechenden Werten im Widget mit R und T oben links überein
+|===
+
+== Test Data Table
+
+Die Testdaten basieren auf einer Aufgabe aus dem Bereich Bauphysik und wurden für Testzwecke von der Kundin an uns übergeben.
+
+Die Werte für den Wärmeübergangswiderstand an der Innenseite sowie an der Außenseite.
+
+R_si = 0,13
+
+R_se = 0,04
+
+|===
+|           | Dicke     | Wärmeleitfähigkeit
+| Schicht 1 | 0,175 m   | 0,36
+| Schicht 2 | 0,150 m   | 0,03
+| Schicht 3 | 0,115 m   | 1,20
+|===
+
+
+== Test Log
+
+30.06.2020 - Prototyp 6: Nicht bestanden. Test wurde mit erheblichen Abweichungen durchgeführt. Im Punkt 4 des Testskriptes stimmten die Werte für das R der einzelnen Schichten nicht mit denen der Berechnung überein.
+
+26.07.2020 - Prototyp 7: Test wurde am Heim-PC erfolgreich durchgeführt.

@@ -1,0 +1,31 @@
+= Projekt Bauphysik Test Case: [Use Case: Daten drucken]
+
+== Test Case ID: 008 - Drucken:
+
+=== Beschreibung
+Dieser Test Case evaluiert das Verhalten des entworfenen Softwaresystems, wenn der Nutzer die Daten einer bereits durchgeführten Berechnung drucken möchte.
+
+Ergebnis dieses Tests ist die Druckvorschau mit der Übersicht der relevanten Daten in vorgegebener formatierter Form.
+
+=== Vorbedingungen
+<Vorbedingung 1> Die Berechnungssoftware ist gestartet.
+
+<Vorbedingung 2> Es wurde bereits eine Berechnung durchgführt oder es sind die entsprechenden Daten aus dem jeweiligen Testscript einzutragen.  
+
+=== Nachbedingungen
+<Nachbedingung 1> Es steht eine korrekt dargestellte Druckvorschau zur Verfügung.
+
+<Nachbedingung 2> Die Software hat keinen Fehler gemeldet.
+
+=== Benötigte Daten
+Als Testdaten werden Werte verwendet, die aus realen Aufgaben zur Berechnung des Wärmeübergangs stammen. Konkret werden von der Kundin übermittelte Aufgaben mit vorgegebenen korrekten Ergebnissen genutzt, um den Output der Software entsprechend validieren zu können.
+
+=== Konkrete Tests zu diesem Test Case
+
+An dieser Stelle gibt es eine Auflistung der konkreten Testabläufe, die diesen Test Case repräsentieren. Der genaue Ablauf, sowie die expliziten Berechnungsdaten sind dem jeweiligen TestScript zu entnehmen.
+
+|===
+| *Testscript* | *Kurzbeschreibung* | *manuell/automatisch*
+| link:Test_Script/TestScript_046.adoc[046] | Druckauftrag erteilen | manuell
+| link:Test_Script/TestScript_047.adoc[047] | Druckauftrag erteilen U-Modus | manuell
+|===

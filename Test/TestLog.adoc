@@ -14,12 +14,12 @@ An dieser Stelle wird eine Übersicht der verwendeten Testscripte gegeben, die �
 | *Testscript* | *Kurzbeschreibung* | *manuell/automatisch*
 | link:Test_Script/TestScript_001.adoc[001] | SW online starten | manuell
 | link:Test_Script/TestScript_002.adoc[002] | SW offline starten | manuell
-| link:Test_Script/TestScript_003.adoc[003] | Eingabegeräte prüfen | manuell
-| link:Test_Script/TestScript_004.adoc[004] | Portabilität prüfen | manuell
-| link:Test_Script/TestScript_005.adoc[005] | Systemsprache prüfen | manuell
-| link:Test_Script/TestScript_006.adoc[006] | Plausibilität prüfen | manuell
-| link:Test_Script/TestScript_007.adoc[007] | Schichten hinzufügen/löschen | manuell
-| link:Test_Script/TestScript_008.adoc[008] | Modus wechseln | manuell
+| link:Test_Script/TestScript_003.adoc[003] | Portabilität prüfen | manuell
+| link:Test_Script/TestScript_004.adoc[004] | Plausibilität korrekt | manuell
+| link:Test_Script/TestScript_005.adoc[005] | Plausibilität inkorrekt | manuell
+| link:Test_Script/TestScript_006.adoc[006] | Plausibilität Lambda = 0 | manuell
+| link:Test_Script/TestScript_007.adoc[007] | Plausibilität Schichtdicke negativ | manuell
+| link:Test_Script/TestScript_008.adoc[008] | Plausibilität Temperatur negativ | manuell
 | link:Test_Script/TestScript_009.adoc[009] | Reihenberechnung 4 Schichten | manuell
 | link:Test_Script/TestScript_010.adoc[010] | Reihenberechnung 3 Schichten | manuell
 | link:Test_Script/TestScript_011.adoc[011] | Reihenberechnung 5 Schichten | manuell
@@ -32,19 +32,30 @@ An dieser Stelle wird eine Übersicht der verwendeten Testscripte gegeben, die �
 | link:Test_Script/TestScript_018.adoc[018] | Temperaturverlauf 2 Schichten R_i bekannt V2 | manuell
 | link:Test_Script/TestScript_019.adoc[019] | Temperaturverlauf 2 Schichten R_i bekannt V3 | manuell
 | link:Test_Script/TestScript_020.adoc[020] | Temperaturverlauf 4 Schichten | manuell
-| link:Test_Script/TestScript_009.adoc[021] | Reihenberechnung 4 Schichten | automatisiert
-| link:Test_Script/TestScript_010.adoc[022] | Reihenberechnung 3 Schichten | automatisiert
-| link:Test_Script/TestScript_011.adoc[023] | Reihenberechnung 5 Schichten | automatisiert
-| link:Test_Script/TestScript_012.adoc[024] | Reihenberechnung 2 Schichten R_i bekannt | automatisiert
-| link:Test_Script/TestScript_013.adoc[025] | Reihenberechnung 2 Schichten R_i bekannt V2 | automatisiert
-| link:Test_Script/TestScript_014.adoc[026] | Reihenberechnung 2 Schichten | automatisiert
-| link:Test_Script/TestScript_015.adoc[027] | Reihenberechnung 2 Schichten V2 | automatisiert
-| link:Test_Script/TestScript_015.adoc[033] | Export & Import | automatisiert
-| link:Test_Script/TestScript_015.adoc[034] | Druckauftrag erteilen | manuell
-| link:Test_Script/TestScript_015.adoc[035] | Export von Daten | manuell
-| link:Test_Script/TestScript_015.adoc[036] | Import von Daten | manuell
-| link:Test_Script/TestScript_015.adoc[037] | Export von Daten in cm | manuell
-| link:Test_Script/TestScript_015.adoc[038] | Import von Daten in cm | manuell
+| link:Prototype/main_prototype/test/TestScript_021.py[021] | Reihenberechnung 4 Schichten | automatisiert
+| link:Prototype/main_prototype/test/TestScript_022.py[022] | Reihenberechnung 3 Schichten | automatisiert
+| link:Prototype/main_prototype/test/TestScript_023.py[023] | Reihenberechnung 5 Schichten | automatisiert
+| link:Prototype/main_prototype/test/TestScript_024.py[024] | Reihenberechnung 2 Schichten R_i bekannt | automatisiert
+| link:Prototype/main_prototype/test/TestScript_025.py[025] | Reihenberechnung 2 Schichten R_i bekannt V2 | automatisiert
+| link:Prototype/main_prototype/test/TestScript_026.py[026] | Reihenberechnung 2 Schichten | automatisiert
+| link:Prototype/main_prototype/test/TestScript_027.py[027] | Reihenberechnung 2 Schichten V2 | automatisiert
+| link:Prototype/main_prototype/test/TestScript_028.py[028] | Temperaturverlauf 3 Schichten | automatisiert
+| link:Prototype/main_prototype/test/TestScript_029.py[029] | Temperaturverlauf 2 Schichten R_i bekannt | automatisiert
+| link:Prototype/main_prototype/test/TestScript_030.py[030] | Temperaturverlauf 2 Schichten R_i bekannt V2 | automatisiert
+| link:Prototype/main_prototype/test/TestScript_031.py[031] | Temperaturverlauf 2 Schichten R_i bekannt V3 | automatisiert
+| link:Prototype/main_prototype/test/TestScript_032.py[032] | Temperaturverlauf 4 Schichten | automatisiert
+| link:Prototype/main_prototype/test/TestScript_033.py[033] | Export & Import | automatisiert
+| link:Test_Script/TestScript_035.adoc[035] | Export von Daten | manuell
+| link:Test_Script/TestScript_036.adoc[036] | Import von Daten | manuell
+| link:Test_Script/TestScript_037.adoc[037] | Export von Daten in cm | manuell
+| link:Test_Script/TestScript_038.adoc[038] | Import von Daten in cm | manuell
+| link:Test_Script/TestScript_040.adoc[040] | Eingabegeräte prüfen | manuell
+| link:Test_Script/TestScript_041.adoc[041] | Systemsprache prüfen | manuell
+| link:Test_Script/TestScript_042.adoc[042] | Schichten hinzufügen/löschen | manuell
+| link:Test_Script/TestScript_043.adoc[043] | Modus wechseln | manuell
+| link:Test_Script/TestScript_044.adoc[044] | 4 Nachkommastellen | manuell
+| link:Test_Script/TestScript_045.adoc[045] | Wechsel Einheit Schichtdicke | manuell
+| link:Test_Script/TestScript_046.adoc[046] | Druckauftrag erteilen | manuell
 | TestSuite | Testet alle automatisierten Tests | automatisiert
 |===
 
@@ -58,9 +69,9 @@ Es folgt eine Übersicht über die in der jeweiligen Testphase am jeweiligen Pro
 | *Datum* | *Version* | *Testscript* | *Ergebnis* | *Verantwortlich* |  *Kommentar*
 | 18.04.2020 |  0.1   | 001 | bestanden | CL | am Heim-PC durchgeführt
 | 18.04.2020 |  0.1   | 002 | bestanden | CL | am Heim-PC durchgeführt
+| 18.04.2020 |  0.1   | 040 | bestanden | CL | am Heim-PC durchgeführt
 | 18.04.2020 |  0.1   | 003 | bestanden | CL | am Heim-PC durchgeführt
-| 18.04.2020 |  0.1   | 004 | bestanden | CL | am Heim-PC durchgeführt
-| 18.04.2020 |  0.1   | 005 | mit Ausnahme | CL | eine Beanstandung: Auswahlreiter für die Sprache war nicht auf deutsch ("Language")
+| 18.04.2020 |  0.1   | 041 | mit Ausnahme | CL | eine Beanstandung: Auswahlreiter für die Sprache war nicht auf deutsch ("Language")
 |===
 
 
@@ -70,12 +81,12 @@ Es folgt eine Übersicht über die in der jeweiligen Testphase am jeweiligen Pro
 | *Datum* | *Version* | *Testscript* | *Ergebnis* | *Verantwortlich* | *Kommentar*
 | 28.04.2020 |  0.2   | 001 | bestanden | CL |am Heim-PC durchgeführt
 | 28.04.2020 |  0.2   | 002 | bestanden | CL |am Heim-PC durchgeführt
+| 28.04.2020 |  0.2   | 040 | bestanden | CL |am Heim-PC durchgeführt
 | 28.04.2020 |  0.2   | 003 | bestanden | CL |am Heim-PC durchgeführt
-| 28.04.2020 |  0.2   | 004 | bestanden | CL |am Heim-PC durchgeführt
-| 28.04.2020 |  0.2   | 005 | bestanden | CL |am Heim-PC durchgeführt
+| 28.04.2020 |  0.2   | 041 | bestanden | CL |am Heim-PC durchgeführt
 | 28.04.2020 |  0.2   | 006 | bestanden | CL |am Heim-PC durchgeführt
-| 28.04.2020 |  0.2   | 007 | bestanden | CL |am Heim-PC durchgeführt
-| 28.04.2020 |  0.2   | 008 | bestanden | CL |am Heim-PC durchgeführt
+| 28.04.2020 |  0.2   | 042 | bestanden | CL |am Heim-PC durchgeführt
+| 28.04.2020 |  0.2   | 043 | bestanden | CL |am Heim-PC durchgeführt
 |===
 
 
@@ -85,12 +96,12 @@ Es folgt eine Übersicht über die in der jeweiligen Testphase am jeweiligen Pro
 | *Datum* | *Version* | *Testscript* | *Ergebnis* | *Verantwortlich* |*Kommentar*
 | 20.05.2020 |  0.3   | 001 | bestanden | CL |am Heim-PC durchgeführt
 | 20.05.2020 |  0.3   | 002 | bestanden | CL |am Heim-PC durchgeführt
+| 20.05.2020 |  0.3   | 040 | bestanden | CL |am Heim-PC durchgeführt
 | 20.05.2020 |  0.3   | 003 | bestanden | CL |am Heim-PC durchgeführt
-| 20.05.2020 |  0.3   | 004 | bestanden | CL |am Heim-PC durchgeführt
-| 20.05.2020 |  0.3   | 005 | bestanden | CL |am Heim-PC durchgeführt
+| 20.05.2020 |  0.3   | 041 | bestanden | CL |am Heim-PC durchgeführt
 | 20.05.2020 |  0.3   | 006 | bestanden | CL |am Heim-PC durchgeführt
-| 20.05.2020 |  0.3   | 007 | bestanden | CL |am Heim-PC durchgeführt
-| 20.05.2020 |  0.3   | 008 | bestanden | CL |am Heim-PC durchgeführt
+| 20.05.2020 |  0.3   | 042 | bestanden | CL |am Heim-PC durchgeführt
+| 20.05.2020 |  0.3   | 043 | bestanden | CL |am Heim-PC durchgeführt
 |===
 
 
@@ -100,12 +111,12 @@ Es folgt eine Übersicht über die in der jeweiligen Testphase am jeweiligen Pro
 | *Datum* | *Version* | *Testscript* | *Ergebnis* | *Verantwortlich* |*Kommentar*
 | 07.06.2020 |  0.4   | 001 | bestanden | CL |am Heim-PC durchgeführt
 | 07.06.2020 |  0.4   | 002 | bestanden | CL |am Heim-PC durchgeführt
+| 07.06.2020 |  0.4   | 040 | bestanden | CL |am Heim-PC durchgeführt
 | 07.06.2020 |  0.4   | 003 | bestanden | CL |am Heim-PC durchgeführt
-| 07.06.2020 |  0.4   | 004 | bestanden | CL |am Heim-PC durchgeführt
-| 07.06.2020 |  0.4   | 005 | bestanden | CL |am Heim-PC durchgeführt
+| 07.06.2020 |  0.4   | 041 | bestanden | CL |am Heim-PC durchgeführt
 | 07.06.2020 |  0.4   | 006 | bestanden | CL |am Heim-PC durchgeführt
-| 07.06.2020 |  0.4   | 007 | bestanden | CL |am Heim-PC durchgeführt
-| 07.06.2020 |  0.4   | 008 | bestanden | CL |am Heim-PC durchgeführt
+| 07.06.2020 |  0.4   | 042 | bestanden | CL |am Heim-PC durchgeführt
+| 07.06.2020 |  0.4   | 043 | bestanden | CL |am Heim-PC durchgeführt
 | 07.06.2020 |  0.4   | 009 | bestanden | CL |am Heim-PC durchgeführt
 | 07.06.2020 |  0.4   | 010 | bestanden | CL |am Heim-PC durchgeführt
 | 07.06.2020 |  0.4   | 011 | bestanden | CL |am Heim-PC durchgeführt
@@ -118,6 +129,7 @@ Es folgt eine Übersicht über die in der jeweiligen Testphase am jeweiligen Pro
 | 07.06.2020 |  0.4   | 018 | Fehler    | CL | berechnete Temperatur zwischen Schicht 1 und 2 weicht erheblich von Erwartung ab
 | 07.06.2020 |  0.4   | 019 | Fehler    | CL | berechnete Temperatur zwischen Schicht 1 und 2 weicht erheblich von Erwartung ab
 | 07.06.2020 |  0.4   | 020 | bestanden | CL |am Heim-PC durchgeführt
+| 07.06.2020 |  0.4   | 044 | nicht bestanden | CL |Ergebniss nur auf 3 Nachkommstellen genau.
 |===
 
 
@@ -127,12 +139,12 @@ Es folgt eine Übersicht über die in der jeweiligen Testphase am jeweiligen Pro
 | *Datum* | *Version* | *Testscript* | *Ergebnis* | *Verantwortlich* |*Kommentar*
 | 22.06.2020 |  0.5   | 001 | bestanden | CL |am Heim-PC durchgeführt
 | 22.06.2020 |  0.5   | 002 | bestanden | CL |am Heim-PC durchgeführt
+| 22.06.2020 |  0.5   | 040 | bestanden | CL |am Heim-PC durchgeführt
 | 22.06.2020 |  0.5   | 003 | bestanden | CL |am Heim-PC durchgeführt
-| 22.06.2020 |  0.5   | 004 | bestanden | CL |am Heim-PC durchgeführt
-| 22.06.2020 |  0.5   | 005 | bestanden | CL |am Heim-PC durchgeführt
+| 22.06.2020 |  0.5   | 041 | bestanden | CL |am Heim-PC durchgeführt
 | 22.06.2020 |  0.5   | 006 | bestanden | CL |am Heim-PC durchgeführt
-| 22.06.2020 |  0.5   | 007 | bestanden | CL |am Heim-PC durchgeführt
-| 22.06.2020 |  0.5   | 008 | bestanden | CL |am Heim-PC durchgeführt
+| 22.06.2020 |  0.5   | 042 | bestanden | CL |am Heim-PC durchgeführt
+| 22.06.2020 |  0.5   | 043 | bestanden | CL |am Heim-PC durchgeführt
 | 22.06.2020 |  0.5   | 009 | bestanden | CL |am Heim-PC durchgeführt
 | 22.06.2020 |  0.5   | 010 | bestanden | CL |am Heim-PC durchgeführt
 | 22.06.2020 |  0.5   | 011 | bestanden | CL |am Heim-PC durchgeführt
@@ -155,17 +167,18 @@ Es folgt eine Übersicht über die in der jeweiligen Testphase am jeweiligen Pro
 
 |===
 | *Datum* | *Version* | *Testscript* | *Ergebnis* | *Verantwortlich* |*Kommentar*
-| 30.06.2020 |  0.6   | 034 | nicht bestanden | CL |Test ergab erhebliche Abweichungn vom Soll. Ausführlicher im TestScript_034 aufgeführt.
+| 30.06.2020 |  0.6   | 046 | nicht bestanden | CL |Test ergab erhebliche Abweichungn vom Soll. Ausführlicher im TestScript_046 aufgeführt.
+| 30.06.2020 |  0.6   | 047 | nicht bestanden | CL |Test ergab erhebliche Abweichungn vom Soll. Ausführlicher im TestScript_047 aufgeführt.
 | 30.06.2020 |  0.6   | 035 | bestanden | CL |am Heim-PC durchgeführt
 | 30.06.2020 |  0.6   | 036 | bestanden | CL |am Heim-PC durchgeführt
 | 01.07.2020 |  0.6   | 001 | bestanden | CL |am Heim-PC durchgeführt
 | 01.07.2020 |  0.6   | 002 | bestanden | CL |am Heim-PC durchgeführt
+| 01.07.2020 |  0.6   | 040 | bestanden | CL |am Heim-PC durchgeführt
 | 01.07.2020 |  0.6   | 003 | bestanden | CL |am Heim-PC durchgeführt
-| 01.07.2020 |  0.6   | 004 | bestanden | CL |am Heim-PC durchgeführt
-| 01.07.2020 |  0.6   | 005 | bestanden | CL |am Heim-PC durchgeführt
+| 01.07.2020 |  0.6   | 041 | bestanden | CL |am Heim-PC durchgeführt
 | 01.07.2020 |  0.6   | 006 | bestanden | CL |am Heim-PC durchgeführt
-| 01.07.2020 |  0.6   | 007 | bestanden | CL |am Heim-PC durchgeführt
-| 01.07.2020 |  0.6   | 008 | bestanden | CL |am Heim-PC durchgeführt
+| 01.07.2020 |  0.6   | 042 | bestanden | CL |am Heim-PC durchgeführt
+| 01.07.2020 |  0.6   | 043 | bestanden | CL |am Heim-PC durchgeführt
 | 01.07.2020 |  0.6   | 009 | bestanden | CL |am Heim-PC durchgeführt
 | 01.07.2020 |  0.6   | 010 | bestanden | CL |am Heim-PC durchgeführt
 | 01.07.2020 |  0.6   | 011 | bestanden | CL |am Heim-PC durchgeführt
@@ -198,17 +211,18 @@ Es folgt eine Übersicht über die in der jeweiligen Testphase am jeweiligen Pro
 
 |===
 | *Datum* | *Version* | *Testscript* | *Ergebnis* | *Verantwortlich* |*Kommentar*
-| 26.07.2020 |  0.7   | 034 | bestanden | CL |am Heim-PC durchgeführt
+| 26.07.2020 |  0.7   | 046 | bestanden | CL |am Heim-PC durchgeführt
+| 26.07.2020 |  0.7   | 047 | bestanden | CL |am Heim-PC durchgeführt
 | 26.07.2020 |  0.7   | 035 | bestanden | CL |am Heim-PC durchgeführt
 | 26.07.2020 |  0.7   | 036 | bestanden | CL |am Heim-PC durchgeführt
 | 26.07.2020 |  0.7   | 001 | bestanden | CL |am Heim-PC durchgeführt
 | 26.07.2020 |  0.7   | 002 | bestanden | CL |am Heim-PC durchgeführt
+| 26.07.2020 |  0.7   | 040 | bestanden | CL |am Heim-PC durchgeführt
 | 26.07.2020 |  0.7   | 003 | bestanden | CL |am Heim-PC durchgeführt
-| 26.07.2020 |  0.7   | 004 | bestanden | CL |am Heim-PC durchgeführt
-| 26.07.2020 |  0.7   | 005 | bestanden | CL |am Heim-PC durchgeführt
+| 26.07.2020 |  0.7   | 041 | bestanden | CL |am Heim-PC durchgeführt
 | 26.07.2020 |  0.7   | 006 | bestanden | CL |am Heim-PC durchgeführt
-| 26.07.2020 |  0.7   | 007 | bestanden | CL |am Heim-PC durchgeführt
-| 26.07.2020 |  0.7   | 008 | bestanden | CL |am Heim-PC durchgeführt
+| 26.07.2020 |  0.7   | 042 | bestanden | CL |am Heim-PC durchgeführt
+| 26.07.2020 |  0.7   | 043 | bestanden | CL |am Heim-PC durchgeführt
 | 26.07.2020 |  0.7   | 009 | bestanden | CL |am Heim-PC durchgeführt
 | 26.07.2020 |  0.7   | 010 | bestanden | CL |am Heim-PC durchgeführt
 | 26.07.2020 |  0.7   | 011 | bestanden | CL |am Heim-PC durchgeführt

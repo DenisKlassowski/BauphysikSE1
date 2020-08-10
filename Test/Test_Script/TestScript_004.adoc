@@ -1,18 +1,19 @@
 |===
 | Test Script 004 |
-| Portabilität prüfen | Date: 17/04/2020
+| Plausibilität korrekt | Date: 26/04/2020
 |===
 
 == Test spezification
 
 |===
-| Test Name | Portabilität prüfen
-| Use Case Tested | -
-| Test Description | Wie in den nichtfunktionalen Anforderungen bezüglich Supportability festgeschrieben, wird manuell getestet, ob die Berechnungssoftware ohne Installation genutzt werden kann
-| Pre-conditions | Der zu verwendende Computer ist hochgefahren.
+| Test Name | Plausibilität korrekt
+| Use Case Tested | Plausibilität prüfen
+| Test Case ID | 004
+| Test Description | Es wird manuell getestet, ob sich das Sofwaresystem bei der Eingabe in die entsprechenden Felder so verhält, wie in dem UseCase "Plausibilität prüfen" definiert. Dementsprechend soll bei Eingabe von korrekten Werten das System die Werte entsprechend der Eingabe anzeigen.
+| Pre-conditions | Die Berechnungssoftware ist gestartet
 
-Die Berechnungssoftware befindet sich auf einem angeschlossenen Speichermedium.
-| Post Conditions | Die Berechnungssoftware ist gestartet und einsatzbereit
+Der Benutzer hat eine neue Temperaturverlaufsberechnung ausgewählt
+| Post Conditions | Die Berechnungssoftware ist gestartet, im Modus Temperaturverlaufsberechnung steht für die Dicke der ersten Schicht eine 0,10
 | Notes |
 | Result | Pass
 |===
@@ -21,22 +22,19 @@ Die Berechnungssoftware befindet sich auf einem angeschlossenen Speichermedium.
 
 |===
 |    | Test Step | Expected Test Result
-| 1. | Den Ordner öffnen, in dem sich die ausführbare Datei der Berechnungssoftware befindet | Die Datei zum Start der Berechnungssoftware ist direkt anwählbar
-| 2. | Doppelklick mit der Maus auf die entsprechende ausführbare Datei der Berechnungssoftware | Die Berechnungssoftware startet und es öffnet sich das zugehörige Fenster im Vordergrund
+| 1. | Auswahl des Eingabefeldes der Dicke von Schicht 1 per Maus-Doppelklick | Der Inhalt des Feldes ist markiert 
+| 2. | Eingabe der Zahl 0,10 | Im Feld der Dicke von Schicht 1 steht nur eine 0,10
 |===
 
 == Test Data Table
 
-Für diesen Test werden keine Daten benötigt.
-
+Für diesen Test sind keine expliziten Testdaten notwendig
 
 == Test Log
 
-18.04.2020 - Prototyp 1: Test wurde am Heim-PC erfolgreich durchgeführt.
+28.04.2020 - Prototyp 2: Der Test wurde erfolgreich abgeschlossen
 
-28.04.2020 - Prototyp 2: Test wurde am Heim-PC erfolgreich durchgeführt.
-
-22.05.2020 - Prototyp 3: Test wurde am Heim-PC erfolgreich durchgeführt.
+20.05.2020 - Prototyp 3: Test wurde am Heim-PC erfolgreich durchgeführt.
 
 07.06.2020 - Prototyp 4: Test wurde am Heim-PC erfolgreich durchgeführt.
 

@@ -1,5 +1,5 @@
 |===
-| Test Script 034 |
+| Test Script 046 |
 | Druckauftrag erteilen | Date: 30/06/2020
 |===
 
@@ -8,11 +8,12 @@
 |===
 | Test Name | Druckauftrag erteilen
 | Use Case Tested | Daten drucken
+| Test Case ID | 008
 | Test Description | Manueller Test der Druckfunktionalität der Berechnungssoftware
-| Pre-conditions | Der Systemnutzer hat die Berechnungssofware auf seinem PC/Laptop mit dem Betribessystem Windows 10 geöffnet
+| Pre-conditions | Der Systemnutzer hat die Berechnungssofware auf seinem PC/Laptop mit dem Betribssystem Windows 10 geöffnet
 
 Es wurde der Modus für eine Berechnung des Temperaturverlaufs ausgewählt
-| Post Conditions | Die Druckauswahl wird angezeigt und es kann gedruckt werden
+| Post Conditions | Die Druckauswahl wird angezeigt und es kann der Druckvorgang ausgelöst werden
 | Notes |
 | Result | Pass
 |===

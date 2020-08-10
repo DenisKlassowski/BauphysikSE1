@@ -8,6 +8,7 @@
 |===
 | Test Name | Reihenberechnung 3 Schichten
 | Use Case Tested | Reihenberechnung durchführen
+| Test Case ID | 001
 | Test Description | Es wird eine Reihenberechnung für U über 3 Schichten durchgeführt und geprüft, ob die Ergebnisse den Erwartungen entsprechen
 | Pre-conditions | Die Berechnungssoftware ist auf einem handelsüblichen PC/Laptop gestartet und einsatzbereit.
 

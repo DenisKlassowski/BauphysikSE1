@@ -8,6 +8,7 @@
 |===
 | Test Name | Export von Berechnungsdaten (Dicke in cm)
 | Use Case Tested | Berechnungsdaten speichern
+| Test Case ID | 005
 | Test Description | Manueller Test der Exportmöglichkeit von berechneten Daten der Berechnungssoftware
 | Pre-conditions | Der Systemnutzer hat die Berechnungssofware auf seinem PC/Laptop mit dem Betribessystem Windows 10 geöffnet
 

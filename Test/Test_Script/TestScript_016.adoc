@@ -8,6 +8,7 @@
 |===
 | Test Name | Temperaturverlauf 3 Schichten
 | Use Case Tested | Reihenberechnung durchführen
+| Test Case ID | 002
 | Test Description | Es wird ein Tempearturverlauf über 3 Schichten durchgeführt und geprüft, ob die Ergebnisse den Erwartungen entsprechen
 | Pre-conditions | Die Berechnungssoftware ist auf einem handelsüblichen PC/Laptop gestartet und einsatzbereit.
 

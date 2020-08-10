@@ -1,16 +1,19 @@
 |===
-| Test Script |
-| Systemsprache | Date: 17/04/2020
+| Test Script 005 |
+| Plausibilität inkorrekt | Date: 26/04/2020
 |===
 
 == Test spezification
 
 |===
-| Test Name | Systemsprache
-| Use Case Tested | -
-| Test Description | Es wird geprüft, ob die Berechnungssoftware die in den nichtfunktionalen Anforderungen geforderte deutsche Benutzeroberfläche beinhaltet
-| Pre-conditions | Die Berechnungssoftware ist gestartet und einsatzbereit
-| Post Conditions | Die Berechnungssoftware ist gestartet und einsatzbereit
+| Test Name | Plausibilität inkorrekt
+| Use Case Tested | Plausibilität prüfen
+| Test Case ID | 004
+| Test Description | Es wird manuell getestet, ob sich das Sofwaresystem bei der Eingabe in die entsprechenden Felder so verhält, wie in dem UseCase "Plausibilität prüfen" definiert. Dementsprechend soll bei Eingabe von Buchstaben in Zahlenfelder die Eingabe blockieren.
+| Pre-conditions | Die Berechnungssoftware ist gestartet
+
+Der Benutzer hat eine neue Temperaturverlaufsberechnung ausgewählt
+| Post Conditions | Die Berechnungssoftware ist gestartet, im Modus Temperaturverlaufsberechnung steht für die Dicke der ersten Schicht eine 0,1
 | Notes |
 | Result | Pass
 |===
@@ -19,18 +22,17 @@
 
 |===
 |    | Test Step | Expected Test Result
-| 1. | sämtliche Reiter, Buttons, Beschreibungen werden visuell auf den Inhalt der Beschriftung geprüft | Alle Buttons und Beschriftungen erscheinen in deutscher Sprache
+| 1. | Auswahl des Eingabefeldes der Dicke von Schicht 1 per Maus-Doppelklick | Der Inhalt des Feldes ist markiert 
+| 2. | Eingabe der Zahl 0,1 und dem Buchstaben "o" | Im Feld steht nur eine 0,1
 |===
 
 == Test Data Table
 
-Für diesen Test sind keine Testdaten notwendig.
+Für diesen Test sind keine expliziten Testdaten notwendig
 
 == Test Log
 
-18.04.2020 - Prototyp 1: Test wurde am Heim-PC durchgeführt mit einer Beanstandung. Alle Beschriftungen bis auf den Auswahlreiter für die Sprache ("Language") waren auf deutsch.
-
-28.04.2020 - Prototyp 2: Test wurde am Heim-PC erfolgreich durchgeführt.
+28.04.2020 - Prototyp 2: Der Test wurde erfolgreich abgeschlossen
 
 20.05.2020 - Prototyp 3: Test wurde am Heim-PC erfolgreich durchgeführt.
 

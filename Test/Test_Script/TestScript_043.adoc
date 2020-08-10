@@ -1,0 +1,56 @@
+|===
+| Test Script 043 |
+| Modus wechseln | Date: 28/04/2020
+|===
+
+== Test spezification
+
+|===
+| Test Name | Modus wechseln
+| Use Case Tested | Reihenberechnung durchführen
+| Test Case ID | 001
+| Test Description | Es wird geprüft, ob für einzelne Schichten bereits eingegebene Daten beim Wechsel des Berechnungsmodus erhalten bleiben
+| Pre-conditions | Die Berechnungssoftware ist gestartet und die Widerstandsberechnung ausgewählt
+
+Es stehen 3 Schichten zur Eingabe von Daten zur Verfügung
+
+Die Schichtdicke ist wie in den Testdaten ersichtlich ausgefüllt
+| Post Conditions | Die Berechnungssoftware befindet sich im Modus Temperaturverlauf berechnen
+
+Es sind 3 Schichten vorhanden, die mit den Testdaten gefüllt sind
+| Notes |
+| Result | Pass
+|===
+
+== Test Steps
+
+|===
+|    | Test Step | Expected Test Result
+| 1. | Per Maus wird auf den Reiter Modus geklickt | es öffnet sich das Auswahlmenü mit den verschiedenen Modi 
+| 2. | Es wird die Option Temperaturverlauf berechnen ausgewählt | Es erscheinen die für die Berechnung des Temperaturverlaufs zusätzlich notwendigen Eingabefelder
+
+Die Felder für die Dicke der 3 Schichten sind noch immer mit den Testdaten befüllt
+|===
+
+== Test Data Table
+
+|===
+| Voreinstellungen | 1  
+| Dicke Schicht 1 | 1,00 m 
+| Dicke Schicht 2 | 2,00 m 
+| Dicke Schicht 3 | 0,50 m 
+|===
+
+== Test Log
+
+28.04.2020 - Prototyp 2: Test wurde erfolgreich durchgeführt.
+
+20.05.2020 - Prototyp 3: Test wurde erfolgreich durchgeführt.
+
+07.06.2020 - Prototyp 4: Test wurde am Heim-PC erfolgreich durchgeführt.
+
+22.06.2020 - Prototyp 5: Test wurde am Heim-PC erfolgreich durchgeführt.
+
+01.07.2020 - Prototyp 6: Test wurde am Heim-PC erfolgreich durchgeführt.
+
+26.07.2020 - Prototyp 7: Test wurde am Heim-PC erfolgreich durchgeführt.

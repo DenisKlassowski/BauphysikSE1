@@ -1,0 +1,45 @@
+= Projekt Bauphysik Test Case: [Use Case: Reihenberechnung_durchführen]
+
+== Test Case ID: 001 - Berechnung Wärmedurchlasswiderstand für mehrere Schichten:
+
+=== Beschreibung
+Dieser Test Case evaluiert das Verhalten des entworfenen Softwaresystems, nachdem der Systemnutzer die Funktion der Wärmewiderstandsberechnung ausgewählt und die Materialdaten der gegebenen Schichten eingegeben hat. Während der Systemnutzer die Daten eingibt, berechnet das Softwaresystem die Wärmewiderstandsdaten und gibt diese aus.
+
+Ergebnis dieses Tests sind die korrekt berechneten Werte für den Wärmedurchlasswiderstand. Die Berechnung wurde erfolgreich abgeschlossen.
+
+=== Vorbedingungen
+<Vorbedingung 1> Die Software ist gestartet und einsatzbereit im Modus U-Berechnung.
+
+<Vorbedingung 2> Dem Systemnuter liegen konkrete Werte für eine gegebene Wand aus mehreren Schichten vor.  
+
+=== Nachbedingungen
+<Nachbedingung 1> Die Software hat keinen Fehler gemeldet.
+
+<Nachbedingung 2> Die Software zeigt die korrekt berechneten Ergebnisse an.
+
+=== Benötigte Daten
+Als Testdaten werden Werte verwendet, die aus realen Aufgaben zur Berechnung des Wärmeübergangs stammen. Konkret werden von der Kundin übermittelte Aufgaben mit vorgegebenen korrekten Ergebnissen genutzt, um den Output der Software entsprechend validieren zu können.
+
+=== Konkrete Tests zu diesem Test Case
+
+An dieser Stelle gibt es eine Auflistung der konkreten Testabläufe, die diesen Test Case repräsentieren. Der genaue Ablauf, sowie die expliziten Berechnungsdaten sind dem jeweiligen TestScript zu entnehmen.
+
+|===
+| *Testscript* | *Kurzbeschreibung* | *manuell/automatisch*
+| link:Test_Script/TestScript_009.adoc[TestScript_009] | Reihenberechnung 4 Schichten | manuell
+| link:Test_Script/TestScript_010.adoc[TestScript_010] | Reihenberechnung 3 Schichten | manuell
+| link:Test_Script/TestScript_011.adoc[TestScript_011] | Reihenberechnung 5 Schichten | manuell
+| link:Test_Script/TestScript_012.adoc[TestScript_012] | Reihenberechnung 2 Schichten R_i bekannt | manuell
+| link:Test_Script/TestScript_013.adoc[TestScript_013] | Reihenberechnung 2 Schichten R_i bekannt V2 | manuell
+| link:Test_Script/TestScript_014.adoc[TestScript_014] | Reihenberechnung 2 Schichten | manuell
+| link:Test_Script/TestScript_015.adoc[TestScript_015] | Reihenberechnung 2 Schichten V2 | manuell
+| link:Prototype/main_prototype/test/TestScript_021.py[TestScript_021] | Reihenberechnung 4 Schichten | automatisiert
+| link:Prototype/main_prototype/test/TestScript_022.py[TestScript_022] | Reihenberechnung 3 Schichten | automatisiert
+| link:Prototype/main_prototype/test/TestScript_023.py[TestScript_023] | Reihenberechnung 5 Schichten | automatisiert
+| link:Prototype/main_prototype/test/TestScript_024.py[TestScript_024] | Reihenberechnung 2 Schichten R_i bekannt | automatisiert
+| link:Prototype/main_prototype/test/TestScript_025.py[TestScript_025] | Reihenberechnung 2 Schichten R_i bekannt V2 | automatisiert
+| link:Prototype/main_prototype/test/TestScript_026.py[TestScript_026] | Reihenberechnung 2 Schichten | automatisiert
+| link:Prototype/main_prototype/test/TestScript_027.py[TestScript_027] | Reihenberechnung 2 Schichten V2 | automatisiert
+| link:Test_Script/TestScript_042.adoc[042] | Schichten hinzufügen/löschen | manuell
+| link:Test_Script/TestScript_043.adoc[043] | Modus wechseln | manuell
+|===

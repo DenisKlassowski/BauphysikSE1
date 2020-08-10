@@ -1,22 +1,19 @@
 |===
 | Test Script 008 |
-| Modus wechseln | Date: 28/04/2020
+| Plausibilität Außentemperatur negativ | Date: 26/04/2020
 |===
 
 == Test spezification
 
 |===
-| Test Name | Modus wechseln
-| Use Case Tested | -
-| Test Description | Es wird geprüft, ob für einzelne Schichten bereits eingegebene Daten beim Wechsel des Berechnungsmodus erhalten bleiben
-| Pre-conditions | Die Berechnungssoftware ist gestartet und die Widerstandsberechnung ausgewählt
+| Test Name | Plausibilität Außentemperatur negativ
+| Use Case Tested | Plausibilität prüfen
+| Test Case ID | 004
+| Test Description | Es wird manuell getestet, ob sich das Sofwaresystem bei der Eingabe in die entsprechenden Felder so verhält, wie in dem UseCase "Plausibilität prüfen" definiert. Dementsprechend soll den physikalischen Gesetzen entsprechend die Eingabe einer negativen Temperatur möglich sein.
+| Pre-conditions | Die Berechnungssoftware ist gestartet
 
-Es stehen 3 Schichten zur Eingabe von Daten zur Verfügung
-
-Die Schichtdicke ist wie in den Testdaten ersichtlich ausgefüllt
-| Post Conditions | Die Berechnungssoftware befindet sich im Modus Temperaturverlauf berechnen
-
-Es sind 3 Schichten vorhanden, die mit den Testdaten gefüllt sind
+Der Benutzer hat eine neue Temperaturverlaufsberechnung ausgewählt
+| Post Conditions | Die Berechnungssoftware ist gestartet, im Modus Temperaturverlaufsberechnung steht für die Außentemperatur -10,0 °C
 | Notes |
 | Result | Pass
 |===
@@ -25,26 +22,19 @@ Es sind 3 Schichten vorhanden, die mit den Testdaten gefüllt sind
 
 |===
 |    | Test Step | Expected Test Result
-| 1. | Per Maus wird auf den Reiter Modus geklickt | es öffnet sich das Auswahlmenü mit den verschiedenen Modi 
-| 2. | Es wird die Option Temperaturverlauf berechnen ausgewählt | Es erscheinen die für die Berechnung des Temperaturverlaufs zusätzlich notwendigen Eingabefelder
-
-Die Felder für die Dicke der 3 Schichten sind noch immer mit den Testdaten befüllt
+| 1. | Auswahl des Eingabefeldes der Außentemperatur per Maus-Doppelklick | Der Inhalt des Feldes ist markiert 
+| 2. | Eingabe der Zahl -10,0 und Bestätigung mit der Enter-Taste | Im Feld steht eine -10,0
 |===
 
 == Test Data Table
 
-|===
-| Voreinstellungen | 1  
-| Dicke Schicht 1 | 1,00 m 
-| Dicke Schicht 2 | 2,00 m 
-| Dicke Schicht 3 | 0,50 m 
-|===
+Für diesen Test sind keine expliziten Testdaten notwendig
 
 == Test Log
 
-28.04.2020 - Prototyp 2: Test wurde erfolgreich durchgeführt.
+28.04.2020 - Prototyp 2: Der Test wurde erfolgreich abgeschlossen
 
-20.05.2020 - Prototyp 3: Test wurde erfolgreich durchgeführt.
+20.05.2020 - Prototyp 3: Test wurde am Heim-PC erfolgreich durchgeführt.
 
 07.06.2020 - Prototyp 4: Test wurde am Heim-PC erfolgreich durchgeführt.
 

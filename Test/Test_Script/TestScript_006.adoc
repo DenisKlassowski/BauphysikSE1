@@ -1,18 +1,19 @@
 |===
 | Test Script 006 |
-| Plausibilität | Date: 26/04/2020
+| Plausibilität Lambda = 0 | Date: 26/04/2020
 |===
 
 == Test spezification
 
 |===
-| Test Name | Plausibilität
+| Test Name | Plausibilität Lambda = 0
 | Use Case Tested | Plausibilität prüfen
-| Test Description | Es wird manuell getestet, ob sich das Sofwaresystem bei der Eingabe in die entsprechenden Felder so verhält, wie in dem UseCase "Plausibilität prüfen" definiert. Dementsprechend soll bei Eingabe von Buchstaben in Zahlenfelder die Eingabe blockieren.
+| Test Case ID | 004
+| Test Description | Es wird manuell getestet, ob sich das Sofwaresystem bei der Eingabe in die entsprechenden Felder so verhält, wie in dem UseCase "Plausibilität prüfen" definiert. Dementsprechend soll bei Eingabe von Null in das Eingabefeld für die Wärmeleitfähigkeit Lambda ein rot hinterlegtes Feld zur Warnung an den Benutzer bewirken.
 | Pre-conditions | Die Berechnungssoftware ist gestartet
 
-Der Benutzer hat eine neue Widerstandsberechnung ausgewählt
-| Post Conditions | Die Berechnungssoftware ist gestartet, im Modus Widerstandsberechnung steht für die Dicke der ersten Schicht eine 1
+Der Benutzer hat eine neue Temperaturverlaufsberechnung ausgewählt
+| Post Conditions | Die Berechnungssoftware ist gestartet, im Modus Temperaturverlaufsberechnung steht für die Wärmeleitfähigkeit von Schicht 1 eine rot hinterlegte 0,0
 | Notes |
 | Result | Pass
 |===
@@ -21,8 +22,8 @@ Der Benutzer hat eine neue Widerstandsberechnung ausgewählt
 
 |===
 |    | Test Step | Expected Test Result
-| 1. | Auswahl des Eingabefeldes der Dicke von Schicht 1 per Maus-Doppelklick | Der Inhalt des Feldes ist markiert 
-| 2. | Eingabe von der Zahl 1 und dem Buchstaben "o" | Im Feld steht nur eine 1
+| 1. | Auswahl des Eingabefeldes der Wärmeleitfähigkeit (Lambda) von Schicht 1 per Maus-Doppelklick | Der Inhalt des Feldes ist markiert 
+| 2. | Eingabe der Zahl 0,0 | Im Feld steht eine rot hinterlegte 0,0
 |===
 
 == Test Data Table

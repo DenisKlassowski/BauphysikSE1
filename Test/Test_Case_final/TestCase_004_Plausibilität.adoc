@@ -1,0 +1,35 @@
+= Projekt Bauphysik Test Case: [Use Case: Plausibilität prüfen]
+
+== Test Case ID: 004 - Plausibilitätsprüfung testen:
+
+=== Beschreibung
+Dieser Test Case evaluiert das Verhalten des entworfenen Softwaresystems während der Systemnutzer aktiv Eingaben tätigt. Dabei soll geprüft werden, ob die vorgegebenen Einschränkungen seitens der Software eingehalten werden.
+
+Ergebnis dieses Tests sind ausnahmslos mit sinnvollen und korrekten Werten befüllte Eingabefelder.
+
+=== Vorbedingungen
+<Vorbedingung 1> Die Software ist gestartet und einsatzbereit im Modus Temperaturverlaufsberechnung.
+
+<Vorbedingung 2> Dem Systemnuter liegen konkrete Testdaten für die Eingabe in die entsprechenden Felder vor.
+
+=== Nachbedingungen
+<Nachbedingung 1> Die Software hat keinen Fehler gemeldet.
+
+<Nachbedingung 2> Die Software zeigt die soweit zulässig befüllten Felder an.
+
+=== Benötigte Daten
+
+Die für die jeweiligen Testabläufe benötigten Werte sind in den entsprechenden Testscripten vermerkt.
+
+=== Konkrete Tests zu diesem Test Case
+
+An dieser Stelle gibt es eine Auflistung der konkreten Testabläufe, die diesen Test Case repräsentieren. Der genaue Ablauf ist dem jeweiligen TestScript zu entnehmen.
+
+|===
+| *Testscript* | *Kurzbeschreibung* | *manuell/automatisch*
+| link:Test_Script/TestScript_004.adoc[004] | Plausibilität korrekt | manuell
+| link:Test_Script/TestScript_005.adoc[005] | Plausibilität inkorrekt | manuell
+| link:Test_Script/TestScript_006.adoc[006] | Plausibilität Lambda = 0 | manuell
+| link:Test_Script/TestScript_007.adoc[007] | Plausibilität Schichtdicke negativ | manuell
+| link:Test_Script/TestScript_008.adoc[008] | Plausibilität Temperatur negativ | manuell
+|===

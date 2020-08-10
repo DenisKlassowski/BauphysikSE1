@@ -8,6 +8,7 @@
 |===
 | Test Name | Berechnungssoftware starten [online]
 | Use Case Tested | Programmstart
+| Test Case ID | 003
 | Test Description | Manueller Test des Starts der Berechnungssoftware durch direkten Aufruf der ausführbaren Datei durch den Benutzer
 | Pre-conditions | Der Systemnutzer hat seinen PC/Laptop mit dem Betribessystem Windows 10 hochgefahren und ist online
 

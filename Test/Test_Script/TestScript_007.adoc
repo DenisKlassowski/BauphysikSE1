@@ -1,21 +1,20 @@
 |===
 | Test Script 007 |
-| Schichten hinzufügen/löschen | Date: 28/04/2020
+| Plausibilität Schichtdicke negativ | Date: 26/04/2020
 |===
 
 == Test spezification
 
 |===
-| Test Name | Schichten hinzufügen/löschen
-| Use Case Tested | Reichenberechnung durchführen
-| Test Description | In diesem Test wird überprüft, ob sich, wie in den Anforderungen festgelegt, von der Defaultansicht ausgehend Schichten (mindestens 10) manuell hinzufügen lassen und ob sich Schichten auch wieder entfernen lassen
+| Test Name | Plausibilität Schichtdicke negativ
+| Use Case Tested | Plausibilität prüfen
+| Test Case ID | 004
+| Test Description | Es wird manuell getestet, ob sich das Sofwaresystem bei der Eingabe in die entsprechenden Felder so verhält, wie in dem UseCase "Plausibilität prüfen" definiert. Dementsprechend soll bei Eingabe von einer negativen Schichtdicke dieser Wert nicht bestätigen lassen und nicht im Eingabefeld verbleiben.
 | Pre-conditions | Die Berechnungssoftware ist gestartet
 
-Es wurde eine neue Widerstandberechnung ausgewählt.
-
-Es steht eine Schicht für die Eingabe von Daten zur Verfügung
-| Post Conditions | Die Software befindet sich wieder im Ausgangszustand zu Beginn des Tests
-| Notes | Zwischenzeitlich stehen 10 Schichten zur Verfügung
+Der Benutzer hat eine neue Temperaturverlaufsberechnung ausgewählt
+| Post Conditions | Die Berechnungssoftware ist gestartet, im Modus Temperaturverlaufsberechnung steht für die Dicke von Schicht 1 eine 0,000
+| Notes |
 | Result | Pass
 |===
 
@@ -23,22 +22,19 @@ Es steht eine Schicht für die Eingabe von Daten zur Verfügung
 
 |===
 |    | Test Step | Expected Test Result
-| 1. | Es wird die "+"-Schaltfläche zum Hinzufügen einer Schicht betätigt | Es stehen 2 Schichten für die Eingabe von Daten zur Verfügung 
-| 2. | Es wird die "+"-Schaltfläche der Schicht 2 betätigt | Es stehen 3 Schichten für die Eingabe von Daten zur Verfügung
-| 3. | Es wird 7 mal die "+"-Schaltfläche der Schicht 1 betätigt | Es stehen 10 Schichten für die Eingabe von Daten zur Verfügung
-| 4. | Es wird die "-"-Schaltfläche der Schicht 2 betätigt | Es stehen 9 Schichten für die Eingabe von Daten zur Verfügung
-| 5. | Es wird 9 mal die "-"-Schaltfläche der Schicht 1 betätigt | Es steht 1 Schicht zur Eingabe von Daten zur Verfügung
+| 1. | Auswahl des Eingabefeldes der Dicke von Schicht 1 per Maus-Doppelklick | Der Inhalt des Feldes ist markiert 
+| 2. | Eingabe der Zahl -1,5 und Bestätigung mit der Enter-Taste | Im Feld steht eine 0,000
 |===
 
 == Test Data Table
 
-Für diesen Test werden keine Daten benötigt.
+Für diesen Test sind keine expliziten Testdaten notwendig
 
 == Test Log
 
-28.04.2020 - Prototyp 2: Test wurde erfolgreich durchgeführt.
+28.04.2020 - Prototyp 2: Der Test wurde erfolgreich abgeschlossen
 
-20.05.2020 - Prototyp 3: Test wurde erfolgreich durchgeführt.
+20.05.2020 - Prototyp 3: Test wurde am Heim-PC erfolgreich durchgeführt.
 
 07.06.2020 - Prototyp 4: Test wurde am Heim-PC erfolgreich durchgeführt.
 

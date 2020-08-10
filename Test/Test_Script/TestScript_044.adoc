@@ -1,0 +1,40 @@
+|===
+| Test Script 044 |
+| 4 Nachkommastellen | Date: 30/05/2020
+|===
+
+== Test spezification
+
+|===
+| Test Name | 4 Nachkommastellen
+| Use Case Tested | Reihenberechnung durchführen
+| Test Case ID | 007
+| Test Description | Es wird geprüft, ob die Ergebnisse der Berechnungen (R_T, R_ges, U, R_i der jeweiligen Schichten) auf mindestens 4 Nachkommastellen genau berechnet werden
+| Pre-conditions | Die Berechnungssoftware ist gestartet und die Widerstandsberechnung ausgewählt.
+
+Es wurde bereits eine Reihenberechnung durchgeführt. Beispielsweise ein Testscript zur Reihenberechnung.
+| Post Conditions | Alle vorliegenden berechneten Ergebnisse haben 4 oder mehr Nachkommastellen
+| Notes |
+| Result | Pass
+|===
+
+== Test Steps
+
+|===
+|    | Test Step | Expected Test Result
+| 1. | Es wird geprüft, ob die Ergebnisse für R_ges, R_T, U, sowie alle R_i mit mindestens 4 Nachkommastellen angegeben sind | alle betreffenden Werte haben 4 oder mehr Nachkommastellen
+|===
+
+== Test Data Table
+
+Idealerweise erfolgt der Test nach einer erfolgreichen Reihenberechnung. Alternativ können als Testdaten beliebige Datensätze aus den Testscripten 009 bis 015 gewählt werden.
+
+== Test Log
+
+07.06.2020 - Prototyp 4: Test nicht erfoglreich. Ergebniss nur auf 3 Nachkommstellen genau.
+
+22.06.2020 - Prototyp 5: Test wurde am Heim-PC erfolgreich durchgeführt.
+
+01.07.2020 - Prototyp 6: Test wurde am Heim-PC erfolgreich durchgeführt.
+
+26.07.2020 - Prototyp 7: Test wurde am Heim-PC erfolgreich durchgeführt.

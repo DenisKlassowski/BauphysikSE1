@@ -8,6 +8,7 @@
 |===
 | Test Name | Import von Berechnungsdaten
 | Use Case Tested | Berechnungsdaten laden
+| Test Case ID | 006
 | Test Description | Manueller Test der Importmöglichkeit von Daten der Berechnungssoftware
 | Pre-conditions | Der Systemnutzer hat die Berechnungssofware auf seinem PC/Laptop mit dem Betribessystem Windows 10 geöffnet
 
