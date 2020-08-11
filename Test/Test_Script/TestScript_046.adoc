@@ -56,6 +56,6 @@ Aussentemperatur: -4,0 °C
 
 == Test Log
 
-30.06.2020 - Prototyp 6: Nicht bestanden. Test wurde mit erheblichen Abweichungen durchgeführt. Im Punkt 4 des Testskriptes stimmten die Werte für das R der einzelnen Schichten nicht mit denen der Berechnung überein. Im Punkt 6 fehlte der Eintrag für die Temperatur an der letzten Grenzfläche - also 3. Schicht- außen. Im Punkt 7 stimmte der Graph nicht mit dem in der Berechnung überein - genauer gesagt wurde der Graph nicht vollständig dargestellt, sondern abgeschnitten, bevor die rote Linie endete.
+30.06.2020 - Prototyp 6: Nicht bestanden. Test wurde mit erheblichen Abweichungen durchgeführt. Im Punkt 4 des Testskriptes stimmten die Werte für das R der einzelnen Schichten nicht mit denen der Berechnung überein. Im Punkt 6 fehlte der Eintrag für die Temperatur an der letzten Grenzfläche - also 3. Schicht- außen. Im Punkt 7 stimmte der Graph nicht mit dem in der Berechnung überein - genauer gesagt wurde der Graph nicht vollständig dargestellt, sondern abgeschnitten, bevor die rote Linie endete. Analyse und Diskussion direkt mit dem verantwortlichen Dev. Lösung war unter anderem, dass Indizes für ein Array nicht gestimmt haben.
 
 26.07.2020 - Prototyp 7: Test wurde am Heim-PC erfolgreich durchgeführt.

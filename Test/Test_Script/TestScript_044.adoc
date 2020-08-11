@@ -31,7 +31,7 @@ Idealerweise erfolgt der Test nach einer erfolgreichen Reihenberechnung. Alterna
 
 == Test Log
 
-07.06.2020 - Prototyp 4: Test nicht erfoglreich. Ergebniss nur auf 3 Nachkommstellen genau.
+07.06.2020 - Prototyp 4: Test nicht erfoglreich. Ergebniss nur auf 3 Nachkommstellen genau. Mitteilung an den Dev für UI, das auf 4 Nachkommastellen zu ändern.
 
 22.06.2020 - Prototyp 5: Test wurde am Heim-PC erfolgreich durchgeführt.
 

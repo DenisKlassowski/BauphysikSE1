@@ -1,0 +1,41 @@
+|===
+| Test Script 045 |
+| Wechsel Einheit Schichtdicke | Date: 30/05/2020
+|===
+
+== Test spezification
+
+|===
+| Test Name | Wechsel Einheit Schichtdicke
+| Use Case Tested | Reihenberechnung durchführen
+| Test Case ID | 007
+| Test Description | Es wird geprüft, ob die Einheit für die Eingabe der Schichtdicke einer Schicht gewechselt werden kann
+| Pre-conditions | Die Berechnungssoftware ist gestartet und die Widerstandsberechnung ausgewählt.
+| Post Conditions | Die Einheit der Schichtdicke der Schicht 1 ist Millimeter 
+| Notes |
+| Result | Pass
+|===
+
+== Test Steps
+
+|===
+|    | Test Step | Expected Test Result
+| 1. | Es wird die Dropdown-Auswahl der Schicht 1 angeklickt | es öffnet sich die Auswahl der Einheiten, die Meter, Zentimeter und Millimeter umfasst
+| 2. | Es wird die Einheit Zentimeter ausgewählt | Die Einheit von Schicht 1 ist Zentimeter
+| 3. | Es wird die Dropdown-Auswahl der Schicht 1 angeklickt | es öffnet sich die Auswahl der Einheiten, die Meter, Zentimeter und Millimeter umfasst
+| 2. | Es wird die Einheit Millimeter ausgewählt | Die Einheit von Schicht 1 ist Millimeter
+|===
+
+== Test Data Table
+
+Für diesen Test sind keine gesonderten Testdaten notwendig
+
+== Test Log
+
+07.06.2020 - Prototyp 4: Test wurde am Heim-PC erfolgreich durchgeführt.
+
+22.06.2020 - Prototyp 5: Test wurde am Heim-PC erfolgreich durchgeführt.
+
+01.07.2020 - Prototyp 6: Test wurde am Heim-PC erfolgreich durchgeführt.
+
+26.07.2020 - Prototyp 7: Test wurde am Heim-PC erfolgreich durchgeführt.

@@ -1,0 +1,38 @@
+|===
+| Test Script 039 |
+| Auswahl falscher Datei bei Import | Date: 30/06/2020
+|===
+
+== Test spezification
+
+|===
+| Test Name | Auswahl falscher Datei bei Import
+| Use Case Tested | Berechnungsdaten laden
+| Test Case ID | 006
+| Test Description | Manueller Test der Importmöglichkeit von Daten der Berechnungssoftware, wenn der Nutzer eine Datei auswählt, die keine ".baup"-Datei ist
+| Pre-conditions | Der Systemnutzer hat die Berechnungssofware auf seinem PC/Laptop mit dem Betribessystem Windows 10 geöffnet
+
+Die Berechnungssoftware befindet sich im Startbildschirm
+| Post Conditions | Die Berechnungssoftware befindet sich im Startbildschirm
+| Notes |
+| Result | Pass
+|===
+
+== Test Steps
+
+|===
+|    | Test Step | Expected Test Result
+| 1. | Auf dem Startbildschirm wird auf das Icon Öffnen geklickt | Es öffnet sich ein Auswahlmenü für die Datei
+| 2. | Man ändert den Dateintyp von Bauphysikberechnung (\*.baup) in alle Dateien (*) | Dateityp ist beliebig
+| 3. | Auswahl einer beliebigen Datei, die keine ".baup"-Datei ist, und bestätigt mit dem Button Öffnen | Das Fenster verbleibt im Startbildschirm
+|===
+
+== Test Data Table
+
+Für diesen Test sind keine speziellen Testdaten notwendig.
+
+== Test Log
+
+30.06.2020 - Prototyp 6: Test wurde erfolgreich durchgeführt.
+
+26.07.2020 - Prototyp 7: Test wurde am Heim-PC erfolgreich durchgeführt.

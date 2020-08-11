@@ -27,7 +27,8 @@ An dieser Stelle gibt es eine Auflistung der konkreten Testabläufe, die diesen 
 
 |===
 | *Testscript* | *Kurzbeschreibung* | *manuell/automatisch*
-| link:Test_Script/TestScript_015.adoc[033] | Export & Import | automatisiert
-| link:Test_Script/TestScript_015.adoc[036] | Import von Daten | manuell
-| link:Test_Script/TestScript_015.adoc[038] | Import von Daten in cm | manuell
+| link:Test_Script/TestScript_033.adoc[033] | Export & Import | automatisiert
+| link:Test_Script/TestScript_036.adoc[036] | Import von Daten | manuell
+| link:Test_Script/TestScript_038.adoc[038] | Import von Daten in cm | manuell
+| link:Test_Script/TestScript_039.adoc[039] | Auswahl falscher Datei | manuell
 |===

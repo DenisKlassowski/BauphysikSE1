@@ -1,0 +1,40 @@
+|===
+| Test Script 048 |
+| 3 Nachkommastellen Lambda | Date: 15/05/2020
+|===
+
+== Test spezification
+
+|===
+| Test Name | 3 Nachkommastellen Lambda
+| Use Case Tested | -
+| Test Case ID | 007
+| Test Description | Einige Aufgaben für die Berechnung einer mehrschichtigen Wand erfordern die Eingabe einer Wärmeleitfähigkeit mit 3 Nachkommastellen. Bei vormaligen Tests ist aufgefallen, dass nur 2 NAchkommastellen zur Verfügung stehen
+| Pre-conditions | Die Berechnungssoftware ist gestartet und die Widerstandsberechnung ausgewählt.
+| Post Conditions | Für das Feld der Wärmeleitfähigkeit (Lambda) einer Schicht stehen 3 Nachkommastellen zur Verfügung
+| Notes |
+| Result | Pass
+|===
+
+== Test Steps
+
+|===
+|    | Test Step | Expected Test Result
+| 1. | Es wird geprüft, ob das Eingabefeld für die Wärmeleitfähigkeit einer Schicht 3 Nachkommastellen bietet | das Feld für die Eingabe der Wärmeleitfähigkeit besitzt 3 Nachkommastellen
+|===
+
+== Test Data Table
+
+Für diesen Testablauf sind keine gesonderten Testdaten notwendig.
+
+== Test Log
+
+20.05.2020 - Prototyp 3: Test nicht erfolgreich. Für die Wärmeleitfähigkeit stehen nur 2 Nachkommastellen zur Verfügung.
+
+07.06.2020 - Prototyp 4: Test wurde am Heim-PC erfolgreich durchgeführt.
+
+22.06.2020 - Prototyp 5: Test wurde am Heim-PC erfolgreich durchgeführt.
+
+01.07.2020 - Prototyp 6: Test wurde am Heim-PC erfolgreich durchgeführt.
+
+26.07.2020 - Prototyp 7: Test wurde am Heim-PC erfolgreich durchgeführt.

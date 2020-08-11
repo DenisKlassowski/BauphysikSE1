@@ -28,7 +28,7 @@ Für diesen Test sind keine Testdaten notwendig.
 
 == Test Log
 
-18.04.2020 - Prototyp 1: Test wurde am Heim-PC durchgeführt mit einer Beanstandung. Alle Beschriftungen bis auf den Auswahlreiter für die Sprache ("Language") waren auf deutsch.
+18.04.2020 - Prototyp 1: Test wurde am Heim-PC durchgeführt mit einer Beanstandung. Alle Beschriftungen bis auf den Auswahlreiter für die Sprache ("Language") waren auf deutsch. Entsprechend der Abweichung erfolgte eine Mitteilung an den für die UI zuständigen Dev.
 
 28.04.2020 - Prototyp 2: Test wurde am Heim-PC erfolgreich durchgeführt.
 

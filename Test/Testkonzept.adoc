@@ -1,0 +1,72 @@
+= Testkonzept Projekt Bauphysik
+
+In diesem Dokument wird eine Übersicht über die konzeptionelle Ausrichtung der Tests für das Projekt Bauphysik gegeben.
+
+== Testobjekte
+
+Die wichtigsten und damit zu testenden Komponenten der Berechnungssoftware sind:
+
+* Berechnungsfunktionen
+* Benutzeroberfläche
+* Eingabefelder bzw. Eingabemöglichkeiten
+* Datenstruktur
+* Importfunktion
+* Exportfunktion
+* Druckfunktion
+
+== Testmethoden
+
+An dieser Stelle wird ein Überblick über die Testmethoden gegeben, die jeweils zum Test der einzelnen Testobjekte verwendet werden. Außerdem wird das "System under Test" für die einzelnen Testobjekte spezifiziert. Zusätzlich wird aufgezeigt, in welchen TestCases, welches Testobjekt unter Testbedingungen geprüft wird.
+
+|===
+| *Testobjekt*          | *System under Test* | *Testmethode* | *TestCase-ID*
+| Berechnungsfunktionen | Calculation.py      | manuell & automatisiert | 001, 002
+| Benutzeroberfläche    | Gesamtsystem        | manuell  | 001 bis 008
+| Eingabefelder bzw. Eingabemöglichkeiten | UI | manuell | 004, 007
+| Datenstruktur         | TabData.py, LayerData.py | automatisiert  | 001, 002, 005, 006
+| Importfunktion        | Gesamtsystem, Parser.py | manuell & automatisiert  | 006
+| Exportfunktion        | Gesamtsystem, Exporter.py | manuell & automatisiert  | 005
+| Druckfunktion         | Gesamtsystem, Printing.py | manuell  | 008
+|===
+
+== Testplanung
+
+=== Teststrategie
+
+Die in diesem Projekt verfolgte Strategie bei den Tests ist, dass die wesentlichsten und wichtigsten Funktionen das meiste Gewicht für die Tests erhalten. Demzufolge entfallen die meisten Testabläufe auf automatisierte Tests der Berechnungsfunktion, sowie manuelle Tests von UI in Verbindung mit der Berechnungsfunktion. Die Richitgkeit der Berechnungen stellt den Kern der Software dar, besonders mit Blick auf das Einsatzgebiet etwa bei der Korrektur von Prüfungen ist absolute Korrektheit der Berechnungen unerlässlich.
+
+Desweiteren ist es entscheidend, dass neben korrekten Berechnungen auch die Benutzeroberfläche mit den darin enthaltenen Eingabemöglichkeiten eindeutig ist und schon bei der Eingabe mögliche Fehler vermeidet. Aus diesem Grund entfallen viele Tests auf die Plausibilität der Eingaben.
+Mit sinkender Priorität wurden zusätzliche Funktionalitäten wie Drucken, sowie Export und Import von Berechnungen getestet.
+
+Die Dokumentation der Testfälle (TestCase) und der zugehörigen Testabläufe (TestScript) erfolgt nach folgendem System. Ein TestCase beschreibt abstrakt, welcher UseCase diesem Testfall zugrunde liegt und wie der generelle Ablauf eines zugehörigen Tests ist. In einem TestCase sind mehrere TestScripte enthalten, die einen spezifischen Testablauf repräsentieren. Diese TestScripte werden dann jeweils Schritt für Schritt abgearbeitet. 
+
+=== Testumgebung
+
+Als Testumgebung dient stets ein Desktop-Computer, auf dem das Betriebssystem Windows 10 läuft.
+* für die manuellen Tests wird die Berechnungssoftware selbst genutzt
+* für automatisierte Tests wurde vom Tester die IDE PyCharm Community Edition 2020.1 genutzt
+* für die Dokumentation wurde Visual Studio Code genutzt
+
+=== Dokumentation
+
+Die durchgeführten Tests werden in einem TestLog protokolliert. In diesem Dokument findet man eine Übersicht über alle verfügbaren Tests mit Kurzbeschreibung. Jeweils in tabellarischer Form gibt es dann für jeden Prototyp einer bestimmten Iteration eine Auflistung der an diesem Prototyp durchgeführten Testabläufe. In dieser Tabelle wird vermerkt, wer den Test durchgeführt hat und welches Ergebnis der Test hatte. Für zusätzliche Anmerkungen steht eine Kommentarspalte zur Verfügung, die speziell im Fall einer Abweichung genutzt werden muss. An dieser Stelle wird der Fehler im TestLog kurz beschrieben.
+
+Für eine detailliertere Beschreibung des Fehlers gilt der Verweis auf das TestScript, bei dem der Fehler aufgetreten ist. Dort werden Fehler so detailgetreu wie möglich beschrieben und falls es dem Testenden möglich ist auch schon eine Analyse des Fehlers gemacht. Generell werden in jedem TestScript auch nochmal die konkreten Zeitpunkte eines Tests geloggt, unabhängig davon, ob Fehler passiert sind oder nicht.
+
+=== Testorganisation
+
+Die Analyse von Abweichungen erfolgt in der Regel in 3 Stufen. Abweichungen werden zu erst vom Tester festgestellt und demnach auch direkt zu erst vom Tester analysiert, nachdem der Fehler aufgetreten ist. An dieser Stelle geht es vorerst vor allem darum, ob das verwendete TestScript korrekt ist und auch korrekt angewendet wurde. Weiterhin kann der Tester im Rahmen seiner Möglichkeiten eine Analyse des vorliegenden Fehlers machen.
+
+In jedem Fall wird der Tester dem Developer mitteilen, welche Abweichung aufgetreten ist und gegebenenfalls ncoh dazu angeben, wie diese Abweichung zu stande gekommen ist. Die Dokumentation und kommunikation erfolgt dabei über das für den Test der entsprechenden Komponente eröffnete Issue. Der Developer analysiert dann seinerseits die Abweichung.
+
+Falls Tester und Developer den Grund der Abweichung nicht feststellen, wird im nächsten Meeting in der Gruppe die Abweichung diskutiert und analysiert, sodass im Team eine Lösung für den aufgetretenen Fehler gefunden wird.
+
+Wenn Fehler existieren, wird die Beseitigung des Fehlers als Aufgabe mit in die nächste Iteration übernommen. Bis zum Ende dieser Iteration wird der Fehler dann beseitigt. Ob die Abweichung erfolgreich beseitigt wurde, wird dann getestet.
+
+=== Testdurchführungsplanung
+
+Für jede Iteration wird festgelegt, welche Funktionalität dem System hinzugefügt werden soll beziehungsweise welche Komponenten erweitert werden. Für diese neuen Komponenten, die gleichzeitig auch Testobjekte darstellen, werden in der Folge Testabläufe entsprechend der Teststrategie entwickelt.
+Wenn ein Developer eine Komponente aus seiner Sicht fertig gestellt hat, eröffnet er bei Github ein Issue für den Test der Komponente und weist dieses dem Tester zu. Dies geschieht in der Regel gegen Ende der Iteration, sodass die Komponente bis zum nächsten Kickoff-Meeting für die nächste Iteration bereits getestet ist. Der Tester testet dann mit den entsprechenden TestScripten die freigegebene Komponente.
+
+Für jeden neuen Prototypen werden nicht nur die Tests für die neuen Funktionen oder Komponenten durchgeführt, sondern auch alle bereits an vorherigen Prototypen durchgeührten Testabläufe werden erneut an dem neuen Prototyp durchgeführt. Welche Testabläufe das sind, ist dem TestLog zu entnehmen.
+
