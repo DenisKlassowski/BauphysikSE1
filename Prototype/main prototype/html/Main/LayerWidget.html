@@ -38,21 +38,27 @@ class LayerWidget(QtWidgets.QWidget):
 
         #information from upper levels
         self.mode=mode
+        &#34;&#34;&#34;mode the layer is currently operating in&#34;&#34;&#34;
         self.position=position
+        &#34;&#34;&#34;position the layer currently has in the list of layers&#34;&#34;&#34;
 
 
         #flag to check whether calculations should happen or not. used for loading/startup process
         self.calculateFlag = 1
+        &#34;&#34;&#34;falg to help prevent calculation loops during live calculation&#34;&#34;&#34;
 
         #layouts
         #main layout
         self.mainLayout = QtWidgets.QVBoxLayout()
+        &#34;&#34;&#34;layout of the LayerWidget&#34;&#34;&#34;
         self.mainLayout.setContentsMargins(0,0,0,0)
         self.mainLayout.setSpacing(10)
 
         #head layout
         self.head = QtWidgets.QWidget()
+        &#34;&#34;&#34;upper part of LayerWidget&#34;&#34;&#34;
         self.headButtons = QtWidgets.QWidget()
+        &#34;&#34;&#34;buttons located in upper part of LayerWidget&#34;&#34;&#34;
 
         self.headLayout = QtWidgets.QHBoxLayout()
         self.headLayout.setContentsMargins(0,0,0,0)
@@ -63,10 +69,13 @@ class LayerWidget(QtWidgets.QWidget):
         self.headButtonLayout.setSpacing(0)
 
         self.layerTitleLabel = QtWidgets.QLabel()
+        &#34;&#34;&#34;Title of layer&#34;&#34;&#34;
 
         self.layerDeleteButton = QtWidgets.QPushButton()
+        &#34;&#34;&#34;Delete button&#34;&#34;&#34;
         self.layerDeleteButton.clicked.connect(self.deleteButtonPressed)
         self.layerAddAfterButton = QtWidgets.QPushButton()
+        &#34;&#34;&#34;Add (after) button&#34;&#34;&#34;
         self.layerAddAfterButton.clicked.connect(self.addAfterButtonPressed)
 
         self.headButtonLayout.addWidget(self.layerAddAfterButton)
@@ -83,6 +92,7 @@ class LayerWidget(QtWidgets.QWidget):
 
         #body layout
         self.body = QtWidgets.QWidget()
+        &#34;&#34;&#34;main part of layer&#34;&#34;&#34;
 
         self.bodyLayout = QtWidgets.QGridLayout()
         self.bodyLayout.setContentsMargins(0,0,0,0)
@@ -90,12 +100,14 @@ class LayerWidget(QtWidgets.QWidget):
 
         self.layerWidthLabel = QtWidgets.QLabel()
         self.layerWidthDoubleSpinBox = MyDoubleSpinBox()
+        &#34;&#34;&#34;input/output of width&#34;&#34;&#34;
         self.layerWidthDoubleSpinBox.setSingleStep(0.001)
         self.layerWidthDoubleSpinBox.setMaximum(9.9999)
         self.layerWidthDoubleSpinBox.setMaximumWidth(100)
         self.layerWidthDoubleSpinBox.valueChanged.connect(self.widthChanged)
 
         self.layerWidthComboBox = MyComboBox()
+        &#34;&#34;&#34;unit selection for width&#34;&#34;&#34;
         self.layerWidthComboBox.addItems({&#34;m&#34;})
         self.layerWidthComboBox.addItems({&#34;cm&#34;})
         self.layerWidthComboBox.addItems({&#34;mm&#34;})
@@ -105,6 +117,7 @@ class LayerWidget(QtWidgets.QWidget):
         self.layerLambdaLabel = QtWidgets.QLabel()
         self.layerLambdaLabel.setAlignment(QtCore.Qt.AlignCenter|QtCore.Qt.AlignRight)
         self.layerLambdaDoubleSpinBox = MyDoubleSpinBox()
+        &#34;&#34;&#34;input/output of lambda&#34;&#34;&#34;
         self.layerLambdaDoubleSpinBox.setMinimum(0.000)
         self.layerLambdaDoubleSpinBox.setValue(0.01)
         self.layerLambdaDoubleSpinBox.setSingleStep(0.01)
@@ -115,6 +128,7 @@ class LayerWidget(QtWidgets.QWidget):
         self.layerResLabel = QtWidgets.QLabel()
         self.layerResLabel.setAlignment(QtCore.Qt.AlignCenter|QtCore.Qt.AlignRight)
         self.layerResDoubleSpinBox = MyDoubleSpinBox()
+        &#34;&#34;&#34;input/output of R&#34;&#34;&#34;
         self.layerResDoubleSpinBox.setDecimals(5)
         self.layerResDoubleSpinBox.setSingleStep(0.0001)
         self.layerResDoubleSpinBox.setMaximum(999.9999)
@@ -124,15 +138,18 @@ class LayerWidget(QtWidgets.QWidget):
         self.layerResUnitLabel = QtWidgets.QLabel()
 
         self.layerResGivenCheckBox = QtWidgets.QCheckBox(QtCore.QCoreApplication.translate(&#34;LayerWidget&#34;, &#34;R gegeben &#34;))
+        &#34;&#34;&#34;checkbox whether R is given and lambda should be calculated instead&#34;&#34;&#34;
         self.layerResGivenCheckBox.stateChanged.connect(self.resGivenCheckboxChanged)
 
         #data
         if(data is None):
             self.data=LayerData()
+            &#34;&#34;&#34;data of layer&#34;&#34;&#34;
             self.widthFactor = 1
             self.initData()
         else:
             self.data=data
+            &#34;&#34;&#34;data of layer&#34;&#34;&#34;
             self.updateValues()
 
         #assemble body layout
@@ -223,19 +240,22 @@ class LayerWidget(QtWidgets.QWidget):
 
     #update own position and modify text
     def updatePos(self, pos):
+        &#34;&#34;&#34;update own position and modify text&#34;&#34;&#34;
         self.position=pos
         self.layerTitleLabel.setText(QtCore.QCoreApplication.translate(&#34;LayerWidget&#34;, &#34;Schicht &#34;)+str(pos+1))
         self.layerResLabel.setText(QtCore.QCoreApplication.translate(&#34;LayerWidget&#34;, &#34;R&#34;)+&#34;&lt;sub&gt;&#34;+str(pos+1)+&#34;&lt;/sub&gt;&#34;+&#34;:&#34;)
 
     #enable/disable delete button
     def setRemovable(self, flag):
+        &#34;&#34;&#34;enable/disable delete button&#34;&#34;&#34;
         if flag == True:
             self.layerDeleteButton.setEnabled(1)
         else:
             self.layerDeleteButton.setEnabled(0)
 
-    #enable/disable lamba box
+    #enable/disable lambda box
     def resGivenCheckboxChanged(self):
+        &#34;&#34;&#34;enable/disable lambda box&#34;&#34;&#34;
         if self.layerResGivenCheckBox.checkState():
             self.layerLambdaDoubleSpinBox.setEditable(0)
             self.layerResDoubleSpinBox.setEditable(1)
@@ -245,6 +265,7 @@ class LayerWidget(QtWidgets.QWidget):
 
     #modify mode of layer
     def switchMode(self,mode):
+        &#34;&#34;&#34;modify mode of layer&#34;&#34;&#34;
         self.mode = mode
 
     #value changes
@@ -283,6 +304,7 @@ class LayerWidget(QtWidgets.QWidget):
         self.calculate()
 
     def calculate(self):
+        &#34;&#34;&#34;calculation of layer and then overall calculation&#34;&#34;&#34;
         if(self.calculateFlag):
             if self.layerResGivenCheckBox.checkState():
                 self.calculate_lambda()
@@ -291,6 +313,7 @@ class LayerWidget(QtWidgets.QWidget):
             self.parent().parent().parent().parent().parent().calculate()
 
     def calculate_r(self):
+        &#34;&#34;&#34;subfunction of calculate, calculates R for layer&#34;&#34;&#34;
         if(self.calculateFlag):
             self.calculateFlag=0
             try:
@@ -302,6 +325,7 @@ class LayerWidget(QtWidgets.QWidget):
             self.calculateFlag=1
 
     def calculate_lambda(self):
+        &#34;&#34;&#34;subfunction of calculate, calculates lambda for layer&#34;&#34;&#34;
         if(self.calculateFlag):
             self.calculateFlag=0
             try:
@@ -313,6 +337,7 @@ class LayerWidget(QtWidgets.QWidget):
             self.calculateFlag=1
 
     def updateValues(self):
+        &#34;&#34;&#34;updates values in layer with corresponding values from data&#34;&#34;&#34;
         self.calculateFlag=0
         if self.data.widthUnit==0:
             self.widthFactor=1
@@ -352,21 +377,27 @@ class LayerWidget(QtWidgets.QWidget):
 
         #information from upper levels
         self.mode=mode
+        &#34;&#34;&#34;mode the layer is currently operating in&#34;&#34;&#34;
         self.position=position
+        &#34;&#34;&#34;position the layer currently has in the list of layers&#34;&#34;&#34;
 
 
         #flag to check whether calculations should happen or not. used for loading/startup process
         self.calculateFlag = 1
+        &#34;&#34;&#34;falg to help prevent calculation loops during live calculation&#34;&#34;&#34;
 
         #layouts
         #main layout
         self.mainLayout = QtWidgets.QVBoxLayout()
+        &#34;&#34;&#34;layout of the LayerWidget&#34;&#34;&#34;
         self.mainLayout.setContentsMargins(0,0,0,0)
         self.mainLayout.setSpacing(10)
 
         #head layout
         self.head = QtWidgets.QWidget()
+        &#34;&#34;&#34;upper part of LayerWidget&#34;&#34;&#34;
         self.headButtons = QtWidgets.QWidget()
+        &#34;&#34;&#34;buttons located in upper part of LayerWidget&#34;&#34;&#34;
 
         self.headLayout = QtWidgets.QHBoxLayout()
         self.headLayout.setContentsMargins(0,0,0,0)
@@ -377,10 +408,13 @@ class LayerWidget(QtWidgets.QWidget):
         self.headButtonLayout.setSpacing(0)
 
         self.layerTitleLabel = QtWidgets.QLabel()
+        &#34;&#34;&#34;Title of layer&#34;&#34;&#34;
 
         self.layerDeleteButton = QtWidgets.QPushButton()
+        &#34;&#34;&#34;Delete button&#34;&#34;&#34;
         self.layerDeleteButton.clicked.connect(self.deleteButtonPressed)
         self.layerAddAfterButton = QtWidgets.QPushButton()
+        &#34;&#34;&#34;Add (after) button&#34;&#34;&#34;
         self.layerAddAfterButton.clicked.connect(self.addAfterButtonPressed)
 
         self.headButtonLayout.addWidget(self.layerAddAfterButton)
@@ -397,6 +431,7 @@ class LayerWidget(QtWidgets.QWidget):
 
         #body layout
         self.body = QtWidgets.QWidget()
+        &#34;&#34;&#34;main part of layer&#34;&#34;&#34;
 
         self.bodyLayout = QtWidgets.QGridLayout()
         self.bodyLayout.setContentsMargins(0,0,0,0)
@@ -404,12 +439,14 @@ class LayerWidget(QtWidgets.QWidget):
 
         self.layerWidthLabel = QtWidgets.QLabel()
         self.layerWidthDoubleSpinBox = MyDoubleSpinBox()
+        &#34;&#34;&#34;input/output of width&#34;&#34;&#34;
         self.layerWidthDoubleSpinBox.setSingleStep(0.001)
         self.layerWidthDoubleSpinBox.setMaximum(9.9999)
         self.layerWidthDoubleSpinBox.setMaximumWidth(100)
         self.layerWidthDoubleSpinBox.valueChanged.connect(self.widthChanged)
 
         self.layerWidthComboBox = MyComboBox()
+        &#34;&#34;&#34;unit selection for width&#34;&#34;&#34;
         self.layerWidthComboBox.addItems({&#34;m&#34;})
         self.layerWidthComboBox.addItems({&#34;cm&#34;})
         self.layerWidthComboBox.addItems({&#34;mm&#34;})
@@ -419,6 +456,7 @@ class LayerWidget(QtWidgets.QWidget):
         self.layerLambdaLabel = QtWidgets.QLabel()
         self.layerLambdaLabel.setAlignment(QtCore.Qt.AlignCenter|QtCore.Qt.AlignRight)
         self.layerLambdaDoubleSpinBox = MyDoubleSpinBox()
+        &#34;&#34;&#34;input/output of lambda&#34;&#34;&#34;
         self.layerLambdaDoubleSpinBox.setMinimum(0.000)
         self.layerLambdaDoubleSpinBox.setValue(0.01)
         self.layerLambdaDoubleSpinBox.setSingleStep(0.01)
@@ -429,6 +467,7 @@ class LayerWidget(QtWidgets.QWidget):
         self.layerResLabel = QtWidgets.QLabel()
         self.layerResLabel.setAlignment(QtCore.Qt.AlignCenter|QtCore.Qt.AlignRight)
         self.layerResDoubleSpinBox = MyDoubleSpinBox()
+        &#34;&#34;&#34;input/output of R&#34;&#34;&#34;
         self.layerResDoubleSpinBox.setDecimals(5)
         self.layerResDoubleSpinBox.setSingleStep(0.0001)
         self.layerResDoubleSpinBox.setMaximum(999.9999)
@@ -438,15 +477,18 @@ class LayerWidget(QtWidgets.QWidget):
         self.layerResUnitLabel = QtWidgets.QLabel()
 
         self.layerResGivenCheckBox = QtWidgets.QCheckBox(QtCore.QCoreApplication.translate(&#34;LayerWidget&#34;, &#34;R gegeben &#34;))
+        &#34;&#34;&#34;checkbox whether R is given and lambda should be calculated instead&#34;&#34;&#34;
         self.layerResGivenCheckBox.stateChanged.connect(self.resGivenCheckboxChanged)
 
         #data
         if(data is None):
             self.data=LayerData()
+            &#34;&#34;&#34;data of layer&#34;&#34;&#34;
             self.widthFactor = 1
             self.initData()
         else:
             self.data=data
+            &#34;&#34;&#34;data of layer&#34;&#34;&#34;
             self.updateValues()
 
         #assemble body layout
@@ -537,19 +579,22 @@ class LayerWidget(QtWidgets.QWidget):
 
     #update own position and modify text
     def updatePos(self, pos):
+        &#34;&#34;&#34;update own position and modify text&#34;&#34;&#34;
         self.position=pos
         self.layerTitleLabel.setText(QtCore.QCoreApplication.translate(&#34;LayerWidget&#34;, &#34;Schicht &#34;)+str(pos+1))
         self.layerResLabel.setText(QtCore.QCoreApplication.translate(&#34;LayerWidget&#34;, &#34;R&#34;)+&#34;&lt;sub&gt;&#34;+str(pos+1)+&#34;&lt;/sub&gt;&#34;+&#34;:&#34;)
 
     #enable/disable delete button
     def setRemovable(self, flag):
+        &#34;&#34;&#34;enable/disable delete button&#34;&#34;&#34;
         if flag == True:
             self.layerDeleteButton.setEnabled(1)
         else:
             self.layerDeleteButton.setEnabled(0)
 
-    #enable/disable lamba box
+    #enable/disable lambda box
     def resGivenCheckboxChanged(self):
+        &#34;&#34;&#34;enable/disable lambda box&#34;&#34;&#34;
         if self.layerResGivenCheckBox.checkState():
             self.layerLambdaDoubleSpinBox.setEditable(0)
             self.layerResDoubleSpinBox.setEditable(1)
@@ -559,6 +604,7 @@ class LayerWidget(QtWidgets.QWidget):
 
     #modify mode of layer
     def switchMode(self,mode):
+        &#34;&#34;&#34;modify mode of layer&#34;&#34;&#34;
         self.mode = mode
 
     #value changes
@@ -597,6 +643,7 @@ class LayerWidget(QtWidgets.QWidget):
         self.calculate()
 
     def calculate(self):
+        &#34;&#34;&#34;calculation of layer and then overall calculation&#34;&#34;&#34;
         if(self.calculateFlag):
             if self.layerResGivenCheckBox.checkState():
                 self.calculate_lambda()
@@ -605,6 +652,7 @@ class LayerWidget(QtWidgets.QWidget):
             self.parent().parent().parent().parent().parent().calculate()
 
     def calculate_r(self):
+        &#34;&#34;&#34;subfunction of calculate, calculates R for layer&#34;&#34;&#34;
         if(self.calculateFlag):
             self.calculateFlag=0
             try:
@@ -616,6 +664,7 @@ class LayerWidget(QtWidgets.QWidget):
             self.calculateFlag=1
 
     def calculate_lambda(self):
+        &#34;&#34;&#34;subfunction of calculate, calculates lambda for layer&#34;&#34;&#34;
         if(self.calculateFlag):
             self.calculateFlag=0
             try:
@@ -627,6 +676,7 @@ class LayerWidget(QtWidgets.QWidget):
             self.calculateFlag=1
 
     def updateValues(self):
+        &#34;&#34;&#34;updates values in layer with corresponding values from data&#34;&#34;&#34;
         self.calculateFlag=0
         if self.data.widthUnit==0:
             self.widthFactor=1
@@ -648,6 +698,69 @@ class LayerWidget(QtWidgets.QWidget):
 <li>PyQt5.QtGui.QPaintDevice</li>
 <li>sip.simplewrapper</li>
 </ul>
+<h3>Instance variables</h3>
+<dl>
+<dt id="Main.LayerWidget.LayerWidget.body"><code class="name">var <span class="ident">body</span></code></dt>
+<dd>
+<div class="desc"><p>main part of layer</p></div>
+</dd>
+<dt id="Main.LayerWidget.LayerWidget.calculateFlag"><code class="name">var <span class="ident">calculateFlag</span></code></dt>
+<dd>
+<div class="desc"><p>falg to help prevent calculation loops during live calculation</p></div>
+</dd>
+<dt id="Main.LayerWidget.LayerWidget.head"><code class="name">var <span class="ident">head</span></code></dt>
+<dd>
+<div class="desc"><p>upper part of LayerWidget</p></div>
+</dd>
+<dt id="Main.LayerWidget.LayerWidget.headButtons"><code class="name">var <span class="ident">headButtons</span></code></dt>
+<dd>
+<div class="desc"><p>buttons located in upper part of LayerWidget</p></div>
+</dd>
+<dt id="Main.LayerWidget.LayerWidget.layerAddAfterButton"><code class="name">var <span class="ident">layerAddAfterButton</span></code></dt>
+<dd>
+<div class="desc"><p>Add (after) button</p></div>
+</dd>
+<dt id="Main.LayerWidget.LayerWidget.layerDeleteButton"><code class="name">var <span class="ident">layerDeleteButton</span></code></dt>
+<dd>
+<div class="desc"><p>Delete button</p></div>
+</dd>
+<dt id="Main.LayerWidget.LayerWidget.layerLambdaDoubleSpinBox"><code class="name">var <span class="ident">layerLambdaDoubleSpinBox</span></code></dt>
+<dd>
+<div class="desc"><p>input/output of lambda</p></div>
+</dd>
+<dt id="Main.LayerWidget.LayerWidget.layerResDoubleSpinBox"><code class="name">var <span class="ident">layerResDoubleSpinBox</span></code></dt>
+<dd>
+<div class="desc"><p>input/output of R</p></div>
+</dd>
+<dt id="Main.LayerWidget.LayerWidget.layerResGivenCheckBox"><code class="name">var <span class="ident">layerResGivenCheckBox</span></code></dt>
+<dd>
+<div class="desc"><p>checkbox whether R is given and lambda should be calculated instead</p></div>
+</dd>
+<dt id="Main.LayerWidget.LayerWidget.layerTitleLabel"><code class="name">var <span class="ident">layerTitleLabel</span></code></dt>
+<dd>
+<div class="desc"><p>Title of layer</p></div>
+</dd>
+<dt id="Main.LayerWidget.LayerWidget.layerWidthComboBox"><code class="name">var <span class="ident">layerWidthComboBox</span></code></dt>
+<dd>
+<div class="desc"><p>unit selection for width</p></div>
+</dd>
+<dt id="Main.LayerWidget.LayerWidget.layerWidthDoubleSpinBox"><code class="name">var <span class="ident">layerWidthDoubleSpinBox</span></code></dt>
+<dd>
+<div class="desc"><p>input/output of width</p></div>
+</dd>
+<dt id="Main.LayerWidget.LayerWidget.mainLayout"><code class="name">var <span class="ident">mainLayout</span></code></dt>
+<dd>
+<div class="desc"><p>layout of the LayerWidget</p></div>
+</dd>
+<dt id="Main.LayerWidget.LayerWidget.mode"><code class="name">var <span class="ident">mode</span></code></dt>
+<dd>
+<div class="desc"><p>mode the layer is currently operating in</p></div>
+</dd>
+<dt id="Main.LayerWidget.LayerWidget.position"><code class="name">var <span class="ident">position</span></code></dt>
+<dd>
+<div class="desc"><p>position the layer currently has in the list of layers</p></div>
+</dd>
+</dl>
 <h3>Methods</h3>
 <dl>
 <dt id="Main.LayerWidget.LayerWidget.addAfterButtonPressed"><code class="name flex">
@@ -667,12 +780,13 @@ class LayerWidget(QtWidgets.QWidget):
 <span>def <span class="ident">calculate</span></span>(<span>self)</span>
 </code></dt>
 <dd>
-<div class="desc"></div>
+<div class="desc"><p>calculation of layer and then overall calculation</p></div>
 <details class="source">
 <summary>
 <span>Expand source code</span>
 </summary>
 <pre><code class="python">def calculate(self):
+    &#34;&#34;&#34;calculation of layer and then overall calculation&#34;&#34;&#34;
     if(self.calculateFlag):
         if self.layerResGivenCheckBox.checkState():
             self.calculate_lambda()
@@ -685,12 +799,13 @@ class LayerWidget(QtWidgets.QWidget):
 <span>def <span class="ident">calculate_lambda</span></span>(<span>self)</span>
 </code></dt>
 <dd>
-<div class="desc"></div>
+<div class="desc"><p>subfunction of calculate, calculates lambda for layer</p></div>
 <details class="source">
 <summary>
 <span>Expand source code</span>
 </summary>
 <pre><code class="python">def calculate_lambda(self):
+    &#34;&#34;&#34;subfunction of calculate, calculates lambda for layer&#34;&#34;&#34;
     if(self.calculateFlag):
         self.calculateFlag=0
         try:
@@ -706,12 +821,13 @@ class LayerWidget(QtWidgets.QWidget):
 <span>def <span class="ident">calculate_r</span></span>(<span>self)</span>
 </code></dt>
 <dd>
-<div class="desc"></div>
+<div class="desc"><p>subfunction of calculate, calculates R for layer</p></div>
 <details class="source">
 <summary>
 <span>Expand source code</span>
 </summary>
 <pre><code class="python">def calculate_r(self):
+    &#34;&#34;&#34;subfunction of calculate, calculates R for layer&#34;&#34;&#34;
     if(self.calculateFlag):
         self.calculateFlag=0
         try:
@@ -782,12 +898,13 @@ class LayerWidget(QtWidgets.QWidget):
 <span>def <span class="ident">resGivenCheckboxChanged</span></span>(<span>self)</span>
 </code></dt>
 <dd>
-<div class="desc"></div>
+<div class="desc"><p>enable/disable lambda box</p></div>
 <details class="source">
 <summary>
 <span>Expand source code</span>
 </summary>
 <pre><code class="python">def resGivenCheckboxChanged(self):
+    &#34;&#34;&#34;enable/disable lambda box&#34;&#34;&#34;
     if self.layerResGivenCheckBox.checkState():
         self.layerLambdaDoubleSpinBox.setEditable(0)
         self.layerResDoubleSpinBox.setEditable(1)
@@ -825,12 +942,13 @@ class LayerWidget(QtWidgets.QWidget):
 <span>def <span class="ident">setRemovable</span></span>(<span>self, flag)</span>
 </code></dt>
 <dd>
-<div class="desc"></div>
+<div class="desc"><p>enable/disable delete button</p></div>
 <details class="source">
 <summary>
 <span>Expand source code</span>
 </summary>
 <pre><code class="python">def setRemovable(self, flag):
+    &#34;&#34;&#34;enable/disable delete button&#34;&#34;&#34;
     if flag == True:
         self.layerDeleteButton.setEnabled(1)
     else:
@@ -841,12 +959,13 @@ class LayerWidget(QtWidgets.QWidget):
 <span>def <span class="ident">switchMode</span></span>(<span>self, mode)</span>
 </code></dt>
 <dd>
-<div class="desc"></div>
+<div class="desc"><p>modify mode of layer</p></div>
 <details class="source">
 <summary>
 <span>Expand source code</span>
 </summary>
 <pre><code class="python">def switchMode(self,mode):
+    &#34;&#34;&#34;modify mode of layer&#34;&#34;&#34;
     self.mode = mode</code></pre>
 </details>
 </dd>
@@ -854,12 +973,13 @@ class LayerWidget(QtWidgets.QWidget):
 <span>def <span class="ident">updatePos</span></span>(<span>self, pos)</span>
 </code></dt>
 <dd>
-<div class="desc"></div>
+<div class="desc"><p>update own position and modify text</p></div>
 <details class="source">
 <summary>
 <span>Expand source code</span>
 </summary>
 <pre><code class="python">def updatePos(self, pos):
+    &#34;&#34;&#34;update own position and modify text&#34;&#34;&#34;
     self.position=pos
     self.layerTitleLabel.setText(QtCore.QCoreApplication.translate(&#34;LayerWidget&#34;, &#34;Schicht &#34;)+str(pos+1))
     self.layerResLabel.setText(QtCore.QCoreApplication.translate(&#34;LayerWidget&#34;, &#34;R&#34;)+&#34;&lt;sub&gt;&#34;+str(pos+1)+&#34;&lt;/sub&gt;&#34;+&#34;:&#34;)</code></pre>
@@ -869,12 +989,13 @@ class LayerWidget(QtWidgets.QWidget):
 <span>def <span class="ident">updateValues</span></span>(<span>self)</span>
 </code></dt>
 <dd>
-<div class="desc"></div>
+<div class="desc"><p>updates values in layer with corresponding values from data</p></div>
 <details class="source">
 <summary>
 <span>Expand source code</span>
 </summary>
 <pre><code class="python">def updateValues(self):
+    &#34;&#34;&#34;updates values in layer with corresponding values from data&#34;&#34;&#34;
     self.calculateFlag=0
     if self.data.widthUnit==0:
         self.widthFactor=1
@@ -953,12 +1074,27 @@ class LayerWidget(QtWidgets.QWidget):
 <h4><code><a title="Main.LayerWidget.LayerWidget" href="#Main.LayerWidget.LayerWidget">LayerWidget</a></code></h4>
 <ul class="">
 <li><code><a title="Main.LayerWidget.LayerWidget.addAfterButtonPressed" href="#Main.LayerWidget.LayerWidget.addAfterButtonPressed">addAfterButtonPressed</a></code></li>
+<li><code><a title="Main.LayerWidget.LayerWidget.body" href="#Main.LayerWidget.LayerWidget.body">body</a></code></li>
 <li><code><a title="Main.LayerWidget.LayerWidget.calculate" href="#Main.LayerWidget.LayerWidget.calculate">calculate</a></code></li>
+<li><code><a title="Main.LayerWidget.LayerWidget.calculateFlag" href="#Main.LayerWidget.LayerWidget.calculateFlag">calculateFlag</a></code></li>
 <li><code><a title="Main.LayerWidget.LayerWidget.calculate_lambda" href="#Main.LayerWidget.LayerWidget.calculate_lambda">calculate_lambda</a></code></li>
 <li><code><a title="Main.LayerWidget.LayerWidget.calculate_r" href="#Main.LayerWidget.LayerWidget.calculate_r">calculate_r</a></code></li>
 <li><code><a title="Main.LayerWidget.LayerWidget.deleteButtonPressed" href="#Main.LayerWidget.LayerWidget.deleteButtonPressed">deleteButtonPressed</a></code></li>
+<li><code><a title="Main.LayerWidget.LayerWidget.head" href="#Main.LayerWidget.LayerWidget.head">head</a></code></li>
+<li><code><a title="Main.LayerWidget.LayerWidget.headButtons" href="#Main.LayerWidget.LayerWidget.headButtons">headButtons</a></code></li>
 <li><code><a title="Main.LayerWidget.LayerWidget.initData" href="#Main.LayerWidget.LayerWidget.initData">initData</a></code></li>
 <li><code><a title="Main.LayerWidget.LayerWidget.lambdaChanged" href="#Main.LayerWidget.LayerWidget.lambdaChanged">lambdaChanged</a></code></li>
+<li><code><a title="Main.LayerWidget.LayerWidget.layerAddAfterButton" href="#Main.LayerWidget.LayerWidget.layerAddAfterButton">layerAddAfterButton</a></code></li>
+<li><code><a title="Main.LayerWidget.LayerWidget.layerDeleteButton" href="#Main.LayerWidget.LayerWidget.layerDeleteButton">layerDeleteButton</a></code></li>
+<li><code><a title="Main.LayerWidget.LayerWidget.layerLambdaDoubleSpinBox" href="#Main.LayerWidget.LayerWidget.layerLambdaDoubleSpinBox">layerLambdaDoubleSpinBox</a></code></li>
+<li><code><a title="Main.LayerWidget.LayerWidget.layerResDoubleSpinBox" href="#Main.LayerWidget.LayerWidget.layerResDoubleSpinBox">layerResDoubleSpinBox</a></code></li>
+<li><code><a title="Main.LayerWidget.LayerWidget.layerResGivenCheckBox" href="#Main.LayerWidget.LayerWidget.layerResGivenCheckBox">layerResGivenCheckBox</a></code></li>
+<li><code><a title="Main.LayerWidget.LayerWidget.layerTitleLabel" href="#Main.LayerWidget.LayerWidget.layerTitleLabel">layerTitleLabel</a></code></li>
+<li><code><a title="Main.LayerWidget.LayerWidget.layerWidthComboBox" href="#Main.LayerWidget.LayerWidget.layerWidthComboBox">layerWidthComboBox</a></code></li>
+<li><code><a title="Main.LayerWidget.LayerWidget.layerWidthDoubleSpinBox" href="#Main.LayerWidget.LayerWidget.layerWidthDoubleSpinBox">layerWidthDoubleSpinBox</a></code></li>
+<li><code><a title="Main.LayerWidget.LayerWidget.mainLayout" href="#Main.LayerWidget.LayerWidget.mainLayout">mainLayout</a></code></li>
+<li><code><a title="Main.LayerWidget.LayerWidget.mode" href="#Main.LayerWidget.LayerWidget.mode">mode</a></code></li>
+<li><code><a title="Main.LayerWidget.LayerWidget.position" href="#Main.LayerWidget.LayerWidget.position">position</a></code></li>
 <li><code><a title="Main.LayerWidget.LayerWidget.rChanged" href="#Main.LayerWidget.LayerWidget.rChanged">rChanged</a></code></li>
 <li><code><a title="Main.LayerWidget.LayerWidget.resGivenCheckboxChanged" href="#Main.LayerWidget.LayerWidget.resGivenCheckboxChanged">resGivenCheckboxChanged</a></code></li>
 <li><code><a title="Main.LayerWidget.LayerWidget.retranslateUi" href="#Main.LayerWidget.LayerWidget.retranslateUi">retranslateUi</a></code></li>

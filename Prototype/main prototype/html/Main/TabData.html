@@ -33,40 +33,58 @@ class TabData:
     def __init__(self, mode, name, layers=None, rright=None, rleft=None, rsum=None, rt=None, tright=None, tleft=None, u=None, currentFileLocation=None):
         #some trickery because default values in the constructor call kind of destroy the the possibility to have multiple instances of the same class. Why? Python, that&#39;s why. further information: https://stackoverflow.com/questions/4841782/python-constructor-and-default-value
         self.name = name
+        &#34;&#34;&#34;title of tab&#34;&#34;&#34;
         self.layers = layers if layers is not None else []
+        &#34;&#34;&#34;list of layers in current tab&#34;&#34;&#34;
         self.rright = rright if rright is not None else 0.0
+        &#34;&#34;&#34;if imagining the layers vertically, this is the R which is adjacent to the right-most layer&#34;&#34;&#34;
         self.rleft = rleft if rleft is not None else 0.0
+        &#34;&#34;&#34;same as rright, only this time you have to think to the left&#34;&#34;&#34;
         self.rsum = rsum if rsum is not None else 0.0
+        &#34;&#34;&#34;sum of all the layers&#39; R&#39;s&#34;&#34;&#34;
         self.tright = tright if tright is not None else 0.0
+        &#34;&#34;&#34;same as rright, this time it&#39;s the temperature&#34;&#34;&#34;
         self.tleft = tleft if tleft is not None else 0.0
+        &#34;&#34;&#34;same as tright, this time it&#39;s to the left&#34;&#34;&#34;
         self.mode = mode
+        &#34;&#34;&#34;mode of tab&#34;&#34;&#34;
         self.u = u if u is not None else 0.0
+        &#34;&#34;&#34;inverse of rt&#34;&#34;&#34;
         self.rt = rt if rt is not None else 0.0
+        &#34;&#34;&#34;sum of rsum and rright and rleft&#34;&#34;&#34;
         self.currentFileLocation = currentFileLocation if currentFileLocation is not None else None
+        &#34;&#34;&#34;current save path if there is one&#34;&#34;&#34;
 
     def add_layer(self, layer):
+        &#34;&#34;&#34;add layer (data) to the list of layers&#34;&#34;&#34;
         self.layers.append(layer)
 
     def pop_layer(self, index):
+        &#34;&#34;&#34;remove layer (data) from the layer list at given index and return it&#34;&#34;&#34;
         return self.layers.pop(index)
 
     def remove_layer(self, index):
+        &#34;&#34;&#34;remove layer (data) from layer list at given index&#34;&#34;&#34;
         l = self.pop_layer(index)
         del l
 
     def move_layer(self, indexFrom, indexTo):
+        &#34;&#34;&#34;move (&#34;drag and drop&#34;) a layer from position x to position y&#34;&#34;&#34;
         if indexFrom &lt;= indexTo:
             self.insert_layer(self.pop_layer(indexFrom), indexTo)
         else:
             self.insert_layer(self.pop_layer(indexFrom), indexTo - 1)
 
     def insert_layer(self, layer, index):
+        &#34;&#34;&#34;insert layer (data) at given index&#34;&#34;&#34;
         self.layers.insert(index, layer)
 
     def reverse_layers(self):
+        &#34;&#34;&#34;reverse the list of layers (data)&#34;&#34;&#34;
         self.layers.reverse()
 
     def calculate(self):
+        &#34;&#34;&#34;calculate the tab&#34;&#34;&#34;
         try:
             Calculation.tab_calc(self)
         except ZeroDivisionError:
@@ -96,57 +114,123 @@ class TabData:
     def __init__(self, mode, name, layers=None, rright=None, rleft=None, rsum=None, rt=None, tright=None, tleft=None, u=None, currentFileLocation=None):
         #some trickery because default values in the constructor call kind of destroy the the possibility to have multiple instances of the same class. Why? Python, that&#39;s why. further information: https://stackoverflow.com/questions/4841782/python-constructor-and-default-value
         self.name = name
+        &#34;&#34;&#34;title of tab&#34;&#34;&#34;
         self.layers = layers if layers is not None else []
+        &#34;&#34;&#34;list of layers in current tab&#34;&#34;&#34;
         self.rright = rright if rright is not None else 0.0
+        &#34;&#34;&#34;if imagining the layers vertically, this is the R which is adjacent to the right-most layer&#34;&#34;&#34;
         self.rleft = rleft if rleft is not None else 0.0
+        &#34;&#34;&#34;same as rright, only this time you have to think to the left&#34;&#34;&#34;
         self.rsum = rsum if rsum is not None else 0.0
+        &#34;&#34;&#34;sum of all the layers&#39; R&#39;s&#34;&#34;&#34;
         self.tright = tright if tright is not None else 0.0
+        &#34;&#34;&#34;same as rright, this time it&#39;s the temperature&#34;&#34;&#34;
         self.tleft = tleft if tleft is not None else 0.0
+        &#34;&#34;&#34;same as tright, this time it&#39;s to the left&#34;&#34;&#34;
         self.mode = mode
+        &#34;&#34;&#34;mode of tab&#34;&#34;&#34;
         self.u = u if u is not None else 0.0
+        &#34;&#34;&#34;inverse of rt&#34;&#34;&#34;
         self.rt = rt if rt is not None else 0.0
+        &#34;&#34;&#34;sum of rsum and rright and rleft&#34;&#34;&#34;
         self.currentFileLocation = currentFileLocation if currentFileLocation is not None else None
+        &#34;&#34;&#34;current save path if there is one&#34;&#34;&#34;
 
     def add_layer(self, layer):
+        &#34;&#34;&#34;add layer (data) to the list of layers&#34;&#34;&#34;
         self.layers.append(layer)
 
     def pop_layer(self, index):
+        &#34;&#34;&#34;remove layer (data) from the layer list at given index and return it&#34;&#34;&#34;
         return self.layers.pop(index)
 
     def remove_layer(self, index):
+        &#34;&#34;&#34;remove layer (data) from layer list at given index&#34;&#34;&#34;
         l = self.pop_layer(index)
         del l
 
     def move_layer(self, indexFrom, indexTo):
+        &#34;&#34;&#34;move (&#34;drag and drop&#34;) a layer from position x to position y&#34;&#34;&#34;
         if indexFrom &lt;= indexTo:
             self.insert_layer(self.pop_layer(indexFrom), indexTo)
         else:
             self.insert_layer(self.pop_layer(indexFrom), indexTo - 1)
 
     def insert_layer(self, layer, index):
+        &#34;&#34;&#34;insert layer (data) at given index&#34;&#34;&#34;
         self.layers.insert(index, layer)
 
     def reverse_layers(self):
+        &#34;&#34;&#34;reverse the list of layers (data)&#34;&#34;&#34;
         self.layers.reverse()
 
     def calculate(self):
+        &#34;&#34;&#34;calculate the tab&#34;&#34;&#34;
         try:
             Calculation.tab_calc(self)
         except ZeroDivisionError:
             raise ZeroDivisionError</code></pre>
 </details>
+<h3>Instance variables</h3>
+<dl>
+<dt id="Main.TabData.TabData.currentFileLocation"><code class="name">var <span class="ident">currentFileLocation</span></code></dt>
+<dd>
+<div class="desc"><p>current save path if there is one</p></div>
+</dd>
+<dt id="Main.TabData.TabData.layers"><code class="name">var <span class="ident">layers</span></code></dt>
+<dd>
+<div class="desc"><p>list of layers in current tab</p></div>
+</dd>
+<dt id="Main.TabData.TabData.mode"><code class="name">var <span class="ident">mode</span></code></dt>
+<dd>
+<div class="desc"><p>mode of tab</p></div>
+</dd>
+<dt id="Main.TabData.TabData.name"><code class="name">var <span class="ident">name</span></code></dt>
+<dd>
+<div class="desc"><p>title of tab</p></div>
+</dd>
+<dt id="Main.TabData.TabData.rleft"><code class="name">var <span class="ident">rleft</span></code></dt>
+<dd>
+<div class="desc"><p>same as rright, only this time you have to think to the left</p></div>
+</dd>
+<dt id="Main.TabData.TabData.rright"><code class="name">var <span class="ident">rright</span></code></dt>
+<dd>
+<div class="desc"><p>if imagining the layers vertically, this is the R which is adjacent to the right-most layer</p></div>
+</dd>
+<dt id="Main.TabData.TabData.rsum"><code class="name">var <span class="ident">rsum</span></code></dt>
+<dd>
+<div class="desc"><p>sum of all the layers' R's</p></div>
+</dd>
+<dt id="Main.TabData.TabData.rt"><code class="name">var <span class="ident">rt</span></code></dt>
+<dd>
+<div class="desc"><p>sum of rsum and rright and rleft</p></div>
+</dd>
+<dt id="Main.TabData.TabData.tleft"><code class="name">var <span class="ident">tleft</span></code></dt>
+<dd>
+<div class="desc"><p>same as tright, this time it's to the left</p></div>
+</dd>
+<dt id="Main.TabData.TabData.tright"><code class="name">var <span class="ident">tright</span></code></dt>
+<dd>
+<div class="desc"><p>same as rright, this time it's the temperature</p></div>
+</dd>
+<dt id="Main.TabData.TabData.u"><code class="name">var <span class="ident">u</span></code></dt>
+<dd>
+<div class="desc"><p>inverse of rt</p></div>
+</dd>
+</dl>
 <h3>Methods</h3>
 <dl>
 <dt id="Main.TabData.TabData.add_layer"><code class="name flex">
 <span>def <span class="ident">add_layer</span></span>(<span>self, layer)</span>
 </code></dt>
 <dd>
-<div class="desc"></div>
+<div class="desc"><p>add layer (data) to the list of layers</p></div>
 <details class="source">
 <summary>
 <span>Expand source code</span>
 </summary>
 <pre><code class="python">def add_layer(self, layer):
+    &#34;&#34;&#34;add layer (data) to the list of layers&#34;&#34;&#34;
     self.layers.append(layer)</code></pre>
 </details>
 </dd>
@@ -154,12 +238,13 @@ class TabData:
 <span>def <span class="ident">calculate</span></span>(<span>self)</span>
 </code></dt>
 <dd>
-<div class="desc"></div>
+<div class="desc"><p>calculate the tab</p></div>
 <details class="source">
 <summary>
 <span>Expand source code</span>
 </summary>
 <pre><code class="python">def calculate(self):
+    &#34;&#34;&#34;calculate the tab&#34;&#34;&#34;
     try:
         Calculation.tab_calc(self)
     except ZeroDivisionError:
@@ -170,12 +255,13 @@ class TabData:
 <span>def <span class="ident">insert_layer</span></span>(<span>self, layer, index)</span>
 </code></dt>
 <dd>
-<div class="desc"></div>
+<div class="desc"><p>insert layer (data) at given index</p></div>
 <details class="source">
 <summary>
 <span>Expand source code</span>
 </summary>
 <pre><code class="python">def insert_layer(self, layer, index):
+    &#34;&#34;&#34;insert layer (data) at given index&#34;&#34;&#34;
     self.layers.insert(index, layer)</code></pre>
 </details>
 </dd>
@@ -183,12 +269,13 @@ class TabData:
 <span>def <span class="ident">move_layer</span></span>(<span>self, indexFrom, indexTo)</span>
 </code></dt>
 <dd>
-<div class="desc"></div>
+<div class="desc"><p>move ("drag and drop") a layer from position x to position y</p></div>
 <details class="source">
 <summary>
 <span>Expand source code</span>
 </summary>
 <pre><code class="python">def move_layer(self, indexFrom, indexTo):
+    &#34;&#34;&#34;move (&#34;drag and drop&#34;) a layer from position x to position y&#34;&#34;&#34;
     if indexFrom &lt;= indexTo:
         self.insert_layer(self.pop_layer(indexFrom), indexTo)
     else:
@@ -199,12 +286,13 @@ class TabData:
 <span>def <span class="ident">pop_layer</span></span>(<span>self, index)</span>
 </code></dt>
 <dd>
-<div class="desc"></div>
+<div class="desc"><p>remove layer (data) from the layer list at given index and return it</p></div>
 <details class="source">
 <summary>
 <span>Expand source code</span>
 </summary>
 <pre><code class="python">def pop_layer(self, index):
+    &#34;&#34;&#34;remove layer (data) from the layer list at given index and return it&#34;&#34;&#34;
     return self.layers.pop(index)</code></pre>
 </details>
 </dd>
@@ -212,12 +300,13 @@ class TabData:
 <span>def <span class="ident">remove_layer</span></span>(<span>self, index)</span>
 </code></dt>
 <dd>
-<div class="desc"></div>
+<div class="desc"><p>remove layer (data) from layer list at given index</p></div>
 <details class="source">
 <summary>
 <span>Expand source code</span>
 </summary>
 <pre><code class="python">def remove_layer(self, index):
+    &#34;&#34;&#34;remove layer (data) from layer list at given index&#34;&#34;&#34;
     l = self.pop_layer(index)
     del l</code></pre>
 </details>
@@ -226,12 +315,13 @@ class TabData:
 <span>def <span class="ident">reverse_layers</span></span>(<span>self)</span>
 </code></dt>
 <dd>
-<div class="desc"></div>
+<div class="desc"><p>reverse the list of layers (data)</p></div>
 <details class="source">
 <summary>
 <span>Expand source code</span>
 </summary>
 <pre><code class="python">def reverse_layers(self):
+    &#34;&#34;&#34;reverse the list of layers (data)&#34;&#34;&#34;
     self.layers.reverse()</code></pre>
 </details>
 </dd>
@@ -258,11 +348,22 @@ class TabData:
 <ul class="two-column">
 <li><code><a title="Main.TabData.TabData.add_layer" href="#Main.TabData.TabData.add_layer">add_layer</a></code></li>
 <li><code><a title="Main.TabData.TabData.calculate" href="#Main.TabData.TabData.calculate">calculate</a></code></li>
+<li><code><a title="Main.TabData.TabData.currentFileLocation" href="#Main.TabData.TabData.currentFileLocation">currentFileLocation</a></code></li>
 <li><code><a title="Main.TabData.TabData.insert_layer" href="#Main.TabData.TabData.insert_layer">insert_layer</a></code></li>
+<li><code><a title="Main.TabData.TabData.layers" href="#Main.TabData.TabData.layers">layers</a></code></li>
+<li><code><a title="Main.TabData.TabData.mode" href="#Main.TabData.TabData.mode">mode</a></code></li>
 <li><code><a title="Main.TabData.TabData.move_layer" href="#Main.TabData.TabData.move_layer">move_layer</a></code></li>
+<li><code><a title="Main.TabData.TabData.name" href="#Main.TabData.TabData.name">name</a></code></li>
 <li><code><a title="Main.TabData.TabData.pop_layer" href="#Main.TabData.TabData.pop_layer">pop_layer</a></code></li>
 <li><code><a title="Main.TabData.TabData.remove_layer" href="#Main.TabData.TabData.remove_layer">remove_layer</a></code></li>
 <li><code><a title="Main.TabData.TabData.reverse_layers" href="#Main.TabData.TabData.reverse_layers">reverse_layers</a></code></li>
+<li><code><a title="Main.TabData.TabData.rleft" href="#Main.TabData.TabData.rleft">rleft</a></code></li>
+<li><code><a title="Main.TabData.TabData.rright" href="#Main.TabData.TabData.rright">rright</a></code></li>
+<li><code><a title="Main.TabData.TabData.rsum" href="#Main.TabData.TabData.rsum">rsum</a></code></li>
+<li><code><a title="Main.TabData.TabData.rt" href="#Main.TabData.TabData.rt">rt</a></code></li>
+<li><code><a title="Main.TabData.TabData.tleft" href="#Main.TabData.TabData.tleft">tleft</a></code></li>
+<li><code><a title="Main.TabData.TabData.tright" href="#Main.TabData.TabData.tright">tright</a></code></li>
+<li><code><a title="Main.TabData.TabData.u" href="#Main.TabData.TabData.u">u</a></code></li>
 </ul>
 </li>
 </ul>

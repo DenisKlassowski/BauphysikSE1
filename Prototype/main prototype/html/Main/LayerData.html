@@ -35,19 +35,29 @@ class LayerData:
         #some trickery because default values in the constructor call kind of destroy the the possibility to have multiple instances of the same class. Why? Python, that&#39;s why. further information: https://stackoverflow.com/questions/4841782/python-constructor-and-default-value
         #In contrast to TabData, LayerData was fine with multiple instances. I do not know why. I have changed it just in case
         self.width = width if width is not None else 0.0
+        &#34;&#34;&#34;width in metric units&#34;&#34;&#34;
         # 0: m, 1: cm, 2: mm
         self.widthUnit = widthUnit if widthUnit is not None else 0
+        &#34;&#34;&#34;unit of width measurement; 0: m, 1:cm, 2: mm&#34;&#34;&#34;
         self.lambda_ = lambda_ if lambda_ is not None else 0.0
+        &#34;&#34;&#34;lambda in metric unit&#34;&#34;&#34;
         self.r = r if r is not None else 0.0
+        &#34;&#34;&#34;R of layer&#34;&#34;&#34;
         self.t_left = 0.0
+        &#34;&#34;&#34;temperature left of layer: if imagining the layers vertically from left to right (first layer is the left-most layer and vice versa) that is the temperature between this layer and the previous one (if this is the first layer, it is the temp between this one and the environment)&#34;&#34;&#34;
         self.t_right = 0.0
+        &#34;&#34;&#34;same as t_left, only the right side of the layer is meant this time&#34;&#34;&#34;
         self.rho = 0.0
+        &#34;&#34;&#34;rho&#34;&#34;&#34;
         self.mat = mat if mat is not None else 0
+        &#34;&#34;&#34;material ID _currently not in use_&#34;&#34;&#34;
 
     def calculate(self):
+        &#34;&#34;&#34;calculate R for layer&#34;&#34;&#34;
         Calculation.layer_calc(self)
 
     def calculate_lambda(self):
+        &#34;&#34;&#34;calculate lambda for layer&#34;&#34;&#34;
         Calculation.calc_lambda(self)</code></pre>
 </details>
 </section>
@@ -75,33 +85,79 @@ class LayerData:
         #some trickery because default values in the constructor call kind of destroy the the possibility to have multiple instances of the same class. Why? Python, that&#39;s why. further information: https://stackoverflow.com/questions/4841782/python-constructor-and-default-value
         #In contrast to TabData, LayerData was fine with multiple instances. I do not know why. I have changed it just in case
         self.width = width if width is not None else 0.0
+        &#34;&#34;&#34;width in metric units&#34;&#34;&#34;
         # 0: m, 1: cm, 2: mm
         self.widthUnit = widthUnit if widthUnit is not None else 0
+        &#34;&#34;&#34;unit of width measurement; 0: m, 1:cm, 2: mm&#34;&#34;&#34;
         self.lambda_ = lambda_ if lambda_ is not None else 0.0
+        &#34;&#34;&#34;lambda in metric unit&#34;&#34;&#34;
         self.r = r if r is not None else 0.0
+        &#34;&#34;&#34;R of layer&#34;&#34;&#34;
         self.t_left = 0.0
+        &#34;&#34;&#34;temperature left of layer: if imagining the layers vertically from left to right (first layer is the left-most layer and vice versa) that is the temperature between this layer and the previous one (if this is the first layer, it is the temp between this one and the environment)&#34;&#34;&#34;
         self.t_right = 0.0
+        &#34;&#34;&#34;same as t_left, only the right side of the layer is meant this time&#34;&#34;&#34;
         self.rho = 0.0
+        &#34;&#34;&#34;rho&#34;&#34;&#34;
         self.mat = mat if mat is not None else 0
+        &#34;&#34;&#34;material ID _currently not in use_&#34;&#34;&#34;
 
     def calculate(self):
+        &#34;&#34;&#34;calculate R for layer&#34;&#34;&#34;
         Calculation.layer_calc(self)
 
     def calculate_lambda(self):
+        &#34;&#34;&#34;calculate lambda for layer&#34;&#34;&#34;
         Calculation.calc_lambda(self)</code></pre>
 </details>
+<h3>Instance variables</h3>
+<dl>
+<dt id="Main.LayerData.LayerData.lambda_"><code class="name">var <span class="ident">lambda_</span></code></dt>
+<dd>
+<div class="desc"><p>lambda in metric unit</p></div>
+</dd>
+<dt id="Main.LayerData.LayerData.mat"><code class="name">var <span class="ident">mat</span></code></dt>
+<dd>
+<div class="desc"><p>material ID <em>currently not in use</em></p></div>
+</dd>
+<dt id="Main.LayerData.LayerData.r"><code class="name">var <span class="ident">r</span></code></dt>
+<dd>
+<div class="desc"><p>R of layer</p></div>
+</dd>
+<dt id="Main.LayerData.LayerData.rho"><code class="name">var <span class="ident">rho</span></code></dt>
+<dd>
+<div class="desc"><p>rho</p></div>
+</dd>
+<dt id="Main.LayerData.LayerData.t_left"><code class="name">var <span class="ident">t_left</span></code></dt>
+<dd>
+<div class="desc"><p>temperature left of layer: if imagining the layers vertically from left to right (first layer is the left-most layer and vice versa) that is the temperature between this layer and the previous one (if this is the first layer, it is the temp between this one and the environment)</p></div>
+</dd>
+<dt id="Main.LayerData.LayerData.t_right"><code class="name">var <span class="ident">t_right</span></code></dt>
+<dd>
+<div class="desc"><p>same as t_left, only the right side of the layer is meant this time</p></div>
+</dd>
+<dt id="Main.LayerData.LayerData.width"><code class="name">var <span class="ident">width</span></code></dt>
+<dd>
+<div class="desc"><p>width in metric units</p></div>
+</dd>
+<dt id="Main.LayerData.LayerData.widthUnit"><code class="name">var <span class="ident">widthUnit</span></code></dt>
+<dd>
+<div class="desc"><p>unit of width measurement; 0: m, 1:cm, 2: mm</p></div>
+</dd>
+</dl>
 <h3>Methods</h3>
 <dl>
 <dt id="Main.LayerData.LayerData.calculate"><code class="name flex">
 <span>def <span class="ident">calculate</span></span>(<span>self)</span>
 </code></dt>
 <dd>
-<div class="desc"></div>
+<div class="desc"><p>calculate R for layer</p></div>
 <details class="source">
 <summary>
 <span>Expand source code</span>
 </summary>
 <pre><code class="python">def calculate(self):
+    &#34;&#34;&#34;calculate R for layer&#34;&#34;&#34;
     Calculation.layer_calc(self)</code></pre>
 </details>
 </dd>
@@ -109,12 +165,13 @@ class LayerData:
 <span>def <span class="ident">calculate_lambda</span></span>(<span>self)</span>
 </code></dt>
 <dd>
-<div class="desc"></div>
+<div class="desc"><p>calculate lambda for layer</p></div>
 <details class="source">
 <summary>
 <span>Expand source code</span>
 </summary>
 <pre><code class="python">def calculate_lambda(self):
+    &#34;&#34;&#34;calculate lambda for layer&#34;&#34;&#34;
     Calculation.calc_lambda(self)</code></pre>
 </details>
 </dd>
@@ -138,9 +195,17 @@ class LayerData:
 <ul>
 <li>
 <h4><code><a title="Main.LayerData.LayerData" href="#Main.LayerData.LayerData">LayerData</a></code></h4>
-<ul class="">
+<ul class="two-column">
 <li><code><a title="Main.LayerData.LayerData.calculate" href="#Main.LayerData.LayerData.calculate">calculate</a></code></li>
 <li><code><a title="Main.LayerData.LayerData.calculate_lambda" href="#Main.LayerData.LayerData.calculate_lambda">calculate_lambda</a></code></li>
+<li><code><a title="Main.LayerData.LayerData.lambda_" href="#Main.LayerData.LayerData.lambda_">lambda_</a></code></li>
+<li><code><a title="Main.LayerData.LayerData.mat" href="#Main.LayerData.LayerData.mat">mat</a></code></li>
+<li><code><a title="Main.LayerData.LayerData.r" href="#Main.LayerData.LayerData.r">r</a></code></li>
+<li><code><a title="Main.LayerData.LayerData.rho" href="#Main.LayerData.LayerData.rho">rho</a></code></li>
+<li><code><a title="Main.LayerData.LayerData.t_left" href="#Main.LayerData.LayerData.t_left">t_left</a></code></li>
+<li><code><a title="Main.LayerData.LayerData.t_right" href="#Main.LayerData.LayerData.t_right">t_right</a></code></li>
+<li><code><a title="Main.LayerData.LayerData.width" href="#Main.LayerData.LayerData.width">width</a></code></li>
+<li><code><a title="Main.LayerData.LayerData.widthUnit" href="#Main.LayerData.LayerData.widthUnit">widthUnit</a></code></li>
 </ul>
 </li>
 </ul>

@@ -90,13 +90,8 @@ class MyComboBox(QtWidgets.QComboBox):
         QtWidgets.QComboBox.__init__(self)
         self.setFocusPolicy(QtCore.Qt.StrongFocus)
 
-        &#34;&#34;&#34;
-        self.setStyleSheet(&#34;QComboBox{&#34;
-        &#34;border: 1px solid #000000&#34;
-        &#34;};&#34;)
-        &#34;&#34;&#34;
-
     def wheelEvent(self, e):
+        &#34;&#34;&#34;overriden wheelEvent to disable value changes when simply scrolling through e.g. scrollAreas&#34;&#34;&#34;
         if(self.hasFocus()):
             QtWidgets.QComboBox.wheelEvent(self,e)
         else:
@@ -126,13 +121,8 @@ class MyComboBox(QtWidgets.QComboBox):
         QtWidgets.QComboBox.__init__(self)
         self.setFocusPolicy(QtCore.Qt.StrongFocus)
 
-        &#34;&#34;&#34;
-        self.setStyleSheet(&#34;QComboBox{&#34;
-        &#34;border: 1px solid #000000&#34;
-        &#34;};&#34;)
-        &#34;&#34;&#34;
-
     def wheelEvent(self, e):
+        &#34;&#34;&#34;overriden wheelEvent to disable value changes when simply scrolling through e.g. scrollAreas&#34;&#34;&#34;
         if(self.hasFocus()):
             QtWidgets.QComboBox.wheelEvent(self,e)
         else:
@@ -153,12 +143,13 @@ class MyComboBox(QtWidgets.QComboBox):
 <span>def <span class="ident">wheelEvent</span></span>(<span>self, e)</span>
 </code></dt>
 <dd>
-<div class="desc"><p>wheelEvent(self, QWheelEvent)</p></div>
+<div class="desc"><p>overriden wheelEvent to disable value changes when simply scrolling through e.g. scrollAreas</p></div>
 <details class="source">
 <summary>
 <span>Expand source code</span>
 </summary>
 <pre><code class="python">def wheelEvent(self, e):
+    &#34;&#34;&#34;overriden wheelEvent to disable value changes when simply scrolling through e.g. scrollAreas&#34;&#34;&#34;
     if(self.hasFocus()):
         QtWidgets.QComboBox.wheelEvent(self,e)
     else:

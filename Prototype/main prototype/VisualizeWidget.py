@@ -14,6 +14,7 @@ class VisualizeWidget(QtWidgets.QWidget):
         self.placeholderLabel.setText("this is a placeholder")
         
         self.graphWidget = pg.PlotWidget()
+        """PlotWidget used for graphical representation"""
         self.graphWidget.setBackground('w')
         pen=pg.mkPen(color=(255,0,0))
 
@@ -35,6 +36,7 @@ class VisualizeWidget(QtWidgets.QWidget):
 
 
     def updateGraph(self, data):
+        """updates Graph with given data object"""
         self.width=[0]
         self.temperature=[]
         l = len(data.layers)
@@ -47,12 +49,14 @@ class VisualizeWidget(QtWidgets.QWidget):
         self.data_line.setData(self.width,self.temperature)
 
     def switchMode(self,mode):
+        """shows/hides widget according to given mode"""
         if mode == 0:
             self.graphWidget.hide()
         else:
             self.graphWidget.show()
 
     def getImage(self):
+        """get image of graph, used for export"""
         try:
             exporter = exporters.ImageExporter(self.graphWidget.plotItem)
             img = exporter.export(None,True,False)

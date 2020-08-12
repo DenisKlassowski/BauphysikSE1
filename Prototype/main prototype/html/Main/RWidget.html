@@ -42,6 +42,7 @@ class RWidget(QtWidgets.QWidget):
         rLayout.setSpacing(20)
 
         self.rTitleLabel = QtWidgets.QLabel()
+        &#34;&#34;&#34;title of RWidget&#34;&#34;&#34;
         self.rInsideLabel = QtWidgets.QLabel()
         self.rOutsideLabel = QtWidgets.QLabel()
         self.rTOverallLabel = QtWidgets.QLabel()
@@ -49,20 +50,25 @@ class RWidget(QtWidgets.QWidget):
         self.rInvertedLabel = QtWidgets.QLabel()
 
         self.rOutsideDoubleSpinBox = MyDoubleSpinBox()
+        &#34;&#34;&#34;input/output for R_outside&#34;&#34;&#34;
         self.rOutsideDoubleSpinBox.setDecimals(5)
         self.rOutsideDoubleSpinBox.setSingleStep(0.0001)
         self.rInsideDoubleSpinBox = MyDoubleSpinBox()
+        &#34;&#34;&#34;input/output for R_inside&#34;&#34;&#34;
         self.rInsideDoubleSpinBox.setDecimals(5)
         self.rInsideDoubleSpinBox.setSingleStep(0.0001)
         self.rOverallDoubleSpinBox = MyDoubleSpinBox()
+        &#34;&#34;&#34;input/output for R_sum&#34;&#34;&#34;
         self.rOverallDoubleSpinBox.setDecimals(5)
         self.rOverallDoubleSpinBox.setSingleStep(0.0001)
         self.rOverallDoubleSpinBox.setEditable(0)
         self.rTOverallDoubleSpinBox = MyDoubleSpinBox()
+        &#34;&#34;&#34;input/output for R_t&#34;&#34;&#34;
         self.rTOverallDoubleSpinBox.setDecimals(5)
         self.rTOverallDoubleSpinBox.setSingleStep(0.0001)
         self.rTOverallDoubleSpinBox.setEditable(0)
         self.rInvertedDoubleSpinBox = MyDoubleSpinBox()
+        &#34;&#34;&#34;input/output for U&#34;&#34;&#34;
         self.rInvertedDoubleSpinBox.setDecimals(5)
         self.rInvertedDoubleSpinBox.setSingleStep(0.0001)
         self.rInvertedDoubleSpinBox.setEditable(0)
@@ -111,11 +117,13 @@ class RWidget(QtWidgets.QWidget):
         self.rUnitLabel5.setText(_translate(&#34;RWidget&#34;, &#34;Wm&lt;sup&gt;-2&lt;/sup&gt;K&lt;sup&gt;-1&lt;/sub&gt;&#34;))
 
     def setData(self, rleft, rright, roverall, rt, rinverted):
+        &#34;&#34;&#34;sets spinboxes with given values&#34;&#34;&#34;
         self.rInsideDoubleSpinBox.setValue(rleft)
         self.rOutsideDoubleSpinBox.setValue(rright)
         self.setDataLite(roverall,rt,rinverted)
 
     def setDataLite(self, roverall, rt, rinverted):
+        &#34;&#34;&#34;sets spinboxes with given values after calculation&#34;&#34;&#34;
         self.rOverallDoubleSpinBox.setValue(roverall)
         self.rTOverallDoubleSpinBox.setValue(rt)
         self.rInvertedDoubleSpinBox.setValue(rinverted)</code></pre>
@@ -149,6 +157,7 @@ class RWidget(QtWidgets.QWidget):
         rLayout.setSpacing(20)
 
         self.rTitleLabel = QtWidgets.QLabel()
+        &#34;&#34;&#34;title of RWidget&#34;&#34;&#34;
         self.rInsideLabel = QtWidgets.QLabel()
         self.rOutsideLabel = QtWidgets.QLabel()
         self.rTOverallLabel = QtWidgets.QLabel()
@@ -156,20 +165,25 @@ class RWidget(QtWidgets.QWidget):
         self.rInvertedLabel = QtWidgets.QLabel()
 
         self.rOutsideDoubleSpinBox = MyDoubleSpinBox()
+        &#34;&#34;&#34;input/output for R_outside&#34;&#34;&#34;
         self.rOutsideDoubleSpinBox.setDecimals(5)
         self.rOutsideDoubleSpinBox.setSingleStep(0.0001)
         self.rInsideDoubleSpinBox = MyDoubleSpinBox()
+        &#34;&#34;&#34;input/output for R_inside&#34;&#34;&#34;
         self.rInsideDoubleSpinBox.setDecimals(5)
         self.rInsideDoubleSpinBox.setSingleStep(0.0001)
         self.rOverallDoubleSpinBox = MyDoubleSpinBox()
+        &#34;&#34;&#34;input/output for R_sum&#34;&#34;&#34;
         self.rOverallDoubleSpinBox.setDecimals(5)
         self.rOverallDoubleSpinBox.setSingleStep(0.0001)
         self.rOverallDoubleSpinBox.setEditable(0)
         self.rTOverallDoubleSpinBox = MyDoubleSpinBox()
+        &#34;&#34;&#34;input/output for R_t&#34;&#34;&#34;
         self.rTOverallDoubleSpinBox.setDecimals(5)
         self.rTOverallDoubleSpinBox.setSingleStep(0.0001)
         self.rTOverallDoubleSpinBox.setEditable(0)
         self.rInvertedDoubleSpinBox = MyDoubleSpinBox()
+        &#34;&#34;&#34;input/output for U&#34;&#34;&#34;
         self.rInvertedDoubleSpinBox.setDecimals(5)
         self.rInvertedDoubleSpinBox.setSingleStep(0.0001)
         self.rInvertedDoubleSpinBox.setEditable(0)
@@ -218,11 +232,13 @@ class RWidget(QtWidgets.QWidget):
         self.rUnitLabel5.setText(_translate(&#34;RWidget&#34;, &#34;Wm&lt;sup&gt;-2&lt;/sup&gt;K&lt;sup&gt;-1&lt;/sub&gt;&#34;))
 
     def setData(self, rleft, rright, roverall, rt, rinverted):
+        &#34;&#34;&#34;sets spinboxes with given values&#34;&#34;&#34;
         self.rInsideDoubleSpinBox.setValue(rleft)
         self.rOutsideDoubleSpinBox.setValue(rright)
         self.setDataLite(roverall,rt,rinverted)
 
     def setDataLite(self, roverall, rt, rinverted):
+        &#34;&#34;&#34;sets spinboxes with given values after calculation&#34;&#34;&#34;
         self.rOverallDoubleSpinBox.setValue(roverall)
         self.rTOverallDoubleSpinBox.setValue(rt)
         self.rInvertedDoubleSpinBox.setValue(rinverted)</code></pre>
@@ -235,6 +251,33 @@ class RWidget(QtWidgets.QWidget):
 <li>PyQt5.QtGui.QPaintDevice</li>
 <li>sip.simplewrapper</li>
 </ul>
+<h3>Instance variables</h3>
+<dl>
+<dt id="Main.RWidget.RWidget.rInsideDoubleSpinBox"><code class="name">var <span class="ident">rInsideDoubleSpinBox</span></code></dt>
+<dd>
+<div class="desc"><p>input/output for R_inside</p></div>
+</dd>
+<dt id="Main.RWidget.RWidget.rInvertedDoubleSpinBox"><code class="name">var <span class="ident">rInvertedDoubleSpinBox</span></code></dt>
+<dd>
+<div class="desc"><p>input/output for U</p></div>
+</dd>
+<dt id="Main.RWidget.RWidget.rOutsideDoubleSpinBox"><code class="name">var <span class="ident">rOutsideDoubleSpinBox</span></code></dt>
+<dd>
+<div class="desc"><p>input/output for R_outside</p></div>
+</dd>
+<dt id="Main.RWidget.RWidget.rOverallDoubleSpinBox"><code class="name">var <span class="ident">rOverallDoubleSpinBox</span></code></dt>
+<dd>
+<div class="desc"><p>input/output for R_sum</p></div>
+</dd>
+<dt id="Main.RWidget.RWidget.rTOverallDoubleSpinBox"><code class="name">var <span class="ident">rTOverallDoubleSpinBox</span></code></dt>
+<dd>
+<div class="desc"><p>input/output for R_t</p></div>
+</dd>
+<dt id="Main.RWidget.RWidget.rTitleLabel"><code class="name">var <span class="ident">rTitleLabel</span></code></dt>
+<dd>
+<div class="desc"><p>title of RWidget</p></div>
+</dd>
+</dl>
 <h3>Methods</h3>
 <dl>
 <dt id="Main.RWidget.RWidget.retranslateUi"><code class="name flex">
@@ -265,12 +308,13 @@ class RWidget(QtWidgets.QWidget):
 <span>def <span class="ident">setData</span></span>(<span>self, rleft, rright, roverall, rt, rinverted)</span>
 </code></dt>
 <dd>
-<div class="desc"></div>
+<div class="desc"><p>sets spinboxes with given values</p></div>
 <details class="source">
 <summary>
 <span>Expand source code</span>
 </summary>
 <pre><code class="python">def setData(self, rleft, rright, roverall, rt, rinverted):
+    &#34;&#34;&#34;sets spinboxes with given values&#34;&#34;&#34;
     self.rInsideDoubleSpinBox.setValue(rleft)
     self.rOutsideDoubleSpinBox.setValue(rright)
     self.setDataLite(roverall,rt,rinverted)</code></pre>
@@ -280,12 +324,13 @@ class RWidget(QtWidgets.QWidget):
 <span>def <span class="ident">setDataLite</span></span>(<span>self, roverall, rt, rinverted)</span>
 </code></dt>
 <dd>
-<div class="desc"></div>
+<div class="desc"><p>sets spinboxes with given values after calculation</p></div>
 <details class="source">
 <summary>
 <span>Expand source code</span>
 </summary>
 <pre><code class="python">def setDataLite(self, roverall, rt, rinverted):
+    &#34;&#34;&#34;sets spinboxes with given values after calculation&#34;&#34;&#34;
     self.rOverallDoubleSpinBox.setValue(roverall)
     self.rTOverallDoubleSpinBox.setValue(rt)
     self.rInvertedDoubleSpinBox.setValue(rinverted)</code></pre>
@@ -312,6 +357,12 @@ class RWidget(QtWidgets.QWidget):
 <li>
 <h4><code><a title="Main.RWidget.RWidget" href="#Main.RWidget.RWidget">RWidget</a></code></h4>
 <ul class="">
+<li><code><a title="Main.RWidget.RWidget.rInsideDoubleSpinBox" href="#Main.RWidget.RWidget.rInsideDoubleSpinBox">rInsideDoubleSpinBox</a></code></li>
+<li><code><a title="Main.RWidget.RWidget.rInvertedDoubleSpinBox" href="#Main.RWidget.RWidget.rInvertedDoubleSpinBox">rInvertedDoubleSpinBox</a></code></li>
+<li><code><a title="Main.RWidget.RWidget.rOutsideDoubleSpinBox" href="#Main.RWidget.RWidget.rOutsideDoubleSpinBox">rOutsideDoubleSpinBox</a></code></li>
+<li><code><a title="Main.RWidget.RWidget.rOverallDoubleSpinBox" href="#Main.RWidget.RWidget.rOverallDoubleSpinBox">rOverallDoubleSpinBox</a></code></li>
+<li><code><a title="Main.RWidget.RWidget.rTOverallDoubleSpinBox" href="#Main.RWidget.RWidget.rTOverallDoubleSpinBox">rTOverallDoubleSpinBox</a></code></li>
+<li><code><a title="Main.RWidget.RWidget.rTitleLabel" href="#Main.RWidget.RWidget.rTitleLabel">rTitleLabel</a></code></li>
 <li><code><a title="Main.RWidget.RWidget.retranslateUi" href="#Main.RWidget.RWidget.retranslateUi">retranslateUi</a></code></li>
 <li><code><a title="Main.RWidget.RWidget.setData" href="#Main.RWidget.RWidget.setData">setData</a></code></li>
 <li><code><a title="Main.RWidget.RWidget.setDataLite" href="#Main.RWidget.RWidget.setDataLite">setDataLite</a></code></li>

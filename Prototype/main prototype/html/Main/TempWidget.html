@@ -42,11 +42,13 @@ class TempWidget(QtWidgets.QWidget):
         tempLayout.setSpacing(20)
 
         self.tempTitleLabel = QtWidgets.QLabel()
+        &#34;&#34;&#34;title of TempWidget&#34;&#34;&#34;
         self.tempInsideLabel = QtWidgets.QLabel()
         self.tempOutsideLabel = QtWidgets.QLabel()
 
         #hard coded solution for spinbox size, could be done better?
         self.tempOutsideDoubleSpinBox = MyDoubleSpinBox()
+        &#34;&#34;&#34;input/output for T_inside&#34;&#34;&#34;
         self.tempOutsideDoubleSpinBox.setMaximum(1000)
         self.tempOutsideDoubleSpinBox.setMinimum(-273.15)
         self.tempOutsideDoubleSpinBox.setDecimals(2)
@@ -56,6 +58,7 @@ class TempWidget(QtWidgets.QWidget):
 
         #hard coded solution for spinbox size, could be done better?
         self.tempInsideDoubleSpinBox = MyDoubleSpinBox()
+        &#34;&#34;&#34;input/output for T_inside&#34;&#34;&#34;
         self.tempInsideDoubleSpinBox.setMaximum(1000)
         self.tempInsideDoubleSpinBox.setMinimum(-273.15)
         self.tempInsideDoubleSpinBox.setDecimals(2)
@@ -92,6 +95,7 @@ class TempWidget(QtWidgets.QWidget):
         self.tempCelsiusLabel2.setText(_translate(&#34;TempWidget&#34;, &#34;°C&#34;))
 
     def setData(self, tleft, tright):
+        &#34;&#34;&#34;sets spinboxes with given data&#34;&#34;&#34;
         self.tempInsideDoubleSpinBox.setValue(tleft)
         self.tempOutsideDoubleSpinBox.setValue(tright)</code></pre>
 </details>
@@ -124,11 +128,13 @@ class TempWidget(QtWidgets.QWidget):
         tempLayout.setSpacing(20)
 
         self.tempTitleLabel = QtWidgets.QLabel()
+        &#34;&#34;&#34;title of TempWidget&#34;&#34;&#34;
         self.tempInsideLabel = QtWidgets.QLabel()
         self.tempOutsideLabel = QtWidgets.QLabel()
 
         #hard coded solution for spinbox size, could be done better?
         self.tempOutsideDoubleSpinBox = MyDoubleSpinBox()
+        &#34;&#34;&#34;input/output for T_inside&#34;&#34;&#34;
         self.tempOutsideDoubleSpinBox.setMaximum(1000)
         self.tempOutsideDoubleSpinBox.setMinimum(-273.15)
         self.tempOutsideDoubleSpinBox.setDecimals(2)
@@ -138,6 +144,7 @@ class TempWidget(QtWidgets.QWidget):
 
         #hard coded solution for spinbox size, could be done better?
         self.tempInsideDoubleSpinBox = MyDoubleSpinBox()
+        &#34;&#34;&#34;input/output for T_inside&#34;&#34;&#34;
         self.tempInsideDoubleSpinBox.setMaximum(1000)
         self.tempInsideDoubleSpinBox.setMinimum(-273.15)
         self.tempInsideDoubleSpinBox.setDecimals(2)
@@ -174,6 +181,7 @@ class TempWidget(QtWidgets.QWidget):
         self.tempCelsiusLabel2.setText(_translate(&#34;TempWidget&#34;, &#34;°C&#34;))
 
     def setData(self, tleft, tright):
+        &#34;&#34;&#34;sets spinboxes with given data&#34;&#34;&#34;
         self.tempInsideDoubleSpinBox.setValue(tleft)
         self.tempOutsideDoubleSpinBox.setValue(tright)</code></pre>
 </details>
@@ -185,6 +193,21 @@ class TempWidget(QtWidgets.QWidget):
 <li>PyQt5.QtGui.QPaintDevice</li>
 <li>sip.simplewrapper</li>
 </ul>
+<h3>Instance variables</h3>
+<dl>
+<dt id="Main.TempWidget.TempWidget.tempInsideDoubleSpinBox"><code class="name">var <span class="ident">tempInsideDoubleSpinBox</span></code></dt>
+<dd>
+<div class="desc"><p>input/output for T_inside</p></div>
+</dd>
+<dt id="Main.TempWidget.TempWidget.tempOutsideDoubleSpinBox"><code class="name">var <span class="ident">tempOutsideDoubleSpinBox</span></code></dt>
+<dd>
+<div class="desc"><p>input/output for T_inside</p></div>
+</dd>
+<dt id="Main.TempWidget.TempWidget.tempTitleLabel"><code class="name">var <span class="ident">tempTitleLabel</span></code></dt>
+<dd>
+<div class="desc"><p>title of TempWidget</p></div>
+</dd>
+</dl>
 <h3>Methods</h3>
 <dl>
 <dt id="Main.TempWidget.TempWidget.retranslateUi"><code class="name flex">
@@ -209,12 +232,13 @@ class TempWidget(QtWidgets.QWidget):
 <span>def <span class="ident">setData</span></span>(<span>self, tleft, tright)</span>
 </code></dt>
 <dd>
-<div class="desc"></div>
+<div class="desc"><p>sets spinboxes with given data</p></div>
 <details class="source">
 <summary>
 <span>Expand source code</span>
 </summary>
 <pre><code class="python">def setData(self, tleft, tright):
+    &#34;&#34;&#34;sets spinboxes with given data&#34;&#34;&#34;
     self.tempInsideDoubleSpinBox.setValue(tleft)
     self.tempOutsideDoubleSpinBox.setValue(tright)</code></pre>
 </details>
@@ -242,6 +266,9 @@ class TempWidget(QtWidgets.QWidget):
 <ul class="">
 <li><code><a title="Main.TempWidget.TempWidget.retranslateUi" href="#Main.TempWidget.TempWidget.retranslateUi">retranslateUi</a></code></li>
 <li><code><a title="Main.TempWidget.TempWidget.setData" href="#Main.TempWidget.TempWidget.setData">setData</a></code></li>
+<li><code><a title="Main.TempWidget.TempWidget.tempInsideDoubleSpinBox" href="#Main.TempWidget.TempWidget.tempInsideDoubleSpinBox">tempInsideDoubleSpinBox</a></code></li>
+<li><code><a title="Main.TempWidget.TempWidget.tempOutsideDoubleSpinBox" href="#Main.TempWidget.TempWidget.tempOutsideDoubleSpinBox">tempOutsideDoubleSpinBox</a></code></li>
+<li><code><a title="Main.TempWidget.TempWidget.tempTitleLabel" href="#Main.TempWidget.TempWidget.tempTitleLabel">tempTitleLabel</a></code></li>
 </ul>
 </li>
 </ul>

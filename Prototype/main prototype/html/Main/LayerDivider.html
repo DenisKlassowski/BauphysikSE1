@@ -44,10 +44,13 @@ class LayerDivider(QtWidgets.QWidget):
 
         #those beatiful horizontal lines
         self.leftLine = QHLine()
+        &#34;&#34;&#34;left part of horizontal line&#34;&#34;&#34;
         self.rightLine = QHLine()
+        &#34;&#34;&#34;right part of horizontal line&#34;&#34;&#34;
 
         #temperature, can be replaced by a widget where further information could be added
         self.tempLabel = QtWidgets.QLabel(&#34;°C&#34;)
+        &#34;&#34;&#34;label for representing the temperature (in between two layers)&#34;&#34;&#34;
         self.tempLabel.setAlignment(QtCore.Qt.AlignCenter)
         self.tempLabel.setFixedWidth(100)
 
@@ -62,6 +65,7 @@ class LayerDivider(QtWidgets.QWidget):
         self.switchMode(self.mode)
 
     def switchMode(self,mode):
+        &#34;&#34;&#34;switches display modes of divider according to given mode (integer)&#34;&#34;&#34;
         self.mode = mode
         if (mode==0):
             self.tempLabel.hide()
@@ -100,10 +104,13 @@ class LayerDivider(QtWidgets.QWidget):
 
         #those beatiful horizontal lines
         self.leftLine = QHLine()
+        &#34;&#34;&#34;left part of horizontal line&#34;&#34;&#34;
         self.rightLine = QHLine()
+        &#34;&#34;&#34;right part of horizontal line&#34;&#34;&#34;
 
         #temperature, can be replaced by a widget where further information could be added
         self.tempLabel = QtWidgets.QLabel(&#34;°C&#34;)
+        &#34;&#34;&#34;label for representing the temperature (in between two layers)&#34;&#34;&#34;
         self.tempLabel.setAlignment(QtCore.Qt.AlignCenter)
         self.tempLabel.setFixedWidth(100)
 
@@ -118,6 +125,7 @@ class LayerDivider(QtWidgets.QWidget):
         self.switchMode(self.mode)
 
     def switchMode(self,mode):
+        &#34;&#34;&#34;switches display modes of divider according to given mode (integer)&#34;&#34;&#34;
         self.mode = mode
         if (mode==0):
             self.tempLabel.hide()
@@ -132,18 +140,34 @@ class LayerDivider(QtWidgets.QWidget):
 <li>PyQt5.QtGui.QPaintDevice</li>
 <li>sip.simplewrapper</li>
 </ul>
+<h3>Instance variables</h3>
+<dl>
+<dt id="Main.LayerDivider.LayerDivider.leftLine"><code class="name">var <span class="ident">leftLine</span></code></dt>
+<dd>
+<div class="desc"><p>left part of horizontal line</p></div>
+</dd>
+<dt id="Main.LayerDivider.LayerDivider.rightLine"><code class="name">var <span class="ident">rightLine</span></code></dt>
+<dd>
+<div class="desc"><p>right part of horizontal line</p></div>
+</dd>
+<dt id="Main.LayerDivider.LayerDivider.tempLabel"><code class="name">var <span class="ident">tempLabel</span></code></dt>
+<dd>
+<div class="desc"><p>label for representing the temperature (in between two layers)</p></div>
+</dd>
+</dl>
 <h3>Methods</h3>
 <dl>
 <dt id="Main.LayerDivider.LayerDivider.switchMode"><code class="name flex">
 <span>def <span class="ident">switchMode</span></span>(<span>self, mode)</span>
 </code></dt>
 <dd>
-<div class="desc"></div>
+<div class="desc"><p>switches display modes of divider according to given mode (integer)</p></div>
 <details class="source">
 <summary>
 <span>Expand source code</span>
 </summary>
 <pre><code class="python">def switchMode(self,mode):
+    &#34;&#34;&#34;switches display modes of divider according to given mode (integer)&#34;&#34;&#34;
     self.mode = mode
     if (mode==0):
         self.tempLabel.hide()
@@ -172,7 +196,10 @@ class LayerDivider(QtWidgets.QWidget):
 <li>
 <h4><code><a title="Main.LayerDivider.LayerDivider" href="#Main.LayerDivider.LayerDivider">LayerDivider</a></code></h4>
 <ul class="">
+<li><code><a title="Main.LayerDivider.LayerDivider.leftLine" href="#Main.LayerDivider.LayerDivider.leftLine">leftLine</a></code></li>
+<li><code><a title="Main.LayerDivider.LayerDivider.rightLine" href="#Main.LayerDivider.LayerDivider.rightLine">rightLine</a></code></li>
 <li><code><a title="Main.LayerDivider.LayerDivider.switchMode" href="#Main.LayerDivider.LayerDivider.switchMode">switchMode</a></code></li>
+<li><code><a title="Main.LayerDivider.LayerDivider.tempLabel" href="#Main.LayerDivider.LayerDivider.tempLabel">tempLabel</a></code></li>
 </ul>
 </li>
 </ul>
