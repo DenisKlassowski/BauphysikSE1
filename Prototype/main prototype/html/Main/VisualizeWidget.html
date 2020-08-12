@@ -42,6 +42,7 @@ class VisualizeWidget(QtWidgets.QWidget):
         self.placeholderLabel.setText(&#34;this is a placeholder&#34;)
         
         self.graphWidget = pg.PlotWidget()
+        &#34;&#34;&#34;PlotWidget used for graphical representation&#34;&#34;&#34;
         self.graphWidget.setBackground(&#39;w&#39;)
         pen=pg.mkPen(color=(255,0,0))
 
@@ -63,6 +64,7 @@ class VisualizeWidget(QtWidgets.QWidget):
 
 
     def updateGraph(self, data):
+        &#34;&#34;&#34;updates Graph with given data object&#34;&#34;&#34;
         self.width=[0]
         self.temperature=[]
         l = len(data.layers)
@@ -75,12 +77,14 @@ class VisualizeWidget(QtWidgets.QWidget):
         self.data_line.setData(self.width,self.temperature)
 
     def switchMode(self,mode):
+        &#34;&#34;&#34;shows/hides widget according to given mode&#34;&#34;&#34;
         if mode == 0:
             self.graphWidget.hide()
         else:
             self.graphWidget.show()
 
     def getImage(self):
+        &#34;&#34;&#34;get image of graph, used for export&#34;&#34;&#34;
         try:
             exporter = exporters.ImageExporter(self.graphWidget.plotItem)
             img = exporter.export(None,True,False)
@@ -117,6 +121,7 @@ class VisualizeWidget(QtWidgets.QWidget):
         self.placeholderLabel.setText(&#34;this is a placeholder&#34;)
         
         self.graphWidget = pg.PlotWidget()
+        &#34;&#34;&#34;PlotWidget used for graphical representation&#34;&#34;&#34;
         self.graphWidget.setBackground(&#39;w&#39;)
         pen=pg.mkPen(color=(255,0,0))
 
@@ -138,6 +143,7 @@ class VisualizeWidget(QtWidgets.QWidget):
 
 
     def updateGraph(self, data):
+        &#34;&#34;&#34;updates Graph with given data object&#34;&#34;&#34;
         self.width=[0]
         self.temperature=[]
         l = len(data.layers)
@@ -150,12 +156,14 @@ class VisualizeWidget(QtWidgets.QWidget):
         self.data_line.setData(self.width,self.temperature)
 
     def switchMode(self,mode):
+        &#34;&#34;&#34;shows/hides widget according to given mode&#34;&#34;&#34;
         if mode == 0:
             self.graphWidget.hide()
         else:
             self.graphWidget.show()
 
     def getImage(self):
+        &#34;&#34;&#34;get image of graph, used for export&#34;&#34;&#34;
         try:
             exporter = exporters.ImageExporter(self.graphWidget.plotItem)
             img = exporter.export(None,True,False)
@@ -172,18 +180,26 @@ class VisualizeWidget(QtWidgets.QWidget):
 <li>PyQt5.QtGui.QPaintDevice</li>
 <li>sip.simplewrapper</li>
 </ul>
+<h3>Instance variables</h3>
+<dl>
+<dt id="Main.VisualizeWidget.VisualizeWidget.graphWidget"><code class="name">var <span class="ident">graphWidget</span></code></dt>
+<dd>
+<div class="desc"><p>PlotWidget used for graphical representation</p></div>
+</dd>
+</dl>
 <h3>Methods</h3>
 <dl>
 <dt id="Main.VisualizeWidget.VisualizeWidget.getImage"><code class="name flex">
 <span>def <span class="ident">getImage</span></span>(<span>self)</span>
 </code></dt>
 <dd>
-<div class="desc"></div>
+<div class="desc"><p>get image of graph, used for export</p></div>
 <details class="source">
 <summary>
 <span>Expand source code</span>
 </summary>
 <pre><code class="python">def getImage(self):
+    &#34;&#34;&#34;get image of graph, used for export&#34;&#34;&#34;
     try:
         exporter = exporters.ImageExporter(self.graphWidget.plotItem)
         img = exporter.export(None,True,False)
@@ -197,12 +213,13 @@ class VisualizeWidget(QtWidgets.QWidget):
 <span>def <span class="ident">switchMode</span></span>(<span>self, mode)</span>
 </code></dt>
 <dd>
-<div class="desc"></div>
+<div class="desc"><p>shows/hides widget according to given mode</p></div>
 <details class="source">
 <summary>
 <span>Expand source code</span>
 </summary>
 <pre><code class="python">def switchMode(self,mode):
+    &#34;&#34;&#34;shows/hides widget according to given mode&#34;&#34;&#34;
     if mode == 0:
         self.graphWidget.hide()
     else:
@@ -213,12 +230,13 @@ class VisualizeWidget(QtWidgets.QWidget):
 <span>def <span class="ident">updateGraph</span></span>(<span>self, data)</span>
 </code></dt>
 <dd>
-<div class="desc"></div>
+<div class="desc"><p>updates Graph with given data object</p></div>
 <details class="source">
 <summary>
 <span>Expand source code</span>
 </summary>
 <pre><code class="python">def updateGraph(self, data):
+    &#34;&#34;&#34;updates Graph with given data object&#34;&#34;&#34;
     self.width=[0]
     self.temperature=[]
     l = len(data.layers)
@@ -253,6 +271,7 @@ class VisualizeWidget(QtWidgets.QWidget):
 <h4><code><a title="Main.VisualizeWidget.VisualizeWidget" href="#Main.VisualizeWidget.VisualizeWidget">VisualizeWidget</a></code></h4>
 <ul class="">
 <li><code><a title="Main.VisualizeWidget.VisualizeWidget.getImage" href="#Main.VisualizeWidget.VisualizeWidget.getImage">getImage</a></code></li>
+<li><code><a title="Main.VisualizeWidget.VisualizeWidget.graphWidget" href="#Main.VisualizeWidget.VisualizeWidget.graphWidget">graphWidget</a></code></li>
 <li><code><a title="Main.VisualizeWidget.VisualizeWidget.switchMode" href="#Main.VisualizeWidget.VisualizeWidget.switchMode">switchMode</a></code></li>
 <li><code><a title="Main.VisualizeWidget.VisualizeWidget.updateGraph" href="#Main.VisualizeWidget.VisualizeWidget.updateGraph">updateGraph</a></code></li>
 </ul>

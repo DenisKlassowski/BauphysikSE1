@@ -31,6 +31,7 @@ from PyQt5 import QtWidgets, QtCore, QtGui
 
 
 class QHLine(QtWidgets.QFrame):
+    &#34;&#34;&#34;horizontal line used for dividers&#34;&#34;&#34;
     def __init__(self):
         QtWidgets.QFrame.__init__(self)
         self.setFrameShape(QtWidgets.QFrame.HLine)
@@ -43,6 +44,7 @@ class QHLine(QtWidgets.QFrame):
         &#34;&#34;&#34;
 
 class MyDoubleSpinBox(QtWidgets.QDoubleSpinBox):
+    &#34;&#34;&#34;overriden DoubleSpinBox&#34;&#34;&#34;
     def __init__(self):
         QtWidgets.QDoubleSpinBox.__init__(self)
         self.setAccelerated(1)
@@ -57,12 +59,14 @@ class MyDoubleSpinBox(QtWidgets.QDoubleSpinBox):
 
     #overriding scroll events to disable value changes when simply scrolling through e.g. scrollAreas
     def wheelEvent(self, e):
+        &#34;&#34;&#34;overriden wheelEvent to disable value changes when simply scrolling through e.g. scrollAreas&#34;&#34;&#34;
         if(self.hasFocus()):
             QtWidgets.QDoubleSpinBox.wheelEvent(self,e)
         else:
             pass
 
     def setEditable(self, bool):
+        &#34;&#34;&#34;makes boxes ineditable by user but still editable by software&#34;&#34;&#34;
         if bool == 0:
 
             self.setReadOnly(True)
@@ -167,12 +171,13 @@ class MyComboBox(QtWidgets.QComboBox):
 <span>class <span class="ident">MyDoubleSpinBox</span></span>
 </code></dt>
 <dd>
-<div class="desc"><p>QDoubleSpinBox(parent: QWidget = None)</p></div>
+<div class="desc"><p>overriden DoubleSpinBox</p></div>
 <details class="source">
 <summary>
 <span>Expand source code</span>
 </summary>
 <pre><code class="python">class MyDoubleSpinBox(QtWidgets.QDoubleSpinBox):
+    &#34;&#34;&#34;overriden DoubleSpinBox&#34;&#34;&#34;
     def __init__(self):
         QtWidgets.QDoubleSpinBox.__init__(self)
         self.setAccelerated(1)
@@ -187,12 +192,14 @@ class MyComboBox(QtWidgets.QComboBox):
 
     #overriding scroll events to disable value changes when simply scrolling through e.g. scrollAreas
     def wheelEvent(self, e):
+        &#34;&#34;&#34;overriden wheelEvent to disable value changes when simply scrolling through e.g. scrollAreas&#34;&#34;&#34;
         if(self.hasFocus()):
             QtWidgets.QDoubleSpinBox.wheelEvent(self,e)
         else:
             pass
 
     def setEditable(self, bool):
+        &#34;&#34;&#34;makes boxes ineditable by user but still editable by software&#34;&#34;&#34;
         if bool == 0:
 
             self.setReadOnly(True)
@@ -241,12 +248,13 @@ class MyComboBox(QtWidgets.QComboBox):
 <span>def <span class="ident">setEditable</span></span>(<span>self, bool)</span>
 </code></dt>
 <dd>
-<div class="desc"></div>
+<div class="desc"><p>makes boxes ineditable by user but still editable by software</p></div>
 <details class="source">
 <summary>
 <span>Expand source code</span>
 </summary>
 <pre><code class="python">def setEditable(self, bool):
+    &#34;&#34;&#34;makes boxes ineditable by user but still editable by software&#34;&#34;&#34;
     if bool == 0:
 
         self.setReadOnly(True)
@@ -262,12 +270,13 @@ class MyComboBox(QtWidgets.QComboBox):
 <span>def <span class="ident">wheelEvent</span></span>(<span>self, e)</span>
 </code></dt>
 <dd>
-<div class="desc"><p>wheelEvent(self, QWheelEvent)</p></div>
+<div class="desc"><p>overriden wheelEvent to disable value changes when simply scrolling through e.g. scrollAreas</p></div>
 <details class="source">
 <summary>
 <span>Expand source code</span>
 </summary>
 <pre><code class="python">def wheelEvent(self, e):
+    &#34;&#34;&#34;overriden wheelEvent to disable value changes when simply scrolling through e.g. scrollAreas&#34;&#34;&#34;
     if(self.hasFocus()):
         QtWidgets.QDoubleSpinBox.wheelEvent(self,e)
     else:
@@ -280,12 +289,13 @@ class MyComboBox(QtWidgets.QComboBox):
 <span>class <span class="ident">QHLine</span></span>
 </code></dt>
 <dd>
-<div class="desc"><p>QFrame(parent: QWidget = None, flags: Union[Qt.WindowFlags, Qt.WindowType] = Qt.WindowFlags())</p></div>
+<div class="desc"><p>horizontal line used for dividers</p></div>
 <details class="source">
 <summary>
 <span>Expand source code</span>
 </summary>
 <pre><code class="python">class QHLine(QtWidgets.QFrame):
+    &#34;&#34;&#34;horizontal line used for dividers&#34;&#34;&#34;
     def __init__(self):
         QtWidgets.QFrame.__init__(self)
         self.setFrameShape(QtWidgets.QFrame.HLine)

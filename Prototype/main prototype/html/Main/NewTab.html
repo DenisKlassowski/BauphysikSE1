@@ -50,6 +50,7 @@ class NewTab(QtWidgets.QWidget):
         #buttons
         path = pathlib.Path(__file__).parent.absolute()
         self.buttonOpen = QtWidgets.QPushButton()
+        &#34;&#34;&#34;Open button&#34;&#34;&#34;
         self.buttonOpen.setIcon(QtGui.QIcon(str(path)+&#34;/folder_open-blue18dp.svg&#34;))
         self.buttonOpen.setIconSize(QtCore.QSize(180,180))
         self.buttonOpenLabel = QtWidgets.QLabel(&#34;&lt;b&gt;Öffnen&lt;/b&gt;&#34;)
@@ -57,6 +58,7 @@ class NewTab(QtWidgets.QWidget):
         self.buttonOpenLabel.setFixedWidth(200)
         self.buttonOpenLabel.setTextFormat(QtCore.Qt.TextFormat(1))
         self.buttonNewU = QtWidgets.QPushButton()
+        &#34;&#34;&#34;New U button&#34;&#34;&#34;
         self.buttonNewU.setIcon(QtGui.QIcon(str(path)+&#34;/U-blue-18dp.svg&#34;))
         self.buttonNewU.setIconSize(QtCore.QSize(180,180))
         self.buttonNewULabel = QtWidgets.QLabel(&#34;&lt;b&gt;U-Berechnung&lt;/b&gt;&#34;)
@@ -64,6 +66,7 @@ class NewTab(QtWidgets.QWidget):
         self.buttonNewULabel.setAlignment(QtCore.Qt.AlignCenter)
         self.buttonNewULabel.setTextFormat(QtCore.Qt.TextFormat(1))
         self.buttonNewTemp = QtWidgets.QPushButton()
+        &#34;&#34;&#34;New Temp button&#34;&#34;&#34;
         self.buttonNewTemp.setIcon(QtGui.QIcon(str(path)+&#34;/timeline-blue-18dp.svg&#34;))
         self.buttonNewTemp.setIconSize(QtCore.QSize(180,180))
         self.buttonNewTempLabel = QtWidgets.QLabel(&#34;&lt;b&gt;Temperaturkurven-&lt;br&gt;berechnung&lt;/b&gt;&#34;)
@@ -85,6 +88,7 @@ class NewTab(QtWidgets.QWidget):
         buttonLayout.addWidget(self.buttonNewTempLabel)
 
         self.image = QtGui.QPixmap(QtGui.QPixmap(&#34;thermopgrafie.jpg&#34;).scaled(QtCore.QSize(self.imageWidget.rect().height(),self.imageWidget.rect().width())))
+        &#34;&#34;&#34;image on page&#34;&#34;&#34;
         #self.image.load(&#34;UI_Design/thermopgrafie.jpg&#34;)
         #self.image.scaled(QtCore.QSize(self.imageWidget.rect().height(),self.imageWidget.rect().width()))
         self.imageWidget.setPixmap(self.image)
@@ -128,12 +132,15 @@ class NewTab(QtWidgets.QWidget):
         #self.buttonNewTemp.setText(_translate(&#34;NewTab&#34;, &#34;Neue Temperaturkurvenberechnung&#34;))
 
     def buttonNewUClicked(self):
+        &#34;&#34;&#34;reaction when New U button is clicked, creates a new tab with corresponding mode&#34;&#34;&#34;
         self.parent().parent().parent().addNewTab(0)
 
     def buttonNewTempClicked(self):
+        &#34;&#34;&#34;reaction when New Temp button is clicked, creates a new tab with corresponding mode&#34;&#34;&#34;
         self.parent().parent().parent().addNewTab(1)
 
     def buttonOpenFileClicked(self):
+       &#34;&#34;&#34;reaction when Open File button is clicked, opens Open File dialogue&#34;&#34;&#34;
        self.parent().parent().parent().openFile()</code></pre>
 </details>
 </section>
@@ -175,6 +182,7 @@ class NewTab(QtWidgets.QWidget):
         #buttons
         path = pathlib.Path(__file__).parent.absolute()
         self.buttonOpen = QtWidgets.QPushButton()
+        &#34;&#34;&#34;Open button&#34;&#34;&#34;
         self.buttonOpen.setIcon(QtGui.QIcon(str(path)+&#34;/folder_open-blue18dp.svg&#34;))
         self.buttonOpen.setIconSize(QtCore.QSize(180,180))
         self.buttonOpenLabel = QtWidgets.QLabel(&#34;&lt;b&gt;Öffnen&lt;/b&gt;&#34;)
@@ -182,6 +190,7 @@ class NewTab(QtWidgets.QWidget):
         self.buttonOpenLabel.setFixedWidth(200)
         self.buttonOpenLabel.setTextFormat(QtCore.Qt.TextFormat(1))
         self.buttonNewU = QtWidgets.QPushButton()
+        &#34;&#34;&#34;New U button&#34;&#34;&#34;
         self.buttonNewU.setIcon(QtGui.QIcon(str(path)+&#34;/U-blue-18dp.svg&#34;))
         self.buttonNewU.setIconSize(QtCore.QSize(180,180))
         self.buttonNewULabel = QtWidgets.QLabel(&#34;&lt;b&gt;U-Berechnung&lt;/b&gt;&#34;)
@@ -189,6 +198,7 @@ class NewTab(QtWidgets.QWidget):
         self.buttonNewULabel.setAlignment(QtCore.Qt.AlignCenter)
         self.buttonNewULabel.setTextFormat(QtCore.Qt.TextFormat(1))
         self.buttonNewTemp = QtWidgets.QPushButton()
+        &#34;&#34;&#34;New Temp button&#34;&#34;&#34;
         self.buttonNewTemp.setIcon(QtGui.QIcon(str(path)+&#34;/timeline-blue-18dp.svg&#34;))
         self.buttonNewTemp.setIconSize(QtCore.QSize(180,180))
         self.buttonNewTempLabel = QtWidgets.QLabel(&#34;&lt;b&gt;Temperaturkurven-&lt;br&gt;berechnung&lt;/b&gt;&#34;)
@@ -210,6 +220,7 @@ class NewTab(QtWidgets.QWidget):
         buttonLayout.addWidget(self.buttonNewTempLabel)
 
         self.image = QtGui.QPixmap(QtGui.QPixmap(&#34;thermopgrafie.jpg&#34;).scaled(QtCore.QSize(self.imageWidget.rect().height(),self.imageWidget.rect().width())))
+        &#34;&#34;&#34;image on page&#34;&#34;&#34;
         #self.image.load(&#34;UI_Design/thermopgrafie.jpg&#34;)
         #self.image.scaled(QtCore.QSize(self.imageWidget.rect().height(),self.imageWidget.rect().width()))
         self.imageWidget.setPixmap(self.image)
@@ -253,12 +264,15 @@ class NewTab(QtWidgets.QWidget):
         #self.buttonNewTemp.setText(_translate(&#34;NewTab&#34;, &#34;Neue Temperaturkurvenberechnung&#34;))
 
     def buttonNewUClicked(self):
+        &#34;&#34;&#34;reaction when New U button is clicked, creates a new tab with corresponding mode&#34;&#34;&#34;
         self.parent().parent().parent().addNewTab(0)
 
     def buttonNewTempClicked(self):
+        &#34;&#34;&#34;reaction when New Temp button is clicked, creates a new tab with corresponding mode&#34;&#34;&#34;
         self.parent().parent().parent().addNewTab(1)
 
     def buttonOpenFileClicked(self):
+       &#34;&#34;&#34;reaction when Open File button is clicked, opens Open File dialogue&#34;&#34;&#34;
        self.parent().parent().parent().openFile()</code></pre>
 </details>
 <h3>Ancestors</h3>
@@ -269,18 +283,38 @@ class NewTab(QtWidgets.QWidget):
 <li>PyQt5.QtGui.QPaintDevice</li>
 <li>sip.simplewrapper</li>
 </ul>
+<h3>Instance variables</h3>
+<dl>
+<dt id="Main.NewTab.NewTab.buttonNewTemp"><code class="name">var <span class="ident">buttonNewTemp</span></code></dt>
+<dd>
+<div class="desc"><p>New Temp button</p></div>
+</dd>
+<dt id="Main.NewTab.NewTab.buttonNewU"><code class="name">var <span class="ident">buttonNewU</span></code></dt>
+<dd>
+<div class="desc"><p>New U button</p></div>
+</dd>
+<dt id="Main.NewTab.NewTab.buttonOpen"><code class="name">var <span class="ident">buttonOpen</span></code></dt>
+<dd>
+<div class="desc"><p>Open button</p></div>
+</dd>
+<dt id="Main.NewTab.NewTab.image"><code class="name">var <span class="ident">image</span></code></dt>
+<dd>
+<div class="desc"><p>image on page</p></div>
+</dd>
+</dl>
 <h3>Methods</h3>
 <dl>
 <dt id="Main.NewTab.NewTab.buttonNewTempClicked"><code class="name flex">
 <span>def <span class="ident">buttonNewTempClicked</span></span>(<span>self)</span>
 </code></dt>
 <dd>
-<div class="desc"></div>
+<div class="desc"><p>reaction when New Temp button is clicked, creates a new tab with corresponding mode</p></div>
 <details class="source">
 <summary>
 <span>Expand source code</span>
 </summary>
 <pre><code class="python">def buttonNewTempClicked(self):
+    &#34;&#34;&#34;reaction when New Temp button is clicked, creates a new tab with corresponding mode&#34;&#34;&#34;
     self.parent().parent().parent().addNewTab(1)</code></pre>
 </details>
 </dd>
@@ -288,12 +322,13 @@ class NewTab(QtWidgets.QWidget):
 <span>def <span class="ident">buttonNewUClicked</span></span>(<span>self)</span>
 </code></dt>
 <dd>
-<div class="desc"></div>
+<div class="desc"><p>reaction when New U button is clicked, creates a new tab with corresponding mode</p></div>
 <details class="source">
 <summary>
 <span>Expand source code</span>
 </summary>
 <pre><code class="python">def buttonNewUClicked(self):
+    &#34;&#34;&#34;reaction when New U button is clicked, creates a new tab with corresponding mode&#34;&#34;&#34;
     self.parent().parent().parent().addNewTab(0)</code></pre>
 </details>
 </dd>
@@ -301,12 +336,13 @@ class NewTab(QtWidgets.QWidget):
 <span>def <span class="ident">buttonOpenFileClicked</span></span>(<span>self)</span>
 </code></dt>
 <dd>
-<div class="desc"></div>
+<div class="desc"><p>reaction when Open File button is clicked, opens Open File dialogue</p></div>
 <details class="source">
 <summary>
 <span>Expand source code</span>
 </summary>
 <pre><code class="python">def buttonOpenFileClicked(self):
+   &#34;&#34;&#34;reaction when Open File button is clicked, opens Open File dialogue&#34;&#34;&#34;
    self.parent().parent().parent().openFile()</code></pre>
 </details>
 </dd>
@@ -344,9 +380,13 @@ class NewTab(QtWidgets.QWidget):
 <li>
 <h4><code><a title="Main.NewTab.NewTab" href="#Main.NewTab.NewTab">NewTab</a></code></h4>
 <ul class="">
+<li><code><a title="Main.NewTab.NewTab.buttonNewTemp" href="#Main.NewTab.NewTab.buttonNewTemp">buttonNewTemp</a></code></li>
 <li><code><a title="Main.NewTab.NewTab.buttonNewTempClicked" href="#Main.NewTab.NewTab.buttonNewTempClicked">buttonNewTempClicked</a></code></li>
+<li><code><a title="Main.NewTab.NewTab.buttonNewU" href="#Main.NewTab.NewTab.buttonNewU">buttonNewU</a></code></li>
 <li><code><a title="Main.NewTab.NewTab.buttonNewUClicked" href="#Main.NewTab.NewTab.buttonNewUClicked">buttonNewUClicked</a></code></li>
+<li><code><a title="Main.NewTab.NewTab.buttonOpen" href="#Main.NewTab.NewTab.buttonOpen">buttonOpen</a></code></li>
 <li><code><a title="Main.NewTab.NewTab.buttonOpenFileClicked" href="#Main.NewTab.NewTab.buttonOpenFileClicked">buttonOpenFileClicked</a></code></li>
+<li><code><a title="Main.NewTab.NewTab.image" href="#Main.NewTab.NewTab.image">image</a></code></li>
 <li><code><a title="Main.NewTab.NewTab.retranslateUi" href="#Main.NewTab.NewTab.retranslateUi">retranslateUi</a></code></li>
 </ul>
 </li>

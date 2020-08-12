@@ -40,11 +40,17 @@ class Tab(QtWidgets.QWidget):
     def __init__(self,mode,name,data=None):
         QtWidgets.QWidget.__init__(self)
         self.mode=mode
+        &#34;&#34;&#34;mode (integer) in which the tab currently operates in&#34;&#34;&#34;
         self.layerCount = 0
+        &#34;&#34;&#34;count of layers currently in tab&#34;&#34;&#34;
         self.tabWidget=self.parent()
+        &#34;&#34;&#34;link to parent&#34;&#34;&#34;
         self.rWidget=RWidget()
+        &#34;&#34;&#34;RWidget which is part of tab&#34;&#34;&#34;
         self.tempWidget=TempWidget()
+        &#34;&#34;&#34;TempWidget which is part of tab&#34;&#34;&#34;
         self.data = None
+        &#34;&#34;&#34;data associated with tab&#34;&#34;&#34;
 
         #event handling rWidget
         self.rWidget.rInsideDoubleSpinBox.valueChanged.connect(self.rsiValueChanged)
@@ -58,6 +64,7 @@ class Tab(QtWidgets.QWidget):
 
         #flag to check whether calculations should happen or not. used for loading/startup process
         self.calculateFlag = 1
+        &#34;&#34;&#34;flag to help circumvent calculation loop when doing live calculation&#34;&#34;&#34;
 
         # overall layout of tab
         tabLayout = QtWidgets.QHBoxLayout()
@@ -83,8 +90,10 @@ class Tab(QtWidgets.QWidget):
 
         #environment area
         self.scrollAreaEnvironment = QtWidgets.QScrollArea()
+        &#34;&#34;&#34;environmental area&#34;&#34;&#34;
         environmentWidget = QtWidgets.QWidget()
         self.environmentLayout = QtWidgets.QFormLayout()
+        &#34;&#34;&#34;layout of environmental area&#34;&#34;&#34;
         self.environmentLayout.setSpacing(20)
         environmentWidget.setLayout(self.environmentLayout)
 
@@ -114,12 +123,15 @@ class Tab(QtWidgets.QWidget):
 
         #visualization area (WIP)
         self.visualizeWidget = VisualizeWidget()
+        &#34;&#34;&#34;visualization widget&#34;&#34;&#34;
         tabUpperLayout.addWidget(self.visualizeWidget)
 
         #lower layout of tab
         self.scrollAreaLayers = QtWidgets.QScrollArea()
+        &#34;&#34;&#34;scrollArea where all layers reside in&#34;&#34;&#34;
         layersWidget = QtWidgets.QWidget()
         self.layerLayout = QtWidgets.QFormLayout()
+        &#34;&#34;&#34;layout of scrollArea where all layers reside in&#34;&#34;&#34;
         self.layerLayout.setSpacing(20)
 
         #data handling
@@ -164,6 +176,7 @@ class Tab(QtWidgets.QWidget):
         _translate = QtCore.QCoreApplication.translate
 
     def setEnvironment(self):
+        &#34;&#34;&#34;sets environmental area according to current mode&#34;&#34;&#34;
         if self.mode == 0:
             self.addRWidget()
             self.removeTempWidget()
@@ -185,10 +198,12 @@ class Tab(QtWidgets.QWidget):
         self.tempWidget.hide()
 
     def addEnvLayerDividers(self):
+        &#34;&#34;&#34;adds dividers around first layer&#34;&#34;&#34;
         self.layerLayout.insertRow(0,LayerDivider(self.mode))
         self.layerLayout.insertRow(1,LayerDivider(self.mode))
 
     def addLayer(self, position):
+        &#34;&#34;&#34;adds new layer at given position&#34;&#34;&#34;
         #enable delete button on the former solitary layer
         if(self.layerCount==1):
             self.layerLayout.itemAt(1,2).widget().setRemovable(True)
@@ -210,6 +225,7 @@ class Tab(QtWidgets.QWidget):
         self.data.insert_layer(l.data,position)
 
     def loadLayer(self,position, layerData):
+        &#34;&#34;&#34;loads a layer from data and inserts it at given position&#34;&#34;&#34;
         #enable delete button on the former solitary layer
         if(self.layerCount==1):
             self.layerLayout.itemAt(1,2).widget().setRemovable(True)
@@ -231,6 +247,7 @@ class Tab(QtWidgets.QWidget):
         self.updatePositionLayers(position)
 
     def deleteLayer(self, position):
+        &#34;&#34;&#34;removes layer at given position&#34;&#34;&#34;
         self.data.remove_layer(position)
         if (position==0):
             self.layerLayout.removeRow(1)
@@ -251,11 +268,13 @@ class Tab(QtWidgets.QWidget):
 
 
     def updatePositionLayers(self, startPos):
+        &#34;&#34;&#34;updates the position of layers&#34;&#34;&#34;
         for pos in range(startPos, self.layerCount):
             self.layerLayout.itemAt((2*pos)+1,2).widget().updatePos(pos)
 
 
     def switchToTemp(self):
+        &#34;&#34;&#34;switches to Temp mode&#34;&#34;&#34;
         self.mode=1
         self.data.mode=1
         self.setEnvironment()
@@ -268,6 +287,7 @@ class Tab(QtWidgets.QWidget):
 
 
     def switchToU(self):
+        &#34;&#34;&#34;switches to U mode&#34;&#34;&#34;
         self.mode=0
         self.data.mode=0
         self.setEnvironment()
@@ -278,41 +298,49 @@ class Tab(QtWidgets.QWidget):
         self.scrollAreaLayers.show()
 
     def getRWidgetData(self):
+        &#34;&#34;&#34;writes current RWidget values into data&#34;&#34;&#34;
         self.data.rsi=self.rWidget.rInsideDoubleSpinBox.value()
         self.data.rse=self.rWidget.rOutsideDoubleSpinBox.value()
         self.data.rges=self.rWidget.rOverallDoubleSpinBox.value()
         self.data.u=self.rWidget.rInvertedDoubleSpinBox.value()
 
     def getTempData(self):
+        &#34;&#34;&#34;writes current TempWidget values into data&#34;&#34;&#34;
         self.data.tin=self.tempWidget.tempInsideDoubleSpinBox.value()
         self.data.tout=self.tempWidget.tempOutsideDoubleSpinBox.value()
 
     def generateData(self,name):
+        &#34;&#34;&#34;generates new TabData&#34;&#34;&#34;
         self.data=TabData(self.mode,name)
         #self.getRWidgetData()
         #self.getTempData()
 
     def fillEnv(self):
+        &#34;&#34;&#34;sets up and fills environmental area then loading from data&#34;&#34;&#34;
         self.mode=self.data.mode
         self.setEnvironment()
         self.fillEnvData()
 
     def fillEnvData(self):
+        &#34;&#34;&#34;fills environmental area then loading from data&#34;&#34;&#34;
         self.calculateFlag=0
         self.rWidget.setData(self.data.rleft,self.data.rright,self.data.rsum,self.data.rt,self.data.u)
         self.tempWidget.setData(self.data.tleft,self.data.tright)
         self.calculateFlag=1
 
     def fillEnvDataLite(self):
+        &#34;&#34;&#34;fills environmental area when loading from data after calculation&#34;&#34;&#34;
         self.calculateFlag=0
         self.rWidget.setDataLite(self.data.rsum,self.data.rt,self.data.u)
         self.calculateFlag=1
 
     def fillLayers(self):
+        &#34;&#34;&#34;fills layers when loading from data&#34;&#34;&#34;
         for x in range(len(self.data.layers)):
             self.loadLayer(x,self.data.layers[x])
 
     def fillLayerDividers(self):
+        &#34;&#34;&#34;fills layer dividers when loading from data&#34;&#34;&#34;
         if self.mode == 1:
             #some localization for different decimalPoints
             cLocale = QtCore.QLocale()
@@ -327,6 +355,7 @@ class Tab(QtWidgets.QWidget):
                     self.layerLayout.itemAt(i*2+2,2).widget().tempLabel.setText(ss2)
 
     def calculate(self):
+        &#34;&#34;&#34;calculates the current tab&#34;&#34;&#34;
         if self.calculateFlag==1:
             self.calculateFlag=0
             try:
@@ -389,11 +418,17 @@ class Tab(QtWidgets.QWidget):
     def __init__(self,mode,name,data=None):
         QtWidgets.QWidget.__init__(self)
         self.mode=mode
+        &#34;&#34;&#34;mode (integer) in which the tab currently operates in&#34;&#34;&#34;
         self.layerCount = 0
+        &#34;&#34;&#34;count of layers currently in tab&#34;&#34;&#34;
         self.tabWidget=self.parent()
+        &#34;&#34;&#34;link to parent&#34;&#34;&#34;
         self.rWidget=RWidget()
+        &#34;&#34;&#34;RWidget which is part of tab&#34;&#34;&#34;
         self.tempWidget=TempWidget()
+        &#34;&#34;&#34;TempWidget which is part of tab&#34;&#34;&#34;
         self.data = None
+        &#34;&#34;&#34;data associated with tab&#34;&#34;&#34;
 
         #event handling rWidget
         self.rWidget.rInsideDoubleSpinBox.valueChanged.connect(self.rsiValueChanged)
@@ -407,6 +442,7 @@ class Tab(QtWidgets.QWidget):
 
         #flag to check whether calculations should happen or not. used for loading/startup process
         self.calculateFlag = 1
+        &#34;&#34;&#34;flag to help circumvent calculation loop when doing live calculation&#34;&#34;&#34;
 
         # overall layout of tab
         tabLayout = QtWidgets.QHBoxLayout()
@@ -432,8 +468,10 @@ class Tab(QtWidgets.QWidget):
 
         #environment area
         self.scrollAreaEnvironment = QtWidgets.QScrollArea()
+        &#34;&#34;&#34;environmental area&#34;&#34;&#34;
         environmentWidget = QtWidgets.QWidget()
         self.environmentLayout = QtWidgets.QFormLayout()
+        &#34;&#34;&#34;layout of environmental area&#34;&#34;&#34;
         self.environmentLayout.setSpacing(20)
         environmentWidget.setLayout(self.environmentLayout)
 
@@ -463,12 +501,15 @@ class Tab(QtWidgets.QWidget):
 
         #visualization area (WIP)
         self.visualizeWidget = VisualizeWidget()
+        &#34;&#34;&#34;visualization widget&#34;&#34;&#34;
         tabUpperLayout.addWidget(self.visualizeWidget)
 
         #lower layout of tab
         self.scrollAreaLayers = QtWidgets.QScrollArea()
+        &#34;&#34;&#34;scrollArea where all layers reside in&#34;&#34;&#34;
         layersWidget = QtWidgets.QWidget()
         self.layerLayout = QtWidgets.QFormLayout()
+        &#34;&#34;&#34;layout of scrollArea where all layers reside in&#34;&#34;&#34;
         self.layerLayout.setSpacing(20)
 
         #data handling
@@ -513,6 +554,7 @@ class Tab(QtWidgets.QWidget):
         _translate = QtCore.QCoreApplication.translate
 
     def setEnvironment(self):
+        &#34;&#34;&#34;sets environmental area according to current mode&#34;&#34;&#34;
         if self.mode == 0:
             self.addRWidget()
             self.removeTempWidget()
@@ -534,10 +576,12 @@ class Tab(QtWidgets.QWidget):
         self.tempWidget.hide()
 
     def addEnvLayerDividers(self):
+        &#34;&#34;&#34;adds dividers around first layer&#34;&#34;&#34;
         self.layerLayout.insertRow(0,LayerDivider(self.mode))
         self.layerLayout.insertRow(1,LayerDivider(self.mode))
 
     def addLayer(self, position):
+        &#34;&#34;&#34;adds new layer at given position&#34;&#34;&#34;
         #enable delete button on the former solitary layer
         if(self.layerCount==1):
             self.layerLayout.itemAt(1,2).widget().setRemovable(True)
@@ -559,6 +603,7 @@ class Tab(QtWidgets.QWidget):
         self.data.insert_layer(l.data,position)
 
     def loadLayer(self,position, layerData):
+        &#34;&#34;&#34;loads a layer from data and inserts it at given position&#34;&#34;&#34;
         #enable delete button on the former solitary layer
         if(self.layerCount==1):
             self.layerLayout.itemAt(1,2).widget().setRemovable(True)
@@ -580,6 +625,7 @@ class Tab(QtWidgets.QWidget):
         self.updatePositionLayers(position)
 
     def deleteLayer(self, position):
+        &#34;&#34;&#34;removes layer at given position&#34;&#34;&#34;
         self.data.remove_layer(position)
         if (position==0):
             self.layerLayout.removeRow(1)
@@ -600,11 +646,13 @@ class Tab(QtWidgets.QWidget):
 
 
     def updatePositionLayers(self, startPos):
+        &#34;&#34;&#34;updates the position of layers&#34;&#34;&#34;
         for pos in range(startPos, self.layerCount):
             self.layerLayout.itemAt((2*pos)+1,2).widget().updatePos(pos)
 
 
     def switchToTemp(self):
+        &#34;&#34;&#34;switches to Temp mode&#34;&#34;&#34;
         self.mode=1
         self.data.mode=1
         self.setEnvironment()
@@ -617,6 +665,7 @@ class Tab(QtWidgets.QWidget):
 
 
     def switchToU(self):
+        &#34;&#34;&#34;switches to U mode&#34;&#34;&#34;
         self.mode=0
         self.data.mode=0
         self.setEnvironment()
@@ -627,41 +676,49 @@ class Tab(QtWidgets.QWidget):
         self.scrollAreaLayers.show()
 
     def getRWidgetData(self):
+        &#34;&#34;&#34;writes current RWidget values into data&#34;&#34;&#34;
         self.data.rsi=self.rWidget.rInsideDoubleSpinBox.value()
         self.data.rse=self.rWidget.rOutsideDoubleSpinBox.value()
         self.data.rges=self.rWidget.rOverallDoubleSpinBox.value()
         self.data.u=self.rWidget.rInvertedDoubleSpinBox.value()
 
     def getTempData(self):
+        &#34;&#34;&#34;writes current TempWidget values into data&#34;&#34;&#34;
         self.data.tin=self.tempWidget.tempInsideDoubleSpinBox.value()
         self.data.tout=self.tempWidget.tempOutsideDoubleSpinBox.value()
 
     def generateData(self,name):
+        &#34;&#34;&#34;generates new TabData&#34;&#34;&#34;
         self.data=TabData(self.mode,name)
         #self.getRWidgetData()
         #self.getTempData()
 
     def fillEnv(self):
+        &#34;&#34;&#34;sets up and fills environmental area then loading from data&#34;&#34;&#34;
         self.mode=self.data.mode
         self.setEnvironment()
         self.fillEnvData()
 
     def fillEnvData(self):
+        &#34;&#34;&#34;fills environmental area then loading from data&#34;&#34;&#34;
         self.calculateFlag=0
         self.rWidget.setData(self.data.rleft,self.data.rright,self.data.rsum,self.data.rt,self.data.u)
         self.tempWidget.setData(self.data.tleft,self.data.tright)
         self.calculateFlag=1
 
     def fillEnvDataLite(self):
+        &#34;&#34;&#34;fills environmental area when loading from data after calculation&#34;&#34;&#34;
         self.calculateFlag=0
         self.rWidget.setDataLite(self.data.rsum,self.data.rt,self.data.u)
         self.calculateFlag=1
 
     def fillLayers(self):
+        &#34;&#34;&#34;fills layers when loading from data&#34;&#34;&#34;
         for x in range(len(self.data.layers)):
             self.loadLayer(x,self.data.layers[x])
 
     def fillLayerDividers(self):
+        &#34;&#34;&#34;fills layer dividers when loading from data&#34;&#34;&#34;
         if self.mode == 1:
             #some localization for different decimalPoints
             cLocale = QtCore.QLocale()
@@ -676,6 +733,7 @@ class Tab(QtWidgets.QWidget):
                     self.layerLayout.itemAt(i*2+2,2).widget().tempLabel.setText(ss2)
 
     def calculate(self):
+        &#34;&#34;&#34;calculates the current tab&#34;&#34;&#34;
         if self.calculateFlag==1:
             self.calculateFlag=0
             try:
@@ -722,18 +780,70 @@ class Tab(QtWidgets.QWidget):
 <li>PyQt5.QtGui.QPaintDevice</li>
 <li>sip.simplewrapper</li>
 </ul>
+<h3>Instance variables</h3>
+<dl>
+<dt id="Main.Tab.Tab.calculateFlag"><code class="name">var <span class="ident">calculateFlag</span></code></dt>
+<dd>
+<div class="desc"><p>flag to help circumvent calculation loop when doing live calculation</p></div>
+</dd>
+<dt id="Main.Tab.Tab.data"><code class="name">var <span class="ident">data</span></code></dt>
+<dd>
+<div class="desc"><p>data associated with tab</p></div>
+</dd>
+<dt id="Main.Tab.Tab.environmentLayout"><code class="name">var <span class="ident">environmentLayout</span></code></dt>
+<dd>
+<div class="desc"><p>layout of environmental area</p></div>
+</dd>
+<dt id="Main.Tab.Tab.layerCount"><code class="name">var <span class="ident">layerCount</span></code></dt>
+<dd>
+<div class="desc"><p>count of layers currently in tab</p></div>
+</dd>
+<dt id="Main.Tab.Tab.layerLayout"><code class="name">var <span class="ident">layerLayout</span></code></dt>
+<dd>
+<div class="desc"><p>layout of scrollArea where all layers reside in</p></div>
+</dd>
+<dt id="Main.Tab.Tab.mode"><code class="name">var <span class="ident">mode</span></code></dt>
+<dd>
+<div class="desc"><p>mode (integer) in which the tab currently operates in</p></div>
+</dd>
+<dt id="Main.Tab.Tab.rWidget"><code class="name">var <span class="ident">rWidget</span></code></dt>
+<dd>
+<div class="desc"><p>RWidget which is part of tab</p></div>
+</dd>
+<dt id="Main.Tab.Tab.scrollAreaEnvironment"><code class="name">var <span class="ident">scrollAreaEnvironment</span></code></dt>
+<dd>
+<div class="desc"><p>environmental area</p></div>
+</dd>
+<dt id="Main.Tab.Tab.scrollAreaLayers"><code class="name">var <span class="ident">scrollAreaLayers</span></code></dt>
+<dd>
+<div class="desc"><p>scrollArea where all layers reside in</p></div>
+</dd>
+<dt id="Main.Tab.Tab.tabWidget"><code class="name">var <span class="ident">tabWidget</span></code></dt>
+<dd>
+<div class="desc"><p>link to parent</p></div>
+</dd>
+<dt id="Main.Tab.Tab.tempWidget"><code class="name">var <span class="ident">tempWidget</span></code></dt>
+<dd>
+<div class="desc"><p>TempWidget which is part of tab</p></div>
+</dd>
+<dt id="Main.Tab.Tab.visualizeWidget"><code class="name">var <span class="ident">visualizeWidget</span></code></dt>
+<dd>
+<div class="desc"><p>visualization widget</p></div>
+</dd>
+</dl>
 <h3>Methods</h3>
 <dl>
 <dt id="Main.Tab.Tab.addEnvLayerDividers"><code class="name flex">
 <span>def <span class="ident">addEnvLayerDividers</span></span>(<span>self)</span>
 </code></dt>
 <dd>
-<div class="desc"></div>
+<div class="desc"><p>adds dividers around first layer</p></div>
 <details class="source">
 <summary>
 <span>Expand source code</span>
 </summary>
 <pre><code class="python">def addEnvLayerDividers(self):
+    &#34;&#34;&#34;adds dividers around first layer&#34;&#34;&#34;
     self.layerLayout.insertRow(0,LayerDivider(self.mode))
     self.layerLayout.insertRow(1,LayerDivider(self.mode))</code></pre>
 </details>
@@ -742,12 +852,13 @@ class Tab(QtWidgets.QWidget):
 <span>def <span class="ident">addLayer</span></span>(<span>self, position)</span>
 </code></dt>
 <dd>
-<div class="desc"></div>
+<div class="desc"><p>adds new layer at given position</p></div>
 <details class="source">
 <summary>
 <span>Expand source code</span>
 </summary>
 <pre><code class="python">def addLayer(self, position):
+    &#34;&#34;&#34;adds new layer at given position&#34;&#34;&#34;
     #enable delete button on the former solitary layer
     if(self.layerCount==1):
         self.layerLayout.itemAt(1,2).widget().setRemovable(True)
@@ -799,12 +910,13 @@ class Tab(QtWidgets.QWidget):
 <span>def <span class="ident">calculate</span></span>(<span>self)</span>
 </code></dt>
 <dd>
-<div class="desc"></div>
+<div class="desc"><p>calculates the current tab</p></div>
 <details class="source">
 <summary>
 <span>Expand source code</span>
 </summary>
 <pre><code class="python">def calculate(self):
+    &#34;&#34;&#34;calculates the current tab&#34;&#34;&#34;
     if self.calculateFlag==1:
         self.calculateFlag=0
         try:
@@ -822,12 +934,13 @@ class Tab(QtWidgets.QWidget):
 <span>def <span class="ident">deleteLayer</span></span>(<span>self, position)</span>
 </code></dt>
 <dd>
-<div class="desc"></div>
+<div class="desc"><p>removes layer at given position</p></div>
 <details class="source">
 <summary>
 <span>Expand source code</span>
 </summary>
 <pre><code class="python">def deleteLayer(self, position):
+    &#34;&#34;&#34;removes layer at given position&#34;&#34;&#34;
     self.data.remove_layer(position)
     if (position==0):
         self.layerLayout.removeRow(1)
@@ -851,12 +964,13 @@ class Tab(QtWidgets.QWidget):
 <span>def <span class="ident">fillEnv</span></span>(<span>self)</span>
 </code></dt>
 <dd>
-<div class="desc"></div>
+<div class="desc"><p>sets up and fills environmental area then loading from data</p></div>
 <details class="source">
 <summary>
 <span>Expand source code</span>
 </summary>
 <pre><code class="python">def fillEnv(self):
+    &#34;&#34;&#34;sets up and fills environmental area then loading from data&#34;&#34;&#34;
     self.mode=self.data.mode
     self.setEnvironment()
     self.fillEnvData()</code></pre>
@@ -866,12 +980,13 @@ class Tab(QtWidgets.QWidget):
 <span>def <span class="ident">fillEnvData</span></span>(<span>self)</span>
 </code></dt>
 <dd>
-<div class="desc"></div>
+<div class="desc"><p>fills environmental area then loading from data</p></div>
 <details class="source">
 <summary>
 <span>Expand source code</span>
 </summary>
 <pre><code class="python">def fillEnvData(self):
+    &#34;&#34;&#34;fills environmental area then loading from data&#34;&#34;&#34;
     self.calculateFlag=0
     self.rWidget.setData(self.data.rleft,self.data.rright,self.data.rsum,self.data.rt,self.data.u)
     self.tempWidget.setData(self.data.tleft,self.data.tright)
@@ -882,12 +997,13 @@ class Tab(QtWidgets.QWidget):
 <span>def <span class="ident">fillEnvDataLite</span></span>(<span>self)</span>
 </code></dt>
 <dd>
-<div class="desc"></div>
+<div class="desc"><p>fills environmental area when loading from data after calculation</p></div>
 <details class="source">
 <summary>
 <span>Expand source code</span>
 </summary>
 <pre><code class="python">def fillEnvDataLite(self):
+    &#34;&#34;&#34;fills environmental area when loading from data after calculation&#34;&#34;&#34;
     self.calculateFlag=0
     self.rWidget.setDataLite(self.data.rsum,self.data.rt,self.data.u)
     self.calculateFlag=1</code></pre>
@@ -897,12 +1013,13 @@ class Tab(QtWidgets.QWidget):
 <span>def <span class="ident">fillLayerDividers</span></span>(<span>self)</span>
 </code></dt>
 <dd>
-<div class="desc"></div>
+<div class="desc"><p>fills layer dividers when loading from data</p></div>
 <details class="source">
 <summary>
 <span>Expand source code</span>
 </summary>
 <pre><code class="python">def fillLayerDividers(self):
+    &#34;&#34;&#34;fills layer dividers when loading from data&#34;&#34;&#34;
     if self.mode == 1:
         #some localization for different decimalPoints
         cLocale = QtCore.QLocale()
@@ -921,12 +1038,13 @@ class Tab(QtWidgets.QWidget):
 <span>def <span class="ident">fillLayers</span></span>(<span>self)</span>
 </code></dt>
 <dd>
-<div class="desc"></div>
+<div class="desc"><p>fills layers when loading from data</p></div>
 <details class="source">
 <summary>
 <span>Expand source code</span>
 </summary>
 <pre><code class="python">def fillLayers(self):
+    &#34;&#34;&#34;fills layers when loading from data&#34;&#34;&#34;
     for x in range(len(self.data.layers)):
         self.loadLayer(x,self.data.layers[x])</code></pre>
 </details>
@@ -935,12 +1053,13 @@ class Tab(QtWidgets.QWidget):
 <span>def <span class="ident">generateData</span></span>(<span>self, name)</span>
 </code></dt>
 <dd>
-<div class="desc"></div>
+<div class="desc"><p>generates new TabData</p></div>
 <details class="source">
 <summary>
 <span>Expand source code</span>
 </summary>
 <pre><code class="python">def generateData(self,name):
+    &#34;&#34;&#34;generates new TabData&#34;&#34;&#34;
     self.data=TabData(self.mode,name)</code></pre>
 </details>
 </dd>
@@ -948,12 +1067,13 @@ class Tab(QtWidgets.QWidget):
 <span>def <span class="ident">getRWidgetData</span></span>(<span>self)</span>
 </code></dt>
 <dd>
-<div class="desc"></div>
+<div class="desc"><p>writes current RWidget values into data</p></div>
 <details class="source">
 <summary>
 <span>Expand source code</span>
 </summary>
 <pre><code class="python">def getRWidgetData(self):
+    &#34;&#34;&#34;writes current RWidget values into data&#34;&#34;&#34;
     self.data.rsi=self.rWidget.rInsideDoubleSpinBox.value()
     self.data.rse=self.rWidget.rOutsideDoubleSpinBox.value()
     self.data.rges=self.rWidget.rOverallDoubleSpinBox.value()
@@ -964,12 +1084,13 @@ class Tab(QtWidgets.QWidget):
 <span>def <span class="ident">getTempData</span></span>(<span>self)</span>
 </code></dt>
 <dd>
-<div class="desc"></div>
+<div class="desc"><p>writes current TempWidget values into data</p></div>
 <details class="source">
 <summary>
 <span>Expand source code</span>
 </summary>
 <pre><code class="python">def getTempData(self):
+    &#34;&#34;&#34;writes current TempWidget values into data&#34;&#34;&#34;
     self.data.tin=self.tempWidget.tempInsideDoubleSpinBox.value()
     self.data.tout=self.tempWidget.tempOutsideDoubleSpinBox.value()</code></pre>
 </details>
@@ -978,12 +1099,13 @@ class Tab(QtWidgets.QWidget):
 <span>def <span class="ident">loadLayer</span></span>(<span>self, position, layerData)</span>
 </code></dt>
 <dd>
-<div class="desc"></div>
+<div class="desc"><p>loads a layer from data and inserts it at given position</p></div>
 <details class="source">
 <summary>
 <span>Expand source code</span>
 </summary>
 <pre><code class="python">def loadLayer(self,position, layerData):
+    &#34;&#34;&#34;loads a layer from data and inserts it at given position&#34;&#34;&#34;
     #enable delete button on the former solitary layer
     if(self.layerCount==1):
         self.layerLayout.itemAt(1,2).widget().setRemovable(True)
@@ -1102,12 +1224,13 @@ class Tab(QtWidgets.QWidget):
 <span>def <span class="ident">setEnvironment</span></span>(<span>self)</span>
 </code></dt>
 <dd>
-<div class="desc"></div>
+<div class="desc"><p>sets environmental area according to current mode</p></div>
 <details class="source">
 <summary>
 <span>Expand source code</span>
 </summary>
 <pre><code class="python">def setEnvironment(self):
+    &#34;&#34;&#34;sets environmental area according to current mode&#34;&#34;&#34;
     if self.mode == 0:
         self.addRWidget()
         self.removeTempWidget()
@@ -1121,12 +1244,13 @@ class Tab(QtWidgets.QWidget):
 <span>def <span class="ident">switchToTemp</span></span>(<span>self)</span>
 </code></dt>
 <dd>
-<div class="desc"></div>
+<div class="desc"><p>switches to Temp mode</p></div>
 <details class="source">
 <summary>
 <span>Expand source code</span>
 </summary>
 <pre><code class="python">def switchToTemp(self):
+    &#34;&#34;&#34;switches to Temp mode&#34;&#34;&#34;
     self.mode=1
     self.data.mode=1
     self.setEnvironment()
@@ -1142,12 +1266,13 @@ class Tab(QtWidgets.QWidget):
 <span>def <span class="ident">switchToU</span></span>(<span>self)</span>
 </code></dt>
 <dd>
-<div class="desc"></div>
+<div class="desc"><p>switches to U mode</p></div>
 <details class="source">
 <summary>
 <span>Expand source code</span>
 </summary>
 <pre><code class="python">def switchToU(self):
+    &#34;&#34;&#34;switches to U mode&#34;&#34;&#34;
     self.mode=0
     self.data.mode=0
     self.setEnvironment()
@@ -1203,12 +1328,13 @@ class Tab(QtWidgets.QWidget):
 <span>def <span class="ident">updatePositionLayers</span></span>(<span>self, startPos)</span>
 </code></dt>
 <dd>
-<div class="desc"></div>
+<div class="desc"><p>updates the position of layers</p></div>
 <details class="source">
 <summary>
 <span>Expand source code</span>
 </summary>
 <pre><code class="python">def updatePositionLayers(self, startPos):
+    &#34;&#34;&#34;updates the position of layers&#34;&#34;&#34;
     for pos in range(startPos, self.layerCount):
         self.layerLayout.itemAt((2*pos)+1,2).widget().updatePos(pos)</code></pre>
 </details>
@@ -1239,7 +1365,10 @@ class Tab(QtWidgets.QWidget):
 <li><code><a title="Main.Tab.Tab.addRWidget" href="#Main.Tab.Tab.addRWidget">addRWidget</a></code></li>
 <li><code><a title="Main.Tab.Tab.addTempWidget" href="#Main.Tab.Tab.addTempWidget">addTempWidget</a></code></li>
 <li><code><a title="Main.Tab.Tab.calculate" href="#Main.Tab.Tab.calculate">calculate</a></code></li>
+<li><code><a title="Main.Tab.Tab.calculateFlag" href="#Main.Tab.Tab.calculateFlag">calculateFlag</a></code></li>
+<li><code><a title="Main.Tab.Tab.data" href="#Main.Tab.Tab.data">data</a></code></li>
 <li><code><a title="Main.Tab.Tab.deleteLayer" href="#Main.Tab.Tab.deleteLayer">deleteLayer</a></code></li>
+<li><code><a title="Main.Tab.Tab.environmentLayout" href="#Main.Tab.Tab.environmentLayout">environmentLayout</a></code></li>
 <li><code><a title="Main.Tab.Tab.fillEnv" href="#Main.Tab.Tab.fillEnv">fillEnv</a></code></li>
 <li><code><a title="Main.Tab.Tab.fillEnvData" href="#Main.Tab.Tab.fillEnvData">fillEnvData</a></code></li>
 <li><code><a title="Main.Tab.Tab.fillEnvDataLite" href="#Main.Tab.Tab.fillEnvDataLite">fillEnvDataLite</a></code></li>
@@ -1248,7 +1377,11 @@ class Tab(QtWidgets.QWidget):
 <li><code><a title="Main.Tab.Tab.generateData" href="#Main.Tab.Tab.generateData">generateData</a></code></li>
 <li><code><a title="Main.Tab.Tab.getRWidgetData" href="#Main.Tab.Tab.getRWidgetData">getRWidgetData</a></code></li>
 <li><code><a title="Main.Tab.Tab.getTempData" href="#Main.Tab.Tab.getTempData">getTempData</a></code></li>
+<li><code><a title="Main.Tab.Tab.layerCount" href="#Main.Tab.Tab.layerCount">layerCount</a></code></li>
+<li><code><a title="Main.Tab.Tab.layerLayout" href="#Main.Tab.Tab.layerLayout">layerLayout</a></code></li>
 <li><code><a title="Main.Tab.Tab.loadLayer" href="#Main.Tab.Tab.loadLayer">loadLayer</a></code></li>
+<li><code><a title="Main.Tab.Tab.mode" href="#Main.Tab.Tab.mode">mode</a></code></li>
+<li><code><a title="Main.Tab.Tab.rWidget" href="#Main.Tab.Tab.rWidget">rWidget</a></code></li>
 <li><code><a title="Main.Tab.Tab.removeRWidget" href="#Main.Tab.Tab.removeRWidget">removeRWidget</a></code></li>
 <li><code><a title="Main.Tab.Tab.removeSelf" href="#Main.Tab.Tab.removeSelf">removeSelf</a></code></li>
 <li><code><a title="Main.Tab.Tab.removeTempWidget" href="#Main.Tab.Tab.removeTempWidget">removeTempWidget</a></code></li>
@@ -1256,13 +1389,18 @@ class Tab(QtWidgets.QWidget):
 <li><code><a title="Main.Tab.Tab.roverallValueChanged" href="#Main.Tab.Tab.roverallValueChanged">roverallValueChanged</a></code></li>
 <li><code><a title="Main.Tab.Tab.rseValueChanged" href="#Main.Tab.Tab.rseValueChanged">rseValueChanged</a></code></li>
 <li><code><a title="Main.Tab.Tab.rsiValueChanged" href="#Main.Tab.Tab.rsiValueChanged">rsiValueChanged</a></code></li>
+<li><code><a title="Main.Tab.Tab.scrollAreaEnvironment" href="#Main.Tab.Tab.scrollAreaEnvironment">scrollAreaEnvironment</a></code></li>
+<li><code><a title="Main.Tab.Tab.scrollAreaLayers" href="#Main.Tab.Tab.scrollAreaLayers">scrollAreaLayers</a></code></li>
 <li><code><a title="Main.Tab.Tab.setEnvironment" href="#Main.Tab.Tab.setEnvironment">setEnvironment</a></code></li>
 <li><code><a title="Main.Tab.Tab.switchToTemp" href="#Main.Tab.Tab.switchToTemp">switchToTemp</a></code></li>
 <li><code><a title="Main.Tab.Tab.switchToU" href="#Main.Tab.Tab.switchToU">switchToU</a></code></li>
+<li><code><a title="Main.Tab.Tab.tabWidget" href="#Main.Tab.Tab.tabWidget">tabWidget</a></code></li>
+<li><code><a title="Main.Tab.Tab.tempWidget" href="#Main.Tab.Tab.tempWidget">tempWidget</a></code></li>
 <li><code><a title="Main.Tab.Tab.tinValueChanged" href="#Main.Tab.Tab.tinValueChanged">tinValueChanged</a></code></li>
 <li><code><a title="Main.Tab.Tab.toutValueChanged" href="#Main.Tab.Tab.toutValueChanged">toutValueChanged</a></code></li>
 <li><code><a title="Main.Tab.Tab.uValueChanged" href="#Main.Tab.Tab.uValueChanged">uValueChanged</a></code></li>
 <li><code><a title="Main.Tab.Tab.updatePositionLayers" href="#Main.Tab.Tab.updatePositionLayers">updatePositionLayers</a></code></li>
+<li><code><a title="Main.Tab.Tab.visualizeWidget" href="#Main.Tab.Tab.visualizeWidget">visualizeWidget</a></code></li>
 </ul>
 </li>
 </ul>
