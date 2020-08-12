@@ -1,0 +1,886 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1" />
+<meta name="generator" content="pdoc 0.8.4" />
+<title>Main.master API documentation</title>
+<meta name="description" content="" />
+<link rel="preload stylesheet" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/10up-sanitize.css/11.0.1/sanitize.min.css" integrity="sha256-PK9q560IAAa6WVRRh76LtCaI8pjTJ2z11v0miyNNjrs=" crossorigin>
+<link rel="preload stylesheet" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/10up-sanitize.css/11.0.1/typography.min.css" integrity="sha256-7l/o7C8jubJiy74VsKTidCy1yBkRtiUGbVkYBylBqUg=" crossorigin>
+<link rel="stylesheet preload" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/styles/github.min.css" crossorigin>
+<style>:root{--highlight-color:#fe9}.flex{display:flex !important}body{line-height:1.5em}#content{padding:20px}#sidebar{padding:30px;overflow:hidden}#sidebar > *:last-child{margin-bottom:2cm}.http-server-breadcrumbs{font-size:130%;margin:0 0 15px 0}#footer{font-size:.75em;padding:5px 30px;border-top:1px solid #ddd;text-align:right}#footer p{margin:0 0 0 1em;display:inline-block}#footer p:last-child{margin-right:30px}h1,h2,h3,h4,h5{font-weight:300}h1{font-size:2.5em;line-height:1.1em}h2{font-size:1.75em;margin:1em 0 .50em 0}h3{font-size:1.4em;margin:25px 0 10px 0}h4{margin:0;font-size:105%}h1:target,h2:target,h3:target,h4:target,h5:target,h6:target{background:var(--highlight-color);padding:.2em 0}a{color:#058;text-decoration:none;transition:color .3s ease-in-out}a:hover{color:#e82}.title code{font-weight:bold}h2[id^="header-"]{margin-top:2em}.ident{color:#900}pre code{background:#f8f8f8;font-size:.8em;line-height:1.4em}code{background:#f2f2f1;padding:1px 4px;overflow-wrap:break-word}h1 code{background:transparent}pre{background:#f8f8f8;border:0;border-top:1px solid #ccc;border-bottom:1px solid #ccc;margin:1em 0;padding:1ex}#http-server-module-list{display:flex;flex-flow:column}#http-server-module-list div{display:flex}#http-server-module-list dt{min-width:10%}#http-server-module-list p{margin-top:0}.toc ul,#index{list-style-type:none;margin:0;padding:0}#index code{background:transparent}#index h3{border-bottom:1px solid #ddd}#index ul{padding:0}#index h4{margin-top:.6em;font-weight:bold}@media (min-width:200ex){#index .two-column{column-count:2}}@media (min-width:300ex){#index .two-column{column-count:3}}dl{margin-bottom:2em}dl dl:last-child{margin-bottom:4em}dd{margin:0 0 1em 3em}#header-classes + dl > dd{margin-bottom:3em}dd dd{margin-left:2em}dd p{margin:10px 0}.name{background:#eee;font-weight:bold;font-size:.85em;padding:5px 10px;display:inline-block;min-width:40%}.name:hover{background:#e0e0e0}dt:target .name{background:var(--highlight-color)}.name > span:first-child{white-space:nowrap}.name.class > span:nth-child(2){margin-left:.4em}.inherited{color:#999;border-left:5px solid #eee;padding-left:1em}.inheritance em{font-style:normal;font-weight:bold}.desc h2{font-weight:400;font-size:1.25em}.desc h3{font-size:1em}.desc dt code{background:inherit}.source summary,.git-link-div{color:#666;text-align:right;font-weight:400;font-size:.8em;text-transform:uppercase}.source summary > *{white-space:nowrap;cursor:pointer}.git-link{color:inherit;margin-left:1em}.source pre{max-height:500px;overflow:auto;margin:0}.source pre code{font-size:12px;overflow:visible}.hlist{list-style:none}.hlist li{display:inline}.hlist li:after{content:',\2002'}.hlist li:last-child:after{content:none}.hlist .hlist{display:inline;padding-left:1em}img{max-width:100%}td{padding:0 .5em}.admonition{padding:.1em .5em;margin-bottom:1em}.admonition-title{font-weight:bold}.admonition.note,.admonition.info,.admonition.important{background:#aef}.admonition.todo,.admonition.versionadded,.admonition.tip,.admonition.hint{background:#dfd}.admonition.warning,.admonition.versionchanged,.admonition.deprecated{background:#fd4}.admonition.error,.admonition.danger,.admonition.caution{background:lightpink}</style>
+<style media="screen and (min-width: 700px)">@media screen and (min-width:700px){#sidebar{width:30%;height:100vh;overflow:auto;position:sticky;top:0}#content{width:70%;max-width:100ch;padding:3em 4em;border-left:1px solid #ddd}pre code{font-size:1em}.item .name{font-size:1em}main{display:flex;flex-direction:row-reverse;justify-content:flex-end}.toc ul ul,#index ul{padding-left:1.5em}.toc > ul > li{margin-top:.5em}}</style>
+<style media="print">@media print{#sidebar h1{page-break-before:always}.source{display:none}}@media print{*{background:transparent !important;color:#000 !important;box-shadow:none !important;text-shadow:none !important}a[href]:after{content:" (" attr(href) ")";font-size:90%}a[href][title]:after{content:none}abbr[title]:after{content:" (" attr(title) ")"}.ir a:after,a[href^="javascript:"]:after,a[href^="#"]:after{content:""}pre,blockquote{border:1px solid #999;page-break-inside:avoid}thead{display:table-header-group}tr,img{page-break-inside:avoid}img{max-width:100% !important}@page{margin:0.5cm}p,h2,h3{orphans:3;widows:3}h1,h2,h3,h4,h5,h6{page-break-after:avoid}}</style>
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/highlight.min.js" integrity="sha256-eOgo0OtLL4cdq7RdwRUiGKLX9XsIJ7nGhWEKbohmVAQ=" crossorigin></script>
+<script>window.addEventListener('DOMContentLoaded', () => hljs.initHighlighting())</script>
+</head>
+<body>
+<main>
+<article id="content">
+<header>
+<h1 class="title">Module <code>Main.master</code></h1>
+</header>
+<section id="section-intro">
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python"># This Python file uses the following encoding: utf-8
+from PyQt5 import QtCore, QtWidgets, QtGui
+from Tab import Tab
+from NewTab import NewTab
+from Printing import Print
+from Parser import Parser
+from Exporter import Exporter
+
+
+class MainWindow(QtWidgets.QMainWindow):
+    def __init__(self):
+        super(MainWindow,self).__init__()
+
+
+        #menu bar
+        bar=self.menuBar()
+        self.menuBar().setStyleSheet(&#34;&#34;&#34;
+        QMenuBar{
+        color: rgb(255, 255, 255);
+        background-color: #4C7CC2;
+        }
+        QMenuBar:item:selected {
+        border: 1px solid #333333;
+        color: rgb(255, 255, 255);
+        background-color: #224579;
+        }
+        QMenuBar:disabled{
+        color: rgb(150, 150, 150);
+        }
+        QMenu{
+        background-color: #ffffff;
+        color: rgb(0,0,0);
+        }
+        QMenu:item:selected{
+        color: rgb(0, 0, 0);
+        background-color: #A0BEEA;
+        }
+        QMenu:item:disabled{
+        color: rgb(150, 150, 150);
+        };
+        &#34;&#34;&#34;)
+
+        self.menuFile = bar.addMenu(QtCore.QCoreApplication.translate(&#34;MainWindow&#34;,&#34;Datei&#34;))
+        menuLanguage = bar.addMenu(QtCore.QCoreApplication.translate(&#34;MainWindow&#34;,&#34;Sprache&#34;))
+        self.menuModus = bar.addMenu(QtCore.QCoreApplication.translate(&#34;MainWindow&#34;,&#34;Modus&#34;))
+
+        #language actions
+        self.actionGerman = QtWidgets.QAction()
+        self.actionEnglish = QtWidgets.QAction()
+        menuLanguage.addAction(self.actionGerman)
+        menuLanguage.addAction(self.actionEnglish)
+
+        #file actions
+        self.actionNew = QtWidgets.QAction()
+        self.actionSave = QtWidgets.QAction()
+        self.actionSaveAs = QtWidgets.QAction()
+        self.actionLoad = QtWidgets.QAction()
+        self.actionPrint = QtWidgets.QAction()
+
+        self.actionPrint.triggered.connect(self.printing)
+        self.actionNew.triggered.connect(self.switchToNewTab)
+        self.actionSave.triggered.connect(self.quickSave)
+        self.actionSaveAs.triggered.connect(self.saveAs)
+        self.actionLoad.triggered.connect(self.openFile)
+
+        self.menuFile.addAction(self.actionNew)
+        self.menuFile.addAction(self.actionSave)
+        self.menuFile.addAction(self.actionSaveAs)
+        self.menuFile.addAction(self.actionLoad)
+        self.menuFile.addSeparator()
+        self.menuFile.addAction(self.actionPrint)
+
+        self.menuFile.actions()[1].setEnabled(False)
+        self.menuFile.actions()[2].setEnabled(False)
+        self.menuFile.actions()[5].setEnabled(False)
+
+        #modus actions
+        self.actionModusU = QtWidgets.QAction()
+        self.actionModusTemp = QtWidgets.QAction()
+
+        self.actionModusU.triggered.connect(self.modusSwitchToU)
+        self.actionModusTemp.triggered.connect(self.modusSwitchToTemp)
+
+        self.menuModus.addAction(self.actionModusU)
+        self.menuModus.addAction(self.actionModusTemp)
+        self.menuModus.menuAction().setEnabled(False)
+
+
+
+        #assemble menubar
+        bar.addAction(self.menuFile.menuAction())
+        bar.addAction(menuLanguage.menuAction())
+        bar.addAction(self.menuModus.menuAction())
+
+        bar.setMaximumHeight(30)
+
+        #mainLayout.addWidget(self.menuBar)
+
+        #tab widget
+        self.tabWidget = QtWidgets.QTabWidget()
+        self.tabWidget.setTabsClosable(True)
+        self.tabWidget.setMovable(False)
+        self.tabWidget.setMinimumHeight(600)
+        self.tabWidget.setMinimumWidth(800)
+
+        self.newTab = NewTab()
+        self.tabWidget.addTab(self.newTab, &#34;+&#34;)
+        self.tabWidget.tabBar().tabButton(0,QtWidgets.QTabBar.RightSide).resize(0,0)
+
+        self.tabWidget.currentChanged.connect(self.activateMenues)
+        self.tabWidget.tabCloseRequested.connect(self.closeTab)
+
+
+        self.setCentralWidget(self.tabWidget)
+
+        self.retranslateUi()
+
+        &#34;&#34;&#34;
+        self.setStyleSheet(&#34;QWidget{&#34;
+        #&#34;background-color: #A0BEEA;&#34;
+        &#34;background-color: #ffffff;&#34;
+        &#34;border: 0px solid #ff0000;&#34;
+        &#34;}&#34;
+        &#34;QLabel{&#34;
+        &#34;padding: 5px;&#34;
+        &#34;}&#34;
+        &#34;QPushButton{&#34;
+        &#34;border: 0px solid #ff0000;&#34;
+        &#34;color: rgb(255, 255, 255);&#34;
+        &#34;padding: 5px;&#34;
+        &#34;background-color: #7099D6;;&#34;
+        &#34;}&#34;
+        &#34;QPushButton:hover {&#34;
+        &#34;border: 1px solid #333333;&#34;
+        &#34;color: rgb(255, 255, 255);&#34;
+        &#34;background-color: #2F63AF;&#34;
+        &#34;}&#34;
+        &#34;QPushButton:pressed {&#34;
+        &#34;border: 1px solid #333333;&#34;
+        &#34;color: rgb(255, 255, 255);&#34;
+        &#34;background-color: #12499A;&#34;
+        &#34;}&#34;
+        &#34;QPushButton:disabled {&#34;
+        &#34;border: 0px solid #333333;&#34;
+        &#34;color: rgb(150, 150, 150);&#34;
+        &#34;background-color: #134078;&#34;
+        &#34;}&#34;
+        &#34;QDoubleSpinBox{&#34;
+        &#34;background-color: #ffffff;&#34;
+        &#34;}&#34;
+        &#34;QTabWidget:pane{&#34;
+        &#34;border: 0px solid #ffffff;&#34;
+        &#34;}&#34;
+        &#34;QTabBar:tab{&#34;
+        &#34;border: 0px solid #ffffff;&#34;
+        &#34;padding: 5px;&#34;
+        &#34;}&#34;
+        &#34;QTabBar:tab:!selected:hover{&#34;
+        &#34;background-color: #A0BEEA;&#34;
+        &#34;}&#34;
+        &#34;QTabBar:tab:selected{&#34;
+        &#34;background-color: #ffffff;&#34;
+        &#34;color: #000000;&#34;
+        &#34;}&#34;
+        &#34;QTabBar:tab:!selected{&#34;
+        &#34;background-color: #7099D6;&#34;
+        &#34;color: #ffffff;&#34;
+        &#34;margin-top: 5px;&#34;
+        &#34;};&#34;)
+        &#34;&#34;&#34;
+
+        self.move(0,0)
+        self.show()
+
+    def activateMenues(self):
+        if(self.tabWidget.currentIndex()==(self.tabWidget.count()-1)):
+            self.menuModus.menuAction().setEnabled(False)
+            self.menuFile.actions()[1].setEnabled(False)
+            self.menuFile.actions()[2].setEnabled(False)
+            self.menuFile.actions()[5].setEnabled(False)
+        else:
+            self.menuModus.menuAction().setEnabled(True)
+            self.menuFile.actions()[1].setEnabled(True)
+            self.menuFile.actions()[2].setEnabled(True)
+            self.menuFile.actions()[5].setEnabled(True)
+
+
+    def addNewTab(self, modus, tabData=None):
+        if(tabData is None):
+            tab = Tab (modus, QtCore.QCoreApplication.translate(&#34;MainWindow&#34;,&#34;Neuer Tab&#34;))
+            self.tabWidget.insertTab(self.tabWidget.count()-1,tab, QtCore.QCoreApplication.translate(&#34;MainWindow&#34;,&#34;Neuer Tab&#34;))
+        else:
+            tab = Tab (modus, tabData.name, tabData)
+            self.tabWidget.insertTab(self.tabWidget.count()-1,tab, QtCore.QCoreApplication.translate(&#34;MainWindow&#34;,tabData.name))
+        self.tabWidget.setCurrentIndex(self.tabWidget.count()-2)
+
+    def closeTab(self,index):
+        self.tabWidget.widget(index).removeSelf()
+        self.tabWidget.removeTab(index)
+
+    def modusSwitchToU(self):
+        self.tabWidget.currentWidget().switchToU()
+
+    def modusSwitchToTemp(self):
+        self.tabWidget.currentWidget().switchToTemp()
+
+    def printing(self):
+        print = Print(self.tabWidget.currentWidget())
+        print.handlePreview()
+
+    def saveAs(self):
+        tr = QtCore.QCoreApplication.translate
+        fileName = QtWidgets.QFileDialog.getSaveFileName(self, tr(&#34;SaveDialog:&#34;, &#34;Berechnung speichern&#34;), &#34;&#34;, tr(&#34;SaveDialog:&#34;,&#34;Bauphysikberechnung (*.baup);;Alle Dateien (*)&#34;))
+        if(all(fileName)):
+            file = QtCore.QFile(fileName[0])
+            if(not file.open(QtCore.QIODevice.WriteOnly)):
+                QtWidgets.QMessageBox.Information(self, tr(&#34;SaveDialog:&#34;, &#34;Datei kann nicht geöffnet werden&#34;), file.errorString())
+                return
+            fileNameStringWithEnding= fileName[0].split(&#34;/&#34;)
+            fileNameStringWithEnding=fileNameStringWithEnding[len(fileNameStringWithEnding)-1]
+            fileNameStringWithEnding=fileNameStringWithEnding.split(&#34;.&#34;)
+            fileNameString=&#34;&#34;
+            for x in range(len(fileNameStringWithEnding)-1):
+                if x == 0:
+                 fileNameString+=fileNameStringWithEnding[x]
+                else:
+                    fileNameString+=&#34;.&#34;+fileNameStringWithEnding[x]
+            self.tabWidget.currentWidget().data.name = fileNameString
+            self.tabWidget.currentWidget().data.currentFileLocation = fileName[0]
+            exp = Exporter(self.tabWidget.currentWidget().data)
+            exp.export(fileName[0])
+            self.updateName()
+        else:
+            return
+
+    def updateName(self):
+        name = self.tabWidget.currentWidget().data.name
+        self.tabWidget.setTabText(self.tabWidget.currentIndex(), name)
+
+    def quickSave(self):
+        if self.tabWidget.currentWidget().data.currentFileLocation is None:
+            self.saveAs()
+        else:
+            exp = Exporter(self.tabWidget.currentWidget().data)
+            exp.export(self.tabWidget.currentWidget().data.currentFileLocation)
+
+    def openFile(self):
+        tr = QtCore.QCoreApplication.translate
+        fileName = QtWidgets.QFileDialog.getOpenFileName(self,tr(&#34;OpenDialog:&#34;, &#34;Berechnung öffnen&#34;), &#34;&#34;, tr(&#34;OpenDialog:&#34;,&#34;Bauphysikberechnung (*.baup);;Alle Dateien (*)&#34;))
+        if(all(fileName)):
+            file = QtCore.QFile(fileName[0])
+            if(not file.open(QtCore.QIODevice.ReadOnly)):
+                QtWidgets.QMessageBox.Information(self, tr(&#34;OpenDialog:&#34;, &#34;Datei kann nicht geöffnet werden&#34;), file.errorString())
+                return
+
+            parser = Parser(fileName[0])
+            tabdata = parser.parse()
+            self.addNewTab(tabdata.mode,tabdata)
+            self.tabWidget.currentWidget().data.currentFileLocation = fileName[0]
+
+
+
+    def switchToNewTab(self):
+        self.tabWidget.setCurrentIndex(self.tabWidget.count()-1)
+
+    def retranslateUi(self):
+        _translate = QtCore.QCoreApplication.translate
+        #language options
+        self.actionGerman.setText(_translate(&#34;MainWindow&#34;, &#34;Deutsch&#34;))
+        self.actionEnglish.setText(_translate(&#34;MainWindow&#34;, &#34;English&#34;))
+        #file options
+        self.actionSave.setText(_translate(&#34;MainWindow&#34;, &#34;Speichern&#34;))
+        self.actionSave.setShortcut(_translate(&#34;MainWindow&#34;, &#34;Ctrl+S&#34;))
+        self.actionSaveAs.setText(_translate(&#34;MainWindow&#34;, &#34;Speichern unter...&#34;))
+        self.actionLoad.setText(_translate(&#34;MainWindow&#34;, &#34;Öffnen&#34;))
+        self.actionPrint.setText(_translate(&#34;MainWindow&#34;, &#34;Drucken&#34;))
+        self.actionPrint.setShortcut(_translate(&#34;MainWindow&#34;, &#34;Ctrl+P&#34;))
+        self.actionNew.setText(_translate(&#34;MainWindow&#34;, &#34;Neu&#34;))
+        self.actionNew.setShortcut(_translate(&#34;MainWindow&#34;, &#34;Ctrl+T&#34;))
+        #modus options
+        self.actionModusU.setText(_translate(&#34;MainWindow&#34;,&#34;U berechnen&#34;))
+        self.actionModusTemp.setText(_translate(&#34;MainWindow&#34;,&#34;Temperaturkurve berechnen&#34;))</code></pre>
+</details>
+</section>
+<section>
+</section>
+<section>
+</section>
+<section>
+</section>
+<section>
+<h2 class="section-title" id="header-classes">Classes</h2>
+<dl>
+<dt id="Main.master.MainWindow"><code class="flex name class">
+<span>class <span class="ident">MainWindow</span></span>
+</code></dt>
+<dd>
+<div class="desc"><p>QMainWindow(parent: QWidget = None, flags: Union[Qt.WindowFlags, Qt.WindowType] = Qt.WindowFlags())</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">class MainWindow(QtWidgets.QMainWindow):
+    def __init__(self):
+        super(MainWindow,self).__init__()
+
+
+        #menu bar
+        bar=self.menuBar()
+        self.menuBar().setStyleSheet(&#34;&#34;&#34;
+        QMenuBar{
+        color: rgb(255, 255, 255);
+        background-color: #4C7CC2;
+        }
+        QMenuBar:item:selected {
+        border: 1px solid #333333;
+        color: rgb(255, 255, 255);
+        background-color: #224579;
+        }
+        QMenuBar:disabled{
+        color: rgb(150, 150, 150);
+        }
+        QMenu{
+        background-color: #ffffff;
+        color: rgb(0,0,0);
+        }
+        QMenu:item:selected{
+        color: rgb(0, 0, 0);
+        background-color: #A0BEEA;
+        }
+        QMenu:item:disabled{
+        color: rgb(150, 150, 150);
+        };
+        &#34;&#34;&#34;)
+
+        self.menuFile = bar.addMenu(QtCore.QCoreApplication.translate(&#34;MainWindow&#34;,&#34;Datei&#34;))
+        menuLanguage = bar.addMenu(QtCore.QCoreApplication.translate(&#34;MainWindow&#34;,&#34;Sprache&#34;))
+        self.menuModus = bar.addMenu(QtCore.QCoreApplication.translate(&#34;MainWindow&#34;,&#34;Modus&#34;))
+
+        #language actions
+        self.actionGerman = QtWidgets.QAction()
+        self.actionEnglish = QtWidgets.QAction()
+        menuLanguage.addAction(self.actionGerman)
+        menuLanguage.addAction(self.actionEnglish)
+
+        #file actions
+        self.actionNew = QtWidgets.QAction()
+        self.actionSave = QtWidgets.QAction()
+        self.actionSaveAs = QtWidgets.QAction()
+        self.actionLoad = QtWidgets.QAction()
+        self.actionPrint = QtWidgets.QAction()
+
+        self.actionPrint.triggered.connect(self.printing)
+        self.actionNew.triggered.connect(self.switchToNewTab)
+        self.actionSave.triggered.connect(self.quickSave)
+        self.actionSaveAs.triggered.connect(self.saveAs)
+        self.actionLoad.triggered.connect(self.openFile)
+
+        self.menuFile.addAction(self.actionNew)
+        self.menuFile.addAction(self.actionSave)
+        self.menuFile.addAction(self.actionSaveAs)
+        self.menuFile.addAction(self.actionLoad)
+        self.menuFile.addSeparator()
+        self.menuFile.addAction(self.actionPrint)
+
+        self.menuFile.actions()[1].setEnabled(False)
+        self.menuFile.actions()[2].setEnabled(False)
+        self.menuFile.actions()[5].setEnabled(False)
+
+        #modus actions
+        self.actionModusU = QtWidgets.QAction()
+        self.actionModusTemp = QtWidgets.QAction()
+
+        self.actionModusU.triggered.connect(self.modusSwitchToU)
+        self.actionModusTemp.triggered.connect(self.modusSwitchToTemp)
+
+        self.menuModus.addAction(self.actionModusU)
+        self.menuModus.addAction(self.actionModusTemp)
+        self.menuModus.menuAction().setEnabled(False)
+
+
+
+        #assemble menubar
+        bar.addAction(self.menuFile.menuAction())
+        bar.addAction(menuLanguage.menuAction())
+        bar.addAction(self.menuModus.menuAction())
+
+        bar.setMaximumHeight(30)
+
+        #mainLayout.addWidget(self.menuBar)
+
+        #tab widget
+        self.tabWidget = QtWidgets.QTabWidget()
+        self.tabWidget.setTabsClosable(True)
+        self.tabWidget.setMovable(False)
+        self.tabWidget.setMinimumHeight(600)
+        self.tabWidget.setMinimumWidth(800)
+
+        self.newTab = NewTab()
+        self.tabWidget.addTab(self.newTab, &#34;+&#34;)
+        self.tabWidget.tabBar().tabButton(0,QtWidgets.QTabBar.RightSide).resize(0,0)
+
+        self.tabWidget.currentChanged.connect(self.activateMenues)
+        self.tabWidget.tabCloseRequested.connect(self.closeTab)
+
+
+        self.setCentralWidget(self.tabWidget)
+
+        self.retranslateUi()
+
+        &#34;&#34;&#34;
+        self.setStyleSheet(&#34;QWidget{&#34;
+        #&#34;background-color: #A0BEEA;&#34;
+        &#34;background-color: #ffffff;&#34;
+        &#34;border: 0px solid #ff0000;&#34;
+        &#34;}&#34;
+        &#34;QLabel{&#34;
+        &#34;padding: 5px;&#34;
+        &#34;}&#34;
+        &#34;QPushButton{&#34;
+        &#34;border: 0px solid #ff0000;&#34;
+        &#34;color: rgb(255, 255, 255);&#34;
+        &#34;padding: 5px;&#34;
+        &#34;background-color: #7099D6;;&#34;
+        &#34;}&#34;
+        &#34;QPushButton:hover {&#34;
+        &#34;border: 1px solid #333333;&#34;
+        &#34;color: rgb(255, 255, 255);&#34;
+        &#34;background-color: #2F63AF;&#34;
+        &#34;}&#34;
+        &#34;QPushButton:pressed {&#34;
+        &#34;border: 1px solid #333333;&#34;
+        &#34;color: rgb(255, 255, 255);&#34;
+        &#34;background-color: #12499A;&#34;
+        &#34;}&#34;
+        &#34;QPushButton:disabled {&#34;
+        &#34;border: 0px solid #333333;&#34;
+        &#34;color: rgb(150, 150, 150);&#34;
+        &#34;background-color: #134078;&#34;
+        &#34;}&#34;
+        &#34;QDoubleSpinBox{&#34;
+        &#34;background-color: #ffffff;&#34;
+        &#34;}&#34;
+        &#34;QTabWidget:pane{&#34;
+        &#34;border: 0px solid #ffffff;&#34;
+        &#34;}&#34;
+        &#34;QTabBar:tab{&#34;
+        &#34;border: 0px solid #ffffff;&#34;
+        &#34;padding: 5px;&#34;
+        &#34;}&#34;
+        &#34;QTabBar:tab:!selected:hover{&#34;
+        &#34;background-color: #A0BEEA;&#34;
+        &#34;}&#34;
+        &#34;QTabBar:tab:selected{&#34;
+        &#34;background-color: #ffffff;&#34;
+        &#34;color: #000000;&#34;
+        &#34;}&#34;
+        &#34;QTabBar:tab:!selected{&#34;
+        &#34;background-color: #7099D6;&#34;
+        &#34;color: #ffffff;&#34;
+        &#34;margin-top: 5px;&#34;
+        &#34;};&#34;)
+        &#34;&#34;&#34;
+
+        self.move(0,0)
+        self.show()
+
+    def activateMenues(self):
+        if(self.tabWidget.currentIndex()==(self.tabWidget.count()-1)):
+            self.menuModus.menuAction().setEnabled(False)
+            self.menuFile.actions()[1].setEnabled(False)
+            self.menuFile.actions()[2].setEnabled(False)
+            self.menuFile.actions()[5].setEnabled(False)
+        else:
+            self.menuModus.menuAction().setEnabled(True)
+            self.menuFile.actions()[1].setEnabled(True)
+            self.menuFile.actions()[2].setEnabled(True)
+            self.menuFile.actions()[5].setEnabled(True)
+
+
+    def addNewTab(self, modus, tabData=None):
+        if(tabData is None):
+            tab = Tab (modus, QtCore.QCoreApplication.translate(&#34;MainWindow&#34;,&#34;Neuer Tab&#34;))
+            self.tabWidget.insertTab(self.tabWidget.count()-1,tab, QtCore.QCoreApplication.translate(&#34;MainWindow&#34;,&#34;Neuer Tab&#34;))
+        else:
+            tab = Tab (modus, tabData.name, tabData)
+            self.tabWidget.insertTab(self.tabWidget.count()-1,tab, QtCore.QCoreApplication.translate(&#34;MainWindow&#34;,tabData.name))
+        self.tabWidget.setCurrentIndex(self.tabWidget.count()-2)
+
+    def closeTab(self,index):
+        self.tabWidget.widget(index).removeSelf()
+        self.tabWidget.removeTab(index)
+
+    def modusSwitchToU(self):
+        self.tabWidget.currentWidget().switchToU()
+
+    def modusSwitchToTemp(self):
+        self.tabWidget.currentWidget().switchToTemp()
+
+    def printing(self):
+        print = Print(self.tabWidget.currentWidget())
+        print.handlePreview()
+
+    def saveAs(self):
+        tr = QtCore.QCoreApplication.translate
+        fileName = QtWidgets.QFileDialog.getSaveFileName(self, tr(&#34;SaveDialog:&#34;, &#34;Berechnung speichern&#34;), &#34;&#34;, tr(&#34;SaveDialog:&#34;,&#34;Bauphysikberechnung (*.baup);;Alle Dateien (*)&#34;))
+        if(all(fileName)):
+            file = QtCore.QFile(fileName[0])
+            if(not file.open(QtCore.QIODevice.WriteOnly)):
+                QtWidgets.QMessageBox.Information(self, tr(&#34;SaveDialog:&#34;, &#34;Datei kann nicht geöffnet werden&#34;), file.errorString())
+                return
+            fileNameStringWithEnding= fileName[0].split(&#34;/&#34;)
+            fileNameStringWithEnding=fileNameStringWithEnding[len(fileNameStringWithEnding)-1]
+            fileNameStringWithEnding=fileNameStringWithEnding.split(&#34;.&#34;)
+            fileNameString=&#34;&#34;
+            for x in range(len(fileNameStringWithEnding)-1):
+                if x == 0:
+                 fileNameString+=fileNameStringWithEnding[x]
+                else:
+                    fileNameString+=&#34;.&#34;+fileNameStringWithEnding[x]
+            self.tabWidget.currentWidget().data.name = fileNameString
+            self.tabWidget.currentWidget().data.currentFileLocation = fileName[0]
+            exp = Exporter(self.tabWidget.currentWidget().data)
+            exp.export(fileName[0])
+            self.updateName()
+        else:
+            return
+
+    def updateName(self):
+        name = self.tabWidget.currentWidget().data.name
+        self.tabWidget.setTabText(self.tabWidget.currentIndex(), name)
+
+    def quickSave(self):
+        if self.tabWidget.currentWidget().data.currentFileLocation is None:
+            self.saveAs()
+        else:
+            exp = Exporter(self.tabWidget.currentWidget().data)
+            exp.export(self.tabWidget.currentWidget().data.currentFileLocation)
+
+    def openFile(self):
+        tr = QtCore.QCoreApplication.translate
+        fileName = QtWidgets.QFileDialog.getOpenFileName(self,tr(&#34;OpenDialog:&#34;, &#34;Berechnung öffnen&#34;), &#34;&#34;, tr(&#34;OpenDialog:&#34;,&#34;Bauphysikberechnung (*.baup);;Alle Dateien (*)&#34;))
+        if(all(fileName)):
+            file = QtCore.QFile(fileName[0])
+            if(not file.open(QtCore.QIODevice.ReadOnly)):
+                QtWidgets.QMessageBox.Information(self, tr(&#34;OpenDialog:&#34;, &#34;Datei kann nicht geöffnet werden&#34;), file.errorString())
+                return
+
+            parser = Parser(fileName[0])
+            tabdata = parser.parse()
+            self.addNewTab(tabdata.mode,tabdata)
+            self.tabWidget.currentWidget().data.currentFileLocation = fileName[0]
+
+
+
+    def switchToNewTab(self):
+        self.tabWidget.setCurrentIndex(self.tabWidget.count()-1)
+
+    def retranslateUi(self):
+        _translate = QtCore.QCoreApplication.translate
+        #language options
+        self.actionGerman.setText(_translate(&#34;MainWindow&#34;, &#34;Deutsch&#34;))
+        self.actionEnglish.setText(_translate(&#34;MainWindow&#34;, &#34;English&#34;))
+        #file options
+        self.actionSave.setText(_translate(&#34;MainWindow&#34;, &#34;Speichern&#34;))
+        self.actionSave.setShortcut(_translate(&#34;MainWindow&#34;, &#34;Ctrl+S&#34;))
+        self.actionSaveAs.setText(_translate(&#34;MainWindow&#34;, &#34;Speichern unter...&#34;))
+        self.actionLoad.setText(_translate(&#34;MainWindow&#34;, &#34;Öffnen&#34;))
+        self.actionPrint.setText(_translate(&#34;MainWindow&#34;, &#34;Drucken&#34;))
+        self.actionPrint.setShortcut(_translate(&#34;MainWindow&#34;, &#34;Ctrl+P&#34;))
+        self.actionNew.setText(_translate(&#34;MainWindow&#34;, &#34;Neu&#34;))
+        self.actionNew.setShortcut(_translate(&#34;MainWindow&#34;, &#34;Ctrl+T&#34;))
+        #modus options
+        self.actionModusU.setText(_translate(&#34;MainWindow&#34;,&#34;U berechnen&#34;))
+        self.actionModusTemp.setText(_translate(&#34;MainWindow&#34;,&#34;Temperaturkurve berechnen&#34;))</code></pre>
+</details>
+<h3>Ancestors</h3>
+<ul class="hlist">
+<li>PyQt5.QtWidgets.QMainWindow</li>
+<li>PyQt5.QtWidgets.QWidget</li>
+<li>PyQt5.QtCore.QObject</li>
+<li>sip.wrapper</li>
+<li>PyQt5.QtGui.QPaintDevice</li>
+<li>sip.simplewrapper</li>
+</ul>
+<h3>Methods</h3>
+<dl>
+<dt id="Main.master.MainWindow.activateMenues"><code class="name flex">
+<span>def <span class="ident">activateMenues</span></span>(<span>self)</span>
+</code></dt>
+<dd>
+<div class="desc"></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def activateMenues(self):
+    if(self.tabWidget.currentIndex()==(self.tabWidget.count()-1)):
+        self.menuModus.menuAction().setEnabled(False)
+        self.menuFile.actions()[1].setEnabled(False)
+        self.menuFile.actions()[2].setEnabled(False)
+        self.menuFile.actions()[5].setEnabled(False)
+    else:
+        self.menuModus.menuAction().setEnabled(True)
+        self.menuFile.actions()[1].setEnabled(True)
+        self.menuFile.actions()[2].setEnabled(True)
+        self.menuFile.actions()[5].setEnabled(True)</code></pre>
+</details>
+</dd>
+<dt id="Main.master.MainWindow.addNewTab"><code class="name flex">
+<span>def <span class="ident">addNewTab</span></span>(<span>self, modus, tabData=None)</span>
+</code></dt>
+<dd>
+<div class="desc"></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def addNewTab(self, modus, tabData=None):
+    if(tabData is None):
+        tab = Tab (modus, QtCore.QCoreApplication.translate(&#34;MainWindow&#34;,&#34;Neuer Tab&#34;))
+        self.tabWidget.insertTab(self.tabWidget.count()-1,tab, QtCore.QCoreApplication.translate(&#34;MainWindow&#34;,&#34;Neuer Tab&#34;))
+    else:
+        tab = Tab (modus, tabData.name, tabData)
+        self.tabWidget.insertTab(self.tabWidget.count()-1,tab, QtCore.QCoreApplication.translate(&#34;MainWindow&#34;,tabData.name))
+    self.tabWidget.setCurrentIndex(self.tabWidget.count()-2)</code></pre>
+</details>
+</dd>
+<dt id="Main.master.MainWindow.closeTab"><code class="name flex">
+<span>def <span class="ident">closeTab</span></span>(<span>self, index)</span>
+</code></dt>
+<dd>
+<div class="desc"></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def closeTab(self,index):
+    self.tabWidget.widget(index).removeSelf()
+    self.tabWidget.removeTab(index)</code></pre>
+</details>
+</dd>
+<dt id="Main.master.MainWindow.modusSwitchToTemp"><code class="name flex">
+<span>def <span class="ident">modusSwitchToTemp</span></span>(<span>self)</span>
+</code></dt>
+<dd>
+<div class="desc"></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def modusSwitchToTemp(self):
+    self.tabWidget.currentWidget().switchToTemp()</code></pre>
+</details>
+</dd>
+<dt id="Main.master.MainWindow.modusSwitchToU"><code class="name flex">
+<span>def <span class="ident">modusSwitchToU</span></span>(<span>self)</span>
+</code></dt>
+<dd>
+<div class="desc"></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def modusSwitchToU(self):
+    self.tabWidget.currentWidget().switchToU()</code></pre>
+</details>
+</dd>
+<dt id="Main.master.MainWindow.openFile"><code class="name flex">
+<span>def <span class="ident">openFile</span></span>(<span>self)</span>
+</code></dt>
+<dd>
+<div class="desc"></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def openFile(self):
+    tr = QtCore.QCoreApplication.translate
+    fileName = QtWidgets.QFileDialog.getOpenFileName(self,tr(&#34;OpenDialog:&#34;, &#34;Berechnung öffnen&#34;), &#34;&#34;, tr(&#34;OpenDialog:&#34;,&#34;Bauphysikberechnung (*.baup);;Alle Dateien (*)&#34;))
+    if(all(fileName)):
+        file = QtCore.QFile(fileName[0])
+        if(not file.open(QtCore.QIODevice.ReadOnly)):
+            QtWidgets.QMessageBox.Information(self, tr(&#34;OpenDialog:&#34;, &#34;Datei kann nicht geöffnet werden&#34;), file.errorString())
+            return
+
+        parser = Parser(fileName[0])
+        tabdata = parser.parse()
+        self.addNewTab(tabdata.mode,tabdata)
+        self.tabWidget.currentWidget().data.currentFileLocation = fileName[0]</code></pre>
+</details>
+</dd>
+<dt id="Main.master.MainWindow.printing"><code class="name flex">
+<span>def <span class="ident">printing</span></span>(<span>self)</span>
+</code></dt>
+<dd>
+<div class="desc"></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def printing(self):
+    print = Print(self.tabWidget.currentWidget())
+    print.handlePreview()</code></pre>
+</details>
+</dd>
+<dt id="Main.master.MainWindow.quickSave"><code class="name flex">
+<span>def <span class="ident">quickSave</span></span>(<span>self)</span>
+</code></dt>
+<dd>
+<div class="desc"></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def quickSave(self):
+    if self.tabWidget.currentWidget().data.currentFileLocation is None:
+        self.saveAs()
+    else:
+        exp = Exporter(self.tabWidget.currentWidget().data)
+        exp.export(self.tabWidget.currentWidget().data.currentFileLocation)</code></pre>
+</details>
+</dd>
+<dt id="Main.master.MainWindow.retranslateUi"><code class="name flex">
+<span>def <span class="ident">retranslateUi</span></span>(<span>self)</span>
+</code></dt>
+<dd>
+<div class="desc"></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def retranslateUi(self):
+    _translate = QtCore.QCoreApplication.translate
+    #language options
+    self.actionGerman.setText(_translate(&#34;MainWindow&#34;, &#34;Deutsch&#34;))
+    self.actionEnglish.setText(_translate(&#34;MainWindow&#34;, &#34;English&#34;))
+    #file options
+    self.actionSave.setText(_translate(&#34;MainWindow&#34;, &#34;Speichern&#34;))
+    self.actionSave.setShortcut(_translate(&#34;MainWindow&#34;, &#34;Ctrl+S&#34;))
+    self.actionSaveAs.setText(_translate(&#34;MainWindow&#34;, &#34;Speichern unter...&#34;))
+    self.actionLoad.setText(_translate(&#34;MainWindow&#34;, &#34;Öffnen&#34;))
+    self.actionPrint.setText(_translate(&#34;MainWindow&#34;, &#34;Drucken&#34;))
+    self.actionPrint.setShortcut(_translate(&#34;MainWindow&#34;, &#34;Ctrl+P&#34;))
+    self.actionNew.setText(_translate(&#34;MainWindow&#34;, &#34;Neu&#34;))
+    self.actionNew.setShortcut(_translate(&#34;MainWindow&#34;, &#34;Ctrl+T&#34;))
+    #modus options
+    self.actionModusU.setText(_translate(&#34;MainWindow&#34;,&#34;U berechnen&#34;))
+    self.actionModusTemp.setText(_translate(&#34;MainWindow&#34;,&#34;Temperaturkurve berechnen&#34;))</code></pre>
+</details>
+</dd>
+<dt id="Main.master.MainWindow.saveAs"><code class="name flex">
+<span>def <span class="ident">saveAs</span></span>(<span>self)</span>
+</code></dt>
+<dd>
+<div class="desc"></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def saveAs(self):
+    tr = QtCore.QCoreApplication.translate
+    fileName = QtWidgets.QFileDialog.getSaveFileName(self, tr(&#34;SaveDialog:&#34;, &#34;Berechnung speichern&#34;), &#34;&#34;, tr(&#34;SaveDialog:&#34;,&#34;Bauphysikberechnung (*.baup);;Alle Dateien (*)&#34;))
+    if(all(fileName)):
+        file = QtCore.QFile(fileName[0])
+        if(not file.open(QtCore.QIODevice.WriteOnly)):
+            QtWidgets.QMessageBox.Information(self, tr(&#34;SaveDialog:&#34;, &#34;Datei kann nicht geöffnet werden&#34;), file.errorString())
+            return
+        fileNameStringWithEnding= fileName[0].split(&#34;/&#34;)
+        fileNameStringWithEnding=fileNameStringWithEnding[len(fileNameStringWithEnding)-1]
+        fileNameStringWithEnding=fileNameStringWithEnding.split(&#34;.&#34;)
+        fileNameString=&#34;&#34;
+        for x in range(len(fileNameStringWithEnding)-1):
+            if x == 0:
+             fileNameString+=fileNameStringWithEnding[x]
+            else:
+                fileNameString+=&#34;.&#34;+fileNameStringWithEnding[x]
+        self.tabWidget.currentWidget().data.name = fileNameString
+        self.tabWidget.currentWidget().data.currentFileLocation = fileName[0]
+        exp = Exporter(self.tabWidget.currentWidget().data)
+        exp.export(fileName[0])
+        self.updateName()
+    else:
+        return</code></pre>
+</details>
+</dd>
+<dt id="Main.master.MainWindow.switchToNewTab"><code class="name flex">
+<span>def <span class="ident">switchToNewTab</span></span>(<span>self)</span>
+</code></dt>
+<dd>
+<div class="desc"></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def switchToNewTab(self):
+    self.tabWidget.setCurrentIndex(self.tabWidget.count()-1)</code></pre>
+</details>
+</dd>
+<dt id="Main.master.MainWindow.updateName"><code class="name flex">
+<span>def <span class="ident">updateName</span></span>(<span>self)</span>
+</code></dt>
+<dd>
+<div class="desc"></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def updateName(self):
+    name = self.tabWidget.currentWidget().data.name
+    self.tabWidget.setTabText(self.tabWidget.currentIndex(), name)</code></pre>
+</details>
+</dd>
+</dl>
+</dd>
+</dl>
+</section>
+</article>
+<nav id="sidebar">
+<h1>Index</h1>
+<div class="toc">
+<ul></ul>
+</div>
+<ul id="index">
+<li><h3>Super-module</h3>
+<ul>
+<li><code><a title="Main" href="index.html">Main</a></code></li>
+</ul>
+</li>
+<li><h3><a href="#header-classes">Classes</a></h3>
+<ul>
+<li>
+<h4><code><a title="Main.master.MainWindow" href="#Main.master.MainWindow">MainWindow</a></code></h4>
+<ul class="two-column">
+<li><code><a title="Main.master.MainWindow.activateMenues" href="#Main.master.MainWindow.activateMenues">activateMenues</a></code></li>
+<li><code><a title="Main.master.MainWindow.addNewTab" href="#Main.master.MainWindow.addNewTab">addNewTab</a></code></li>
+<li><code><a title="Main.master.MainWindow.closeTab" href="#Main.master.MainWindow.closeTab">closeTab</a></code></li>
+<li><code><a title="Main.master.MainWindow.modusSwitchToTemp" href="#Main.master.MainWindow.modusSwitchToTemp">modusSwitchToTemp</a></code></li>
+<li><code><a title="Main.master.MainWindow.modusSwitchToU" href="#Main.master.MainWindow.modusSwitchToU">modusSwitchToU</a></code></li>
+<li><code><a title="Main.master.MainWindow.openFile" href="#Main.master.MainWindow.openFile">openFile</a></code></li>
+<li><code><a title="Main.master.MainWindow.printing" href="#Main.master.MainWindow.printing">printing</a></code></li>
+<li><code><a title="Main.master.MainWindow.quickSave" href="#Main.master.MainWindow.quickSave">quickSave</a></code></li>
+<li><code><a title="Main.master.MainWindow.retranslateUi" href="#Main.master.MainWindow.retranslateUi">retranslateUi</a></code></li>
+<li><code><a title="Main.master.MainWindow.saveAs" href="#Main.master.MainWindow.saveAs">saveAs</a></code></li>
+<li><code><a title="Main.master.MainWindow.switchToNewTab" href="#Main.master.MainWindow.switchToNewTab">switchToNewTab</a></code></li>
+<li><code><a title="Main.master.MainWindow.updateName" href="#Main.master.MainWindow.updateName">updateName</a></code></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</nav>
+</main>
+<footer id="footer">
+<p>Generated by <a href="https://pdoc3.github.io/pdoc"><cite>pdoc</cite> 0.8.4</a>.</p>
+</footer>
+</body>
+</html>

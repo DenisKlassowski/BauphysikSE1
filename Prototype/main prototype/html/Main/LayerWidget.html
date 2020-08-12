@@ -1,0 +1,982 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1" />
+<meta name="generator" content="pdoc 0.8.4" />
+<title>Main.LayerWidget API documentation</title>
+<meta name="description" content="" />
+<link rel="preload stylesheet" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/10up-sanitize.css/11.0.1/sanitize.min.css" integrity="sha256-PK9q560IAAa6WVRRh76LtCaI8pjTJ2z11v0miyNNjrs=" crossorigin>
+<link rel="preload stylesheet" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/10up-sanitize.css/11.0.1/typography.min.css" integrity="sha256-7l/o7C8jubJiy74VsKTidCy1yBkRtiUGbVkYBylBqUg=" crossorigin>
+<link rel="stylesheet preload" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/styles/github.min.css" crossorigin>
+<style>:root{--highlight-color:#fe9}.flex{display:flex !important}body{line-height:1.5em}#content{padding:20px}#sidebar{padding:30px;overflow:hidden}#sidebar > *:last-child{margin-bottom:2cm}.http-server-breadcrumbs{font-size:130%;margin:0 0 15px 0}#footer{font-size:.75em;padding:5px 30px;border-top:1px solid #ddd;text-align:right}#footer p{margin:0 0 0 1em;display:inline-block}#footer p:last-child{margin-right:30px}h1,h2,h3,h4,h5{font-weight:300}h1{font-size:2.5em;line-height:1.1em}h2{font-size:1.75em;margin:1em 0 .50em 0}h3{font-size:1.4em;margin:25px 0 10px 0}h4{margin:0;font-size:105%}h1:target,h2:target,h3:target,h4:target,h5:target,h6:target{background:var(--highlight-color);padding:.2em 0}a{color:#058;text-decoration:none;transition:color .3s ease-in-out}a:hover{color:#e82}.title code{font-weight:bold}h2[id^="header-"]{margin-top:2em}.ident{color:#900}pre code{background:#f8f8f8;font-size:.8em;line-height:1.4em}code{background:#f2f2f1;padding:1px 4px;overflow-wrap:break-word}h1 code{background:transparent}pre{background:#f8f8f8;border:0;border-top:1px solid #ccc;border-bottom:1px solid #ccc;margin:1em 0;padding:1ex}#http-server-module-list{display:flex;flex-flow:column}#http-server-module-list div{display:flex}#http-server-module-list dt{min-width:10%}#http-server-module-list p{margin-top:0}.toc ul,#index{list-style-type:none;margin:0;padding:0}#index code{background:transparent}#index h3{border-bottom:1px solid #ddd}#index ul{padding:0}#index h4{margin-top:.6em;font-weight:bold}@media (min-width:200ex){#index .two-column{column-count:2}}@media (min-width:300ex){#index .two-column{column-count:3}}dl{margin-bottom:2em}dl dl:last-child{margin-bottom:4em}dd{margin:0 0 1em 3em}#header-classes + dl > dd{margin-bottom:3em}dd dd{margin-left:2em}dd p{margin:10px 0}.name{background:#eee;font-weight:bold;font-size:.85em;padding:5px 10px;display:inline-block;min-width:40%}.name:hover{background:#e0e0e0}dt:target .name{background:var(--highlight-color)}.name > span:first-child{white-space:nowrap}.name.class > span:nth-child(2){margin-left:.4em}.inherited{color:#999;border-left:5px solid #eee;padding-left:1em}.inheritance em{font-style:normal;font-weight:bold}.desc h2{font-weight:400;font-size:1.25em}.desc h3{font-size:1em}.desc dt code{background:inherit}.source summary,.git-link-div{color:#666;text-align:right;font-weight:400;font-size:.8em;text-transform:uppercase}.source summary > *{white-space:nowrap;cursor:pointer}.git-link{color:inherit;margin-left:1em}.source pre{max-height:500px;overflow:auto;margin:0}.source pre code{font-size:12px;overflow:visible}.hlist{list-style:none}.hlist li{display:inline}.hlist li:after{content:',\2002'}.hlist li:last-child:after{content:none}.hlist .hlist{display:inline;padding-left:1em}img{max-width:100%}td{padding:0 .5em}.admonition{padding:.1em .5em;margin-bottom:1em}.admonition-title{font-weight:bold}.admonition.note,.admonition.info,.admonition.important{background:#aef}.admonition.todo,.admonition.versionadded,.admonition.tip,.admonition.hint{background:#dfd}.admonition.warning,.admonition.versionchanged,.admonition.deprecated{background:#fd4}.admonition.error,.admonition.danger,.admonition.caution{background:lightpink}</style>
+<style media="screen and (min-width: 700px)">@media screen and (min-width:700px){#sidebar{width:30%;height:100vh;overflow:auto;position:sticky;top:0}#content{width:70%;max-width:100ch;padding:3em 4em;border-left:1px solid #ddd}pre code{font-size:1em}.item .name{font-size:1em}main{display:flex;flex-direction:row-reverse;justify-content:flex-end}.toc ul ul,#index ul{padding-left:1.5em}.toc > ul > li{margin-top:.5em}}</style>
+<style media="print">@media print{#sidebar h1{page-break-before:always}.source{display:none}}@media print{*{background:transparent !important;color:#000 !important;box-shadow:none !important;text-shadow:none !important}a[href]:after{content:" (" attr(href) ")";font-size:90%}a[href][title]:after{content:none}abbr[title]:after{content:" (" attr(title) ")"}.ir a:after,a[href^="javascript:"]:after,a[href^="#"]:after{content:""}pre,blockquote{border:1px solid #999;page-break-inside:avoid}thead{display:table-header-group}tr,img{page-break-inside:avoid}img{max-width:100% !important}@page{margin:0.5cm}p,h2,h3{orphans:3;widows:3}h1,h2,h3,h4,h5,h6{page-break-after:avoid}}</style>
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/highlight.min.js" integrity="sha256-eOgo0OtLL4cdq7RdwRUiGKLX9XsIJ7nGhWEKbohmVAQ=" crossorigin></script>
+<script>window.addEventListener('DOMContentLoaded', () => hljs.initHighlighting())</script>
+</head>
+<body>
+<main>
+<article id="content">
+<header>
+<h1 class="title">Module <code>Main.LayerWidget</code></h1>
+</header>
+<section id="section-intro">
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python"># This Python file uses the following encoding: utf-8
+from PyQt5 import QtCore
+from PyQt5 import QtWidgets, QtGui
+from CustomMiniWidgets import MyDoubleSpinBox, MyComboBox
+from LayerData import LayerData
+
+class LayerWidget(QtWidgets.QWidget):
+    def __init__(self,position,mode,data=None):
+        QtWidgets.QWidget.__init__(self)
+
+        #information from upper levels
+        self.mode=mode
+        self.position=position
+
+
+        #flag to check whether calculations should happen or not. used for loading/startup process
+        self.calculateFlag = 1
+
+        #layouts
+        #main layout
+        self.mainLayout = QtWidgets.QVBoxLayout()
+        self.mainLayout.setContentsMargins(0,0,0,0)
+        self.mainLayout.setSpacing(10)
+
+        #head layout
+        self.head = QtWidgets.QWidget()
+        self.headButtons = QtWidgets.QWidget()
+
+        self.headLayout = QtWidgets.QHBoxLayout()
+        self.headLayout.setContentsMargins(0,0,0,0)
+        self.headLayout.setSpacing(10)
+
+        self.headButtonLayout = QtWidgets.QHBoxLayout()
+        self.headButtonLayout.setContentsMargins(0,0,0,0)
+        self.headButtonLayout.setSpacing(0)
+
+        self.layerTitleLabel = QtWidgets.QLabel()
+
+        self.layerDeleteButton = QtWidgets.QPushButton()
+        self.layerDeleteButton.clicked.connect(self.deleteButtonPressed)
+        self.layerAddAfterButton = QtWidgets.QPushButton()
+        self.layerAddAfterButton.clicked.connect(self.addAfterButtonPressed)
+
+        self.headButtonLayout.addWidget(self.layerAddAfterButton)
+        self.headButtonLayout.addWidget(self.layerDeleteButton)
+        self.headButtonLayout.setAlignment(QtCore.Qt.AlignRight)
+        self.headButtons.setLayout(self.headButtonLayout)
+
+        self.headLayout.addWidget(self.layerTitleLabel)
+        self.headLayout.addWidget(self.headButtons)
+
+
+        self.head.setLayout(self.headLayout)
+
+
+        #body layout
+        self.body = QtWidgets.QWidget()
+
+        self.bodyLayout = QtWidgets.QGridLayout()
+        self.bodyLayout.setContentsMargins(0,0,0,0)
+        self.bodyLayout.setSpacing(10)
+
+        self.layerWidthLabel = QtWidgets.QLabel()
+        self.layerWidthDoubleSpinBox = MyDoubleSpinBox()
+        self.layerWidthDoubleSpinBox.setSingleStep(0.001)
+        self.layerWidthDoubleSpinBox.setMaximum(9.9999)
+        self.layerWidthDoubleSpinBox.setMaximumWidth(100)
+        self.layerWidthDoubleSpinBox.valueChanged.connect(self.widthChanged)
+
+        self.layerWidthComboBox = MyComboBox()
+        self.layerWidthComboBox.addItems({&#34;m&#34;})
+        self.layerWidthComboBox.addItems({&#34;cm&#34;})
+        self.layerWidthComboBox.addItems({&#34;mm&#34;})
+
+        self.layerWidthComboBox.currentIndexChanged.connect(self.widthFactorChanged)
+
+        self.layerLambdaLabel = QtWidgets.QLabel()
+        self.layerLambdaLabel.setAlignment(QtCore.Qt.AlignCenter|QtCore.Qt.AlignRight)
+        self.layerLambdaDoubleSpinBox = MyDoubleSpinBox()
+        self.layerLambdaDoubleSpinBox.setMinimum(0.000)
+        self.layerLambdaDoubleSpinBox.setValue(0.01)
+        self.layerLambdaDoubleSpinBox.setSingleStep(0.01)
+        self.layerLambdaDoubleSpinBox.setMaximumWidth(100)
+        self.layerLambdaDoubleSpinBox.valueChanged.connect(self.lambdaChanged)
+        self.layerLambdaUnitLabel = QtWidgets.QLabel()
+
+        self.layerResLabel = QtWidgets.QLabel()
+        self.layerResLabel.setAlignment(QtCore.Qt.AlignCenter|QtCore.Qt.AlignRight)
+        self.layerResDoubleSpinBox = MyDoubleSpinBox()
+        self.layerResDoubleSpinBox.setDecimals(5)
+        self.layerResDoubleSpinBox.setSingleStep(0.0001)
+        self.layerResDoubleSpinBox.setMaximum(999.9999)
+        self.layerResDoubleSpinBox.setEditable(0)
+        self.layerResDoubleSpinBox.setMaximumWidth(100)
+        self.layerResDoubleSpinBox.valueChanged.connect(self.rChanged)
+        self.layerResUnitLabel = QtWidgets.QLabel()
+
+        self.layerResGivenCheckBox = QtWidgets.QCheckBox(QtCore.QCoreApplication.translate(&#34;LayerWidget&#34;, &#34;R gegeben &#34;))
+        self.layerResGivenCheckBox.stateChanged.connect(self.resGivenCheckboxChanged)
+
+        #data
+        if(data is None):
+            self.data=LayerData()
+            self.widthFactor = 1
+            self.initData()
+        else:
+            self.data=data
+            self.updateValues()
+
+        #assemble body layout
+        self.bodyLayout.addWidget(self.layerWidthLabel,0,0)
+        self.bodyLayout.addWidget(self.layerWidthDoubleSpinBox,0,1)
+        self.bodyLayout.addWidget(self.layerWidthComboBox,0,2)
+        self.bodyLayout.addWidget(self.layerLambdaLabel,0,3)
+        self.bodyLayout.addWidget(self.layerLambdaDoubleSpinBox,0,4)
+        self.bodyLayout.addWidget(self.layerLambdaUnitLabel,0,5)
+        self.bodyLayout.addWidget(self.layerResLabel,0,6)
+        self.bodyLayout.addWidget(self.layerResDoubleSpinBox,0,7)
+        self.bodyLayout.addWidget(self.layerResUnitLabel,0,8)
+        self.bodyLayout.addWidget(self.layerResGivenCheckBox,0,9)
+
+        self.body.setLayout(self.bodyLayout)
+
+        #bottom layout could be placed here if neccessary
+
+
+        #check for mode, right now not really neccessary
+        self.switchMode(self.mode)
+
+        self.mainLayout.addWidget(self.head)
+        self.mainLayout.addWidget(self.body)
+        self.setLayout(self.mainLayout)
+
+        &#34;&#34;&#34;
+        self.setStyleSheet(&#34;QWidget {&#34;
+        &#34;background-color: #f0f0f0;&#34;
+        &#34;}&#34;
+        &#34;QPushButton{&#34;
+        &#34;border: 0px solid #ff0000;&#34;
+        &#34;color: rgb(255, 255, 255);&#34;
+        &#34;padding: 5px;&#34;
+        &#34;background-color: #7099D6;;&#34;
+        &#34;}&#34;
+
+        &#34;QPushButton:hover {&#34;
+        &#34;border: 1px solid #333333;&#34;
+        &#34;color: rgb(255, 255, 255);&#34;
+        &#34;background-color: #2F63AF;&#34;
+        &#34;}&#34;
+        &#34;QPushButton:pressed {&#34;
+        &#34;border: 1px solid #333333;&#34;
+        &#34;color: rgb(255, 255, 255);&#34;
+        &#34;background-color: #12499A;&#34;
+        &#34;}&#34;
+        &#34;QPushButton:disabled {&#34;
+        &#34;border: 0px solid #333333;&#34;
+        &#34;color: rgb(150, 150, 150);&#34;
+        &#34;background-color: #134078;&#34;
+        &#34;};&#34;)
+        &#34;&#34;&#34;
+
+        self.retranslateUi()
+
+        #set position and text
+        self.updatePos(self.position)
+
+
+    def retranslateUi(self):
+        _translate = QtCore.QCoreApplication.translate
+        self.layerTitleLabel.setText(_translate(&#34;LayerWidget&#34;, &#34;Schicht &#34;))
+
+        self.layerWidthLabel.setText(_translate(&#34;LayerWidget&#34;, &#34;Dicke:&#34;))
+
+        self.layerLambdaLabel.setText(_translate(&#34;LayerWidget&#34;, &#34;λ:&#34;))
+        self.layerLambdaUnitLabel.setText(_translate(&#34;LayerWidget&#34;, &#34;Wm&lt;sup&gt;-1&lt;/sup&gt;K&lt;sup&gt;-1&lt;/sub&gt;&#34;))
+
+        self.layerResLabel.setText(_translate(&#34;LayerWidget&#34;, &#34;R_i:&#34;))
+        self.layerResUnitLabel.setText(_translate(&#34;LayerWidget&#34;, &#34;m&lt;sup&gt;2&lt;/sup&gt;KW&lt;sup&gt;-1&lt;/sub&gt;&#34;))
+
+        self.layerAddAfterButton.setText(_translate(&#34;LayerWidget&#34;, &#34;+&#34;))
+        self.layerDeleteButton.setText(_translate(&#34;LayerWidget&#34;, &#34;–&#34;))
+
+        #self.layerTempInLabel.setText(_translate(&#34;LayerWidget&#34;, &#34;Temp_in:&#34;))
+        #self.layerTempOutLabel.setText(_translate(&#34;LayerWidget&#34;, &#34;Temp_out&#34;))
+        #self.layerTempUnitLabel1.setText(_translate(&#34;LayerWidget&#34;, &#34;°C&#34;))
+        #self.layerTempUnitLabel2.setText(_translate(&#34;LayerWidget&#34;, &#34;°C&#34;))
+
+    #delete this layer
+    def deleteButtonPressed(self):
+        self.parent().parent().parent().parent().parent().deleteLayer(self.position)
+
+    #add layer beneath
+    def addAfterButtonPressed(self):
+        self.parent().parent().parent().parent().parent().addLayer(self.position+1)
+
+    #update own position and modify text
+    def updatePos(self, pos):
+        self.position=pos
+        self.layerTitleLabel.setText(QtCore.QCoreApplication.translate(&#34;LayerWidget&#34;, &#34;Schicht &#34;)+str(pos+1))
+        self.layerResLabel.setText(QtCore.QCoreApplication.translate(&#34;LayerWidget&#34;, &#34;R&#34;)+&#34;&lt;sub&gt;&#34;+str(pos+1)+&#34;&lt;/sub&gt;&#34;+&#34;:&#34;)
+
+    #enable/disable delete button
+    def setRemovable(self, flag):
+        if flag == True:
+            self.layerDeleteButton.setEnabled(1)
+        else:
+            self.layerDeleteButton.setEnabled(0)
+
+    #enable/disable lamba box
+    def resGivenCheckboxChanged(self):
+        if self.layerResGivenCheckBox.checkState():
+            self.layerLambdaDoubleSpinBox.setEditable(0)
+            self.layerResDoubleSpinBox.setEditable(1)
+        else:
+            self.layerLambdaDoubleSpinBox.setEditable(1)
+            self.layerResDoubleSpinBox.setEditable(0)
+
+    #modify mode of layer
+    def switchMode(self,mode):
+        self.mode = mode
+
+    #value changes
+    def initData(self):
+        self.data.width=self.layerWidthDoubleSpinBox.value()*self.widthFactor
+        self.data.lambda_=self.layerLambdaDoubleSpinBox.value()
+
+    def widthChanged(self):
+        self.data.width=self.layerWidthDoubleSpinBox.value()*self.widthFactor
+        self.calculate()
+
+    def lambdaChanged(self):
+        self.data.lambda_=self.layerLambdaDoubleSpinBox.value()
+        self.calculate()
+
+    def rChanged(self):
+        self.data.r=self.layerResDoubleSpinBox.value()
+        self.calculate()
+
+    def widthFactorChanged(self):
+        index = self.layerWidthComboBox.currentIndex()
+        self.data.widthUnit=index
+        if index == 0:
+            self.widthFactor = 1
+            self.layerWidthDoubleSpinBox.setMaximum(9.9999)
+            self.layerWidthDoubleSpinBox.setDecimals(4)
+        elif index == 1:
+            self.widthFactor = 0.01
+            self.layerWidthDoubleSpinBox.setMaximum(999.99)
+            self.layerWidthDoubleSpinBox.setDecimals(2)
+        elif index == 2:
+            self.widthFactor = 0.001
+            self.layerWidthDoubleSpinBox.setMaximum(9999.9)
+            self.layerWidthDoubleSpinBox.setDecimals(1)
+        self.widthChanged()
+        self.calculate()
+
+    def calculate(self):
+        if(self.calculateFlag):
+            if self.layerResGivenCheckBox.checkState():
+                self.calculate_lambda()
+            else:
+                self.calculate_r()
+            self.parent().parent().parent().parent().parent().calculate()
+
+    def calculate_r(self):
+        if(self.calculateFlag):
+            self.calculateFlag=0
+            try:
+                self.data.calculate()
+                self.layerLambdaDoubleSpinBox.setBackGroundColor(QtGui.QColor(255,255,255))
+                self.layerResDoubleSpinBox.setValue(self.data.r)
+            except ZeroDivisionError:
+                self.layerLambdaDoubleSpinBox.setBackGroundColor(QtGui.QColor(255,0,0))
+            self.calculateFlag=1
+
+    def calculate_lambda(self):
+        if(self.calculateFlag):
+            self.calculateFlag=0
+            try:
+                self.data.calculate_lambda()
+                self.layerResDoubleSpinBox.setBackGroundColor(QtGui.QColor(255,255,255))
+                self.layerLambdaDoubleSpinBox.setValue(self.data.lambda_)
+            except ZeroDivisionError:
+                self.layerResDoubleSpinBox.setBackGroundColor(QtGui.QColor(255,0,0))
+            self.calculateFlag=1
+
+    def updateValues(self):
+        self.calculateFlag=0
+        if self.data.widthUnit==0:
+            self.widthFactor=1
+        elif self.data.widthUnit==1:
+            self.widthFactor=0.01
+        else:
+            self.widthFactor=0.001
+        self.layerWidthDoubleSpinBox.setValue(self.data.width*self.widthFactor)
+        self.layerWidthComboBox.setCurrentIndex(self.data.widthUnit)
+        self.layerLambdaDoubleSpinBox.setValue(self.data.lambda_)
+        self.layerResDoubleSpinBox.setValue(self.data.r)
+        self.calculateFlag=1</code></pre>
+</details>
+</section>
+<section>
+</section>
+<section>
+</section>
+<section>
+</section>
+<section>
+<h2 class="section-title" id="header-classes">Classes</h2>
+<dl>
+<dt id="Main.LayerWidget.LayerWidget"><code class="flex name class">
+<span>class <span class="ident">LayerWidget</span></span>
+<span>(</span><span>position, mode, data=None)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>QWidget(parent: QWidget = None, flags: Union[Qt.WindowFlags, Qt.WindowType] = Qt.WindowFlags())</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">class LayerWidget(QtWidgets.QWidget):
+    def __init__(self,position,mode,data=None):
+        QtWidgets.QWidget.__init__(self)
+
+        #information from upper levels
+        self.mode=mode
+        self.position=position
+
+
+        #flag to check whether calculations should happen or not. used for loading/startup process
+        self.calculateFlag = 1
+
+        #layouts
+        #main layout
+        self.mainLayout = QtWidgets.QVBoxLayout()
+        self.mainLayout.setContentsMargins(0,0,0,0)
+        self.mainLayout.setSpacing(10)
+
+        #head layout
+        self.head = QtWidgets.QWidget()
+        self.headButtons = QtWidgets.QWidget()
+
+        self.headLayout = QtWidgets.QHBoxLayout()
+        self.headLayout.setContentsMargins(0,0,0,0)
+        self.headLayout.setSpacing(10)
+
+        self.headButtonLayout = QtWidgets.QHBoxLayout()
+        self.headButtonLayout.setContentsMargins(0,0,0,0)
+        self.headButtonLayout.setSpacing(0)
+
+        self.layerTitleLabel = QtWidgets.QLabel()
+
+        self.layerDeleteButton = QtWidgets.QPushButton()
+        self.layerDeleteButton.clicked.connect(self.deleteButtonPressed)
+        self.layerAddAfterButton = QtWidgets.QPushButton()
+        self.layerAddAfterButton.clicked.connect(self.addAfterButtonPressed)
+
+        self.headButtonLayout.addWidget(self.layerAddAfterButton)
+        self.headButtonLayout.addWidget(self.layerDeleteButton)
+        self.headButtonLayout.setAlignment(QtCore.Qt.AlignRight)
+        self.headButtons.setLayout(self.headButtonLayout)
+
+        self.headLayout.addWidget(self.layerTitleLabel)
+        self.headLayout.addWidget(self.headButtons)
+
+
+        self.head.setLayout(self.headLayout)
+
+
+        #body layout
+        self.body = QtWidgets.QWidget()
+
+        self.bodyLayout = QtWidgets.QGridLayout()
+        self.bodyLayout.setContentsMargins(0,0,0,0)
+        self.bodyLayout.setSpacing(10)
+
+        self.layerWidthLabel = QtWidgets.QLabel()
+        self.layerWidthDoubleSpinBox = MyDoubleSpinBox()
+        self.layerWidthDoubleSpinBox.setSingleStep(0.001)
+        self.layerWidthDoubleSpinBox.setMaximum(9.9999)
+        self.layerWidthDoubleSpinBox.setMaximumWidth(100)
+        self.layerWidthDoubleSpinBox.valueChanged.connect(self.widthChanged)
+
+        self.layerWidthComboBox = MyComboBox()
+        self.layerWidthComboBox.addItems({&#34;m&#34;})
+        self.layerWidthComboBox.addItems({&#34;cm&#34;})
+        self.layerWidthComboBox.addItems({&#34;mm&#34;})
+
+        self.layerWidthComboBox.currentIndexChanged.connect(self.widthFactorChanged)
+
+        self.layerLambdaLabel = QtWidgets.QLabel()
+        self.layerLambdaLabel.setAlignment(QtCore.Qt.AlignCenter|QtCore.Qt.AlignRight)
+        self.layerLambdaDoubleSpinBox = MyDoubleSpinBox()
+        self.layerLambdaDoubleSpinBox.setMinimum(0.000)
+        self.layerLambdaDoubleSpinBox.setValue(0.01)
+        self.layerLambdaDoubleSpinBox.setSingleStep(0.01)
+        self.layerLambdaDoubleSpinBox.setMaximumWidth(100)
+        self.layerLambdaDoubleSpinBox.valueChanged.connect(self.lambdaChanged)
+        self.layerLambdaUnitLabel = QtWidgets.QLabel()
+
+        self.layerResLabel = QtWidgets.QLabel()
+        self.layerResLabel.setAlignment(QtCore.Qt.AlignCenter|QtCore.Qt.AlignRight)
+        self.layerResDoubleSpinBox = MyDoubleSpinBox()
+        self.layerResDoubleSpinBox.setDecimals(5)
+        self.layerResDoubleSpinBox.setSingleStep(0.0001)
+        self.layerResDoubleSpinBox.setMaximum(999.9999)
+        self.layerResDoubleSpinBox.setEditable(0)
+        self.layerResDoubleSpinBox.setMaximumWidth(100)
+        self.layerResDoubleSpinBox.valueChanged.connect(self.rChanged)
+        self.layerResUnitLabel = QtWidgets.QLabel()
+
+        self.layerResGivenCheckBox = QtWidgets.QCheckBox(QtCore.QCoreApplication.translate(&#34;LayerWidget&#34;, &#34;R gegeben &#34;))
+        self.layerResGivenCheckBox.stateChanged.connect(self.resGivenCheckboxChanged)
+
+        #data
+        if(data is None):
+            self.data=LayerData()
+            self.widthFactor = 1
+            self.initData()
+        else:
+            self.data=data
+            self.updateValues()
+
+        #assemble body layout
+        self.bodyLayout.addWidget(self.layerWidthLabel,0,0)
+        self.bodyLayout.addWidget(self.layerWidthDoubleSpinBox,0,1)
+        self.bodyLayout.addWidget(self.layerWidthComboBox,0,2)
+        self.bodyLayout.addWidget(self.layerLambdaLabel,0,3)
+        self.bodyLayout.addWidget(self.layerLambdaDoubleSpinBox,0,4)
+        self.bodyLayout.addWidget(self.layerLambdaUnitLabel,0,5)
+        self.bodyLayout.addWidget(self.layerResLabel,0,6)
+        self.bodyLayout.addWidget(self.layerResDoubleSpinBox,0,7)
+        self.bodyLayout.addWidget(self.layerResUnitLabel,0,8)
+        self.bodyLayout.addWidget(self.layerResGivenCheckBox,0,9)
+
+        self.body.setLayout(self.bodyLayout)
+
+        #bottom layout could be placed here if neccessary
+
+
+        #check for mode, right now not really neccessary
+        self.switchMode(self.mode)
+
+        self.mainLayout.addWidget(self.head)
+        self.mainLayout.addWidget(self.body)
+        self.setLayout(self.mainLayout)
+
+        &#34;&#34;&#34;
+        self.setStyleSheet(&#34;QWidget {&#34;
+        &#34;background-color: #f0f0f0;&#34;
+        &#34;}&#34;
+        &#34;QPushButton{&#34;
+        &#34;border: 0px solid #ff0000;&#34;
+        &#34;color: rgb(255, 255, 255);&#34;
+        &#34;padding: 5px;&#34;
+        &#34;background-color: #7099D6;;&#34;
+        &#34;}&#34;
+
+        &#34;QPushButton:hover {&#34;
+        &#34;border: 1px solid #333333;&#34;
+        &#34;color: rgb(255, 255, 255);&#34;
+        &#34;background-color: #2F63AF;&#34;
+        &#34;}&#34;
+        &#34;QPushButton:pressed {&#34;
+        &#34;border: 1px solid #333333;&#34;
+        &#34;color: rgb(255, 255, 255);&#34;
+        &#34;background-color: #12499A;&#34;
+        &#34;}&#34;
+        &#34;QPushButton:disabled {&#34;
+        &#34;border: 0px solid #333333;&#34;
+        &#34;color: rgb(150, 150, 150);&#34;
+        &#34;background-color: #134078;&#34;
+        &#34;};&#34;)
+        &#34;&#34;&#34;
+
+        self.retranslateUi()
+
+        #set position and text
+        self.updatePos(self.position)
+
+
+    def retranslateUi(self):
+        _translate = QtCore.QCoreApplication.translate
+        self.layerTitleLabel.setText(_translate(&#34;LayerWidget&#34;, &#34;Schicht &#34;))
+
+        self.layerWidthLabel.setText(_translate(&#34;LayerWidget&#34;, &#34;Dicke:&#34;))
+
+        self.layerLambdaLabel.setText(_translate(&#34;LayerWidget&#34;, &#34;λ:&#34;))
+        self.layerLambdaUnitLabel.setText(_translate(&#34;LayerWidget&#34;, &#34;Wm&lt;sup&gt;-1&lt;/sup&gt;K&lt;sup&gt;-1&lt;/sub&gt;&#34;))
+
+        self.layerResLabel.setText(_translate(&#34;LayerWidget&#34;, &#34;R_i:&#34;))
+        self.layerResUnitLabel.setText(_translate(&#34;LayerWidget&#34;, &#34;m&lt;sup&gt;2&lt;/sup&gt;KW&lt;sup&gt;-1&lt;/sub&gt;&#34;))
+
+        self.layerAddAfterButton.setText(_translate(&#34;LayerWidget&#34;, &#34;+&#34;))
+        self.layerDeleteButton.setText(_translate(&#34;LayerWidget&#34;, &#34;–&#34;))
+
+        #self.layerTempInLabel.setText(_translate(&#34;LayerWidget&#34;, &#34;Temp_in:&#34;))
+        #self.layerTempOutLabel.setText(_translate(&#34;LayerWidget&#34;, &#34;Temp_out&#34;))
+        #self.layerTempUnitLabel1.setText(_translate(&#34;LayerWidget&#34;, &#34;°C&#34;))
+        #self.layerTempUnitLabel2.setText(_translate(&#34;LayerWidget&#34;, &#34;°C&#34;))
+
+    #delete this layer
+    def deleteButtonPressed(self):
+        self.parent().parent().parent().parent().parent().deleteLayer(self.position)
+
+    #add layer beneath
+    def addAfterButtonPressed(self):
+        self.parent().parent().parent().parent().parent().addLayer(self.position+1)
+
+    #update own position and modify text
+    def updatePos(self, pos):
+        self.position=pos
+        self.layerTitleLabel.setText(QtCore.QCoreApplication.translate(&#34;LayerWidget&#34;, &#34;Schicht &#34;)+str(pos+1))
+        self.layerResLabel.setText(QtCore.QCoreApplication.translate(&#34;LayerWidget&#34;, &#34;R&#34;)+&#34;&lt;sub&gt;&#34;+str(pos+1)+&#34;&lt;/sub&gt;&#34;+&#34;:&#34;)
+
+    #enable/disable delete button
+    def setRemovable(self, flag):
+        if flag == True:
+            self.layerDeleteButton.setEnabled(1)
+        else:
+            self.layerDeleteButton.setEnabled(0)
+
+    #enable/disable lamba box
+    def resGivenCheckboxChanged(self):
+        if self.layerResGivenCheckBox.checkState():
+            self.layerLambdaDoubleSpinBox.setEditable(0)
+            self.layerResDoubleSpinBox.setEditable(1)
+        else:
+            self.layerLambdaDoubleSpinBox.setEditable(1)
+            self.layerResDoubleSpinBox.setEditable(0)
+
+    #modify mode of layer
+    def switchMode(self,mode):
+        self.mode = mode
+
+    #value changes
+    def initData(self):
+        self.data.width=self.layerWidthDoubleSpinBox.value()*self.widthFactor
+        self.data.lambda_=self.layerLambdaDoubleSpinBox.value()
+
+    def widthChanged(self):
+        self.data.width=self.layerWidthDoubleSpinBox.value()*self.widthFactor
+        self.calculate()
+
+    def lambdaChanged(self):
+        self.data.lambda_=self.layerLambdaDoubleSpinBox.value()
+        self.calculate()
+
+    def rChanged(self):
+        self.data.r=self.layerResDoubleSpinBox.value()
+        self.calculate()
+
+    def widthFactorChanged(self):
+        index = self.layerWidthComboBox.currentIndex()
+        self.data.widthUnit=index
+        if index == 0:
+            self.widthFactor = 1
+            self.layerWidthDoubleSpinBox.setMaximum(9.9999)
+            self.layerWidthDoubleSpinBox.setDecimals(4)
+        elif index == 1:
+            self.widthFactor = 0.01
+            self.layerWidthDoubleSpinBox.setMaximum(999.99)
+            self.layerWidthDoubleSpinBox.setDecimals(2)
+        elif index == 2:
+            self.widthFactor = 0.001
+            self.layerWidthDoubleSpinBox.setMaximum(9999.9)
+            self.layerWidthDoubleSpinBox.setDecimals(1)
+        self.widthChanged()
+        self.calculate()
+
+    def calculate(self):
+        if(self.calculateFlag):
+            if self.layerResGivenCheckBox.checkState():
+                self.calculate_lambda()
+            else:
+                self.calculate_r()
+            self.parent().parent().parent().parent().parent().calculate()
+
+    def calculate_r(self):
+        if(self.calculateFlag):
+            self.calculateFlag=0
+            try:
+                self.data.calculate()
+                self.layerLambdaDoubleSpinBox.setBackGroundColor(QtGui.QColor(255,255,255))
+                self.layerResDoubleSpinBox.setValue(self.data.r)
+            except ZeroDivisionError:
+                self.layerLambdaDoubleSpinBox.setBackGroundColor(QtGui.QColor(255,0,0))
+            self.calculateFlag=1
+
+    def calculate_lambda(self):
+        if(self.calculateFlag):
+            self.calculateFlag=0
+            try:
+                self.data.calculate_lambda()
+                self.layerResDoubleSpinBox.setBackGroundColor(QtGui.QColor(255,255,255))
+                self.layerLambdaDoubleSpinBox.setValue(self.data.lambda_)
+            except ZeroDivisionError:
+                self.layerResDoubleSpinBox.setBackGroundColor(QtGui.QColor(255,0,0))
+            self.calculateFlag=1
+
+    def updateValues(self):
+        self.calculateFlag=0
+        if self.data.widthUnit==0:
+            self.widthFactor=1
+        elif self.data.widthUnit==1:
+            self.widthFactor=0.01
+        else:
+            self.widthFactor=0.001
+        self.layerWidthDoubleSpinBox.setValue(self.data.width*self.widthFactor)
+        self.layerWidthComboBox.setCurrentIndex(self.data.widthUnit)
+        self.layerLambdaDoubleSpinBox.setValue(self.data.lambda_)
+        self.layerResDoubleSpinBox.setValue(self.data.r)
+        self.calculateFlag=1</code></pre>
+</details>
+<h3>Ancestors</h3>
+<ul class="hlist">
+<li>PyQt5.QtWidgets.QWidget</li>
+<li>PyQt5.QtCore.QObject</li>
+<li>sip.wrapper</li>
+<li>PyQt5.QtGui.QPaintDevice</li>
+<li>sip.simplewrapper</li>
+</ul>
+<h3>Methods</h3>
+<dl>
+<dt id="Main.LayerWidget.LayerWidget.addAfterButtonPressed"><code class="name flex">
+<span>def <span class="ident">addAfterButtonPressed</span></span>(<span>self)</span>
+</code></dt>
+<dd>
+<div class="desc"></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def addAfterButtonPressed(self):
+    self.parent().parent().parent().parent().parent().addLayer(self.position+1)</code></pre>
+</details>
+</dd>
+<dt id="Main.LayerWidget.LayerWidget.calculate"><code class="name flex">
+<span>def <span class="ident">calculate</span></span>(<span>self)</span>
+</code></dt>
+<dd>
+<div class="desc"></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def calculate(self):
+    if(self.calculateFlag):
+        if self.layerResGivenCheckBox.checkState():
+            self.calculate_lambda()
+        else:
+            self.calculate_r()
+        self.parent().parent().parent().parent().parent().calculate()</code></pre>
+</details>
+</dd>
+<dt id="Main.LayerWidget.LayerWidget.calculate_lambda"><code class="name flex">
+<span>def <span class="ident">calculate_lambda</span></span>(<span>self)</span>
+</code></dt>
+<dd>
+<div class="desc"></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def calculate_lambda(self):
+    if(self.calculateFlag):
+        self.calculateFlag=0
+        try:
+            self.data.calculate_lambda()
+            self.layerResDoubleSpinBox.setBackGroundColor(QtGui.QColor(255,255,255))
+            self.layerLambdaDoubleSpinBox.setValue(self.data.lambda_)
+        except ZeroDivisionError:
+            self.layerResDoubleSpinBox.setBackGroundColor(QtGui.QColor(255,0,0))
+        self.calculateFlag=1</code></pre>
+</details>
+</dd>
+<dt id="Main.LayerWidget.LayerWidget.calculate_r"><code class="name flex">
+<span>def <span class="ident">calculate_r</span></span>(<span>self)</span>
+</code></dt>
+<dd>
+<div class="desc"></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def calculate_r(self):
+    if(self.calculateFlag):
+        self.calculateFlag=0
+        try:
+            self.data.calculate()
+            self.layerLambdaDoubleSpinBox.setBackGroundColor(QtGui.QColor(255,255,255))
+            self.layerResDoubleSpinBox.setValue(self.data.r)
+        except ZeroDivisionError:
+            self.layerLambdaDoubleSpinBox.setBackGroundColor(QtGui.QColor(255,0,0))
+        self.calculateFlag=1</code></pre>
+</details>
+</dd>
+<dt id="Main.LayerWidget.LayerWidget.deleteButtonPressed"><code class="name flex">
+<span>def <span class="ident">deleteButtonPressed</span></span>(<span>self)</span>
+</code></dt>
+<dd>
+<div class="desc"></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def deleteButtonPressed(self):
+    self.parent().parent().parent().parent().parent().deleteLayer(self.position)</code></pre>
+</details>
+</dd>
+<dt id="Main.LayerWidget.LayerWidget.initData"><code class="name flex">
+<span>def <span class="ident">initData</span></span>(<span>self)</span>
+</code></dt>
+<dd>
+<div class="desc"></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def initData(self):
+    self.data.width=self.layerWidthDoubleSpinBox.value()*self.widthFactor
+    self.data.lambda_=self.layerLambdaDoubleSpinBox.value()</code></pre>
+</details>
+</dd>
+<dt id="Main.LayerWidget.LayerWidget.lambdaChanged"><code class="name flex">
+<span>def <span class="ident">lambdaChanged</span></span>(<span>self)</span>
+</code></dt>
+<dd>
+<div class="desc"></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def lambdaChanged(self):
+    self.data.lambda_=self.layerLambdaDoubleSpinBox.value()
+    self.calculate()</code></pre>
+</details>
+</dd>
+<dt id="Main.LayerWidget.LayerWidget.rChanged"><code class="name flex">
+<span>def <span class="ident">rChanged</span></span>(<span>self)</span>
+</code></dt>
+<dd>
+<div class="desc"></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def rChanged(self):
+    self.data.r=self.layerResDoubleSpinBox.value()
+    self.calculate()</code></pre>
+</details>
+</dd>
+<dt id="Main.LayerWidget.LayerWidget.resGivenCheckboxChanged"><code class="name flex">
+<span>def <span class="ident">resGivenCheckboxChanged</span></span>(<span>self)</span>
+</code></dt>
+<dd>
+<div class="desc"></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def resGivenCheckboxChanged(self):
+    if self.layerResGivenCheckBox.checkState():
+        self.layerLambdaDoubleSpinBox.setEditable(0)
+        self.layerResDoubleSpinBox.setEditable(1)
+    else:
+        self.layerLambdaDoubleSpinBox.setEditable(1)
+        self.layerResDoubleSpinBox.setEditable(0)</code></pre>
+</details>
+</dd>
+<dt id="Main.LayerWidget.LayerWidget.retranslateUi"><code class="name flex">
+<span>def <span class="ident">retranslateUi</span></span>(<span>self)</span>
+</code></dt>
+<dd>
+<div class="desc"></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def retranslateUi(self):
+    _translate = QtCore.QCoreApplication.translate
+    self.layerTitleLabel.setText(_translate(&#34;LayerWidget&#34;, &#34;Schicht &#34;))
+
+    self.layerWidthLabel.setText(_translate(&#34;LayerWidget&#34;, &#34;Dicke:&#34;))
+
+    self.layerLambdaLabel.setText(_translate(&#34;LayerWidget&#34;, &#34;λ:&#34;))
+    self.layerLambdaUnitLabel.setText(_translate(&#34;LayerWidget&#34;, &#34;Wm&lt;sup&gt;-1&lt;/sup&gt;K&lt;sup&gt;-1&lt;/sub&gt;&#34;))
+
+    self.layerResLabel.setText(_translate(&#34;LayerWidget&#34;, &#34;R_i:&#34;))
+    self.layerResUnitLabel.setText(_translate(&#34;LayerWidget&#34;, &#34;m&lt;sup&gt;2&lt;/sup&gt;KW&lt;sup&gt;-1&lt;/sub&gt;&#34;))
+
+    self.layerAddAfterButton.setText(_translate(&#34;LayerWidget&#34;, &#34;+&#34;))
+    self.layerDeleteButton.setText(_translate(&#34;LayerWidget&#34;, &#34;–&#34;))</code></pre>
+</details>
+</dd>
+<dt id="Main.LayerWidget.LayerWidget.setRemovable"><code class="name flex">
+<span>def <span class="ident">setRemovable</span></span>(<span>self, flag)</span>
+</code></dt>
+<dd>
+<div class="desc"></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def setRemovable(self, flag):
+    if flag == True:
+        self.layerDeleteButton.setEnabled(1)
+    else:
+        self.layerDeleteButton.setEnabled(0)</code></pre>
+</details>
+</dd>
+<dt id="Main.LayerWidget.LayerWidget.switchMode"><code class="name flex">
+<span>def <span class="ident">switchMode</span></span>(<span>self, mode)</span>
+</code></dt>
+<dd>
+<div class="desc"></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def switchMode(self,mode):
+    self.mode = mode</code></pre>
+</details>
+</dd>
+<dt id="Main.LayerWidget.LayerWidget.updatePos"><code class="name flex">
+<span>def <span class="ident">updatePos</span></span>(<span>self, pos)</span>
+</code></dt>
+<dd>
+<div class="desc"></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def updatePos(self, pos):
+    self.position=pos
+    self.layerTitleLabel.setText(QtCore.QCoreApplication.translate(&#34;LayerWidget&#34;, &#34;Schicht &#34;)+str(pos+1))
+    self.layerResLabel.setText(QtCore.QCoreApplication.translate(&#34;LayerWidget&#34;, &#34;R&#34;)+&#34;&lt;sub&gt;&#34;+str(pos+1)+&#34;&lt;/sub&gt;&#34;+&#34;:&#34;)</code></pre>
+</details>
+</dd>
+<dt id="Main.LayerWidget.LayerWidget.updateValues"><code class="name flex">
+<span>def <span class="ident">updateValues</span></span>(<span>self)</span>
+</code></dt>
+<dd>
+<div class="desc"></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def updateValues(self):
+    self.calculateFlag=0
+    if self.data.widthUnit==0:
+        self.widthFactor=1
+    elif self.data.widthUnit==1:
+        self.widthFactor=0.01
+    else:
+        self.widthFactor=0.001
+    self.layerWidthDoubleSpinBox.setValue(self.data.width*self.widthFactor)
+    self.layerWidthComboBox.setCurrentIndex(self.data.widthUnit)
+    self.layerLambdaDoubleSpinBox.setValue(self.data.lambda_)
+    self.layerResDoubleSpinBox.setValue(self.data.r)
+    self.calculateFlag=1</code></pre>
+</details>
+</dd>
+<dt id="Main.LayerWidget.LayerWidget.widthChanged"><code class="name flex">
+<span>def <span class="ident">widthChanged</span></span>(<span>self)</span>
+</code></dt>
+<dd>
+<div class="desc"></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def widthChanged(self):
+    self.data.width=self.layerWidthDoubleSpinBox.value()*self.widthFactor
+    self.calculate()</code></pre>
+</details>
+</dd>
+<dt id="Main.LayerWidget.LayerWidget.widthFactorChanged"><code class="name flex">
+<span>def <span class="ident">widthFactorChanged</span></span>(<span>self)</span>
+</code></dt>
+<dd>
+<div class="desc"></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def widthFactorChanged(self):
+    index = self.layerWidthComboBox.currentIndex()
+    self.data.widthUnit=index
+    if index == 0:
+        self.widthFactor = 1
+        self.layerWidthDoubleSpinBox.setMaximum(9.9999)
+        self.layerWidthDoubleSpinBox.setDecimals(4)
+    elif index == 1:
+        self.widthFactor = 0.01
+        self.layerWidthDoubleSpinBox.setMaximum(999.99)
+        self.layerWidthDoubleSpinBox.setDecimals(2)
+    elif index == 2:
+        self.widthFactor = 0.001
+        self.layerWidthDoubleSpinBox.setMaximum(9999.9)
+        self.layerWidthDoubleSpinBox.setDecimals(1)
+    self.widthChanged()
+    self.calculate()</code></pre>
+</details>
+</dd>
+</dl>
+</dd>
+</dl>
+</section>
+</article>
+<nav id="sidebar">
+<h1>Index</h1>
+<div class="toc">
+<ul></ul>
+</div>
+<ul id="index">
+<li><h3>Super-module</h3>
+<ul>
+<li><code><a title="Main" href="index.html">Main</a></code></li>
+</ul>
+</li>
+<li><h3><a href="#header-classes">Classes</a></h3>
+<ul>
+<li>
+<h4><code><a title="Main.LayerWidget.LayerWidget" href="#Main.LayerWidget.LayerWidget">LayerWidget</a></code></h4>
+<ul class="">
+<li><code><a title="Main.LayerWidget.LayerWidget.addAfterButtonPressed" href="#Main.LayerWidget.LayerWidget.addAfterButtonPressed">addAfterButtonPressed</a></code></li>
+<li><code><a title="Main.LayerWidget.LayerWidget.calculate" href="#Main.LayerWidget.LayerWidget.calculate">calculate</a></code></li>
+<li><code><a title="Main.LayerWidget.LayerWidget.calculate_lambda" href="#Main.LayerWidget.LayerWidget.calculate_lambda">calculate_lambda</a></code></li>
+<li><code><a title="Main.LayerWidget.LayerWidget.calculate_r" href="#Main.LayerWidget.LayerWidget.calculate_r">calculate_r</a></code></li>
+<li><code><a title="Main.LayerWidget.LayerWidget.deleteButtonPressed" href="#Main.LayerWidget.LayerWidget.deleteButtonPressed">deleteButtonPressed</a></code></li>
+<li><code><a title="Main.LayerWidget.LayerWidget.initData" href="#Main.LayerWidget.LayerWidget.initData">initData</a></code></li>
+<li><code><a title="Main.LayerWidget.LayerWidget.lambdaChanged" href="#Main.LayerWidget.LayerWidget.lambdaChanged">lambdaChanged</a></code></li>
+<li><code><a title="Main.LayerWidget.LayerWidget.rChanged" href="#Main.LayerWidget.LayerWidget.rChanged">rChanged</a></code></li>
+<li><code><a title="Main.LayerWidget.LayerWidget.resGivenCheckboxChanged" href="#Main.LayerWidget.LayerWidget.resGivenCheckboxChanged">resGivenCheckboxChanged</a></code></li>
+<li><code><a title="Main.LayerWidget.LayerWidget.retranslateUi" href="#Main.LayerWidget.LayerWidget.retranslateUi">retranslateUi</a></code></li>
+<li><code><a title="Main.LayerWidget.LayerWidget.setRemovable" href="#Main.LayerWidget.LayerWidget.setRemovable">setRemovable</a></code></li>
+<li><code><a title="Main.LayerWidget.LayerWidget.switchMode" href="#Main.LayerWidget.LayerWidget.switchMode">switchMode</a></code></li>
+<li><code><a title="Main.LayerWidget.LayerWidget.updatePos" href="#Main.LayerWidget.LayerWidget.updatePos">updatePos</a></code></li>
+<li><code><a title="Main.LayerWidget.LayerWidget.updateValues" href="#Main.LayerWidget.LayerWidget.updateValues">updateValues</a></code></li>
+<li><code><a title="Main.LayerWidget.LayerWidget.widthChanged" href="#Main.LayerWidget.LayerWidget.widthChanged">widthChanged</a></code></li>
+<li><code><a title="Main.LayerWidget.LayerWidget.widthFactorChanged" href="#Main.LayerWidget.LayerWidget.widthFactorChanged">widthFactorChanged</a></code></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</nav>
+</main>
+<footer id="footer">
+<p>Generated by <a href="https://pdoc3.github.io/pdoc"><cite>pdoc</cite> 0.8.4</a>.</p>
+</footer>
+</body>
+</html>

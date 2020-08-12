@@ -1,0 +1,444 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1" />
+<meta name="generator" content="pdoc 0.8.4" />
+<title>Main.Printing API documentation</title>
+<meta name="description" content="" />
+<link rel="preload stylesheet" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/10up-sanitize.css/11.0.1/sanitize.min.css" integrity="sha256-PK9q560IAAa6WVRRh76LtCaI8pjTJ2z11v0miyNNjrs=" crossorigin>
+<link rel="preload stylesheet" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/10up-sanitize.css/11.0.1/typography.min.css" integrity="sha256-7l/o7C8jubJiy74VsKTidCy1yBkRtiUGbVkYBylBqUg=" crossorigin>
+<link rel="stylesheet preload" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/styles/github.min.css" crossorigin>
+<style>:root{--highlight-color:#fe9}.flex{display:flex !important}body{line-height:1.5em}#content{padding:20px}#sidebar{padding:30px;overflow:hidden}#sidebar > *:last-child{margin-bottom:2cm}.http-server-breadcrumbs{font-size:130%;margin:0 0 15px 0}#footer{font-size:.75em;padding:5px 30px;border-top:1px solid #ddd;text-align:right}#footer p{margin:0 0 0 1em;display:inline-block}#footer p:last-child{margin-right:30px}h1,h2,h3,h4,h5{font-weight:300}h1{font-size:2.5em;line-height:1.1em}h2{font-size:1.75em;margin:1em 0 .50em 0}h3{font-size:1.4em;margin:25px 0 10px 0}h4{margin:0;font-size:105%}h1:target,h2:target,h3:target,h4:target,h5:target,h6:target{background:var(--highlight-color);padding:.2em 0}a{color:#058;text-decoration:none;transition:color .3s ease-in-out}a:hover{color:#e82}.title code{font-weight:bold}h2[id^="header-"]{margin-top:2em}.ident{color:#900}pre code{background:#f8f8f8;font-size:.8em;line-height:1.4em}code{background:#f2f2f1;padding:1px 4px;overflow-wrap:break-word}h1 code{background:transparent}pre{background:#f8f8f8;border:0;border-top:1px solid #ccc;border-bottom:1px solid #ccc;margin:1em 0;padding:1ex}#http-server-module-list{display:flex;flex-flow:column}#http-server-module-list div{display:flex}#http-server-module-list dt{min-width:10%}#http-server-module-list p{margin-top:0}.toc ul,#index{list-style-type:none;margin:0;padding:0}#index code{background:transparent}#index h3{border-bottom:1px solid #ddd}#index ul{padding:0}#index h4{margin-top:.6em;font-weight:bold}@media (min-width:200ex){#index .two-column{column-count:2}}@media (min-width:300ex){#index .two-column{column-count:3}}dl{margin-bottom:2em}dl dl:last-child{margin-bottom:4em}dd{margin:0 0 1em 3em}#header-classes + dl > dd{margin-bottom:3em}dd dd{margin-left:2em}dd p{margin:10px 0}.name{background:#eee;font-weight:bold;font-size:.85em;padding:5px 10px;display:inline-block;min-width:40%}.name:hover{background:#e0e0e0}dt:target .name{background:var(--highlight-color)}.name > span:first-child{white-space:nowrap}.name.class > span:nth-child(2){margin-left:.4em}.inherited{color:#999;border-left:5px solid #eee;padding-left:1em}.inheritance em{font-style:normal;font-weight:bold}.desc h2{font-weight:400;font-size:1.25em}.desc h3{font-size:1em}.desc dt code{background:inherit}.source summary,.git-link-div{color:#666;text-align:right;font-weight:400;font-size:.8em;text-transform:uppercase}.source summary > *{white-space:nowrap;cursor:pointer}.git-link{color:inherit;margin-left:1em}.source pre{max-height:500px;overflow:auto;margin:0}.source pre code{font-size:12px;overflow:visible}.hlist{list-style:none}.hlist li{display:inline}.hlist li:after{content:',\2002'}.hlist li:last-child:after{content:none}.hlist .hlist{display:inline;padding-left:1em}img{max-width:100%}td{padding:0 .5em}.admonition{padding:.1em .5em;margin-bottom:1em}.admonition-title{font-weight:bold}.admonition.note,.admonition.info,.admonition.important{background:#aef}.admonition.todo,.admonition.versionadded,.admonition.tip,.admonition.hint{background:#dfd}.admonition.warning,.admonition.versionchanged,.admonition.deprecated{background:#fd4}.admonition.error,.admonition.danger,.admonition.caution{background:lightpink}</style>
+<style media="screen and (min-width: 700px)">@media screen and (min-width:700px){#sidebar{width:30%;height:100vh;overflow:auto;position:sticky;top:0}#content{width:70%;max-width:100ch;padding:3em 4em;border-left:1px solid #ddd}pre code{font-size:1em}.item .name{font-size:1em}main{display:flex;flex-direction:row-reverse;justify-content:flex-end}.toc ul ul,#index ul{padding-left:1.5em}.toc > ul > li{margin-top:.5em}}</style>
+<style media="print">@media print{#sidebar h1{page-break-before:always}.source{display:none}}@media print{*{background:transparent !important;color:#000 !important;box-shadow:none !important;text-shadow:none !important}a[href]:after{content:" (" attr(href) ")";font-size:90%}a[href][title]:after{content:none}abbr[title]:after{content:" (" attr(title) ")"}.ir a:after,a[href^="javascript:"]:after,a[href^="#"]:after{content:""}pre,blockquote{border:1px solid #999;page-break-inside:avoid}thead{display:table-header-group}tr,img{page-break-inside:avoid}img{max-width:100% !important}@page{margin:0.5cm}p,h2,h3{orphans:3;widows:3}h1,h2,h3,h4,h5,h6{page-break-after:avoid}}</style>
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/highlight.min.js" integrity="sha256-eOgo0OtLL4cdq7RdwRUiGKLX9XsIJ7nGhWEKbohmVAQ=" crossorigin></script>
+<script>window.addEventListener('DOMContentLoaded', () => hljs.initHighlighting())</script>
+</head>
+<body>
+<main>
+<article id="content">
+<header>
+<h1 class="title">Module <code>Main.Printing</code></h1>
+</header>
+<section id="section-intro">
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">from PyQt5 import QtWidgets, QtCore, QtPrintSupport, QtGui
+from PyQt5.QtGui import QPainter
+from PyQt5.QtWidgets import QApplication
+import sys
+from Tab import Tab
+
+class Print(QtWidgets.QWidget):
+    def __init__(self,tab):
+        QtWidgets.QWidget.__init__(self)
+        self.setWindowTitle(self.tr(&#39;Drucken von Berechnungen&#39;))
+        rows = len(tab.data.layers)
+        self.tab = tab
+        self.tableinput = QtWidgets.QTableWidget(rows,5,self)
+        self.tableoutput = QtWidgets.QTableWidget(rows,3,self)
+        self.printer = QtPrintSupport.QPrinter(QtPrintSupport.QPrinter.PrinterResolution)
+        self.printer.setPageMargins(12,16,12,20, QtPrintSupport.QPrinter.Millimeter)
+        self.printer.setFullPage(True)
+        self.printer.setPageSize(QtPrintSupport.QPrinter.A4)
+        self.cLocale = QtCore.QLocale()
+        i=0
+        for layer in tab.data.layers:
+            item = []
+            item.append(QtWidgets.QTableWidgetItem(&#34;{}&#34;.format(i+1)))
+            item.append(QtWidgets.QTableWidgetItem(&#34;{}&#34;.format(layer.mat)))
+            item.append(QtWidgets.QTableWidgetItem(&#34;{}&#34;.format(layer.width)))
+            item.append(QtWidgets.QTableWidgetItem(self.cLocale.toString(round(layer.lambda_,2),&#39;f&#39;,2)))
+            item.append(QtWidgets.QTableWidgetItem(self.cLocale.toString(round(layer.rho,2),&#39;f&#39;,2)))
+            for x in range(5):
+                item[x].setTextAlignment(QtCore.Qt.AlignCenter)
+                self.tableinput.setItem(i,x,item[x])
+            i+=1
+        self.tableinputHorizontalHeaderLabels =&#39;Nr. der Schicht|Bezeichnung|Dicke in M|Wärmeleitfähigkeit in Wm&lt;sup&gt;-1&lt;/sup&gt;K&lt;sup&gt;-1&lt;/sup&gt;|Wärmedurchlasswiderstand in m&lt;sup&gt;2&lt;/sup&gt;KW&lt;sup&gt;-1&lt;/sup&gt;&#39;.split(&#39;|&#39;)
+        i=0
+        for layer in range (len(self.tab.data.layers)):
+            item=[]
+            if layer == 0:
+                item.append(QtWidgets.QTableWidgetItem(&#34;i/%d&#34; % (layer+1)))
+            else:
+                try:
+                    item.append(QtWidgets.QTableWidgetItem(&#34;%d/%d&#34; % (layer,layer+1)))
+                except:
+                    item.append(QtWidgets.QTableWidgetItem(&#34;0/0&#34;))
+            try:
+                print(&#34;printing mat&#34;)
+                print(self.tab.data.layers[layer].mat)
+                item.append(QtWidgets.QTableWidgetItem(&#34;{}/{}&#34;.format((self.tab.data.layers[layer].mat,tab.data.layers[layer+1].mat))))
+            except:
+                item.append(QtWidgets.QTableWidgetItem(&#34;...&#34;))
+            try:
+                item.append(QtWidgets.QTableWidgetItem(self.cLocale.toString(round(self.tab.data.layers[layer].t_left,2),&#39;f&#39;,2)))
+                #item.append(QtWidgets.QTableWidgetItem(&#34;{}&#34;.format(self.tab.data.layers[layer].t_left)))
+            except:
+                item.append(QtWidgets.QTableWidgetItem(&#34;Keine Temperatur vorhanden&#34;))
+            for x in range(3):
+                self.tableoutput.setItem(i,x,item[x])
+            i+=1
+        self.tableoutputHorizontalHeaderLabels=&#39;k/I|Grenzfläche|T&lt;sub&gt;k/I&lt;/sub&gt; in °C&#39;.split(&#39;|&#39;)
+
+    def handlePrint(self):
+        dialog = QtPrintSupport.QPrintDialog()
+        if dialog.exec_() == QtWidgets.QDialog.Accepted:
+            self.handlePaintRequest(dialog.printer())
+
+    def handlePreview(self):
+        dialog = QtPrintSupport.QPrintPreviewDialog()
+        rec = QApplication.desktop().screenGeometry()
+        dialog.resize(0.8*(rec.width()),0.8*(rec.height()))
+        dialog.paintRequested.connect(self.handlePaintRequest)
+        dialog.exec_()
+
+    def handlePaintRequest(self,printer):
+        table_format = QtGui.QTextTableFormat()
+        table_format.setWidth(int(printer.pageRect().width())-int(0.2*(printer.pageRect().width())))
+        document = QtGui.QTextDocument()
+        #document.setDocumentMargin(100)
+        #document.setPageSize(QtCore.QSizeF(printer.pageRect().width))
+        print(printer.pageRect())
+        dialog = QtPrintSupport.QPrintPreviewDialog()
+        cursor = QtGui.QTextCursor(document)
+        cursor.MoveOperation(1)
+        cursor.insertHtml(&#34;&lt;h1&gt;Bezeichnung der Konstruktion: %s&lt;/h1&gt;&#34; % (str(self.tab.data.name)))
+        cursor.insertHtml(&#34;&lt;br&gt;&lt;h2&gt;Material- und Konstruktionsdaten:&lt;/h2&gt;&#34;)
+        table = cursor.insertTable(
+            (self.tableinput.rowCount()+1), self.tableinput.columnCount(), table_format)
+        for row in range(table.rows()):
+            for col in range(table.columns()):
+                if row == 0:
+                    cursor.insertHtml(&#34;&lt;b&gt;&#34;+str(self.tableinputHorizontalHeaderLabels[col])+&#34;&lt;/b&gt;&#34;)
+                else:
+                    if self.tableinput.item(row-1, col) is None:
+                        cursor.insertText(&#34;0&#34;)
+                    else:
+                        try:
+                            self.tableinput.item(row-1,col).setTextAlignment(QtCore.Qt.AlignCenter)
+                            cursor.insertText(self.tableinput.item(row-1, col).text())
+                        except:
+                            cursor.insertText(&#34;NONETYPE&#34;)
+                cursor.movePosition(QtGui.QTextCursor.NextCell)
+        cursor.movePosition(16)
+        cursor.insertHtml(&#34;&lt;br&gt;&lt;div&gt; Innenlufttemperatur: T&lt;sub&gt;i&lt;/sub&gt; = %s °C&#34; %str(self.tab.data.tleft))
+        cursor.insertHtml(&#34;&lt;br&gt;&lt;div&gt; Außentemperatur: T&lt;sub&gt;e&lt;/sub&gt; = %s °C&#34; %str(self.tab.data.tright))
+        cursor.insertHtml(&#34;&lt;br&gt;&lt;div&gt; Wärmeübergangswiderstand auf der Innenseite: R&lt;sub&gt;si&lt;/sub&gt; = {} m&lt;sup&gt;2&lt;/sup&gt;KW&lt;sup&gt;-1&lt;/sup&gt;&#34;.format(self.cLocale.toString(round(self.tab.data.rleft,2),&#39;f&#39;,2)))
+        cursor.insertHtml(&#34;&lt;br&gt;&lt;div&gt; Wärmeübergangswiderstand auf der Außenseite: R&lt;sub&gt;se&lt;/sub&gt; = {} m&lt;sup&gt;2&lt;/sup&gt;KW&lt;sup&gt;-1&lt;/sup&gt;&#34;.format(self.cLocale.toString(round(self.tab.data.rright,2),&#39;f&#39;,2)))
+        cursor.insertHtml(&#34;&lt;br&gt;&lt;div&gt; Wärmedurchlasswiderstand : R&lt;sub&gt;ges&lt;/sub&gt; = {} m&lt;sup&gt;2&lt;/sup&gt;KW&lt;sup&gt;-1&lt;/sup&gt;&#34;.format(self.cLocale.toString(round(self.tab.data.rsum,2),&#39;f&#39;,2)))
+        cursor.insertHtml(&#34;&lt;br&gt;&lt;div&gt; Wärmedurchgangswiderstand : R&lt;sub&gt;T&lt;/sub&gt; = {} m&lt;sup&gt;2&lt;/sup&gt;KW&lt;sup&gt;-1&lt;/sup&gt;&#34;.format(self.cLocale.toString(round(self.tab.data.rt,2),&#39;f&#39;,2)))
+        cursor.insertHtml(&#34;&lt;br&gt;&lt;div&gt; Wärmedurchgangskoeffizient : U = {} Wm&lt;sup&gt;-2&lt;/sup&gt;K&lt;sup&gt;-1&lt;/sup&gt;&lt;br&gt;&#34;.format(self.cLocale.toString(round(self.tab.data.u,2),&#39;f&#39;,2)))
+        cursor.insertHtml(&#34;&lt;h2&gt;Temperaturen an den Grenzflächen:&lt;/h2&gt;&#34;)
+        table2 = cursor.insertTable(
+            self.tableoutput.rowCount()+1, self.tableoutput.columnCount(), table_format)
+
+        for row in range(table2.rows()):
+            for col in range(table2.columns()):
+                if row == 0:
+                    cursor.insertHtml(&#34;&lt;b&gt;&#34;+str(self.tableoutputHorizontalHeaderLabels[col])+&#34;&lt;/b&gt;&#34;)
+                else:
+                    try:
+                        cursor.insertText(self.tableoutput.item(row-1, col).text())
+                    except:
+                        pass
+                cursor.movePosition(QtGui.QTextCursor.NextCell)
+        cursor.setPosition((cursor.position()+1))
+        img = self.tab.visualizeWidget.getImage()
+        if img is not None:
+            cursor.insertImage(img)
+        else:
+            print(&#34;is none&#34;)
+        document.print_(printer)</code></pre>
+</details>
+</section>
+<section>
+</section>
+<section>
+</section>
+<section>
+</section>
+<section>
+<h2 class="section-title" id="header-classes">Classes</h2>
+<dl>
+<dt id="Main.Printing.Print"><code class="flex name class">
+<span>class <span class="ident">Print</span></span>
+<span>(</span><span>tab)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>QWidget(parent: QWidget = None, flags: Union[Qt.WindowFlags, Qt.WindowType] = Qt.WindowFlags())</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">class Print(QtWidgets.QWidget):
+    def __init__(self,tab):
+        QtWidgets.QWidget.__init__(self)
+        self.setWindowTitle(self.tr(&#39;Drucken von Berechnungen&#39;))
+        rows = len(tab.data.layers)
+        self.tab = tab
+        self.tableinput = QtWidgets.QTableWidget(rows,5,self)
+        self.tableoutput = QtWidgets.QTableWidget(rows,3,self)
+        self.printer = QtPrintSupport.QPrinter(QtPrintSupport.QPrinter.PrinterResolution)
+        self.printer.setPageMargins(12,16,12,20, QtPrintSupport.QPrinter.Millimeter)
+        self.printer.setFullPage(True)
+        self.printer.setPageSize(QtPrintSupport.QPrinter.A4)
+        self.cLocale = QtCore.QLocale()
+        i=0
+        for layer in tab.data.layers:
+            item = []
+            item.append(QtWidgets.QTableWidgetItem(&#34;{}&#34;.format(i+1)))
+            item.append(QtWidgets.QTableWidgetItem(&#34;{}&#34;.format(layer.mat)))
+            item.append(QtWidgets.QTableWidgetItem(&#34;{}&#34;.format(layer.width)))
+            item.append(QtWidgets.QTableWidgetItem(self.cLocale.toString(round(layer.lambda_,2),&#39;f&#39;,2)))
+            item.append(QtWidgets.QTableWidgetItem(self.cLocale.toString(round(layer.rho,2),&#39;f&#39;,2)))
+            for x in range(5):
+                item[x].setTextAlignment(QtCore.Qt.AlignCenter)
+                self.tableinput.setItem(i,x,item[x])
+            i+=1
+        self.tableinputHorizontalHeaderLabels =&#39;Nr. der Schicht|Bezeichnung|Dicke in M|Wärmeleitfähigkeit in Wm&lt;sup&gt;-1&lt;/sup&gt;K&lt;sup&gt;-1&lt;/sup&gt;|Wärmedurchlasswiderstand in m&lt;sup&gt;2&lt;/sup&gt;KW&lt;sup&gt;-1&lt;/sup&gt;&#39;.split(&#39;|&#39;)
+        i=0
+        for layer in range (len(self.tab.data.layers)):
+            item=[]
+            if layer == 0:
+                item.append(QtWidgets.QTableWidgetItem(&#34;i/%d&#34; % (layer+1)))
+            else:
+                try:
+                    item.append(QtWidgets.QTableWidgetItem(&#34;%d/%d&#34; % (layer,layer+1)))
+                except:
+                    item.append(QtWidgets.QTableWidgetItem(&#34;0/0&#34;))
+            try:
+                print(&#34;printing mat&#34;)
+                print(self.tab.data.layers[layer].mat)
+                item.append(QtWidgets.QTableWidgetItem(&#34;{}/{}&#34;.format((self.tab.data.layers[layer].mat,tab.data.layers[layer+1].mat))))
+            except:
+                item.append(QtWidgets.QTableWidgetItem(&#34;...&#34;))
+            try:
+                item.append(QtWidgets.QTableWidgetItem(self.cLocale.toString(round(self.tab.data.layers[layer].t_left,2),&#39;f&#39;,2)))
+                #item.append(QtWidgets.QTableWidgetItem(&#34;{}&#34;.format(self.tab.data.layers[layer].t_left)))
+            except:
+                item.append(QtWidgets.QTableWidgetItem(&#34;Keine Temperatur vorhanden&#34;))
+            for x in range(3):
+                self.tableoutput.setItem(i,x,item[x])
+            i+=1
+        self.tableoutputHorizontalHeaderLabels=&#39;k/I|Grenzfläche|T&lt;sub&gt;k/I&lt;/sub&gt; in °C&#39;.split(&#39;|&#39;)
+
+    def handlePrint(self):
+        dialog = QtPrintSupport.QPrintDialog()
+        if dialog.exec_() == QtWidgets.QDialog.Accepted:
+            self.handlePaintRequest(dialog.printer())
+
+    def handlePreview(self):
+        dialog = QtPrintSupport.QPrintPreviewDialog()
+        rec = QApplication.desktop().screenGeometry()
+        dialog.resize(0.8*(rec.width()),0.8*(rec.height()))
+        dialog.paintRequested.connect(self.handlePaintRequest)
+        dialog.exec_()
+
+    def handlePaintRequest(self,printer):
+        table_format = QtGui.QTextTableFormat()
+        table_format.setWidth(int(printer.pageRect().width())-int(0.2*(printer.pageRect().width())))
+        document = QtGui.QTextDocument()
+        #document.setDocumentMargin(100)
+        #document.setPageSize(QtCore.QSizeF(printer.pageRect().width))
+        print(printer.pageRect())
+        dialog = QtPrintSupport.QPrintPreviewDialog()
+        cursor = QtGui.QTextCursor(document)
+        cursor.MoveOperation(1)
+        cursor.insertHtml(&#34;&lt;h1&gt;Bezeichnung der Konstruktion: %s&lt;/h1&gt;&#34; % (str(self.tab.data.name)))
+        cursor.insertHtml(&#34;&lt;br&gt;&lt;h2&gt;Material- und Konstruktionsdaten:&lt;/h2&gt;&#34;)
+        table = cursor.insertTable(
+            (self.tableinput.rowCount()+1), self.tableinput.columnCount(), table_format)
+        for row in range(table.rows()):
+            for col in range(table.columns()):
+                if row == 0:
+                    cursor.insertHtml(&#34;&lt;b&gt;&#34;+str(self.tableinputHorizontalHeaderLabels[col])+&#34;&lt;/b&gt;&#34;)
+                else:
+                    if self.tableinput.item(row-1, col) is None:
+                        cursor.insertText(&#34;0&#34;)
+                    else:
+                        try:
+                            self.tableinput.item(row-1,col).setTextAlignment(QtCore.Qt.AlignCenter)
+                            cursor.insertText(self.tableinput.item(row-1, col).text())
+                        except:
+                            cursor.insertText(&#34;NONETYPE&#34;)
+                cursor.movePosition(QtGui.QTextCursor.NextCell)
+        cursor.movePosition(16)
+        cursor.insertHtml(&#34;&lt;br&gt;&lt;div&gt; Innenlufttemperatur: T&lt;sub&gt;i&lt;/sub&gt; = %s °C&#34; %str(self.tab.data.tleft))
+        cursor.insertHtml(&#34;&lt;br&gt;&lt;div&gt; Außentemperatur: T&lt;sub&gt;e&lt;/sub&gt; = %s °C&#34; %str(self.tab.data.tright))
+        cursor.insertHtml(&#34;&lt;br&gt;&lt;div&gt; Wärmeübergangswiderstand auf der Innenseite: R&lt;sub&gt;si&lt;/sub&gt; = {} m&lt;sup&gt;2&lt;/sup&gt;KW&lt;sup&gt;-1&lt;/sup&gt;&#34;.format(self.cLocale.toString(round(self.tab.data.rleft,2),&#39;f&#39;,2)))
+        cursor.insertHtml(&#34;&lt;br&gt;&lt;div&gt; Wärmeübergangswiderstand auf der Außenseite: R&lt;sub&gt;se&lt;/sub&gt; = {} m&lt;sup&gt;2&lt;/sup&gt;KW&lt;sup&gt;-1&lt;/sup&gt;&#34;.format(self.cLocale.toString(round(self.tab.data.rright,2),&#39;f&#39;,2)))
+        cursor.insertHtml(&#34;&lt;br&gt;&lt;div&gt; Wärmedurchlasswiderstand : R&lt;sub&gt;ges&lt;/sub&gt; = {} m&lt;sup&gt;2&lt;/sup&gt;KW&lt;sup&gt;-1&lt;/sup&gt;&#34;.format(self.cLocale.toString(round(self.tab.data.rsum,2),&#39;f&#39;,2)))
+        cursor.insertHtml(&#34;&lt;br&gt;&lt;div&gt; Wärmedurchgangswiderstand : R&lt;sub&gt;T&lt;/sub&gt; = {} m&lt;sup&gt;2&lt;/sup&gt;KW&lt;sup&gt;-1&lt;/sup&gt;&#34;.format(self.cLocale.toString(round(self.tab.data.rt,2),&#39;f&#39;,2)))
+        cursor.insertHtml(&#34;&lt;br&gt;&lt;div&gt; Wärmedurchgangskoeffizient : U = {} Wm&lt;sup&gt;-2&lt;/sup&gt;K&lt;sup&gt;-1&lt;/sup&gt;&lt;br&gt;&#34;.format(self.cLocale.toString(round(self.tab.data.u,2),&#39;f&#39;,2)))
+        cursor.insertHtml(&#34;&lt;h2&gt;Temperaturen an den Grenzflächen:&lt;/h2&gt;&#34;)
+        table2 = cursor.insertTable(
+            self.tableoutput.rowCount()+1, self.tableoutput.columnCount(), table_format)
+
+        for row in range(table2.rows()):
+            for col in range(table2.columns()):
+                if row == 0:
+                    cursor.insertHtml(&#34;&lt;b&gt;&#34;+str(self.tableoutputHorizontalHeaderLabels[col])+&#34;&lt;/b&gt;&#34;)
+                else:
+                    try:
+                        cursor.insertText(self.tableoutput.item(row-1, col).text())
+                    except:
+                        pass
+                cursor.movePosition(QtGui.QTextCursor.NextCell)
+        cursor.setPosition((cursor.position()+1))
+        img = self.tab.visualizeWidget.getImage()
+        if img is not None:
+            cursor.insertImage(img)
+        else:
+            print(&#34;is none&#34;)
+        document.print_(printer)</code></pre>
+</details>
+<h3>Ancestors</h3>
+<ul class="hlist">
+<li>PyQt5.QtWidgets.QWidget</li>
+<li>PyQt5.QtCore.QObject</li>
+<li>sip.wrapper</li>
+<li>PyQt5.QtGui.QPaintDevice</li>
+<li>sip.simplewrapper</li>
+</ul>
+<h3>Methods</h3>
+<dl>
+<dt id="Main.Printing.Print.handlePaintRequest"><code class="name flex">
+<span>def <span class="ident">handlePaintRequest</span></span>(<span>self, printer)</span>
+</code></dt>
+<dd>
+<div class="desc"></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def handlePaintRequest(self,printer):
+    table_format = QtGui.QTextTableFormat()
+    table_format.setWidth(int(printer.pageRect().width())-int(0.2*(printer.pageRect().width())))
+    document = QtGui.QTextDocument()
+    #document.setDocumentMargin(100)
+    #document.setPageSize(QtCore.QSizeF(printer.pageRect().width))
+    print(printer.pageRect())
+    dialog = QtPrintSupport.QPrintPreviewDialog()
+    cursor = QtGui.QTextCursor(document)
+    cursor.MoveOperation(1)
+    cursor.insertHtml(&#34;&lt;h1&gt;Bezeichnung der Konstruktion: %s&lt;/h1&gt;&#34; % (str(self.tab.data.name)))
+    cursor.insertHtml(&#34;&lt;br&gt;&lt;h2&gt;Material- und Konstruktionsdaten:&lt;/h2&gt;&#34;)
+    table = cursor.insertTable(
+        (self.tableinput.rowCount()+1), self.tableinput.columnCount(), table_format)
+    for row in range(table.rows()):
+        for col in range(table.columns()):
+            if row == 0:
+                cursor.insertHtml(&#34;&lt;b&gt;&#34;+str(self.tableinputHorizontalHeaderLabels[col])+&#34;&lt;/b&gt;&#34;)
+            else:
+                if self.tableinput.item(row-1, col) is None:
+                    cursor.insertText(&#34;0&#34;)
+                else:
+                    try:
+                        self.tableinput.item(row-1,col).setTextAlignment(QtCore.Qt.AlignCenter)
+                        cursor.insertText(self.tableinput.item(row-1, col).text())
+                    except:
+                        cursor.insertText(&#34;NONETYPE&#34;)
+            cursor.movePosition(QtGui.QTextCursor.NextCell)
+    cursor.movePosition(16)
+    cursor.insertHtml(&#34;&lt;br&gt;&lt;div&gt; Innenlufttemperatur: T&lt;sub&gt;i&lt;/sub&gt; = %s °C&#34; %str(self.tab.data.tleft))
+    cursor.insertHtml(&#34;&lt;br&gt;&lt;div&gt; Außentemperatur: T&lt;sub&gt;e&lt;/sub&gt; = %s °C&#34; %str(self.tab.data.tright))
+    cursor.insertHtml(&#34;&lt;br&gt;&lt;div&gt; Wärmeübergangswiderstand auf der Innenseite: R&lt;sub&gt;si&lt;/sub&gt; = {} m&lt;sup&gt;2&lt;/sup&gt;KW&lt;sup&gt;-1&lt;/sup&gt;&#34;.format(self.cLocale.toString(round(self.tab.data.rleft,2),&#39;f&#39;,2)))
+    cursor.insertHtml(&#34;&lt;br&gt;&lt;div&gt; Wärmeübergangswiderstand auf der Außenseite: R&lt;sub&gt;se&lt;/sub&gt; = {} m&lt;sup&gt;2&lt;/sup&gt;KW&lt;sup&gt;-1&lt;/sup&gt;&#34;.format(self.cLocale.toString(round(self.tab.data.rright,2),&#39;f&#39;,2)))
+    cursor.insertHtml(&#34;&lt;br&gt;&lt;div&gt; Wärmedurchlasswiderstand : R&lt;sub&gt;ges&lt;/sub&gt; = {} m&lt;sup&gt;2&lt;/sup&gt;KW&lt;sup&gt;-1&lt;/sup&gt;&#34;.format(self.cLocale.toString(round(self.tab.data.rsum,2),&#39;f&#39;,2)))
+    cursor.insertHtml(&#34;&lt;br&gt;&lt;div&gt; Wärmedurchgangswiderstand : R&lt;sub&gt;T&lt;/sub&gt; = {} m&lt;sup&gt;2&lt;/sup&gt;KW&lt;sup&gt;-1&lt;/sup&gt;&#34;.format(self.cLocale.toString(round(self.tab.data.rt,2),&#39;f&#39;,2)))
+    cursor.insertHtml(&#34;&lt;br&gt;&lt;div&gt; Wärmedurchgangskoeffizient : U = {} Wm&lt;sup&gt;-2&lt;/sup&gt;K&lt;sup&gt;-1&lt;/sup&gt;&lt;br&gt;&#34;.format(self.cLocale.toString(round(self.tab.data.u,2),&#39;f&#39;,2)))
+    cursor.insertHtml(&#34;&lt;h2&gt;Temperaturen an den Grenzflächen:&lt;/h2&gt;&#34;)
+    table2 = cursor.insertTable(
+        self.tableoutput.rowCount()+1, self.tableoutput.columnCount(), table_format)
+
+    for row in range(table2.rows()):
+        for col in range(table2.columns()):
+            if row == 0:
+                cursor.insertHtml(&#34;&lt;b&gt;&#34;+str(self.tableoutputHorizontalHeaderLabels[col])+&#34;&lt;/b&gt;&#34;)
+            else:
+                try:
+                    cursor.insertText(self.tableoutput.item(row-1, col).text())
+                except:
+                    pass
+            cursor.movePosition(QtGui.QTextCursor.NextCell)
+    cursor.setPosition((cursor.position()+1))
+    img = self.tab.visualizeWidget.getImage()
+    if img is not None:
+        cursor.insertImage(img)
+    else:
+        print(&#34;is none&#34;)
+    document.print_(printer)</code></pre>
+</details>
+</dd>
+<dt id="Main.Printing.Print.handlePreview"><code class="name flex">
+<span>def <span class="ident">handlePreview</span></span>(<span>self)</span>
+</code></dt>
+<dd>
+<div class="desc"></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def handlePreview(self):
+    dialog = QtPrintSupport.QPrintPreviewDialog()
+    rec = QApplication.desktop().screenGeometry()
+    dialog.resize(0.8*(rec.width()),0.8*(rec.height()))
+    dialog.paintRequested.connect(self.handlePaintRequest)
+    dialog.exec_()</code></pre>
+</details>
+</dd>
+<dt id="Main.Printing.Print.handlePrint"><code class="name flex">
+<span>def <span class="ident">handlePrint</span></span>(<span>self)</span>
+</code></dt>
+<dd>
+<div class="desc"></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def handlePrint(self):
+    dialog = QtPrintSupport.QPrintDialog()
+    if dialog.exec_() == QtWidgets.QDialog.Accepted:
+        self.handlePaintRequest(dialog.printer())</code></pre>
+</details>
+</dd>
+</dl>
+</dd>
+</dl>
+</section>
+</article>
+<nav id="sidebar">
+<h1>Index</h1>
+<div class="toc">
+<ul></ul>
+</div>
+<ul id="index">
+<li><h3>Super-module</h3>
+<ul>
+<li><code><a title="Main" href="index.html">Main</a></code></li>
+</ul>
+</li>
+<li><h3><a href="#header-classes">Classes</a></h3>
+<ul>
+<li>
+<h4><code><a title="Main.Printing.Print" href="#Main.Printing.Print">Print</a></code></h4>
+<ul class="">
+<li><code><a title="Main.Printing.Print.handlePaintRequest" href="#Main.Printing.Print.handlePaintRequest">handlePaintRequest</a></code></li>
+<li><code><a title="Main.Printing.Print.handlePreview" href="#Main.Printing.Print.handlePreview">handlePreview</a></code></li>
+<li><code><a title="Main.Printing.Print.handlePrint" href="#Main.Printing.Print.handlePrint">handlePrint</a></code></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</nav>
+</main>
+<footer id="footer">
+<p>Generated by <a href="https://pdoc3.github.io/pdoc"><cite>pdoc</cite> 0.8.4</a>.</p>
+</footer>
+</body>
+</html>
