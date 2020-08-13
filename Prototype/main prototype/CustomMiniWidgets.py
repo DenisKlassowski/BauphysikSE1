@@ -3,6 +3,7 @@ from PyQt5 import QtWidgets, QtCore, QtGui
 
 
 class QHLine(QtWidgets.QFrame):
+    """horizontal line used for dividers"""
     def __init__(self):
         QtWidgets.QFrame.__init__(self)
         self.setFrameShape(QtWidgets.QFrame.HLine)
@@ -15,6 +16,7 @@ class QHLine(QtWidgets.QFrame):
         """
 
 class MyDoubleSpinBox(QtWidgets.QDoubleSpinBox):
+    """overriden DoubleSpinBox"""
     def __init__(self):
         QtWidgets.QDoubleSpinBox.__init__(self)
         self.setAccelerated(1)
@@ -29,12 +31,14 @@ class MyDoubleSpinBox(QtWidgets.QDoubleSpinBox):
 
     #overriding scroll events to disable value changes when simply scrolling through e.g. scrollAreas
     def wheelEvent(self, e):
+        """overriden wheelEvent to disable value changes when simply scrolling through e.g. scrollAreas"""
         if(self.hasFocus()):
             QtWidgets.QDoubleSpinBox.wheelEvent(self,e)
         else:
             pass
 
     def setEditable(self, bool):
+        """makes boxes ineditable by user but still editable by software"""
         if bool == 0:
 
             self.setReadOnly(True)
@@ -58,13 +62,8 @@ class MyComboBox(QtWidgets.QComboBox):
         QtWidgets.QComboBox.__init__(self)
         self.setFocusPolicy(QtCore.Qt.StrongFocus)
 
-        """
-        self.setStyleSheet("QComboBox{"
-        "border: 1px solid #000000"
-        "};")
-        """
-
     def wheelEvent(self, e):
+        """overriden wheelEvent to disable value changes when simply scrolling through e.g. scrollAreas"""
         if(self.hasFocus()):
             QtWidgets.QComboBox.wheelEvent(self,e)
         else:

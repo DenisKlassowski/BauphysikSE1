@@ -10,24 +10,29 @@ class LayerWidget(QtWidgets.QWidget):
 
         #information from upper levels
         self.mode=mode
+        """mode the layer is currently operating in"""
         self.position=position
-        
+        """position the layer currently has in the list of layers"""
+
 
         #flag to check whether calculations should happen or not. used for loading/startup process
         self.calculateFlag = 1
-
-
+        """falg to help prevent calculation loops during live calculation"""
         self.customNameFlag = 0
         """flag to check whether layer has been given custom name"""
+
         #layouts
         #main layout
         self.mainLayout = QtWidgets.QVBoxLayout()
+        """layout of the LayerWidget"""
         self.mainLayout.setContentsMargins(0,0,0,0)
         self.mainLayout.setSpacing(10)
 
         #head layout
         self.head = QtWidgets.QWidget()
+        """upper part of LayerWidget"""
         self.headButtons = QtWidgets.QWidget()
+        """buttons located in upper part of LayerWidget"""
 
         self.headLayout = QtWidgets.QHBoxLayout()
         self.headLayout.setContentsMargins(0,0,0,0)
@@ -37,14 +42,17 @@ class LayerWidget(QtWidgets.QWidget):
         self.headButtonLayout.setContentsMargins(0,0,0,0)
         self.headButtonLayout.setSpacing(0)
 
-        #self.layerTitleLabel = QtWidgets.QLabel()
+ 
         self.layerTitleLabel = QtWidgets.QLineEdit()
+        """Title of layer"""
         self.layerTitleLabel.setFixedWidth(400)
         self.layerTitleLabel.editingFinished.connect(self.layerTitleEntered)
 
         self.layerDeleteButton = QtWidgets.QPushButton()
+        """Delete button"""
         self.layerDeleteButton.clicked.connect(self.deleteButtonPressed)
         self.layerAddAfterButton = QtWidgets.QPushButton()
+        """Add (after) button"""
         self.layerAddAfterButton.clicked.connect(self.addAfterButtonPressed)
 
         self.headButtonLayout.addWidget(self.layerAddAfterButton)
@@ -61,6 +69,7 @@ class LayerWidget(QtWidgets.QWidget):
 
         #body layout
         self.body = QtWidgets.QWidget()
+        """main part of layer"""
 
         self.bodyLayout = QtWidgets.QGridLayout()
         self.bodyLayout.setContentsMargins(0,0,0,0)
@@ -68,12 +77,14 @@ class LayerWidget(QtWidgets.QWidget):
 
         self.layerWidthLabel = QtWidgets.QLabel()
         self.layerWidthDoubleSpinBox = MyDoubleSpinBox()
+        """input/output of width"""
         self.layerWidthDoubleSpinBox.setSingleStep(0.001)
         self.layerWidthDoubleSpinBox.setMaximum(9.9999)
         self.layerWidthDoubleSpinBox.setMaximumWidth(100)
         self.layerWidthDoubleSpinBox.valueChanged.connect(self.widthChanged)
 
         self.layerWidthComboBox = MyComboBox()
+        """unit selection for width"""
         self.layerWidthComboBox.addItems({"m"})
         self.layerWidthComboBox.addItems({"cm"})
         self.layerWidthComboBox.addItems({"mm"})
@@ -83,6 +94,7 @@ class LayerWidget(QtWidgets.QWidget):
         self.layerLambdaLabel = QtWidgets.QLabel()
         self.layerLambdaLabel.setAlignment(QtCore.Qt.AlignCenter|QtCore.Qt.AlignRight)
         self.layerLambdaDoubleSpinBox = MyDoubleSpinBox()
+        """input/output of lambda"""
         self.layerLambdaDoubleSpinBox.setMinimum(0.000)
         self.layerLambdaDoubleSpinBox.setValue(0.01)
         self.layerLambdaDoubleSpinBox.setSingleStep(0.01)
@@ -93,6 +105,7 @@ class LayerWidget(QtWidgets.QWidget):
         self.layerResLabel = QtWidgets.QLabel()
         self.layerResLabel.setAlignment(QtCore.Qt.AlignCenter|QtCore.Qt.AlignRight)
         self.layerResDoubleSpinBox = MyDoubleSpinBox()
+        """input/output of R"""
         self.layerResDoubleSpinBox.setDecimals(5)
         self.layerResDoubleSpinBox.setSingleStep(0.0001)
         self.layerResDoubleSpinBox.setMaximum(999.9999)
@@ -102,15 +115,18 @@ class LayerWidget(QtWidgets.QWidget):
         self.layerResUnitLabel = QtWidgets.QLabel()
 
         self.layerResGivenCheckBox = QtWidgets.QCheckBox(QtCore.QCoreApplication.translate("LayerWidget", "R gegeben "))
+        """checkbox whether R is given and lambda should be calculated instead"""
         self.layerResGivenCheckBox.stateChanged.connect(self.resGivenCheckboxChanged)
 
         #data
         if(data is None):
             self.data=LayerData()
+            """data of layer"""
             self.widthFactor = 1
             self.initData()
         else:
             self.data=data
+            """data of layer"""
             self.updateValues()
 
         #assemble body layout
@@ -202,6 +218,7 @@ class LayerWidget(QtWidgets.QWidget):
 
     #update own position and modify text
     def updatePos(self, pos):
+        """update own position and modify text"""
         self.position=pos
         if self.customNameFlag==0:
             self.layerTitleLabel.setText(QtCore.QCoreApplication.translate("LayerWidget", "Schicht ")+str(pos+1))
@@ -209,13 +226,15 @@ class LayerWidget(QtWidgets.QWidget):
 
     #enable/disable delete button
     def setRemovable(self, flag):
+        """enable/disable delete button"""
         if flag == True:
             self.layerDeleteButton.setEnabled(1)
         else:
             self.layerDeleteButton.setEnabled(0)
 
-    #enable/disable lamba box
+    #enable/disable lambda box
     def resGivenCheckboxChanged(self):
+        """enable/disable lambda box"""
         if self.layerResGivenCheckBox.checkState():
             self.layerLambdaDoubleSpinBox.setEditable(0)
             self.layerResDoubleSpinBox.setEditable(1)
@@ -225,6 +244,7 @@ class LayerWidget(QtWidgets.QWidget):
 
     #modify mode of layer
     def switchMode(self,mode):
+        """modify mode of layer"""
         self.mode = mode
 
     #value changes
@@ -266,6 +286,7 @@ class LayerWidget(QtWidgets.QWidget):
         self.calculate()
 
     def calculate(self):
+        """calculation of layer and then overall calculation"""
         if(self.calculateFlag):
             if self.layerResGivenCheckBox.checkState():
                 self.calculate_lambda()
@@ -274,6 +295,7 @@ class LayerWidget(QtWidgets.QWidget):
             self.parent().parent().parent().parent().parent().calculate()
 
     def calculate_r(self):
+        """subfunction of calculate, calculates R for layer"""
         if(self.calculateFlag):
             self.calculateFlag=0
             try:
@@ -285,6 +307,7 @@ class LayerWidget(QtWidgets.QWidget):
             self.calculateFlag=1
 
     def calculate_lambda(self):
+        """subfunction of calculate, calculates lambda for layer"""
         if(self.calculateFlag):
             self.calculateFlag=0
             try:
@@ -296,6 +319,7 @@ class LayerWidget(QtWidgets.QWidget):
             self.calculateFlag=1
 
     def updateValues(self):
+        """updates values in layer with corresponding values from data"""
         self.calculateFlag=0
         if self.data.widthUnit==0:
             self.widthFactor=1
@@ -315,3 +339,4 @@ class LayerWidget(QtWidgets.QWidget):
     def layerTitleEntered(self):
         self.data.name = self.layerTitleLabel.text()
         self.customNameFlag = 1
+        

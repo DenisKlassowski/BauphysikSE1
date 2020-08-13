@@ -15,6 +15,7 @@ class MainWindow(QtWidgets.QMainWindow):
 
         #menu bar
         bar=self.menuBar()
+        """top menuBar"""
         self.menuBar().setStyleSheet("""
         QMenuBar{
         color: rgb(255, 255, 255);
@@ -42,21 +43,31 @@ class MainWindow(QtWidgets.QMainWindow):
         """)
 
         self.menuFile = bar.addMenu(QtCore.QCoreApplication.translate("MainWindow","Datei"))
+        """File menu"""
         #menuLanguage = bar.addMenu(QtCore.QCoreApplication.translate("MainWindow","Sprache"))
+        #"""Language menu"""
         self.menuModus = bar.addMenu(QtCore.QCoreApplication.translate("MainWindow","Modus"))
+        """Mode menu"""
 
         #language actions
-        self.actionGerman = QtWidgets.QAction()
-        self.actionEnglish = QtWidgets.QAction()
+        #self.actionGerman = QtWidgets.QAction()
+        #"""German action"""
+        #self.actionEnglish = QtWidgets.QAction()
+        #"""English action"""
         #menuLanguage.addAction(self.actionGerman)
         #menuLanguage.addAction(self.actionEnglish)
 
         #file actions
         self.actionNew = QtWidgets.QAction()
+        """New (File) action"""
         self.actionSave = QtWidgets.QAction()
+        """Save (File) action"""
         self.actionSaveAs = QtWidgets.QAction()
+        """Save As (File) action"""
         self.actionLoad = QtWidgets.QAction()
+        """Open (File) action"""
         self.actionPrint = QtWidgets.QAction()
+        """Print (File) action """
 
         self.actionPrint.triggered.connect(self.printing)
         self.actionNew.triggered.connect(self.switchToNewTab)
@@ -77,7 +88,9 @@ class MainWindow(QtWidgets.QMainWindow):
 
         #modus actions
         self.actionModusU = QtWidgets.QAction()
+        """U (Mode) action"""
         self.actionModusTemp = QtWidgets.QAction()
+        """Temp (Mode) action"""
 
         self.actionModusU.triggered.connect(self.modusSwitchToU)
         self.actionModusTemp.triggered.connect(self.modusSwitchToTemp)
@@ -99,6 +112,7 @@ class MainWindow(QtWidgets.QMainWindow):
 
         #tab widget
         self.tabWidget = QtWidgets.QTabWidget()
+        """tabWidget which holds the core application"""
         self.tabWidget.tabBarDoubleClicked.connect(self.newTabName)
         self.tabWidget.setTabsClosable(True)
         self.tabWidget.setMovable(False)
@@ -106,6 +120,7 @@ class MainWindow(QtWidgets.QMainWindow):
         self.tabWidget.setMinimumWidth(800)
 
         self.newTab = NewTab()
+        """New Tab page"""
         self.tabWidget.addTab(self.newTab, "+")
         self.tabWidget.tabBar().tabButton(0,QtWidgets.QTabBar.RightSide).resize(0,0)
 
@@ -117,64 +132,11 @@ class MainWindow(QtWidgets.QMainWindow):
 
         self.retranslateUi()
 
-        """
-        self.setStyleSheet("QWidget{"
-        #"background-color: #A0BEEA;"
-        "background-color: #ffffff;"
-        "border: 0px solid #ff0000;"
-        "}"
-        "QLabel{"
-        "padding: 5px;"
-        "}"
-        "QPushButton{"
-        "border: 0px solid #ff0000;"
-        "color: rgb(255, 255, 255);"
-        "padding: 5px;"
-        "background-color: #7099D6;;"
-        "}"
-        "QPushButton:hover {"
-        "border: 1px solid #333333;"
-        "color: rgb(255, 255, 255);"
-        "background-color: #2F63AF;"
-        "}"
-        "QPushButton:pressed {"
-        "border: 1px solid #333333;"
-        "color: rgb(255, 255, 255);"
-        "background-color: #12499A;"
-        "}"
-        "QPushButton:disabled {"
-        "border: 0px solid #333333;"
-        "color: rgb(150, 150, 150);"
-        "background-color: #134078;"
-        "}"
-        "QDoubleSpinBox{"
-        "background-color: #ffffff;"
-        "}"
-        "QTabWidget:pane{"
-        "border: 0px solid #ffffff;"
-        "}"
-        "QTabBar:tab{"
-        "border: 0px solid #ffffff;"
-        "padding: 5px;"
-        "}"
-        "QTabBar:tab:!selected:hover{"
-        "background-color: #A0BEEA;"
-        "}"
-        "QTabBar:tab:selected{"
-        "background-color: #ffffff;"
-        "color: #000000;"
-        "}"
-        "QTabBar:tab:!selected{"
-        "background-color: #7099D6;"
-        "color: #ffffff;"
-        "margin-top: 5px;"
-        "};")
-        """
-
         self.move(0,0)
         self.show()
 
     def activateMenues(self):
+        """changes the availability of actions according to whether a normal tab or the New Tab page is in focus"""
         if(self.tabWidget.currentIndex()==(self.tabWidget.count()-1)):
             self.menuModus.menuAction().setEnabled(False)
             self.menuFile.actions()[1].setEnabled(False)
@@ -188,6 +150,7 @@ class MainWindow(QtWidgets.QMainWindow):
 
 
     def addNewTab(self, modus, tabData=None):
+        """adds new tab"""
         if(tabData is None):
             tab = Tab (modus, QtCore.QCoreApplication.translate("MainWindow","Neuer Tab"))
             self.tabWidget.insertTab(self.tabWidget.count()-1,tab, QtCore.QCoreApplication.translate("MainWindow","Neuer Tab"))
@@ -197,20 +160,25 @@ class MainWindow(QtWidgets.QMainWindow):
         self.tabWidget.setCurrentIndex(self.tabWidget.count()-2)
 
     def closeTab(self,index):
+        """closes Tab at index"""
         self.tabWidget.widget(index).removeSelf()
         self.tabWidget.removeTab(index)
 
     def modusSwitchToU(self):
+        """switches current tab to U mode"""
         self.tabWidget.currentWidget().switchToU()
 
     def modusSwitchToTemp(self):
+        """switches current tab to Temp mode"""
         self.tabWidget.currentWidget().switchToTemp()
 
     def printing(self):
+        """opens Print dialogue"""
         print = Print(self.tabWidget.currentWidget())
         print.handlePreview()
 
     def saveAs(self):
+        """opens Save File dialogue and saves current tab as a File"""
         tr = QtCore.QCoreApplication.translate
         fileName = QtWidgets.QFileDialog.getSaveFileName(self, tr("SaveDialog:", "Berechnung speichern"), "", tr("SaveDialog:","Bauphysikberechnung (*.baup);;Alle Dateien (*)"))
         if(all(fileName)):
@@ -236,10 +204,12 @@ class MainWindow(QtWidgets.QMainWindow):
             return
 
     def updateName(self):
+        """updates name of current tab"""
         name = self.tabWidget.currentWidget().data.name
         self.tabWidget.setTabText(self.tabWidget.currentIndex(), name)
 
     def quickSave(self):
+        """saves current tab. If it has not been saved previously, opens Save As dialogue"""
         if self.tabWidget.currentWidget().data.currentFileLocation is None:
             self.saveAs()
         else:
@@ -247,6 +217,7 @@ class MainWindow(QtWidgets.QMainWindow):
             exp.export(self.tabWidget.currentWidget().data.currentFileLocation)
 
     def openFile(self):
+        """opens Open File dialogue"""
         tr = QtCore.QCoreApplication.translate
         fileName = QtWidgets.QFileDialog.getOpenFileName(self,tr("OpenDialog:", "Berechnung öffnen"), "", tr("OpenDialog:","Bauphysikberechnung (*.baup);;Alle Dateien (*)"))
         if(all(fileName)):
@@ -263,6 +234,7 @@ class MainWindow(QtWidgets.QMainWindow):
 
 
     def switchToNewTab(self):
+        """switches to New Tab tab"""
         self.tabWidget.setCurrentIndex(self.tabWidget.count()-1)
 
     def retranslateUi(self):
@@ -282,7 +254,7 @@ class MainWindow(QtWidgets.QMainWindow):
         #modus options
         self.actionModusU.setText(_translate("MainWindow","U berechnen"))
         self.actionModusTemp.setText(_translate("MainWindow","Temperaturkurve berechnen"))
-    
+
     def newTabName(self):
         dialogChangeName,state = QInputDialog().getText(self, "Tab-Namen eingeben","Neuer Name", QLineEdit.Normal)
         if state:
@@ -290,7 +262,5 @@ class MainWindow(QtWidgets.QMainWindow):
             self.tabWidget.widget(self.tabWidget.currentIndex()).updateNameData(dialogChangeName)
         else:
             pass
-
-
 
 
