@@ -14,13 +14,11 @@ class TempWidget(QtWidgets.QWidget):
         tempLayout.setSpacing(20)
 
         self.tempTitleLabel = QtWidgets.QLabel()
-        """title of TempWidget"""
         self.tempInsideLabel = QtWidgets.QLabel()
         self.tempOutsideLabel = QtWidgets.QLabel()
 
         #hard coded solution for spinbox size, could be done better?
         self.tempOutsideDoubleSpinBox = MyDoubleSpinBox()
-        """input/output for T_inside"""
         self.tempOutsideDoubleSpinBox.setMaximum(1000)
         self.tempOutsideDoubleSpinBox.setMinimum(-273.15)
         self.tempOutsideDoubleSpinBox.setDecimals(2)
@@ -30,7 +28,6 @@ class TempWidget(QtWidgets.QWidget):
 
         #hard coded solution for spinbox size, could be done better?
         self.tempInsideDoubleSpinBox = MyDoubleSpinBox()
-        """input/output for T_inside"""
         self.tempInsideDoubleSpinBox.setMaximum(1000)
         self.tempInsideDoubleSpinBox.setMinimum(-273.15)
         self.tempInsideDoubleSpinBox.setDecimals(2)
@@ -67,7 +64,6 @@ class TempWidget(QtWidgets.QWidget):
         self.tempCelsiusLabel2.setText(_translate("TempWidget", "°C"))
 
     def setData(self, tleft, tright):
-        """sets spinboxes with given data"""
         self.tempInsideDoubleSpinBox.setValue(tleft)
         self.tempOutsideDoubleSpinBox.setValue(tright)
 

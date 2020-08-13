@@ -25,7 +25,8 @@ class Exporter:
             layers += str(layer.t_left) + ", "
             layers += str(layer.t_right) + ", "
             layers += str(layer.rho) + ", "
-            layers += str(layer.mat) + "\n"
+            layers += str(layer.mat) + ", "
+            layers += str(layer.name) + "\n"
 
         full_string = data + layers
         f = open(filename, "w")

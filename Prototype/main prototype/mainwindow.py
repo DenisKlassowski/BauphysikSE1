@@ -12,8 +12,9 @@ def main():
     app.setFont(f)
     path = pathlib.Path(__file__).parent.absolute()
     window = MainWindow()
-    window.setWindowIcon(QtGui.QIcon(str(path)+"/BauphysikLogo02.png"))
+    window.setWindowIcon(QtGui.QIcon(str(path)+"/BauphysikLogo02.ico"))
     window.setWindowTitle("Bauphysik")
+    window.installEventFilter(window)
     window.resize(1000,600)
 
     sys.exit(app.exec_())

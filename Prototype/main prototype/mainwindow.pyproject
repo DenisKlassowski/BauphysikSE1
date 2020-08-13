@@ -1,3 +1,3 @@
 {
-    "files": ["NewTab.py","VisualizeWidget.py","Printing.py","LayerData.py","TempWidget.py","Calculation.py","Parser.py","DLinkedList.py","TabData.py","CustomMiniWidgets.py","mainwindow.py","LayerWidget.py","BauphysikLogo02.png","master.py","Tab.py","LayerDivider.py","RWidget.py","Exporter.py"]
+    "files": ["mainwindow.py","master.py","VisualizeWidget.py","Calculation.py","TempWidget.py","LayerWidget.py","CustomMiniWidgets.py","TabData.py","BauphysikLogo02.png","LayerDivider.py","Exporter.py","DLinkedList.py","Printing.py","Tab.py","NewTab.py","LayerData.py","RWidget.py","Parser.py","mainwindow.py"]
 }

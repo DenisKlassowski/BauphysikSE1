@@ -16,13 +16,10 @@ class LayerDivider(QtWidgets.QWidget):
 
         #those beatiful horizontal lines
         self.leftLine = QHLine()
-        """left part of horizontal line"""
         self.rightLine = QHLine()
-        """right part of horizontal line"""
 
         #temperature, can be replaced by a widget where further information could be added
         self.tempLabel = QtWidgets.QLabel("°C")
-        """label for representing the temperature (in between two layers)"""
         self.tempLabel.setAlignment(QtCore.Qt.AlignCenter)
         self.tempLabel.setFixedWidth(100)
 
@@ -37,11 +34,9 @@ class LayerDivider(QtWidgets.QWidget):
         self.switchMode(self.mode)
 
     def switchMode(self,mode):
-        """switches display modes of divider according to given mode (integer)"""
         self.mode = mode
         if (mode==0):
             self.tempLabel.hide()
         else:
             self.tempLabel.show()
-
 

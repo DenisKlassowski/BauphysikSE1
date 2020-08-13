@@ -22,7 +22,6 @@ class NewTab(QtWidgets.QWidget):
         #buttons
         path = pathlib.Path(__file__).parent.absolute()
         self.buttonOpen = QtWidgets.QPushButton()
-        """Open button"""
         self.buttonOpen.setIcon(QtGui.QIcon(str(path)+"/folder_open-blue18dp.svg"))
         self.buttonOpen.setIconSize(QtCore.QSize(180,180))
         self.buttonOpenLabel = QtWidgets.QLabel("<b>Öffnen</b>")
@@ -30,7 +29,6 @@ class NewTab(QtWidgets.QWidget):
         self.buttonOpenLabel.setFixedWidth(200)
         self.buttonOpenLabel.setTextFormat(QtCore.Qt.TextFormat(1))
         self.buttonNewU = QtWidgets.QPushButton()
-        """New U button"""
         self.buttonNewU.setIcon(QtGui.QIcon(str(path)+"/U-blue-18dp.svg"))
         self.buttonNewU.setIconSize(QtCore.QSize(180,180))
         self.buttonNewULabel = QtWidgets.QLabel("<b>U-Berechnung</b>")
@@ -38,7 +36,6 @@ class NewTab(QtWidgets.QWidget):
         self.buttonNewULabel.setAlignment(QtCore.Qt.AlignCenter)
         self.buttonNewULabel.setTextFormat(QtCore.Qt.TextFormat(1))
         self.buttonNewTemp = QtWidgets.QPushButton()
-        """New Temp button"""
         self.buttonNewTemp.setIcon(QtGui.QIcon(str(path)+"/timeline-blue-18dp.svg"))
         self.buttonNewTemp.setIconSize(QtCore.QSize(180,180))
         self.buttonNewTempLabel = QtWidgets.QLabel("<b>Temperaturkurven-<br>berechnung</b>")
@@ -60,7 +57,6 @@ class NewTab(QtWidgets.QWidget):
         buttonLayout.addWidget(self.buttonNewTempLabel)
 
         self.image = QtGui.QPixmap(QtGui.QPixmap("thermopgrafie.jpg").scaled(QtCore.QSize(self.imageWidget.rect().height(),self.imageWidget.rect().width())))
-        """image on page"""
         #self.image.load("UI_Design/thermopgrafie.jpg")
         #self.image.scaled(QtCore.QSize(self.imageWidget.rect().height(),self.imageWidget.rect().width()))
         self.imageWidget.setPixmap(self.image)
@@ -104,14 +100,11 @@ class NewTab(QtWidgets.QWidget):
         #self.buttonNewTemp.setText(_translate("NewTab", "Neue Temperaturkurvenberechnung"))
 
     def buttonNewUClicked(self):
-        """reaction when New U button is clicked, creates a new tab with corresponding mode"""
         self.parent().parent().parent().addNewTab(0)
 
     def buttonNewTempClicked(self):
-        """reaction when New Temp button is clicked, creates a new tab with corresponding mode"""
         self.parent().parent().parent().addNewTab(1)
 
     def buttonOpenFileClicked(self):
-       """reaction when Open File button is clicked, opens Open File dialogue"""
        self.parent().parent().parent().openFile()
 

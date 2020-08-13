@@ -3,15 +3,17 @@ from PyQt5.QtGui import QPainter
 from PyQt5.QtWidgets import QApplication
 import sys
 from Tab import Tab
+import pathlib
 
 class Print(QtWidgets.QWidget):
     def __init__(self,tab):
         QtWidgets.QWidget.__init__(self)
         self.setWindowTitle(self.tr('Drucken von Berechnungen'))
         rows = len(tab.data.layers)
+        self.path = pathlib.Path(__file__).parent.absolute()
         self.tab = tab
         self.tableinput = QtWidgets.QTableWidget(rows,5,self)
-        self.tableoutput = QtWidgets.QTableWidget(rows,3,self)
+        self.tableoutput = QtWidgets.QTableWidget(rows+1,3,self)
         self.printer = QtPrintSupport.QPrinter(QtPrintSupport.QPrinter.PrinterResolution)
         self.printer.setPageMargins(12,16,12,20, QtPrintSupport.QPrinter.Millimeter)
         self.printer.setFullPage(True)
@@ -24,14 +26,14 @@ class Print(QtWidgets.QWidget):
             item.append(QtWidgets.QTableWidgetItem("{}".format(layer.mat)))
             item.append(QtWidgets.QTableWidgetItem("{}".format(layer.width)))
             item.append(QtWidgets.QTableWidgetItem(self.cLocale.toString(round(layer.lambda_,2),'f',2)))
-            item.append(QtWidgets.QTableWidgetItem(self.cLocale.toString(round(layer.rho,2),'f',2)))
+            item.append(QtWidgets.QTableWidgetItem(self.cLocale.toString(round(layer.r,2),'f',2)))
             for x in range(5):
                 item[x].setTextAlignment(QtCore.Qt.AlignCenter)
                 self.tableinput.setItem(i,x,item[x])
             i+=1
         self.tableinputHorizontalHeaderLabels ='Nr. der Schicht|Bezeichnung|Dicke in M|Wärmeleitfähigkeit in Wm<sup>-1</sup>K<sup>-1</sup>|Wärmedurchlasswiderstand in m<sup>2</sup>KW<sup>-1</sup>'.split('|')
         i=0
-        for layer in range (len(self.tab.data.layers)):
+        for layer in range ((len(self.tab.data.layers)+1)):
             item=[]
             if layer == 0:
                 item.append(QtWidgets.QTableWidgetItem("i/%d" % (layer+1)))
@@ -41,16 +43,23 @@ class Print(QtWidgets.QWidget):
                 except:
                     item.append(QtWidgets.QTableWidgetItem("0/0"))
             try:
-                print("printing mat")
-                print(self.tab.data.layers[layer].mat)
-                item.append(QtWidgets.QTableWidgetItem("{}/{}".format((self.tab.data.layers[layer].mat,tab.data.layers[layer+1].mat))))
+                #item.append(QtWidgets.QTableWidgetItem("{}/{}".format((self.tab.data.layers[layer].mat,self.tab.data.layers[layer+1].mat))))
+                if layer == 0:
+                    item.append(QtWidgets.QTableWidgetItem("%s / %s" % ("Innen",self.tab.data.layers[layer].mat)))
+                elif layer == len(self.tab.data.layers):
+                    item.append(QtWidgets.QTableWidgetItem("%s / %s" % (self.tab.data.layers[layer-1].mat,"Außen")))
+                else:
+                    item.append(QtWidgets.QTableWidgetItem("%s / %s" % (self.tab.data.layers[layer-1].mat,self.tab.data.layers[layer].mat)))
             except:
                 item.append(QtWidgets.QTableWidgetItem("..."))
             try:
                 item.append(QtWidgets.QTableWidgetItem(self.cLocale.toString(round(self.tab.data.layers[layer].t_left,2),'f',2)))
                 #item.append(QtWidgets.QTableWidgetItem("{}".format(self.tab.data.layers[layer].t_left)))
             except:
-                item.append(QtWidgets.QTableWidgetItem("Keine Temperatur vorhanden"))
+                if layer == len(self.tab.data.layers):
+                    item.append(QtWidgets.QTableWidgetItem(self.cLocale.toString(round(self.tab.data.layers[layer-1].t_right,2),'f',2)))
+                else:
+                    item.append(QtWidgets.QTableWidgetItem("Keine Temperatur vorhanden"))
             for x in range(3):
                 self.tableoutput.setItem(i,x,item[x])
             i+=1
@@ -64,6 +73,8 @@ class Print(QtWidgets.QWidget):
     def handlePreview(self):
         dialog = QtPrintSupport.QPrintPreviewDialog()
         rec = QApplication.desktop().screenGeometry()
+        dialog.setWindowTitle("Drucken von Berechnungen")
+        dialog.setWindowIcon(QtGui.QIcon(str(self.path)+"/BauphysikLogo02.ico"))
         dialog.resize(0.8*(rec.width()),0.8*(rec.height()))
         dialog.paintRequested.connect(self.handlePaintRequest)
         dialog.exec_()
@@ -74,12 +85,11 @@ class Print(QtWidgets.QWidget):
         document = QtGui.QTextDocument()
         #document.setDocumentMargin(100)
         #document.setPageSize(QtCore.QSizeF(printer.pageRect().width))
-        print(printer.pageRect())
         dialog = QtPrintSupport.QPrintPreviewDialog()
         cursor = QtGui.QTextCursor(document)
         cursor.MoveOperation(1)
-        cursor.insertHtml("<h1>Bezeichnung der Konstruktion: %s</h1>" % (str(self.tab.data.name)))
-        cursor.insertHtml("<br><h2>Material- und Konstruktionsdaten:</h2>")
+        cursor.insertHtml("<h2>Bezeichnung der Konstruktion: %s</h2>" % (str(self.tab.data.name)))
+        cursor.insertHtml("<br><h3>Material- und Konstruktionsdaten:</h3>")
         table = cursor.insertTable(
             (self.tableinput.rowCount()+1), self.tableinput.columnCount(), table_format)
         for row in range(table.rows()):

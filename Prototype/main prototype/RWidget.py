@@ -14,7 +14,6 @@ class RWidget(QtWidgets.QWidget):
         rLayout.setSpacing(20)
 
         self.rTitleLabel = QtWidgets.QLabel()
-        """title of RWidget"""
         self.rInsideLabel = QtWidgets.QLabel()
         self.rOutsideLabel = QtWidgets.QLabel()
         self.rTOverallLabel = QtWidgets.QLabel()
@@ -22,25 +21,20 @@ class RWidget(QtWidgets.QWidget):
         self.rInvertedLabel = QtWidgets.QLabel()
 
         self.rOutsideDoubleSpinBox = MyDoubleSpinBox()
-        """input/output for R_outside"""
         self.rOutsideDoubleSpinBox.setDecimals(5)
         self.rOutsideDoubleSpinBox.setSingleStep(0.0001)
         self.rInsideDoubleSpinBox = MyDoubleSpinBox()
-        """input/output for R_inside"""
         self.rInsideDoubleSpinBox.setDecimals(5)
         self.rInsideDoubleSpinBox.setSingleStep(0.0001)
         self.rOverallDoubleSpinBox = MyDoubleSpinBox()
-        """input/output for R_sum"""
         self.rOverallDoubleSpinBox.setDecimals(5)
         self.rOverallDoubleSpinBox.setSingleStep(0.0001)
         self.rOverallDoubleSpinBox.setEditable(0)
         self.rTOverallDoubleSpinBox = MyDoubleSpinBox()
-        """input/output for R_t"""
         self.rTOverallDoubleSpinBox.setDecimals(5)
         self.rTOverallDoubleSpinBox.setSingleStep(0.0001)
         self.rTOverallDoubleSpinBox.setEditable(0)
         self.rInvertedDoubleSpinBox = MyDoubleSpinBox()
-        """input/output for U"""
         self.rInvertedDoubleSpinBox.setDecimals(5)
         self.rInvertedDoubleSpinBox.setSingleStep(0.0001)
         self.rInvertedDoubleSpinBox.setEditable(0)
@@ -89,13 +83,11 @@ class RWidget(QtWidgets.QWidget):
         self.rUnitLabel5.setText(_translate("RWidget", "Wm<sup>-2</sup>K<sup>-1</sub>"))
 
     def setData(self, rleft, rright, roverall, rt, rinverted):
-        """sets spinboxes with given values"""
         self.rInsideDoubleSpinBox.setValue(rleft)
         self.rOutsideDoubleSpinBox.setValue(rright)
         self.setDataLite(roverall,rt,rinverted)
 
     def setDataLite(self, roverall, rt, rinverted):
-        """sets spinboxes with given values after calculation"""
         self.rOverallDoubleSpinBox.setValue(roverall)
         self.rTOverallDoubleSpinBox.setValue(rt)
         self.rInvertedDoubleSpinBox.setValue(rinverted)

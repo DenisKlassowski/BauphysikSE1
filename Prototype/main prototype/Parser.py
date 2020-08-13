@@ -35,7 +35,7 @@ class Parser:
                     td.mode = int(data[1])
                 elif data[0] == "\tlayer":
                     ld = data[1].split(", ")
-                    td.add_layer(LayerData.LayerData(int(ld[7]), float(ld[3]), float(ld[2]), float(ld[0]), int(ld[1])))
+                    td.add_layer(LayerData.LayerData(str(ld[8]),int(ld[7]), float(ld[3]), float(ld[2]), float(ld[0]), int(ld[1])))
 
         f.close()
 
