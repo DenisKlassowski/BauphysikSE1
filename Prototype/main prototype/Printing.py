@@ -16,13 +16,14 @@ class Print(QtWidgets.QWidget):
         QtWidgets.QWidget.__init__(self)
         self.setWindowTitle(self.tr('Drucken von Berechnungen'))
         rows = len(tab.data.layers)
-        #get data from calling tab
         self.tab = tab
-        #create the input/output tables
+        #self.data = data from calling tab
         self.tableinput = QtWidgets.QTableWidget(rows,5,self)
+        #input table
         self.tableoutput = QtWidgets.QTableWidget(rows,3,self)
-        #set printer setting dynamically
+        #output table
         self.printer = QtPrintSupport.QPrinter(QtPrintSupport.QPrinter.PrinterResolution)
+        #set printer and setting dynamically
         self.printer.setPageMargins(12,16,12,20, QtPrintSupport.QPrinter.Millimeter)
         self.printer.setFullPage(True)
         self.printer.setPageSize(QtPrintSupport.QPrinter.A4)
@@ -30,8 +31,8 @@ class Print(QtWidgets.QWidget):
         self.cLocale = QtCore.QLocale()
         i=0
         for layer in tab.data.layers:
-            #temo array = 1 row in table
             item = []
+            #temo array = 1 row in table
             item.append(QtWidgets.QTableWidgetItem("{}".format(i+1)))
             item.append(QtWidgets.QTableWidgetItem("{}".format(layer.mat)))
             item.append(QtWidgets.QTableWidgetItem("{}".format(layer.width)))
