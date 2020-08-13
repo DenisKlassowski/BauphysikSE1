@@ -105,10 +105,10 @@ class Print(QtWidgets.QWidget):
         document = QtGui.QTextDocument()
         #document.setDocumentMargin(100)
         #document.setPageSize(QtCore.QSizeF(printer.pageRect().width))
-        #print preview
         dialog = QtPrintSupport.QPrintPreviewDialog()
-        #cursor is used to insert into document
+        #print preview
         cursor = QtGui.QTextCursor(document)
+        #cursor is used to insert into document
         #move to start
         cursor.MoveOperation(1)
         #insert data as HTML
