@@ -10,15 +10,14 @@ Michael Daebler <michael.daebler@htw-dresden.de>; Lukas Grambole <lukas.grambole
 Hinweis: Die Use Cases wurden nach ihrer Priorität sortiert.
 [%header]
 |===
-|Kurzbezeichnung |Name|Akteur| Beschreibung 
-|UC1 |Reihenberechnung durchführen|Systemnutzer|Berechnung und Ausgabe von j, R~ges~, R~i~, R~T~, U, Δϑ~k~ und ϑ~k~ für in Reihe angeordnete Wandschichten
-|UC2|Plausibilität prüfen|Systemnutzer|Überprüfung der Gültigkeit von Eingabedaten
-|UC3 |Daten drucken|Systemnutzer|Druck auswählbarer Informationen
-|UC4 |Materialdaten ändern |Systemnutzer|Änderung von Materialdaten
+|Kurzbezeichnung |Name|Akteur| Beschreibung
+|UC1 |Programmstart |Systemnutzer|Start des Programms
+|UC2 |Reihenberechnung durchführen|Systemnutzer|Berechnung und Ausgabe von j, R~ges~, R~i~, R~T~, U, Δϑ~k~ und ϑ~k~ für in Reihe angeordnete Wandschichten
+|UC3 |Temperaturverlaufsberechnung durchführen|Systemnutzer|zusätzlich zu den in UC1 berechneten Werten Berechnung von Grenztemperaturen und Temperaturverlauf
+|UC4|Plausibilität prüfen|Systemnutzer|Überprüfung der Gültigkeit von Eingabedaten
 |UC5|Berechnungsdaten speichern|Systemnutzer|Speicherung von Eingabe- und Ergebnisdaten
 |UC6|Berechnungsdaten laden|Systemnutzer|Laden von gespeicherten Eingabe- und Ergebnisdaten
-|UC7 |Parallelberechnung durchführen|Systemnutzer| Berechnung und Ausgabe von j, R~ges~, R~i~, R~T~, U, Δϑ~k~ und ϑ~k~ für Bauteile mit parallelen Wandschichten
-|UC8 |Tauwasserfreiheit ermitteln|Systemnutzer|Berechnung der Kondenswasserbildung an Bauteilen|
+|UC7 |Daten drucken|Systemnutzer|Druck berechneter Informationen
 |===
 
 == Use Case Diagramm
@@ -28,10 +27,16 @@ image::usecase_diagramm.jpg[]
 
 == Ausgearbeitete Use Cases
 
-include::usecase_spec_Reihenberechnung_durchführen.adoc[]
+include::UseCase_01_Programmstart.adoc[]
 
-include::usecase_spec_Plausibilität_prüfen.adoc[]
+include::UseCase_02_Reihenberechnung_durchführen.adoc[]
 
-include::usecase_spec_Daten_drucken.adoc[]
+include::UseCase_03_Temperaturverlaufsberechnung_durchführen.adoc[]
 
+include::UseCase_04_Plausibilität_prüfen.adoc[]
 
+include::UseCase_06_Berechnungsdaten_laden.adoc[]
+
+include::UseCase_05_Berechnungsdaten_speichern.adoc[]
+
+include::UseCase_07_Daten_drucken.adoc[]

@@ -1,0 +1,38 @@
+== Use Case: Plausibilität prüfen
+=== Kurzbeschreibung
+Der Use Case beschreibt einen Vorgang zur Prüfung der Gültigkeit von Eingabedaten.
+
+=== Kurzbeschreibung der Akteure
+*Systemnutzer*
+
+will korrekte Eingabedaten eingeben und das Eingaben entsprechend auf Korrektheit geprüft werden.
+
+=== Vorbedingungen
+
+Der Systemnutzer hat einen Use Case gestartet, der eine Dateneingabe erfordert.
+
+=== Standardablauf (Basic Flow)
+
+. Der Use Case beginnt, wenn der Systemnutzer Eingabedaten eingibt.
+. _WHILE_ Systemnutzer gibt Eingabedaten ein
+.. Das Softwaresystem prüft die Gültigkeit der Eingabedaten.
+.. _IF_ Softwaresystem erkennt eine ungültige Eingabe
+... Das Softwaresystem verhindert die Eingabe.
+... _IF_ Systemnutzer gibt 0,0 für Lambda ein, wird Feld rot hintelegt
+. Der Use Case ist abgeschlossen.
+
+=== Wesentliche Szenarios
+
+* *SC1:* Der Systemnutzer gibt d~i~ ein. Der Eingabewert beträgt 2,60. Es wird keine ungültige Eingabe erkannt. Der Use Case ist abgeschlossen.
+
+* *SC2:* Der Systemnutzer gibt d~i~ ein. Er versucht 1o einzugeben. Das Softwaresystem verhindert die Eingabe des Buchstaben o. Der Use Case ist abgeschlossen.
+
+* *SC3:* Der Systemnutzer gibt 0,0 für die Wärmeleitfähigkeit (Lambda) einer Schicht ein. Das Sofwaresystem markiert das betreffende Feld rot. Der Use Case ist abgeschlossen.
+
+* *SC4:* Der Systemnutzer gibt eine negative Schichtdicke ein und bestätigt seine Eingabe. Das Sofwaresystem verhindert die Bestätigung und in dem betreffenden Feld steht 0,00. 
+
+=== Nachbedingungen
+
+Bei erfolgreicher Durchführung des Use Case muss folgende Nachbedingungen erfüllt sein:
+
+* Die eingegebenen Daten wurden im Hinblick auf ihre Plausibilität validiert.

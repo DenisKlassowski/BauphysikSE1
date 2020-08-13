@@ -12,53 +12,53 @@ An dieser Stelle wird eine Übersicht der verwendeten Testscripte gegeben, die �
 
 |===
 | *Testscript* | *Kurzbeschreibung* | *manuell/automatisch*
-| link:Test_Script/TestScript_001.adoc[001] | SW online starten | manuell
-| link:Test_Script/TestScript_002.adoc[002] | SW offline starten | manuell
-| link:Test_Script/TestScript_003.adoc[003] | Portabilität prüfen | manuell
-| link:Test_Script/TestScript_004.adoc[004] | Plausibilität korrekt | manuell
-| link:Test_Script/TestScript_005.adoc[005] | Plausibilität inkorrekt | manuell
-| link:Test_Script/TestScript_006.adoc[006] | Plausibilität Lambda = 0 | manuell
-| link:Test_Script/TestScript_007.adoc[007] | Plausibilität Schichtdicke negativ | manuell
-| link:Test_Script/TestScript_008.adoc[008] | Plausibilität Temperatur negativ | manuell
-| link:Test_Script/TestScript_009.adoc[009] | Reihenberechnung 4 Schichten | manuell
-| link:Test_Script/TestScript_010.adoc[010] | Reihenberechnung 3 Schichten | manuell
-| link:Test_Script/TestScript_011.adoc[011] | Reihenberechnung 5 Schichten | manuell
-| link:Test_Script/TestScript_012.adoc[012] | Reihenberechnung 2 Schichten R_i bekannt | manuell
-| link:Test_Script/TestScript_013.adoc[013] | Reihenberechnung 2 Schichten R_i bekannt V2 | manuell
-| link:Test_Script/TestScript_014.adoc[014] | Reihenberechnung 2 Schichten | manuell
-| link:Test_Script/TestScript_015.adoc[015] | Reihenberechnung 2 Schichten V2 | manuell
-| link:Test_Script/TestScript_016.adoc[016] | Temperaturverlauf 3 Schichten | manuell
-| link:Test_Script/TestScript_017.adoc[017] | Temperaturverlauf 2 Schichten R_i bekannt | manuell
-| link:Test_Script/TestScript_018.adoc[018] | Temperaturverlauf 2 Schichten R_i bekannt V2 | manuell
-| link:Test_Script/TestScript_019.adoc[019] | Temperaturverlauf 2 Schichten R_i bekannt V3 | manuell
-| link:Test_Script/TestScript_020.adoc[020] | Temperaturverlauf 4 Schichten | manuell
-| link:Prototype/main_prototype/test/TestScript_021.py[021] | Reihenberechnung 4 Schichten | automatisiert
-| link:Prototype/main_prototype/test/TestScript_022.py[022] | Reihenberechnung 3 Schichten | automatisiert
-| link:Prototype/main_prototype/test/TestScript_023.py[023] | Reihenberechnung 5 Schichten | automatisiert
-| link:Prototype/main_prototype/test/TestScript_024.py[024] | Reihenberechnung 2 Schichten R_i bekannt | automatisiert
-| link:Prototype/main_prototype/test/TestScript_025.py[025] | Reihenberechnung 2 Schichten R_i bekannt V2 | automatisiert
-| link:Prototype/main_prototype/test/TestScript_026.py[026] | Reihenberechnung 2 Schichten | automatisiert
-| link:Prototype/main_prototype/test/TestScript_027.py[027] | Reihenberechnung 2 Schichten V2 | automatisiert
-| link:Prototype/main_prototype/test/TestScript_028.py[028] | Temperaturverlauf 3 Schichten | automatisiert
-| link:Prototype/main_prototype/test/TestScript_029.py[029] | Temperaturverlauf 2 Schichten R_i bekannt | automatisiert
-| link:Prototype/main_prototype/test/TestScript_030.py[030] | Temperaturverlauf 2 Schichten R_i bekannt V2 | automatisiert
-| link:Prototype/main_prototype/test/TestScript_031.py[031] | Temperaturverlauf 2 Schichten R_i bekannt V3 | automatisiert
-| link:Prototype/main_prototype/test/TestScript_032.py[032] | Temperaturverlauf 4 Schichten | automatisiert
-| link:Prototype/main_prototype/test/TestScript_033.py[033] | Export & Import | automatisiert
-| link:Test_Script/TestScript_035.adoc[035] | Export von Daten | manuell
-| link:Test_Script/TestScript_036.adoc[036] | Import von Daten | manuell
-| link:Test_Script/TestScript_037.adoc[037] | Export von Daten in cm | manuell
-| link:Test_Script/TestScript_038.adoc[038] | Import von Daten in cm | manuell
-| link:Test_Script/TestScript_039.adoc[039] | Auswahl falscher Datei bei Import | manuell
-| link:Test_Script/TestScript_040.adoc[040] | Eingabegeräte prüfen | manuell
-| link:Test_Script/TestScript_041.adoc[041] | Systemsprache prüfen | manuell
-| link:Test_Script/TestScript_042.adoc[042] | Schichten hinzufügen/löschen | manuell
-| link:Test_Script/TestScript_043.adoc[043] | Modus wechseln | manuell
-| link:Test_Script/TestScript_044.adoc[044] | 4 Nachkommastellen | manuell
-| link:Test_Script/TestScript_045.adoc[045] | Wechsel Einheit Schichtdicke | manuell
-| link:Test_Script/TestScript_046.adoc[046] | Druckauftrag erteilen | manuell
-| link:Test_Script/TestScript_047.adoc[047] | Druckauftrag erteilen U-Modus | manuell
-| link:Test_Script/TestScript_044.adoc[048] | 3 Nachkommastellen Lambda | manuell
+| link:Test_Script/TestScript_001.adoc[Testscript_001] | SW online starten | manuell
+| link:Test_Script/TestScript_002.adoc[Testscript_002] | SW offline starten | manuell
+| link:Test_Script/TestScript_003.adoc[Testscript_003] | Portabilität prüfen | manuell
+| link:Test_Script/TestScript_004.adoc[Testscript_004] | Plausibilität korrekt | manuell
+| link:Test_Script/TestScript_005.adoc[Testscript_005] | Plausibilität inkorrekt | manuell
+| link:Test_Script/TestScript_006.adoc[Testscript_006] | Plausibilität Lambda = 0 | manuell
+| link:Test_Script/TestScript_007.adoc[Testscript_007] | Plausibilität Schichtdicke negativ | manuell
+| link:Test_Script/TestScript_008.adoc[Testscript_008] | Plausibilität Temperatur negativ | manuell
+| link:Test_Script/TestScript_009.adoc[Testscript_009] | Reihenberechnung 4 Schichten | manuell
+| link:Test_Script/TestScript_010.adoc[Testscript_010] | Reihenberechnung 3 Schichten | manuell
+| link:Test_Script/TestScript_011.adoc[Testscript_011] | Reihenberechnung 5 Schichten | manuell
+| link:Test_Script/TestScript_012.adoc[Testscript_012] | Reihenberechnung 2 Schichten R_i bekannt | manuell
+| link:Test_Script/TestScript_013.adoc[Testscript_013] | Reihenberechnung 2 Schichten R_i bekannt V2 | manuell
+| link:Test_Script/TestScript_014.adoc[Testscript_014] | Reihenberechnung 2 Schichten | manuell
+| link:Test_Script/TestScript_015.adoc[Testscript_015] | Reihenberechnung 2 Schichten V2 | manuell
+| link:Test_Script/TestScript_016.adoc[Testscript_016] | Temperaturverlauf 3 Schichten | manuell
+| link:Test_Script/TestScript_017.adoc[Testscript_017] | Temperaturverlauf 2 Schichten R_i bekannt | manuell
+| link:Test_Script/TestScript_018.adoc[Testscript_018] | Temperaturverlauf 2 Schichten R_i bekannt V2 | manuell
+| link:Test_Script/TestScript_019.adoc[Testscript_019] | Temperaturverlauf 2 Schichten R_i bekannt V3 | manuell
+| link:Test_Script/TestScript_020.adoc[Testscript_020] | Temperaturverlauf 4 Schichten | manuell
+| link:Prototype/main_prototype/test/TestScript_021.py[Testscript_021] | Reihenberechnung 4 Schichten | automatisiert
+| link:Prototype/main_prototype/test/TestScript_022.py[Testscript_022] | Reihenberechnung 3 Schichten | automatisiert
+| link:Prototype/main_prototype/test/TestScript_023.py[Testscript_023] | Reihenberechnung 5 Schichten | automatisiert
+| link:Prototype/main_prototype/test/TestScript_024.py[Testscript_024] | Reihenberechnung 2 Schichten R_i bekannt | automatisiert
+| link:Prototype/main_prototype/test/TestScript_025.py[Testscript_025] | Reihenberechnung 2 Schichten R_i bekannt V2 | automatisiert
+| link:Prototype/main_prototype/test/TestScript_026.py[Testscript_026] | Reihenberechnung 2 Schichten | automatisiert
+| link:Prototype/main_prototype/test/TestScript_027.py[Testscript_027] | Reihenberechnung 2 Schichten V2 | automatisiert
+| link:Prototype/main_prototype/test/TestScript_028.py[Testscript_028] | Temperaturverlauf 3 Schichten | automatisiert
+| link:Prototype/main_prototype/test/TestScript_029.py[Testscript_029] | Temperaturverlauf 2 Schichten R_i bekannt | automatisiert
+| link:Prototype/main_prototype/test/TestScript_030.py[Testscript_030] | Temperaturverlauf 2 Schichten R_i bekannt V2 | automatisiert
+| link:Prototype/main_prototype/test/TestScript_031.py[Testscript_031] | Temperaturverlauf 2 Schichten R_i bekannt V3 | automatisiert
+| link:Prototype/main_prototype/test/TestScript_032.py[Testscript_032] | Temperaturverlauf 4 Schichten | automatisiert
+| link:Prototype/main_prototype/test/TestScript_033.py[Testscript_033] | Export & Import | automatisiert
+| link:Test_Script/TestScript_035.adoc[Testscript_035] | Export von Daten | manuell
+| link:Test_Script/TestScript_036.adoc[Testscript_036] | Import von Daten | manuell
+| link:Test_Script/TestScript_037.adoc[Testscript_037] | Export von Daten in cm | manuell
+| link:Test_Script/TestScript_038.adoc[Testscript_038] | Import von Daten in cm | manuell
+| link:Test_Script/TestScript_039.adoc[Testscript_039] | Auswahl falscher Datei bei Import | manuell
+| link:Test_Script/TestScript_040.adoc[Testscript_040] | Eingabegeräte prüfen | manuell
+| link:Test_Script/TestScript_041.adoc[Testscript_041] | Systemsprache prüfen | manuell
+| link:Test_Script/TestScript_042.adoc[Testscript_042] | Schichten hinzufügen/löschen | manuell
+| link:Test_Script/TestScript_043.adoc[Testscript_043] | Modus wechseln | manuell
+| link:Test_Script/TestScript_044.adoc[Testscript_044] | 4 Nachkommastellen | manuell
+| link:Test_Script/TestScript_045.adoc[Testscript_045] | Wechsel Einheit Schichtdicke | manuell
+| link:Test_Script/TestScript_046.adoc[Testscript_046] | Druckauftrag erteilen | manuell
+| link:Test_Script/TestScript_047.adoc[Testscript_047] | Druckauftrag erteilen U-Modus | manuell
+| link:Test_Script/TestScript_044.adoc[Testscript_048] | 3 Nachkommastellen Lambda | manuell
 | TestSuite | Testet alle automatisierten Tests | automatisiert
 |===
 
@@ -74,7 +74,7 @@ Es folgt eine Übersicht über die in der jeweiligen Testphase am jeweiligen Pro
 | 18.04.2020 |  0.1   | 002 | bestanden | CL | am Heim-PC durchgeführt
 | 18.04.2020 |  0.1   | 040 | bestanden | CL | am Heim-PC durchgeführt
 | 18.04.2020 |  0.1   | 003 | bestanden | CL | am Heim-PC durchgeführt
-| 18.04.2020 |  0.1   | 041 | mit Ausnahme | CL | eine Beanstandung: Auswahlreiter für die Sprache war nicht auf deutsch ("Language")
+| 18.04.2020 |  0.1   | 041 | Failure | CL | eine Beanstandung: Auswahlreiter für die Sprache war nicht auf deutsch ("Language")
 |===
 
 
@@ -127,13 +127,13 @@ Es folgt eine Übersicht über die in der jeweiligen Testphase am jeweiligen Pro
 | 07.06.2020 |  0.4   | 012 | bestanden | CL |am Heim-PC durchgeführt
 | 07.06.2020 |  0.4   | 013 | bestanden | CL |am Heim-PC durchgeführt
 | 07.06.2020 |  0.4   | 014 | bestanden | CL |am Heim-PC durchgeführt
-| 07.06.2020 |  0.4   | 015 | mit Ausnahme| CL | das Ergebnis für U weicht um 0,0001 vom erwarteten Wert ab
+| 07.06.2020 |  0.4   | 015 | Failure| CL | das Ergebnis für U weicht um 0,0001 vom erwarteten Wert ab
 | 07.06.2020 |  0.4   | 016 | bestanden | CL |am Heim-PC durchgeführt
 | 07.06.2020 |  0.4   | 017 | bestanden | CL |am Heim-PC durchgeführt
-| 07.06.2020 |  0.4   | 018 | Fehler    | CL | berechnete Temperatur zwischen Schicht 1 und 2 weicht erheblich von Erwartung ab
-| 07.06.2020 |  0.4   | 019 | Fehler    | CL | berechnete Temperatur zwischen Schicht 1 und 2 weicht erheblich von Erwartung ab
+| 07.06.2020 |  0.4   | 018 | Failure    | CL | berechnete Temperatur zwischen Schicht 1 und 2 weicht erheblich von Erwartung ab
+| 07.06.2020 |  0.4   | 019 | Failure    | CL | berechnete Temperatur zwischen Schicht 1 und 2 weicht erheblich von Erwartung ab
 | 07.06.2020 |  0.4   | 020 | bestanden | CL |am Heim-PC durchgeführt
-| 07.06.2020 |  0.4   | 044 | nicht bestanden | CL |Ergebniss nur auf 3 Nachkommstellen genau.
+| 07.06.2020 |  0.4   | 044 | Failure | CL |Ergebniss nur auf 3 Nachkommstellen genau.
 | 07.06.2020 |  0.4   | 045 | bestanden | CL |am Heim-PC durchgeführt
 | 07.06.2020 |  0.4   | 048 | bestanden | CL |am Heim-PC durchgeführt
 |===
@@ -176,8 +176,8 @@ Es folgt eine Übersicht über die in der jeweiligen Testphase am jeweiligen Pro
 
 |===
 | *Datum* | *Version* | *Testscript* | *Ergebnis* | *Verantwortlich* |*Kommentar*
-| 30.06.2020 |  0.6   | 046 | nicht bestanden | CL |Test ergab erhebliche Abweichungn vom Soll. Ausführlicher im TestScript_046 aufgeführt.
-| 30.06.2020 |  0.6   | 047 | nicht bestanden | CL |Test ergab erhebliche Abweichungn vom Soll. Ausführlicher im TestScript_047 aufgeführt.
+| 30.06.2020 |  0.6   | 046 | Failure | CL |Test ergab erhebliche Abweichungn vom Soll. Ausführlicher im TestScript_046 aufgeführt.
+| 30.06.2020 |  0.6   | 047 | Failure | CL |Test ergab erhebliche Abweichungn vom Soll. Ausführlicher im TestScript_047 aufgeführt.
 | 30.06.2020 |  0.6   | 035 | bestanden | CL |am Heim-PC durchgeführt
 | 30.06.2020 |  0.6   | 036 | bestanden | CL |am Heim-PC durchgeführt
 | 30.06.2020 |  0.6   | 039 | bestanden | CL |am Heim-PC durchgeführt
@@ -267,4 +267,4 @@ Es folgt eine Übersicht über die in der jeweiligen Testphase am jeweiligen Pro
 | 26.07.2020 |  0.7   | 033 | bestanden | CL |am Heim-PC durchgeführt
 | 26.07.2020 |  0.7   | Testsuite | bestanden | CL |am Heim-PC durchgeführt
 | 26.07.2020 |  0.7   | 037 | bestanden | CL |am Heim-PC durchgeführt
-| 26.07.2020 |  0.7   | 038 | nicht bestanden | CL | grober Fehler aufgetreten, da Felder der Schichtdicke nicht mit Werten befüllt sind
+| 26.07.2020 |  0.7   | 038 | Failure | CL | grober Fehler aufgetreten, da Felder der Schichtdicke nicht mit Werten befüllt sind
