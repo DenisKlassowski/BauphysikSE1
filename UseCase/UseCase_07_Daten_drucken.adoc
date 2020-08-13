@@ -1,0 +1,37 @@
+== Use Case: Daten drucken
+
+=== Kurzbeschreibung
+
+Der Use Case beschreibt die Erteilung eines Druckauftrags für den Druck von Berechnungsdaten.
+
+=== Kurzbeschreibung der Akteure
+*Systemnutzer*
+
+will Eingabedaten und Berechnungsergebnisse drucken.
+
+=== Vorbedingungen
+
+* Es liegen Berechnungsergebnisse vor.
+* Es ist ein Drucker oder ein PDF-Drucker verfügbar.
+
+=== Standardablauf (Basic Flow)
+
+. Der Use Case beginnt, wenn der Systemnutzer die Druckfunktion auswählt.
+. Das Softwaresystem öffnet eine Druckvorschau zum Überblick über das zu druckende Dokument.
+. Der Systemnutzer löst den Druckauftrag aus.
+. Das Softwaresystem sendet den Druckauftrag an das Betriebssystem.
+. Der Use Case ist abgeschlossen.
+
+
+=== Wesentliche Szenarios
+
+* *SC1:* Der Systemnutzer wählt die Druckfunktion aus. Es wird die Druckvorschau angezeigt. Er löst den Druckauftrag aus. Das Softwaresystem übermittelt den Druckauftrag an das Betriebssystem. Der Druckauftrag wurde erfolgreich erteilt.
+
+* *SC3:* Der Systemnutzer wählt die Druckfunktion aus und lässt sich eine Druckvorschau anzeigen. Er lässt das Dokument in eine pdf Drucken. Die pdf wird lokal gespeichert. Der Druckauftrag wurde erfolgreich abgeschlossen.
+
+
+=== Nachbedingungen
+
+Bei erfolgreicher Durchführung des Use Case muss folgende Nachbedingung erfüllt sein:
+
+* Der Druckauftrag wurde an das Betriebssystem gesendet.

@@ -1,0 +1,33 @@
+== Use Case: Berechnungsdaten speichern
+=== Kurzbeschreibung
+Der Use Case beschreibt einen Vorgang zum speichern von gültigten Datensätzen in einer Datei.
+
+=== Kurzbeschreibung der Akteure
+*Systemnutzer*
+
+möchte Daten in einer Datei speichern, um diese zu einem späteren Zeitpunkt erneut aufrufen zu können.
+
+=== Vorbedingungen
+//Vorbedingungen müssen erfüllt, damit der Use Case beginnen kann, z.B. Benutzer ist angemeldet, Warenkorb ist nicht leer...
+Der Systemnutzer hat den Use Case gestartet, wenn er seine Datei speichern möchte.
+
+=== Standardablauf (Basic Flow)
+//Der Standardablauf definiert die Schritte für den Erfolgsfall ("Happy Path")
+
+. Der Use Case beginnt, wenn die Berechnung erfolgreich war.
+. Der Systemnutzer möchte seine Berechnungsdaten speichern. 
+. Der Systemnutzer betätigt im Auswahlmenü "Datei" den Punkt "Speichern" oder "Speichern unter"
+. Der Systemnutzer wählt den Pfad aus, in dem er seine Datei speichern möchte.
+. Der Systemnutzer gibt eine Bezeichnung für die zu speichernde Datei ein.
+. Die Daten werden nach den eingegebenen Einstellungen lokal gespeichert.
+. Der Use Case ist abgeschlossen.
+
+=== Wesentliche Szenarios
+//Szenarios sind konkrete Instanzen eines Use Case, d.h. mit einem konkreten Akteur und einem konkreten Durchlauf der o.g. Flows. Szenarios können als Vorstufe für die Entwicklung von Flows und/oder zu deren Validierung verwendet werden.
+* *SC1:* Der Systemnutzer speichert seine Berechnung. Es wird kein ungültiges Argument bei der Überprüfung erkannt. Der Systemnutzer wählt den Namen und den Pfad der Datei zur Speicherung der Daten. Der Use Case ist abgeschlossen.
+
+=== Nachbedingungen
+//Nachbedingungen beschreiben das Ergebnis des Use Case, z.B. einen bestimmten Systemzustand.
+Bei erfolgreicher Durchführung des Use Case muss folgende Nachbedingungen erfüllt sein:
+
+Die Daten sind lokal in einer Datei gespeichert und können geöffnet, sowie vom Softwaresystem geladen werden.

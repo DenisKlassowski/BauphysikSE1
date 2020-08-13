@@ -1,0 +1,43 @@
+== Use Case: Programmstart
+
+=== Kurzbeschreibung
+
+Der Use Case beschreibt den Programmstart für das Softwaresystem.
+
+=== Kurzbeschreibung der Akteure
+
+*Systemnutzer*
+Möchte das System nutzen um Berechnungen ausführen zu können.
+
+=== Vorbedingungen
+
+Der Systemnutzer ist im Besitz des Softwaresystems und führt das System unter Windows 10 auf einem handelsüblichen Rechner aus der mit dem Internet verbunden ist.
+Die Berechnungssoftware ist auf einem internen oder extern angeschlossenen Medium verfügbar.
+
+=== Standardablauf (Basic Flow)
+
+1.	Der Use Case beginnt, wenn der Systemnutzer das Softwaresystem aufruft
+2.  Die Berechnungssoftware startet fehlerfrei
+3.	_WHILE_ Das System lädt Hintergrunddaten
+a.. _INCLUDE_ Plausibilität prüfen
+4.	Der Systemnutzer wählt erwünschten Vorgang aus.
+5.	Der Use Case ist abgeschlossen.
+
+=== Alternative Abläufe
+
+Der Systemnutzer startet das Programm auf einem Computer, der nicht mit dem Internet verbunden ist. In dem Fall soll ebenfalls der Standardablauf gelten.
+
+=== Wesentliche Szenarios
+
+•   *SC1:* Der Systemnutzer ist mit seinem PC online und startet das Programm. Anschließend wählt er die gewünschte Berechnung aus. Die Software lädt im Hintergrund die benötigten Daten um die Berechnung zu ermöglichen. Der Programmstart wurde erfolgreich abgeschlossen.
+
+•   *SC2:* Der Systemnutzer ist mit seinem PC online und startet das Programm. Anschließend wählt er die gewünschte Berechnung aus. Die Software lädt im Hintergrund die benötigten Daten um die Berechnung zu ermöglichen. Der Programmstart wurde erfolgreich abgeschlossen.
+
+•	*SC3:* Der Systemnutzer startet das Programm, ohne dass die Software vorher installiert wurde. Die Berechnungssoftware startet fehlerfrei. Der Programmstart wurde erfolgreich abgeschlossen.
+
+=== Nachbedingungen
+
+Bei erfolgreicher Durchführung des Use Case muss folgende Nachbedingungen erfüllt sein:
+
+•	Softwaresystem ist fehlerfrei gestartet und kann zur Berechnung verwendet werden.
+

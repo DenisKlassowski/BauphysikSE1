@@ -1,0 +1,63 @@
+== Use Case: Reihenberechnung durchführen
+
+=== Kurzbeschreibung
+
+Der Use Case beschreibt einen Berechnungsvorgang für den Temperaturverlauf von in Reihe geschalteten Wandschichten.
+
+=== Kurzbeschreibung der Akteure
+
+*Systemnutzer*
+
+will Temperaturverlaufsberechnung durchführen.
+
+==== Vorbedingungen
+
+Der Systemnutzer hat das Softwaresystem gestartet.
+
+==== Standardablauf (Basic Flow)
+
+. Der Use Case beginnt, wenn der Systemnutzer die Funktion der Temperaturverlaufsberechnung ausgewählt hat.
+. _WHILE_ Das System bietet eine Eingabemöglichkeit für die Materialdaten.
+.. _WHILE_ Der Systemnutzer gibt Materialdaten ein.
+.. Das Softwaresystem berechnet direkt die Wärmewiderstandsdaten.
+.. Das Softwaresystem gibt die berechneten Wärmewiderstandsdaten aus.
+... _INCLUDE_ Plausibilität prüfen
+. _WHILE_ Das System bietet eine Eingabemöglichkeit für Außen- und Innentemperatur.
+.. _WHILE_ Systemnutzer gibt Temperaturdaten ein.
+.. Das Softwaresystem ermittelt den Temperaturverlauf.
+.. Das Softwaresystem gibt den Temperaturverlauf aus. 
+... _INCLUDE_ Plausibilität prüfen
+. Der Use Case ist abgeschlossen.
+
+==== Alternative Abläufe
+
+*Alternativer Ablauf #2.2*
+
+Wenn der Systemnutzer im Schritt 2 des Standardablaufs weitere Materialschichten hinzufügen möchte, dann
+
+... Der Systemnutzer fügt eine Schicht hinzu.
+... Das System schafft Eingabemöglichkeiten für die Daten einer zusätzlichen Materialschicht.
+... Der Use Case wird im Schritt 2 des Standardablaufs fortgesetzt.
+
+*Alternativer Ablauf #2.3*
+
+Wenn der Systemnutzer im Schritt 2 des Standardablaufs eine Materialschicht entfernen möchte, dann
+
+... Der Systemnutzer entfernt eine Materialschicht.
+... Das System entfernt die Eingabemöglichkeiten für die Daten einer Materialschicht.
+... Der Use Case wird im Schritt 2 des Standardablaufs fortgesetzt.
+
+==== Wesentliche Szenarios
+
+* *SC1:* Der Systemnutzer wählt die Funktion der Temperaturverlaufsberechnung aus und gibt die Materialdaten von zwei Schichten ein. Außerdem gibt er Werte für Innen- und Außentemperatur ein. Während der Systemnutzer die Berechnungdaten eingibt, berechnet das Softwaresystem die Wärmewiderstandsdaten, die Temperaturen an den Grenzflächen, sowie den Temperaturverlauf und gibt diese aus. Die Berechnung wurde erfolgreich abgeschlossen.
+
+* *SC3:* Der Systemnutzer wählt die Funktion der Temperaturverlaufsberechnung aus und gibt direkt die Wärmedurchlasswiderstände von zwei Schichten ein. Außerdem gibt er Werte für Innen- und Außentemperatur ein. Während der Systemnutzer die Werte eingibt, berechnet das Softwaresystem die Wärmewiderstandsdaten, die Temperaturen an den Grenzflächen, sowie den Temperaturverlauf und gibt diese aus. Die Berechnung wurde erfolgreich abgeschlossen.
+
+* *SC4:* Der Systemnutzer wählt die Funktion der Temperaturverlaufsberechnung aus und gibt die Materialdaten von drei oder mehr Schichten ein.  Außerdem gibt er Werte für Innen- und Außentemperatur ein. Während der Systemnutzer die Berechnungdaten eingibt, berechnet das Softwaresystem die Wärmewiderstandsdaten, die Temperaturen an den Grenzflächen, sowie den Temperaturverlauf und gibt diese aus. Die Berechnung wurde erfolgreich abgeschlossen.
+
+=== Nachbedingungen
+//Nachbedingungen beschreiben das Ergebnis des Use Case, z.B. einen bestimmten Systemzustand.
+Bei erfolgreicher Durchführung des Use Case muss folgende Nachbedingungen erfüllt sein:
+
+* Die Berechnungsergebnisse werden angezeigt. 
+
