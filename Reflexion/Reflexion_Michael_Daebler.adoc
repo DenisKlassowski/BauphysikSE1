@@ -4,18 +4,27 @@
 In der folgenden Reflexion geht es um eine studentische Gruppenarbeit, welche in dem Modul „Software Engineering“ in einer Achtergruppe über zwei Semester bearbeitet und fertiggestellt wurde.
 Wir beschäftigten uns mit dem Entwurf und der Implementierung eines bauphysikalischen Berechnungsprogramms, welche wir von der Professorin Rhema Krawietz erhalten haben. 
 Ich habe in diesem Prozess die Rolle des Analysten (80% 3.Semester/ 20% 4.Semester) und die des Technical Writer (100% 4.Semester) übernommen. Als Analyst waren meine Aufgaben die Erstellung von 
-Grundlegenden Dokumenten, darunter zahlen unteranderm: die Vison, Glossar, Use-Cases
+grundlegenden Dokumenten, darunter zählt: die Vison, Glossar, Use-Cases
 Als Technical Writer war ich für das Benutzerhandbuch + Flyer zuständig, der während des Entwicklungsprozesses stetig aktuell gehalten wurde. 
+
+Was habe ich gelernt?
 
 In dem Software Engineering Projekt habe ich zahlreiches neues Wissen erlangen können, auch bereits bekanntes Wissen konnte an vielen Stellen gut eingesetzt werden. 
 Ich habe gelernt im Team zu agieren, wie man mit Konflikten umgeht und wie man das Projekt und seine Teilgebiete analysiert. 
 Zusätzlich habe ich einen Einblick in die Programmiersprache Python erhalten, wo ich Grundlagen erlernen konnte.
 
-Auf das Programm, welches in einer  gute und weitestgehend organisierte Teamarbeit erarbeitet wurde und das die Kundin zufrieden ist und unser erstellten Programm in Zukunft für Ihre Lehrveranstaltungen nutzen möchte,
+Worauf bin ich stolz?
+
+Besonders stolz bin ich auf das Programm, welches in einer  gute und weitestgehend organisierte Teamarbeit erarbeitet wurde. 
+Die Kundin ist mit dem Programm sehr zufrieden und wird unser erstellten Programm in Zukunft für Ihre Lehrveranstaltungen nutzen,
 da es Ihren Ansprüchen sehr entgegenkommt und vergangene Aufwände minimiert.
  
+Was hat gut funkioniert?
+
 Ergebnisse wurden fristgerecht erarbeitet und weiter entwickelt. Es gab wenig Konflikte während des Projektes, aber es lief weitestgehend reibungslos. 
 Natürlich mit kleinen Auseinandersetzungen, welche aber immer gut geklärt wurden. 
+
+Was würde ich beim nächsten Projekt anders machen?
 
 Auch wenn alles fristgerecht erarbeitet wurde, würde ich mein Zeitmanagement bessern wollen, da vieles erst in den letzten 48 Stunden bearbeitet wurde. 
 Dahingehend würde ich ebenso meine Protokollierung optimieren, da ich oft nicht festgehalten habe, wieviel zeitlicher Input in die jeweiligen Aufgaben floss und wie es Schritt für Schritt erstellt wurde.
