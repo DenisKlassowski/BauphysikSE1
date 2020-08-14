@@ -1,0 +1,63 @@
+﻿= Betriebsdokumentation
+:toc: 
+:toc-title: Inhaltsverzeichnis
+:sectnums:
+
+== Systemvorraussetzungen
+
+* *Mindestanforderungen*
+** handelsbüchlicher Rechner + Komponenten 
+   ( Maus, Tastatur)
+* *Softwareanforderungen*
+** Windows 10
+
+== Systemeinrichtung
+*Komponente*
+** .exe
+** .dll
+** .dist 
+** .pyc
+** .py
+
+* *Installation* 
+ ** keine Installation notwenig, die Kundin führt eine Executable (.exe) aus. Das Executable wird der Kundin als Download über den HTW-Cloudspeicherplatz (Owncloud) zur Verfügung gestellt. Dafür wird auf dem Cloudspeicherplatz des Teammanagers (Denis Klassowski) ein neuer Ordner angelegt, in dem das aktuelle Release der Software liegt.
+
+* *Sonstige Bestandteile*
+** Kein Passwortschutz 
+   (eventuell für den Download-Ordner )
+** Internetzugang nur für den Download benötigt, für die Nutzung ist keine Netzanbindung notwendig
+
+== Systembetreuung 
+
+* *FAQ* 
+** An wem soll ich mich wenden, wenn ich Fragen zum Programm habe? -> Sie können sich an Denis Klassowski (denis.klassowski@htw-dresden.de) wenden.
+** Was soll ich tun, wenn das Programm nicht oder fehlerhaft startet?
+-> Neuinstallation & überprüfen ob alle notwendigen Files im Verzeichnis liegen.
+** Wo sind meine Datein gespeichert? -> Alle gespeicherten Datein werden als .baup in das gewünschte Verzeichnis gespeichert. Zum Aufruf der Datei, öffnen Sie das Programm und öffnen Sie Ihre .baup Datei.
+** Was soll ich tun, wenn meine .baup nicht lädt -> Wohlmöglich, ist Ihre Datei fehlerhaft, sie können Ihre Datei als .txt öffnen und manuell Änderungen vornehmen.
+
+* *Fehlerdiagnose*
+** Testlog
+
+* *Datensicherung und Datenwiederherstellung*
+** Sie können Ihre Berechnungen speichern und  zu einen späteren Zeitpunkt wieder aufrufen
+** Bei einem Programmabsturz, werden sämtliche nicht gespeicherte Eingangsdaten gelöscht 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
