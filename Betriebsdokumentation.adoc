@@ -38,7 +38,7 @@
 * *FAQ* 
 ** An wem soll ich mich wenden, wenn ich Fragen zum Programm habe? -> Sie können sich an Denis Klassowski (denis.klassowski@htw-dresden.de) wenden.
 ** Was soll ich tun, wenn das Programm nicht oder fehlerhaft startet?
--> Datein erneut und vollständig & überprüfen ob alle notwendigen Files im Verzeichnis liegen.
+-> Datein erneut und vollständig herunterladen & überprüfen ob alle notwendigen Files im Verzeichnis liegen.
 ** Wo sind meine Datein gespeichert? -> Alle gespeicherten Datein werden als .baup in das gewünschte Verzeichnis gespeichert. Zum Aufruf der Datei, öffnen Sie das Programm und öffnen Sie Ihre .baup Datei.
 ** Was soll ich tun, wenn meine .baup nicht lädt -> Wohlmöglich, ist Ihre Datei fehlerhaft, sie können Ihre Datei als .txt öffnen und manuell Änderungen vornehmen.
 
