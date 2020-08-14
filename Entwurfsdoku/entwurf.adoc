@@ -1,9 +1,6 @@
 = Entwurfdokumentation
 Yewgenij Baburkin <yewgenij.baburkin@htw-dresden.de>
 1.0, 14.08.2020 
-:toc: 
-:toc-title: Inhaltsverzeichnis
-:sectnums:
 
 == Systemarchitektur
 
