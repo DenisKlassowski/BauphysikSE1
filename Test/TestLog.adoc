@@ -218,7 +218,7 @@ Es folgt eine Übersicht über die in der jeweiligen Testphase am jeweiligen Pro
 | 01.07.2020 |  0.6   | 032 | bestanden | CL |am Heim-PC durchgeführt
 | 01.07.2020 |  0.6   | 033 | bestanden | CL |am Heim-PC durchgeführt
 | 01.07.2020 |  0.6   | Testsuite | bestanden | CL |am Heim-PC durchgeführt
-
+|===
 
 === Prototyp 7
 
@@ -268,3 +268,4 @@ Es folgt eine Übersicht über die in der jeweiligen Testphase am jeweiligen Pro
 | 26.07.2020 |  0.7   | Testsuite | bestanden | CL |am Heim-PC durchgeführt
 | 26.07.2020 |  0.7   | 037 | bestanden | CL |am Heim-PC durchgeführt
 | 26.07.2020 |  0.7   | 038 | Failure | CL | grober Fehler aufgetreten, da Felder der Schichtdicke nicht mit Werten befüllt sind
+|===
