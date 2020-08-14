@@ -15,6 +15,7 @@
 
 * *Softwareanforderungen*
 ** Windows 10
+** Mindestens Python 3.8
 
 == Systemeinrichtung
 *Komponente*
