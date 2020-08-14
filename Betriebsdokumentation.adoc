@@ -42,8 +42,6 @@
 ** Wo sind meine Datein gespeichert? -> Alle gespeicherten Datein werden als .baup in das gewünschte Verzeichnis gespeichert. Zum Aufruf der Datei, öffnen Sie das Programm und öffnen Sie Ihre .baup Datei.
 ** Was soll ich tun, wenn meine .baup nicht lädt -> Wohlmöglich, ist Ihre Datei fehlerhaft, Sie können Ihre Datei als .txt öffnen und manuell Änderungen vornehmen.
 
-* *Fehlerdiagnose*
-
 * *Datensicherung und Datenwiederherstellung*
 ** Sie können Ihre Berechnungen speichern und  zu einen späteren Zeitpunkt wieder aufrufen
 ** Bei einem Programmabsturz, werden sämtliche nicht gespeicherte Eingangsdaten gelöscht 
