@@ -137,7 +137,7 @@ Code Review +
 
 Im Folgenden sind, in chronologischer Reihenfolge, die Ziele, Aktivitäten, Ergebnisse und Entscheidungen Stichpunktartig aufgelistet. 2.x Steht für Iteration x im zweiten Semester. +
 
-*Iteration 2.1* +
+==== Iteration 2.1
 Start: 30.03.2020 +
 Ende: 12.04.2020
 
@@ -187,7 +187,7 @@ Ende: 12.04.2020
 * Dokumentation ist umständlich
 ** Die Dokumentation wird etwas aufgeteilt und teils in Google Drive gespeichert
 
-*Iteration 2.2* +
+==== Iteration 2.2
 Start: 13.04.2020 +
 Ende: 27.04.2020 +
 
@@ -223,7 +223,7 @@ Ende: 27.04.2020 +
 ** Backend Devs sollen sich mit Qt5 beschäftigen um ein Verständnis für das Framework zu entwickeln
 
 
-*Iteration 2.3* +
+==== Iteration 2.3
 Start: 27.04.2020 +
 Ende: 10.05.2020 +
 
@@ -263,7 +263,7 @@ Ende: 10.05.2020 +
 * Frontend hat keinen guten Eindruck hinterlassen weil es nicht ansprechend genug war
 ** Beim Endkunden Meeting (besonders bei der Vorstellung von Produkt Oberfläche) hätten wir Farben und Design einfließen lassen sollen und nicht nur die Anordnung/Existenz von Button bzw. Interaktionsfelder
 
-*Iteration 2.4* +
+==== Iteration 2.4
 Start: 11.05.2020 +
 Ende: 25.05.2020 +
 
@@ -301,7 +301,7 @@ Ende: 25.05.2020 +
 * Einige Ziele der Letzten Iteration wurden nicht erreicht
 ** Verschiebung in der Priorität
 
-*Iteration 2.5* + 
+==== Iteration 2.5 
 Start: 26.05.2020 +
 Ende: 16.06.2020 +
 
@@ -335,7 +335,7 @@ Ende: 16.06.2020 +
 ** Verschieben mehrerer Tätigkeiten, sodass Devs zu Verfügung stehen
 ** Code Review hat dieses Problem nicht verhindern können
 
-*Iteration 2.6* +
+==== Iteration 2.6 
 Start: 16.06.2020 +
 Ende: 29.06.2020 +
 
@@ -361,7 +361,7 @@ Ende: 29.06.2020 +
 * Kommunikation zu Backend Dev ist nur schwierig aufzubauen
 ** Mittlerweile ist die Dev Rolle bereits vergeben. Zuordnung von kleineren Aufgaben (CSS Anpassungen)
 
-*Iteration 2.7* +
+==== Iteration 2.7 
 Start: 29.06.2020 +
 Ende: 12.07.2020 +
 
@@ -387,7 +387,51 @@ Ende: 12.07.2020 +
 ** Projekt bereits so gut wie abgeschlossen. Keine Gefahr mehr für Teamerfolg
 
 ==== Geprächsprotokoll 1
+
 include::Gesprächsprotokolle/06052020_Kundengespräch.adoc[lines=1..1;4..-1,leveloffset=+1]
+
+*Anwesend*
+. Tester
+. Manager
+. Analyst
+. Dev (Yewgenij)
+. Deployment
+. Kunde
+
+*Ziel des Meetings: Erklärung und Vorstellung des Prototypen / Feedback zu bisherigem Stand*
+
+*Das wurde dem Kunden erklärt:*
+. Tab System
+. Wo sind die Eingabemöglichkeiten
+. Überblick zum Schichtsystem (dynamisches einfügen und löschen)
+. Schichtemperatursystem 
+. Fuktion des Moduswechsels
+. Erhalt der Werte bei Moduswechsel
+. Verlauf des Projektes und die Zielstellung einen Prototypen zu bauen der an den Kunden übergeben wird
+
+*Bemerkung des Kunden:*
+- Bezeichnung "Breite" ändern zu "Dicke"
+- Zweiteilung der Eingabemaske und Schichtsystem deutlich machen
+- U Wert Berechnung bei Temp Berechnung nicht notwendig
+- Werte sollen bei wechsel zu Temp Modus erhalten bleiben
+- Wichtige Werte bei Temp Berechnung sollen angezeigt werden: Rsi,Rse,U - Wert, Rt, R Gesamt
+- im Formlayout R{Nummer} statt Ri schreiben (Reihenfolge)
+- Programm soll entwas Farblicher und ansprechender sein
+
+*Fragen an den Kunden*
+. Soll eine Fehleingabe durch ein Popup signalisiert werden?
+- Nein, Fehleingabe unterdrücken reicht aus.
+. Wie sollen die einzelnen Tabs gespeichert werden? 
+- Ein Tab (eine Berechnung) wird unter einem Namen als Datei gespeichert
+. Welches Layout soll der Druckauftrag einer Berechnung haben
+- Soll ähnlich aussehen wie das Layout im Programm, Mehrere Tabellen mit Materialdaten/Eingangsdaten/Allgemeine Daten/ Grenzwerttabelle 
+- Kunde wird noch eine Beispieltabelle als Vorlage anlegen
+. Soll das Programm rekursive Berechnung (Fehlender Parameter wird errechnet) bieten?
+- Wäre gut aber hat keine Priorität
+
+*Fazit*
+- Kunde ist Grundsätzlich zufrieden, Anmerkungen waren überwiegend visuelle Wünsche
+- Es ist davon auszugehen das unsere Vorstellung des Prototypen das Problem des Kunden lösen kann
 
 ==== Gesprächsprotokoll 2
 
@@ -484,11 +528,10 @@ link:https://github.com/fowado/BauphysikSE1/blob/master/Flyer.pdf[Flyer]
 == Entwicklerdokumentation 
 include::Entwurfsdoku/entwurf.adoc[]
 
-= 8. Betriebsdokumentation
-include::Betriebsdokumentation.adoc[]
-
 = 7. Testdokumentation
 include::Test/Testkonzept.adoc[lines=1..1;4..-1,leveloffset=+1]
 include::Test/TestLog.adoc[lines=1..1;4..-1,leveloffset=+1]
 
 
+= 8. Betriebsdokumentation
+include::Betriebsdokumentation.adoc[]
