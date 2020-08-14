@@ -1,12 +1,12 @@
 import Calculation
-
+from LayerData import LayerData
 
 class TabData:
     def __init__(self, mode, name, layers=None, rright=None, rleft=None, rsum=None, rt=None, tright=None, tleft=None, u=None, currentFileLocation=None):
         #some trickery because default values in the constructor call kind of destroy the the possibility to have multiple instances of the same class. Why? Python, that's why. further information: https://stackoverflow.com/questions/4841782/python-constructor-and-default-value
         self.name = name
         """title of tab"""
-        self.layers = layers if layers is not None else []
+        self.layers = layers if layers is not None else map(LayerData,[])
         """list of layers in current tab"""
         self.rright = rright if rright is not None else 0.0
         """if imagining the layers vertically, this is the R which is adjacent to the right-most layer"""
