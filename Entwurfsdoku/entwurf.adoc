@@ -1,0 +1,16 @@
+= Lorem Ipsum
+
+image::plan.png[plan]
+.The Grand Plan
+
+Lorem Ipsum
+
+image::class.svg[class]
+.UML-Class Diagram
+
+Lorem Ipsum
+
+image::package.svg[package]
+.Package Diagram
+
+Lorem Ipsum
