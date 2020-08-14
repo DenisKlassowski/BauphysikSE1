@@ -33,7 +33,7 @@ In dieser Grafik kann man das Zusammenspiel zwischen den verschiedenen packages 
 
 |name|String|Name des Tabs
 |rright|double|R-Wert rechts (siehe TabData doc)
-|rleft|double|R-Wert lins (siehe TabData doc)
+|rleft|double|R-Wert links (siehe TabData doc)
 |rsum|double|Summe R-Werte aller Layer
 |tright|double|Temperatur rechts (siehe TabData doc)
 |tleft|double|Temperatur links (siehe TabData doc)
