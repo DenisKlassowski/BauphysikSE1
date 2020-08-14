@@ -1,0 +1,35 @@
+= Reflexion Denis Klassowski SE2 Thema 14 Bauphysik | Projekt Manager
+
+
+Ziel der Reflexion ist es meine gesammelten Erfahrungen aus dem Projekt Software Engineering 2 subjektiv zu bewerten, zu ergründen wie es dazu kam und welche Schlüsse ich daraus ziehen konnte. +
+
+In dem Projekt SE1 und SE2 übernahm ich die Rolle des Projektmanagers. Einige meiner Aufgaben waren die Ressourcen zu überblicken, jegliche Art der Meetings zu planen, den Gesamtfortschritt im Auge zu behalten und mithilfe meiner Teammitglieder endglütltige Entscheidungen für das Projekt zu treffen. Als Manager war mir besonders der Gesamtfortschritt und die Erreichung des Ziels, eine gute Softwarelösung die unserer Kunding tatsächlich hilft, sehr wichtig. +
+
+Zusammendfassend kann gesagt werden, dass ich im Rahmen der Veranstaltung gelernt habe was es bedeutet eine Projektgruppe tatsächlich zu leiten bzw. was es bedeutet im Managment aktiv oder eben passiv zu sein. +
+Ich habe gesehen wie unerwartet Probleme entstehen können und gelernt wie man am besten mit ihnen hätte umgehen sollen. +
+Das Vermittelte Wissen aus Software Engineering 1 war dabei von großer Bedeutung und hat mir immer wieder geholfen einen Leitfaden zu finden. + 
+Interessant war ebenfalls die sich ständig veränderliche Teamdynamik und die sich damit unterschiedlich ergeben Velocity und Beteiligung innerhalb des Teams. +
+
+Am Anfang des Semesters mussten wir gleich eine der größeren Hürden überwinden. Die uns allen zu last fallende Pandemie hat auch bei uns im Team seine Spuren hinterlassen. +
+Hatten wir am Anfang noch keinen "Heartbeat" gefunden war dies im Team deutlich spürbar. Die Meetings und das Projekt waren für die Mitglieder zunächst weniger wichtig. +
+Hier habe ich das Glück ein überwiegend motiviertes Team zu haben, sodass der "Heartbeat" bereits innerhalb der ersten Iterationen gut angelaufen ist. +
+
+Für mich war der unterschied zwischen einem deutlichen Meeting-Termin und einem Vorschlag deutlich spürbar. Während auf vorschläge selten eingegangen wurde, haben die Mitglieder mir für ein Termin entweder abgesagt oder zugesagt. +
+Diese Erfahrung habe ich auch im weiteren Projekt immer wieder gemacht. Wenn Aussagen getroffen werden, wird einem zugestimmt oder widersprochen. +
+Hier habe ich aber auch gemerkt das für eine Beteiligung ein En­ga­ge­ment bestehen muss. Mitglieder denen es egal war müssen direkt angesprochen und dadurch inkludiert werden. +
+Es gab viele Momente wo ich auch das Team habe sprechen lassen können und ich für mich habe gelern das es keine Allgemeingültige Lösung gibt. Ich glaube das man als Manager immer den "richtigen" Ton treffen muss und nicht immer den gleichen Stil haben sollte. +
+
+Nachdem wir unseren Ryhtmus gefunden hatten, fiel leider unser Backend - Dev immer häufiger aus, bis er sicht garnicht mehr melden wollte. In dieser Zeit mussten wir die Rollen neu anordnen. Die Neuverteilung der Tasks war Problematisch denn, auch wenn die Rollen flexibel sind, nicht jeder war in der Lage Programmcode zu schreiben. Aufgrund meiner Erfahrund aus der Berufswelt habe ich einige Aufgaben übernommen. +
+Die Übernahme der Aufgaben hat mir sehr geholfen meinen Gesamtblick auf den Projektfortschritt zu validieren. +
+Es war eine andere Perspektive auf den Fortschritt als einfach nur dem Work Products zu entnehmen oder den Meetings bei zu wohnen. Insgesamt hat es mir sehr geholfen gezieltere Fragen zu stellen und den Projektfortschritt damit zu verbessern. +
+Mir als Manager würde es auch künftig sehr helfen aktiv an der Projektentwicklung beteiligt zu sein. +
+
+Ein wichtiger Aspekt bei dem Lernprozess war der Umfang des Projektes. Der Umfang hätte zwar insgesamt größer sein können, aber durch die Tatsache das wir ein überschaubares Projekt hatten, hatte ich persönlich eine gute Möglichkeit viel über die Zwischenmenschlichen Aspekte, Führungsstile, Vorgehensmodelle und dem Gesamtprozess der Softwareentwicklung nachzudenken und zu experimentieren. + 
+Wir hatten Raum für Fehler und diese waren ein wichtiger Aspekt im Lernprozess. +
+
+Insgesammt finde ich das dieses Projekt, gemeinsam mit den Vorstellungen und Rollenpraktika der anderen Teams, elementar Wichtige Erkenntnisse geliefert hat,die ich in das Berufsfeld mitnehmen kann. Ich bin froh diese Erfahrungen in dem Umfeld eines Hochschul-Projektes gemacht zu haben. +
+
+Besonders stolz bin ich auf das Ergebnis und das äußerst positive Kundenfeedback. Zu Wissen das unsere Software tatsächlich genutzt wird und dem Kunden Zeit und Aufwand erspart. +
+Desweiteren bin ich stolz auf mein Team, bei dem fast jeder sofort Bereitschaft gezeigt hat und ich würde mit einigen von Ihnen wieder ein Projekt machen. +
+
+Abschließend kann ich meinem ersten Eindruck aus Software Enigneering 1 weiterhin zustimmen und behaupten, dass das Berufsfeld des Managers in der Softwareentwicklung wahnsinnig intersant und abwechslungsreich ist und damit für mich eine erstrebenswertes Ziel ist.
