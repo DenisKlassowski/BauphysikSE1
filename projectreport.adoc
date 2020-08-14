@@ -4,6 +4,7 @@
 :toc-title: Inhaltsverzeichnis
 :sectnums:
 :icons: font
+:imagesdir: .
 //:source-highlighter: highlightjs
 :source-highlighter: rouge
 :rouge-style: github
@@ -476,11 +477,11 @@ include::UseCase/usecase_model.adoc[lines=1..1;4..-1,leveloffset=+1]
 
 === Benutzerhandbuch
 
-image::Benutzerhandbuch.pdf[]
+link:https://github.com/fowado/BauphysikSE1/blob/master/Benutzerhandbuch.pdf[Benutzerhandbuch]
 
 === Flyer
 
-image::Flyer.pdf[]
+link:https://github.com/fowado/BauphysikSE1/blob/master/Flyer.pdf[Flyer]
 
 == Entwicklerdokumentation 
 
