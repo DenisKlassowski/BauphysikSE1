@@ -1,0 +1,33 @@
+﻿Reflexion – Michael Däbler – Analyst/ Technical Writer
+
+>>>Einleitung >>>
+In der folgenden Reflexion geht es um eine studentische Gruppenarbeit, welche in dem Modul „Software Engineering“ in einer Achtergruppe über zwei Semester bearbeitet und fertiggestellt wurde.
+Wir beschäftigten uns mit dem Entwurf und der Implementierung eines bauphysikalischen Berechnungsprogramms, welche wir von der Professorin Rhema Krawietz erhalten haben. 
+Ich habe in diesem Prozess die Rolle des Analysten (80% 3.Semester/ 20% 4.Semester) und die des Technical Writer (100% 4.Semester) übernommen. Als Analyst waren meine Aufgaben die Erstellung von 
+Grundlegenden Dokumenten, darunter zahlen unteranderm: die Vison, Glossar, Use-Cases
+Als Technical Writer war ich für das Benutzerhandbuch + Flyer zuständig, der während des Entwicklungsprozesses stetig aktuell gehalten wurde. 
+
+>>>Hauptteil>>>
+Was habe ich gelernt?
+In dem Software Engineering Projekt habe ich zahlreiches neues Wissen erlangen können, auch bereits bekanntes Wissen konnte an vielen Stellen gut eingesetzt werden. 
+Ich habe gelernt im Team zu agieren, wie man mit Konflikten umgeht und wie man das Projekt und seine Teilgebiete analysiert. 
+Zusätzlich habe ich einen Einblick in die Programmiersprache Python erhalten, wo ich Grundlagen erlernen konnte.
+
+Worauf bin ich stolz?
+Auf das Programm, welches in einer  gute und weitestgehend organisierte Teamarbeit erarbeitet wurde und das die Kundin zufrieden ist und unser erstellten Programm in Zukunft für Ihre Lehrveranstaltungen nutzen möchte,
+da es Ihren Ansprüchen sehr entgegenkommt und vergangene Aufwände minimiert.
+ 
+Was hat gut funktioniert? 
+Ergebnisse wurden fristgerecht erarbeitet und weiter entwickelt. Es gab wenig Konflikte während des Projektes, aber es lief weitestgehend reibungslos. 
+Natürlich mit kleinen Auseinandersetzungen, welche aber immer gut geklärt wurden. 
+
+Was würde ich beim nächsten Projekt anders machen?
+Auch wenn alles fristgerecht erarbeitet wurde, würde ich mein Zeitmanagement bessern wollen, da vieles erst in den letzten 48 Stunden bearbeitet wurde. 
+Dahingehend würde ich ebenso meine Protokollierung optimieren, da ich oft nicht festgehalten habe, wieviel zeitlicher Input in die jeweiligen Aufgaben floss und wie es Schritt für Schritt erstellt wurde.
+Zudem fände ich eine bessere Kommunikation mit dem Team nicht verkehrt, Rückfragen ob sie mit der Lösung der Aufgabenstellung so zufrieden sind und gegebenenfalls Verbesserungsvorschläge,
+so dass nicht jeder seins bestmöglich erarbeitet, sondern das Team erarbeitet alles bestmöglich gemeinsam aus, da jeder eine andere Ansicht auf eine Aufgabe haben kann. 
+
+>>>Schluss>>>
+Insgesamt war die Gruppenarbeit eine sehr gute Idee um einen Einblick in die Praxis zu erhalten. Ich habe für die Zukunft gelernt, besser mit meinen Gruppenmitglieder zu agieren. 
+Außerdem weiß ich nun, dass ich im Team mehr Spaß an Projekten habe als allein, auch die Zusammenarbeit mit anderen Kommilitonen (auch aus anderen Studiengängen) war sehr informativ,
+da diese einen ganz anderen Wissensstand mitbrachten, welcher für das Projekt oft vorteilhaft war.
