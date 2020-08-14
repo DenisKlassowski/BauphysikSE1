@@ -1,23 +1,25 @@
 = Entwurfdokumentation
 
 == Systemarchitektur
+
+.Grobe Entwurfsskizze
 image::plan.png[plan]
-.The Grand Plan
+
 
 In einem Dev-Meeting kam die obere, durchaus informelle Skizze zustande. Ziel dieser war die Struktur der Klassen sowie deren Anordnung festzuhalten. Zu sehen ist, dass in einem Tab eine Liste von Layern geführt wird, genauer genommen im Layout des Bereichs des Tabs, in welchen Layer(Widgets) eingefügt werden. Jede Layer hat hierbei ein zugehöriges LayerData Objekt, welches die Informationen einer Layer beinhaltet. Jeder Tab besitzt ein tabData Objekt, welches alle zur Berechnung und Speicherung notwendigen Informationen beinhaltet. In diesem wird auch eine Liste geführt, welche LayerData Objekte verwaltet. Die Berechnung sollte ausgelagert werden, jedoch nicht instanziiert. Je nach dem, wie variablentreu (pass by value oder pass by reference) Python ist, sollte darüber nachgedacht werden, wie man diese Berechnungsfunktionen inkludiert.
 
-image::class.svg[class]
 .UML-Class Diagram
+image::class.svg[class]
+
 
 Dies ist die aktuelle Ansicht der benutzten Klassenstruktur. Zu erkennen ist, dass der vorherige Entwurf dementsprechend umgesetzt wurde. Kleinere Klassen sind hinzugekommen (z.B. MyDoubleSpinBox), welche jedoch einfach nur von denentsprechenden QT-Klassen abgeleitet wurden und deren Verhalten in bestimmten Situationen angepasst wurde.
 
-image::package.svg[package]
 .Package Diagram
+image::package.svg[package]
 
 In dieser Grafik kann man das Zusammenspiel zwischen den verschiedenen packages erkennen. Hierbei ist zu bemerken, dass `\__init__` eingentlich `mainwindow.py` ist, jedoch im Rahmen der Generierung des Diagramms umbenannt werden musste.
 
 == Verwendete Frameworks/Module
-
 
 * PyQt5
 * numpy
@@ -58,6 +60,15 @@ In dieser Grafik kann man das Zusammenspiel zwischen den verschiedenen packages 
 
 |===
 
+.Beispiel einer gespeicherten Datei
+image::beispiel.png[Beispiel]
+
+
+
 == Sequenzdiagramm
 
 Da hier keine Client-Server oder Microservice o.Ä. Architektur vorliegt, wurde sich dazu entschieden, ein Sequenzdiagramm *nicht* anzufertigen. Es ergibt in Bezug auf den Aufwand keinen Mehrwert. Welche Klasse was aufruft, kann man auch dem UML-Klassendiagramm entnehmen.
+
+== Schnittstellen
+
+None. Es handelt sich um eine Standalone-Anwendung mit keiner Aussicht auf Integration in andere Gebiete/Anwendungen.
