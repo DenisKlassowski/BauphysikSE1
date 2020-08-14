@@ -482,12 +482,131 @@ link:https://github.com/fowado/BauphysikSE1/blob/master/Benutzerhandbuch.pdf[Ben
 link:https://github.com/fowado/BauphysikSE1/blob/master/Flyer.pdf[Flyer]
 
 == Entwicklerdokumentation 
-include::Entwurfsdoku/entwurf.adoc[]
+=== Entwurfdokumentation
+Yewgenij Baburkin <yewgenij.baburkin@htw-dresden.de>
+1.0, 14.08.2020 
 
-= 8. Betriebsdokumentation
-include::Betriebsdokumentation.adoc[]
+==== Systemarchitektur
 
-= 7. Testdokumentation
+.Grobe Entwurfsskizze
+image::plan.png[plan]
+
+
+In einem Dev-Meeting kam die obere, durchaus informelle Skizze zustande. Ziel dieser war die Struktur der Klassen sowie deren Anordnung festzuhalten. Zu sehen ist, dass in einem Tab eine Liste von Layern geführt wird, genauer genommen im Layout des Bereichs des Tabs, in welchen Layer(Widgets) eingefügt werden. Jede Layer hat hierbei ein zugehöriges LayerData Objekt, welches die Informationen einer Layer beinhaltet. Jeder Tab besitzt ein tabData Objekt, welches alle zur Berechnung und Speicherung notwendigen Informationen beinhaltet. In diesem wird auch eine Liste geführt, welche LayerData Objekte verwaltet. Die Berechnung sollte ausgelagert werden, jedoch nicht instanziiert. Je nach dem, wie variablentreu (pass by value oder pass by reference) Python ist, sollte darüber nachgedacht werden, wie man diese Berechnungsfunktionen inkludiert.
+
+.UML-Class Diagram
+image::class.svg[class]
+
+
+Dies ist die aktuelle Ansicht der benutzten Klassenstruktur. Zu erkennen ist, dass der vorherige Entwurf dementsprechend umgesetzt wurde. Kleinere Klassen sind hinzugekommen (z.B. MyDoubleSpinBox), welche jedoch einfach nur von denentsprechenden QT-Klassen abgeleitet wurden und deren Verhalten in bestimmten Situationen angepasst wurde.
+
+.Package Diagram
+image::package.svg[package]
+
+In dieser Grafik kann man das Zusammenspiel zwischen den verschiedenen packages erkennen. Hierbei ist zu bemerken, dass `\__init__` eingentlich `mainwindow.py` ist, jedoch im Rahmen der Generierung des Diagramms umbenannt werden musste.
+
+==== Verwendete Frameworks/Module
+
+* PyQt5
+* numpy
+* pyqtgraph
+
+==== Struktur der gespeicherten Dateien
+
+.Tab-Struktur
+|===
+|Stelle|Einheit|Bezeichnung
+
+|name|String|Name des Tabs
+|rright|double|R-Wert rechts (siehe TabData doc)
+|rleft|double|R-Wert links (siehe TabData doc)
+|rsum|double|Summe R-Werte aller Layer
+|tright|double|Temperatur rechts (siehe TabData doc)
+|tleft|double|Temperatur links (siehe TabData doc)
+|mode|int|Modus, in welchem sich der Tab befindet
+|u|double|Rt invertiert
+|rt|double|Summe Rges und umgebende R-Werte
+|layers|"Liste"|Die einzelnen Layers
+
+|===
+
+.Layer-Struktur
+|===
+|Stelle|Einheit|Bezeichnung
+
+|1|double|Dicke der Schicht
+|2|int|Einheit der Dicke (0: m, 1: cm, 2: mm)
+|3|double|Lambda-Wert
+|4|double|R-Wert
+|5|double|linke Außentemperatur der Schicht
+|6|double|rechte Außentemperatur der Schicht
+|7|double|Rho-Wert der Schicht
+|8|int|Material-ID
+|9|String|Name der Schicht
+
+|===
+
+.Beispiel einer gespeicherten Datei
+image::beispiel.png[Beispiel]
+
+
+
+==== Sequenzdiagramm
+
+Da hier keine Client-Server oder Microservice o.Ä. Architektur vorliegt, wurde sich dazu entschieden, ein Sequenzdiagramm *nicht* anzufertigen. Es ergibt in Bezug auf den Aufwand keinen Mehrwert. Welche Klasse was aufruft, kann man auch dem UML-Klassendiagramm entnehmen.
+
+==== Schnittstellen
+
+None. Es handelt sich um eine Standalone-Anwendung mit keiner Aussicht auf Integration in andere Gebiete/Anwendungen.
+
+== Betriebsdokumentation
+
+=== Systemvorraussetzungen
+
+* *Mindestanforderungen*
+** handelsüblicher Rechner + Komponenten ( Maus, Tastatur)
+** Prozessor mit 1 GHz (oder schneller) oder ein SoC-System 
+** RAM: 1 GB für 32 Bit oder 2 GB für 64 Bit 
+** Festplattenspeicher: 16 GB für 32-Bit-Betriebssystem oder 32 GB für 64-Bit-Betriebssystem 
+** Grafikkarte: DirectX 9 oder höher mit WDDM 1.0 Treiber 
+** Display: 800 x 600
+
+* *Softwareanforderungen*
+** Windows 10
+** Mindestens Python 3.8
+
+=== Systemeinrichtung
+*Komponente*
+* .exe /
+* .dll / 
+* .dist /
+* .pyc /
+* .py
+
+* *Installation* 
+ ** Es ist keine Installation notwendig, die Kundin führt eine Executable (.exe) aus. Das Executable wird der Kundin als Download über den HTW-Cloudspeicherplatz (Owncloud) zur Verfügung gestellt. Dafür wird auf dem Cloudspeicherplatz des Teammanagers (Denis Klassowski) ein neuer Ordner angelegt, in dem das aktuelle Release der Software liegt.
+
+* *Sonstige Bestandteile*
+** Kein Passwortschutz 
+   (eventuell für den Download-Ordner )
+** Ein  Internetzugang wird nur für den Download benötigt, für die Nutzung ist keine   
+   Netzanbindung notwendig.
+
+=== Systembetreuung 
+
+* *FAQ* 
+** Sie haben Fragen an das Programm? -> Sie können sich an Denis Klassowski (denis.klassowski@htw-dresden.de) wenden.
+** Was soll ich tun, wenn das Programm nicht oder fehlerhaft startet?
+-> Datein erneut und vollständig herunterladen & überprüfen ob alle notwendigen Files im Verzeichnis liegen.
+** Wo sind meine Datein gespeichert? -> Alle gespeicherten Datein werden als .baup in das gewünschte Verzeichnis gespeichert. Zum Aufruf der Datei, öffnen Sie das Programm und öffnen Sie Ihre .baup Datei.
+** Was soll ich tun, wenn meine .baup nicht lädt -> Wohlmöglich, ist Ihre Datei fehlerhaft, Sie können Ihre Datei als .txt öffnen und manuell Änderungen vornehmen.
+
+* *Datensicherung und Datenwiederherstellung*
+** Sie können Ihre Berechnungen speichern und  zu einen späteren Zeitpunkt wieder aufrufen
+** Bei einem Programmabsturz, werden sämtliche nicht gespeicherte Eingangsdaten gelöscht 
+
+
+= 8. Testdokumentation
 include::Test/Testkonzept.adoc[lines=1..1;4..-1,leveloffset=+1]
 include::Test/TestLog.adoc[lines=1..1;4..-1,leveloffset=+1]
 
