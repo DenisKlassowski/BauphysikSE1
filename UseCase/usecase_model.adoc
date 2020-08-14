@@ -1,4 +1,4 @@
-= Use-Case Model BauphysikSE1
+= Use-Case Model Bauphysik
 Michael Daebler <michael.daebler@htw-dresden.de>; Lukas Grambole <lukas.grambole@htw-dresden.de>
 0.9, 26.01.2019 
 :toc: 
