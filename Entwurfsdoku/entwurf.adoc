@@ -1,16 +1,63 @@
-= Lorem Ipsum
+= Entwurfdokumentation
 
+== Systemarchitektur
 image::plan.png[plan]
 .The Grand Plan
 
-Lorem Ipsum
+In einem Dev-Meeting kam die obere, durchaus informelle Skizze zustande. Ziel dieser war die Struktur der Klassen sowie deren Anordnung festzuhalten. Zu sehen ist, dass in einem Tab eine Liste von Layern geführt wird, genauer genommen im Layout des Bereichs des Tabs, in welchen Layer(Widgets) eingefügt werden. Jede Layer hat hierbei ein zugehöriges LayerData Objekt, welches die Informationen einer Layer beinhaltet. Jeder Tab besitzt ein tabData Objekt, welches alle zur Berechnung und Speicherung notwendigen Informationen beinhaltet. In diesem wird auch eine Liste geführt, welche LayerData Objekte verwaltet. Die Berechnung sollte ausgelagert werden, jedoch nicht instanziiert. Je nach dem, wie variablentreu (pass by value oder pass by reference) Python ist, sollte darüber nachgedacht werden, wie man diese Berechnungsfunktionen inkludiert.
 
 image::class.svg[class]
 .UML-Class Diagram
 
-Lorem Ipsum
+Dies ist die aktuelle Ansicht der benutzten Klassenstruktur. Zu erkennen ist, dass der vorherige Entwurf dementsprechend umgesetzt wurde. Kleinere Klassen sind hinzugekommen (z.B. MyDoubleSpinBox), welche jedoch einfach nur von denentsprechenden QT-Klassen abgeleitet wurden und deren Verhalten in bestimmten Situationen angepasst wurde.
 
 image::package.svg[package]
 .Package Diagram
 
-Lorem Ipsum
+In dieser Grafik kann man das Zusammenspiel zwischen den verschiedenen packages erkennen. Hierbei ist zu bemerken, dass `\__init__` eingentlich `mainwindow.py` ist, jedoch im Rahmen der Generierung des Diagramms umbenannt werden musste.
+
+== Verwendete Frameworks/Module
+
+
+* PyQt5
+* numpy
+* pyqtgraph
+
+== Struktur der gespeicherten Dateien
+
+.Tab-Struktur
+|===
+|Stelle|Einheit|Bezeichnung
+
+|name|String|Name des Tabs
+|rright|double|R-Wert rechts (siehe TabData doc)
+|rleft|double|R-Wert lins (siehe TabData doc)
+|rsum|double|Summe R-Werte aller Layer
+|tright|double|Temperatur rechts (siehe TabData doc)
+|tleft|double|Temperatur links (siehe TabData doc)
+|mode|int|Modus, in welchem sich der Tab befindet
+|u|double|Rt invertiert
+|rt|double|Summe Rges und umgebende R-Werte
+|layers|"Liste"|Die einzelnen Layers
+
+|===
+
+.Layer-Struktur
+|===
+|Stelle|Einheit|Bezeichnung
+
+|1|double|Dicke der Schicht
+|2|int|Einheit der Dicke (0: m, 1: cm, 2: mm)
+|3|double|Lambda-Wert
+|4|double|R-Wert
+|5|double|linke Außentemperatur der Schicht
+|6|double|rechte Außentemperatur der Schicht
+|7|double|Rho-Wert der Schicht
+|8|int|Material-ID
+|9|String|Name der Schicht
+
+|===
+
+== Sequenzdiagramm
+
+Da hier keine Client-Server oder Microservice o.Ä. Architektur vorliegt, wurde sich dazu entschieden, ein Sequenzdiagramm *nicht* anzufertigen. Es ergibt in Bezug auf den Aufwand keinen Mehrwert. Welche Klasse was aufruft, kann man auch dem UML-Klassendiagramm entnehmen.
