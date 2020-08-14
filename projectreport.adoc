@@ -387,7 +387,6 @@ Ende: 12.07.2020 +
 ** Projekt bereits so gut wie abgeschlossen. Keine Gefahr mehr für Teamerfolg
 
 ==== Geprächsprotokoll 1
-
 include::Gesprächsprotokolle/06052020_Kundengespräch.adoc[lines=1..1;4..-1,leveloffset=+1]
 
 ==== Gesprächsprotokoll 2
@@ -485,10 +484,11 @@ link:https://github.com/fowado/BauphysikSE1/blob/master/Flyer.pdf[Flyer]
 == Entwicklerdokumentation 
 include::Entwurfsdoku/entwurf.adoc[]
 
+= 8. Betriebsdokumentation
+include::Betriebsdokumentation.adoc[]
+
 = 7. Testdokumentation
 include::Test/Testkonzept.adoc[lines=1..1;4..-1,leveloffset=+1]
 include::Test/TestLog.adoc[lines=1..1;4..-1,leveloffset=+1]
 
 
-= 8. Betriebsdokumentation
-include::Betriebsdokumentation.adoc[]
